@@ -1,0 +1,65 @@
+\ProvidesPackage{thesis}[2005/07/28]
+%\RequirePackage{timing}
+\RequirePackage{hepnicenames,hepunits}
+
+%% Citation spacing hack to bring the citation
+%% number a little closer to the referring text
+\let\@OldCite\cite
+\renewcommand{\cite}[1]{\mbox{\!\!\!\@OldCite{#1}}}
+
+%% Maths
+\DeclareRobustCommand{\thesismath}[1]{\ensuremath{\maybebmsf{#1}}}
+\DeclareRobustCommand{\parenths}[1]{\mymath{\left({#1}\right)}}
+\DeclareRobustCommand{\braces}[1]{\mymath{\left\{{#1}\right\}}}
+\DeclareRobustCommand{\angles}[1]{\mymath{\left\langle{#1}\right\rangle}}
+\DeclareRobustCommand{\sqbracs}[1]{\mymath{\left[{#1}\right]}}
+\DeclareRobustCommand{\mods}[1]{\mymath{\left\lvert{#1}\right\rvert}}
+\DeclareRobustCommand{\modsq}[1]{\mymath{\mods{#1}^2}}
+\DeclareRobustCommand{\dblmods}[1]{\mymath{\left\lVert{#1}\right\rVert}}
+\DeclareRobustCommand{\expOf}[1]{\mymath{\exp{\!\parenths{#1}}}}
+\DeclareRobustCommand{\eexp}[1]{\mymath{e^{#1}}}
+\DeclareRobustCommand{\plusquad}{\mymath{\oplus}}
+\DeclareRobustCommand{\logOf}[1]{\log\!\parenths{#1}}
+\DeclareRobustCommand{\lnOf}[1]{\ln\!\parenths{#1}}
+\DeclareRobustCommand{\ofOrder}[1]{\mymath{ \mathcal{O}\parenths{#1} }}
+
+%% General utility defns
+\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
+\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
+\DeclareRobustCommand{\CPv}{\CPviolation}
+\DeclareRobustCommand{\LHCb}{LHCb\xspace}
+\DeclareRobustCommand{\LHC}{LHC\xspace}
+\DeclareRobustCommand{\LEP}{LEP\xspace}
+\DeclareRobustCommand{\CERN}{CERN\xspace}
+
+%% Basic rate formalisms
+\DeclareRobustCommand{\Rate}{\thesismath{\Gamma}\xspace}
+\DeclareRobustCommand{\RateOf}[1]{\thesismath{\Gamma}\parenths{#1}\xspace}
+
+%% Phrases to be consistent about (with b/B)
+\DeclareRobustCommand{\bphysics}{\Pbottom-physics\xspace}
+\DeclareRobustCommand{\bhadron}{\Pbottom-hadron\xspace}
+\DeclareRobustCommand{\Bmeson}{\PB-meson\xspace}
+\DeclareRobustCommand{\bbaryon}{\Pbottom-baryon\xspace}
+\DeclareRobustCommand{\Bdecay}{\PB-decay\xspace}
+\DeclareRobustCommand{\bdecay}{\Pbottom-decay\xspace}
+
+%% Processes
+\DeclareRobustCommand{\BToKPi}{\HepProcess{ \PB \to \PK \, \Ppi }\xspace}
+\DeclareRobustCommand{\BToPiPi}{\HepProcess{ \PB \to \Ppi \, \Ppi }\xspace}
+\DeclareRobustCommand{\BToKK}{\HepProcess{\PB \to \PK \, \PK}\xspace}
+\DeclareRobustCommand{\BToRhoPi}{\HepProcess{ \PB \to \Prho \, \Ppi }\xspace}
+\DeclareRobustCommand{\BToRhoRho}{\HepProcess{ \PB \to \Prho \Prho }\xspace}
+\DeclareRobustCommand{\X}{\thesismath{X}\xspace}
+\DeclareRobustCommand{\Xbar}{\thesismath{\overline{X}}\xspace}
+\DeclareRobustCommand{\Xzero}{\HepGenParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\epluseminus}{\Pelectron\Ppositron\xspace}
+
+% Fix hyperref labels in PDFTeX
+\@ifpackageloaded{hyperref}{%
+  \pdfstringdefDisableCommands{%
+      \def\pi{pi}%
+      \def\gamma{gamma}%
+  }%
+}{}
