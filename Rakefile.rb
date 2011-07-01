@@ -8,7 +8,7 @@ latex('thesis')
 latex('thesis') do
   |task|
   task.includes = [
-    "ch1-theory.tex",
+    "1-theory/theory.tex",
     "ch2-expt.tex",
     "ch3-wpol.tex",
     "ch4-susy.tex",
