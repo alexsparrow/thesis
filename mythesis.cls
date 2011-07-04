@@ -35,3 +35,4 @@
 %% My additions
 %% Import package
 \RequirePackage{import}
+\RequirePackage{lineno}

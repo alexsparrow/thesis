@@ -22,11 +22,11 @@ class ThesisBuilder(LatexBuilder):
 
 
       def _get_figure_dirs(self):
-            return ["%s/fig" % ch for ch in self.chapters]
+            return ["%s/figures" % ch for ch in self.chapters]
 
       def _get_generated_path(self, path):
-            return os.path.normpath("%s/../generated/%s" % (os.path.dirname(path),
-                                                            os.path.basename(path)))
+            return os.path.normpath("%s/../fig/%s" % (os.path.dirname(path),
+                                                      os.path.basename(path)))
 
 def main():
     env["LATEXRETRIES"] = 4

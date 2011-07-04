@@ -1,7 +1,7 @@
 from SCons.Script import *
 
-def named(fname):
-    return ".".join(fname.split(".")[:-1])
+def extension(fname, ext):
+    return ".".join(fname.split(".")[:-1])+ext
 
 class LatexBuilder(object):
     def __init__(self, env, cfg):
@@ -46,22 +46,37 @@ class LatexBuilder(object):
                     self.convertors[ext](f)
 
     def _png(self, f):
-        eps_file = self._get_generated_path(named(f))
+        png_file = self._get_generated_path(f)
+        eps_file = extension(png_file, ".eps")
+        self.env.Command(png_file, f,
+                         Copy('$TARGET', '$SOURCE'))
         self.env.Png2eps(eps_file, f)
         self.env.Depends(self.dvi, eps_file)
+        self.env.Depends(self.pdf, png_file)
     def _jpg(self, f):
-        eps_file = self._get_generated_path(named(f))
+        jpg_file = self._get_generated_path(f)
+        eps_file = extension(jpg_file, ".eps")
+        self.env.Command(jpg_file, f,
+                         Copy('$TARGET', '$SOURCE'))
         self.env.Jpg2eps(eps_file, f)
         self.env.Depends(self.dvi, eps_file)
+        self.env.Depends(self.pdf, jpg_file)
     def _pdf(self, f):
-        eps_file = self._get_generated_path(named(f))
+        pdf_file = self._get_generated_path(f)
+        eps_file = extension(pdf_file, ".eps")
+        self.env.Command(pdf_file, f,
+                         Copy('$TARGET', '$SOURCE'))
         self.env.Pdf2eps(eps_file, f)
         self.env.Depends(self.dvi, eps_file)
+        self.env.Depends(self.pdf, pdf_file)
     def _eps(self, f):
-        eps_file = self._get_generated_path(named(f))
+        eps_file = self._get_generated_path(f)
+        pdf_file = extension(eps_file, ".pdf")
+        self.env.Command(eps_file, f,
+                         Copy('$TARGET', '$SOURCE'))
         self.env.Eps2Pdf(pdf_file, f)
         self.env.Depends(self.pdf, pdf_file)
-
+        self.env.Depends(self.dvi, eps_file)
     def _get_figure_dirs(self):
           raise ValueError("Must override _get_figures")
 
