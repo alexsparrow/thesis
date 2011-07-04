@@ -31,3 +31,7 @@
 
 %% TikZ is a marvellous drawing package
 \RequirePackage{tikz}
+
+%% My additions
+%% Import package
+\RequirePackage{import}
