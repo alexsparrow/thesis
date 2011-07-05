@@ -36,12 +36,12 @@ class LatexBuilder(object):
         self.env.Default(self.default_target)
 
     def figures(self):
-        figures = {}
+        fig_exts = dict([(ext, []) for ext in self.extensions.keys()])
         for d in self._get_figure_dirs():
             for ext in self.extensions.keys():
                 glob = "%s/*.%s" % (d, ext)
-                figures[ext] = Glob(glob, strings=True)
-        for ext, figs in figures.iteritems():
+                fig_exts[ext].extend(Glob(glob, strings=True))
+        for ext, figs in fig_exts.iteritems():
             if ext in self.convertors:
                 for f in figs:
                     self.convertors[ext](f)

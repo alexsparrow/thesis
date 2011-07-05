@@ -33,9 +33,8 @@ def main():
     builder = ThesisBuilder(env,
                             build_config,
                             build_config.CHAPTERS)
-    builder.figures()
     builder.aliases()
-
+    builder.figures()
 
 main()
 
