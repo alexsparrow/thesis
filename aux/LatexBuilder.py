@@ -6,12 +6,6 @@ def extension(fname, ext):
 class LatexBuilder(object):
     def __init__(self, env, cfg):
         self.project = cfg.LATEX_PROJECT
-        self.dvi = env.DVI(source = "%s.tex" % self.project,
-                           target = "%s.dvi" % self.project)
-        self.pdf = env.PDF(source = "%s.tex" % self.project,
-                           target = "%s.pdf" % self.project)
-        self.ps = env.PostScript(source = "%s.tex" % self.project,
-                                 target = "%s.ps" % self.project)
         self.makeindex_files = ["%s.%s" % (self.project, ext)
                                 for ext in cfg.MAKEINDEX_EXTENSIONS]
         self.default_target = cfg.DEFAULT_TARGET
@@ -26,6 +20,13 @@ class LatexBuilder(object):
         self.env = env
 
     def aliases(self):
+        self.dvi = self.env.DVI(source = "%s.tex" % self.project,
+                           target = "%s.dvi" % self.project)
+        self.pdf = self.env.PDF(source = "%s.tex" % self.project,
+                           target = "%s.pdf" % self.project)
+        self.ps = self.env.PostScript(source = "%s.tex" % self.project,
+                                 target = "%s.ps" % self.project)
+
         self.env.Alias("dvi", "%s.dvi" % self.project)
         Clean(self.dvi, self.makeindex_files)
         self.env.Alias("pdf", "%s.pdf" % self.project)
