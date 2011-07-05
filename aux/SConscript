@@ -7,5 +7,9 @@ Import('env')
 # Configure the builders. This is all we're doing here for this case.
 env = SConscript('builders.SConscript', 'env')
 
+# Needed apparently on lx06 at IC
+import os.path
+env['ENV']['TEXMFHOME'] = os.path.join(os.environ['HOME'],'texmf')
+
 # Pass back the modified environment.
 Return('env')
