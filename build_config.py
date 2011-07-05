@@ -22,7 +22,11 @@ FILE_EXTENSIONS = {'eps': '.eps',
                    'gnuplot': '.gnuplot'}
 
 CHAPTERS = [
-    "1-theory"
+    "1-theory",
+    "2-expt",
+    "3-wpol",
+    "4-susy",
+    "5-interpretations"
     ]
 
 
