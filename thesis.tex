@@ -35,15 +35,25 @@ pdfauthor = {\textcopyright\ Andy Buckley}
 \begin{mainmatter}
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
   \import{1-theory/}{theory}
-  \input{ch2-expt}
-  \input{ch3-wpol}
-  \input{ch4-susy}
-  \input{ch5-interpretation}
+  \import{2-expt/}{expt}
+  \import{3-wpol/}{wpol}
+  \import{4-susy/}{susy}
+  \import{5-interpretation}{interpretation}
 
   %% To ignore a specific chapter while working on another,
   %% making the build faster, comment it out like this:
   %\input{chap4}
 \end{mainmatter}
+
+%% AS: Added to make scons seen these files (it doesn't parse the import
+%% statements above!)
+\begin{comment}
+  \input{1-theory/theory}
+  \input{2-expt/}{expt}
+  \input{3-wpol/}{wpol}
+  \input{4-susy/}{susy}
+  \input{5-interpretation}{interpretation}
+\end{comment}
 
 %% Produce the appendices
 \begin{appendices}
