@@ -275,7 +275,10 @@
 %% ``DRAFT'' underprint and line numbering in draft mode (optional)
 \ifx\@requiredraft\@empty\else%
   \RequirePackage[pagewise, mathlines]{lineno}
-  \RequirePackage{draftcopy}
+  %\RequirePackage{draftcopy}
+  % I switched to this package instead since it works with pdflatex
+  \RequirePackage{draftwatermark}
+  \SetWatermarkScale{8}
 \fi
 
 %% The right way to do custom spacing
