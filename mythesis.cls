@@ -36,3 +36,4 @@
 %% Import package
 \RequirePackage{import}
 \RequirePackage{lineno}
+\RequirePackage[nolist]{acronym}
