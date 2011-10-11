@@ -506,7 +506,8 @@
   \setcounter{secnumdepth}{2}% number down to subsections
   \newcounter{iterlist}%
   \@oldfrontmatter%
-  \adjustwidth{\@frontmatterextramargin}{\@frontmatterextramargin}%
+  \pagenumbering{arabic}%
+ \adjustwidth{\@frontmatterextramargin}{\@frontmatterextramargin}%
   \begin{\@frontmatterspacing}%
 }{%
   \end{\@frontmatterspacing}%
@@ -520,7 +521,7 @@
 \specialcomment{mainmatter}{%
   %\@oldmainmatter%
   \@mainmattertrue
-  \pagenumbering{arabic}%
+%  \pagenumbering{arabic}%
   \adjustwidth{\@mainmatterextramargin}{\@mainmatterextramargin}%
   \begin{\@mainmatterspacing}%
 }{%
