@@ -4,3 +4,7 @@
 *.out
 *.toc
 *.cut
+*.dvi
+*.fls
+*.pyc
+
