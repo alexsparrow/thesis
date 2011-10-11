@@ -26,13 +26,13 @@ pdfauthor = {\textcopyright\ Andy Buckley}
 
 %% Start the document
 \begin{document}
-
 %% Define the un-numbered front matter (cover pages, rubrik and table of contents)
 \begin{frontmatter}
   \input{frontmatter}
 \end{frontmatter}
 %% Start the content body of the thesis
 \begin{mainmatter}
+  \linenumbers
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
   \import{1-theory/}{theory}
   \import{2-expt/}{expt}
@@ -43,6 +43,7 @@ pdfauthor = {\textcopyright\ Andy Buckley}
   %% To ignore a specific chapter while working on another,
   %% making the build faster, comment it out like this:
   %\input{chap4}
+  \nolinenumbers
 \end{mainmatter}
 
 %% AS: Added to make scons seen these files (it doesn't parse the import
