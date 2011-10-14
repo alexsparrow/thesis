@@ -37,3 +37,4 @@
 \RequirePackage{import}
 \RequirePackage{lineno}
 \RequirePackage[nolist]{acronym}
+\RequirePackage{ctable}
