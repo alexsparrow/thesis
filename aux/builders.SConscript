@@ -20,13 +20,13 @@ eps_builder = Builder(action='pdftops -eps -level3 $SOURCE $TARGET',
                       src_suffix=build_config.FILE_EXTENSIONS['pdf'])
 env.Append(BUILDERS={'Pdf2eps': eps_builder})
 
-## png2eps builder. 
+## png2eps builder.
 png_builder = Builder(action='convert $SOURCE $TARGET',
                       suffix=build_config.FILE_EXTENSIONS['eps'],
                       src_suffix=build_config.FILE_EXTENSIONS['png'])
 env.Append(BUILDERS={'Png2eps': png_builder})
 
-## jpg2eps builder. 
+## jpg2eps builder.
 jpg_builder = Builder(action='convert $SOURCE $TARGET',
                       suffix=build_config.FILE_EXTENSIONS['eps'],
                       src_suffix=build_config.FILE_EXTENSIONS['jpg'])
@@ -37,6 +37,9 @@ gnuplot_builder = Builder(action='gnuplot $SOURCE',
                           suffix=build_config.FILE_EXTENSIONS['eps'],
                           src_suffix=build_config.FILE_EXTENSIONS['gnuplot'])
 env.Append(BUILDERS={'Gnuplot': gnuplot_builder})
+
+wordcount = Builder(action='./tools/texcount.pl -inc -freq -html $SOURCE > $TARGET')
+env.Append(BUILDERS={'WordCount': wordcount})
 
 # Pass back the modified environment.
 Return('env')

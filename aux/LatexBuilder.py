@@ -26,13 +26,16 @@ class LatexBuilder(object):
                            target = "%s.pdf" % self.project)
         self.ps = self.env.PostScript(source = "%s.tex" % self.project,
                                  target = "%s.ps" % self.project)
-
+        self.wc = self.env.WordCount(source = "%s.tex" % self.project,
+                                     target = "%s.count.html" % self.project)
         self.env.Alias("dvi", "%s.dvi" % self.project)
         Clean(self.dvi, self.makeindex_files)
         self.env.Alias("pdf", "%s.pdf" % self.project)
         Clean(self.pdf, self.makeindex_files)
         self.env.Alias("ps", "%s.ps" % self.project)
         Clean(self.ps, self.makeindex_files)
+        self.env.Alias("wc", "%s.count.html" % self.project)
+        Clean(self.wc, "%s.count.html" % self.project)
         self.env.Default(self.default_target)
 
     def figures(self):
@@ -80,4 +83,3 @@ class LatexBuilder(object):
         self.env.Depends(self.dvi, eps_file)
     def _get_figure_dirs(self):
           raise ValueError("Must override _get_figures")
-
