@@ -18,13 +18,17 @@ physics. Finally, the \ac{LHCb} experiment is optimised for the study of B-meson
 decays. These are important for the study of CP violation within the \ac{SM} but
 might also provide potential avenues for the discovery of \ac{NP}.
 
+In addition to the four larger detectors, two smaller experiments, \ac{LHCf} and
+\ac{TOTEM} lie upstream of the \ac{ATLAS} and \ac{CMS} collision points in order
+to probe more specialised forward physics phenomena.
+
 \section{The \acl{LHC}}
 The \ac{LHC} is a circular $\Pp\Pp$ synchrotron with a circumference of
 \unit{27}{km}. It sits in a tunnel initially constructed for the \ac{LEP}
 accelerator buried at a depth of between 50 and \unit{175}{\metre} beneath the
 Franco-Swiss border. At full design specifications, 2808 bunches of protons will
 circulate around each direction of the ring, colliding at a centre of mass
-energy of \unit{14}{\tera\electronvolt}. With a proton bunch spacing of
+energy of \unit{14}{\TeV}. With a proton bunch spacing of
 \unit{25}{\ns}, the \ac{LHC} will eventually achieve a luminosity of
 \unit{$10^{34}$}{\rpsquare{\centi\metre}\usk\reciprocal\second}.
 
@@ -43,30 +47,77 @@ same. Proton bunches pass from the \ac{PSB} to the \ac{PS} at an energy of
 circulate around a ring \unit{2}{\kilo\metre} in diameter, and increasing their
 energy to \unit{450}{\giga\electronvolt}. From here, kicker magnets inject the
 bunches into the \ac{LHC} itself, where the energy is finally increased to the
-design specified \unit{7}{\tera\electronvolt} per beam.
+design specified \unit{7}{\TeV} per beam.
 \begin{figure}
-\includegraphics[width=0.9\textwidth]{figures/lhc-pho-1993-008}
+\includegraphics[width=0.9\textwidth]{fig/lhc-pho-1993-008}
 \end{figure}
 
-\ctable[
-cap=LHC Accelerator Complex,
-caption=LHC Accelerator Complex,
-mincapwidth=0.5\textwidth,
-pos=h
-]{lcc}{
-\tnote[a]{Heavy-Ions only}
-}{\FL
-Accelerator & Energy \ML
-%
-Linac2   & \unit{50}{\mega\electronvolt} \NN
-Linac3\tmark[a]   & \unit{4.2}{\mega\electronvolt\per u} \ML
-%
-\acf{PSB} & \unit{1.4}{\giga\electronvolt} \NN
-\acf{LEIR}\tmark[a]   & \unit{??}{\mega\electronvolt\per u} \ML
-%
-\acf{PS} & \unit{28}{\giga\electronvolt} \NN
-\acf{SPS} & \unit{450}{\giga\electronvolt} \NN
-\acf{LHC} & \unit{7}{\tera\electronvolt} \LL
-}
+\input{tables/accelerators}
 
 \section{The \acl{CMS} Experiment}
+\ac{CMS} is a large, general purpose detector designed to firmly establish or
+disprove the existence of the Higgs boson particle as well as performing
+searches for a wide variety of \ac{NP} signatures. The design goals of CMS were
+as follows (paraphrasing ???):
+\begin{enumerate}
+\item a high quality, redundant muon system,
+\item the best possible \ac{ECAL}
+\item high quality central tracking to complement these two systems
+\item an affordable detector
+\end{enumerate}
+
+These goals motivated the design of a traditional cylindrical detector,
+\unit{21.5}{\metre} in length and \unit{15}{\metre} in diameter. A key feature
+of the design is the \unit{4}{\tesla} superconducting solenoid. The bending
+field supplied provides accurate muon momentum resolution up to energies of
+\unit{$\approx$ 1}{\TeV}. The size of the solenoid placed stringent
+limitations on the volume of the inner detector subsystems (everything except
+for the muon chambers and return yoke).
+
+\subsection{Coordinate System}
+The \ac{CMS} coordinate system
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{fig/drawing}
+\end{figure}
+
+\subsection{Silicon Tracker}
+The innermost subsystem of \ac{CMS} is the silicon tracker. This can be further
+subdivided according to the expected particle flux at design luminosity.
+
+\begin{itemize}
+\item At $ r \approx \unit{10}{\cm}$ the particle flux is highest. Accordingly,
+  the innermost layer of the CMS tracker is comprised of hybrid pixels. With an
+  area of \unit{$100\times 150$}{\micro\metre\squared}, particle densities are
+  $O(10^{-4})$ per pixel per LHC bunch crossing.
+\item At a radius \unit{$20 < r < 55$}{\centi\metre}, reduced particle flux allows
+  the use of silicon microstrip sensors. With a much larger area of
+  $\unit{10}{\centi\metre}\times\unit{80}{\micro\metre}$, average particle
+  densities are $O(10^{-2})$ per strip per bunch crossing.
+ \item At $ r > \unit{55}{\cm}$, the silicon strip size is once again increased
+   to $\unit{25}{\cm}\times \unit{180}{\cm}$ again giving a particle density of
+   $O(10^{-2})$ per strip per bunch crossing.
+\end{itemize}
+
+\subsubsection{Pixel Tracker}
+The hybrid pixels are placed closest to the interaction point. As well as
+maintaining an acceptable particle density per sensor, their close proximity to
+the interaction point allows the origin of collision products to be accurately
+determined. This is of particular importance for instance in B-tagging. In the
+barrel region, 3 layers are placed at mean radii of 4.4, 7.3 and
+\unit{10.2}{\cm}. The detector has a length of \unit{53}{\cm} in the $z$
+direction. The end discs are instrumented with only two layers and are located
+at $|z|=34.5, \unit{46.5}{\cm}$. The pixel modules in these layers are arrange
+in a turbine layout.
+
+To acheive the desired spatial resolution, the pixels have an almost square
+geometry with an area of \unit{$150\times 100$}{\micro\metre\squared} in the
+$r\phi\times z$ ($r\times r\phi$) for the barrel (end discs).
+
+\subsubsection{Strip Tracker}
+Further from the interaction point, the tracker is instrumented with silicon
+strip detectors. The barrel component can be further divided into the \ac{TIB}
+and the \ac{TOB}. The \ac{TIB} is composed of 4 layers with the \ac{TOB}
+comprising a further 6. The innermost two layers use stereo modules with two
+sublayers of silicon strips with a \unit{100}{\milli\radian} stereo angle
+between them. This gives a resolution of \unit{23-34}{\micro\metre} in the
+$r\phi$ direction and \unit{230}{\micro\metre} in $z$.
