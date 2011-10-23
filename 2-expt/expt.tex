@@ -58,7 +58,7 @@ design specified \unit{7}{\TeV} per beam.
 \ac{CMS} is a large, general purpose detector designed to firmly establish or
 disprove the existence of the Higgs boson particle as well as performing
 searches for a wide variety of \ac{NP} signatures. The design goals of CMS were
-as follows (paraphrasing ???):
+as follows (paraphrasing Design proposal):
 \begin{enumerate}
 \item a high quality, redundant muon system,
 \item the best possible \ac{ECAL}
@@ -76,13 +76,17 @@ for the muon chambers and return yoke).
 
 \subsection{Coordinate System}
 The \ac{CMS} coordinate system
-\begin{figure}
-\includegraphics[width=0.8\textwidth]{fig/drawing}
-\end{figure}
 
 \subsection{Silicon Tracker}
-The innermost subsystem of \ac{CMS} is the silicon tracker. This can be further
-subdivided according to the expected particle flux at design luminosity.
+The innermost subsystem of \ac{CMS} is the silicon tracker, designed to provide
+highly precise measurements of particle trajectories close to the CMS
+interaction point. The tracker extends to pseudorapidities of $|\eta|<2.5$ and
+has an active silicon area of more than \unit{200}{\metre\squared} making it the
+largest silicon tracker ever built.
+
+The tracker design can be better understood by considering the expected particle
+flux at design luminosity as a function of radial distance $r$ from the
+beamline.
 
 \begin{itemize}
 \item At $ r \approx \unit{10}{\cm}$ the particle flux is highest. Accordingly,
@@ -106,8 +110,8 @@ determined. This is of particular importance for instance in B-tagging. In the
 barrel region, 3 layers are placed at mean radii of 4.4, 7.3 and
 \unit{10.2}{\cm}. The detector has a length of \unit{53}{\cm} in the $z$
 direction. The end discs are instrumented with only two layers and are located
-at $|z|=34.5, \unit{46.5}{\cm}$. The pixel modules in these layers are arrange
-in a turbine layout.
+at $|z|=34.5, \unit{46.5}{\cm}$. The pixel modules in these layers are arranged
+in a turbine-like layout.
 
 To acheive the desired spatial resolution, the pixels have an almost square
 geometry with an area of \unit{$150\times 100$}{\micro\metre\squared} in the
@@ -117,7 +121,37 @@ $r\phi\times z$ ($r\times r\phi$) for the barrel (end discs).
 Further from the interaction point, the tracker is instrumented with silicon
 strip detectors. The barrel component can be further divided into the \ac{TIB}
 and the \ac{TOB}. The \ac{TIB} is composed of 4 layers with the \ac{TOB}
-comprising a further 6. The innermost two layers use stereo modules with two
-sublayers of silicon strips with a \unit{100}{\milli\radian} stereo angle
-between them. This gives a resolution of \unit{23-34}{\micro\metre} in the
-$r\phi$ direction and \unit{230}{\micro\metre} in $z$.
+comprising a further 6. The \ac{TOB} extends to $z = \pm
+\unit{118}{\centi\metre}$. Beyond this are the endcaps which can again be split
+into two components: the \ac{TEC} made up of 9 disks and the \ac{TID} 3. The
+silicon micro strip sensors are \unit{320}{\micro\metre} thick and oriented
+parallel to the $z$ axis in the barrel and radially in the disks.
+
+Both the \ac{TIB} and \ac{TID} supply up to four measurements of $r\phi$. With a
+strip-pitch of \unit{80}{\micro\metre} in the inner two layers and
+\unit{120}{\micro\metre} in the outer two, the \ac{TIB} achieves a single point
+resolution of \unit{23 and 35}{\micro\metre} respectively. In the \ac{TID}, the
+strip pitch varies between \ac{100 and 141}{\micro\metre}.
+
+The \ac{TOB} uses \unit{500}{\micro\metre} thick sensors with a strip-pitch of
+\unit{183}{\micro\metre} in the first four layers and \unit{122}{\micro\metre} in
+the outer two. This gives a single point resolution of \unit{53}{\micro\metre}
+and \unit{35}{\micro\metre} respectively.
+
+The first two layers of the \ac{TIB}, \ac{TOB} and \ac{TID} and rings 1, 2 and 5
+of the \ac{TEC} are so-called stereo modules. These are double-sided modules
+where the two layers of strips have a stereo angle of \unit{100}{\milli\radian}
+between them. This provides additional resolution in the $z$ measurement in the
+barrel (or $r$ in the endcaps). The resolution of this measurement is
+\unit{230}{\micro\metre} and \unit{530}{\micro\metre} in the \ac{TIB} and
+\ac{TOB} respectively.
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/tracker}
+\end{figure}
+
+\subsection{\acl{ECAL}}
+The \ac{ECAL} surrounds the silicon tracker and provides a high resolution
+measurement of electromagnetic showers within a homogeneous, hermetic crystal
+calorimeter. The driving motivation for the design was the detection of the
+low-mass favoured Higgs decay channel $PH\longrightarrow\gamma\gamma$.
