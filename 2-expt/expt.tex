@@ -131,7 +131,7 @@ Both the \ac{TIB} and \ac{TID} supply up to four measurements of $r\phi$. With a
 strip-pitch of \unit{80}{\micro\metre} in the inner two layers and
 \unit{120}{\micro\metre} in the outer two, the \ac{TIB} achieves a single point
 resolution of \unit{23 and 35}{\micro\metre} respectively. In the \ac{TID}, the
-strip pitch varies between \ac{100 and 141}{\micro\metre}.
+strip pitch varies between \unit{100 and 141}{\micro\metre}.
 
 The \ac{TOB} uses \unit{500}{\micro\metre} thick sensors with a strip-pitch of
 \unit{183}{\micro\metre} in the first four layers and \unit{122}{\micro\metre} in
@@ -152,6 +152,56 @@ barrel (or $r$ in the endcaps). The resolution of this measurement is
 
 \subsection{\acl{ECAL}}
 The \ac{ECAL} surrounds the silicon tracker and provides a high resolution
-measurement of electromagnetic showers within a homogeneous, hermetic crystal
-calorimeter. The driving motivation for the design was the detection of the
-low-mass favoured Higgs decay channel $PH\longrightarrow\gamma\gamma$.
+measurement of electromagnetic showers within a homogeneous, hermetic
+calorimeter composed of 61,200 lead tungstate (PbWO$_4$) crystals. This material
+was chosen for its high desnity, short radiation length and small Moli\`{e}re
+radius. Scintillation photons are then recorded by \ac{APD}s in the barrel and
+\ac{VPT}s in the endcap. The driving motivation for the \ac{ECAL} design was the
+detection of the low-mass favoured Higgs decay channel
+$PH\longrightarrow\gamma\gamma$.
+
+\subsubsection{\acl{EB}}
+The \ac{EB} extends in rapidity to $|\eta|<1.479|$ with a crystal
+segmentation of $360\times 85$ ($\eta-\phi$) in each half barrel. Each crystal
+is slightly tapered with a cross-section of $0.0174\times0.0174$ in
+$\eta-phi$. The crystals have a front cross section of \unit{22\times
+  22}{\milli\metre\squared} and a length of \unit{230}{\milli\metre}
+(corresponding to 25.8 radiation lengths).
+
+\subsubsection{\acl{EE}}
+The \ac{EE} occupies the rapidity range $1.479 < |\eta| < 3.0$. Crystals are
+grouped into $5\times 5$ supercrystals within a carbon-fibre alveolar
+structure. The endcaps are split into two halves, known as Dees, each holding
+3,662 crystals.
+
+The scintillation of the ac{ECAL} crystals as well as the amplification of the
+\ac{APDs} varies as a function of temperature. This variation was found to be
+\unit{$\approx 4\%$}{\per\celsius}. For this reason, the \ac{ECAL} temperature
+is precisely regulated to within \unit{$\pm$ 0.05}{\celsius}.
+
+\subsection{\acl{HCAL}}
+Accurate measurement of hadronic showers is crucial for analyses involving jets
+or missing energy type signatures. The \ac{HCAL} lies between the outer edge of
+the ECAL and the inner edge of the solenoid ($\unit{1.77}{\metre} < r <
+\unit{2.95}{\metre}$). This constrains the size of the \ac{HCAL} to a relatively
+compact design and necessitates the placement of a ``tail catcher'' outside of
+the solenoid.
+
+\subsubsection{\acl{HB}}
+\subsubsection{\acl{HE}}
+
+
+\subsection{Magnet}
+\subsection{Muon Chambers}
+As has already been said, sensitive detection of muons is one of \ac{CMS}'s key
+design goals. Since the effect of radiative losses in the tracker is much less
+for muons than it is for electrons, muons are able to provide a much finer mass
+resolution which can be used in a variety of physics searches and
+measurements. The muon system at CMS is responsible for muon identification,
+momentum measurement and triggering (for further detail see
+Section~\ref{sec:trigger}). Three types of detectors are used, chosen for
+different regions of the detector according to the magnetic field level, muon
+rate and response time required for input to the trigger.
+
+In the barrel region, the muon rate is relatively low and the magnetic field
+uniform and largely contained by the return yoke.
