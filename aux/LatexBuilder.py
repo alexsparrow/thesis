@@ -78,7 +78,7 @@ class LatexBuilder(object):
         pdf_file = extension(eps_file, ".pdf")
         self.env.Command(eps_file, f,
                          Copy('$TARGET', '$SOURCE'))
-        self.env.Eps2Pdf(pdf_file, f)
+        self.env.Eps2pdf(pdf_file, f)
         self.env.Depends(self.pdf, pdf_file)
         self.env.Depends(self.dvi, eps_file)
     def _get_figure_dirs(self):
