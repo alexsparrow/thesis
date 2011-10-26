@@ -7,7 +7,7 @@ build project.
 LATEX_PROJECT = 'thesis'
 
 # Default target.
-DEFAULT_TARGET = 'pdf'
+DEFAULT_TARGET = 'dvi'
 
 # --- Things below should mostly not need touching. ---
 # Some rather fixed configurations.
@@ -31,4 +31,3 @@ CHAPTERS = [
 
 
 MAKEINDEX_EXTENSIONS = ['.glg', '.glo', '.gls']
-
