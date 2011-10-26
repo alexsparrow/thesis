@@ -203,7 +203,7 @@
 \ifx\@requireAFourWide\@empty\else\RequirePackage{a4wide}\fi
 
 %% If building with PDFLaTeX, use microtype spacing adjustments
-\RequirePackage{microtype}
+\RequirePackage{microtype, textcomp}
 
 %% Need to be able to locally change the text width.
 \RequirePackage{changepage}
