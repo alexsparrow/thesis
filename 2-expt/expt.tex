@@ -75,7 +75,16 @@ limitations on the volume of the inner detector subsystems (everything except
 for the muon chambers and return yoke).
 
 \subsection{Coordinate System}
-The \ac{CMS} coordinate system
+In order to facilitate discussion of the detector, a right-handed coordinate
+system is defined with the origin chosen to be the nominal collision point
+inside \ac{CMS}. The $x$ axis is then defined to point horizontally inwards
+towards the centre of the \ac{LHC} ring and the $y$-axis vertically
+upwards. Therefore the $z$-axis is aligned along the beamline pointing towards
+the nearby Jura mountains. Often a cylindrical coordinate system will be used
+with where the azimuthal angle $\phi$ and radial coordinate $r$ span the $x-y$
+plane. The azimuthal angle is measured with respect to the $x$-axis. The
+pseudorapidity, $\eta = - \ln \tan \frac{\theta}{2}$ where $\theta$ is the polar
+angle measured with respect to the $z$-axis.
 
 \subsection{Silicon Tracker}
 The innermost subsystem of \ac{CMS} is the silicon tracker, designed to provide
@@ -200,10 +209,36 @@ resolution which can be used in a variety of physics searches and
 measurements. The muon system at CMS is responsible for muon identification,
 momentum measurement and triggering (for further detail see
 Section~\ref{sec:trigger}). Three types of detectors are used, chosen for
-different regions of the detector according to the magnetic field level, muon
-rate and response time required for input to the trigger.
+different regions of the detector according to the magnetic field, muon rate and
+response time required for input to the trigger.
 
-\subsubsection{Drift Tubes}
+\subsubsection{\acl{DT}}
+In the barrel region, the magnetic field is relatively uniform and the muon flux
+low enough to allow the use of drift tubes. The drift chamber was developed as a
+refinement of earlier wire proportional chamber designs in which the drift time
+of the electrons to the anode wire is used to provide additional spatial
+resolution. This allows the wire spacing to be increased thus reducing the
+electronics requirements.
 
+Each drift chamber is composed of 2 (or 3) superlayers, which are further
+divided into 4 layers of rectangular drift cells. Of the four concentric muon
+stations in the barrel, the inner three contains 60 drift chambers and the
+outermost 70. The wires in the outer two layers of each drift cell are oriented
+parallel to the beam line, providing a measurement in the $r\phi$ direction (the
+magnetic bending plane). The inner two layers are perpendicularly aligned,
+giving a measurement of the $z$ coordinate.
+
+\subsubsection{\acl{CSC}}
+In the endcap region, the large muon and background rate coupled with the large,
+non-uniform magnetic field prevent the use of \ac{DT}s. Instead, \acl{CSC}s are
+used. The CMS Muon endcap consists of 468 \ac{CSC}s, each a trapezoidal
+multiwire proportional chamber arranged radially covering an azimuthal angle
+$\Delta\phi$ of either 10 or 20 degrees. Each \ac{CSC} is a multiwire
+proportional chamber with 6 anode wire planes interleaved with 7 cathode strip
+planes. The wire readout provides a measurement of the $\phi$ coordinate whilst
+$r$ position information is obtained by interpolating charges on the cathode
+strips.
+
+\subsubsection{\acl{RPC}}
 
 \subsection{Data Aquisition and Trigger System}
