@@ -5,6 +5,8 @@ needed for the the configured LaTeX build target.
 import os
 import build_config
 
+from SCons.Scanner.LaTeX import LaTeXScanner
+
 # Get the passed in environment.
 Import('env')
 
@@ -38,8 +40,10 @@ gnuplot_builder = Builder(action='gnuplot $SOURCE',
                           src_suffix=build_config.FILE_EXTENSIONS['gnuplot'])
 env.Append(BUILDERS={'Gnuplot': gnuplot_builder})
 
-wordcount = Builder(action='./tools/texcount.pl -inc -freq -html $SOURCE > $TARGET')
-env.Append(BUILDERS={'WordCount': wordcount})
+ltx = LaTeXScanner()
+
+wordcount_html = Builder(action='./tools/texcount.pl -inc -freq -html $SOURCE > $TARGET', source_scanner=ltx)
+env.Append(BUILDERS={'WordCountHTML': wordcount_html})
 
 # Pass back the modified environment.
 Return('env')

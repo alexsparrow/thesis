@@ -20,7 +20,6 @@ class ThesisBuilder(LatexBuilder):
             self.chapters = chapters
             super(ThesisBuilder, self).__init__(env, cfg)
 
-
       def _get_figure_dirs(self):
             return ["%s/figures" % ch for ch in self.chapters]
 
@@ -37,4 +36,3 @@ def main():
     builder.figures()
 
 main()
-

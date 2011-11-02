@@ -26,7 +26,7 @@ class LatexBuilder(object):
                            target = "%s.pdf" % self.project)
         self.ps = self.env.PostScript(source = "%s.tex" % self.project,
                                  target = "%s.ps" % self.project)
-        self.wc = self.env.WordCount(source = "%s.tex" % self.project,
+        self.wch = self.env.WordCountHTML(source = "%s.tex" % self.project,
                                      target = "%s.count.html" % self.project)
         self.env.Alias("dvi", "%s.dvi" % self.project)
         Clean(self.dvi, self.makeindex_files)
@@ -34,8 +34,12 @@ class LatexBuilder(object):
         Clean(self.pdf, self.makeindex_files)
         self.env.Alias("ps", "%s.ps" % self.project)
         Clean(self.ps, self.makeindex_files)
-        self.env.Alias("wc", "%s.count.html" % self.project)
-        Clean(self.wc, "%s.count.html" % self.project)
+        self.env.Alias("wch", "%s.count.html" % self.project)
+        Clean(self.wch, "%s.count.html" % self.project)
+        self.env.AlwaysBuild(
+            self.env.Alias("wc", [],
+                           "./tools/texcount.pl -inc -total -q %s.tex" % self.project))
+
         self.env.Default(self.default_target)
 
     def figures(self):
