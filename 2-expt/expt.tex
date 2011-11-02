@@ -214,11 +214,11 @@ response time required for input to the trigger.
 
 \subsubsection{\acl{DT}}
 In the barrel region, the magnetic field is relatively uniform and the muon flux
-low enough to allow the use of drift tubes. The drift chamber was developed as a
-refinement of earlier wire proportional chamber designs in which the drift time
-of the electrons to the anode wire is used to provide additional spatial
-resolution. This allows the wire spacing to be increased thus reducing the
-electronics requirements.
+low enough to allow the use of drift tubes. These identify muons in the region
+$|\eta| < 1.2$. The drift chamber was first developed as a refinement of earlier
+wire proportional chamber designs in which the drift time of the electrons to
+the anode wire is used to provide additional spatial resolution. This allows the
+wire spacing to be increased thus reducing the electronics requirements.
 
 Each drift chamber is composed of 2 (or 3) superlayers, which are further
 divided into 4 layers of rectangular drift cells. Of the four concentric muon
@@ -240,5 +240,30 @@ $r$ position information is obtained by interpolating charges on the cathode
 strips.
 
 \subsubsection{\acl{RPC}}
+In order to provide a fast trigger signal (see Section~\ref{sec:trigger}), a
+muon detector capable of providing a fast signal is required. This is the
+\acl{RPC}, a gaseous parallel-plate detector with spatial resolution suitable
+for both barrel and endcap regions and a response time much less than the
+\unit{25}{\nano\second} between consecutive \ac{LHC} bunch crossings.
 
 \subsection{Data Aquisition and Trigger System}
+The high luminosity at the \ac{LHC} brings with it a large particle flux. Along
+with the requirements of precise position and momentum measurements, this has
+motivated the fine granularity present across each \ac{CMS} subdetector. The
+natural consequence of this is an extremely large number of readout channels,
+approximately \unit{55}{\million} across the whole detector. To make matters
+worse, it is planned that the \ac{LHC} will eventually reach a bunch spacing of
+only \unit{25}{\nano\second}. This places a tight latency requirement on the
+\ac{DAQ} system.
+
+Tightly coupled to the \ac{DAQ} is the trigger system. The huge number of
+readout channels in \ac{CMS} is not only a problem in terms of the bandwidth of
+the \ac{DAQ} but also poses serious problems relating to long-term storage
+requirements. A digited, zero-supressed event dump from \ac{CMS} is
+approximately \unit{2}{\mega\byte} in size. With an event rate of upto
+\unit{40}{\mega\hertz}, this would potentially require a storage rate of
+\unit{80}{\tera\byte\per\second}. Even with the rapid improvement of disk
+storage technology over the last few decades, such storage capacities are
+clearly infeasible both in terms of capacity and \ac{IO} requirements. For these
+reasons, a system capable of quickly rejecting a very large fraction of
+collisions is required. This is known as the trigger.
