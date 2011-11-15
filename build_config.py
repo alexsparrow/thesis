@@ -26,7 +26,7 @@ CHAPTERS = [
     "2-expt",
     "3-wpol",
     "4-susy",
-    "5-interpretations"
+    "5-interpretation"
     ]
 
 
