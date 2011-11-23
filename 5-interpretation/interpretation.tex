@@ -174,9 +174,65 @@ lattice of values in the desired range. At each lattice site, a statistically
 sufficient number of events is generated with the appropriate parameter values
 inserted into the configuration of the \ac{MC} generator.
 
-\section{Statistical Background}
+\section{Statistical Methods}
+\subsection{Background}
 
-\section{New Physics Models}
+\subsection{Modelling the Single Lepton Analysis}
+As described in the previous section, the core component of many statistical
+interpretations is the construction of an appopriate likelihood function. The
+likelihood must model all statistical and systematic effects and is thus highly
+dependent on the experiment. The situation is considerably complicated when
+shape information is included, for which relevant bin-to-bin correlations must
+be included.
+
+In constructing the likelihood, we start by writing down the number of events
+expected for each bin (assigned the index $i=0,1,2...$):
+\begin{equation}
+N^i_{\textrm{exp}} = N^i_{\textrm{signal}}(\mu, \nu_j) +
+N^i_{\textrm{bkg}}(\nu_k) \\
+\end{equation}
+where $N_{\textrm{signal}}$ is the expected signal yield for a chosen
+signal model and $N_{\textrm{bkg}}$ is the data-driven background
+prediction. As can be seen, the signal yield is a function of the \ac{poi} (the
+signal strength) and some number of nuisance parameters where the index $j$
+will run over a set of systematics relevant to the signal yield. Ignoring
+signal contamination effects (which will be discussed later), the bacground
+yield depends only on the nuisance parameters $\nu_k$ where $k$ is taken to run
+over the set of systematics relevant to the bacground prediction.
+
+Without giving an explicit functional form for the signal yield and background
+prediction, the form of the likelihood function may be constructed. The
+likelihood must include:
+\begin{enumerate}
+\item Statistical terms representing the likelihood of observing the given
+  number of events given a certain expectation for the signal and background
+  yields.
+\item Terms providing prior constraints on the various nuisance
+  parameters. Certain uncertainties are statistical in nature and thus,
+  indepdent nuisance parameters are assigned per bin along with a corresponding
+  prior pdf. In other cases, the underlying systematic variation is considered
+  to have a 100\% correlated effect across the bins. In these cases, a single
+  nuisance parameter and prior pdf is assigned.
+\end{enumerate}
+
+The form of the likelihood is as follows,
+\begin{equation}
+\mathcal{L} = \prod_i \mathcal{P}(N^i_{\textrm{exp}} ; N^i_{\textrm{obs}})
+\prod_{k \in \Theta_i} X(\nu_{ik})
+\prod_{j \in \Theta}  Y(\nu_j)
+\end{equation}
+where
+\begin{itemize}
+\item $\mathcal{P}(\mu;x)$ denotes a Poisson distribution with mean $\mu$ and value
+$x$
+\item $X(\nu_i)$ denotes an unspecified statistical distribution used to
+  model the uncorrelated statistical uncertainty on the background prediction in
+  each bin. The $\nu_i$ are nuisance parameters.
+\item $Y(\nu_j)$ denotes an unspecified statistical distribution used to model
+  the correlated systematic uncertainties. The $\nu_j$ are nuisance parameters.
+\end{itemize}
+
+
 \section{Results}
 
 \begin{figure}
