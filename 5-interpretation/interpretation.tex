@@ -109,12 +109,70 @@ be considered the characteristics of a ``canonical'' \ac{SUSY} event at the
 of signatures, for the purposes of this discussion we will choose two topologies
 which exhibit these characteristics.
 
-The first topology, termed \ac{T1} begins with production of a coloured, neutral
-superpartner $A$ (in the \ac{CMSSM} this would be the gluino). The model is
-formulated with an $R$-parity type symmetry and thus $A$ will be pair-produced
-from \ac{SM} particles. There are then two possible intermediate states in the
-cascade decay
+Both topologies emulate certain aspects of \ac{SUSY} phenomenology albet in a
+simpler framework with greater generality. In order to distinguish the particle
+content from pure \ac{SUSY} theories, a different notation will be used. The
+first topology, T1 arises from pair production of neutral, coloured objects
+$\tilde{G}$ (the gluinos of \ac{SUSY} theories). The second topology, T2 instead
+arises from pair production of a charged, coloured particle $\tilde{Q}$
+(effectively the squark). Both topologies consider only pair-produced
+superpartners or in other words they conserve an $R$-parity type quantum
+number. In addition to the superpartners produced in the intial interaction,
+there are a number of intermediate states $\tilde{X}^0_i$ and
+$\tilde{X}^{\pm}_j$. In terms of \ac{SUSY} particles these would be analogues of
+the neutralinos and charginos respectively. Importantly, $\tilde{X}^0_1$ is defined to
+be the lightest superpartner - a dark matter candidate and the source of missing
+energy in the events.
 
+\subsubsection{T1 Simplified Model Topology}
+In the T1 simplified model, the $\tilde{Q}$ are assumed to be heavier than the
+$\tilde{G}$ and thus the only decay mode available is via an off-shell
+$\tilde{Q}$. Three such cascade decays leading to the $\tilde{X}^0_1$ are shown in
+Figure~\ref{fig:gluino_sms_decays}. The first, is a direct 3-body decay to the
+\ac{LSP}. This dominates in the following \ac{mSUGRA} scenarios:
+\begin{itemize}
+\item $\PSgxzi \approx \PSB$ and the $\PSq_{R}$ are lightest or the $\PSW$ is kinematically
+  inaccessible.
+\item $\PSgxzi \approx \PSW$ and either $\PSq_{L}$ are lightest or there is no
+  splitting between the left and right-handed squarks.
+\item $\PSgxzi \approx \PSH$ and either heavy-flavour squarks are inaccessible or
+  $\PSB$ and $PSW$ are inaccessible.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/gluino_sms_decays}
+\caption{Illustration of the gluino decay modes within the T1 simplified model
+  topology. \cite{alves_simplified_2011}}
+\label{fig:gluino_sms_decays}
+\end{figure}
+
+In most \ac{mSUGRA} or \ac{GMSB} models, the $\PSgxzi \approx \PSB$ and there is
+not a strong left-right mass splitting in the squarks. Therefore, it is unlikely
+for the direct decays to dominate. In most cases, 1-step cascade decays
+will be favoured. In these the, gluino decays first to either a $\PSgxpm$ or a
+heavy $\PSgxz$. This will subsequently decay via either a $\PW$ or a $\PZ$ to
+the $\PSgxzi$.
+
+\subsubsection{T2 Simplified Model Topology}
+For the T2 simplified model, the produced $\tilde{Q}$ can decay as follows:
+\begin{eqnarray}
+\tilde{Q} &\longrightarrow \tilde{G} \Pq \label{eqn:t2gluino}\\
+\tilde{Q} &\longrightarrow \tilde{X}^0_i \Pq \\
+\tilde{Q} &\longrightarrow \tilde{X}^\pm_i \Pq
+\end{eqnarray}
+If allowed, the \ref{eqn:t2gluino} decay will dominate since it has QCD
+strength.
+
+\subsubsection{Combining Topologies}
+For phenomenological purposes, each separate decay topology may be considered as
+an independent simplified model. The predictions of a whole set of topologies
+can then be combined by taking linear combinations. For direct comparison
+against experimental data, it is desirable to simulate a desired set of
+topologies within a monte-carlo generator by ``turning on'' the chosen physics
+subprocesses. The model parameter space can be sampled by moving through a
+lattice of values in the desired range. At each lattice site, a statistically
+sufficient number of events is generated with the appropriate parameter values
+inserted into the configuration of the \ac{MC} generator.
 
 \section{Statistical Background}
 
