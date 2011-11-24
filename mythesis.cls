@@ -38,3 +38,17 @@
 \RequirePackage{lineno}
 \RequirePackage[nolist]{acronym}
 \RequirePackage{ctable}
+
+% TODO notes in the margin
+%\RequirePackage{todonotes}
+
+% These are apparently needed to stop microtype from bitching
+% http://www.freak-search.com/en/thread/888630/microtype_and_siunitx_micro_unsupported
+% They seem to have the side effect of making the DRAFT text much bigger
+% \RequirePackage[T1]{fontenc}
+% \RequirePackage{microtype,textcomp}
+
+\RequirePackage{thesisdefs}
+
+% I want a tick symbol
+\RequirePackage{amsfonts}

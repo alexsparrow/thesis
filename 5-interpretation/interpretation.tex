@@ -185,19 +185,31 @@ dependent on the experiment. The situation is considerably complicated when
 shape information is included, for which relevant bin-to-bin correlations must
 be included.
 
+\subsubsection{Notation}
+It will be helpful to define some notation. In the following, a subscript index
+is assumed to run over the binned variable in the analysis
+(i.e. \STlep). All nuisance parameters are written as $\nu^{(i)}$ where the
+superscript index is taken to run over some set of systematics
+(e.g. $\nu^{\textrm{jes}}$ might represent a jet energy scale
+uncertainty). Certain variables $x$ are known to have a functional dependence on a
+given nuisance parameter and are written $x(\nu)$. The nominal value of this
+variable, being that which is measured in \ac{MC} or in real data is denoted
+$\bar{x}$.
+
+\subsubsection{The Likelihood Function}
 In constructing the likelihood, we start by writing down the number of events
 expected for each bin (assigned the index $i=0,1,2...$):
 \begin{equation}
-N^i_{\textrm{exp}} = N^i_{\textrm{signal}}(\mu, \nu_j) +
-N^i_{\textrm{bkg}}(\nu_k) \\
+\NExpi = \NSigi(\mu, \nu^{(j)}) +
+\NBkgi(\nu^{(k)}) \\
 \end{equation}
-where $N_{\textrm{signal}}$ is the expected signal yield for a chosen
-signal model and $N_{\textrm{bkg}}$ is the data-driven background
+where \NSigi is the expected signal yield for a chosen
+signal model and \NBkgi is the data-driven background
 prediction. As can be seen, the signal yield is a function of the \ac{poi} (the
 signal strength) and some number of nuisance parameters where the index $j$
 will run over a set of systematics relevant to the signal yield. Ignoring
 signal contamination effects (which will be discussed later), the bacground
-yield depends only on the nuisance parameters $\nu_k$ where $k$ is taken to run
+yield depends only on the nuisance parameters $\nu^{(k)}$ where $k$ is taken to run
 over the set of systematics relevant to the bacground prediction.
 
 Without giving an explicit functional form for the signal yield and background
@@ -217,21 +229,172 @@ likelihood must include:
 
 The form of the likelihood is as follows,
 \begin{equation}
-\mathcal{L} = \prod_i \mathcal{P}(N^i_{\textrm{exp}} ; N^i_{\textrm{obs}})
-\prod_{k \in \Theta_i} X(\nu_{ik})
-\prod_{j \in \Theta}  Y(\nu_j)
+\mathcal{L} = \prod_i \mathcal{P}(\NExpi ; \NObsi)
+\prod_{\alpha \in \Theta}  X_\alpha(\nu^{(\alpha)})
 \end{equation}
 where
 \begin{itemize}
 \item $\mathcal{P}(\mu;x)$ denotes a Poisson distribution with mean $\mu$ and value
 $x$
-\item $X(\nu_i)$ denotes an unspecified statistical distribution used to
-  model the uncorrelated statistical uncertainty on the background prediction in
-  each bin. The $\nu_i$ are nuisance parameters.
-\item $Y(\nu_j)$ denotes an unspecified statistical distribution used to model
-  the correlated systematic uncertainties. The $\nu_j$ are nuisance parameters.
+\item The $X_\alpha(\nu^{(\alpha)})$ represent some prior pdf associated with
+  each systematic $\alpha$.
 \end{itemize}
 
+\subsubsection{The Signal Yield}
+The signal yield per bin is constructed as follows
+\begin{equation}
+\NSigi = \mu \times \epsilon_i(\nu^{(\alpha)}) \times \sigma \times L \times \nu^{\textrm{lumi}}
+\end{equation}
+
+with
+\begin{itemize}
+\item $\epsilon_i(\nu^{(\alpha)})$ is the efficiency of the $i$th bin assumed to be
+  dependent on a set of nuisance parameters $\nu^{(\alpha)}$.
+\item $\sigma$ the cross-section of the signal model being considered,
+\item $L$ the integrated luminosity,
+\item $\nu^{\textrm{lumi}}$ the nuisance parameter associated with uncertainty in the
+estimate of the integrated luminosity.
+\end{itemize}
+
+\subsubsection{Background Prediction}
+The background prediction per bin is then written as
+\begin{equation}
+\NBkgi = \RCSi(\nu_i^{(\alpha)}, \nu^{(\beta)}) \times \NControli(\nu_i^{(\gamma)})
+\end{equation}
+where
+\begin{itemize}
+\item \RCSi is the translation ratio as defined in Section TODO,
+\item The nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{\gamma}$ represent
+  statistical uncertainties uncorrelated between the bins.
+\item The nuisance parameters $\nu_i^{(\beta)}$ represent systematic
+  uncertainties assumed to be 100\% correlated across the bins.
+\item \NControli the observed number of events in the control region
+($L_P > 0.3$)
+\end{itemize}
+
+\subsubsection{Parameterising Systematics}
+In reality, it is almost always impossible to obtain a full functional form for
+a variable $x$ (e.g. \RCSi, \NControli) in terms of a set of nuisance parameters
+$\nu^{(\alpha)}$. Writing the Taylor expansion of $x(\nu^{(\alpha)})$ for two terms to
+second order,
+\begin{align*}
+ x(\nu^{(A)}, \nu^{(B)})\bigg|_{\substack{\nu^{(A)} = a\\ \nu^{(B)} = b}} \approx
+x(a,b) +
+(\nu^{(A)} - a)\left.\frac{\partial x}{\partial\nu^{(A)}}\right|_{\nu^{(A)}=a} +
+(\nu^{(B)} - b)\left.\frac{\partial x}{\partial\nu^{(B)}}\right|_{\nu^{(B)}=b} +\\
+\frac{1}{2!}\left[
+(\nu^{(A)} - a)^2 \frac{\partial^2 x}{\partial \left(\nu^{(A)}\right)^2}
++ (\nu^{(B)} - b)^2 \frac{\partial^2 x}{\partial \left(\nu^{(B)}\right)^2}
++ 2(\nu^{(A)} - a)(\nu^{(B)} - b)\frac{\partial^2 x}{\partial
+  \nu^{(A)}\partial\nu^{(B)}}
+\right]
+\end{align*}
+Assuming the expansion is performed with respect to the mean of x, $\bar{x}$,
+the values of $a$ and $b$ are seen to be the mean values of the corresponding nuisance
+parameters. For small deviations from the mean,
+\begin{equation}
+ (\nu^{(A)} - a) \sim (\nu^{(B)} - b) \sim \epsilon \sim 0
+\end{equation}
+and ignoring terms $O(\epsilon^2)$
+
+\begin{equation}
+x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
+(\nu^{(A)} - a)\left.\frac{\partial x}{\partial\nu^{(A)}}\right|_{\nu^{(A)}=a} +
+(\nu^{(B)} - b)\left.\frac{\partial x}{\partial\nu^{(B)}}\right|_{\nu^{(B)}=b}
+\label{eqn:stats:taylor}
+\end{equation}
+Since the derivatives in Equation~\ref{eqn:stats:taylor} will in practice be
+derived from some finite variation of the underlying quantity associated with
+each nuisance parameter, the infinitessimal derivatives must be replaced by
+finite changes. It is also sensible to set $a=b=0$.
+\begin{equation}
+x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
+\nu^{(A)}\frac{\Delta x}{\Delta\nu^{(A)}} +
+\nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}}
+\label{eqn:stats:taylor2}
+\end{equation}
+Since the value of $x$ is often associated with a physical quantity such as an
+efficiency or an event yield, it is desirable to constrain it to positive
+values. This can be achieved providing the range of each nuisance parameter is
+set such that
+\begin{equation}
+\nu^{j}\times\frac{\Delta x}{\Delta \nu^{(\alpha)}} < \bar{x}
+\end{equation}
+
+The previous derivation can be simply extended two $N > 2$ nuisance
+parameters. Generalising and rewriting Equation~\ref{eqn:stats:taylor2},
+\begin{eqnarray*}
+x(\nu^{(A)}, \nu^{(B)}, \ldots) &\approx& \bar{x} +
+\nu^{(A)}\frac{\Delta x}{\Delta\nu^{(A)}} +
+\nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}} + \ldots \\
+&\approx& \frac{1}{\bar{x}^{N-1}} \left\{ \bar{x}^N +
+\bar{x}^{N-1} \nu^{(A)}\frac{\Delta x}{\Delta\nu^{(A)}} +
+\bar{x}^{N-1} \nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}} + \ldots \right\}
+\end{eqnarray*}
+Trying to rewrite as a product,
+\begin{eqnarray*}
+\prod_{j=A, B, \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) &=&
+\bar{x}^N + \bar{x}^{N-1} \sum_{j=A, B, \ldots} \nu^{(\alpha)}\frac{\Delta x}{\Delta \nu^{(\alpha)}} \\
+&&+ \bar{x}^{N-2}\sum_{j=A, B, \ldots} \sum_{k=A, B, \ldots} \nu^{(\alpha)}\nu^{(\beta)}\frac{\Delta x}{\Delta
+  \nu^{(\alpha)}}\frac{\Delta x}{\Delta \nu^{(\beta)}} \\
+&&+ \ldots +O(\nu^N)
+\end{eqnarray*}
+Ignoring terms greater than $O(\nu^2)$,
+\begin{eqnarray*}
+\prod_{j=A, B, \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) &\approx&
+\bar{x}^N + \bar{x}^{N-1} \sum_{j=A, B, \ldots} \nu^{(\alpha)}\frac{\Delta x}{\Delta
+  \nu^{(\alpha)}} \\
+&\approx& \bar{x}^{N-1} x(\nu^{(A)}, \nu^{(B)}, \ldots)
+\end{eqnarray*}
+and therefore
+\begin{equation}
+x(\nu^{(A)}, \nu^{(B)}, \ldots) \approx \frac{1}{\bar{x}^{N-1}} \prod_{j = A, B,
+  \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) \approx
+\bar{x} \prod_{j = A, B,
+  \ldots} \frac{1}{\bar{x}}\left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right)
+\label{eqn:stats:systderiv}
+\end{equation}
+
+Using Equation~\ref{eqn:stats:systderiv}, the signal yield can be rewritten as follows
+\begin{equation}
+\NSigi = \mu \times \bar{\epsilon}_i \times \prod_{j}\left(\frac{\bar{\epsilon}_i
+    + \nu^{(\alpha)}\frac{\Delta\epsilon_i}{\Delta\nu^{(\alpha)}}}{\bar{\epsilon}_i}\right) \sigma \times L \times \nu^{\textrm{lumi}}
+\end{equation}
+and the background prediction
+\begin{equation}
+\NBkgi = \RbarCS_i \times \prod_{j}\left( \frac{\RbarCS_i
+    + \nu^{(\alpha)}\frac{\Delta\RCSi}{\Delta\nu^{(\alpha)}}}{\RbarCS_i}\right)
+\times \NbarControl_i \times \prod_{k}\left( \frac{\NbarControl_i
+    + \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right)
+\end{equation}
+
+\subsection{Nuisance Parameters}
+The nuisance parameters incorporated in the model described thus far are of two
+types.
+\begin{enumerate}
+\item Statistical uncertainties assumed to be uncorrelated across analysis
+  bins. This includes uncertainties arising from limited generator statistics,
+  limited data in the control region and signal contamination in the control
+  region.
+\item Systematic uncertainties arising from detector artefacts or theoretical
+  uncertainties such as jet energy scale, standard model cross-sections and
+  integrated luminosity measurement.
+\end{enumerate}
+For uncertainties of the first kind, independent nuisance paramters must be
+included for each bin in the analysis. For uncertainties of the second kind, a
+single nuisance parameter will be included for all bins. This achieves the
+desired correlation.
+
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|}
+Uncertainty      & Correlated & \NSigi     & \RCSi      & \NControli \\\hline
+Luminosity       & \checkmark & \checkmark &            & \\
+Jet Energy Scale & \checkmark & \checkmark & \checkmark & \\
+\MET Resolution  & \checkmark & \checkmark & \checkmark & \\
+\PW/\Ptop\APtop Ratio & \checkmark &            & \checkmark & \\
+\PW Polarisation & \checkmark &            & \checkmark & \\
+\end{tabular}
+\end{table}
 
 \section{Results}
 
