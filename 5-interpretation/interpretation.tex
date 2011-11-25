@@ -229,7 +229,7 @@ likelihood must include:
 
 The form of the likelihood is as follows,
 \begin{equation}
-\mathcal{L} = \prod_i \mathcal{P}(\NExpi ; \NObsi)
+\mathcal{L} = \prod_i \Poisson(\NExpi ; \NObsi)
 \prod_{\alpha \in \Theta}  X_\alpha(\nu^{(\alpha)})
 \end{equation}
 where
@@ -318,7 +318,7 @@ efficiency or an event yield, it is desirable to constrain it to positive
 values. This can be achieved providing the range of each nuisance parameter is
 set such that
 \begin{equation}
-\nu^{j}\times\frac{\Delta x}{\Delta \nu^{(\alpha)}} < \bar{x}
+\nu^{(\alpha)}\times\frac{\Delta x}{\Delta \nu^{(\alpha)}} < \bar{x}
 \end{equation}
 
 The previous derivation can be simply extended two $N > 2$ nuisance
@@ -381,25 +381,65 @@ types.
   integrated luminosity measurement.
 \end{enumerate}
 For uncertainties of the first kind, independent nuisance paramters must be
-included for each bin in the analysis. For uncertainties of the second kind, a
+included for each analysis bin. For uncertainties of the second kind, a
 single nuisance parameter will be included for all bins. This achieves the
-desired correlation.
+desired correlation. A full list of the nuisance parameters used is shown in
+Table~\ref{tbl:systematic_parameters}.
 
-\begin{table}
-\begin{tabular}{|c|c|c|c|c|}\hline
-Uncertainty      & Correlated & \NSigi     & \RCSi      & \NControli \\\hline
-Luminosity       & \checkmark & \checkmark &            & \\
-Jet Energy Scale & \checkmark & \checkmark & \checkmark & \\
-\MET Resolution  & \checkmark & \checkmark & \checkmark & \\
-\PW/\Ptop\APtop Ratio & \checkmark &            & \checkmark & \\
-\PW Polarisation & \checkmark &            & \checkmark & \\
+\input{tables/systematic_parameters}
 
-\hline
-\end{tabular}
-\end{table}
+\subsection{Signal Contamination}
+It can be seen in Figure~TODO that the region \LPcontrol may have a substantial
+component of \ac{SUSY} events depending on the particular model under
+consideration. Signal contamination increases \NControl leading to an
+overprediction of \NBkg. To account for this, the \NBkgi term is modifed to
+reflect the assumption that some fraction of the yield in \NControli will be
+due to \ac{SUSY} contamination. Rewriting,
+
+\begin{equation}
+\NBkgi(\mu, \nu^{(\alpha)}) = \RbarCS_i \times \prod_{j}\left( \frac{\RbarCS_i
+    + \nu^{(\alpha)}\frac{\Delta\RCSi}{\Delta\nu^{(\alpha)}}}{\RbarCS_i}\right)
+\times \NbarControl_i \times f^{\textrm{SM}}_i(\mu) \times \prod_{k}\left( \frac{\NbarControl_i
+    +
+    \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right)
+\end{equation}
+where $f^{\textrm{SM}}_i$ represents the fraction of \NControli expected to be
+\ac{SM} events given the signal hypothesis. The prior distribution assigned to
+this systematic in \likelihood is then
+\begin{equation}
+X(\nu^{\textrm{SM}}) = \Gauss \left( \frac{\NControli}{\NControli + \mu\times\epsilon_i^{\textrm{control}}\times\sigma\times L}
+; \nu^{\textrm{SM}} \right)
+\end{equation}
+and $f^{\textrm{SM}}_i = \nu^{\textrm{SM}}_i$. Due to technical difficulties with
+introducing these terms into the likelihood, it was rewritten as follows
+\begin{equation}
+X(\nu^{\textrm{SM}}_i) = \Gauss \left( \frac{\NControli}{\NControli + \epsilon_i^{\textrm{control}}\times\sigma\times L}
+; \nu^{\textrm{SM}}_i \right)
+\end{equation}
+and the term included in the background prediction becomes
+\begin{equation}
+f^{\textrm{SM}}_i = 1 - \mu \times \left(1- \nu^{\textrm{SM}}_i\right)
+\end{equation}
+This can be justified as follows
+\begin{eqnarray}
+<f^{\textrm{SM}}> &=& 1 - \mu \times \left(1-<\nu^{\textrm{SM}}>\right) \\
+                  &=& 1 - \mu  + \mu\times\frac{\NControli}{\NControli + \NSUSYi} \\
+                  &=& \frac{(1-\mu)\left(\NControli + \NSUSYi\right) + \mu\NControli}{\NControli + \NSUSYi} \\
+                  &=& \frac{\NControli + (1 - \mu)\NSUSYi}{\NControli + \NSUSYi} \\
+                  &=& \frac{\NControli \left( 1 + (1-\mu)\frac{\NSUSYi}{\NControli}\right)}{\NControli + \NSUSYi} \\
+                  &=& \frac{\NControli}{\left(\NControli +\NSUSYi\right)\left( 1 + (1 - \mu)\frac{\NSUSYi}{\NControli}\right)^{-1}} \\
+                  &\approx& \frac{\NControli}{\left(\NControli +\NSUSYi\right)\left( 1 - (1-\mu)\frac{\NSUSYi}{\NControli}\right)} \\
+                  &=& \frac{\NControli}{\NControli + \mu\NSUSYi - (1-\mu)\frac{\NSUSYi^2}{\NControli}}
+\end{eqnarray}
+
+
 
 \section{Results}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{fig/RA4_ExclusionLimit_tanb10}
 \end{figure}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../thesis"
+%%% End:
