@@ -1,0 +1,27 @@
+\ctable[
+cap=Systematic Uncertainties,
+caption=Systematic Uncertainties,
+mincapwidth=0.5\textwidth,
+label=tbl:systematic_parameters,
+pos=h
+]{lccccc}{
+\tnote[a]{Electron channel only}
+
+\tnote[b]{In the electron channel, the use of Monte-Carlo templates in the QCD
+  background estimate introduces a dependence on the jet energy scale. Whilst
+  the ability to include these correlations was added to the statistics package,
+  it was not used in the results shown.}
+
+}{\FL
+Uncertainty                        & Correlated & \NSigi     & \RCSi      & \NControli & Nuisance Parameters\ML
+%
+Luminosity                         & \checkmark & \checkmark &            &            & $\nu^{\textrm{lumi}}$\NN
+Jet Energy Scale                   & \checkmark & \checkmark & \checkmark & \tmark[b]  & $\nu^{\textrm{jes}}$\NN
+\MET Resolution                    & \checkmark & \checkmark & \checkmark & \tmark[b]  & $\nu^{\textrm{metres}}$\NN
+\PW/\Ptop\APtop Ratio              & \checkmark &            & \checkmark &            & $\nu^{W\Ptop\APtop}$\NN
+\PW Polarisation                   & \checkmark &            & \checkmark &            & $\nu^{\textrm{\PW pol}}$\NN
+Limited \ac{MC} Statistics         &            &            & \checkmark &            & $\nu^{\textrm{MC}}_i$\NN
+Limited Data Statistics            &            &            &            & \checkmark & $\nu^{\textrm{data}}_i$\NN
+Signal Contamination               &            &            &            & \checkmark & $\nu^{\textrm{sig cont}}_i$\NN
+QCD Background Prediction\tmark[a] &            &            &            & \checkmark & $\nu^{\textrm{qcd}}_i$\LL
+}
