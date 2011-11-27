@@ -24,6 +24,8 @@ class LatexBuilder(object):
                            target = "%s.dvi" % self.project)
         self.pdf = self.env.PDF(source = "%s.tex" % self.project,
                            target = "%s.pdf" % self.project)
+        self.dvipdf = self.env.PDF(source = "%s.dvi" % self.project,
+                                   target = "%s.dvi.pdf" % self.project)
         self.ps = self.env.PostScript(source = "%s.tex" % self.project,
                                  target = "%s.ps" % self.project)
         self.wch = self.env.WordCountHTML(source = "%s.tex" % self.project,
@@ -32,6 +34,9 @@ class LatexBuilder(object):
         Clean(self.dvi, self.makeindex_files)
         self.env.Alias("pdf", "%s.pdf" % self.project)
         Clean(self.pdf, self.makeindex_files)
+        self.env.Alias("dvipdf", "%s.dvi.pdf" % self.project)
+        Clean(self.dvipdf, self.makeindex_files)
+
         self.env.Alias("ps", "%s.ps" % self.project)
         Clean(self.ps, self.makeindex_files)
         self.env.Alias("wch", "%s.count.html" % self.project)
