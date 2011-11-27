@@ -393,7 +393,7 @@ It can be seen in Figure~TODO that the region \LPcontrol may have a substantial
 component of \ac{SUSY} events depending on the particular model under
 consideration. Signal contamination increases \NControl leading to an
 overprediction of \NBkg. To account for this, the \NBkgi term is modifed to
-reflect the assumption that some fraction of the yield in \NControli will be
+reflect the assumption that some fraction of the yield \NControli will be
 due to \ac{SUSY} contamination. Rewriting,
 
 \begin{equation}
@@ -402,36 +402,89 @@ due to \ac{SUSY} contamination. Rewriting,
 \times \NbarControl_i \times f^{\textrm{SM}}_i(\mu) \times \prod_{k}\left( \frac{\NbarControl_i
     +
     \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right)
+\label{eqn:bgprediction}
 \end{equation}
 where $f^{\textrm{SM}}_i$ represents the fraction of \NControli expected to be
-\ac{SM} events given the signal hypothesis. The prior distribution assigned to
-this systematic in \likelihood is then
+\ac{SM} events given the current signal hypothesis i.e.
 \begin{equation}
-X(\nu^{\textrm{SM}}) = \Gauss \left( \frac{\NControli}{\NControli + \mu\times\epsilon_i^{\textrm{control}}\times\sigma\times L}
+f^{\textrm{SM}}_i(\mu) = \frac{\NSMi}{\NSMi + \NSUSYi(\mu)}
+\end{equation}
+The expected number of \ac{SUSY} events $\NSUSYi =
+\mu\times\epsilon^{\textrm{control}}_i\times\sigma\times L$ where
+$\epsilon^{\textrm{control}}_i$ is the efficiency calculated for \ac{SUSY}
+events entering the \LPcontrol control region. To reflect these constraints, we
+setup an appropriate prior distribution
+\begin{equation}
+X(\nu^{\textrm{SM}}) = \Gauss \left( \frac{\NSMi}{\NSMi + \mu\times\epsilon_i^{\textrm{control}}\times\sigma\times L}
 ; \nu^{\textrm{SM}} \right)
 \end{equation}
-and $f^{\textrm{SM}}_i = \nu^{\textrm{SM}}_i$. Due to technical difficulties with
-introducing these terms into the likelihood, it was rewritten as follows
+and $f^{\textrm{SM}}_i \equiv \nu^{\textrm{SM}}_i$. Calculating the expected value of the nuisance parameter,
+\begin{eqnarray}
+<f^{\textrm{SM}}_i> &=& \frac{\NSMi}{\NSMi + \mu\NSUSYi} \\
+                   &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}
+\label{eqn:fSMideal}
+\end{eqnarray}
+Technical problems associated with adding a functional dependence on the
+\ac{poi} $\mu$ to the mean of the prior distribution necessitated a slightly
+altered formulation. As will be shown, this formulation is approximately
+equivalent given certain assumptions about the range of $\mu$ and the degree of
+signal contamination. The prior distribution included in \likelihood is
+rewritten as
 \begin{equation}
-X(\nu^{\textrm{SM}}_i) = \Gauss \left( \frac{\NControli}{\NControli + \epsilon_i^{\textrm{control}}\times\sigma\times L}
+X(\nu^{\textrm{SM}}_i) = \Gauss \left( \frac{\NSMi}{\NSMi + \epsilon_i^{\textrm{control}}\times\sigma\times L}
 ; \nu^{\textrm{SM}}_i \right)
 \end{equation}
-and the term included in the background prediction becomes
+The term included in the background prediction (\ref{eqn:bgprediction}) is modified to
 \begin{equation}
 f^{\textrm{SM}}_i = 1 - \mu \times \left(1- \nu^{\textrm{SM}}_i\right)
 \end{equation}
-This can be justified as follows
-\begin{eqnarray}
-<f^{\textrm{SM}}> &=& 1 - \mu \times \left(1-<\nu^{\textrm{SM}}>\right) \\
-                  &=& 1 - \mu  + \mu\times\frac{\NControli}{\NControli + \NSUSYi} \\
-                  &=& \frac{(1-\mu)\left(\NControli + \NSUSYi\right) + \mu\NControli}{\NControli + \NSUSYi} \\
-                  &=& \frac{\NControli + (1 - \mu)\NSUSYi}{\NControli + \NSUSYi} \\
-                  &=& \frac{\NControli \left( 1 + (1-\mu)\frac{\NSUSYi}{\NControli}\right)}{\NControli + \NSUSYi} \\
-                  &=& \frac{\NControli}{\left(\NControli +\NSUSYi\right)\left( 1 + (1 - \mu)\frac{\NSUSYi}{\NControli}\right)^{-1}} \\
-                  &\approx& \frac{\NControli}{\left(\NControli +\NSUSYi\right)\left( 1 - (1-\mu)\frac{\NSUSYi}{\NControli}\right)} \\
-                  &=& \frac{\NControli}{\NControli + \mu\NSUSYi - (1-\mu)\frac{\NSUSYi^2}{\NControli}}
-\end{eqnarray}
+It can be seen that for $\mu=0$, $f^{\textrm{SM}}_i=1$ and for $\mu=1$,
+$f^{\textrm{SM}}_i=\nu^{\textrm{SM}}_i$ as required. It will now be shown that
+for a suitable range of $\mu$ and for small values of $\NSUSYi/\NControli$, the
+expectation value of $f^{\textrm{SM}}_i$ will be equivalent to
+Equation~\ref{eqn:fSMideal}.
+\begin{eqnarray*}
+<f^{\textrm{SM}}_i> &=& 1 - \mu \times \left(1-<\nu^{\textrm{SM}}>\right) \\
+                  &=& 1 - \mu  + \mu\frac{\NSMi}{\NSMi + \NSUSYi} \\
+                  &=& \frac{(1-\mu)\left(\NSMi + \NSUSYi\right) + \mu\NSMi}{\NSMi + \NSUSYi} \\
+                  &=& \frac{\NSMi + (1 - \mu)\NSUSYi}{\NSMi + \NSUSYi} \\
+                  &=& \frac{\NSMi \left( 1 + (1-\mu)\frac{\NSUSYi}{\NSMi}\right)}{\NSMi + \NSUSYi} \\
+                  &=& \frac{\NSMi}{\left(\NSMi +\NSUSYi\right)\left( 1 + (1 - \mu)\frac{\NSUSYi}{\NSMi}\right)^{-1}} \\
+                  &\approx& \frac{\NSMi}{\left(\NSMi +\NSUSYi\right)\left( 1 - (1-\mu)\frac{\NSUSYi}{\NSMi}\right)} \\
+                  &=& \frac{\NSMi}{\NSMi + \mu\NSUSYi - (1-\mu)\frac{\NSUSYi^2}{\NSMi}}\\
+                  &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi} - (1-\mu)\left(\frac{\NSUSYi}{\NSMi}\right)^2} \\
+                  &\approx& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}
+\end{eqnarray*}
 
+\subsubsection{Uncertainties on \NControli}
+The dominant systematic uncertainty relating to the \LPcontrol region yield
+arises from the limited statistics of the sample. This is especially true at
+high \STlep. Accordingly, a nuisance parameter is added to the likelihood and
+assigned a Gaussian prior with a width derived assuming a Poisson error on the
+\NControli yield.
+
+An additional complication arises in the case of the electron channel where the
+\LPcontrol region has a non-negligible component of \ac{QCD} multijet
+events. These are unreliably modelled by event generators and thus not included
+in the calculation of \RCSi. This additional contribution to \NControli would
+again lead to an overprediction of the background. To correct this, an
+additional factor is included in Equation~\ref{eqn:bgprediction},
+$f^{\textrm{ewk}}_i$ derived from the results of the \ac{QCD} fit detailed in
+Section~\ref{TODO}. The error derived from the fit procedure is modelled as a
+Gaussian prior on an additional nuisance parameter $\nu^{\textrm{QCD}}_i$. It
+has been assumed, and confirmed by the results of the fit in data that the
+region \LPsignal is \ac{QCD} free.
+
+The uncertainty included via the prior distribution of $\nu^{\textrm{QCD}}$ was
+the quadrature sum of the statistical error from the fitting procedure and an
+uncertainty accounting for the limited generator statistics used to construct
+the fit templates. Additional errors coming from jet energy scale uncertainty
+and missing energy resolution were found to be small. Proper inclusion of these
+into the likelihood would need to ensure correlation with the nuisance
+parameters representing these uncertainties. The relevant terms were setup but
+not included in the final calculations. The contribution is seen to be small and
+unnecessary complication of the likelihood function tends to increase the
+processing time, especially when running a large number of toy experiments.
 
 
 \section{Results}
