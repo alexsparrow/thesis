@@ -35,11 +35,13 @@ pdfauthor = {\textcopyright\ Andy Buckley}
 \begin{mainmatter}
   \linenumbers
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
-  \import{1-theory/}{theory}
-  \import{2-expt/}{expt}
-  \import{3-wpol/}{wpol}
-  \import{4-susy/}{susy}
-  \import{5-interpretation/}{interpretation}
+  \import{1-sm/}{sm}
+  \import{2-susy/}{susy}
+  \import{3-expt/}{expt}
+  \import{4-reco/}{reco}
+  \import{5-wpol/}{wpol}
+  \import{6-susysearch/}{susysearch}
+  \import{7-interpretation/}{interpretation}
 
   %% To ignore a specific chapter while working on another,
   %% making the build faster, comment it out like this:
@@ -50,11 +52,13 @@ pdfauthor = {\textcopyright\ Andy Buckley}
 %% AS: Added to make scons seen these files (it doesn't parse the import
 %% statements above!)
 \begin{comment}
-  \input{1-theory/theory}
-  \input{2-expt/expt}
-  \input{3-wpol/wpol}
-  \input{4-susy/susy}
-  \input{5-interpretation/interpretation}
+  \input{1-sm/sm}
+  \input{2-susy/susy}
+  \input{3-expt/expt}
+  \input{4-reco/reco}
+  \input{5-wpol/wpol}
+  \input{6-susysearch/susysearch}
+  \input{7-interpretation/interpretation}
 \end{comment}
 
 %% Produce the appendices
