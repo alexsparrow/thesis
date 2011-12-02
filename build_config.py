@@ -33,3 +33,5 @@ CHAPTERS = [
 
 
 MAKEINDEX_EXTENSIONS = ['.glg', '.glo', '.gls']
+
+MAKE_STATUS_PAGE = True

@@ -4,7 +4,7 @@ def extension(fname, ext):
     return ".".join(fname.split(".")[:-1])+ext
 
 class LatexBuilder(object):
-    def __init__(self, env, cfg):
+    def __init__(self, env, cfg, make_status_page=False):
         self.project = cfg.LATEX_PROJECT
         self.makeindex_files = ["%s.%s" % (self.project, ext)
                                 for ext in cfg.MAKEINDEX_EXTENSIONS]
@@ -18,6 +18,7 @@ class LatexBuilder(object):
             "jpg" : self._jpg
             }
         self.env = env
+        self.make_status_page = cfg.MAKE_STATUS_PAGE
 
     def aliases(self):
         self.dvi = self.env.DVI(source = "%s.tex" % self.project,
@@ -44,6 +45,9 @@ class LatexBuilder(object):
         self.env.AlwaysBuild(
             self.env.Alias("wc", [],
                            "./tools/texcount.pl -inc -total -q %s.tex" % self.project))
+        if self.make_status_page:
+            # See e.g. http://stackoverflow.com/questions/828075/how-do-i-constrain-the-scons-command-builder-to-run-only-if-its-dependencies-hav
+            self.status_cmd = Command('status.tex', [], './tools/thesis_status.py %s.tex $TARGET' % self.project)
 
         self.env.Default(self.default_target)
 
