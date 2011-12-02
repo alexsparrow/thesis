@@ -16,6 +16,7 @@ Some theoretical background relating to \PW helicity effects has been presented
 in Section~TODO. Here, the discussion will be oriented towards a more
 experimental context.
 
+\subsection{Polarisation Effects Parallel to the Beam Line}
 For small values of \PW transverse momentum, \PtW the differential angular
 cross-section for the process
 $\Pp\Pp\longrightarrow\PWpm\longrightarrow\Plpm\Pgnl$ follows the Drell-Yan
@@ -51,6 +52,7 @@ the \PWm are found to have a near 100\% right-handed polarisation. This is a
 result of the subprocess $\APup\Pdown\longrightarrow\PWm$ where this time the
 \APup carries more momentum.
 
+\subsection{Polarisation Effects in the Transverse Plane}
 In the case, where the \PW carries a significant transverse momentum \PtW, the
 situation is more complex. To simplify matters, one only needs to consider the
 \PWp case as the \PWm case is very similar. At leading order, three subprocesses
@@ -60,7 +62,39 @@ should be considered,
 \Pup\APdown\longrightarrow\PWp\Pgluon\qquad\textrm{and} \qquad
 \Pgluon\APdown\longrightarrow\PWp\APup
 \end{equation}
-For sufficiently large \PtW, the soft gluon enhancement of $\Pup\APdown\longrightarrow\PWp\Pgluon$
+For sufficiently large \PtW, the soft gluon enhancement of
+$\Pup\APdown\longrightarrow\PWp\Pgluon$ and the quark-gluon subprocess is found
+to dominate. It has been found that 70-80\% of $\PW+N$~jet ($N \leq 4$)
+production at \ac{LO} is initiated by this subprocess.
+
+Considering the quark-gluon subprocess, the $s$ and $t$ channel diagrams are
+shown in Figure~\ref{fig:w1jet_st}. For the $s$ channel diagram, the on-shell
+\Pdown quark is directly coupled to the \PW and therefore must be in a negative
+helicity state (i.e. left-handed). Assuming a positive helicity for the W boson
+(as depicted in Figure~\ref{fig:w1jet_st_s}), the spin along the $\PW\Pdown$
+axis is $1+\frac{1}{2} = \frac{3}{2}$. Such a configuration is not allowed for the
+\spinhalf off-shell quark and thus the $s$-channel diagram should lead to a 100\%
+left-handed polarisation of the \PW. In contrast, the $t$ channel diagram is not
+similarly constrained by spin arguments (since the \PW is not coupled directly
+to the quark) and thus the helicity polarisation will not be seen.
+
+It can be shown that for a left-handed incoming gluon, the $t$-channel diagram
+can be made to vanish. For a right-handed gluon, the \PW polarisation is not
+constrained but has been shown to become predominantly right-handed at high
+\PtW. At high \PtW, the outgoing \PW helicity will be almost 100\% correlated
+with the incoming gluon and due to a factor 4 difference in the size of the
+corresponding matrix elements, the \PW is expected to asymptotically approach an
+80\% left-handed polarisation with increasing \PtW.
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:w1jet_st_s}\includegraphics[width=0.5\textwidth]{fig/wpol_1jet_s}}\quad
+\subfloat[]{\label{fig:w1jet_st_t}\includegraphics[width=0.25\textwidth]{fig/wpol_1jet_t}}
+\caption{Diagrams showing the $\Pup\Pgluon\longrightarrow\PWp\Pdown$ subprocess
+  in the \subref{fig:w1jet_st_s} $s$ and \subref{fig:w1jet_st_t} $t$ channels. The black displaced arrows indicate the particle
+  momenta. For the $s$ channel diagram, the helicity vectors are shown as red
+  arrows, for the case of a right-handed \PW boson.}
+\label{fig:w1jet_st}
+\end{figure}
 
 \begin{figure}
 \centering
@@ -71,6 +105,6 @@ For sufficiently large \PtW, the soft gluon enhancement of $\Pup\APdown\longrigh
 \subfloat[]{\includegraphics[width=0.3\textwidth]{fig/wpol_prod_e}}\quad
 \subfloat[]{\includegraphics[width=0.3\textwidth]{fig/wpol_prod_f}}
 \caption{Illustrations of $\PWplus+1$~jet production modes at the LHC. The
-  $\Pgluon$ superscript indicates its helicity}
+  gluon superscript indicates its helicity}
 \label{fig:w1jet_modes}
 \end{figure}
