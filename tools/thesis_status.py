@@ -64,7 +64,7 @@ def hostuser():
 def ordinal(n):
     m = {1:"st", 2:"nd", 3:"rd"}
     if (n % 10) in m: ords = m[(n % 10)]
-    else ords = "th"
+    else: ords = "th"
     return "%d%s" % (n, ords)
 
 def date():
