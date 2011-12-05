@@ -52,11 +52,15 @@ the \PWm are found to have a near 100\% right-handed polarisation. This is a
 result of the subprocess $\APup\Pdown\longrightarrow\PWm$ where this time the
 \APup carries more momentum.
 
+% TODO: Mention the effect this has on the rapidity distribution
+
 \subsection{Polarisation Effects in the Transverse Plane}
 In the case, where the \PW carries a significant transverse momentum \PtW, the
-situation is more complex. To simplify matters, one only needs to consider the
-\PWp case as the \PWm case is very similar. At leading order, three subprocesses
-should be considered,
+situation is more complex. In general, the \PW may be produced in association
+with a number of jets. For the sake of this discussion we will consider cases
+involving only a single jet. Also, in order to simplify matters, one only needs
+to consider the \PWp case as the \PWm case is very similar. At leading order,
+three subprocesses should be considered\cite{berger_left_handed_w},
 \begin{equation}
 \Pup\Pgluon\longrightarrow\PWp\Pdown\;\textrm{,} \qquad
 \Pup\APdown\longrightarrow\PWp\Pgluon\qquad\textrm{and} \qquad
@@ -85,7 +89,11 @@ constrained but has been shown to become predominantly right-handed at high
 \PtW. At high \PtW, the outgoing \PW helicity will be almost 100\% correlated
 with the incoming gluon and due to a factor 4 difference in the size of the
 corresponding matrix elements, the \PW is expected to asymptotically approach an
-80\% left-handed polarisation with increasing \PtW.
+80\% left-handed polarisation with increasing \PtW. Due to the \VminusA
+coupling, the decay leptons may act as an analyser of the \PW
+polarisation. Having provided some motivation for the existence of the effect, a
+more detailed discussion will follow.
+
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:w1jet_st_s}\includegraphics[width=0.5\textwidth]{fig/wpol_1jet_s}}\quad
@@ -115,7 +123,10 @@ d\sigma^{\textrm{LO}}_{(b)} \propto (k_{\Pup} \dot k_{\Pe})^2
 \end{equation}
 where the $k$ are Lorentz vectors representing the particle momenta. For each
 subprocess, the helicity configurations corresponding to $(a)$ and $(b)$ are
-shown in the upper and lower rows of Figure~\ref{fig:w1jet_modes} respectively.
+shown in the upper and lower rows of Figure~\ref{fig:w1jet_modes}
+respectively. The red arrows indicate particle helicity, with a double-stemmed
+arrow for the \PW momentum. In the cases where the \PW is neither purely
+left-handed nor right-handed, the arrow is placed at an angle.
 
 Starting with the subprocess $\Pup\Pgluon\longrightarrow\PWp\Pdown$, the $(a)$
 expression in \ref{eqn:w1jet_xs} correlates the axis of the \Pdown quark with the
@@ -158,6 +169,83 @@ dominant left-handed polarisation mode.
   gluon superscript indicates its helicity}
 \label{fig:w1jet_modes}
 \end{figure}
+
+\subsection{Studying Helicity}
+The hadronic cross-section of the \PW is obtained within the parton model by
+weighting the individual parton-level cross-sections by the respective parton
+densities \cite{mirkes_w_1994},
+\begin{equation}
+\frac{d\sigma^{h_1 h_2}}{d(\PtW)^2 dy d\Omega^*} = \sum_{ab} \int dx_1 dx_2
+f_a^{h_1}\left(x_1, \mu_F^2\right)f_b^{h_2}\left(x_2, \mu_F^2\right)
+\times \frac{s d\tilde{\sigma}_{ab}}{dt du d\Omega^*} \left(x_1 P_1, x_2 P_2,
+\alpha_s (\mu_R^2)\right)
+\end{equation}
+where $h_1$ and $h_2$ are the interacting hadrons and the sum runs over $a,b =
+\Pquark, \APquark, \Pgluon$. The parton density functions $f_a^{h}\left(x,
+  \mu^2\right)$ give the probability of finding a parton $a$ with momentum
+fraction $x$ in hadron $h$ when probed at a scale $\mu^2$. The
+$d\tilde{\sigma}_{ab}$ are the parton-level cross-sections for the chosen
+process(es). The hadron-level Mandelstam variables are written uppercase
+\begin{equation*}
+S = (P_1 + P_2)^2 \qquad T = (P_1 - Q)^2 \qquad U = (P_2 - Q)^2
+\end{equation*}
+and parton-level lowercase
+\begin{eqnarray*}
+s &=& (p_1 + p_2)^2 = x_1 x_2 S\\
+t &=& (p_1 - Q)^2  = x_1(T-Q)^2 +Q^2\\
+u &=& (p_2 - Q)^2 = x_2(U -Q)^2 + Q^2
+\end{eqnarray*}
+and
+\begin{equation*}
+p_1 = x_1 P_1 \qquad p_2 = x_2 P_2
+\end{equation*}
+This can be rewritten in terms of a standard set of angular coefficient $A_i$,
+to give
+\begin{align}
+\frac{d\sigma}{d(\PtW)^2 dy d\cos\theta d\phi} = \frac{3}{16\pi}
+\frac{d\sigma^{-1}}{d(\PtW)^2 dy} &\left [ \left(1+\cos^2\theta\right) \right.\\
+ &+ \frac{1}{2} A_0 \left ( 1 - 3\cos^2\theta \right ) + A_1 \sin 2\theta\cos\phi \\
+ &+ \frac{1}{2}A_2\sin^2\theta\cos 2\phi + A_3\sin\theta\cos\phi \\
+ &+ A_4\cos\theta + A_5\sin^2\theta\sin 2\phi \\
+ &+ A_6\sin 2\theta\sin \phi + A_7\sin\theta\sin\phi
+\end{align}
+This may be integrated over $\phi$ and \PtW to give
+\begin{equation}
+\frac{d\sigma}{d\cos\theta} \propto \left(1+\cos^2\theta\right) +
+\frac{1}{2}A_0\left(1-3\cos^2\theta\right) + A_4\cos\theta
+\end{equation}
+% TODO: Check all this bs!
+Due to the \VminusA nature of the Electroweak theory, the \PWp (\PWm) may couple only to
+left-handed (right-handed) fermions and right-handed (left-handed) anti-fermions,
+\begin{equation}
+\left|\frac{1}{2}, \pm \frac{1}{2}\right\rangle\oplus \left|\frac{1}{2},
+  \pm\frac{1}{2}\right\rangle = \left|1, +1\right\rangle or \left |1, -1\right\rangle
+\end{equation}
+The angular momentum states of the \PW boson may be rotated through the angle \thetastar
+\begin{equation}
+\left|J,M\right\rangle = \sum_{M'=-J}^{M'=+J} d_{M, M'}^J \left | J, M'\right\rangle
+\end{equation}
+where the $d_{M, M'}$ are the reduced Wigner D-matrices. The amplitude is
+written as
+\begin{equation}
+\mathcal{A} \sim \sum_{M''=-J}^{M''=+J} \left\langle J, M''\mid J, M\right\rangle
+\end{equation}
+and the cross-section as
+\begin{eqnarray}
+\sigma(\theta) &\sim& \sum_{M''=-J}^{M''=+J} \left|\left\langle J, M'' \mid J,
+  M\right\rangle\right|^2\\
+&\sim& \sum \left (d_{M, M'}^J\right)^2 f_{M'}
+\end{eqnarray}
+where $f_{M'}$ are the helicity fractions $f_0$, $f_{-1} \equiv \fL$ and $f_{+1}
+\equiv \fR$. Since, as has been said, the angular momentum state must be
+$\left|1,+1\right\rangle$ for the \PWp and $\left|1,-1\right\rangle$ for \PWm,
+it is seen that
+\begin{equation}
+\sigma(\thetastar_{\Plpm}) \sim
+\fL\frac{\left(1\mp\cos\thetastar_{\Plpm}\right)^2}{4}
++ \f0\frac{\sin^2\thetastar_{\Plpm}}{2} +
+\fR\frac{\left(1\pm\cos\thetastar_{\Plpm}\right)^2}{4}
+\end{equation}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../thesis"
