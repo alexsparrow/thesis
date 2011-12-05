@@ -4,8 +4,8 @@ from datetime import datetime
 
 # Annoyingly need to be compatible with old Pythons so can't use
 # subprocess.check_output
-def get_output(cmds):
-    process = subprocess.Popen( cmds, stdout=subprocess.PIPE)
+def get_output(cmds, *args, **kwargs):
+    process = subprocess.Popen( cmds, *args, stdout=subprocess.PIPE, **kwargs)
     output, unused_err = process.communicate()
     retcode = process.poll()
     return output
@@ -80,15 +80,16 @@ def date():
     return dt.strftime("%H:%M, %A "+ ordinal(dt.day) +" %B, %Y")
 
 def git_head(path):
-    return get_output(["git", "rev-parse", "HEAD"])
+    return get_output(["git", "rev-parse", "HEAD"], cwd=path)
+
 def git_local_mods(path):
-    out = get_output(["git", "status", "--porcelain"])
+    out = get_output(["git", "status", "--porcelain"], cwd=path)
     modf = []
     for l in out.splitlines():
         if l.strip()[0] == "M": modf.append(l.split()[-1])
     return modf
 def git_last_commit(path, n):
-    return get_output(["git", "log", "-%d" % n])
+    return get_output(["git", "log", "-%d" % n], cwd=path)
 
 def word_count(path):
     out = get_output([tex_count_path, "-inc", "-q", path])
