@@ -61,6 +61,7 @@ should be considered,
 \Pup\Pgluon\longrightarrow\PWp\Pdown\;\textrm{,} \qquad
 \Pup\APdown\longrightarrow\PWp\Pgluon\qquad\textrm{and} \qquad
 \Pgluon\APdown\longrightarrow\PWp\APup
+\label{eqn:w1jet_processes}
 \end{equation}
 For sufficiently large \PtW, the soft gluon enhancement of
 $\Pup\APdown\longrightarrow\PWp\Pgluon$ and the quark-gluon subprocess is found
@@ -96,15 +97,68 @@ corresponding matrix elements, the \PW is expected to asymptotically approach an
 \label{fig:w1jet_st}
 \end{figure}
 
+Writing the amplitudes of the subprocesses in Equation~\ref{eqn:w1jet_processes}
+in terms of spinor products, two distinct expressions emerge,
+
+\begin{eqnarray*}
+\mathcal{A}^{\textrm{tree}}_{(a)} &\propto&
+\frac{\left<\Pdown\nu\right>^2}{\left<\Pup\Pgluon\right>\left<\Pgluon\Pdown\right>}\\
+\mathcal{A}^{\textrm{tree}}_{(b)} &\propto&
+\frac{\left[\Pup\Pe\right]^2}{\left[\Pup\Pgluon\right]\left[\Pgluon\Pdown\right]}
+\end{eqnarray*}
+where factors common to both expressions are not shown. The corresponding
+cross-sections are
+\begin{equation}
+d\sigma^{\textrm{LO}}_{(a)} \propto (k_{\Pdown} \dot k_{\Pneutrino})^2 \quad
+d\sigma^{\textrm{LO}}_{(b)} \propto (k_{\Pup} \dot k_{\Pe})^2
+\label{eqn:w1jet_xs}
+\end{equation}
+where the $k$ are Lorentz vectors representing the particle momenta. For each
+subprocess, the helicity configurations corresponding to $(a)$ and $(b)$ are
+shown in the upper and lower rows of Figure~\ref{fig:w1jet_modes} respectively.
+
+Starting with the subprocess $\Pup\Pgluon\longrightarrow\PWp\Pdown$, the $(a)$
+expression in \ref{eqn:w1jet_xs} correlates the axis of the \Pdown quark with the
+neutrino (see Figure~\ref{fig:w1jet_modes_1a}). Due to the \VminusA coupling, the
+neutrino must have a left-handed helicity and, via angular momentum
+conservation, so too the \PW. The angular dependence is
+$(1-\cos\tilde{\theta}^*)^2$ where $\tilde{\theta^*}$ is the angle of the
+charged decay lepton with the \PW flight direction in the centre of mass
+frame. In contrast, considering an identical particle configuration but with
+helicities corresponding to $(b)$ (Figure~\ref{fig:w1jet_modes_1b}), the
+\Ppositron direction is now correlated with the incoming beam
+direction. Boosting to the \PW rest frame, at high \PtW, the incoming quark and
+gluon are nearly parallel and, given a scattering angle of 90\degrees, the \Pup
+quark momentum is seen to be half that of the \Pdown quark. The angular
+dependence is thus $\frac{1}{4}(1+\cos\tilde{\theta}^*)^2$ yielding a
+right-handed polarisation at a quarter of the rate of the left-handed component.
+
+For the subdominant process $\Pup\APdown\longrightarrow\PWp\Pgluon$, the terms
+in Eqn~\ref{eqn:w1jet_xs} correlate the momenta of the decay leptons with the
+beam direction. The two cases are shown in Figures~\ref{fig:w1jet_modes_2a} and
+\ref{fig:w1jet_modes_2b}. Although it can be seen once again that a left-handed
+and right-handed polarisation emerge, in this case they are found to cancel for
+a scattering angle of 90\degrees and thus give no net polarisation. Lastly, for
+the subprocess $\Pgluon\APdown\longrightarrow\PWp\APup$, show in
+Figures~\ref{fig:w1jet_modes_3a} and \ref{fig:w1jet_modes_3b}, the $(b)$
+contribution correlated the \Pup quark with the \Ppositron direction, leading to a
+dominantly right-handed polarisation. However, since the \ac{PDF} $\APdown(x)$
+is much smaller than $\Pup(x)$, this effect is largely washed out by the
+dominant left-handed polarisation mode.
+
 \begin{figure}
 \centering
-\subfloat[]{\includegraphics[width=0.3\textwidth]{fig/wpol_prod_a}}\quad
-\subfloat[]{\includegraphics[width=0.3\textwidth]{fig/wpol_prod_b}}\quad
-\subfloat[]{\includegraphics[width=0.3\textwidth]{fig/wpol_prod_c}}\\
-\subfloat[]{\includegraphics[width=0.3\textwidth]{fig/wpol_prod_d}}\quad
-\subfloat[]{\includegraphics[width=0.3\textwidth]{fig/wpol_prod_e}}\quad
-\subfloat[]{\includegraphics[width=0.3\textwidth]{fig/wpol_prod_f}}
+\subfloat[]{\label{fig:w1jet_modes_1a}\includegraphics[width=0.3\textwidth]{fig/wpol_prod_a}}\quad
+\subfloat[]{\label{fig:w1jet_modes_2a}\includegraphics[width=0.3\textwidth]{fig/wpol_prod_b}}\quad
+\subfloat[]{\label{fig:w1jet_modes_3a}\includegraphics[width=0.3\textwidth]{fig/wpol_prod_c}}\\
+\subfloat[]{\label{fig:w1jet_modes_1b}\includegraphics[width=0.3\textwidth]{fig/wpol_prod_d}}\quad
+\subfloat[]{\label{fig:w1jet_modes_2b}\includegraphics[width=0.3\textwidth]{fig/wpol_prod_e}}\quad
+\subfloat[]{\label{fig:w1jet_modes_3b}\includegraphics[width=0.3\textwidth]{fig/wpol_prod_f}}
 \caption{Illustrations of $\PWplus+1$~jet production modes at the LHC. The
   gluon superscript indicates its helicity}
 \label{fig:w1jet_modes}
 \end{figure}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../thesis"
+%%% End:
