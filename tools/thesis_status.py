@@ -2,6 +2,14 @@
 import subprocess, os, sys, getpass
 from datetime import datetime
 
+# Annoyingly need to be compatible with old Pythons so can't use
+# subprocess.check_output
+def get_output(cmds):
+    process = subprocess.Popen( cmds, stdout=subprocess.PIPE)
+    output, unused_err = process.communicate()
+    retcode = process.poll()
+    return output
+
 my_path = os.path.join(os.getcwd(), __file__)
 base_path = os.path.dirname(my_path)
 tex_count_path = os.path.join(base_path, "texcount.pl")
@@ -72,18 +80,18 @@ def date():
     return dt.strftime("%H:%M, %A "+ ordinal(dt.day) +" %B, %Y")
 
 def git_head(path):
-    return subprocess.check_output(["git", "rev-parse", "HEAD"])
+    return get_output(["git", "rev-parse", "HEAD"])
 def git_local_mods(path):
-    out = subprocess.check_output(["git", "status", "--porcelain"])
+    out = get_output(["git", "status", "--porcelain"])
     modf = []
     for l in out.splitlines():
         if l.strip()[0] == "M": modf.append(l.split()[-1])
     return modf
 def git_last_commit(path, n):
-    return subprocess.check_output(["git", "log", "-%d" % n])
+    return get_output(["git", "log", "-%d" % n])
 
 def word_count(path):
-    out = subprocess.check_output([tex_count_path, "-inc", "-q", path])
+    out = get_output([tex_count_path, "-inc", "-q", path])
     results = {}
     name = None
     for l in out.splitlines():
