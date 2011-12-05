@@ -52,3 +52,5 @@
 
 % I want a tick symbol
 \RequirePackage{amsfonts}
+% Useful for putting verbatim text into tables without having to get weird with p
+\RequirePackage{fancyvrb}
