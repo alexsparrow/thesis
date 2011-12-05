@@ -92,6 +92,7 @@ def git_local_mods(path):
 def git_last_commit(path, n):
     return get_output(["git", "log", "-%d" % n], cwd=path)
 
+
 def word_count(path):
     out = get_output([tex_count_path, "-inc", "-q", path])
     results = {}
