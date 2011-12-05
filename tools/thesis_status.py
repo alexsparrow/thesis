@@ -9,6 +9,7 @@ tex_count_path = os.path.join(base_path, "texcount.pl")
 
 template = r"""
 \clearpage
+%(verbs)s
 \section*{Status}
 Built by \textbf{%(user)s} on host \textbf{%(host)s} at \textbf{%(built)s}. \\
 Path is \verb|%(path)s|
@@ -29,19 +30,33 @@ Number of Math Inlines & %(nmathinlines)s \NN
 Number of Math Displays & %(nmathdisplays)s \ML
 Files & %(filecount)s \LL
 }
+
+\ctable[
+cap=Thesis Files,
+caption=Thesis Files,
+mincapwidth=\textwidth,
+pos=h,
+doinside=\scriptsize
+]{llll}{}{\FL
+File & Words in Text & Words in Headers & Words in Captions \ML
+%(file_table)s
+}
+
 \subsection*{Modified (not Committed)}
 {\scriptsize
 \begin{verbatim}
 %(localmods)s
 \end{verbatim}
 }
-\subsection*{Last Commit}
+\subsection*{Recent Commits}
 {\scriptsize
 \begin{verbatim}
 %(lastcommit)s
 \end{verbatim}
 }
 """
+
+file_row_template=r"\UseVerb{%(name)s} & %(wordcount)d & %(wordsinheaders)d & %(wordsincaptions)d %(endline)s"
 
 def hostuser():
     return (getpass.getuser(), os.uname()[1])
@@ -61,34 +76,68 @@ def git_local_mods(path):
     for l in out.splitlines():
         if l.strip()[0] == "M": modf.append(l.split()[-1])
     return modf
-def git_last_commit(path):
-    return subprocess.check_output(["git", "log", "-1"])
+def git_last_commit(path, n):
+    return subprocess.check_output(["git", "log", "-%d" % n])
 
 def word_count(path):
-    out = subprocess.check_output([tex_count_path, "-inc", "-total", "-q", path])
+    out = subprocess.check_output([tex_count_path, "-inc", "-q", path])
     results = {}
+    name = None
     for l in out.splitlines():
-        if ":" in l: results[l.split(":")[0].strip().rstrip()] = l.split(":")[1].strip().rstrip()
+        if not ":" in l: continue
+        k, v = l.split(":")[0].strip().rstrip(), l.split(":")[1].strip().rstrip()
+        if k in ["File", "Included file"]:
+            name = v
+            results[name] = {}
+        elif k == "File(s) total":
+            name = "total"
+            results[name] = {}
+        elif name is not None: results[name][k] = v
     return results
 
+def extract_wordcount(d):
+    fields = [
+        ("wordcount", "Words in text"),
+        ("wordsinheaders" ,"Words in headers"),
+        ("wordsincaptions" ,"Words in float captions"),
+        ("nheaders" ,"Number of headers"),
+        ("nfloats" ,"Number of floats"),
+        ("nmathinlines" ,"Number of math inlines"),
+        ("nmathdisplays" ,"Number of math displayed"),
+        ("filecount", "Files")
+        ]
+    out = {}
+    for x, y in fields:
+        try: out[x] = int(d[y])
+        except: out[x] = -1
+    return out
+
 if __name__ == "__main__":
-    target = sys.argv[2]
+    fname = sys.argv[1]
     head = git_head(os.getcwd())
-    wc = word_count(sys.argv[1])
+    wc = word_count(fname)
+
+    verbs = []
+    file_table = ""
+    files = [k for k in wc.keys() if k!= "total"]
+    for idx, n in enumerate(sorted(files)):
+        wc_file = extract_wordcount(wc[n])
+        subs = wc_file.copy()
+        verbs.append(r"\SaveVerb{v%d}|%s|" % (idx, n))
+        subs["name"] = "v%d" % idx
+        subs["endline"] = "\\NN\n" if idx != len(files)-1 else r"\LL"
+        file_table += file_row_template % subs
+
     fields = {
+        "verbs" : "\n".join(verbs),
         "user" : hostuser()[0],
         "path" : os.getcwd(),
         "host" : hostuser()[1],
         "built": date(),
         "head": head,
-        "wordcount":wc["Words in text"],
-        "wordsinheaders" : wc["Words in headers"],
-        "wordsincaptions" : wc["Words in float captions"],
-        "nheaders" : wc["Number of headers"],
-        "nfloats" : wc["Number of floats"],
-        "nmathinlines" : wc["Number of math inlines"],
-        "nmathdisplays" : wc["Number of math displayed"],
         "localmods": "\n".join(git_local_mods(os.getcwd())),
-        "lastcommit": git_last_commit(os.getcwd()),
-        "filecount":wc["Files"]}
-    open(target, "w").write(template % fields)
+        "lastcommit": git_last_commit(os.getcwd(), 5),
+        "file_table": file_table
+        }
+    fields.update(extract_wordcount(wc["total"]))
+    print template % fields

@@ -47,7 +47,7 @@ class LatexBuilder(object):
                            "./tools/texcount.pl -inc -total -q %s.tex" % self.project))
         if self.make_status_page:
             # See e.g. http://stackoverflow.com/questions/828075/how-do-i-constrain-the-scons-command-builder-to-run-only-if-its-dependencies-hav
-            self.status_cmd = Command('status.tex', [], './tools/thesis_status.py %s.tex $TARGET' % self.project)
+            self.status_cmd = self.env.AlwaysBuild(Command('status.tex', [], './tools/thesis_status.py %s.tex > $TARGET' % self.project))
 
         self.env.Default(self.default_target)
 
