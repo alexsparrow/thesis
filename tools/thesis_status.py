@@ -128,7 +128,8 @@ if __name__ == "__main__":
         subs = wc_file.copy()
         verbs.append(r"\SaveVerb{v%d}|%s|" % (idx, n))
         subs["name"] = "v%d" % idx
-        subs["endline"] = "\\NN\n" if idx != len(files)-1 else r"\LL"
+        if idx != len(files)-1: subs["endline"] = "\\NN\n"
+        else: subs["endline"] =  r"\LL"
         file_table += file_row_template % subs
 
     fields = {
