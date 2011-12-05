@@ -63,7 +63,10 @@ def hostuser():
 
 def ordinal(n):
     m = {1:"st", 2:"nd", 3:"rd"}
-    return "%d%s" % (n, m[(n % 10)] if (n%10) in m else "th")
+    if (n % 10) in m: ords = m[(n % 10)]
+    else ords = "th"
+    return "%d%s" % (n, ords)
+
 def date():
     dt = datetime.now()
     return dt.strftime("%H:%M, %A "+ ordinal(dt.day) +" %B, %Y")
