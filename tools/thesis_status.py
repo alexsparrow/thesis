@@ -5,7 +5,8 @@ from datetime import datetime
 # Annoyingly need to be compatible with old Pythons so can't use
 # subprocess.check_output
 def get_output(cmds, *args, **kwargs):
-    process = subprocess.Popen( cmds, *args, stdout=subprocess.PIPE, **kwargs)
+    kwargs["stdout"] = subprocess.PIPE
+    process = subprocess.Popen( cmds, *args, **kwargs)
     output, unused_err = process.communicate()
     retcode = process.poll()
     return output
