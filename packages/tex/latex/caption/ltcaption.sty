@@ -6,7 +6,7 @@
 %%
 %% ltcaption.dtx  (with options: `package')
 %% 
-%% Copyright (C) 1994-2011 Axel Sommerfeldt (axel.sommerfeldt@f-m.fm)
+%% Copyright (C) 1994-2010 Axel Sommerfeldt (caption@sommerfee.de)
 %% 
 %% --------------------------------------------------------------------------
 %% 
@@ -23,15 +23,12 @@
 %% This Current Maintainer of this work is Axel Sommerfeldt.
 %% 
 %% This work consists of the files caption.ins, caption.dtx, caption2.dtx,
-%% caption3.dtx, bicaption.dtx, ltcaption.dtx, subcaption.dtx, and newfloat.dtx,
-%% the derived files caption.sty, caption2.sty, caption3.sty,
-%% bicaption.sty, ltcaption.sty, subcaption.sty, and newfloat.sty,
-%% and the user manuals caption-deu.tex, caption-eng.tex, and caption-rus.tex.
+%% ltcaption.dtx, and subcaption.dtx, the derived files caption.sty,
+%% caption2.sty, caption3.sty, ltcaption.sty, and subcaption.sty, and the
+%% user manuals caption-deu.tex, caption-eng.tex, and caption-rus.tex.
 %% 
 \NeedsTeXFormat{LaTeX2e}[1994/12/01]
-\ProvidesPackage{ltcaption}[2011/09/12 v1.3 longtable captions (AR)]
-\@ifpackageloaded{longtable}{}{%
-  \PackageError{ltcaption}{longtable package not loaded, aborting}{RTFM}}
+\ProvidesPackage{ltcaption}[2008/03/28 v1.2 longtable captions (AR)]
 \providecommand*\LTcaptype{table}
 \providecommand*\ext@table{lot}
 \@ifundefined{caption@AtBeginDocument}\AtBeginDocument\caption@AtBeginDocument{%
@@ -44,7 +41,6 @@
   \newif\ifLTcapmargins \LTcapmarginstrue
   \providecommand*\CaptionLabelFont{}
   \providecommand*\CaptionTextFont{}
-  \providecommand*\CaptionLabelSeparator{:}
 }
 \@ifundefined{caption@AtBeginDocument}\AtBeginDocument\caption@AtBeginDocument{%
   \let\ltcaption@ORI@LT@array\LT@array
@@ -77,14 +73,12 @@
      {\let\\\space
      \addcontentsline{\csname ext@\LTcaptype\endcsname}{\LTcaptype}%
        {\protect\numberline{\csname the\LTcaptype\endcsname}{#2}}}%
-  \fi
-  \ignorespaces}
+  \fi}
 \renewcommand\LT@makecaption[3]{%
   \LT@@makecaption{%
-    \sbox\@tempboxa{%
-      #1{{\CaptionLabelFont#2\CaptionLabelSeparator} }\CaptionTextFont#3}%
+    \sbox\@tempboxa{#1{{\CaptionLabelFont#2:} }\CaptionTextFont#3}%
     \ifdim\wd\@tempboxa>\hsize
-      #1{{\CaptionLabelFont#2\CaptionLabelSeparator} }\CaptionTextFont#3%
+      #1{\CaptionLabelFont{#2:} }\CaptionTextFont#3%
     \else
       \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
     \fi

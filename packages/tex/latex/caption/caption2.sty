@@ -6,7 +6,7 @@
 %%
 %% caption2.dtx  (with options: `package')
 %% 
-%% Copyright (C) 1994-2011 Axel Sommerfeldt (axel.sommerfeldt@f-m.fm)
+%% Copyright (C) 1994-2010 Axel Sommerfeldt (caption@sommerfee.de)
 %% 
 %% --------------------------------------------------------------------------
 %% 
@@ -23,13 +23,12 @@
 %% This Current Maintainer of this work is Axel Sommerfeldt.
 %% 
 %% This work consists of the files caption.ins, caption.dtx, caption2.dtx,
-%% caption3.dtx, bicaption.dtx, ltcaption.dtx, subcaption.dtx, and newfloat.dtx,
-%% the derived files caption.sty, caption2.sty, caption3.sty,
-%% bicaption.sty, ltcaption.sty, subcaption.sty, and newfloat.sty,
-%% and the user manuals caption-deu.tex, caption-eng.tex, and caption-rus.tex.
+%% ltcaption.dtx, and subcaption.dtx, the derived files caption.sty,
+%% caption2.sty, caption3.sty, ltcaption.sty, and subcaption.sty, and the
+%% user manuals caption-deu.tex, caption-eng.tex, and caption-rus.tex.
 %% 
 \NeedsTeXFormat{LaTeX2e}[1994/12/01]
-\ProvidesPackage{caption2}[2011/08/12 v2.2d Customising captions (AR)]
+\ProvidesPackage{caption2}[2008/07/01 v2.2c Customising captions (AS)]
 \PackageWarning{caption2}{%
   ****************************************************\MessageBreak
   THIS PACKAGE IS OBSOLETE:\MessageBreak
@@ -211,9 +210,9 @@
 \fi
 \def\captionof{\@ifstar{\caption@of{\caption*}}{\caption@of\caption}}
 \newcommand*\caption@of[2]{\def\@captype{#2}#1}
-\caption@ifundefined\abovecaptionskip{%
+\@ifundefined{abovecaptionskip}{%
   \newlength\abovecaptionskip\setlength\abovecaptionskip{10\p@}}{}
-\caption@ifundefined\belowcaptionskip{%
+\@ifundefined{belowcaptionskip}{%
   \newlength\belowcaptionskip\setlength\belowcaptionskip{0\p@}}{}
 \newdimen\captionlinewidth
 \newdimen\realcaptionwidth
@@ -240,7 +239,7 @@
     \fi
   \fi\next}
 \newcommand*\usecaptionstyle[1]{%
-  \caption@ifundefined\captiontext{%
+  \@ifundefined{captiontext}{%
     \PackageError{caption2}{You can't use \protect#1
       in normal text}{The usage of \protect#1 is only
       allowed inside code declared with\MessageBreak \protect\defcaptionstyle,
@@ -307,7 +306,7 @@
     \renewcommand*\caption@of[2]{\def\@captype{#2}%
       \@ifundefined{fst@#2}{}{%
         \@nameuse{fst@#2}%
-        \caption@ifundefined\@float@setevery{}{\@float@setevery{#2}}%
+        \@ifundefined{@float@setevery}{}{\@float@setevery{#2}}%
         \let\caption@fs@capt\@fs@capt
         \let\@fs@capt\caption@of@float}%
       #1}
@@ -340,7 +339,7 @@
       \hss}}}
   \fi}
 \newcommand*\setsubcapstyle{%
-  \caption@ifundefined\subcapraggedrightfalse{%
+  \@ifundefined{subcapraggedrightfalse}{%
     \newif\ifsubcapraggedright}{}%
   \ifsubcaphang
     \ifsubcapcenter
