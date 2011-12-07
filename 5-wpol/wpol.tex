@@ -170,7 +170,31 @@ dominant left-handed polarisation mode.
 \label{fig:w1jet_modes}
 \end{figure}
 
+
 \subsection{Studying Helicity}
+
+\subsubsection{The Helicity Frame}
+The polarisation effects may be conveniently studied within the helicity frame
+of the \PW boson. This is defined as the rest frame of the \PW with the
+polarisation axis (here, the z-axis) is aligned along the line of flight of the
+\PW in the lab frame. The x-axis is then chosen to lie along the plane spanned
+by the two colliding protons in the boson rest frame with the sense chosen such
+that the angle between it and the nearest proton is minimised. The y-axis is
+then fixed to be perpendicular to these two. The azimuthal angle, \thetastar is
+measured in the $y-z$ plane between the positive z-axis and the
+lepton. Likewise, the polar angle, \phistar is measured in $x-z$ between the
+positive $x$ axis and the lepton. This arrangement is illustrated in
+Figure~\ref{fig:wpol_helicity_frame}. For $0 < |\phistar| < \frac{\pi}{2}$, the
+charged lepton will have a larger rapidity that the \PW boson and thus a smaller
+\Pt. Alternatively, for $\frac{\pi}{2} < |\phistar| < \pi$, the lepton
+will have a smaller rapidity and a larger \Pt.
+
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{fig/helicity_frame_polnote}
+\caption{The Helicity Frame}
+\label{fig:wpol_helicity_frame}
+\end{figure}
+
 The hadronic cross-section of the \PW is obtained within the parton model by
 weighting the individual parton-level cross-sections by the respective parton
 densities \cite{mirkes_w_1994},
@@ -208,44 +232,86 @@ to give
  &+ \frac{1}{2}A_2\sin^2\theta\cos 2\phi + A_3\sin\theta\cos\phi \\
  &+ A_4\cos\theta + A_5\sin^2\theta\sin 2\phi \\
  &+ A_6\sin 2\theta\sin \phi + A_7\sin\theta\sin\phi
+\label{eqn:wpol_diff_xs}
 \end{align}
-This may be integrated over $\phi$ and \PtW to give
+
+% TODO: Figure out the difference between  theta and theta*
+The $A_i$ are ratios of the separate helicity cross-sections of the boson to its
+total unpolarised cross-section and are dependent on the \PW boson charge,
+transverse momentum \PtW and rapdidity \YW. Eqn~\ref{eqn:wpol_diff_xs} can be
+integrated over $\phi$ and \PtW to give
 \begin{equation}
 \frac{d\sigma}{d\cos\theta} \propto \left(1+\cos^2\theta\right) +
 \frac{1}{2}A_0\left(1-3\cos^2\theta\right) + A_4\cos\theta
+\label{eqn:wpol_xs_Ai}
 \end{equation}
+
 % TODO: Check all this bs!
-Due to the \VminusA nature of the Electroweak theory, the \PWp (\PWm) may couple only to
-left-handed (right-handed) fermions and right-handed (left-handed) anti-fermions,
+Due to the \VminusA nature of the Electroweak theory, the \PWp (\PWm) may couple
+only to left-handed (right-handed) fermions and right-handed (left-handed)
+anti-fermions, therefore the angular momentum state of the decay leptons is
+\begin{eqnarray*}
+\ket{\Pl\Pgn^{J,M}} &=& \ket{\frac{1}{2}, \pm \frac{1}{2}}
+\oplus \ket{\frac{1}{2}, \pm\frac{1}{2}} \\
+&=& \textrm{either}\quad\ket{1, +1}\quad\textrm{or}\quad \ket{1, -1}
+\end{eqnarray*}
+where $\ket{J, M}$ represents an angular momentum state with a total angular momentum $J$ and projection $M$.
+
+Rotating these states through the angle \thetastar,
 \begin{equation}
-\left|\frac{1}{2}, \pm \frac{1}{2}\right\rangle\oplus \left|\frac{1}{2},
-  \pm\frac{1}{2}\right\rangle = \left|1, +1\right\rangle or \left |1, -1\right\rangle
+\ket{\Pl\Pgn^{J,M}}' = \sum_{M'=-J}^{M'=+J} d_{M, M'}^J \ket{J, M'}
 \end{equation}
-The angular momentum states of the \PW boson may be rotated through the angle \thetastar
+The angular momentum of a \PW boson in a helicity eigenstate is then
+$\ket{\PW^{J,M''}}$. The matrix element for the angular momentum coupling can be
+written
+\begin{eqnarray*}
+\braket{\PW^{J,M''}}{\Pl\Pgn^{J,M}}' &\sim& \sum_{M'=-J}^{M'=+J} d_{M M'}^{J}
+\braket{J,M''}{J,M'} \\
+&\sim& d^{J}_{M M''} \braket{J,M''}{J,M''} \sim d_{M M''}^{J}
+\end{eqnarray*}
+To calculate the cross-section, square the matrix elements and sum over the
+helicity states ($M''$) of the incoming $\PW$, weighting each state by the helicity
+fraction $f_{M''}$
 \begin{equation}
-\left|J,M\right\rangle = \sum_{M'=-J}^{M'=+J} d_{M, M'}^J \left | J, M'\right\rangle
+\sigma(\PW\longrightarrow\Pl\Pgnl) \sim f_0 \left|d_{M 0}^1\right|^2 + f_{-1} \left|d_{M
+    -1}^1\right|^2 + f_{1} \left|d_{M +1}^1\right|^2
 \end{equation}
-where the $d_{M, M'}$ are the reduced Wigner D-matrices. The amplitude is
-written as
+Finally, using the fact that for \PWpm, $M=\pm1$ and replacing for the elements
+of the D-matrices in terms of $\cos\thetastar$
 \begin{equation}
-\mathcal{A} \sim \sum_{M''=-J}^{M''=+J} \left\langle J, M''\mid J, M\right\rangle
+\sigma(\thetastar_{\Plpm}) = \frac{\f0}{2}\sin^2\thetastar_{\Plpm} +
+\frac{\fL}{4} \left(1\mp\cos\thetastar_{\Plpm}\right)^2
+\frac{\fR}{4} \left(1\pm\cos\thetastar_{\Plpm}\right)^2
+\label{eqn:wpol_helicity_fractions}
 \end{equation}
-and the cross-section as
-\begin{eqnarray}
-\sigma(\theta) &\sim& \sum_{M''=-J}^{M''=+J} \left|\left\langle J, M'' \mid J,
-  M\right\rangle\right|^2\\
-&\sim& \sum \left (d_{M, M'}^J\right)^2 f_{M'}
-\end{eqnarray}
-where $f_{M'}$ are the helicity fractions $f_0$, $f_{-1} \equiv \fL$ and $f_{+1}
-\equiv \fR$. Since, as has been said, the angular momentum state must be
-$\left|1,+1\right\rangle$ for the \PWp and $\left|1,-1\right\rangle$ for \PWm,
-it is seen that
+Comparing now to Eqn~\ref{eqn:wpol_xs_Ai}, we identify $A_0 \sim f_0$ and $A_4
+\sim \pm \fLmfR$.
+
+\section{Measuring the Helicity Fractions}
+\subsection{Probing $\cos\thetastar$ via \LP}
+In order to calculate the value of $\cos\thetastar$, the \PW rest frame must be
+reconstructed. This requires knowledge of both the charged and neutral lepton
+momenta. At a hadron collider, the neutrino escapes undetected and is
+reconstructed as a missing energy signal. This involves taking the vector sum of
+all observed particle momenta and using momentum conservation arguments to infer
+that any remaining momentum imbalance is due to the missing neutrino. At a
+hadron collider, the boost of the colliding partons is not known and thus, the
+component of the neutrino momentum parallel to the beam line cannot be inferred
+from the missing momentum. This prevents determination of the \PW momentum and
+thus too the direct measurement of $\cos\thetastar$. Instead, a variable is
+chosen which is known to be highly correlated with $\cos\thetastar$ at suitably
+high $\PtW$ and yet directly calculable from transverse detector quantities
+which can be easily measured. This variable is the Lepton Projection variable or
+\LP and is defined as follows
 \begin{equation}
-\sigma(\thetastar_{\Plpm}) \sim
-\fL\frac{\left(1\mp\cos\thetastar_{\Plpm}\right)^2}{4}
-+ \f0\frac{\sin^2\thetastar_{\Plpm}}{2} +
-\fR\frac{\left(1\pm\cos\thetastar_{\Plpm}\right)^2}{4}
+\LP = \frac{\Ptl.\PtW}{\left|\PtW\right|^2}
+\label{eqn:lp_def}
 \end{equation}
+where \Ptl and \PtW are the transverse momenta of the charged lepton and \PW
+boson respectively and $\PtW = \Ptl +\MET$.
+% TODO It would be nice to give some mathematical motivation for this expression
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../thesis"
