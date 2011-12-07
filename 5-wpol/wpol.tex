@@ -55,6 +55,7 @@ result of the subprocess $\APup\Pdown\longrightarrow\PWm$ where this time the
 % TODO: Mention the effect this has on the rapidity distribution
 
 \subsection{Polarisation Effects in the Transverse Plane}
+\label{sec:polarisation}
 In the case, where the \PW carries a significant transverse momentum \PtW, the
 situation is more complex. In general, the \PW may be produced in association
 with a number of jets. For the sake of this discussion we will consider cases
@@ -195,6 +196,7 @@ will have a smaller rapidity and a larger \Pt.
 \label{fig:wpol_helicity_frame}
 \end{figure}
 
+\subsubsection{Quantifying Helicity}
 The hadronic cross-section of the \PW is obtained within the parton model by
 weighting the individual parton-level cross-sections by the respective parton
 densities \cite{mirkes_w_1994},
@@ -276,19 +278,43 @@ fraction $f_{M''}$
 \sigma(\PW\longrightarrow\Pl\Pgnl) \sim f_0 \left|d_{M 0}^1\right|^2 + f_{-1} \left|d_{M
     -1}^1\right|^2 + f_{1} \left|d_{M +1}^1\right|^2
 \end{equation}
-Finally, using the fact that for \PWpm, $M=\pm1$ and replacing for the elements
-of the D-matrices in terms of $\cos\thetastar$
+Where $f_0 + f_1 + f_{-1} = 1$. Finally, using the fact that for \PWpm, $M=\pm1$
+and replacing for the elements of the D-matrices in terms of $\cos\thetastar$
 \begin{equation}
 \sigma(\thetastar_{\Plpm}) = \frac{\f0}{2}\sin^2\thetastar_{\Plpm} +
 \frac{\fL}{4} \left(1\mp\cos\thetastar_{\Plpm}\right)^2
 \frac{\fR}{4} \left(1\pm\cos\thetastar_{\Plpm}\right)^2
 \label{eqn:wpol_helicity_fractions}
 \end{equation}
-Comparing now to Eqn~\ref{eqn:wpol_xs_Ai}, we identify $A_0 \sim f_0$ and $A_4
-\sim \pm \fLmfR$.
+Note that the helicity fractions $f_i$ have been relabelled to give a more
+intuitive interpretation as the left-handed, right-handed and longitudinal
+helicity fractions. Comparing now to Eqn~\ref{eqn:wpol_xs_Ai}, we identify $A_0
+\sim f_0$ and $A_4 \sim \pm \fLmfR$. Whilst the $A_i$ are the more fundamental
+parameters from a theoretical point of view, the helicity fractions \f0, \fL and
+\fR are more readily interpreted in the context of the predictions of
+Section~\ref{sec:polarisation}. In particular, at the LHC and for suitably high
+\PtW, it is expected that $\fL > \fR$ and $\fL > \f0$.
 
-\section{Measuring the Helicity Fractions}
-\subsection{Probing $\cos\thetastar$ via \LP}
+\section{Measuring the Helicity Fractions of the \PW Boson}
+\subsection{Generator and Simulation Level Expectations}
+As will become clear, any measurement of the helicity fractions will depend to
+some extent on \acl{MC} input. It is important therefore to study the effect,
+both at the pure generator level and at the level of reconstructed, simulated
+events. This firstly ensures that the expected effects are adequately modelled
+by the chosen \ac{MC} generator and secondly allows the testing of the
+theoretical expectations in the context of ``real'' detector-level
+quantities. This is vital to ensure that the measurement of helicity fractions
+is actually feasible and not washed out by some experimental effect.
+
+Unless otherwise noted, the \Wjets samples used is produced using the
+\ac{MADGRAPH} generator interfaced to \ac{PYTHIA}. The generated sample
+comprised approximately 15 million events with the acp{PDF} taken from the
+ac{CTEQL1} set within the \ac{LHAPDF} software package.
+
+Shown in Figure~TODO are $\cos\thetastar$ distributions
+
+\subsection{Probing $\cos\thetastar$}
+\subsubsection{The \LP Variable}
 In order to calculate the value of $\cos\thetastar$, the \PW rest frame must be
 reconstructed. This requires knowledge of both the charged and neutral lepton
 momenta. At a hadron collider, the neutrino escapes undetected and is
@@ -309,7 +335,51 @@ which can be easily measured. This variable is the Lepton Projection variable or
 \end{equation}
 where \Ptl and \PtW are the transverse momenta of the charged lepton and \PW
 boson respectively and $\PtW = \Ptl +\MET$.
-% TODO It would be nice to give some mathematical motivation for this expression
+
+\subsubsection{Correlation of $\cos\thetastar$ With \LP}
+To motivate the use of the \LP variable in measuring $\cos\thetastar$ at high
+\PtW, the correlation can be demonstrated analytically. Consider the decay
+lepton momentum in the helicity frame,
+\begin{equation}
+\mPl' = \mPl_{\parallel}' + \mPl_{\perp}'
+\end{equation}
+where $\mPl_{\parallel}'$ and $\mPl_{\perp}'$ are respectively the
+components of the lepton momentum parallel and perpendicular to the
+z-axis. Neglecting the mass of the lepton, $\mPl' = \MW/2$ and therefore
+\begin{eqnarray*}
+\mPl_{\parallel}' &=& \frac{\MW}{2}\cos\thetastar \\
+\mPl_{\perp}'| &=& \frac{\MW}{2}\sin\thetastar \\
+\end{eqnarray*}
+Boosting into the lab frame (i.e. along the $-z$ axis of the helicity frame).
+\begin{eqnarray*}
+\mPl_{\parallel} = \gamma \frac{\MW}{2} \left (\cos\thetastar +\beta\right )
+\mPl_{\perp} = \mPl_{\perp}'
+\end{eqnarray*}
+To see the correlation, we first consider the quantity $\LP^{3D}$,
+\begin{eqnarray*}
+\LP^{3D} &=& \frac{\mPl}{\mPW} \\
+&=& \frac{1}{\mPW}\sqrt{\mPl_{\parallel}^2 + \mPl_{\perp}^2}
+\\
+&=& \frac{\MW}{2\mPW}\sqrt{\gamma^2(\cos\thetastar +\beta)^2 + \sin^2\thetastar}\\
+&=&
+\frac{\MW}{2\mPW}\sqrt{\gamma^2\cos^2\thetastar + 2\gamma^2\cos\thetastar\beta
+  + \gamma^2\beta^2 + \sin^2\theta*} \\
+&=&\frac{\MW}{2\mPW}\sqrt{\left(\frac{\mPW}{\MW}\right)^2\cos\thetastar^2 +
+  2\gamma^2\cos\thetastar\beta +\gamma^2\beta^2 +1}\\
+&=&\frac{\MW}{2\mPW}\sqrt{\left(\frac{\mPW}{\MW}\right)^2\cos\thetastar^2 +
+2\frac{\mPW\EW}{\MW^2}\cos\thetastar + \left(\frac{\mPW}{\MW}\right)^2 + 1}\\
+&=&\frac{1}{2\mPW}\sqrt{\mPW^2\cos^2\thetastar + 2\mPW\EW\cos\thetastar + \mPW^2 + \MW^2}\\
+&=&\frac{1}{2\mPW}\left(\mPW\cos\thetastar + \EW\right)
+\end{eqnarray*}
+Rearranging it is seen that
+\begin{equation}
+\cos\thetastar = 2\LP^{3D} - \frac{\mPW}{\EW}
+\end{equation}
+In the high \PtW limit, the $z$ component of the \PW can be neglected and thus
+$\LP^{3D} \longrightarrow \LP$ and $\mPW >> \EW$ so
+\begin{equation}
+\lim_{\PtW \longrightarrow \infty} \cos\thetastar = 2\LP - 1
+\end{equation}
 
 
 %%% Local Variables:
