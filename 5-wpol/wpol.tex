@@ -422,21 +422,26 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1} f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}
 \end{equation}
 where the index $i$ is taken to represent the 3 helicity states of the \PW
-boson. The functional form of $\sigma$ is taken from
-Eqn~\ref{eqn:wpol_helicity_fractions} as follows,
+boson. The $f_i$ are constants derived from an analytical fit to the
+$\cos\thetastar$ distribution in bins of \PtW, \YW and charge. They are
+effectively the helicity fractions ``baked in'' to the Monte-Carlo. The
+functional form of $\sigma$ is taken from Eqn~\ref{eqn:wpol_helicity_fractions}
+as follows,
 \begin{eqnarray*}
 \sigma^{\pm}_{-1} &=& \frac{1}{4}\left(1\mp\cos\thetastar\right)^2\\
 \sigma^{\pm}_{0}  &=& \frac{1}{2}\left(1-\cos^2\thetastar\right)\\
 \sigma^{\pm}_{+1} &=& \frac{1}{4}\left(1\pm\cos\thetastar\right)^2\\
 \end{eqnarray*}
-By weighting a given simulated event by each of the factors $Q_i$, any given
-distribution can be made to represent the 100\% left-handed, right-hadned and
-longitudinal polarisation cases without having to alter the configuration of the
-Monte-Carlo generator. Using this method, templates can be constructed for the
-\LP distribution corresponding to a pure sample of polarised bosons and
-accounting for all detector and acceptance effects. Such \LP templates derived
-from Monte Carlo may then be fit to the corresponding data distributions in
-order to extract the helicity fractions.
+By weighting a given simulated event by each of the factors $Q_i$, the
+Monte-Carlo can be made to represent cases of 100\% left-handed, right-handed
+and longitudinally polarised \PW bosons. This avoids the need to generate
+separate Monte Carlo event samples for each polarisation state. Using the
+reweighted sample, any distribution may be produced corresponding to a pure
+polarisation state. Most importantly, templates can be constructed for the \LP
+distribution corresponding to a pure sample of polarised bosons and accounting
+for all detector and acceptance effects. Such \LP templates derived from Monte
+Carlo may then be fit to the corresponding data distributions in order to
+extract the helicity fractions.
 
 
 %%% Local Variables:
