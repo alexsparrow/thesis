@@ -311,9 +311,16 @@ Unless otherwise noted, the \Wjets samples used is produced using the
 comprised approximately 15 million events with the acp{PDF} taken from the
 ac{CTEQL1} set within the \ac{LHAPDF} software package.
 
-Shown in Figure~TODO are $\cos\thetastar$ distributions
+Shown in Figure~TODO are $\cos\thetastar$ distributions at generator level in
+bins of \PtW for \PWp along with a fit to
+Eqn~\ref{eqn:wpol_helicity_fractions}. The polarisation is manifest in the
+dominance of the $(1-\cos\thetastar)^2$ term, leading to the peak at
+$\cos\thetastar = -1$. This reflects the fact that the left-handed particle (the
+neutrino in this case) is taking most of the energy. Similarly for \PWm, the
+peak is at $\cos\thetastar = 1$, where this time the electron is more
+energetic.
 
-\subsection{Probing $\cos\thetastar$}
+\subsection{The Lepton Projection Variable}
 \subsubsection{The \LP Variable}
 In order to calculate the value of $\cos\thetastar$, the \PW rest frame must be
 reconstructed. This requires knowledge of both the charged and neutral lepton
@@ -323,14 +330,18 @@ all observed particle momenta and using momentum conservation arguments to infer
 that any remaining momentum imbalance is due to the missing neutrino. At a
 hadron collider, the boost of the colliding partons is not known and thus, the
 component of the neutrino momentum parallel to the beam line cannot be inferred
-from the missing momentum. This prevents determination of the \PW momentum and
-thus too the direct measurement of $\cos\thetastar$. Instead, a variable is
-chosen which is known to be highly correlated with $\cos\thetastar$ at suitably
-high $\PtW$ and yet directly calculable from transverse detector quantities
-which can be easily measured. This variable is the Lepton Projection variable or
-\LP and is defined as follows
+from the missing momentum. This prevents unique determination of the \PW
+momentum, introducing a two-fold amiguity on the measurement of $P^{\PW}_z$ and
+thus making it impossible to fully reconstruct the helicity frame. Although the
+possibility exists of either picking one solution and applying correction
+factors for the error this causes in the results or taking both solutions and
+weighting them using simulated data, these introduce a great deal of
+complexity. Instead, a variable is chosen which is known to be highly correlated
+with $\cos\thetastar$ at suitably high $\PtW$ and yet also directly calculable
+from transverse detector-level quantities. This variable is the Lepton Projection
+variable or \LP and is defined as follows
 \begin{equation}
-\LP = \frac{\Ptl.\PtW}{\left|\PtW\right|^2}
+  \LP = \frac{\Ptl.\PtW}{\left|\PtW\right|^2}
 \label{eqn:lp_def}
 \end{equation}
 where \Ptl and \PtW are the transverse momenta of the charged lepton and \PW
@@ -378,8 +389,54 @@ Rearranging it is seen that
 In the high \PtW limit, the $z$ component of the \PW can be neglected and thus
 $\LP^{3D} \longrightarrow \LP$ and $\mPW >> \EW$ so
 \begin{equation}
-\lim_{\PtW \longrightarrow \infty} \cos\thetastar = 2\LP - 1
+ \cos\thetastar \longrightarrow 2\LP - 1
 \end{equation}
+The correlation between $\cos\thetastar$ and $2\LP -1$ is shown in Figure~TODO
+for \PW bosons with $\PtW > \unit{200}{\GeV}$ and $\PtW > \unit{400}{\GeV}$.
+
+\subsubsection{Correlation with \phistar}
+For large \PtW, \LP is mostly uncorrelated with \phistar since even for values
+$|\phistar > \frac{\pi}{2}$, the lepton will still be collinear with the \PW in
+the lab frame. In constrast, for low values of \PtW, the lepton in the lab frame
+may have a large angular separation from the \PW. In extreme cases, the lepton
+and the \PW may even be anti-parallel in the lab frame. This leads to a widening
+of the \LP distribution and a much larger correlation with
+\phistar. This correlation is shown in Figure~TODO.
+
+\subsection{Template Reweighting Method}
+As has so far been described, the $\cos\thetastar$ distribution is of great
+interest in the measurement of the \PW boson helicity. The \LP variable provides
+a variable that is able to probe this distribution and can be calculated in a
+straightforward manner from detector-level quantities. However, it has already
+been seen that the $\cos\thetastar$ distribution cannot be inferred from the \LP
+distribution, thus preventing a direct measurement of the helicity
+fractions. In addition, the \LP distribution will be subject to a number of
+detector and acceptance related effects, changing its shape.
+
+To account for all such experimental issues, a template reweighting method is
+employed. Effectively, Monte Carlo simulation is used to derive three
+reweighting reweighting functions for given bins in \PtW, \YW and boson
+charge. These can be written as
+\begin{equation}
+Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
+\frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1} f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}
+\end{equation}
+where the index $i$ is taken to represent the 3 helicity states of the \PW
+boson. The functional form of $\sigma$ is taken from
+Eqn~\ref{eqn:wpol_helicity_fractions} as follows,
+\begin{eqnarray*}
+\sigma^{\pm}_{-1} &=& \frac{1}{4}\left(1\mp\cos\thetastar\right)^2\\
+\sigma^{\pm}_{0}  &=& \frac{1}{2}\left(1-\cos^2\thetastar\right)\\
+\sigma^{\pm}_{+1} &=& \frac{1}{4}\left(1\pm\cos\thetastar\right)^2\\
+\end{eqnarray*}
+By weighting a given simulated event by each of the factors $Q_i$, any given
+distribution can be made to represent the 100\% left-handed, right-hadned and
+longitudinal polarisation cases without having to alter the configuration of the
+Monte-Carlo generator. Using this method, templates can be constructed for the
+\LP distribution corresponding to a pure sample of polarised bosons and
+accounting for all detector and acceptance effects. Such \LP templates derived
+from Monte Carlo may then be fit to the corresponding data distributions in
+order to extract the helicity fractions.
 
 
 %%% Local Variables:
