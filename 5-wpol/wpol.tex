@@ -459,18 +459,98 @@ corresponding to 100\% left-handed, right-handed and longitudinally polarised
 the helicity fractions themselves.
 
 In order to perform this analysis, it is vital that a highly pure sample of \PW
-bosons is used. Additional background contamination must be accounted for in the
-fitting procedure, either by subtraction or by incorporation of an appropriate
-shape template. However this is handled, it will inevitably introduce additional
-uncertainty into the fit. In the case of subtraction, uncertainty on the shape
-and normalisation must be accounted for and propagated into the total
-uncertainties on the helicity fractions. Introducing an appropriate template
-into the fit adds an additional parameter to account for the relative
-normalisation as well as uncertainties stemming from the template shape. This is
-particularly problematic in the case of \ac{QCD} multijet events where the
-underlying processes are felt to be poorly understood. This necessitates the use
-of a data-driven template which, as will be seen, brings an additional set of
-difficulties.
+bosons is collected. Additional background contamination must be accounted for
+in the fitting procedure, either by subtraction or by incorporation of an
+appropriate shape template. However this is handled, it will inevitably
+introduce additional uncertainty into the fit. In the case of subtraction,
+uncertainty on the shape and normalisation must be accounted for and propagated
+into the total uncertainties on the helicity fractions. Introducing an
+appropriate template into the fit adds an additional parameter to account for
+the relative normalisation as well as uncertainties stemming from the template
+shape. This is particularly problematic in the case of \ac{QCD} multijet events
+where the underlying processes are felt to be poorly understood. This
+necessitates the use of a data-driven template which, as will be seen, brings an
+additional set of difficulties.
+
+We shall now motivate and describe each analysis cut for both the muon and
+electron channels of the analysis. Due to the differences in the detector
+hardware involved, the object selection criteria will of course be different
+between the two channels. However, the differing background levels and
+composition have necessitated further divergence which will be noted
+explicitly. Although both channels will be described in detail, the electrons
+will naturally receive more attention, being the focus of the present author's
+work.
+
+\subsection{Leptons}
+The first selection requirement is to choose events with a charged lepton
+consistent with that of a \PW decay. Such events should, at a minimum, contain
+at least one reconstructed electron or muon. Wherever possible, the lepton
+selection criteria adopted were those used for the \PW cross section analysis
+\cite{cms_w_paper}. These requirements had been chosen to be as robust as
+possible during the period of early data-taking at \ac{CMS}.
+
+\subsubsection{Muons}
+The requirements placed on the muon are as follows:
+\begin{itemize}
+\item The muon is required to be reconstructed as both a global muon and a
+  tracker muon. This is to guard against either global muons mismatched with the
+  tracker or noisy muon chambers in the case of tracker muons. For further
+  information on muon identification, see Section~TODO.
+\item More than 10 hits in the tracker.
+\item Bad muon fits are rejected by requiring $\chi^2 < 10$ on the global muon
+  fit (tracker and muon chambers)
+\item The transverse impact parameter of the muon with respect ot the beamspot
+  is required to be $ < \unit{2}{\milli\metre}$. This is a fairly loose
+  requirement but still rejects the majority of cosmic muons.
+\item At least 1 hit is required in the pixels of the tracker in order to remove
+  in-flight decays.
+\item The tracker muon reconstruction must involve at least 2 muon stations. This supresses
+  punch-through and accidental matchings and ensures compatibility with the
+  trigger.
+\item The global muon reconstruction must involve at least 1 valid hit in the
+  muon chambers; again to guard against decays in flight and punch-through.
+\item A cut on the muon pseudorapidity $|\eta| < 2.1$ in order to ensure
+  compatibility with the trigger requirements.
+\item A cut on the muon transverse momentum, $\Ptmu > \unit{20}{\GeV}$ to ensure
+  compatibility with trigger requirements evolving as the \ac{LHC} luminosity
+  increased.
+\item A cut on the combined isolation,
+\begin{equation}
+\CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
+  E_T^{\textrm{had}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Ptmu}
+\end{equation}
+where the sums run over the tracks in the tracker or the energy deposits in the
+\ac{ECAL} and \ac{HCAL} within a cone of $\Delta R = \sqrt{(\Delta\eta)^2 +
+  (\Delta\phi)^2} < 0.3$. A threshold of \unit{0.7}{\GeV} was placed on the
+tracks contributing to the isolation sum.
+\end{itemize}
+
+\subsubsection{Electrons}
+Electrons are naturally (why???) less cleanly measurable objects than muons. The
+object selection is correspondingly more complex to ensure an optimal trade-off
+between the efficiency and the purity of the selection. We shall first present
+the variables used in the selection.
+
+\begin{itemize}
+\item \sigmaieta is a measure of the \ac{RMS} shower width of the electron
+  in the $\eta$ direction.
+\item \deltaphiin and \deltaetain represent the angular separation between the
+  trajectory of the \ac{GSF} track and the ac{ECAL} supercluster.
+\item Tracker, \ac{ECAL} and \ac{HCAL} isolation quantities summed in a cone
+  $\Delta R < 0.3$. Within the tracker, a threshold of \unit{700}{\GeV} is
+  applied to the tracks contributing to the sum. Similarly, in the ac{ECAL}, a
+  zero-supression cut is applied. The cone is centred on the track direction at
+  the vertex for the tracker isolation, and the supercluster for the calorimeter
+  quantities.
+\item \HoverE is the ratio of the energy deposited in the \ac{HCAL} behind the
+  electron seed to that in the \ac{ECAL}.
+\item The track associated with the electron is required to have a hit in the
+  first layer of the pixel tracker in order to reject photon conversions.
+\item Further rejection against electron conversions is provided by the
+  variables \Dist and \DeltaCotTheta. These are calculated by searching for a
+  conversion partner of the electron \ac{GSF} track. If such a partner is found,
+  the electron is rejected if both \Dist and \DeltaCotTheta are below given thresholds.
+\end{itemize}
 
 
 
