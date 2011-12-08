@@ -1,0 +1,12 @@
+
+
+
+* Figures that Need Making/putting in
+** Helicity Frame
+   Included illustration from AN but its crap and low-res. Would be nice to redo if time allows.
+** Cos Theta* distributions
+   I can make these myself. If not, take from AN.
+** Correlation of cos theta* and LP
+   Probably use the ones jad has made, but could make my own if time allows
+** Correlation of phi* and LP
+   Can use jad's. Would be nice to redo
