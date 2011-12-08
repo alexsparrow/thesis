@@ -1,2 +1,20 @@
 \chapter{Computing}
 \section{SUSYv2}
+My largest contribution to computing was in the maintenance and further
+development of the \ac{SUSYv2} software package. This is a standalone
+\ac{ROOT}-based analysis framework written in a mixture of C++ and Python. It
+has been used in a number of analyses by the Imperial College and Friends group
+within \ac{CMS}. These have primarily been \ac{SUSY}-based analyses, searching
+in the 0, 1 and 2 lepton final states, photon final states. It has also been
+used for the \PW polarisation measurement as well as several other projects. The
+vast majority of the initial code was written by Dr. John Jones with subsequent
+contributions from a number of others.
+
+The \ac{SUSYv2} code aims to minimise the number of reads performed on a
+\ac{ROOT} tree by reading branches on demand and performing lazy calculations as
+required to satisfy analysis code requests for higher-level observables. The
+dependency chain between calculated quantities and ultimately \ac{ROOT}-tree
+branches is encoded via function calls and all intermediate values are memoized
+or cached for a single event to avoid recalculation or rereading of an ntuple
+branch. The cost and the benefit of this memoization is that all calculated
+quantities are effectively referentially transparent.
