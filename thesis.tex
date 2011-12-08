@@ -62,8 +62,13 @@ pdfauthor = {\textcopyright\ Andy Buckley}
 
 %% Produce the appendices
 \begin{appendices}
-  \input{appendices}
+  \import{appendices/}{kinematics}
+  \import{appendices/}{software}
 \end{appendices}
+
+\begin{comment}
+  \input{appendices/kinematics}
+\end{comment}
 
 %% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)

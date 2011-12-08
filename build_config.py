@@ -28,7 +28,8 @@ CHAPTERS = [
     "4-reco",
     "5-wpol",
     "6-susysearch",
-    "7-interpretation"
+    "7-interpretation",
+    "appendices"
     ]
 
 
