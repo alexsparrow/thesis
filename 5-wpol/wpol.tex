@@ -626,6 +626,7 @@ events, the 95\% efficiency cuts were used. These will be referred to as
 % added later on.
 
 \subsection{Jets}
+\label{sec:wpol_jets}
 In order to reject events coming from \ttbar decays, which tend to have a large
 jet multiplicity, an upper limit is placed on the number of jets in the
 event. The jets are clustered using the \antikT algorithm from particle flow
@@ -635,6 +636,47 @@ the event within a cone of $\Delta R < 0.3$ of the highest \Pt electron. Such
 objects are understood to be an overlap in the reconstruction algorithms. This
 could also be addressed by consistent use of particle flow objects for both
 electrons and jets.
+
+\subsection{Kinematic Cuts}
+\subsubsection{Transverse \PW Momentum}
+The most vital kinematic cut to the analysis is the cut on the transverse
+momentum of the \PW, \PtW. As has been discussed, requiring \PW bosons with a
+large transverse momentum serves to enhance the polarisation effect described in
+Section~\ref{sec:polarisation}. It also ensures the correlation of \LP with
+$\cos\thetastar$ and thus improves the measurement of the helicity
+fractions. There are several means of reconstructing the \PtW at \ac{CMS}. The
+first, which was initially used for this analyis was the hadronic recoil of the
+event. This is effectively the so-called missing hadronic energy of the
+event, or \MHT,
+% TODO Perhaps this should be moved somewhere else?
+\begin{equation}
+\PtW^{\textrm{had}} = - \sum_{j \in \textrm{jets}} \vec{j}
+\end{equation}
+where the $j$ is taken to run over some subset of the jets in the event as
+defined in Section~\ref{sec:wpol_jets} with some minimum transverse momentum
+requirement. The sum is taken to denote a vectorial sum. Since the \PW and the
+jets must balance in the lab frame, this in principal provides an accurate
+measurement of \PtW. However, the reconstruction fo the jets is difficult and
+subject to uncertainties in the jet energy scale. A higher resolution
+measurement can be achieved by utilising instead the \MET (effectively the
+neutrino) and the lepton in the event. This leads to the definition,
+\begin{equation}
+\PtW^{\textrm{lep}} = \vec{\Pl} + \vec{\MET}
+\end{equation}
+This provides a higher resolution measurement of \PtW, as can be seen in
+Figure~TODO. It is thus the variable adopted in this analysis.
+
+A second question, is then the choice of the minimum cut value to place on
+\PtW. On the one hand, increasing this cuts reduces the statistics of the
+sample. A related difficulty for this analysis was the small size of the
+simulated $\PW\longrightarrow\Pl\Pgn$ sample, particularly at higher \PtW. On
+the other hand, the enhancment of the polarisation effect and the increased
+correlation between $\cos\thetastar$ motivate a larger cut value. The benefits of
+these two effects could also be gained by binning the sample in \PtW and
+performing independent fits within each bin. Unfortunately, the data sample
+available had inadequate statistics to make such an approach feasible. Instead,
+a moderately large $\PtW > \unit{50}{\GeV}$ was adopted.
+% TODO mroe detail on this choice!
 
 
 
