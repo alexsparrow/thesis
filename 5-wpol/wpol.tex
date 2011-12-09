@@ -413,13 +413,16 @@ distribution, thus preventing a direct measurement of the helicity
 fractions. In addition, the \LP distribution will be subject to a number of
 detector and acceptance related effects, changing its shape.
 
+\subsubsection{Reweighting $\cos\thetastar$}
 To account for all such experimental issues, a template reweighting method is
 employed. Effectively, Monte Carlo simulation is used to derive three
-reweighting reweighting functions for given bins in \PtW, \YW and boson
-charge. These can be written as
+reweighting factors, each a function of $\cos\thetastar$ and binned in boson
+charge, \PtW and \YW. These can be written as
 \begin{equation}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
-\frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1} f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}
+\frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1}
+  f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}
+\label{eqn:wpol_reweighting_factor}
 \end{equation}
 where the index $i$ is taken to represent the 3 helicity states of the \PW
 boson. The $f_i$ are constants derived from an analytical fit to the
@@ -432,16 +435,68 @@ as follows,
 \sigma^{\pm}_{0}  &=& \frac{1}{2}\left(1-\cos^2\thetastar\right)\\
 \sigma^{\pm}_{+1} &=& \frac{1}{4}\left(1\pm\cos\thetastar\right)^2\\
 \end{eqnarray*}
-By weighting a given simulated event by each of the factors $Q_i$, the
-Monte-Carlo can be made to represent cases of 100\% left-handed, right-handed
-and longitudinally polarised \PW bosons. This avoids the need to generate
-separate Monte Carlo event samples for each polarisation state. Using the
-reweighted sample, any distribution may be produced corresponding to a pure
-polarisation state. In particular, this allows the derivation of \LP shape
-templates which may then be fit to the corresponding data distribution in order
-to extract the helicity fractions. This ensures that all experimental and
-acceptance effects can be accounted for - providing of course that they are
-adequately modelled by the Monte Carlo and detector simulation.
+A given simulated event is then taken, its $\cos\thetastar$ value calculated and
+a reweighting factor derived from Eqn~\ref{eqn:wpol_reweighting_factor}
+accounting for the \PtW, \YW and charge of the \PW boson. The binning is
+important, as the helicity fractions are expected to vary significantly with
+these parameters.
+
+This reweighting procedure avoids the need to generate separate Monte Carlo
+event samples for each polarisation state. Using the reweighted sample, any
+distribution may be produced corresponding to a pure sample of polarised \PW
+bosons. In particular, this allows the derivation of \LP shape templates which
+may then be fit to the corresponding data distribution in order to extract the
+helicity fractions. This ensures that all experimental and acceptance effects
+can be accounted for - providing of course that they are adequately modelled by
+the Monte Carlo and detector simulation.
+
+In reality, a small modification to Eqn~\ref{eqn:wpol_reweighting_factor} is
+required to account for the finite statistics of the generated sample. The
+functions $\sigma^{\pm}_{i}$ become instead integrals over a small slice
+($\Delta\cos\thetastar = 0.01$) of a binned $\cos\thetastar$ distribution.
+
+\begin{equation}
+Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
+\frac{\int_{b}^{b+\Delta\cos\thetastar}\sigma^\pm_i\left(\cos\thetastar\right)/\int_{-1}^{1}
+\sigma^\pm_i\left(\cos\thetastar\right)}{
+\int_{b}^{b+\Delta\cos\thetastar} \displaystyle\sum_{i=-1}^{i=+1}
+f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)/
+\int_{-1}^{1} f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)
+}
+\end{equation}
+where $b$ indicates a bin within the $\cos\thetastar$ distribution.
+
+\subsubsection{\PtW and \YW Dependence}
+Although the $\cos\thetastar$ templates are independent of \PtW and \YW by
+definition, the \LP templates vary with phase space. Although the reweighting
+factor as defined in Eqn~\ref{eqn:wpol_reweighting_factor} ensures that the
+$\cos\thetastar$ distribution corresponds to a pure helicity state, it does not
+account for the variation of the helicity fractions within the \PW phase
+space. Furthermore, the analysis seeks to measure the values of the helicity
+fractions averages over a region of phase space corresponding to reconstruction
+level cuts. An extra reweighting factor is defined which effectively gives
+preference to regions containing more bosons of the desired \PW helicity,
+\begin{equation}
+R_i\left(\PtW, \YW, \pm\right) =
+\frac{{f'}_i \left(\PtW, \YW, \pm\right)}{{f'}_i^{\textrm{all}}}
+\end{equation}
+where ${f'}_i\left(\PtW, \YW, \pm\right)$ is the fraction of \PW bosons in the
+appropriate \PtW and \YW bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the same
+fraction integrated over all of the phase space bins. The prime added to the
+fraction is significant. It indicates that the phase space of the helicity
+fractions is that obtained after application of a reconstruction-level cut on
+\PtW. This must be the same cut value as employed in the analysis itself and is,
+due to experimental and resolution effects, significantly different from a
+generator-level cut on the same quantity. This can be seen in
+Figure~\ref{fig:wpol_genreco}.
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_genreco_wpt_eta}\includegraphics[width=0.45\textwidth]{fig/WPTvsY_mcreco50toinf}}\quad
+\subfloat[]{\label{fig:wpol_genreco_ppt}\includegraphics[width=0.45\textwidth]{fig/ptw_mcrecocut}}\quad
+\caption{}
+\label{fig:wpol_genreco}
+\end{figure}
 
 \section{Analysis}
 \subsection{Introduction}
@@ -511,9 +566,6 @@ The requirements placed on the muon are as follows:
   muon chambers; again to guard against decays in flight and punch-through.
 \item A cut on the muon pseudorapidity $|\eta| < 2.1$ in order to ensure
   compatibility with the trigger requirements.
-\item A cut on the muon transverse momentum, $\Ptmu > \unit{20}{\GeV}$ to ensure
-  compatibility with trigger requirements evolving as the \ac{LHC} luminosity
-  increased.
 \item A cut on the combined isolation,
 \begin{equation}
 \CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
@@ -524,9 +576,12 @@ where the sums run over the tracks in the tracker or the energy deposits in the
   (\Delta\phi)^2} < 0.3$. A threshold of \unit{0.7}{\GeV} was placed on the
 tracks contributing to the isolation sum.
 \end{itemize}
+Muons passing this set of selection criteria will be referred to as
+\textbf{Tight}. Global muons failing one or more of these criteria will be
+referred to as \textbf{Loose}.
 
 \subsubsection{Electrons}
-Electrons are naturally (why???) less cleanly measurable objects than muons. The
+Electrons are inheriently less cleanly reconstructed objects than muons. The
 object selection is correspondingly more complex to ensure an optimal trade-off
 between the efficiency and the purity of the selection. We shall first present
 the variables used in the selection.
@@ -551,6 +606,36 @@ the variables used in the selection.
   conversion partner of the electron \ac{GSF} track. If such a partner is found,
   the electron is rejected if both \Dist and \DeltaCotTheta are below given thresholds.
 \end{itemize}
+
+As part of the \PW cross-section measurement, a number of ``working points''
+were defined corresponding to different electron selection efficiencies. A set
+of cut values placed on the identification variables just described are then
+associated with each working point. These have been chosen via an optimisation
+procedure and are further specialised for electrons reconstructed in the barrel
+and endcap region. This is to account for the different reconstruction
+characteristics in these regions of the detector (see Section~TODO).
+% TODO more detail on ID. Possibly should be in object reconstruction chapter.
+
+In order to achieve a strong supression of the \ac{QCD} multi-jet background,
+the decision was made to choose a tighter working point than other \ac{CMS}
+analyses - the 70\% efficiency working point. Electrons passing these criteria
+will be referred to as \textbf{Tight}. For the purposes of vetoing dilepton
+events, the 95\% efficiency cuts were used. These will be referred to as
+\textbf{Loose} electrons.
+% TODO more detail on the choice of the 70\% working point. Perhaps should be
+% added later on.
+
+\subsection{Jets}
+In order to reject events coming from \ttbar decays, which tend to have a large
+jet multiplicity, an upper limit is placed on the number of jets in the
+event. The jets are clustered using the \antikT algorithm from particle flow
+reconstructed objects. A cone radius of 0.5 is used and an acceptance cut
+$\modeta < 5$ is applied. Additionally, cleaning is applied to remove jets from
+the event within a cone of $\Delta R < 0.3$ of the highest \Pt electron. Such
+objects are understood to be an overlap in the reconstruction algorithms. This
+could also be addressed by consistent use of particle flow objects for both
+electrons and jets.
+
 
 
 
