@@ -15,14 +15,15 @@ my_path = os.path.join(os.getcwd(), __file__)
 base_path = os.path.dirname(my_path)
 tex_count_path = os.path.join(base_path, "texcount.pl")
 
+target_word_count = 30000
 
 template = r"""
 \clearpage
 %(verbs)s
 \section*{Status}
 Built by \textbf{%(user)s} on host \textbf{%(host)s} at \textbf{%(built)s}. \\
-Path is \verb|%(path)s|
-
+Path is \verb|%(path)s| \\
+%(status_bar)s
 \ctable[
 cap=Thesis Status,
 caption=Thesis Status,
@@ -126,6 +127,15 @@ def extract_wordcount(d):
         except: out[x] = -1
     return out
 
+def status_bar(wc, target):
+    bar_size = 40
+    complete = float(wc)/float(target)
+    bar_length = int(complete*bar_size)-1
+    space_length = bar_size - bar_length -1
+    percent_complete = "%.1f%%" % complete
+    status_bar = "[" + "="*bar_length + ">" + " "*space_length + "]"
+    return "Percentage complete: \\verb|%s| %.1f\\%%" % (status_bar, complete*100)
+
 if __name__ == "__main__":
     fname = sys.argv[1]
     head = git_head(os.getcwd())
@@ -155,4 +165,8 @@ if __name__ == "__main__":
         "file_table": file_table
         }
     fields.update(extract_wordcount(wc["total"]))
+
+    if target_word_count is not None:
+        fields["status_bar"] = status_bar(fields["wordcount"], target_word_count)
+    else: fields["status_bar"] = ""
     print template % fields
