@@ -181,18 +181,19 @@ polarisation axis (here, the z-axis) is aligned along the line of flight of the
 \PW in the lab frame. The x-axis is then chosen to lie along the plane spanned
 by the two colliding protons in the boson rest frame with the sense chosen such
 that the angle between it and the nearest proton is minimised. The y-axis is
-then fixed to be perpendicular to these two. The polar angle, \thetastar is
-measured in the $y-z$ plane between the positive z-axis and the
-lepton. Likewise, the azimuthal angle, \phistar is measured in $x-z$ between the
-positive $x$ axis and the lepton. This arrangement is illustrated in
-Figure~\ref{fig:wpol_helicity_frame}. For $0 < |\phistar| < \frac{\pi}{2}$, the
-charged lepton will have a larger rapidity that the \PW boson and thus a smaller
-\Pt. Alternatively, for $\frac{\pi}{2} < |\phistar| < \pi$, the lepton
-will have a smaller rapidity and a larger \Pt.
+then fixed to be perpendicular to these two (the coordinate system is
+right-handed). The polar angle, \thetastar is measured in the $y-z$ plane
+between the positive z-axis and the lepton. Likewise, the azimuthal angle,
+\phistar is measured in $x-z$ between the positive $x$ axis and the lepton. This
+arrangement is illustrated in Figure~\ref{fig:wpol_helicity_frame}. For $0 <
+|\phistar| < \frac{\pi}{2}$, the charged lepton will have a larger rapidity that
+the \PW boson and thus a smaller \Pt. Alternatively, for $\frac{\pi}{2} <
+|\phistar| < \pi$, the lepton will have a smaller rapidity and a larger \Pt.
 
 \begin{figure}
-\includegraphics[width=0.8\textwidth]{fig/helicity_frame_polnote}
-\caption{The Helicity Frame}
+%\includegraphics[width=0.8\textwidth]{fig/helicity_frame_polnote}
+\includegraphics[width=0.8\textwidth]{fig/helicity_frame_better}
+\caption{The Helicity Frame \cite{berger_left_handed_w}}
 \label{fig:wpol_helicity_frame}
 \end{figure}
 
@@ -527,14 +528,40 @@ where the underlying processes are felt to be poorly understood. This
 necessitates the use of a data-driven template which, as will be seen, brings an
 additional set of difficulties.
 
-We shall now motivate and describe each analysis cut for both the muon and
-electron channels of the analysis. Due to the differences in the detector
-hardware involved, the object selection criteria will of course be different
-between the two channels. However, the differing background levels and
-composition have necessitated further divergence which will be noted
-explicitly. Although both channels will be described in detail, the electrons
-will naturally receive more attention, being the focus of the present author's
-work.
+\subsection{Backgrounds}
+It will be helpful to begin with a discussion of the backgrounds relevant to
+this analysis. However, in order to understand the composition of the
+backgrounds, the fundamental selection requirements should be stated. The
+topology of interest are of course leptonic \PW decays, $\PW \longrightarrow
+\Pl\Pgn$. In addition, the polarisation effect described in
+Section~\ref{sec:polarisation} is associated with \PW bosons produced with a
+large transverse momentum. As was previously described, this serves to enhance
+the quark-gluon interactions which lead to a strong left-handed
+polarisation. Therefore, we find that the two most essential selection
+requirements are:
+\begin{itemize}
+\item A single isolated lepton typical of a \PW decay
+\item An event toplogy consistent with a large transverse momentum \PW. As shall
+  be seen in Section~\ref{sec:wpol_wpt}, there is some freedom in the exact
+  variables used to achieve this selection.
+\end{itemize}
+Taking only these two requirements, a considerable background will remain. As
+will be shown, this can be largely eliminated via additional selection
+criteria. The principal background sources may be categorised as follows:
+\begin{itemize}
+\item Drell-Yan production leading to a dilepton final state in which one of the
+  leptons is missed due to acceptance, poor reconstruction or other detector
+  effects.
+\item \ttbar production where $t\longrightarrow\Pbeauty\PW$ and the \PW then decays
+  leptonically.
+\item \ac{QCD} multijet events. This can be due to jet puncht-through
+  overlapping with a charged hadron or heavy-flavour decays. Electrons face a
+  much higher background due primarily to photon conversions and overlap between
+  charged hadrons and \Ppizero. The charged hadron leaves a track, whilst the
+  \Ppizero decay leads to a shower of photons in the \ac{ECAL}.
+\item For the electron channel only, there is an additional background from the
+  conversion of promptly produced photons in \gammajets.
+\end{itemize}
 
 \subsection{Leptons}
 The first selection requirement is to choose events with a charged lepton
@@ -676,10 +703,40 @@ these two effects could also be gained by binning the sample in \PtW and
 performing independent fits within each bin. Unfortunately, the data sample
 available had inadequate statistics to make such an approach feasible. Instead,
 a moderately large $\PtW > \unit{50}{\GeV}$ was adopted.
-% TODO mroe detail on this choice!
+% TODO more detail on this choice!
 
+\subsubsection{Missing Transverse Energy}
+In terms of rejecting backgrounds, tightening object definitions can only
+achieve so much. Additional rejection power can be gained via additional
+kinematic cuts on the event topologogy. As has already been stated, the \ac{QCD}
+multijet background is the most problematic due to the fact that it is
+relatively poorly modelled by Monte Carlo event generators. The simplest way to
+reject such events is via a missing energy type cut. \ac{QCD} multijet events do
+not typically contain a source of genuine missing energy. Experimentally
+observed \MET from these events is typically due to jet mismeasurements,
+detector noise or other problems with the event reconstruction. In addition, for
+the high \PtW events of interest to this analysis, the missing energy component
+(i.e. the neutrino) is often quite large. A relatively moderate cut on the \MET
+is therefore able to reject the majority of such \ac{QCD} events.
 
+However, a cut applied directly on the \MET introduces an additional
+problem. Specifically, the \MET cut is effectively a selection on the momentum
+of the neutrino in \PW events. This removes events, where for instance the
+lepton has taken the majority of the momentum from the \PW and the neutrino is
+thus very soft. This of course alters the shape of the \LP distribution. Of
+course, the template reweighting method will account for this acceptance
+effect via appropriate changes in the helicity templates. This change is shown
+in Figure~TODO. However, as can be seen, the sculpting of the \LP distribution
+serves to remove the differences between the left and right-handed template
+shapes, thus increasing their correlation. This becomes problematic within the
+fitting procedure, where the similar shapes naturally make the inference of the
+helicity fractions more difficult.
 
+For this reason, it is desirable to cut on a variable that is not intrinsically
+correlated with either the charged or neutral lepton momentum. The transverse
+mass, \MT, is one such variable. Transverse mass is a variable chosen to
+approximate the invariant mass of a particle by using only transverse
+quantities.
 
 %%% Local Variables:
 %%% mode: latex
