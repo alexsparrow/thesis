@@ -666,6 +666,7 @@ electrons and jets.
 
 \subsection{Kinematic Cuts}
 \subsubsection{Transverse \PW Momentum}
+\label{sec:wpol_wpt}
 The most vital kinematic cut to the analysis is the cut on the transverse
 momentum of the \PW, \PtW. As has been discussed, requiring \PW bosons with a
 large transverse momentum serves to enhance the polarisation effect described in
@@ -702,7 +703,7 @@ correlation between $\cos\thetastar$ motivate a larger cut value. The benefits o
 these two effects could also be gained by binning the sample in \PtW and
 performing independent fits within each bin. Unfortunately, the data sample
 available had inadequate statistics to make such an approach feasible. Instead,
-a moderately large $\PtW > \unit{50}{\GeV}$ was adopted.
+a moderately large cut $\PtW > \unit{50}{\GeV}$ was adopted.
 % TODO more detail on this choice!
 
 \subsubsection{Missing Transverse Energy}
@@ -736,7 +737,64 @@ For this reason, it is desirable to cut on a variable that is not intrinsically
 correlated with either the charged or neutral lepton momentum. The transverse
 mass, \MT, is one such variable. Transverse mass is a variable chosen to
 approximate the invariant mass of a particle by using only transverse
-quantities.
+quantities. It is defined as follows
+
+\begin{equation}
+\MT = \sqrt{2\Ptl\MET\left(1 - \cos\Delta\phi\left(\Ptl, \MET\right)\right)}
+\end{equation}
+
+The angular dependence (i.e. the $\cos\Delta\phi$ term) will effectively
+compensate \PW decays in which either the charged or neutral lepton is soft
+since these topologies will in general have a larger angular separation. Since a
+momentum imbalance is exactly what is expected from the transverse polarisation
+effect, the \MT cut avoids directly supressing this effect.
+
+Now considering the effect of the \MT cut on the background components, it is
+not expected to strongly supress either the \Zjets or \ttbar backgrounds since
+these both contain real decays of a heavy particle. In the case of \ac{QCD}
+multijet events, a balanced jet system has been badly reconstructed
+such that one of the jets has been misidentified as a lepton. In general, the
+fake \MET signature from these events will be small and thus rejected by the \MT
+cut. In the case that the \MET component is larger due to a badly measured jet,
+there are two possibilities:
+\begin{itemize}
+\item The mismeasurement has occured on the jet that has been misidentified as a
+  lepton. Since $\Delta\phi \sim 0$, the \MT cut should strongly supress these
+  events.
+\item The mismeasurement has occurred on one of the other jets in the event. In
+  this case, \MT may be large due to the large angular separation. Note however,
+  that these events will in general be supressed by the cut on \PtW
+\end{itemize}
+
+\subsection{Dataset and Triggers}
+For this analysis, the full \ac{CMS} 2010 dataset was used with an estimated
+integrated luminosity of \unit{36}{\invpicobarn}. The centre of mass energy
+was $\sqrt{s} = \unit{7}{\TeV}$. During the run, the instantaneous luminosity
+continued to increase, requiring subsequent increases in the thresholds of the
+triggers used.
+
+For the muon channel, the triggers evolved more slowly. In general, the cleaner
+muon signature makes the triggers less susceptible to pile-up effects. The
+triggers used were as follows:
+\begin{equation*}
+\begin{cases}
+\texttt{HLT\_Mu9}          & \textrm{run} < 147146 \\
+\texttt{HLT\_Mu15\_v1} & \textrm{run} \geq 147146
+\end{cases}
+\end{equation*}
+Where the number in the trigger name indicates the \pT threshold applied to the
+lepton. In contrast, the electron trigger thresholds evolved more rapidly
+\begin{equation*}
+\begin{cases}
+  \texttt{HLT\_Ele10\_LW\_L1R} & \textrm{run} < 140041 \\
+  \texttt{HLT\_Ele15\_SW\_L1R} & 140041 \leq \textrm{run} < 143963 \\
+  \texttt{HLT\_Ele15\_SW\_CaloEleId\_L1R} & 143963 \leq \textrm{run} < 146428 \\
+  \texttt{HLT\_Ele17\_SW\_CaloEleId\_L1R} & 146428 \leq \textrm{run} < 147117 \\
+  \texttt{HLT\_Ele17\_SW\_TightEleId\_L1R} & 147117 \leq \textrm{run} < 148819 \\
+  \texttt{HLT\_Ele22\_SW\_TightEleId\_L1R\_v2} & \textrm{run} 148819 \leq \textrm{run} < 149181 \\
+  \texttt{HLT\_Ele22\_SW\_TightEleId\_L1R\_v3} & \textrm{run} \geq 149181
+\end{cases}
+\end{equation*}
 
 %%% Local Variables:
 %%% mode: latex
