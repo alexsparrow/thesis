@@ -54,3 +54,6 @@
 \RequirePackage{amsfonts}
 % Useful for putting verbatim text into tables without having to get weird with p
 \RequirePackage{fancyvrb}
+
+% For getting multiline table cells easily
+\RequirePackage{pbox}

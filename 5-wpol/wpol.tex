@@ -529,6 +529,7 @@ necessitates the use of a data-driven template which, as will be seen, brings an
 additional set of difficulties.
 
 \subsection{Backgrounds}
+\label{sec:wpol_backgrounds}
 It will be helpful to begin with a discussion of the backgrounds relevant to
 this analysis. However, in order to understand the composition of the
 backgrounds, the fundamental selection requirements should be stated. The
@@ -608,6 +609,7 @@ Muons passing this set of selection criteria will be referred to as
 referred to as \textbf{Loose}.
 
 \subsubsection{Electrons}
+\label{sec:wpol_electronid}
 Electrons are inheriently less cleanly reconstructed objects than muons. The
 object selection is correspondingly more complex to ensure an optimal trade-off
 between the efficiency and the purity of the selection. We shall first present
@@ -658,11 +660,17 @@ In order to reject events coming from \ttbar decays, which tend to have a large
 jet multiplicity, an upper limit is placed on the number of jets in the
 event. The jets are clustered using the \antikT algorithm from particle flow
 reconstructed objects. A cone radius of 0.5 is used and an acceptance cut
-$\modeta < 5$ is applied. Additionally, cleaning is applied to remove jets from
-the event within a cone of $\Delta R < 0.3$ of the highest \Pt electron. Such
-objects are understood to be an overlap in the reconstruction algorithms. This
-could also be addressed by consistent use of particle flow objects for both
-electrons and jets.
+$\modeta < 5$ is applied.
+
+Additionally, cleaning is applied to events in which a jet overlaps with the
+leading lepton. These cases are assumed to result from some misreconstruction
+and thus should be excluded from the analysis. In the case of the electron, the
+nature of the reconstruction algorithms introduces many such
+overlaps. Consequently, jets found to lie within a cone $\Delta R < 0.3$ of the
+highest \Pt lepton in the event are simply removed from consideration. In
+contrast, for the muon channel, a much tighter cut can be afforded. Events are
+completely vetoed from the selection if a single jet is found to lie within a
+cone $\Delta R < 0.5$ of the muon.
 
 \subsection{Kinematic Cuts}
 \subsubsection{Transverse \PW Momentum}
@@ -766,13 +774,75 @@ there are two possibilities:
   that these events will in general be supressed by the cut on \PtW
 \end{itemize}
 
-\subsection{Dataset and Triggers}
+For the muon channel, it was found that a reasonably moderate cut $\MT >
+\unit{30}{\GeV}$ was able to reduce the \ac{QCD} multijet background to
+negligible levels. This was first demonstrated in simulation and then
+cross-checked via comparison with genuine data. In the case of the electrons,
+the background proved far more problematic. In the end, an $\MT >
+\unit{50}{\GeV}$ cut was chosen for the sake of simplicity. For more detail on
+the optimisation study in the electron channel, see
+Section~\ref{sec:electron_opt}.
+
+\subsection{Electron Channel Cut Flow Optimisation}
+A key challenge in the electron channel was posed by the significant background
+from \ac{QCD} multijet events. The $\MT > \unit{30}{\GeV}$ cut applied in the
+muon channel is unable to eliminate these events. An optimisation study was
+undertaken to determine the optimal kinematic and lepton identification cuts,
+quantified by the uncertainty obtained in the final template fit.
+
+\subsection{Cut Flow}
+Having discussed the selection requirements to be used in this analysis, the
+actual cuts and cut values will now be presented. These are shown in
+Table~\ref{tbl:wpol_cutflow}.
+
+\input{tables/wpol_cutflow}
+
+
+\section{Results}
+\subsection{Datasets}
 For this analysis, the full \ac{CMS} 2010 dataset was used with an estimated
 integrated luminosity of \unit{36}{\invpicobarn}. The centre of mass energy
 was $\sqrt{s} = \unit{7}{\TeV}$. During the run, the instantaneous luminosity
 continued to increase, requiring subsequent increases in the thresholds of the
-triggers used.
+triggers used in order to maintain efficiency.
 
+\subsubsection{Simulated Samples}
+For each background component listed in Section~\ref{sec:wpol_backgrounds}, an
+appropriate simulated sample was used. In the case of the \Zjets and \ttbar, the
+generator setup was as for the \Wjets sample - the \ac{MADGRAPH} matrix element
+generator interfaced to \ac{PYTHIA}. In the case of the \ac{QCD} background, a
+number of samples were used. In the case of the Muon channel, this was a sample
+generated using \ac{PYTHIA} and binned in terms of the transverse momentum of
+the hard interaction, \pthat. This ensures adequate statistics even in the
+regions of high \pthat that will tend to pass the analysis selection.
+
+For the electrons, still larger statistics were required in order to study the
+\ac{QCD} background properties. For these, \ac{QCD} samples were further
+enriched towards the analysis level selection by selecting generator-level
+electrons, photons, charged pions and charged kaons passing a set of loose
+generator-level identification cuts approximating the isolation quantities and
+\HoverE. This is referred to as the \textbf{EMEnriched} sample. An additional
+sample is enriched by similar means with decays from \Pbottom and \Pstrange
+hadrons. This is referred to as \textbf{BCtoE}. Both samples are again produced
+in \pthat bins as for the unenriched sample. This generator level enrichment is
+intended to reduce the costs in terms of time and disk space in processing a
+much larger number of events, the majority of which will be rejected by basic
+analysis cuts. An unfortunate side effect of this enrichement is that the
+variables used in the filtering procedure may no longer be studied in their full
+range. This is an impediment to certain background estimation studies which can
+choose to invert certain lepton identification cuts.
+
+\subsection{Monte Carlo Signal and Background Expectations}
+The expected event yields across the relevant simulated samples are shown in
+Tables~\ref{tbl:wpol_electron_yields} and \ref{tbl:wpol_muon_yields} for
+electrons and muons respectively. The component marked \ac{QCD} denotes the
+unenriched sample in the case of the muons and the sum of the
+\textbf{EMEnriched} and \textbf{BCtoE} in the case of the electrons.
+
+\input{tables/electron_yields}
+\input{tables/muon_yields}
+
+\subsection{Triggers}
 For the muon channel, the triggers evolved more slowly. In general, the cleaner
 muon signature makes the triggers less susceptible to pile-up effects. The
 triggers used were as follows:
@@ -783,7 +853,7 @@ triggers used were as follows:
 \end{cases}
 \end{equation*}
 Where the number in the trigger name indicates the \Pt threshold applied to the
-lepton. In contrast, the electron trigger thresholds evolved more rapidly
+lepton. In contrast, the electron trigger thresholds evolved more rapidly,
 \begin{equation*}
 \begin{cases}
   \texttt{HLT\_Ele10\_LW\_L1R} & \textrm{run} < 140041 \\
@@ -795,6 +865,18 @@ lepton. In contrast, the electron trigger thresholds evolved more rapidly
   \texttt{HLT\_Ele22\_SW\_TightEleId\_L1R\_v3} & \textrm{run} \geq 149181
 \end{cases}
 \end{equation*}
+% https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideEgammaHLT
+Where \texttt{EleX} indicates an electron with $p_T > \unit{X}{\GeV}$. The
+\texttt{LW} and \texttt{SW} stand for large window and small window
+respectively. Here, window refers to the electron pixel-matching window and thus
+the large window cut is looser and intended to be used during startup
+conditions. All triggers include \HoverE cuts on the electron. In addition,
+those with \texttt{CaloEleId} or \texttt{TightEleId} impose additional electron
+identification requirements. The first applies only a \sigmaieta cut (see
+Section~\ref{sec:wpol_electronid}), whilst the second applies constraints on the
+angular matching variables between the track and the supercluster (\deltaphiin,
+\deltaetain) in addition to the \texttt{CaloEleId} requirement.
+
 
 %%% Local Variables:
 %%% mode: latex
