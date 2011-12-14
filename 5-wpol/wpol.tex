@@ -827,6 +827,17 @@ angular matching variables between the track and the supercluster (\deltaphiin,
 
 \section{Fitting Procedure}
 \label{sec:wpol_fitting}
+In order to extract the helicity fractions in
+Eqn~\ref{eqn:wpol_helicity_fractions}, a binned maximum likelihood fitting
+procedure is performed. This takes \LP shape templates from the three \PW
+helicity states, a number of data-driven or Monte-Carlo estimated background
+templates and extracts the most probably values of \fL, \fR and \f0 from the
+data distribution. In order to test the procedure, this method is also applied
+to Monte Carlo ``pseudodata'' to ensure that fitted helicity fractions match
+those derived from the analytical fit (see Section~TODO) to within the quoted
+errors. The fit is implemented in the \ac{RooFit} software package, which
+assists in constructing an appropriate likelihood function and performing the
+necessary minimisation using the \ac{MINUIT} numerical optimisation code.
 
 \section{Electron Channel Cut Flow Optimisation}
 \label{sec:wpol_electron_opt}
