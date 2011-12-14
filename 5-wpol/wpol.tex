@@ -499,6 +499,20 @@ Figure~\ref{fig:wpol_genreco}.
 \label{fig:wpol_genreco}
 \end{figure}
 
+\subsubsection{Closure Test}
+To ensure that the method is working correctly, several closure tests were
+performed. Firstly, the generator-level helicity fractions within the phase
+space of the reconstruction level \PW acceptance cuts are extracted. Essentially
+the $\cos\thetstar$ distribution is plotted from a simulated sample of events
+which have passed the reconstruction level \PtW cut. The distribution is fit,
+once again using Eqn~\ref{eqn:wpol_helicity_fractions} and values of \f0, fL and
+\fR are extracted for both boson charges.
+
+The second test, applies the template reweighting procedure to the generator
+level \LP quantity. The phase space again corresponds to the reconstruction
+levels cut on \PtW. All reweighting factors are applied except for the
+acceptance correction.
+
 \section{Analysis}
 \subsection{Introduction}
 To summarise what has already been said, the goal of this analysis is to extract
@@ -835,9 +849,11 @@ templates and extracts the most probably values of \fL, \fR and \f0 from the
 data distribution. In order to test the procedure, this method is also applied
 to Monte Carlo ``pseudodata'' to ensure that fitted helicity fractions match
 those derived from the analytical fit (see Section~TODO) to within the quoted
-errors. The fit is implemented in the \ac{RooFit} software package, which
-assists in constructing an appropriate likelihood function and performing the
-necessary minimisation using the \ac{MINUIT} numerical optimisation code.
+errors. The fit itself is implemented in the \ac{RooFit} software framework,
+which assists in constructing an appropriate likelihood function and performing
+the necessary minimisation using the \ac{MINUIT} numerical optimisation code.
+
+
 
 \section{Electron Channel Cut Flow Optimisation}
 \label{sec:wpol_electron_opt}
