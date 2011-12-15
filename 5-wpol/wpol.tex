@@ -171,6 +171,8 @@ dominant left-handed polarisation mode.
 \label{fig:w1jet_modes}
 \end{figure}
 
+% TODO Equivalence theorem
+% TODO charge asymmetry
 
 \subsection{Studying Helicity}
 
@@ -321,6 +323,9 @@ neutrino in this case) is taking most of the energy. Similarly for \PWm, the
 peak is at $\cos\thetastar = 1$, where this time the electron is more
 energetic.
 
+% TODO cos thetastar plots
+% TODO evolution of Ai with PtW
+
 \subsection{The Lepton Projection Variable}
 \subsubsection{The \LP Variable}
 In order to calculate the value of $\cos\thetastar$, the \PW rest frame must be
@@ -405,6 +410,7 @@ of the \LP distribution and a much larger correlation with
 \phistar. This correlation is shown in Figure~TODO.
 
 \subsection{Template Reweighting Method}
+\label{sec:wpol_reweighting}
 As has so far been described, the $\cos\thetastar$ distribution is of great
 interest in the measurement of the \PW boson helicity. The \LP variable provides
 a variable that is able to probe this distribution and can be calculated in a
@@ -500,18 +506,36 @@ Figure~\ref{fig:wpol_genreco}.
 \end{figure}
 
 \subsubsection{Closure Test}
+% Perhaps this section should be moved?
 To ensure that the method is working correctly, several closure tests were
 performed. Firstly, the generator-level helicity fractions within the phase
 space of the reconstruction level \PW acceptance cuts are extracted. Essentially
-the $\cos\thetstar$ distribution is plotted from a simulated sample of events
+the $\cos\thetastar$ distribution is plotted from a simulated sample of events
 which have passed the reconstruction level \PtW cut. The distribution is fit,
 once again using Eqn~\ref{eqn:wpol_helicity_fractions} and values of \f0, fL and
-\fR are extracted for both boson charges.
+\fR are extracted for both boson charges. This defines the baseline expectation
+for the helicity fractions and is shown in Table~\ref{tbl:wpol_closure_tests}.
 
-The second test, applies the template reweighting procedure to the generator
-level \LP quantity. The phase space again corresponds to the reconstruction
-levels cut on \PtW. All reweighting factors are applied except for the
-acceptance correction.
+The first closure test has been performed in the muon channel only. The
+generator level \LP templates for each helicity state are generated using the
+reweighting method as described in Section~\ref{wpol_reweighting} but excluding
+the acceptance correction. The phase space again corresponds to the
+reconstruction levels cut on \PtW. The binned maximum likelihood fit is then
+performed (see Section~\ref{sec:wpol_fitting}) and the helicity parameters
+obtained are shown in Table~\ref{tbl:wpol_closure_tests}. The agreement with the
+aforementioned generator level values is seen to be within the statistical error
+of the simulated sample.
+
+Finally, a full reconstruction level closure test was performed in both electron
+and muon channels and applying all of the analysis cuts listed in
+Section~\ref{sec:wpol_cutflow}. The results are also shown in
+Table~\ref{tbl:wpol_closure_tests}. The muon channel is seen to recover the
+``true'' helicity fractions to within their statistical error. The electron
+channel, further complicated by \ac{QCD} contributions is seen to close within
+the statistical error derived from the maximum likelihood fit. This corresponds
+to \unit{100}{\invpicobarn} of simulated data.
+
+\input{tables/closure_tests}
 
 \section{Analysis}
 \subsection{Introduction}
@@ -527,6 +551,14 @@ method, \LP distributions are constructed from Monte-Carlo simulation
 corresponding to 100\% left-handed, right-handed and longitudinally polarised
 \PW bosons. These shapes may then be used in a fit to data in order to extract
 the helicity fractions themselves.
+
+It should be noted that the $f_i$ coefficients are expected to differ between
+\PWp and \PWm. However, they are not expected to depend on the flavour of the
+decay lepton. This is relevant to two aspects of this analysis. Firstly, as
+shall be seen, the $\PW\longrightarrow\Ptau\Pgn$ decays where the \Ptau decays
+to either and electron or a muon are included in the dataset. Secondly,
+information from both electron and muon channels may be combined to constrain
+the helicity fractions.
 
 In order to perform this analysis, it is vital that a highly pure sample of \PW
 bosons is collected. Additional background contamination must be accounted for
@@ -855,7 +887,8 @@ the necessary minimisation using the \ac{MINUIT} numerical optimisation code.
 
 
 
-\section{Electron Channel Cut Flow Optimisation}
+\section{Electron Channel}
+\subsection{Cut Flow Optimisation}
 \label{sec:wpol_electron_opt}
 A key challenge in the electron channel was posed by the significant background
 from \ac{QCD} multijet events. The $\MT > \unit{30}{\GeV}$ cut applied in the
@@ -874,6 +907,11 @@ reduced signal statistics. The significance plots could also be construed to
 support a \MET cut over an \MT but of course, since the final results are
 extracted from a template fit, the \LP shape must also be considered.
 
+This point is further reinforced in Figure~\ref{fig:wpol_met_mt_fqcd}. Here the
+$x$ and $y$ axes denote cut values of \MET and \MT. For each point on the plot,
+the fraction of the total event yield due to \ac{QCD} mutlijet production is
+plotted for those events surviving a combined cut on the \MET and \MT.
+
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{fig/ewpol_significance}
 \caption{Plot showing the significance of the electron channel TODO}
@@ -881,13 +919,13 @@ extracted from a template fit, the \LP shape must also be considered.
 \end{figure}
 
 The effect of a \MET or \MT $> \unit{30}{\GeV}$ cut on the shape of the \LP
-templates for \PWp can be seen in Figure~\ref{fig:wpol_met_vs_mt_templates}. The
-\ac{QCD} background is clearly much reduced in the case of the \MET
-cut. However, as expected, the \MET cut removes events with a soft neutrino. Put
-in a different way, these are events in which the positron receives most of the
-energy from the \PW decay. The effect of this is seen in the shape of the
-right-handed helicity templates, which has clearly been cut away at $\LP \sim
-1$.
+templates for simulated \PWp events can be seen in
+Figure~\ref{fig:wpol_met_vs_mt_templates}. The \ac{QCD} background is clearly
+much reduced in the case of the \MET cut. However, as expected, the \MET cut
+removes events with a soft neutrino. Put in a different way, these are events in
+which the positron receives most of the energy from the \PW decay. The effect of
+this is seen in the shape of the right-handed helicity templates, which has
+clearly been cut away at $\LP \sim 1$.
 
 \begin{figure}
 \centering
@@ -897,8 +935,33 @@ right-handed helicity templates, which has clearly been cut away at $\LP \sim
 \label{fig:wpol_met_vs_mt_templates}
 \end{figure}
 
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_wp80}\includegraphics[width=0.4\textwidth]{fig/ICVarPlusMT50_WP80}}\quad
+\subfloat[]{\label{fig:wpol_wp70}\includegraphics[width=0.4\textwidth]{fig/ICVarPlusMT50_WP70}}
+\caption{The shape of the data \LP distribution and relevant backgrounds for two sets of electron ID cuts \subref{fig:wpol_wp80} WP80 and \subref{fig:wpol_wp70} WP70}
+\label{fig:wpol_met_vs_mt_templates}
+\end{figure}
 
+\subsection{Data-Driven Background Template}
+\subsection{ECAL Transparency}
 
+\section{Systematics}
+The template reweighting method necessary for the extraction of the helicity
+fractions introduces an inescapable dependence on Monte Carlo simulation. One of
+the challenges for this analysis is to ensure that any potential mismodelling
+within the simulation which might affect the construction of the \LP templates
+is properly accounted for and included as systematic uncertainties on the final
+result. Such systematics may be broadly divided into experimental and
+theoretical uncertainties.
+
+\subsection{Experimental Uncertainties}
+In considering the potential sources of systematic error, it is helpful to think
+first in terms of the construction of the \LP variable. This involves two
+detector level quantities: the missing transverse energy \MET and the transverse
+momentum of the charged lepton \Ptl. The first quantity is derived from the
+particle flow algorithm, as discussed in Section~TODO. By far the leading
+uncertainty affecting is the callibration of the jet energy scale.
 
 
 \section{Results}
