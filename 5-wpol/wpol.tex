@@ -1,4 +1,4 @@
-\chapter{Measuring the Helicity Polarisation of the $\PW$ Boson}
+\chapter{Measuring the Transverse Polarisation of the $\PW$ Boson}
 \section{Introduction}
 The study of \Wjets production at a hadron collider presents an important
 opportunity for furthering understanding of the underlying Electroweak and
@@ -82,7 +82,7 @@ axis is $1+\frac{1}{2} = \frac{3}{2}$. Such a configuration is not allowed for t
 \spinhalf off-shell quark and thus the $s$-channel diagram should lead to a 100\%
 left-handed polarisation of the \PW. In contrast, the $t$ channel diagram is not
 similarly constrained by spin arguments (since the \PW is not coupled directly
-to the quark) and thus the helicity polarisation will not be seen.
+to the quark) and thus the polarisation will not be seen.
 
 It can be shown that for a left-handed incoming gluon, the $t$-channel diagram
 can be made to vanish. For a right-handed gluon, the \PW polarisation is not
@@ -962,6 +962,30 @@ detector level quantities: the missing transverse energy \MET and the transverse
 momentum of the charged lepton \Ptl. The first quantity is derived from the
 particle flow algorithm, as discussed in Section~TODO. By far the leading
 uncertainty affecting is the callibration of the jet energy scale.
+
+\subsubsection{Jet Energy Scale}
+The jet energy scale is discussed in detail in Section~TODO. The uncertainty on
+its callibration has been thoroughly studied and is parameterised as a function
+of jet \Pt and $\eta$. In the case of a global miscallibration of this
+measurement, jet energy measurements in data would be pushed upwards or
+downwards with respect to the values predicted by simulation. If one imagines a
+perfectly balanced dijet system in the centre of the detector, the resulting
+effect on the \MET will of course be cancelled. However, this will rarely be the
+case. In particular, in the case of \Wjets production, the hadronic system will
+be recoiling against the \PW. Any jet energy scale mismeasurement will
+``interfere constructively'' causing a large shift in the \MET measurement.
+
+The analysis makes use of a number of \MET derived quantities: the \LP shape and
+the cuts on \PtW and \MT. The most critical effect to be considered is on the
+\LP shape, since this information is propagated directly into the fit
+results. In general, an under or overprediction of the \MET will cause a small
+shift in the calculated value of \LP. Considering a binned distribution, $\LP_i$,
+the fractional change in a given bin of the distribution due to a shift in the
+jet energy scale can be wrritten as
+\begin{equation*}
+\frac{\Delta\LP_i}{\LP_i} = \frac{-\alpha\LP_i + \alpha \LP_{i+1}}{\LP_i} = \alpha \left(\frac{\LP_{i+1}}{\LP_i} - 1\right)
+\end{equation*}
+Thus it can be seen that the greatest shift will be for bins
 
 
 \section{Results}
