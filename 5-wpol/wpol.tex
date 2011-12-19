@@ -1028,6 +1028,32 @@ consistently throughout the analysis, the smaller effects on \PtW and \MT are
 included.
 
 \subsubsection{\MET Resolution}
+In addition to the modelling of the jet energy scale, another possible source of
+mismeasurement stems from the resolution effects included in the simulation of
+the detector. The resolution predicted by the Monte Carlo is believed to
+considerably underestimate that observed in the data. To account for this,
+additional ``smearing'' was applied to the missing transverse energy in
+simulation. The difference between this ``increased resolution'' case and the
+nominal conditions in simulation is then taken as an additional source of
+systematic error.
+
+As the first step of the procedure, the resolution on \PtW is extracted from the
+simulation in bins of the generator level \PtW quantity. For simulated \Wjets
+events with a reconstructed electron or muon and a matching generator level
+particle or a generator level \Ptau, the following quantity is calculated,
+\begin{equation}
+\Delta\PtW = \frac{\left(\PtW\right)^{\textrm{GEN}} - \left ( \PtW \right)^{\textrm{RECO}}}{\left(\PtW\right)^{\textrm{GEN}}}
+\end{equation}
+This is the relative differnce between the reconstruction and generator level
+\PtW. This distribution is then divided into bins of generator level \PtW. Each
+bin is fit with a Gaussian distribution in order to extract the resolution as a
+function of \PtW, \sigma_{\PW}. This is effectively the \PtW resolution as
+modelled by the detector simulation.
+
+The simulated sample is then used again, this time ``smearing'' the
+reconstruction level \PtW quantity such that the resolution is increased by
+10\%.
+
 
 
 \section{Results}
