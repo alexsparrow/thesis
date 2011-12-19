@@ -991,10 +991,41 @@ calculated \LP. For an upwards shift in the jet energy scale, the \MET will tend
 to shift downwards and thus to larger values of \LP. Conversely, for a downward
 shift in the jet energy scale, the \MET scale will increase and therefore \LP
 will shift to smaller values. This very approximate argument is born out in the
-full modelling in simulation. This is illustrated in Figure~\ref{wpol_jecunc}
+full modelling in simulation. This is illustrated in Figure~\ref{wpol_mujecunc}
 showing the fractional change of the \LP distribution for positive
 muons. Clearly, the effect is quite striking and is strongest in the regions
-where the \LP distribution is rising or falling rapidly.
+where the \LP distribution is rising or falling rapidly (i.e. $\LP < 0$ and $\LP
+> 1$).
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_mujecunc_p}\includegraphics[width=0.4\textwidth]{fig/pLP_jecuncratios}}\quad
+\subfloat[]{\label{fig:wpol_mujecunc_m}\includegraphics[width=0.4\textwidth]{fig/mLP_jecuncratios}}
+\caption{}
+\label{fig:wpol_mujecunc}
+\end{figure}
+
+The jet energy scale uncertainty follows the standard prescription for \ac{CMS}
+analyses. Firstly, the unclustered component of the missing energy is calculated as,
+\begin{equation}
+\vec{E}^{\textrm{unclustered}}_T = -(\MET + \Ptl + \sum_i \vec{p}_T^{\textrm{jet},i}
+\end{equation}
+where the index $i$ runs over all jets with $\Pt > \unit{10}{\GeV}$ in the event
+as reconstructed by the particle flow algorithm. The unclustered energy is then
+scaled either up or down within its uncertainty (taken to be 5\%). The \MET is
+then recalculated from this displaced unclustered energy,
+\begin{equation}
+\MET \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptl - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i}
+\end{equation}
+where $u(p_T, \eta)$ is a map specifying the relative uncertainty on the jet
+energy scale as a function of jet transverse momentum and pseudorapidity. The
+scale applied to the jet momenta will be in the same direction as that of the
+unclustered energy. When calculating the effect on the results, this displaced
+value is then used in place of the \MET and all \MET derived quantities. The end
+product of this are two modified \LP shapes corresponding to upward and downward
+fluctuations in the jet energy scale. Since the shifted \MET has been applied
+consistently throughout the analysis, the smaller effects on \PtW and \MT are
+included.
 
 \subsubsection{\MET Resolution}
 
