@@ -885,6 +885,15 @@ errors. The fit itself is implemented in the \ac{RooFit} software framework,
 which assists in constructing an appropriate likelihood function and performing
 the necessary minimisation using the \ac{MINUIT} numerical optimisation code.
 
+The number of signal events in a given histogram bin $i$ in terms of the
+helicity fractions can be written as
+\begin{equation}
+S^j = \fL h_L^j + \fR h_R^j + (1-\fL-\fR)h_0^j
+\end{equation}
+where $h_i^j$ are each binned helicity templates derived from the reweighting
+method described in Section~\ref{sec:wpol_template_reweighting}. The \f0
+coefficient has been rewritten using the relation $\fL + \fR +\f0 = 1$ and thus
+it is seen to be a two parameter fit.
 
 
 \section{Electron Channel}
@@ -1054,6 +1063,9 @@ The simulated sample is then used again, this time ``smearing'' the
 reconstruction level \PtW quantity such that the resolution is increased by
 10\%.
 
+\subsubsection{Lepton Scale}
+
+\subsubsection{Pile-Up}
 
 
 \section{Results}
