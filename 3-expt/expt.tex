@@ -52,6 +52,8 @@ design specified \unit{7}{\TeV} per beam.
 \includegraphics[width=0.9\textwidth]{fig/lhc-pho-1993-008}
 \end{figure}
 
+% TODO: More on the LHC beam etc.!
+
 \input{tables/accelerators}
 
 \section{The \acl{CMS} Experiment}
@@ -188,6 +190,47 @@ The scintillation of the ac{ECAL} crystals as well as the amplification of the
 \acp{APD} varies as a function of temperature. This variation was found to be
 \unit{$\approx 4\%$}{\per\celsius}. For this reason, the \ac{ECAL} temperature
 is precisely regulated to within \unit{$\pm$ 0.05}{\celsius}.
+
+\subsubsection{Laser Monitoring System}
+\label{sec:expt_laser_monitoring}
+The PbWO$_4$ crystals that make up the \ac{ECAL} are raditation resistant but
+quickly suffer a decrease in their optical transmission under irradiation. This
+is a result of the formation of colour centres which absorb a fraction of the
+incident light. At a working temperature of \unit{18}{\celsius}, the damage
+anneals leading to an equilibrium in the optical transmission properties -
+constant with dose rate. The consequence of this is a cyclic change in the
+optical transmission rate of the crystals as the \ac{LHC} moves between
+colliding beams and machine refills. Since this depends on dose rate, the effect
+is a function of \ac{LHC} luminosity and rapidity. It is expected to range from
+a shift of $\sim 2\%$ in the barrel at low luminosity to $> 10\%$ in the endcaps
+at high luminosity. The magnitude of this effect on energy and momentum
+measurements would be disastrous if not properly accounted for. Correction of
+the reconstruction necessitates constant monitoring of the transparency - a task
+performed by the laser monitoring subsystem. The corrections itself will be
+discussed further in the context of the electron reconstruction (see
+Section~\ref{sec:reco_ecal_transparency}).
+
+Three lasers are used for the transparency measurement: two blue ($\lambda
+\approx \unit{440}{\nano\metre}$) and one near-infrared ($\lambda \approx
+\unit{796}{\nano\metre}$). The blue laser (with a second fitted for redundancy
+purposes) is close to the scintillation emission peak and thus can be used to
+track the changes in the crystal transparency. The near-infrared laser is far
+from the emission peak and thus relatively stable to changes in the
+transparency. This can be used to verify the stability of the system. The lasers
+are distributed to the crystals via optical fibre and a series of
+fanouts. Approximately 1\% of the \ac{LHC} beam gap of
+\unit{3.17}{\micro\second} is used for transparency monitoring. A full scan of
+the entire \ac{ECAL} can be achieved in approximately 30~minutes. The lasers can
+be pulsed at $\approx \unit{80}{\mega\hertz}$ with a pulse timing jitter of
+\unit{3}{\nano\second}. This is adequate for synchronisation with the \ac{LHC}
+bunch crossings and \ac{ECAL} \ac{ADC} clock.
+
+The transparency of the crystals is derived from the response of the \ac{APD}
+normalised to the height of the laser pulse, as measured using a silicon \ac{PN}
+photodiode. Due to differences in path length and optical spectra between the
+laser and the scintillation light, the transparency of the crystals may be
+related to the measured transparency via a power law.
+
 
 \subsection{\acl{HCAL}}
 Accurate measurement of hadronic showers is crucial for analyses involving jets
