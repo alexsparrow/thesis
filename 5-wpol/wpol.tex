@@ -99,7 +99,7 @@ more detailed discussion will follow.
 \centering
 \subfloat[]{\label{fig:w1jet_st_s}\includegraphics[width=0.5\textwidth]{fig/wpol_1jet_s}}\quad
 \subfloat[]{\label{fig:w1jet_st_t}\includegraphics[width=0.25\textwidth]{fig/wpol_1jet_t}}
-\caption{Diagrams showing the $\Pup\Pgluon\longrightarrow\PWp\Pdown$ subprocess
+\caption[]{Diagrams showing the $\Pup\Pgluon\longrightarrow\PWp\Pdown$ subprocess
   in the \subref{fig:w1jet_st_s} $s$ and \subref{fig:w1jet_st_t} $t$ channels. The black displaced arrows indicate the particle
   momenta. For the $s$ channel diagram, the helicity vectors are shown as red
   arrows, for the case of a right-handed \PW boson.}
@@ -940,7 +940,7 @@ clearly been cut away at $\LP \sim 1$.
 \centering
 \subfloat[]{\label{fig:wpol_met_vs_mt_templates_met}\includegraphics[width=0.4\textwidth]{fig/e_lp_fit_met30}}\quad
 \subfloat[]{\label{fig:wpol_met_vs_mt_templates_mt}\includegraphics[width=0.4\textwidth]{fig/e_lp_fit_mt30}}
-\caption{}
+\caption[]{}
 \label{fig:wpol_met_vs_mt_templates}
 \end{figure}
 
@@ -948,7 +948,9 @@ clearly been cut away at $\LP \sim 1$.
 \centering
 \subfloat[]{\label{fig:wpol_wp80}\includegraphics[width=0.4\textwidth]{fig/ICVarPlusMT50_WP80}}\quad
 \subfloat[]{\label{fig:wpol_wp70}\includegraphics[width=0.4\textwidth]{fig/ICVarPlusMT50_WP70}}
-\caption{The shape of the data \LP distribution and relevant backgrounds for two sets of electron ID cuts \subref{fig:wpol_wp80} WP80 and \subref{fig:wpol_wp70} WP70}
+\caption[]{The shape of the data \LP distribution and relevant backgrounds for
+  two sets of electron ID cuts \subref{fig:wpol_wp80} WP80 and
+  \subref{fig:wpol_wp70} WP70}
 \label{fig:wpol_met_vs_mt_templates}
 \end{figure}
 
@@ -1064,9 +1066,63 @@ reconstruction level \PtW quantity such that the resolution is increased by
 10\%.
 
 \subsubsection{Lepton Scale}
+The second contribution to the \LP shape uncertainty comes from the lepton
+momentum measurement. The character and magnitude of the uncertainty is quite
+different between the electron and muon channels.
 
-\subsubsection{Pile-Up}
+The muon momentum scale uncertainty due to material and B-field uncertainties
+has been shown to be small. However, a charge asymmetric \Pt bias might appear
+via ``$\chi^2$ invariant modes''. By calculating the difference in the \PZ mass
+between events with a positive and negatively charged leading muon (in terms of
+\Pt), the size of this effect can be judged. No significant effect is observed
+in data. The errors on this measurement are used to place an upper bound on such
+an effect. The effect is found to be less than 1\% at a \Ptmu of
+\unit{100}{\GeV} and this is taken as a systematic uncertainty. This is
+propagated to the helicity fractions by adjusting the \Ptmu in simulation by
+$\pm 1\%$ and taking the difference from the unaltered case.
 
+As described in Section~\ref{sec:reco_transparency}, the electron momentum is
+corrected using continuous measurements of the \ac{ECAL} crystal
+transparency. Unfortunately, these were not fully validated on the timescale of
+this analysis (they were ready in the \ac{CMSSW} software version 3.9). Instead,
+an alternative set of corrections were used, derived globally for the
+dataset. This naturally has implications for the electron energy resolution,
+since applying these global corrections per-event will widen the monetum
+distribution while correcting the mean.
+
+The transparency corrections were derived for the \PW charge asymmetry
+measurement TODO. The detector is divided into 6 $\eta$ bins. The \Zee mass
+distribution in data is then divided into $6 + ^6C_2$ categories corresponding
+to cases where a \PZ is reconstructed from electrons in $\eta$ bins $i$ and
+$j$. For each category a mass template is derived from simulation. A
+simultaneous fit is then performed over the 21 categories, where each template
+is scaled by the factor $1/\sqrt{s_is_j}$ and smeared by a resolution term
+$\sqrt{\sigma_i^2 + \sigma_j^2}$. The end result of this is a set of 6 scale
+terms and 6 resolution terms. These are plotted in
+Figure~\ref{fig:transparency_corrections}. The scale terms should be applied to
+data, whilst the resolution should be applied in simulation.
+
+The scale corrections have been applied in data. An conservative 50\%
+uncertainty was taken on the value of the correction factors. The lepton
+momentum in simulation is then adjusted by $\pm 50\%$ of the correction factor
+and the resulting change in the fit results with respect to the unaltered case
+is taken as a systematic uncertainty. This is equivalent to correcting the data
+by either 50\% of 150\% of the correction factors.
+
+The effect of the resolution corrections on the fit results was also judged by
+applying them in Monte Carlo. The resulting change was found to be negligible,
+and thus these factors were not applied in data.
+
+\subsubsection{Vertex Multiplicity}
+The pile-up situation at \ac{CMS} was evolving rapidly as the instantaneous
+luminosity increased. Due to the long lead-time in the generation of simulated
+samples, it was not feasible to produce samples with vertex multiplicity
+distributions exactly matching those present in data. In order to correct the
+simulation to match the data, the simulated and observed vertex distributions
+were compared. The simulated samples were then reweighted to account for this
+difference. A systematic uncertainty is assigned by allowing the reweighting
+factors to vary within their statistical uncertainties. The effect was found to
+be negligible.
 
 \section{Results}
 \subsection{Datasets}
