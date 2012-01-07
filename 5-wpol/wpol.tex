@@ -837,7 +837,13 @@ Table~\ref{tbl:wpol_cutflow}.
 \input{tables/wpol_cutflow}
 
 \subsection{Triggers}
-For the muon channel, the triggers evolved more slowly. In general, the cleaner
+During the 2010 data taking period, the \ac{LHC} instantenous luminosity
+continued to evolve rapidly. The increased luminosity necessitated tightening of
+the various object trigger requirements in order to maintain a suitable rate for
+offline storage. This required careful selection of triggers for the analysis in
+order to maintain efficiency with respect to the offline cuts.
+
+For the muon channel, the triggers evolved quite slowly. In general, the cleaner
 muon signature makes the triggers less susceptible to pile-up effects. The
 triggers used were as follows:
 \begin{equation*}
@@ -871,6 +877,43 @@ Section~\ref{sec:wpol_electronid}), whilst the second applies constraints on the
 angular matching variables between the track and the supercluster (\deltaphiin,
 \deltaetain) in addition to the \texttt{CaloEleId} requirement.
 
+\section{Monte Carlo Expectation}
+\subsubsection{Simulated Samples}
+For each background component listed in Section~\ref{sec:wpol_backgrounds}, an
+appropriate simulated sample was used. In the case of the \Zjets, \ttbar and
+\gammajets, the generator setup was as for the \Wjets sample - the \ac{MADGRAPH}
+matrix element generator interfaced to \ac{PYTHIA}. In the case of the \ac{QCD}
+background, a number of samples were used. In the case of the Muon channel, this
+was a sample generated using \ac{PYTHIA} and binned in terms of the transverse
+momentum of the hard interaction, \pthat. This ensures adequate statistics even
+in the regions of high \pthat that will tend to pass the analysis selection.
+
+For the electrons, still larger statistics were required in order to study the
+\ac{QCD} background properties. For these, \ac{QCD} samples were further
+enriched towards the analysis level selection by selecting generator-level
+electrons, photons, charged pions and charged kaons passing a set of loose
+generator-level identification cuts approximating the isolation quantities and
+\HoverE. This is referred to as the \textbf{EMEnriched} sample. An additional
+sample is enriched by similar means with decays from \Pbottom and \Pstrange
+hadrons. This is referred to as \textbf{BCtoE}. Both samples are again produced
+in \pthat bins as for the unenriched sample. This generator level enrichment is
+intended to reduce the costs in terms of time and disk space in processing a
+much larger number of events, the majority of which will be rejected by basic
+analysis cuts. An unfortunate side effect of this enrichement is that the
+variables used in the filtering procedure may no longer be studied in their full
+range. This is an impediment to certain background estimation studies which can
+choose to invert certain lepton identification cuts.
+
+\subsection{Monte Carlo Signal and Background Expectations}
+The expected event yields across the relevant simulated samples are shown in
+Tables~\ref{tbl:wpol_electron_yields} and \ref{tbl:wpol_muon_yields} for
+electrons and muons respectively. The component marked \ac{QCD} denotes the
+unenriched sample in the case of the muons and the sum of the
+\textbf{EMEnriched} and \textbf{BCtoE} in the case of the electrons.
+
+\input{tables/electron_yields}
+\input{tables/muon_yields}
+
 \section{Fitting Procedure}
 \label{sec:wpol_fitting}
 In order to extract the helicity fractions in
@@ -895,7 +938,45 @@ method described in Section~\ref{sec:wpol_template_reweighting}. The \f0
 coefficient has been rewritten using the relation $\fL + \fR +\f0 = 1$ and thus
 it is seen to be a two parameter fit.
 
+As shown in Section~\ref{sec:wpol_yields}, a non-negligible background component
+is present in both channels arising from Drell-Yan and \ttbar production. These
+can be referred to collectively as electroweak background contamination. For
+these processes, the simulation is believed to be accurate enough to include
+simulated \LP shape templates directly in the fit. In addition, the ratio of the
+\Wjets vs electroweak background contributions is fixed assuming \ac{NLO}
+cross-sections. The combined electroweak background template is then
+incorporated into the fit as follows:
+\begin{equation}
+E^j = f_{\textrm{sig}} S^j + (1-f_{\textrm{sig}}) B^j
+\end{equation}
+where $f_{\textrm{sig}}$ is the ratio of the \Wjets yield to the total simulated
+yield and $B^j$ is the combined \LP template for the \Zjets and \ttbar
+backgrounds. It should be emphasised that the variable $f_{\textrm{sig}}$ is not
+free in the fit and thus does not introduce an additional degree of freedom.
 
+The previous formula is adequate for modelling the muon channel. For the
+electron channel, it has already been shown that \ac{QCD} multijet events
+provide a non-negligible additional contribution. To deal with this, the formula
+is extended as follows:
+\begin{equation}
+N^j = (1 - f_{\textrm{qcd}}) E^j + f_{\textrm{qcd}}Q^j
+\end{equation}
+where $f_{\textrm{qcd}}$ is the ratio of the QCD multijet background to the
+total event yield and $Q^j$ is a shape template derived via the procedure
+described in Section~\ref{sec:wpol_data_driven_bg}. Unfortunately, as has
+already been stated, the simulation of QCD events is not yet reliable for direct
+inclusion into the fit - as with the electroweak backgrounds. From the
+perspective of the fitting procedure, an important issue is that the relative
+fraction $f_{\textrm{qcd}}$ cannot be predicted from simulation. It must either
+be fixed by some data-driven measurement or allowed to float freely in the
+fit. Whilst an independent measurement might perform better - given that the \LP
+is not designed to discriminate between electroweak and qcd backgrounds - it was
+not possible on the timescale of this analysis. Instead, the value of
+$f_{\textrm{qcd}}$ is allowed to float, introducing an extra degree of freedom
+to the electron channel.
+
+% TODO more on minimization here
+% TODO
 \section{Electron Channel}
 \subsection{Cut Flow Optimisation}
 \label{sec:wpol_electron_opt}
@@ -955,6 +1036,7 @@ clearly been cut away at $\LP \sim 1$.
 \end{figure}
 
 \subsection{Data-Driven Background Template}
+
 \subsection{ECAL Transparency}
 
 \section{Systematics}
@@ -1099,8 +1181,9 @@ simultaneous fit is then performed over the 21 categories, where each template
 is scaled by the factor $1/\sqrt{s_is_j}$ and smeared by a resolution term
 $\sqrt{\sigma_i^2 + \sigma_j^2}$. The end result of this is a set of 6 scale
 terms and 6 resolution terms. These are plotted in
-Figure~\ref{fig:transparency_corrections}. The scale terms should be applied to
-data, whilst the resolution should be applied in simulation.
+Figure~%\ref{fig:transparency_corrections}.
+The scale terms should be applied to data, whilst the resolution should be
+applied in simulation.
 
 The scale corrections have been applied in data. An conservative 50\%
 uncertainty was taken on the value of the correction factors. The lepton
@@ -1124,49 +1207,25 @@ difference. A systematic uncertainty is assigned by allowing the reweighting
 factors to vary within their statistical uncertainties. The effect was found to
 be negligible.
 
+\input{tables/syst_muons}
+\input{tables/syst_electrons}
 \section{Results}
 \subsection{Datasets}
 For this analysis, the full \ac{CMS} 2010 dataset was used with an estimated
 integrated luminosity of \unit{36}{\invpicobarn}. The centre of mass energy
-was $\sqrt{s} = \unit{7}{\TeV}$. During the run, the instantaneous luminosity
-continued to increase, requiring subsequent increases in the thresholds of the
-triggers used in order to maintain efficiency.
+was $\sqrt{s} = \unit{7}{\TeV}$.
 
-\subsubsection{Simulated Samples}
-For each background component listed in Section~\ref{sec:wpol_backgrounds}, an
-appropriate simulated sample was used. In the case of the \Zjets, \ttbar and
-\gammajets, the generator setup was as for the \Wjets sample - the \ac{MADGRAPH}
-matrix element generator interfaced to \ac{PYTHIA}. In the case of the \ac{QCD}
-background, a number of samples were used. In the case of the Muon channel, this
-was a sample generated using \ac{PYTHIA} and binned in terms of the transverse
-momentum of the hard interaction, \pthat. This ensures adequate statistics even
-in the regions of high \pthat that will tend to pass the analysis selection.
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_fit_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\quad
+\subfloat[]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\\
+\subfloat[]{\label{fig:wpol_fit_mu_plus}\includegraphics[width=0.45\textwidth]{fig/MC_WHelicityFramePlots_PlusICVar}}\quad
+\subfloat[]{\label{fig:wpol_fit_mu_minus}\includegraphics[width=0.45\textwidth]{fig/MC_WHelicityFramePlots_MinusICVar}}
+\caption{Fit results}
+\label{fig:wpol_fit_results}
+\end{figure}
 
-For the electrons, still larger statistics were required in order to study the
-\ac{QCD} background properties. For these, \ac{QCD} samples were further
-enriched towards the analysis level selection by selecting generator-level
-electrons, photons, charged pions and charged kaons passing a set of loose
-generator-level identification cuts approximating the isolation quantities and
-\HoverE. This is referred to as the \textbf{EMEnriched} sample. An additional
-sample is enriched by similar means with decays from \Pbottom and \Pstrange
-hadrons. This is referred to as \textbf{BCtoE}. Both samples are again produced
-in \pthat bins as for the unenriched sample. This generator level enrichment is
-intended to reduce the costs in terms of time and disk space in processing a
-much larger number of events, the majority of which will be rejected by basic
-analysis cuts. An unfortunate side effect of this enrichement is that the
-variables used in the filtering procedure may no longer be studied in their full
-range. This is an impediment to certain background estimation studies which can
-choose to invert certain lepton identification cuts.
 
-\subsection{Monte Carlo Signal and Background Expectations}
-The expected event yields across the relevant simulated samples are shown in
-Tables~\ref{tbl:wpol_electron_yields} and \ref{tbl:wpol_muon_yields} for
-electrons and muons respectively. The component marked \ac{QCD} denotes the
-unenriched sample in the case of the muons and the sum of the
-\textbf{EMEnriched} and \textbf{BCtoE} in the case of the electrons.
-
-\input{tables/electron_yields}
-\input{tables/muon_yields}
 
 
 
