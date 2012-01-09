@@ -518,7 +518,7 @@ for the helicity fractions and is shown in Table~\ref{tbl:wpol_closure_tests}.
 
 The first closure test has been performed in the muon channel only. The
 generator level \LP templates for each helicity state are generated using the
-reweighting method as described in Section~\ref{wpol_reweighting} but excluding
+reweighting method as described in Section~\ref{sec:wpol_reweighting} but excluding
 the acceptance correction. The phase space again corresponds to the
 reconstruction levels cut on \PtW. The binned maximum likelihood fit is then
 performed (see Section~\ref{sec:wpol_fitting}) and the helicity parameters
@@ -601,11 +601,11 @@ criteria. The principal background sources may be categorised as follows:
   effects.
 \item \ttbar production where $t\longrightarrow\Pbeauty\PW$ and the \PW then decays
   leptonically.
-\item \ac{QCD} multijet events. This can be due to jet puncht-through
-  overlapping with a charged hadron or heavy-flavour decays. Electrons face a
-  much higher background due primarily to photon conversions and overlap between
-  charged hadrons and \Ppizero. The charged hadron leaves a track, whilst the
-  \Ppizero decay leads to a shower of photons in the \ac{ECAL}.
+\item \ac{QCD} multijet events. This can be due to jet punch-through overlapping
+  with a charged hadron or heavy-flavour decays. Electrons face a much higher
+  background due primarily to photon conversions and overlap between charged
+  hadrons and \Ppizero. The charged hadron leaves a track, whilst the \Ppizero
+  decay leads to a shower of photons in the \ac{ECAL}.
 \item For the electron channel only, there is an additional background from the
   conversion of promptly produced photons in \gammajets.
 \end{itemize}
@@ -697,6 +697,11 @@ analyses - the 70\% efficiency working point. Electrons passing these criteria
 will be referred to as \textbf{Tight}. For the purposes of vetoing dilepton
 events, the 95\% efficiency cuts were used. These will be referred to as
 \textbf{Loose} electrons.
+
+An additional requirement placed on the electron is that three distinct
+measurements of the charge agree. This ensures that the charge misidentification
+rate is suitably low for any resulting systematic uncertainty to be neglected
+(see Section~\ref{sec:wpol_syst_charge_misid}).
 % TODO more detail on the choice of the 70\% working point. Perhaps should be
 % added later on.
 
@@ -830,6 +835,7 @@ the optimisation study in the electron channel, see
 Section~\ref{sec:wpol_electron_opt}.
 
 \subsection{Cut Flow}
+\label{sec:wpol_cutflow}
 Having discussed the selection requirements to be used in this analysis, the
 actual cuts and cut values will now be presented. These are shown in
 Table~\ref{tbl:wpol_cutflow}.
@@ -905,6 +911,7 @@ range. This is an impediment to certain background estimation studies which can
 choose to invert certain lepton identification cuts.
 
 \subsection{Monte Carlo Signal and Background Expectations}
+\label{sec:wpol_yields}
 The expected event yields across the relevant simulated samples are shown in
 Tables~\ref{tbl:wpol_electron_yields} and \ref{tbl:wpol_muon_yields} for
 electrons and muons respectively. The component marked \ac{QCD} denotes the
@@ -934,7 +941,7 @@ helicity fractions can be written as
 S^j = \fL h_L^j + \fR h_R^j + (1-\fL-\fR)h_0^j
 \end{equation}
 where $h_i^j$ are each binned helicity templates derived from the reweighting
-method described in Section~\ref{sec:wpol_template_reweighting}. The \f0
+method described in Section~\ref{sec:wpol_reweighting}. The \f0
 coefficient has been rewritten using the relation $\fL + \fR +\f0 = 1$ and thus
 it is seen to be a two parameter fit.
 
@@ -955,22 +962,22 @@ backgrounds. It should be emphasised that the variable $f_{\textrm{sig}}$ is not
 free in the fit and thus does not introduce an additional degree of freedom.
 
 The previous formula is adequate for modelling the muon channel. For the
-electron channel, it has already been shown that \ac{QCD} multijet events
-provide a non-negligible additional contribution. To deal with this, the formula
-is extended as follows:
+electron channel, it has already been shown that \ac{QCD} multijet events as
+well as \gammajets production provide a non-negligible additional
+contribution. To deal with this, the formula is extended as follows:
 \begin{equation}
 N^j = (1 - f_{\textrm{qcd}}) E^j + f_{\textrm{qcd}}Q^j
 \end{equation}
-where $f_{\textrm{qcd}}$ is the ratio of the QCD multijet background to the
-total event yield and $Q^j$ is a shape template derived via the procedure
+where $f_{\textrm{qcd}}$ is the ratio of the QCD multijet/\gammajets background
+to the total event yield and $Q^j$ is a shape template derived via the procedure
 described in Section~\ref{sec:wpol_data_driven_bg}. Unfortunately, as has
 already been stated, the simulation of QCD events is not yet reliable for direct
-inclusion into the fit - as with the electroweak backgrounds. From the
+inclusion into the fit - as for the electroweak backgrounds. From the
 perspective of the fitting procedure, an important issue is that the relative
 fraction $f_{\textrm{qcd}}$ cannot be predicted from simulation. It must either
 be fixed by some data-driven measurement or allowed to float freely in the
-fit. Whilst an independent measurement might perform better - given that the \LP
-is not designed to discriminate between electroweak and qcd backgrounds - it was
+fit. Whilst an independent measurement might perform better - given that \LP is
+not designed to discriminate between electroweak and qcd backgrounds - it was
 not possible on the timescale of this analysis. Instead, the value of
 $f_{\textrm{qcd}}$ is allowed to float, introducing an extra degree of freedom
 to the electron channel.
@@ -978,8 +985,50 @@ to the electron channel.
 % TODO more on minimization here
 % TODO
 \section{Electron Channel}
+\subsection{\ac{QCD} Background}
+The principal difficulty faced by the electron channel over-and-above the muon
+channel arises from the \ac{QCD} multijet background which, as has been seen,
+remains even after tight kinematic and lepton identification cuts. This can be
+discussed together with the promptly produced photon background (\gammajets)
+which shares similar characteristics. These backgrounds enter the selection due
+to some mismeasurement leading to a significant value of \PtW along with either
+a real or fake lepton. They are highly problematic since their kinematics may
+depend strongly on poorly understood \ac{QCD} processes - namely the production,
+hadronisation and measurement of hadronic jets. Because of this, currently
+available simulation codes cannot be fully relied upon to correctly model the
+kinematics of these events. This is particularly true in the case of the \LP
+variable which is sensitive to both the leptonic and missing energy components
+of the event.
+
+To solve the problem presented by \ac{QCD}, two approaches were taken. The
+first, described in Section~\ref{sec:wpol_electron_opt} sought to suppress the
+background as much as possible. This resulted in the tightened kinematic and
+identification cuts that have already been detailed. The second focussed on
+accurately modelling the remaining background component using a data-driven
+procedure. This will be described in Section~\ref{sec:wpol_data_driven_bg}. It
+should be noted that these two strategies do not always complement each
+other. It was possible to achieve larger supression of the \ac{QCD} background
+whilst worsening the fit result. This occurs because the data-driven template
+becomes ``flatter'' and the fit is less able to distinguish it from the helicity
+templates in the fit.
+
+\subsection{Kinematics}
+Before continuing, it is useful to discuss the appearance of the \ac{QCD}
+background in terms of the \LP variable. To make this clear, consider the
+measurement of \PtW via the hadronic recoil in a balanced multi-jet event where
+a single jet has been misreconstructed as an electron. In this case, the
+hadronic recoil will tend to point along the axis of the fake electron. If the
+hadronic recoil is then used as a measurement of \PtW, it will be approximately
+collinear with the \Pt of the fake electron and thus will yield a value of $\LP
+\sim 1$. This can also be seen when the \PtW measurment is taken to be the
+vector sum of \Ptl and \MET. The fake electron will tend to be poorly
+reconstructed and thus collinear with the source of fake \MET, again leading to
+$\LP \sim 1$. A similar argument can be made in the case of \gammajets events
+where now the photon is the source of both fake \MET and the fake lepton.
+
+
 \subsection{Cut Flow Optimisation}
-\label{sec:wpol_electron_opt}
+\label{sec:wpol_electron_opt}with
 A key challenge in the electron channel was posed by the significant background
 from \ac{QCD} multijet events. The $\MT > \unit{30}{\GeV}$ cut applied in the
 muon channel is unable to eliminate these events. An optimisation study was
@@ -1008,6 +1057,12 @@ plotted for those events surviving a combined cut on the \MET and \MT.
 \label{fig:wpol_ele_significance}
 \end{figure}
 
+\begin{figure}
+TODO
+\caption{Plot showing the significance of the electron channel TODO}
+\label{fig:wpol_met_mt_fqcd}
+\end{figure}
+
 The effect of a \MET or \MT $> \unit{30}{\GeV}$ cut on the shape of the \LP
 templates for simulated \PWp events can be seen in
 Figure~\ref{fig:wpol_met_vs_mt_templates}. The \ac{QCD} background is clearly
@@ -1032,24 +1087,54 @@ clearly been cut away at $\LP \sim 1$.
 \caption[]{The shape of the data \LP distribution and relevant backgrounds for
   two sets of electron ID cuts \subref{fig:wpol_wp80} WP80 and
   \subref{fig:wpol_wp70} WP70}
-\label{fig:wpol_met_vs_mt_templates}
+\label{fig:wpol_wp80_vs_wp70}
 \end{figure}
 
 \subsection{Data-Driven Background Template}
-In order to construct an \LP shape template for the \ac{QCD} multijet
-background, a data-driven method is needed to extract a sample of fake electrons
-which resemble the \ac{QCD} background contamination entering the selected
-sample - at least in terms of the \LP shape. The sample of electrons are
-obtained by inverting a subset of the selection cuts used in the analysis. The
-events passing the inverted set of cuts will be referred to as the
-``anti-selected'' sample.
+\label{sec:wpol_data_driven_bg}
+To produce a reliable \LP shape template for \ac{QCD} and \gammajets events, a
+data-driven procedure is needed which will yield a control sample enriched with
+\ac{QCD} events resembling those entering the selected sample. Such a control
+sample is often constructed by anti-selection. Consider the variables used for
+the analysis selection as a multi-dimensional space in which the cut values
+enclose some region which contains the selected sample - the ``selected''
+region. The anti-selected sample is then constructed by inverting the cuts on a
+subset of these variables. The region in this space selected by the inverted
+cuts is then referred to as the ``anti-selected'' region. Since the majority of
+the cuts are common to both selected and anti-selected samples, it can be
+expected that they will share similar kinematic properties.
 
-Finding an adequate control sample for this analysis proved challenging. In
-order to correctly model the \LP shape, the cuts chosen for inversion must be
-relatively uncorrelated with \LP. Since \LP is constructed from both missing
-energy and leptonic information in the event, this considerably constrains the
-set of suitable variables.
-% TODO: EM enriched sample has isolation cut so you cant invert it!
+A variable suitable for inversion in this procedure must satisfy two
+criteria. Firstly, it must provide separation power between the \ac{QCD}
+background we wish to model and the other electroweak signal and background
+events. Secondly, the \LP shape must be similar between the selected and
+anti-selected regions. Put another way, the inverted variable must be
+uncorrelated with \LP. An additional requirement is that the anti-selected
+region (which may be the result of several inverted variables) contain adequate
+statistics for construction of a shape template.
+
+As the analysis was developed, a variety of anti-selection regions were tested
+in simulation. One practical problem is that adequate statistics for these tests
+could only be obtained by using the enriched \ac{QCD} sample. Since this sample
+has an implicit cut on the electron isolation, it was not possible to study the
+inversion of this variable. Many combinations of the electron identification
+variables were tried. Many proved to be correlated with \LP via either the
+leptonic or missing energy component.
+
+In the end, the best compromise was achieved by inverting the track-supercluster
+matching parameters, \deltaetain and \deltaphiin, on the leading electron. A
+comparison of the selected and anti-selected shapes derived from this procedure
+is shown in Figure~\ref{fig:wpol_ele_sel_antisel} before and after the \MT cut.
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_antiselected1}\includegraphics[width=0.4\textwidth]{fig/antiselected1}}\quad
+\subfloat[]{\label{fig:wpol_antiselected2}\includegraphics[width=0.4\textwidth]{fig/antiselected2}}
+\caption[]{The \LP variable shown for selected (black) and anti-selected (red)
+  simulated \ac{QCD} events after \subref{fig:wpol_antiselected1} $\PtW >
+  \unit{50}{\GeV}$ and \subref{fig:wpol_antiselected2} $\MT > \unit{50}{\GeV}$}
+\label{fig:wpol_ele_sel_antisel}
+\end{figure}
 
 
 \subsection{ECAL Transparency}
@@ -1099,11 +1184,28 @@ calculated \LP. For an upwards shift in the jet energy scale, the \MET will tend
 to shift downwards and thus to larger values of \LP. Conversely, for a downward
 shift in the jet energy scale, the \MET scale will increase and therefore \LP
 will shift to smaller values. This very approximate argument is born out in the
-full modelling in simulation. This is illustrated in Figure~\ref{wpol_mujecunc}
-showing the fractional change of the \LP distribution for positive
-muons. Clearly, the effect is quite striking and is strongest in the regions
-where the \LP distribution is rising or falling rapidly (i.e. $\LP < 0$ and $\LP
-> 1$).
+full modelling in simulation. This is illustrated in Figure~\ref{fig:wpol_mujecunc}
+showing the fractional change of the \LP distribution in the muon channel for
+upward and downward shifts in the jet energy scale. Clearly, the effect is quite
+large and most severe towards the edges of the \LP distribution (i.e. $\LP < 0$
+and $\LP > 1$). There are two reasons for this. Firstly, that in these regions
+the \LP distribution is rising or falling rapidly. Bin to bin migration will
+thus yield larger changes. Secondly, the change in the value of \LP for a single
+event in response to a change in the jet energy scale is expected to be linear
+in \LP to first order.
+
+The jet energy scale is the dominant source of systematic uncertainty for both
+electron and muon channels. The effect can be mitigated somewhat however by the
+observation that a restricted fit range will insulate the measurement from the
+most severe changes to the \LP shape. Whilst the edges of the \LP distribution
+are the source of the largest jet energy scale uncertainty, they also tend to
+contribute a lot to the fit. Reducing the fit range too drastically may remove
+too much information from the fit, increasing the statistical error and negating
+any benefits from the reduced systematic uncertainty. An optimisation study was
+undertaken in both lepton channels and for both charges to choose an optimal fit
+range.  The quadrature sum of the statistical and systematic errors was
+calculated for a selection of possible fit ranges. It was determined that a fit
+range of $[0,1.3]$ was an appropriate choice for both channels and both charges.
 
 \begin{figure}
 \centering
@@ -1133,7 +1235,14 @@ value is then used in place of the \MET and all \MET derived quantities. The end
 product of this are two modified \LP shapes corresponding to upward and downward
 fluctuations in the jet energy scale. Since the shifted \MET has been applied
 consistently throughout the analysis, the smaller effects on \PtW and \MT are
-included.
+also included.
+
+The value of the jet energy scale systematic is determined in simulation by
+fitting the unaltered template (with no jet energy scale adjustment) to
+pseudodata resulting from the upward and downward shifts. Taking the difference
+of the upward and downward scaled cases with respect to the unaltered yields
+asymmetric uncertainties on each of the helicity fractions. The final systematic
+uncertainty is then taken to be largest of the two errors.
 
 \subsubsection{\MET Resolution}
 In addition to the modelling of the jet energy scale, another possible source of
@@ -1178,7 +1287,7 @@ an effect. The effect is found to be less than 1\% at a \Ptmu of
 propagated to the helicity fractions by adjusting the \Ptmu in simulation by
 $\pm 1\%$ and taking the difference from the unaltered case.
 
-As described in Section~\ref{sec:reco_transparency}, the electron momentum is
+As described in Section~\ref{sec:reco_ecal_transparency}, the electron momentum is
 corrected using continuous measurements of the \ac{ECAL} crystal
 transparency. Unfortunately, these were not fully validated on the timescale of
 this analysis (they were ready in the \ac{CMSSW} software version 3.9). Instead,
@@ -1211,6 +1320,14 @@ The effect of the resolution corrections on the fit results was also judged by
 applying them in Monte Carlo. The resulting change was found to be negligible,
 and thus these factors were not applied in data.
 
+\subsubsection{Electron \ac{QCD} Background Estimation}
+As discussed in Section~\ref{sec:wpol_data_driven_bg}, the template used to fit
+the \ac{QCD} multijet background component in the electron channel has been
+derived from a data-driven method. The degree to which this template correctly
+models the actual background contamination has been tested in simulation and
+shown to be adequate as far as can be judged within the limited statistics of
+the simulated sample.
+
 \subsubsection{Vertex Multiplicity}
 The pile-up situation at \ac{CMS} was evolving rapidly as the instantaneous
 luminosity increased. Due to the long lead-time in the generation of simulated
@@ -1222,12 +1339,25 @@ difference. A systematic uncertainty is assigned by allowing the reweighting
 factors to vary within their statistical uncertainties. The uncertainty was
 tested in the muon channel and found to be negligible.
 
+\subsubsection{Charge Misidentification}
+\label{sec:wpol_syst_charge_misid}
+Misidentification of the reconstructed lepton charge causes events to migrate
+between the \PWp and \PWm samples. Since the templates are different for each
+charge, this could bias the results of the fit. Any possible effect in the muons
+is known to be negligible. For the electrons, the three charge requirement
+brings the charge misidentification rate below 1\%. At this level, the
+systematic related to charge misidentification is negligible in comparison to
+the other sources of uncertainty.
+
+
 \subsection{Theoretical Uncertainties}
 
 
 
 \input{tables/syst_muons}
 \input{tables/syst_electrons}
+\input{tables/syst_combined}
+\input{tables/syst_theory}
 \section{Results}
 \subsection{Datasets}
 For this analysis, the full \ac{CMS} 2010 dataset was used with an estimated
@@ -1245,7 +1375,32 @@ was $\sqrt{s} = \unit{7}{\TeV}$.
 \end{figure}
 
 
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_contour_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_contour_plus}}\quad
+\subfloat[]{\label{fig:wpol_contour_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_contour_minus}}
+\caption{Contours}
+\label{fig:wpol_contour_ele}
+\end{figure}
 
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_contour_mu_plus}\includegraphics[width=0.45\textwidth]{fig/muon_contour_plus}}\quad
+\subfloat[]{\label{fig:wpol_contour_mu_minus}\includegraphics[width=0.45\textwidth]{fig/muon_contour_minus}}
+\caption{Contours}
+\label{fig:wpol_contour_mu}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_contour_comb_plus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_plus}}\quad
+\subfloat[]{\label{fig:wpol_contour_comb_minus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_minus}}
+\caption{Contours}
+\label{fig:wpol_contour_comb}
+\end{figure}
+
+\input{tables/fit_results}
+\input{tables/fqcd_fit_results}
 
 
 %%% Local Variables:
