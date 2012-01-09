@@ -1124,7 +1124,10 @@ leptonic or missing energy component.
 In the end, the best compromise was achieved by inverting the track-supercluster
 matching parameters, \deltaetain and \deltaphiin, on the leading electron. A
 comparison of the selected and anti-selected shapes derived from this procedure
-is shown in Figure~\ref{fig:wpol_ele_sel_antisel} before and after the \MT cut.
+is shown in Figure~\ref{fig:wpol_ele_sel_antisel} before and after the \MT
+cut. The \LP shape for \ac{QCD} background is not believed to have a charge
+dependence and thus the shapes for positive and negative charge are combined
+into a single template to mimimize statistical uncertainty.
 
 \begin{figure}
 \centering
@@ -1323,10 +1326,36 @@ and thus these factors were not applied in data.
 \subsubsection{Electron \ac{QCD} Background Estimation}
 As discussed in Section~\ref{sec:wpol_data_driven_bg}, the template used to fit
 the \ac{QCD} multijet background component in the electron channel has been
-derived from a data-driven method. The degree to which this template correctly
-models the actual background contamination has been tested in simulation and
-shown to be adequate as far as can be judged within the limited statistics of
-the simulated sample.
+derived from a data-driven method. As has been shown, the simulation shows a
+very similar \LP shape between the selected and anti-selected samples. However,
+the small differences that can be seen coupled with the very limited statistics
+available in Monte Carlo, necessitate the inclusion of an additional systematic
+uncertainty.
+
+The first systematic represents the degree, as can be judged from the enriched
+\ac{QCD} Monte Carlo sample, that the anti-selected template mismodels the \LP
+shape of the \ac{QCD} events in the selected region. In other words, the bias
+introduced by any correlation between \LP and the track-supercluster matching
+variables, as far as can be judged in simulation. This is evaluated by
+performing TODO toy experiments. For each toy experiment, the Monte Carlo
+pseudodata is first fitted using the \ac{QCD} template taken directly from the
+selected region. This represents the case, where the \ac{QCD} has been modelled
+perfectly by the template. Then the pseudodata is refit using the anti-selected
+template and including contamination from the other simulated samples. The
+ensemble distributions of the fit parameters are then compared between the
+``true'' case using the actual \ac{QCD} Monte Carlo shape and the
+``data-driven'' case using the anti-selected template. The difference in the
+means of the ensemble distributions for the parameters \f0 and \fLmfR is then
+taken as a systematic uncertainty. This is performed separately for both
+charges.
+
+The second systematic represents the uncertainty introduced by the very limited
+statistics available in the simulated \ac{QCD}/\gammajets samples. This was
+evaluated by redicing the Monte Carlo anti-selected template 500 times. Each
+rediced template is fitted along with the standard signal and electroweak
+background templates to the pseudodata. The ensemble distributions of \f0 and
+\fLmfR are then plotted and the \ac{RMS} widths taken to be the systematic
+uncertainty due to limited statistics in the \ac{QCD} template.
 
 \subsubsection{Vertex Multiplicity}
 The pile-up situation at \ac{CMS} was evolving rapidly as the instantaneous
@@ -1351,7 +1380,37 @@ the other sources of uncertainty.
 
 
 \subsection{Theoretical Uncertainties}
+In addition to the experimental uncertainties, the method relies upon
+theoretical assumptions which can alter the extracted helicity fractions.
 
+\subsubsection{\Ai Dependence}
+Measurement of \f0 and \fLmfR will depend on the values of the other \Ai
+coefficients. This was tested in simulation by varying each parameter \Ai by
+10\% of its value - an uncertainty derived from comparison of \ac{LO} and
+\ac{NLO} calculations by the Blackhat collaboration. The value of \fLmfR is
+found to have a very small dependence on the values of the other \Ai.
+
+\subsubsection{\ac{PDF} Uncertainties}
+This analysis used a \Wjets Monte Carlo sample, generated using the \ac{CTEQ6L1}
+\ac{PDF} set. This is a set of 41 \ac{PDF} distributions. All results in this
+analysis are calculated using the best fit value of this set. To determine the
+uncertainty associated with this assumption, each alternative \ac{PDF} from the
+set is selected and modelled in the Monte Carlo via a reweighting
+procedure. From this, 40 separate \LP distributions are derived representing
+pseudodata assuming an alternative \ac{PDF} from the set. Each distribution is
+then fit using the standard set of templates. The associated uncertainty is then
+taken to be the average fluctuation from the nominal fit value across the 40 set
+of alternate \acp{PDF}. This is found to be negligible for all polarisation
+parameters ($< 0.01\%$).
+
+\subsubsection{\Zjets and \ttbar Backgrounds}
+For the purposes of the fit, the cross-sections of the electroweak backgrounds
+are fixed both relative to each other and also to the \Wjets sample. To account
+for uncertainty in the cross-section and efficiencies, the \Zjets and \ttbar
+contributions were varied by $\pm 25\%$ and $\pm 50\%$ respectively. The
+uncertainty on the helicity fractions is then taken to be the largest resulting
+fluctuation from the nominal fit value. This has been calculated for both lepton
+channels.
 
 
 \input{tables/syst_muons}
