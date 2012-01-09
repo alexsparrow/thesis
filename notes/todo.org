@@ -1,8 +1,12 @@
 * STUFF
 ** TODO Mention equivalence theorem in wpol section
 ** TODO Acceptance correction in wpol section
+** TODO Combined fit
+** TODO Ensure that I've properly set out that we are fitting f0 and fL - fR
+** TODO Ensure fitting section is accurate
 ** DONE Wpol section. Mention that instead of choosing a variable correlated to costheta*, one may also pick one of the two solutions in pz.
    CLOSED: [2011-12-07 Wed 20:52]
    - State "DONE"       from "TODO"       [2011-12-07 Wed 20:52]
 
 ** Would be nice to have the JEC uncertainty ratios for electrons too
+** Would be nice to have some diagrams illustrating the QCD kinematics
