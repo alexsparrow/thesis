@@ -1036,6 +1036,21 @@ clearly been cut away at $\LP \sim 1$.
 \end{figure}
 
 \subsection{Data-Driven Background Template}
+In order to construct an \LP shape template for the \ac{QCD} multijet
+background, a data-driven method is needed to extract a sample of fake electrons
+which resemble the \ac{QCD} background contamination entering the selected
+sample - at least in terms of the \LP shape. The sample of electrons are
+obtained by inverting a subset of the selection cuts used in the analysis. The
+events passing the inverted set of cuts will be referred to as the
+``anti-selected'' sample.
+
+Finding an adequate control sample for this analysis proved challenging. In
+order to correctly model the \LP shape, the cuts chosen for inversion must be
+relatively uncorrelated with \LP. Since \LP is constructed from both missing
+energy and leptonic information in the event, this considerably constrains the
+set of suitable variables.
+% TODO: EM enriched sample has isolation cut so you cant invert it!
+
 
 \subsection{ECAL Transparency}
 
@@ -1053,8 +1068,8 @@ In considering the potential sources of systematic error, it is helpful to think
 first in terms of the construction of the \LP variable. This involves two
 detector level quantities: the missing transverse energy \MET and the transverse
 momentum of the charged lepton \Ptl. The first quantity is derived from the
-particle flow algorithm, as discussed in Section~TODO. By far the leading
-uncertainty affecting is the callibration of the jet energy scale.
+particle flow algorithm, as discussed in Section~TODO. The leading source of
+uncertainty is due to the callibration of the jet energy scale.
 
 \subsubsection{Jet Energy Scale}
 The jet energy scale is discussed in detail in Section~TODO. The uncertainty on
@@ -1204,8 +1219,12 @@ distributions exactly matching those present in data. In order to correct the
 simulation to match the data, the simulated and observed vertex distributions
 were compared. The simulated samples were then reweighted to account for this
 difference. A systematic uncertainty is assigned by allowing the reweighting
-factors to vary within their statistical uncertainties. The effect was found to
-be negligible.
+factors to vary within their statistical uncertainties. The uncertainty was
+tested in the muon channel and found to be negligible.
+
+\subsection{Theoretical Uncertainties}
+
+
 
 \input{tables/syst_muons}
 \input{tables/syst_electrons}
