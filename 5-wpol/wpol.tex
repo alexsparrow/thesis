@@ -982,6 +982,18 @@ not possible on the timescale of this analysis. Instead, the value of
 $f_{\textrm{qcd}}$ is allowed to float, introducing an extra degree of freedom
 to the electron channel.
 
+\subsection{Combined Fit}
+It has been noted that the helicity fractions are charge dependent but lepton
+flavour independent. This suggests that the measurement may be refined by
+simultaneously fitting both muon and electron channels. Due to the lower
+efficiencies in the electron channel, this is not quite a doubling of the
+available statistics but should significantly reduce the statistical error. The
+simultaneous fit multiplies the likelihood terms,
+\begin{equation*}
+\likelihood_{\textrm{sim}} = \likelihood_{\Pgm} \times \likelihood{\Pe}
+\end{equation*}
+
+
 % TODO more on minimization here
 % TODO
 \section{Electron Channel}
@@ -1058,7 +1070,7 @@ plotted for those events surviving a combined cut on the \MET and \MT.
 \end{figure}
 
 \begin{figure}
-TODO
+\includegraphics[width=0.7\textwidth]{fig/qcd_nom}
 \caption{Plot showing the significance of the electron channel TODO}
 \label{fig:wpol_met_mt_fqcd}
 \end{figure}
@@ -1423,6 +1435,16 @@ For this analysis, the full \ac{CMS} 2010 dataset was used with an estimated
 integrated luminosity of \unit{36}{\invpicobarn}. The centre of mass energy
 was $\sqrt{s} = \unit{7}{\TeV}$.
 
+\subsection{Fit Results}
+The individual fits of the \Pep, \Pem, \Pgmp and \Pgmm channels to the 2010
+dataset are shown in Figure~\ref{fig:wpol_fit_results}. The signal and
+background templates are shown individually along with the fitted values of
+\fLmfR and \f0. The full error contour plots in the $(\fLmfR, \f0)$ plane are
+shown in Figures~\ref{fig:wpol_contour_ele} and \ref{fig:wpol_contour_mu} for
+electrons and muons respectively. It is clear in both cases that the predominant
+left-handed polarisation described in Section~\ref{sec:polarisation} has been
+observed with a large significance.
+
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:wpol_fit_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\quad
@@ -1450,6 +1472,9 @@ was $\sqrt{s} = \unit{7}{\TeV}$.
 \label{fig:wpol_contour_mu}
 \end{figure}
 
+Two combined fits have also been performed across both lepton flavours, one for
+each lepton charge. The error contours are shown in
+Figure~\ref{fig:wpol_contour_comb}.
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:wpol_contour_comb_plus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_plus}}\quad
