@@ -3,13 +3,20 @@
 In the previous chapter, details of the \ac{CMS} detector were presented. We
 shall now begin to discuss the reconstruction algorithms used to derive analysis
 level objects and quantities which will be of fundamental importance in later
-chapters. The work presented in this thesis, in common with many analyses at
-\ac{CMS} makes extensive use of missing energy type quantities. This quantity
-depends on accurate determination of the energies and directions of all
-particles in the event. The \ac{PF} algorithm is designed to combine information
-from all \ac{CMS} subdetectors in order to reconstruct all stable particles in
-the event. As will be seen, this provides the highest resolution measurement of
-missing energy at \ac{CMS}.
+chapters. The objects of primary interest for these purposes are the leptons,
+jets and missing energy. Having presented the reconstruction of each of these
+objects, the \acl{PF} algorithm will be explained. It attempts to reconstruct
+all stable particles in an event by combining information from all ac{CMS}
+subdetectors. As will be seen this provides excellent reconstruction of jets and
+\MET.
+
+\section{Leptons}
+\subsection{Electrons}
+\subsection{\ac{ECAL} Transparency Corrections}
+\label{sec:reco_ecal_transparency}
+\subsection{Muons}
+\section{Jets}
+\section{Missing Energy}
 
 \section{Particle Flow at \ac{CMS}}
 The \ac{PF} algorithm \cite{cms_pf_pas} attempts to provide a global
@@ -128,15 +135,3 @@ total momenta of the tracks is compared to the callibrated calorimetric energy.
 Conversely, for a track linked to multiple \ac{HCAL} clusters, only the link to
 the closest cluster is retained. For tracks connected to multiple \ac{ECAL}
 clusters, the closest
-
-
-
-
-
-\section{Leptons}
-\subsection{Electrons}
-\subsection{\ac{ECAL} Transparency Corrections}
-\label{sec:reco_ecal_transparency}
-\subsection{Muons}
-\section{Jets}
-\section{Missing Energy}
