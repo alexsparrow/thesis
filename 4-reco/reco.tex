@@ -1,5 +1,138 @@
 \chapter{Physics Objects}
+\section{Introduction}
+In the previous chapter, details of the \ac{CMS} detector were presented. We
+shall now begin to discuss the reconstruction algorithms used to derive analysis
+level objects and quantities which will be of fundamental importance in later
+chapters. The work presented in this thesis, in common with many analyses at
+\ac{CMS} makes extensive use of missing energy type quantities. This quantity
+depends on accurate determination of the energies and directions of all
+particles in the event. The \ac{PF} algorithm is designed to combine information
+from all \ac{CMS} subdetectors in order to reconstruct all stable particles in
+the event. As will be seen, this provides the highest resolution measurement of
+missing energy at \ac{CMS}.
+
 \section{Particle Flow at \ac{CMS}}
+The \ac{PF} algorithm \cite{cms_pf_pas} attempts to provide a global
+reconstruction of the event - accurate determination of the type, energy and
+direction of all stable particles - by combining measurements from all
+subdetectors in \ac{CMS}. This strategy is well suited for use with the \ac{CMS}
+detector. The silicon tracker is able to reconstruct charged particle tracks
+with high efficiency and low fake rate down to transverse momenta as low as
+\unit{150}{\MeV}. Additionally, the granularity of the \ac{ECAL} is sufficient
+for the separation of photons and charged particle energy deposits in jets with
+\Pt of a few hundred \GeV. In contrast, the \ac{HCAL} is much coarser. However,
+the combined energy resolution of both calorimeters is $\sim 10\%$ at
+\unit{100}{\GeV}. This allows identification of the energy deposits associated
+with neutral hadrons as an excess on top of that accounted for by matching the
+deposits with charged tracks. The \ac{PF} algorithm is able to reconstruct the
+components of jets and hadronic tau decays - primarily charged hadrons, neutral
+hadrons and photons. This provides an improved measurement of the jet energy and
+thus also of \MET.
+
+The particle flow algorithm procedes by linking the tracks and energy clusters
+to form blocks. A single block main contain some combination of a charged
+particle track, one or more energy clusters and a muon. The fine granularity of
+the \ac{CMS} detector ensures that blocks typically contain 1, 2 or 3 elements.
+The links between each block are parameterised by a distance which encodes the
+quality of the link. In order for \ac{PF} reconstruction to work correctly, it
+is important that the inputs to the algorithm match certain requirements
+
+\subsection{Iterative Tracking}
+The measurements of momentum and direction of charged hadrons provided by the
+tracker are hugely superior to those that can be provided by the calorimeters.
+It is important therefore that the tracks input to the \ac{PF} procedure be
+reconstructed with near 100\% efficiency. The fake rate must also be low to
+avoid excess energy counting.
+
+To meet these requirements, tracks are reconstructed using an iterative
+algorithm. This begins by reconstructing tracks with very tight selection
+requirements. Hits which can be unambiguously assigned in this step are then
+removed from consideration and the remaining hits are reconstructed again, this
+time with loosened selection criteria. This procedure is repeated with
+progressively looser selection criteria ensuring high efficiency, whilst the
+removal of hits at each stage reduces the fake rate induced by combinatorics.
+After three iterations, tracks originating close to the beam line are
+reconstructed with an efficiency of 99.5\% for muons and $>90\%$ for charged
+hadrons. The fourth and fifth iterations relax constrains on the vertex,
+reconstructing secondary charged particles.
+
+\subsection{Calorimeter Clustering}
+The success of the \ac{PF} reconstruction is dependent on certain aspects of the
+clustering algorithm. In particular, as for the tracks, the clustering needs to
+be highly efficient and be able to distinguish closely spaced energy deposits.
+To this end, a specialised clustering algorithm was developed. This algorithm is
+used the \ac{ECAL}, \ac{HCAL}, \ac{PS} but not in the \ac{HF} where each cell is
+taken to be a cluster.
+
+The first step of the algorithm produces seed clusters from local maxima in the
+calorimeter cells above a given energy. The second step produces topological
+clusters by extending cluster two include cells with at least one side in common
+with the cluster and an energy above a threshold related to the standard
+deviation of the electronics noise in the calorimeter. The topological clusters
+are then transformed to particle flow clusters, with a separate particle flow
+cluster for each seed comprising the topological cluster. The energy and
+position of each particle flow cluster is determined iteratively with the energy
+of each seed shared between the particle flow clusters.
+
+\subsection{Building Links}
+Each track is extrapolated from the position of its last measured hit to the
+\ac{PS}, the \ac{ECAL} at a depth corresponding to the expected maximum for an
+electron shower, the \ac{HCAL} at a depth of 1 interaction length. If the
+extrapolated track position lies within the envelope of a cluster, a link is
+created with a link distance equal to the $(\eta, \phi)$ distance between the
+extrapolated track and the cluster. The envelope may be enlarged with respect to
+the cluster by the extent of a single cell.
+
+Additionally, energy contributions from bremsstrahlung photons are included by
+extrapolating the track tangent at each tracker layer to the \ac{ECAL}. If the
+extrapolated track lies within the envelope of the cluster, a link is created.
+Links are also created between calorimeter clusters in different subdetectors if
+the cluster position in the finer-grained calorimeter lies within the envelope
+of the more coarsely grained calorimeter. The link distance is taken to be the
+$(\eta, \phi)$ separation of the two clusters.
+
+Muons are included when a global fit between a track in the tracker and a muon
+track in the muon chambers yields an acceptable \chisq. If several global muons
+are found for a single muon track, only that possessing the smallest \chisq is
+retained - with the link distance determined by the \chisq.
+
+\subsection{Particle Reconstruction}
+The first step is to reconstruct muons. Each global muon gives rise to a
+particle flow muon providing its momentum as determined from the global fit is
+compatible with the track momentum to within 3 standard deviations. The
+corresponding track is then removed from the block.
+
+The next step is electron reconstruction. Electron tracks in the block are first
+selected by a pre-identification step - electrons often leave short tracks and
+lose energy via bremsstrahlung. Pre-identified electrons are then refit with a
+Gaussian Sum Filter (see Section~TODO) and projected into the \ac{ECAL}.
+Candidates passing tracking and calometric criteria are reconstructed as
+particle flow electrons. The track and associated \ac{ECAL} clusters are then
+removed from the block.
+
+Tracks remaining are then subject to a tighter set of quality requirements, in
+particular that the track \Pt uncertainty be smaller than the relative
+calorimeter energy resolution for a charged hadron. Whilst some real hadrons are
+lost by this requirement, the energy will be retained in the more accurate
+measurement of the calorimeter.
+
+Reconstruction of photons and neutral hadrons involves comparison of the track
+momentum to the calorimetric energy. The cluster energies in the \ac{ECAL} are
+callibrated for photons and the \ac{HCAL} for \unit{50}{\GeV} pions. For the
+comparison to be valid, these must be recallibrated to account for
+non-linearities in the \ac{HCAL} as well as the differing response of the
+\ac{ECAL} to hadrons.
+
+In the case that several tracks are linked to a single \ac{HCAL} cluster, the
+total momenta of the tracks is compared to the callibrated calorimetric energy.
+Conversely, for a track linked to multiple \ac{HCAL} clusters, only the link to
+the closest cluster is retained. For tracks connected to multiple \ac{ECAL}
+clusters, the closest
+
+
+
+
+
 \section{Leptons}
 \subsection{Electrons}
 \subsection{\ac{ECAL} Transparency Corrections}
