@@ -11,6 +11,7 @@ subdetectors. As will be seen this provides excellent reconstruction of jets and
 \MET.
 
 \section{Leptons}
+\subsection{Muons}
 \subsection{Electrons}
 \subsection{\ac{ECAL} Transparency Corrections}
 \label{sec:reco_ecal_transparency}
@@ -132,6 +133,13 @@ non-linearities in the \ac{HCAL} as well as the differing response of the
 
 In the case that several tracks are linked to a single \ac{HCAL} cluster, the
 total momenta of the tracks is compared to the callibrated calorimetric energy.
-Conversely, for a track linked to multiple \ac{HCAL} clusters, only the link to
-the closest cluster is retained. For tracks connected to multiple \ac{ECAL}
-clusters, the closest
+Tracks linked to multiple clusters are resolved by preserving the closest link
+or links in certain cases. The track momentum is then compared to the total
+callibrated calometric energy. In the rare case that the energy is smaller than
+the track momentum by more than three standard deviations, a relaxed search for
+fake tracks and global muons is initiated. Global muons are identified as
+\ac{PF} muons if their momentum is measured with an uncertainty below 25\%.
+Tracks are then progrssively removed from the block, those with largest momentum
+uncertainty first, until either all tracks with an uncertainty $>\unit{1}{\GeV}$
+have been considered or the track momentum had decreased below the calorimetric
+energy.
