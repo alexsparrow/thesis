@@ -4,13 +4,27 @@ In the previous chapter, details of the \ac{CMS} detector were presented. We
 shall now begin to discuss the reconstruction algorithms used to derive analysis
 level objects and quantities which will be of fundamental importance in later
 chapters. The objects of primary interest for these purposes are the leptons,
-jets and missing energy. Having presented the reconstruction of each of these
-objects, the \acl{PF} algorithm will be explained. It attempts to reconstruct
-all stable particles in an event by combining information from all ac{CMS}
-subdetectors. As will be seen this provides excellent reconstruction of jets and
-\MET.
+jets and missing energy. The offline reconstruction algorithms used to
+reconstruct each object will be presented, along with issues and properties
+related to data analysis. Some details of the reconstruction performance at
+\ac{CMS} will also be shown. Finally, the \acl{PF} method, which provides a
+global reconstruction of the event, will be explained in some detail. As will be
+seen, \ac{PF} combines tracking and calorimeter measurements to provide
+excellent reconstruction of jets and missing energy.
 
 \section{Leptons}
+\subsection{Muons}
+The full details of muon reconstruction at CMS are presented in
+\cite{cms_mu_reco}. A brief overview will be presented here, focussing on the
+aspects pertinent to the following analysis chapters. Muons are reconstructed in
+both the muon chambers and the silicon tracker. To match this redundancy in the
+measurement, a number of reconstruction algorithms are available.
+
+\subsubsection{Standalone Muons}
+Standalone muons are based solely on measurements in the muon chambers. The hits
+in each chamber are fit individually to obtain seeds - a position and direction
+vector along with an estimate of the transverse momentum. These form the basis
+of a track fit in the muon chamber based on the Kalman-filter technique.
 \subsection{Muons}
 \subsection{Electrons}
 \subsection{\ac{ECAL} Transparency Corrections}
@@ -135,11 +149,44 @@ In the case that several tracks are linked to a single \ac{HCAL} cluster, the
 total momenta of the tracks is compared to the callibrated calorimetric energy.
 Tracks linked to multiple clusters are resolved by preserving the closest link
 or links in certain cases. The track momentum is then compared to the total
-callibrated calometric energy. In the rare case that the energy is smaller than
-the track momentum by more than three standard deviations, a relaxed search for
-fake tracks and global muons is initiated. Global muons are identified as
-\ac{PF} muons if their momentum is measured with an uncertainty below 25\%.
-Tracks are then progrssively removed from the block, those with largest momentum
-uncertainty first, until either all tracks with an uncertainty $>\unit{1}{\GeV}$
-have been considered or the track momentum had decreased below the calorimetric
-energy.
+callibrated calometric energy.
+
+In the rare case that the energy is smaller than the track momentum by more than
+three standard deviations, a relaxed search for fake tracks and global muons is
+initiated. Global muons are identified as \ac{PF} muons if their momentum is
+measured with an uncertainty below 25\%. Tracks are then progrssively removed
+from the block, those with largest momentum uncertainty first, until either all
+tracks with an uncertainty $>\unit{1}{\GeV}$ have been considered or the total
+track momentum has decreased below the calorimetric energy. The reamining tracks
+are interpreted as charged hadrons with momentum and energy taken from the track
+momentum assuming the charged pion mass hypothesis. If the calorimeter energy
+and track momentum are compatible within their uncertainties, the momentum is
+redefined by a fit to both track momenta and the energy cluster. This is helpful
+at very high energies, where the track parameters may be less well measured.
+
+In the case that the callibrated energy is greater than the total track momentum
+by more than the caloririmetric energy resolution, the excess is interpreted as
+a photon and possibly a neutral hadron. If the excess is greater than the
+\ac{ECAL} energy, a photon is created with this energy and the rest of the
+excess interpreted as a neutral hadron. Otherwise, a photon only is
+reconstructed from the uncallibrated \ac{ECAL} energy. This stems from the
+observation that photons carry 25\% of the energy of a jet, with neutral hadrons
+only 3\%.
+
+Remaining \ac{ECAL} and \ac{HCAL} clusters not linked to a track (or for which
+the associated track was disabled in the previous steps) are reconstructed as
+photons and neutral hadrons respectively.
+
+So called \ac{PF} jets are then reconstructed using a traditional jet clustering
+algorithm (see Section~TODO) using the full set of particle flow objects.
+
+\subsection{Physics Performance}
+Two aspects of the performance of the \ac{PF} reconstruction are of relevance to
+the analysis description that will follow: \acl{MET} measurement and jet
+reconstruction.
+
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{fig/pf_jet_mismatch}
+\caption{Jet mismatch rate \cite{berger_left_handed_w}}
+\label{fig:pf_jet_mismatch}
+\end{figure}
