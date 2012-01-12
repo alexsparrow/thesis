@@ -1,14 +1,39 @@
-* STUFF
+* Theory
+** TODO ALL!
+* Detector
+** TODO HCAL
+** TODO DAQ
+** TODO HLT/L1
+* Reconstruction
+** TODO Muons
+** TODO Electrons
+** TODO Jets
+** TODO MET
+** TODO PF
+
+* Wpol
 ** TODO Mention equivalence theorem in wpol section
 ** TODO Acceptance correction in wpol section
-** TODO Combined fit
+** TODO Combined fit explanation
 ** TODO Ensure that I've properly set out that we are fitting f0 and fL - fR
 ** TODO Ensure fitting section is accurate
 ** TODO QCD penalty term
-** TODO description of the 3-charge requirement
+** TODO description of the 3-charge requirement in wpol and reco chapters
 ** DONE Wpol section. Mention that instead of choosing a variable correlated to costheta*, one may also pick one of the two solutions in pz.
+** TODO Wpol: data/mc plots and explain the normalisation of QCD
    CLOSED: [2011-12-07 Wed 20:52]
    - State "DONE"       from "TODO"       [2011-12-07 Wed 20:52]
 
 ** Would be nice to have the JEC uncertainty ratios for electrons too
 ** Would be nice to have some diagrams illustrating the QCD kinematics
+
+* SUSY Section
+** TODO ALL!
+* Limits
+** TODO Limits section: signal systematics size (in the note I hope)
+** TODO PL and CLs plots
+** TODO PL limit
+** TODO SMS limit
+** TODO Statistical background
+** TODO Efficiency plots
+** TODO SMS ensure this section makes sense
