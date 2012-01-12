@@ -1314,15 +1314,25 @@ distribution while correcting the mean.
 The transparency corrections were derived for the \PW charge asymmetry
 measurement TODO. The detector is divided into 6 $\eta$ bins. The \Zee mass
 distribution in data is then divided into $6 + ^6C_2$ categories corresponding
-to cases where a \PZ is reconstructed from electrons in $\eta$ bins $i$ and
-$j$. For each category a mass template is derived from simulation. A
-simultaneous fit is then performed over the 21 categories, where each template
-is scaled by the factor $1/\sqrt{s_is_j}$ and smeared by a resolution term
-$\sqrt{\sigma_i^2 + \sigma_j^2}$. The end result of this is a set of 6 scale
-terms and 6 resolution terms. These are plotted in
-Figure~%\ref{fig:transparency_corrections}.
+to cases where a \PZ is reconstructed from electrons in $\eta$ bins $i$ and $j$.
+For each category a mass template is derived from simulation. A simultaneous fit
+is then performed over the 21 categories, where each template is scaled by the
+factor $1/\sqrt{s_is_j}$ and smeared by a resolution term $\sqrt{\sigma_i^2 +
+  \sigma_j^2}$. The end result of this is a set of 6 scale terms and 6
+resolution terms. These are plotted in Figure~\ref{fig:wpol_ecal_transp_corr}.
 The scale terms should be applied to data, whilst the resolution should be
 applied in simulation.
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:wpol_ecal_transp_scale}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_scale}}\quad
+\subfloat[]{\label{fig:wpol_ecal_transp_sigma}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_sigma}}\quad
+\caption[]{\ac{ECAL} transparency correction factors for
+  \subref{fig:wpol_ecal_transp_scale} scale and
+  \subref{fig:wpol_ecal_transp_sigma} resolution.}
+\label{fig:wpol_ecal_transp_corr}
+\end{figure}
+
 
 The scale corrections have been applied in data. An conservative 50\%
 uncertainty was taken on the value of the correction factors. The lepton
