@@ -15,21 +15,79 @@ excellent reconstruction of jets and missing energy.
 \section{Leptons}
 \subsection{Muons}
 The full details of muon reconstruction at CMS are presented in
-\cite{cms_mu_reco}. A brief overview will be presented here, focussing on the
+\cite{cms_mu_reco}, \cite{cms_mu_pas}. A brief overview will be presented here, focussing on the
 aspects pertinent to the following analysis chapters. Muons are reconstructed in
 both the muon chambers and the silicon tracker. To match this redundancy in the
 measurement, a number of reconstruction algorithms are available.
+
+\subsubsection{Global Muons}
+Global muons are an extension of standalone muons to include measurements in the
+silicon tracker. For muons with a transverse momentum below $\approx$
+\unit{200}{\GeV}, the tracker provides a better momentum resolution. For higher
+momentum muons, the tracks become straighter and the momentum measurement
+increasingly affected by uncertainty in the position measurement. In this
+regime, inclusion of hits in the muon chambers effectively benefits from the
+large lever arm and \unit{3.8}{\tesla} magnetic field in the region between the
+silicon tracker and the muon chambers.
+
+For each standalone muon, the set of tracker tracks is searched and the best
+matching candidate selected. For each pairing found in this way, a Kalman-filter
+fit is again performed, this time using hits from both the silicon tracker and
+the muon chambers. This fit accounts for average expected energy losess,
+magnetic field and multiple scattering effects. The tracks reconstructed by this
+procedure are known as global muons. Once again, certain modofications are
+required for reconstructing cosmic ray muons - for instance in the case that
+cosmic muons traverse the entire detector, leaving two standalone muons on
+either side of \ac{CMS}.
+
+\subsubsection{Tracker Muons}
+Tracker muons, in contrast to Global muons begin as tracks in the silicon
+tracker. All tracks with a $\Pt > \unit{0.5}{\GeV}$ and $p > \unit{2.5}{\GeV}$
+are considered as muon candidates and extrapolated to the muon stations,
+accounting for expected energy loss and multiple scattering effects. If at least
+one muon track segment matches the extrapolated tracker track, a tracker muon is
+reconstructed. This algorithm is more efficient at low momentum ($p <
+\unit{5}{\GeV}$) since it requires only a single segment in the muon chambers.
 
 \subsubsection{Standalone Muons}
 Standalone muons are based solely on measurements in the muon chambers. The hits
 in each chamber are fit individually to obtain seeds - a position and direction
 vector along with an estimate of the transverse momentum. These form the basis
-of a track fit in the muon chamber based on the Kalman-filter technique.
-\subsection{Muons}
+of a track fit in the muon chambers based on the Kalman-filter technique. The
+fit is constrained to the vertex in order to reject cosmic ray muons. Since much
+of the callibration and validation work for the muon system was performed using
+cosmic rays, a separate algorithm was developed for this purpose
+\cite{cms_mu_reco_cosmic}.
+
+\subsubsection{Merging}
+Reconstructed muons from each of the algorithms detailed above are then merged
+into a single list of muon candidates. Candidates reconstructed as both global
+and tracker muons are merged. Standalone muon tracks are merged with tracker
+muons if they share a muon segment. The fit results from each algorithm are
+retained.
+
+An analysis is then able to tune its identification cuts to meet certain
+efficiency or purity requirements for a particular kinematic range. A selection
+of pre-defined selections are available:
+\begin{itemize}
+\item Soft muons are required to be reconstructed as tracker muons with a muon
+  segment in the outermost station matching the position and direction expected
+  from extrapolation of the track.
+\item Global muon's only requirement is that they be reconstructed as a global
+  muon in the sense described above.
+\item Tight muons must be reconstructed as both a global muon and a tracker muon
+  with a series of additional requirements: a $\Pt > \unit{3}{\GeV}$, a global
+  muon track fit with a normalised $\chisq < 10$, at least two muon stations
+  with matching muon segments, at least 10 hits in the silicon tracker (with at
+  least 1 pixel hit) and a transverse impact parameter $\dxy <
+  \unit{2}{\milli\metre}$. This selection significantly supresses
+  decays-in-flight at the cost of a small loss in efficiency for prompt muons.
+\end{itemize}
+
+
 \subsection{Electrons}
 \subsection{\ac{ECAL} Transparency Corrections}
 \label{sec:reco_ecal_transparency}
-\subsection{Muons}
 \section{Jets}
 \section{Missing Energy}
 
@@ -185,30 +243,39 @@ Two aspects of the performance of the \ac{PF} reconstruction are of relevance to
 the analysis description that will follow: \acl{MET} measurement and jet
 reconstruction.
 
+
 \begin{figure}
-\includegraphics[width=0.9\textwidth]{fig/pf_jet_energyres}
-\caption{Jet energy resolution as a function of \Pt for the barrel (left) and
-  endcap (right). Calo-jet values are displayed as open squares and \ac{PF} jets
-  as upwards triangles. The curves are fit to the sum of a constant term, a
-  stochastic term and a noise term.}
-\label{fig:pf_jet_energyres}
+\centering
+\subfloat[]{\label{fig:reco_pf_jet_energyres_barrel}\includegraphics[width=0.45\textwidth]{fig/pf_jet_energyres_barrel}}\quad
+\subfloat[]{\label{fig:reco_pf_jet_energyres_endcap}\includegraphics[width=0.45\textwidth]{fig/pf_jet_energyres_endcap}}\quad
+\caption[]{Jet energy resolution as a function of \Pt for the
+  \subref{fig:reco_pf_jet_energyres_barrel} barrel and
+  \subref{fig:reco_pf_jet_energyres_endcap} endcap. Calo-jet values are
+  displayed as open squares and \ac{PF} jet as upwards triangles. The curves are
+  fit to the sum of a constant term, a stochastic term and a noise term.}
+\label{fig:reco_pf_jet_energyres}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.9\textwidth]{fig/pf_jet_etaphires}
-\caption{Jet angular resolution (\ac{RMS}) as a function of \Pt for $\eta$
-  (left) and $\phi$ (right). Calo-jets are shown as open squares and \ac{PF}
-  jets as upward triangles. The curves are fit with an expontential function of
-  $\Pt$.}
-\label{fig:pf_jet_etaphires}
+\centering
+\subfloat[]{\label{fig:reco_pf_jet_etares}\includegraphics[width=0.45\textwidth]{fig/pf_jet_etares}}\quad
+\subfloat[]{\label{fig:reco_pf_jet_phires}\includegraphics[width=0.45\textwidth]{fig/pf_jet_phires}}\quad
+\caption[]{Jet angular resolution (\ac{RMS}) as a function of \Pt for
+  \subref{fig:reco_pf_jet_etares} $\eta$ and \subref{fig:reco_pf_jet_phires}
+  $\phi$. Calo-jets are shown as open squares and \ac{PF} jets as upward
+  triangles. The curves are fit with an expontential function of $\Pt$.}
+\label{fig:reco_pf_jet_angulares}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.9\textwidth]{fig/pf_met_res}
-\caption{$\sigma(\MET)/\MET^{\textrm{true}}$ (left) and $\sigma(\phi)$ (right)
-  as a function of true \MET in \ttbar events as detmined by a Gaussian fit to
-  each $\MET^{\textrm{true}}$ bin. Squares represent Calo-\MET, and upwards
-  triangles \ac{PF} \MET. The solid curves ares fits through these points. The
-  dashed lines indicate the \ac{RMS} width of each bin.}
-\label{fig:pf_met_res}
+\centering
+\subfloat[]{\label{fig:reco_pf_met_metres}\includegraphics[width=0.45\textwidth]{fig/pf_met_metres}}\quad
+\subfloat[]{\label{fig:reco_pf_met_phires}\includegraphics[width=0.45\textwidth]{fig/pf_met_phires}}\quad
+\caption[]{\subref{fig:reco_pf_met_metres}$\sigma(\MET)/\MET^{\textrm{true}}$ and
+  \subref{fig:reco_pf_met_phires} $\sigma(\phi)$ as a function of true \MET in
+  \ttbar events as detmined by a Gaussian fit to each $\MET^{\textrm{true}}$
+  bin. Squares represent Calo-\MET, and upwards triangles \ac{PF} \MET. The
+  solid curves ares fits through these points. The dashed lines indicate the
+  \ac{RMS} width of each bin.}
+ \label{fig:reco_pf_met_res}
 \end{figure}
