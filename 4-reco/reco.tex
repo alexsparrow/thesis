@@ -86,7 +86,27 @@ of pre-defined selections are available:
 
 
 \subsection{Electrons}
-\subsection{\ac{ECAL} Transparency Corrections}
+Electron reconstruction at \ac{CMS} makes use of measurements from both the
+silicon tracker and the \ac{ECAL}. In the case of \ac{CMS}, the material budget
+of the tracker cause electrons to radiate a large fraction of their energy
+before reaching the \ac{ECAL} - 50\% of electrons radiate more than 50\% of
+their energy in this way. For an accurate measurement of the electron energy,
+this energy, radiated in the form of bremsstrahlung photons, must be
+reconstructed correctly.
+
+Electron seeds are derived by two separate algorithms: tracker driven and
+\ac{ECAL} driven. Tracker driven seeds are suitable for low-\Pt electrons and
+for electrons produced inside jets. \ac{ECAL} driven seeds begin with the
+reconstruction of \ac{ECAL} superclusters with transverse energy $\Et >
+\unit{4}{\GeV}$. Superclusters are a group of one or more \ac{ECAL} clusters
+constructed to account for the width energy spread in $\phi$ and narrow width in
+$\eta$ characteristic of the bending effect of the \ac{CMS} magnet on electrons
+radiating in the tracker. The supercluster seeds are first matched to track
+seeds (2 or 3 hits) in the inner layers of the tracker. Electron tracks are then
+built from these track seeds. The trajectory is reconstructed accounting for the
+electron energy loss and fitted with a \ac{GSF}.
+
+\subsubsection{\ac{ECAL} Transparency Corrections}
 \label{sec:reco_ecal_transparency}
 \section{Jets}
 \section{Missing Energy}
