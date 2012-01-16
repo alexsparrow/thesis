@@ -94,6 +94,7 @@ their energy in this way. For an accurate measurement of the electron energy,
 this energy, radiated in the form of bremsstrahlung photons, must be
 reconstructed correctly.
 
+\subsubsection{Reconstruction}
 Electron seeds are derived by two separate algorithms: tracker driven and
 \ac{ECAL} driven. Tracker driven seeds are suitable for low-\Pt electrons and
 for electrons produced inside jets. \ac{ECAL} driven seeds begin with the
@@ -106,9 +107,59 @@ seeds (2 or 3 hits) in the inner layers of the tracker. Electron tracks are then
 built from these track seeds. The trajectory is reconstructed accounting for the
 electron energy loss and fitted with a \ac{GSF}.
 
+\subsubsection{Electron Identification}
+\label{sec:reco_electron_id}
+The large bremsstrahlung induced energy loss coupled with larger backgrounds
+from jets and photons means that electrons at \ac{CMS} are fundamentally less
+well defined object than muons. There is therefore a much larger space to trade
+between signal efficiency and purity. Whilst more complex selection procedures
+are available (e.g. a multivariate approach), a simple cut-based selection was
+chosen for the \PW cross-section measurement\cite{cms_pas_ewk_10_002} and has been
+used in this work. The variables have been chosen for their background rejection
+capabilities but also for robustness during early the data-taking period. Cut
+values have been chosen for a number of working points, defined by their
+efficiency with respect to a simulated \Wenu sample, and optimising the
+background rejection power using an iterative procedure. Different cut values
+are chosen in the \ac{CMS} barrel and encap regions.
+
+The cut variables used are described below, with cut-values for eaching working point shown in Table~\ref{tbl:reco_electronid}
+\begin{itemize}
+\item \sigmaieta is a measure of the \ac{RMS} shower width of the electron
+  in the $\eta$ direction.
+\item \deltaphiin and \deltaetain represent the angular separation between the
+  trajectory of the \ac{GSF} track and the ac{ECAL} supercluster.
+\item Tracker, \ac{ECAL} and \ac{HCAL} isolation quantities summed in a cone
+  $\Delta R < 0.3$. Within the tracker, a threshold of \unit{700}{\GeV} is
+  applied to the tracks contributing to the sum. Similarly, in the ac{ECAL}, a
+  zero-supression cut is applied. The cone is centred on the track direction at
+  the vertex for the tracker isolation, and the supercluster for the calorimeter
+  quantities.
+\item \HoverE is the ratio of the energy deposited in the \ac{HCAL} behind the
+  electron seed to that in the \ac{ECAL}. This might also be called the
+  \ac{HCAL} leakage.
+\item The track associated with the electron is required to have a hit in the
+  first layer of the pixel tracker in order to reject photon conversions.
+\item Further rejection against electron conversions is provided by the
+  variables \Dist and \DeltaCotTheta. These are calculated by searching for a
+  conversion partner of the electron \ac{GSF} track. If such a partner is found,
+  the electron is rejected if both \Dist and \DeltaCotTheta are below given thresholds.
+\end{itemize}
+
+\input{tables/electron_id}
+
 \subsubsection{\ac{ECAL} Transparency Corrections}
 \label{sec:reco_ecal_transparency}
 \section{Jets}
+Four types of jets are reconstructed at \ac{CMS}: \acp{Calo} jets, \ac{PF} jets,
+\ac{JPT} jets and track jets. \ac{Calo} jets are reconstructed from energy
+deposits in the \ac{ECAL} and \ac{HCAL}, combined into calorimeter
+towers. Calorimeter towers consist of one or more \ac{HCAL} cells with
+geometrically matched \ac{ECAL} crystals. Electronics noise is supressed by
+applying a threshold to calorimeter cells, with pile-up effects reduced by a
+requirement on the tower energy.
+
+\ac{JPT} jets associate tracks with \ac{Calo} jets and use the
+
 \section{Missing Energy}
 
 \section{Particle Flow at \ac{CMS}}

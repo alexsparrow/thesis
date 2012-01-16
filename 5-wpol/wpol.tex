@@ -656,47 +656,13 @@ referred to as \textbf{Loose}.
 
 \subsubsection{Electrons}
 \label{sec:wpol_electronid}
-Electrons are inheriently less cleanly reconstructed objects than muons. The
-object selection is correspondingly more complex to ensure an optimal trade-off
-between the efficiency and the purity of the selection. We shall first present
-the variables used in the selection.
-
-\begin{itemize}
-\item \sigmaieta is a measure of the \ac{RMS} shower width of the electron
-  in the $\eta$ direction.
-\item \deltaphiin and \deltaetain represent the angular separation between the
-  trajectory of the \ac{GSF} track and the ac{ECAL} supercluster.
-\item Tracker, \ac{ECAL} and \ac{HCAL} isolation quantities summed in a cone
-  $\Delta R < 0.3$. Within the tracker, a threshold of \unit{700}{\GeV} is
-  applied to the tracks contributing to the sum. Similarly, in the ac{ECAL}, a
-  zero-supression cut is applied. The cone is centred on the track direction at
-  the vertex for the tracker isolation, and the supercluster for the calorimeter
-  quantities.
-\item \HoverE is the ratio of the energy deposited in the \ac{HCAL} behind the
-  electron seed to that in the \ac{ECAL}.
-\item The track associated with the electron is required to have a hit in the
-  first layer of the pixel tracker in order to reject photon conversions.
-\item Further rejection against electron conversions is provided by the
-  variables \Dist and \DeltaCotTheta. These are calculated by searching for a
-  conversion partner of the electron \ac{GSF} track. If such a partner is found,
-  the electron is rejected if both \Dist and \DeltaCotTheta are below given thresholds.
-\end{itemize}
-
-As part of the \PW cross-section measurement, a number of ``working points''
-were defined corresponding to different electron selection efficiencies. A set
-of cut values placed on the identification variables just described are then
-associated with each working point. These have been chosen via an optimisation
-procedure and are further specialised for electrons reconstructed in the barrel
-and endcap region. This is to account for the different reconstruction
-characteristics in these regions of the detector (see Section~TODO).
-% TODO more detail on ID. Possibly should be in object reconstruction chapter.
-
-In order to achieve a strong supression of the \ac{QCD} multi-jet background,
-the decision was made to choose a tighter working point than other \ac{CMS}
-analyses - the 70\% efficiency working point. Electrons passing these criteria
-will be referred to as \textbf{Tight}. For the purposes of vetoing dilepton
-events, the 95\% efficiency cuts were used. These will be referred to as
-\textbf{Loose} electrons.
+The electron identification variables used are as described in
+Section~\ref{sec:reco_electron_id}. In order to achieve a strong supression of
+the \ac{QCD} multi-jet background, the decision was made to choose a tighter
+working point than other \ac{CMS} analyses - the 70\% efficiency working
+point. Electrons passing these criteria will be referred to as
+\textbf{Tight}. For the purposes of vetoing dilepton events, the 95\% efficiency
+cuts were used. These will be referred to as \textbf{Loose} electrons.
 
 An additional requirement placed on the electron is that three distinct
 measurements of the charge agree. This ensures that the charge misidentification
