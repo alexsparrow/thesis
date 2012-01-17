@@ -154,13 +154,50 @@ Four types of jets are reconstructed at \ac{CMS}: \acp{Calo} jets, \ac{PF} jets,
 \ac{JPT} jets and track jets. \ac{Calo} jets are reconstructed from energy
 deposits in the \ac{ECAL} and \ac{HCAL}, combined into calorimeter
 towers. Calorimeter towers consist of one or more \ac{HCAL} cells with
-geometrically matched \ac{ECAL} crystals. Electronics noise is supressed by
+geometrically matched \ac{ECAL} crystals. The exact details of this association
+varies between the barrel and endcap regions. Electronics noise is supressed by
 applying a threshold to calorimeter cells, with pile-up effects reduced by a
 requirement on the tower energy.
 
-\ac{JPT} jets associate tracks with \ac{Calo} jets and use the
+\ac{JPT} jets associate tracks with \ac{Calo} jets, using the tracker to give
+enhanced \Pt resolution and response. \ac{PF} jets are products of the \acl{PF}
+algorithm described below. Finally, track jets are reconstructed from well
+measured tracks in the central tracker.
+
+Jets are clustered using the \antiKT algorithm \cite{antiKT} with a size
+parameter $R=0.5$.
 
 \section{Missing Energy}
+A missing energy measurement is made by considering the total momentum of some
+set of particles reconstructed in the detector and comparing this quantity to
+the initial momenta of the colliding partons. Any difference in these two
+quantities may be attributed to the presence of additional particles, not
+interacting within the volume of the detector. There are a number of ways to
+define such a signal. At a hadron collider, the initial boost of the parton
+along the beam axis is unknown. For this reason, the transverse component of the
+missing energy is normally taken instead.
+
+Missing transverse energy (\MET) is the most commonly used missing energy
+quantity. \MET can be measured in several ways at \ac{CMS}. Most simply, via
+\ac{Calo} \MET, which takes the negative vector sum of calorimeter tower
+energies (\ac{ECAL} and \ac{HCAL}). An energy threshold is applied to the towers
+contributing to the sum to reject electronics noise. Alternatively, \ac{PF} \MET
+instead takes the negative vector sum over the momenta of particles
+reconstructed according to the \acl{PF} algorithm. As can be seen in Section~
+\ref{sec:reco_pf}, this has been shown to provide the most sensitive \MET
+measurement at \ac{CMS}. Unless explicitly noted, it should be assumed that all
+\MET quantities in this work are calculated in this way.
+
+Alternative missing energy quantities can be defined for other purposes. For
+instance, missing transverse hadronic energy (\MHT) is formed by taking the
+vector sum,
+\begin{equation}
+\MHT = -\sum_{j \in \textrm{jets}} \vec{E_T^j}
+\end{equation}
+This gives the energy of a system recoiling against jets in the event. For
+instance, in a \Wjets event, the lepton and neutrino recoil against the jets in
+the event. The \MHT is therefore a measure of the \PW momentum.
+
 
 \section{Particle Flow at \ac{CMS}}
 The \ac{PF} algorithm \cite{cms_pf_pas} attempts to provide a global
