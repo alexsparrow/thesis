@@ -5,12 +5,23 @@
 ** TODO DAQ
 ** TODO HLT/L1
 * Reconstruction
-** TODO Muons
-** TODO Electrons
+** DONE Muons
+   CLOSED: [2012-01-18 Wed 16:01]
+   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:01]
+*** TODO Maybe move the muon id from wpol here?
+** DONE Electrons
+   CLOSED: [2012-01-18 Wed 16:01]
+   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:01]
 *** TODO Conversion Rejection
-** TODO Jets
-** TODO MET
-** TODO PF
+** DONE Jets
+   CLOSED: [2012-01-18 Wed 16:02]
+   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
+** DONE MET
+   CLOSED: [2012-01-18 Wed 16:02]
+   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
+** DONE PF
+   CLOSED: [2012-01-18 Wed 16:02]
+   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
 
 * Wpol
 ** TODO Mention equivalence theorem in wpol section
@@ -24,7 +35,7 @@
 ** TODO Wpol: data/mc plots and explain the normalisation of QCD
    CLOSED: [2011-12-07 Wed 20:52]
    - State "DONE"       from "TODO"       [2011-12-07 Wed 20:52]
-
+** TODO Wpol conclusion
 ** Would be nice to have the JEC uncertainty ratios for electrons too
 ** Would be nice to have some diagrams illustrating the QCD kinematics
 
