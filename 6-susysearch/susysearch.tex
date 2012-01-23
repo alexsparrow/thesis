@@ -8,7 +8,8 @@ is that the polarisation of the \PW coupled with the methods described in the
 previous chapter provides a means to discrimate \ac{SUSY} events from \ac{SM}
 backgrounds. This will be further explored in the following section.
 
-\section{Comparing the Kinematics of \ac{SUSY} and \Wjets Events}
+\section{Separating \as{SUSY} and \ac{SM} Events}
+\label{sec:susy_sm}
 In the context of \Rparity conserving \ac{SUSY}, a typical event with a charged
 lepton in the final state is expected to contain 3 invisible particles: two
 \acp{LSP} and a neutrino. As a result, the total \MET in an event will often be
@@ -20,10 +21,168 @@ correlation of their directions. These two consideration can be applied to both
 \Wjets and \ttbar events - the two dominant backgrounds to a single lepton
 \ac{SUSY} search.
 
+In order to make use of the \PW polarisation effects described, this analysis
+makes use of the \LP variable as described in Section~\ref{sec:wpol_lp}. For
+events containing a charged lepton and \MET originating from a \PW decay with
+large transverse momentum, the alignment of the charged lepton and neutrino
+gives an \LP distribution confined to the range $[0,1]$. In contrast, for
+\ac{SUSY} events the \MET component is larger than the lepton momentum and thus
+the \PtW is likely to point in the direction of the \MET. Since the direction
+of the charged lepton momentum and \MET will be mostly uncorrelated, \LP is
+likely to tend to small values. Rewriting,
+\begin{equation}
+\LP = \frac{\Ptl}{\PtW}\cos\left(\PtW, \Ptl\right)
+\end{equation}
+it can be seen that in cases where the angle between the \MET and \Ptl is more
+than 90\degrees, \LP will become negative.
 
+ A second important difference between \ac{SUSY} and
+\ac{SM} events is related to the overall energy scale of the events. As
+discussed in Chapter~\ref{sec:susy}, \ac{SUSY} decays are expected to begin with
+initial states much heavier than in \ac{SM} events. To provide some measure of
+this energy scale without biasing the polarisation, the variable \STlep is
+constructed as follows,
+\begin{equation}
+\STlep = |\Ptl| + |\MET|
+\end{equation}
+where it should be noted that \STlep is a scalar quantity. For \PW decays,
+$\STlep \approx \PtW$. Since the energy scale of \ac{SUSY} is unknown, \STlep is
+used to define search regions. This allows the search to be optimised without
+introducing a strong dependence on the energy scale. For the purposes of this
+analysis, 4 \STlep bins are employed. These are: $150 < \STlep < 250$, $250 <
+\STlep < 350$, $350 < \STlep < 450$ and $\STlep > \unit{450}{\GeV}$. The lowest
+region, $\STlep_{150}$ is takenb to be at too low an energy scale to contain
+\ac{SUSY} processes not excluded by previous searches. It is used as a sideband
+to validate the analysis method.
 
+\section{Analysis Method}
+The \LP distributions for \ac{SM} backgrounds and two benchmark \ac{SUSY} models
+are shown in Figure~\ref{fig:susy_lp}. Firstly it can be seen that the heuristic
+discussion of the \LP shape given in Section~\ref{sec:susy_sm} is confirmed by
+the full simulation with \ac{SM} events giving $\LP > 0$ and \ac{SUSY} events
+clustering around $\LP \sim 0$.
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:susy_lp_el_st250}\includegraphics[width=0.3\textwidth]{fig/LP250_MCandSignal_El.pdf}}\quad
+\subfloat[]{\label{fig:susy_lp_el_st350}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_El.pdf}}\quad
+\subfloat[]{\label{fig:susy_lp_el_st450}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_El.pdf}}\\
+\subfloat[]{\label{fig:susy_lp_mu_st250}\includegraphics[width=0.3\textwidth]{fig/LP250_MCandSignal_Mu.pdf}}\quad
+\subfloat[]{\label{fig:susy_lp_mu_st350}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_Mu.pdf}}\quad
+\subfloat[]{\label{fig:susy_lp_mu_st450}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_Mu.pdf}}
+\caption[]{}
+\label{fig:susy_lp}
+\end{figure}
 
+In order to make use of the discrimination power afforded by the \LP shape, a
+signal and control region are defined. The signal region is defined such that an
+enriched sample of \ac{SUSY} events is obtained without being highly model
+dependent. It should be stressed that the intent is not to eliminate the
+background altogether in this region. The control region likewise must select a
+sample of \ac{SM} background events with sufficient statistics whilst guarding
+against excessive signal contamination from \ac{SUSY} models. By studying the
+\LP distribution across the \ac{CMSSM} parameter space, \LPsignal for the signal
+region and \LPcontrol for the control region were found to be suitable choices.
 
-\section{Monte Carlo Expectation}
+To predict the \ac{SM} background contamination in the \LPsignal region, a
+translation factor, \RCS is calculated in simulation. This is defined as
+\begin{equation}
+\RCS = \frac{N^{\textrm{MC}}(\LPsignal)}{N^{\textrm{MC}}(\LPcontrol)}
+\end{equation}
+where $N^{\textrm{MC}}(\LPsignal)$ and $N^{\textrm{MC}}(\LPcontrol)$ represent
+the population, as calculated in simulation of \ac{SM} events in the signal and
+control regions respectively. Once calculated, \RCS may be used along with a
+measurement of the control region in data to predict the \ac{SM} background
+contribution present in the signal region,
+\begin{equation}
+N^{\textrm{data}}(\LPsignal) = \RCS N^{\textrm{data}}(\LPcontrol)
+\end{equation}
+Whilst in principle it is possible to perform a more, or even completely,
+data-driven prediction by performing a template fit to the \LP shape in the
+control region and extrapolating into the signal region, this strategy was
+explored for some time and found to be frustrated by inadequate statistics, even
+at relatively large integrated luminosities.
+
+The advantage of the translation factor \RCS is that by taking the ratio from
+simulation, there is significant cancellation of many systematic uncertainties,
+including in particular the jet energy scale that proved to be significant for
+the \PW polarisation analysis (see Section~\ref{sec:wpol_syst_jec}). Since these
+uncertainties do not cancel completely, they will be full evaluated in
+Section~\ref{sec:susy_systematics} and are included in the statistical treatment
+described in Chapter~\ref{sec:interpretation}.
+
+\section{Object Definitions}
+The basic object selection requirements were defined to be consistent between
+several complementary leptonic \ac{SUSY} searches at \ac{CMS}. They are
+described and motivated further in \cite{susy_selection_an}.
+
+\subsection{Jets and Missing Energy}
+Jets and missing energy quantities are taken from the particle flow algorithm,
+as described in Section~\ref{sec:reco_pf}. In addition, jets are required to
+pass the ``LOOSE'' selection criteria, namely
+\begin{itemize}
+\item At least two particles - at least one of them charged - in the jet.
+\item Fraction of jet energy carried by neutral hadrons less than 99\%.
+\item Charged and neutral electromagnetic fractions both less than 99\%.
+\end{itemize}
+All jets are required to have a transverse momentum, $\Pt > \unit{40}{\GeV}$ and
+are required to be within the fiducial region of the tracker, $|\eta| <
+2.4$. The total hadronic transverse energy, \HT is calculated from jets passing
+this selection.
+
+\subsection{Muons}
+Muon reconstruction is described in Section~\ref{sec:reco_muons}. Global muons
+are selected with a number of additional quality requirements. These are similar
+to thoseused in the \PW polarisation analysis (see Section~\ref{sec:wpol_muons})
+with certain adjustements made to ensure consistency with other analyses or
+adapt to the different analysis requirements.
+\begin{itemize}
+\item A normalized $\chi^2 < 10$ on the global muon fit
+\item More than 10 hits in the tracker (including at least 1 pixel hit) and
+  $\geq 2$ matching segments in the muon chambers.
+\item A transverse distance to the nominal interaction point, $d_0 <
+  \unit{200}{\micro\metre}$ and longitudinal distance to the primary vertex $d_z
+  < \unit{1}{\centi\metre}$
+\item The uncertainty on the muon transverse momentum $\sigma(\Pt)/\Pt^2 <
+  \unit{0.001}{\reciprocal\GeV}$
+\item Each global muon must also qualify as a tracker muon.
+\item A combined relative isolation (see Eqn~\ref{eqn:wpol_mu_comb_iso}) $\CombIso < 0.1$.
+\end{itemize}
+
+\textbf{Tight} muons are defined by the requirements given above. \textbf{Loose}
+muons use an identical selection but with the \CombIso cut loosened to 0.15.
+
+\subsection{Electrons}
+\textbf{Tight} electrons are reconstructed as described in
+Section~\ref{sec:reco_electrons} using the 80\% efficiency working point but
+with impact parameter requirements identical to those used for the
+muons. \textbf{Loose} electrons use the 95\% efficiency working point with the
+impact parameter criteria loosened as for the muon case.
+
+\subsection{Resolving Ambiguities}
+Since the leptons used in this analysis use the traditional reconstruction
+methods at \ac{CMS} while jets and \MET are taken from the \ac{PF} algorithm,
+ambiguities can exist. In order to avoid double counting, these ambiguities are
+resolved by several cleaning steps.
+
+To remove jets dominated by a lepton, any jet found within a cone of 0.1 (0.3)
+of a selected muon (electron) is removed from consideration. In addition, muons
+within a cone of 0.3 of any jet are rejected.
+
+A second step corrects the \MET for differences between \ac{PF} and global muon
+reconstruction. Each global muon is matched to a corresponding \ac{PF} muon
+within a cone of $\DeltaR < 0.1$. The absolute relative difference between the
+transverse momenta is then calculated. For cases where no match is found or this
+difference is $> 20\%$, the event is rejected. For cases where the difference is
+smaller than 20\%, the \MET receives a vectorial collection.
+
+\section{Analysis Selection}
+Analysis selection begins with a set of event cleaning cuts common to many
+analyses at \ac{CMS}. These address known detector and reconstruction problems
+as well as supressing machine backgrounds. They are fully detailed in
+\cite{susy_selection_an}.
+
+Lepton selection requires exactly one \textbf{Tight} electron or muon. To remove
+dilepton events and minimise overlap with searches in multilepton final states,
+events containing a second \textbf{Loose} lepton are vetoed.
 \section{Systematics}
 \section{Results}
