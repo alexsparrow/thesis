@@ -14,6 +14,7 @@ excellent reconstruction of jets and missing energy.
 
 \section{Leptons}
 \subsection{Muons}
+\label{sec:reco_muons}
 The full details of muon reconstruction at CMS are presented in
 \cite{cms_mu_reco}, \cite{cms_mu_pas}. A brief overview will be presented here, focussing on the
 aspects pertinent to the following analysis chapters. Muons are reconstructed in
@@ -86,6 +87,7 @@ of pre-defined selections are available:
 
 
 \subsection{Electrons}
+\label{sec:reco_electrons}
 Electron reconstruction at \ac{CMS} makes use of measurements from both the
 silicon tracker and the \ac{ECAL}. In the case of \ac{CMS}, the material budget
 of the tracker cause electrons to radiate a large fraction of their energy
@@ -122,7 +124,8 @@ efficiency with respect to a simulated \Wenu sample, and optimising the
 background rejection power using an iterative procedure. Different cut values
 are chosen in the \ac{CMS} barrel and encap regions.
 
-The cut variables used are described below, with cut-values for eaching working point shown in Table~\ref{tbl:reco_electronid}
+The cut variables used are described below, with cut-values for eaching working
+point shown in Table~\ref{tbl:reco_electronid}
 \begin{itemize}
 \item \sigmaieta is a measure of the \ac{RMS} shower width of the electron
   in the $\eta$ direction.
@@ -144,6 +147,9 @@ The cut variables used are described below, with cut-values for eaching working 
   conversion partner of the electron \ac{GSF} track. If such a partner is found,
   the electron is rejected if both \Dist and \DeltaCotTheta are below given thresholds.
 \end{itemize}
+
+The pseudorapidity acceptance for electrons is $|\eta| < 2.5$. However, the
+barrel-endcap transition region, $1.4442 < |\eta| < 1.566$ is explicitly excluded.
 
 \input{tables/electron_id}
 
@@ -200,6 +206,7 @@ the event. The \MHT is therefore a measure of the \PW momentum.
 
 
 \section{Particle Flow at \ac{CMS}}
+\label{sec:reco_pf}
 The \ac{PF} algorithm \cite{cms_pf_pas} attempts to provide a global
 reconstruction of the event - accurate determination of the type, energy and
 direction of all stable particles - by combining measurements from all
