@@ -327,6 +327,7 @@ energetic.
 % TODO evolution of Ai with PtW
 
 \subsection{The Lepton Projection Variable}
+\label{sec:wpol_lp}
 \subsubsection{The \LP Variable}
 In order to calculate the value of $\cos\thetastar$, the \PW rest frame must be
 reconstructed. This requires knowledge of both the charged and neutral lepton
@@ -624,7 +625,7 @@ The requirements placed on the muon are as follows:
 \item The muon is required to be reconstructed as both a global muon and a
   tracker muon. This is to guard against either global muons mismatched with the
   tracker or noisy muon chambers in the case of tracker muons. For further
-  information on muon identification, see Section~TODO.
+  information on muon identification, see Section~\label{sec:reco_muons}.
 \item More than 10 hits in the tracker.
 \item Bad muon fits are rejected by requiring $\chi^2 < 10$ on the global muon
   fit (tracker and muon chambers)
@@ -643,7 +644,8 @@ The requirements placed on the muon are as follows:
 \item A cut on the combined isolation,
 \begin{equation}
 \CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
-  E_T^{\textrm{had}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Ptmu}
+  E_T^{\textrm{had}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Ptmu} < 0.1
+\label{eqn:wpol_mu_comb_iso}
 \end{equation}
 where the sums run over the tracks in the tracker or the energy deposits in the
 \ac{ECAL} and \ac{HCAL} within a cone of $\Delta R = \sqrt{(\Delta\eta)^2 +
@@ -1138,6 +1140,7 @@ particle flow algorithm, as discussed in Section~TODO. The leading source of
 uncertainty is due to the callibration of the jet energy scale.
 
 \subsubsection{Jet Energy Scale}
+\label{sec:wpol_syst_jec}
 The jet energy scale is discussed in detail in Section~TODO. The uncertainty on
 its callibration has been thoroughly studied and is parameterised as a function
 of jet \Pt and $\eta$. In the case of a global miscallibration of this
