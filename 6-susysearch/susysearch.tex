@@ -204,10 +204,36 @@ might bias the result. Once the analysis method was fully refined, the search
 sample was ``unblinded'' and major changes to the analysis were no longer
 allowed.
 
-The full cutflow is shown in
-Table~\ref{tbl:susy_cutflow}.
+The full cutflow is shown in Table~\ref{tbl:susy_cutflow}.
 
 \input{tables/susy_cutflow}
+
+\section{Triggers and Datasets}
+Due to the construction of \STlep, events may be selected with moderate \MET
+(and a high \Pt lepton) or large \MET (and a modertate \Pt lepton). This
+necessitates a different trigger strategy to that used in other leptonic
+\ac{SUSY} searches at \ac{CMS} which typically only select high \MET events.
+
+For the search sample, a set of single-lepton cross-triggers are used, selecting
+events with a single lepton in association with a large amount of hadronic
+activity, \HT. As the luminosity increased during the 2011 run, it was necessary
+to introduce a third requirement: a moderate cut on the \MET. The full list of
+triggers used for both lepton channels are shown in
+Table~\ref{tbl:susy_triggers}
+
+\input{tables/susy_triggers}
+
+All signal and background Monte Carlo samples are from the Summer11 \ac{CMS}
+\unit{7}{\TeV} production using \ac{CMSSW} 42. All processes are simulated using
+the Madgraph matrix element generator, with the exception of the \ac{QCD} and
+\ac{SUSY} signal samples which use \ac{PYTHIA} 6. All datasets, with the
+exception of the \ac{SUSY} signal scan used to derive the limit use the full
+detector simulation. The \ac{SUSY} signal scan uses the \ac{FASTSIM} simplified
+simulation package to reduce processing time. All samples contain data-like
+pile-up conditions, with a reweighting procedure used througout to reflect the
+exact vertex multiplicity distribution in the data.
+
+\section{Control Region}
 
 \section{Systematics}
 \label{sec:susy_systematics}
