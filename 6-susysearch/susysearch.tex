@@ -51,7 +51,7 @@ used to define search regions. This allows the search to be optimised without
 introducing a strong dependence on the energy scale. For the purposes of this
 analysis, 4 \STlep bins are employed. These are: $150 < \STlep < 250$, $250 <
 \STlep < 350$, $350 < \STlep < 450$ and $\STlep > \unit{450}{\GeV}$. The lowest
-region, $\STlep_{150}$ is takenb to be at too low an energy scale to contain
+region, $\STlep_{150}$ is taken to be at too low an energy scale to contain
 \ac{SUSY} processes not excluded by previous searches. It is used as a sideband
 to validate the analysis method.
 
@@ -109,6 +109,11 @@ the \PW polarisation analysis (see Section~\ref{sec:wpol_syst_jec}). Since these
 uncertainties do not cancel completely, they will be full evaluated in
 Section~\ref{sec:susy_systematics} and are included in the statistical treatment
 described in Chapter~\ref{sec:interpretation}.
+
+One last point concerning \RCS is that, so that the prediction is not dominated
+by uncertainties stemming from limited statistics in the control region, a value
+of $\RCS << 1$ is preferable. As we will see, relatively small values of \RCS
+are obtained using the definitions given above.
 
 \section{Object Definitions}
 The basic object selection requirements were defined to be consistent between
@@ -176,17 +181,37 @@ difference is $> 20\%$, the event is rejected. For cases where the difference is
 smaller than 20\%, the \MET receives a vectorial collection.
 
 \section{Analysis Selection}
-Analysis selection begins with a set of event cleaning cuts common to many
-analyses at \ac{CMS}. These address known detector and reconstruction problems
-as well as supressing machine backgrounds. They are fully detailed in
+Selection begins with a set of event cleaning cuts common to many analyses at
+\ac{CMS}. These address known detector and reconstruction problems as well as
+supressing machine backgrounds. They are fully detailed in
 \cite{susy_selection_an}.
 
 Lepton selection requires exactly one \textbf{Tight} electron or muon. To remove
 dilepton events and minimise overlap with searches in multilepton final states,
-events containing a second \textbf{Loose} lepton are vetoed. The full cutflow is shown in
+events containing a second \textbf{Loose} lepton are vetoed.
+
+After the initial lepton selection cuts, events can enter two independent
+samples. The first is a control sample, inverting the jet multiplicity cut to
+obtain a sample known to be overwhelmingly dominated by \ac{SM} backgrounds. To
+compensate, this sample is selected with a slightly relaxed \HT cut. The second
+sample was used for the actual analysis. A jet multiplicity cut, $\Njets \geq 3$
+is applied as well as an \HT cut.
+
+The data-driven control sample was used to test the analysis techniques before
+they were applied in the search dataset. During this time, the search dataset
+was not studied (or ``blinded'') to avoid changes in the analysis procedure that
+might bias the result. Once the analysis method was fully refined, the search
+sample was ``unblinded'' and major changes to the analysis were no longer
+allowed.
+
+The full cutflow is shown in
 Table~\ref{tbl:susy_cutflow}.
 
 \input{tables/susy_cutflow}
 
 \section{Systematics}
+\label{sec:susy_systematics}
+\input{tables/syst_muons}
+\input{tables/syst_electrons}
+
 \section{Results}
