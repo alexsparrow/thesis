@@ -204,9 +204,19 @@ might bias the result. Once the analysis method was fully refined, the search
 sample was ``unblinded'' and major changes to the analysis were no longer
 allowed.
 
+Due to the unavailability of suitable efficient and unbiased triggers, the
+control sample was considered only for the muon channel. For the electron
+channel, validation work was performed instead in the $150 < \STlep <
+\unit{250}{\GeV}$ bin. Trigger thresholds in the control sample necessitated
+increasing the transverse momentum cut on the muon to \unit{35}{\GeV}.
+
 The full cutflow is shown in Table~\ref{tbl:susy_cutflow}.
 
 \input{tables/susy_cutflow}
+
+\subsection{Monte Carlo Expectations}
+\input{tables/mc_exp_signal}
+\input{tables/mc_exp_control}
 
 \section{Triggers and Datasets}
 Due to the construction of \STlep, events may be selected with moderate \MET
@@ -233,7 +243,25 @@ simulation package to reduce processing time. All samples contain data-like
 pile-up conditions, with a reweighting procedure used througout to reflect the
 exact vertex multiplicity distribution in the data.
 
+
 \section{Control Region}
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:susy_mucontrol_st}\includegraphics[width=0.3\textwidth]{fig/MuControl_ST150toInf}}\quad
+\subfloat[]{\label{fig:susy_mucontrol_mt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MT150toInf}}\quad
+\subfloat[]{\label{fig:susy_mucontrol_pt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MuPt150toInf}}
+\caption[]{}
+\label{fig:susy_mucontrol_kin}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:susy_mucontrol_lp250}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP250}}\quad
+\subfloat[]{\label{fig:susy_mucontrol_lp350}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP350}}\quad
+\subfloat[]{\label{fig:susy_mucontrol_lp450}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP450}}
+\caption[]{}
+\label{fig:susy_mucontrol_lp}
+\end{figure}
 
 \section{Systematics}
 \label{sec:susy_systematics}
@@ -241,3 +269,24 @@ exact vertex multiplicity distribution in the data.
 \input{tables/syst_electrons}
 
 \section{Results}
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:susy_mu_lp250}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP250}}\quad
+\subfloat[]{\label{fig:susy_mu_lp350}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP350}}\quad
+\subfloat[]{\label{fig:susy_mu_lp450}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP450}}\\
+\subfloat[]{\label{fig:susy_el_lp250}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP250}}\quad
+\subfloat[]{\label{fig:susy_el_lp350}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP350}}\quad
+\subfloat[]{\label{fig:susy_el_lp450}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP450}}
+\caption[]{}
+\label{fig:susy_datamc}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\subfloat[]{\label{fig:susy_pred_mu}\includegraphics[width=0.4\textwidth]{fig/prediction_mu}}\quad
+\subfloat[]{\label{fig:susy_pred_el}\includegraphics[width=0.4\textwidth]{fig/prediction_el}}\quad
+\caption{
+Comparison of the number of events observed in the data and the expectations from the background estimation methods presented above, in the different \STlep bins.\subref{fig:susy_pred_mu} muon channel; \subref{fig:susy_pred_el} Electron channel.
+The red error-bars indicate the statistical uncertainty of the data only.}
+\label{fig:susy_pred}
+\end{figure}
