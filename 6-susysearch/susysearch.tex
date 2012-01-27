@@ -243,6 +243,9 @@ simulation package to reduce processing time. All samples contain data-like
 pile-up conditions, with a reweighting procedure used througout to reflect the
 exact vertex multiplicity distribution in the data.
 
+In addition to the standard \Wjets sample, an enriched sample with a
+generator-level $\HT > \unit{300}{\GeV}$ cut. This increases the available
+statistics, minimising the statistical error on \RCS.
 
 \section{Control Region}
 In order to test that the simulation of electroweak background processes can be
@@ -289,6 +292,47 @@ adequately described by the simulation.
 \end{figure}
 
 \section{Background Prediction}
+As for the \PW polarisation analysis, the background from \ac{QCD} multijet
+events again presents a difficulty. In the muon channel, the \ac{QCD}
+contribution is once again small to negligible as evidenced in
+Table~\ref{tbl:susy_mc_exp_control}. For this, it is sufficient to calculate
+only an upper bound. For the electron channel, as before, the contribution is
+much larger. Fortunately, the methods outlined in
+Section~\ref{sec:wpol_data_driven_bg} prove to be effective again, with some
+adaptation.
+
+\subsection{Muons}
+A conservative upper limit on the \ac{QCD} background in the muon channel is
+obtained from a data-driven control sample by inverting the isolation cut, $0.2
+< \CombIso < 0.5$. In order to further enrich \ac{QCD} events whilst supressing
+electroweak backgrounds in this sample, a $\MET < \unit{20}{\GeV}$ cut is also
+applied. Even with these cuts, significant electroweak contamination
+remains. The significance of the vertex impact paramter is used as an additional
+handle by requiring $\sigma(D_0) > 3$. The ratio $N(\CombIso < 0.1/N(0.2 <
+\CombIso < 0.5)$ in this sample is then used to derive an upper limit on the
+\ac{QCD} contribution. This limit is conservative given that electroweak
+background are present in the ratio. It is seen in Table~TODO that the \ac{QCD}
+background is negligible in all \STlep bins and is ignored in the subsequent
+analysis.
+
+\subsection{Electrons}
+In the case of the electrons, a strategy similar to that used in the \PW
+polarisation analysis is employed. As before, the electron identification
+variables \deltaetain and \deltaphiin are inverted. In addition, to ensure
+adequate statistics the \D0 and \Dz cuts are removed and the isolation cut is
+relaxed. The \D0 and \Dz cuts were not present in the \PW polarisation
+selection. Although the present analysis benefits from a dataset $\sim 30$ times
+larger than that used for the previous measurement, statistics are hurt by the
+generally tighter kinematic cuts.
+
+In addition, it was observed during studies for the \PW polarisation measurement
+that the shape of the QCD template was affects by a cut on \PtW. Thus it should
+be assumed to depend too on \STlep, necessitating the use of independent
+templates for each \STlep bin.
+
+As in the \PW polarisation analysis, a fit is performed using templates taken
+from the electroweak backgrounds taken from simulation. To avoid the potential
+effects of signal contamination, the fit region is confined to \LPcontrol.
 
 \section{Systematics}
 \label{sec:susy_systematics}
@@ -313,7 +357,7 @@ adequately described by the simulation.
 \centering
 \subfloat[]{\label{fig:susy_pred_mu}\includegraphics[width=0.4\textwidth]{fig/prediction_mu}}\quad
 \subfloat[]{\label{fig:susy_pred_el}\includegraphics[width=0.4\textwidth]{fig/prediction_el}}\quad
-\caption{Comparison of the number of events observed in the data and the
+\caption[]{Comparison of the number of events observed in the data and the
   expectations from the background estimation methods presented above, in the
   different \STlep bins.\subref{fig:susy_pred_mu} muon channel;
   \subref{fig:susy_pred_el} Electron channel.  The red error-bars indicate the
