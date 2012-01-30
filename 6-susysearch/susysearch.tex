@@ -316,6 +316,7 @@ background is negligible in all \STlep bins and is ignored in the subsequent
 analysis.
 
 \subsection{Electrons}
+\label{sec:susy_electron_bgpredict}
 In the case of the electrons, a strategy similar to that used in the \PW
 polarisation analysis is employed. As before, the electron identification
 variables \deltaetain and \deltaphiin are inverted. In addition, to ensure
@@ -328,14 +329,67 @@ generally tighter kinematic cuts.
 In addition, it was observed during studies for the \PW polarisation measurement
 that the shape of the QCD template was affects by a cut on \PtW. Thus it should
 be assumed to depend too on \STlep, necessitating the use of independent
-templates for each \STlep bin.
+templates for each \STlep bin. A comparison of the selected and anti-selected
+shapes in simulated \ac{QCD} events is shown in Figure~TODO. This may be
+compared with those derived in the \PW polarisation analysis (see
+Figure~\ref{fig:wpol_ele_sel_antisel}). Differences may be accounted for by the
+modified electron selection and kinematic cuts.
 
-As in the \PW polarisation analysis, a fit is performed using templates taken
-from the electroweak backgrounds taken from simulation. To avoid the potential
-effects of signal contamination, the fit region is confined to \LPcontrol.
+As in the \PW polarisation analysis, a fit is performed using electroweak
+background templates for the electroweak backgrounds derived from simulation. To
+avoid the potential effects of signal contamination, the fit region is
+restricted to \LPcontrol and then the fit result is used to extrapolate into
+\LPsignal. The results of these fits are shown in Figure~TODO. The predictions
+of the \ac{QCD} and electroweak background contamination can be seen in
+Table~TODO. The \ac{QCD} contamination in the signal region is seen to be
+negligible.
+
+To account for the \ac{QCD} contamination in the control region, the background
+prediction in the electron channel is derived from the fitted number of
+electroweak events. Similarly, the \RCS calculation in simulation is performed
+using only the electroweak background components. The additional uncertainties
+introduced by this procedure will be covered in Section~\ref{sec:susy_systematics}.
 
 \section{Systematics}
 \label{sec:susy_systematics}
+For this analysis, as with the \PW polarisation measurement, unavoidable
+dependence on simulation requires careful evaluation of associated systematic
+uncertainties. It has already been said that the construction of \RCS is
+intended to minimise some of these uncertainties by ensuring some degree of
+cancellation. Experience from the \PW polarisation measurement showed that the
+\LP variable is highly sensitive to certain uncertainties - in particular the
+jet energy scale. The size of these uncertainties was thus evaluated early-on in
+the development of the analysis and continued throughout. Several of the
+systematics procedures were adopted or adapted from those used for the previous
+measurement (see Section~\ref{sec:wpol_systematics}).
+
+The background prediction procedure may be written as follows,
+\begin{equation}
+\Nbkgi = \RCSi \times \NControli
+\end{equation}
+where \Nbkgi is the predicted background for \LPsignal in \STlep bin $i$, \RCSi
+the corresponding translation factor and \NControli the expected electroweak
+yield in the region \LPcontrol (i.e. for the muons, simply the event yield
+assuming zero contamination from \ac{QCD} or for electrons, the result of the
+fit described in Section~\ref{sec:susy_electron_bgpredict}).
+
+The uncertainty assigned to the background prediction \Nbkgi must come from two
+sources: uncertainty on the translation factor, \RCS and uncertainty on the yield
+in the control region, \NControl. These sources of uncertainty will now be
+described.
+
+\subsection{Limited Statistics in the Control Region \LPcontrol}
+The effect of finite statistics in the control region is naturally more
+pronounced in the larger \STlep bins. For the muon channel, this is simply
+calculated as the Poisson uncertainty ($\sqrt{N}$) of the number of events in
+the control region. For electrons, this uncertainty is taken as the error on the
+fitted electroweak component of the background.
+
+\subsection{Limited Monte Carlo Statistics}
+
+
+
+
 
 \input{tables/syst_muons}
 \input{tables/syst_electrons}
