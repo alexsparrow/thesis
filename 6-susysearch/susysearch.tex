@@ -295,7 +295,7 @@ adequately described by the simulation.
 As for the \PW polarisation analysis, the background from \ac{QCD} multijet
 events again presents a difficulty. In the muon channel, the \ac{QCD}
 contribution is once again small to negligible as evidenced in
-Table~\ref{tbl:susy_mc_exp_control}. For this, it is sufficient to calculate
+Table~\ref{tbl:susy_mcexp_control}. For this, it is sufficient to calculate
 only an upper bound. For the electron channel, as before, the contribution is
 much larger. Fortunately, the methods outlined in
 Section~\ref{sec:wpol_data_driven_bg} prove to be effective again, with some
@@ -330,25 +330,45 @@ In addition, it was observed during studies for the \PW polarisation measurement
 that the shape of the QCD template was affects by a cut on \PtW. Thus it should
 be assumed to depend too on \STlep, necessitating the use of independent
 templates for each \STlep bin. A comparison of the selected and anti-selected
-shapes in simulated \ac{QCD} events is shown in Figure~TODO. This may be
+shapes in simulated \ac{QCD} events is shown in Figure~\ref{fig:susy_elqcd_selasel}. This may be
 compared with those derived in the \PW polarisation analysis (see
 Figure~\ref{fig:wpol_ele_sel_antisel}). Differences may be accounted for by the
 modified electron selection and kinematic cuts.
 
-As in the \PW polarisation analysis, a fit is performed using electroweak
-background templates for the electroweak backgrounds derived from simulation. To
-avoid the potential effects of signal contamination, the fit region is
-restricted to \LPcontrol and then the fit result is used to extrapolate into
-\LPsignal. The results of these fits are shown in Figure~TODO. The predictions
-of the \ac{QCD} and electroweak background contamination can be seen in
-Table~TODO. The \ac{QCD} contamination in the signal region is seen to be
-negligible.
+As in the \PW polarisation analysis, a binned maximum likelihood fit is
+performed using electroweak background templates for the electroweak backgrounds
+derived from simulation. To avoid the potential effects of signal contamination,
+the fit region is restricted to \LPcontrol and then the fit result is used to
+extrapolate into \LPsignal. The results of these fits are shown in
+Figures~\ref{fig:susy_elqcd_fitresult150}
+and~\ref{fig:susy_elqcd_fitresult250}. The predictions of the \ac{QCD} and
+electroweak background contamination can be seen in Table~TODO. The \ac{QCD}
+contamination in the signal region is seen to be negligible.
 
-To account for the \ac{QCD} contamination in the control region, the background
-prediction in the electron channel is derived from the fitted number of
-electroweak events. Similarly, the \RCS calculation in simulation is performed
-using only the electroweak background components. The additional uncertainties
-introduced by this procedure will be covered in Section~\ref{sec:susy_systematics}.
+The results of the fit can be used to directly predict the background
+contamination in the signal region. However, in order to compare systematic
+uncertainties with the muon channel, a corrected \RCS is calculated from the fit
+results. The systematic uncertainties are then calculated in terms of this
+variable. For the limit procedure, it was technically simpler to use the fit
+results to correct the \NControl to subtract the \ac{QCD} contribution. Since
+the \ac{QCD} contamination in the signal region is negligible, this should not
+make a significant difference to the limit.
+
+To account for the \ac{QCD} contamination in the control
+region, the background prediction in the electron channel is derived from the
+fitted number of electroweak events. Similarly, the \RCS calculation in
+simulation is performed using only the electroweak background components. The
+additional uncertainties introduced by this procedure will be covered in
+Section~\ref{sec:susy_systematics}.
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:susy_elqcd_selasel}\includegraphics[width=0.5\textwidth]{fig/SelectedVsAntiSelected}}\quad\\
+\subfloat[]{\label{fig:susy_elqcd_fitresult150}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_150}}\quad
+\subfloat[]{\label{fig:susy_elqcd_fitresult250}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_250}}
+\caption[]{}
+\label{fig:susy_elqcd}
+\end{figure}
 
 \section{Systematics}
 \label{sec:susy_systematics}
@@ -386,11 +406,83 @@ the control region. For electrons, this uncertainty is taken as the error on the
 fitted electroweak component of the background.
 
 \subsection{Limited Monte Carlo Statistics}
+\label{sec:susy_syst_mcstats}
+The limited statistics of simulated events results in an uncertainty for both
+channels in the calculation of \RCS. This is calculated by simple propagation of
+errors.
 
+For the electron channel, things are once again complicated by the \ac{QCD}
+fitting procedure. The electroweak templates used in the fit also suffer from
+limited statistics, thus leading to an additional source of uncertainty on
+\NControl. This is accounted for in a similar manner to the statistical
+uncertainty of the \ac{QCD} template in the \PW polarisation analysis (see
+Section~\ref{sec:wpol_syst_ele_bgest}. The templates are rediced 200 times
+according to the statistical error per bin. Each rediced template is then used
+to repeat the fit procedure. The variance of this ensemble of fits is then taken
+to be the statistical uncertainty. For the systematics quoted in
+Table~\ref{tbl:susy_syst_muons}, this is propagated into \RCS. For the limit, as
+will be seen, it is taken as an uncertainty on \NControl.
 
+\subsubsection{Jet Energy Scale Uncertainty}
+This procedure was changed with respect to the \PW polarisation measurement in
+order to harmonise with other analyses. Each jet in the event, as well as the
+remaining hadronic recoil are scaled upwards or downwards by 5\%. The larger of
+the two shifts on \RCS is then taken as the uncertainty. If the the uncertainty
+is found to be smaller than the Monte Carlo statistical error
+(Section~\ref{sec:susy_syst_mcstats}), the uncertainty is taken to be the larger
+of the two.
 
+\subsubsection{Hadronic Recoil Resolution}
+The resolution of the hadronic recoil has previously been measured in
+\cite{cms_met_pas}. The resolution measured in data is seen to be 10\% larger
+than predicted by simulation. To account for this, the recoil is smeared by an
+additional 10\% perpendicular and parallel to its direction. The resulting shift
+in \RCS is taken as the uncertainty.
 
+\subsubsection{\Wjets/\ttbar Cross Section}
+Te use of \RCS avoids any dependence on the absolute values of theoretical
+cross-sections. However, since the \Wjets and \ttbar lead to different \LP
+shapes, changes to their relative normalisations will result in changes to
+\RCS. To account for this, the \Wjets and \ttbar contributions are each scaled
+up and down by 30\% and 50\% respectively. The shift in \RCS with respect to the
+unscaled case is then calculated. The shifts are performed simultaneously to
+give the most extreme change in \RCS, i.e. one cross-section is shifted up, the
+other down. The largest such shift is taken as the uncertainty. As for the jet
+energy scale, a shift smaller than the statistical uncertainty of the simulated
+sample is taken to be the same as the statistical uncertainty. Additionally, the
+uncertainty is calculated simulatenously for both lepton channels in order to
+maximise available statistics.
 
+\subsubsection{Muon Momentum Scale}
+A bias on the muon momentum is introduced. This is found to be 1\% from studies
+of the \PZ mass.
+
+\subsubsection{\PW and \ttbar Polarisation}
+The polarisation in \ttbar events is found to be 5\%. Since the effect on \RCS
+is less than 5\%, this is assigned as a conservative uncertainty.
+
+For the \PW polarisation, the errors on the previous measurement were taken and
+used to assign a 15\% uncertainty to the difference of the left-handed and
+right-handed fractions \fLmfR (see Section~\ref{sec:wpol_results}). To account
+for this, the simulation was reweighted to reflect and upward and downard shift
+of 15\% on \fLmfR with respect to the nominal values. This is done in a manner
+similar to that used for the actual measurement (see
+Section~\ref{sec:wpol_reweighting}), but using 5 bins in \PtW instead of 3. The
+results are shown for the highest \STlep bin in
+Figure~\ref{fig:susy_wpol_syst}. The largest of the two shifts is taken to be
+the systematic uncertainty.
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:susy_wpol_syst_plus}\includegraphics[width=0.9\textwidth]{fig/MuonStandardPlots_450_NOLP_LPPlusvar_all_ratio}}\\
+\subfloat[]{\label{fig:susy_wpol_syst_minus}\includegraphics[width=0.9\textwidth]{fig/MuonStandardPlots_450_NOLP_LPMinusvar_all_ratio}}
+\caption[]{}
+\label{fig:susy_wpol_syst}
+\end{figure}
+
+\subsubsection{Fully Leptonic \ttbar}
+\subsubsection{\acl{PDF} Uncertainties}
+\subsubsection{Trigger Efficiency}
 \input{tables/syst_muons}
 \input{tables/syst_electrons}
 
