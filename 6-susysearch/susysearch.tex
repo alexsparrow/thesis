@@ -36,12 +36,11 @@ likely to tend to small values. Rewriting,
 it can be seen that in cases where the angle between the \MET and \Ptl is more
 than 90\degrees, \LP will become negative.
 
- A second important difference between \ac{SUSY} and
-\ac{SM} events is related to the overall energy scale of the events. As
-discussed in Chapter~\ref{sec:susy}, \ac{SUSY} decays are expected to begin with
-initial states much heavier than in \ac{SM} events. To provide some measure of
-this energy scale without biasing the polarisation, the variable \STlep is
-constructed as follows,
+A second important difference between \ac{SUSY} and \ac{SM} events is related to
+the overall energy scale of the events. As discussed in Chapter~\ref{sec:susy},
+\ac{SUSY} decays are expected to begin with initial states much heavier than in
+\ac{SM} events. To provide some measure of this energy scale without biasing the
+polarisation, the variable \STlep is constructed as follows,
 \begin{equation}
 \STlep = |\Ptl| + |\MET|
 \end{equation}
@@ -481,12 +480,50 @@ the systematic uncertainty.
 \end{figure}
 
 \subsubsection{Fully Leptonic \ttbar}
+The fraction of events passing the selection in which a second lepton is not
+identified, either due to reconstruction or acceptance effects, is estimated in
+simulation. Since this is a relatively small fraction of the background, a
+conservative 50\% uncertainty is assumed. The resulting change in the \LP shape
+is then propagated into \RCS.
+
 \subsubsection{\acl{PDF} Uncertainties}
+The uncertainty stemming from the choice of \acp{PDF} was handled slightly
+differently to the \PW polarisation case. The Monte Carlo was reweighted to the
+central value of both CTEQ66 and MSTW2008NLO68CL \ac{PDF} sets and the resulting
+change in \RCS was found to be 1\% for $\STlep < \unit{450}{\GeV}$ and 5\% for
+$\STlep > \unit{450}{\GeV}$. This systematic uncertainty is therefore seen to be
+negligible.
+
 \subsubsection{Trigger Efficiency}
+Whilst the efficiencies of the trigger are found to be uncorrelated with the
+lepton \Pt, an $\eta$ dependence is observed. This variation is found to be 18\%
+in the muon channel and 5\% in the electron channel. In addition, at the plateau
+of the trigger turn-on curve, a difference of efficiency between data and
+simulation is observed: 5\% in the muon channel and $\approx 1\%$ for
+electrons. To estimate the combined effect of the $\eta$ dependence and the
+discrepancy between data and Monte Carlo, the HLT\_Mu15 trigger is applied in
+simulation. The effect on \RCS is seen to be $<1\%$ across all $\eta$ bins.
+
+The relative uncertainties on \RCS for each significant systematic effect listed
+above are shown in Table~\ref{tbl:susy_syst_muons} for the muon channel and
+\ref{tbl:susy_syst_electrons} for electrons. The relative uncertainty on the
+estimated number of events due to limited statistics in the control region is
+also shown for comparison.
+
 \input{tables/syst_muons}
 \input{tables/syst_electrons}
 
 \section{Results}
+Once the analysis procedure had been finalised, the search region was
+``unblinded''. The \LP distributions in data, along with the expected shapes in
+Monte Carlo are shown in Figure~\ref{fig:susy_datamc} for the three \STlep bins
+considered for the search. The predicted and observed background yields are then
+shown in Table~\ref{tbl:susy_datamc_muons} for muons and
+\ref{tbl:susy_datamc_electrons} for electrons. Comparison of the predicted and
+observed numbers are shown graphically in Figure~\ref{fig:susy_pred}. It is
+clear, that no significant excess is seen. In the next chapter, the results are
+used to set limits on allowed parameter space for the \ac{CMSSM} and more
+general models.
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:susy_mu_lp250}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP250}}\quad
@@ -498,6 +535,9 @@ the systematic uncertainty.
 \caption[]{}
 \label{fig:susy_datamc}
 \end{figure}
+
+\input{tables/datamc_muons}
+\input{tables/datamc_electrons}
 
 \begin{figure}[htb]
 \centering
