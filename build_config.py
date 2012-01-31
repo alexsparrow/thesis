@@ -24,11 +24,12 @@ FILE_EXTENSIONS = {'eps': '.eps',
 CHAPTERS = [
     "1-sm",
     "2-susy",
-    "3-expt",
-    "4-reco",
-    "5-wpol",
-    "6-susysearch",
-    "7-interpretation",
+    "3-framework",
+    "4-expt",
+    "5-reco",
+    "6-wpol",
+    "7-susysearch",
+    "8-interpretation",
     "appendices"
     ]
 
