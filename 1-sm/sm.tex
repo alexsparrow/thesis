@@ -7,12 +7,12 @@ extensively tested of any fundamental theory of nature, having withstood the
 scrutiny of several decades of data-taking at a number of large, high-energy
 physics experiments. However, despite this success, there appear to be a number
 of major theoretical deficiencies in desperate need of attention. In this
-chapter, the foundations of the theory will be laid out in a concise
-manner. The aforementioned theoretical difficulties will be described in
-detail. This will sever to motivate the potential solutions offered by the
-following chapter, and ultimately the analysis work that has been undertaken.
+chapter, the foundations of the theory will be laid out in a concise manner. The
+aforementioned theoretical difficulties will be described in detail. This will
+serve to motivate the potential solutions offered by the following chapter, and
+ultimately the analysis work that has been undertaken.
 
-\section{Particles, Fundamental Forces and Notation}
+\section{Particles and Fundamental Forces}
 The \ac{SM} represents the unification of three of the four known fundamental
 forces, namely: electromagnetism, the weak nuclear force and the strong nuclear
 force. The other force, gravity, having resisted unification with the other
@@ -52,7 +52,178 @@ as yet unanswered. It is theoretically possible for a neutrino to be its own
 anti-particle, $\Pnulepton = \APnulepton$. This would make the neutrino a
 ``Majorana Fermion'' and is an area of active experimental research.
 
-\section{Theoretical Foundation}
+The particle content and properties of the \ac{SM} seem, at first glance, to be
+quite arbitrary. Why are there three forces? Why does the Weak sector have three
+bosons, and the electromagnetic only one. Some of these questions may be
+answered by constructing the \ac{SM} as a gauge theory. This will be outlined in
+the next section.
+
+\section{Electroweak Gauge Theory}
+\subsection{Gauge Invariance}
+The theoretical principle of gauge invariance can be seen in Maxwell's theory of
+electromagnetism \cite{aitchison}. Recall that the electric (\emE) and magnetic (\emB) components
+of the field may be written in terms of a vector potential (\emA) and a scalar
+potential \emV as follows:
+\begin{eqnarray}
+\emB = \nablav \times \emA \\
+\emE = -\nablav \emV - \frac{\partial \emA}{\partial t}
+\end{eqnarray}
+It can be seen that these equations do not relate a given (\emB, \emE) to unique
+values of \emA and \emV. In particular, if the following transformations are
+applied simulatenously to \emA and \emV, the values of \emB and \emE will be
+unchanged,
+\begin{eqnarray}
+\emA \longrightarrow \emA - \nablav \chi \\
+\emV \longrightarrow  \emV + \frac{\partial \chi}{\partial t}
+\end{eqnarray}
+where $\chi$ is some arbitrary function. Such transformations are known as
+``gauge transformations'' and similarly \emB and \emE are said to be ``gauge
+invariant''.
+
+If the scalar and vector potentials are rewritten in terms of a single 4-vector
+potential, $\Amu = (\emV, \emA)$ and similarly taking a 4-vector differntial
+operator, $\dmu = (\partial/\partial t, -\nablav)$, the gauge transformation
+takes the form
+\begin{equation}
+\Amu \longrightarrow \Amu + \dmu\chi
+\label{eqn:theory_gauge_transform}
+\end{equation}
+In this form, the Maxwell equations can be rewritten as
+\begin{equation}
+\dmu \Fmunu = j^{\nu}_{\textrm{em}}
+\end{equation}
+where $\Fmunu$ is the electromagnetic tensor, defined as
+\begin{equation}
+\Fmunu = \dmu\Anu - \dnu\Amu
+\end{equation}
+It can be seen that under the gauge transformation
+(Eqn~\ref{eqn:theory_gauge_transform}), $\Fmunu$ is invariant. This confirms the
+gauge invariance of the Maxwell equations.
+
+\subsection{The Principle of Least Action and Lagrangian Formalism}
+Before continuing, it is useful to review the Lagrangian formalism and the
+principle of least action. The action, \action, is a quantity associated with a
+physical system, used to characterise its dynamics. The action can be written
+\begin{equation}
+  S = \int dt \lagrangian = \int d^4 x \lagrangiand
+\end{equation}
+where \lagrangian is the \emph{Lagrangian}, and \lagrangiand the
+\emph{Lagrangian density} and
+\begin{equation}
+\lagrangian = \int d^3 x \lagrangiand
+\end{equation}
+The Lagrangian is a function of some generalized coordinates $f_i$ describing
+the dynamics of the system and their derivatives $\dmu f_i$. From this, the
+Euler-Lagrange relation can be used to derive an equation of motion for the
+system,
+\begin{equation}
+\frac{\partial \lagrangiand}{\partial f_i} - \partial_{\mu} \left (
+  \frac{\partial \lagrangiand}{\partial\left(\partial_{\mu} f_i\right)}\right) = 0
+\end{equation}
+By writing down such a Lagrangian, a theory can be fully described. In order to
+perform calculation of real measurable quantities, the theory must be
+quantised. This is a complex procedure involving \emph{renormalisation}
+techniques which are beyond the scope of this discussion. We shall only note
+that renormalisability requires a theory with dimensionality at most $[M]^4$
+i.e. mass to the fourth power.
+
+\subsection{A Real Scalar Field}
+To see how a theory can be written in terms of a Lagrangian, we will first
+approach a highly simplified example, namely that of a \emph{real scalar
+  field}. The Lagrangian density for such a theory may be written as follows
+\begin{equation}
+\lagrangiand =
+\frac{1}{2}\left(\partial_{\mu}\phi(x))(\partial^{\mu}\phi(x)\right) -
+\frac{1}{2}m^2\phi^2(x) - \frac{\lambda}{4!}\phi^4(x)
+\label{eqn:theory_phi4}
+\end{equation}
+The three components of this expression are known respectively as the
+\emph{kinetic term}, the \emph{mass term} and the \emph{interaction term}. The
+field $\phi$ is a function of spacetime coordinates $x$ representing a single
+kind of particle $\phi$, $m$ is the mass of the particle and $\lambda$ a
+constant controlling the strength of the interaction between particles in the
+theory.
+
+Setting $\lambda = 0$ and applying the Euler-Lagrange relations
+to \label{eqn:theory_phi4}, one obtains
+\begin{equation}
+\partial^{\mu}\partial_{\mu} \phi + m^2\phi = 0
+\end{equation}
+which can be recognised as the Klein-Gordon equation describing the motion of a
+scalar particle.
+
+\subsection{Symmetries}
+It can be seen that the Lagrangian of Equation~\ref{eqn:theory_phi4} is
+invariant under certain transformations. In particular, it has been constructed
+to obey the symmetry $\phi \longrightarrow -\phi$. Such symmetries are known as
+global symmetries of the theory - global in the sense that they are performed
+identically at all points in spacetime. These symmetries can be classified in
+terms of the mathematical theory of groups.
+
+Noether's theorem states that for a theory with a continuous symmetry, each
+generator of the corresponding symmetry group corresponds to a conserved current
+in the theory. This allows predictions about the physics of given theory to be
+made by considering only its symmetries.
+
+\subsection{Complex Scalar Fields and the Gauge Principle}
+We will now take a slightly more realistic example, that of a complex scalar
+field. The Lagrangian for this theory may be written as follows,
+\begin{equation}
+\lagrangiand =
+\frac{1}{2}\left(\partial_{\mu}\phi(x))(\partial^{\mu}\phi(x)\right)^* -
+\frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right)
+\label{eqn:theory_complex_scalar}
+\end{equation}
+where the field $\phi$ is now a complex quantity. This field is seen to possess
+an additional symmetry
+\begin{equation}
+\phi \longrightarrow e^{i\theta}\phi
+\label{eqn:theory_phase_transform}
+\end{equation}
+where $\theta$ is some arbitrary parameter (constant, for the moment, in
+spacetime). This is known as a global \Uone symmetry and has a single generator
+- and therefore also a single conserved current.
+
+When the transformation of Eqn~\ref{eqn:theory_phase_transform} is extended such
+that the parameter $\theta$ is a function of the spacetime coordinate $x$, the
+Lagrangian is no longer invariant,
+\begin{equation}
+\delta\lagrangiand = \left(\partial_{\mu}
+  \theta\right) \left[i\left(\partial^{\mu} \phi^*\right)\phi
+  -i\phi^*\left(\partial^{\mu} \phi\right)\right] +
+\left(\partial_{\mu}\theta\right)\left(\partial^{\mu}\theta\right)\left|\phi\right|^2
+\label{eqn:theory_gauge_dL}
+\end{equation}
+In order to compensate for this change, we define the covariant derivative as follows
+\begin{equation}
+D_{\mu} = \partial_{\mu} - iB_{\mu}(x)
+\label{eqn:theory_cov_deriv}
+\end{equation}
+where $B$ is taken to be a new four-vector field. This operator must transform
+under a change of phase in such a way as to cancel the additional terms in
+Equation~\ref{eqn:theory_gauge_dL}. The Lagrangian would then be rewritten as
+follows,
+\begin{equation}
+  \lagrangiand = \left(D_{\mu}\phi\right)\left(D^{\mu}\phi\right)^*
+  - \frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right)
+\end{equation}
+It can be shown that this requires the $B_{\mu}$ field to transform as follows
+\begin{equation}
+B_{\mu} \longrightarrow B'_{\mu} = B_{\mu} + \partial_{\mu}\theta
+\end{equation}
+It can be seen that this is the same transformation as that applied to the
+electromagnetic four-vector field in
+Equation~\ref{eqn:theory_gauge_transform}. By requiring the fields to be
+symmetric under a \Uone phase transformation, a new field must be
+introduced. This field then appears as a gauge boson in the theory, in this case
+a photon.
+
+Whilst this might seem a fairly trivial theoretical exercise, it turns out that
+by repeating the same procedure with different symmetry groups, all gauge bosons
+of the \ac{SM} can be predicted.
+
+
+
 
 \section{The Higgs Mechanism}
 \section{\acl{QCD}}
