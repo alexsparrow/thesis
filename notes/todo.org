@@ -1,9 +1,17 @@
-* Theory
-** TODO ALL!
+* SM
+** DONE ALL!
+   CLOSED: [2012-02-13 Mon 22:15]
+   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
+* SUSY
+** DONE ALL!
+   CLOSED: [2012-02-13 Mon 22:15]
+   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
+Mostly done!
 * Detector
 ** TODO HCAL
 ** TODO DAQ
 ** TODO HLT/L1
+*** Mostly done. Still need something on computing at CMS.
 * Reconstruction
 ** DONE Muons
    CLOSED: [2012-01-18 Wed 16:01]
@@ -40,12 +48,16 @@
 ** Would be nice to have some diagrams illustrating the QCD kinematics
 
 * SUSY Section
-** TODO ALL!
+** DONE ALL!
+   CLOSED: [2012-02-13 Mon 22:16]
+   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
 * Limits
 ** TODO Limits section: signal systematics size (in the note I hope)
 ** TODO PL and CLs plots
 ** TODO PL limit
 ** TODO SMS limit
 ** TODO Statistical background
-** TODO Efficiency plots
+** DONE Efficiency plots
+   CLOSED: [2012-02-13 Mon 22:16]
+   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
 ** TODO SMS ensure this section makes sense
