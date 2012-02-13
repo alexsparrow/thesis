@@ -139,20 +139,40 @@ Supersymmetric theories are therefore not subject to the Coleman-Mandula
 theorem, but instead to the Haag, Lopuszanski, Sohnius theorem. This will not be
 stated explicitly but it places restrictions on the form of the \ac{SUSY}
 algebra. These have the schematic form \cite{susy_primer}:
-\begin{eqnarray*}
+\begin{eqnarray}
 \left\{Q,Q^{\dagger}\right\} = P^{\mu}\\
 \left\{Q,Q\right\} = \left\{Q^{\dagger}, Q^{\dagger}\right\} = 0\\
-\left[P^{\mu}, Q\right] = \left[P^{\mu}, Q^{\dagger}\right] = 0
-\end{eqnarray*}
+\left[P^{\mu}, Q\right] = \left[P^{\mu}, Q^{\dagger}\right] = 0\label{eqn:susy_commutator}
+\end{eqnarray}
 where spinor indices have been dropped.
 
 \subsection{Consequences}
+\label{sec:consequences}
 This seemingly simple addition brings with it a very rich phenomenology. Most
 importantly, from the point of view of experimental physics, it predicts a large
-number of new particles. These ``superpartners'' are related to their \ac{SM}
-counterparts by the \ac{SUSY} symmetry transformation. These partner and
-superpartner are paired into ``supermultiplets''. These associate a \ac{SM}
-boson or fermion with a supersymmetric fermion or boson respectively.
+number of new particles. Each particle in a supersymmetric theory is paired with
+another in a so-called ``supermultiplet''. These particles are said to be
+``superpartners'' of one another and are related by a supersymmetry
+transformation.
+
+It can be shown (see \cite{susy_primer}) that each supermultiplet should contain
+an equal number of bosonic and fermionic degrees of freedom. This allows the
+range of possible supermultiplets to be enumerated. The simplest such
+possibility must contain a spinor with two fermionic degrees of freedom. This
+implies that it should also contain two bosonic degrees of freedom: either as
+two real scalar fields or a single complex scalar field. This pairing is known
+as a \emph{chiral supermultiplet}.
+
+Imagining next a supermultiplet containing a massless spin 1 boson (these have
+two helicity states, and thus two bosonic degrees of freedom). This must be
+paired with a single massless spinor with two fermionic degrees of freedom. This
+must have \spinhalf (a \spinthreetwo particle would would cause renormalisation
+problems). This pairing is known as a \emph{vector supermultiplet}.
+
+Supersymmetry therefore requires the placing of all \ac{SM} particles into one
+of these supermultiplets. Inevitably, this would require the existence of a
+whole range of additional particles - each possessing a spin differing by
+$\frac{1}{2}$ from its \ac{SM} counterpart.
 
 In addition to having a certain theoretical elegance, this turns out to address
 the major problems pointed out in
@@ -166,6 +186,11 @@ contributions - effectively solving the hierarchy problem.
 A certain class of supersymmetric theories also contain a solution to the Dark
 Matter puzzle. Such theories contain a \acl{LSP} which appears to match the
 characteristics of a \ac{WIMP}.
+
+Finally, another aspect of \ac{SUSY} theories that is often touted as an
+advantage is that it allows the gauge couplings for the electromagnetic, weak
+and strong forces to unify at a certain energy scale. The running of the inverse
+couplings is shown in Figure~\ref{fig:susy_gauge_unification}.
 
 \subsection{\Rparity}
 When it comes to writing down a supersymmetric Lagrangian, it is possible to
@@ -204,10 +229,67 @@ the Dark Mater problem.
 \end{figure}
 
 \subsection{\ac{SUSY} Breaking}
-Things are never quite so simple unfortunately. By placing superpartners into
-supermultiplets with their \ac{SM} counterparts, they masses identical to the
-already observed \ac{SM} particles.
+Things are never quite so simple unfortunately. Examining the commutator in
+Eqn~\ref{eqn:susy_commutator}, it is seen that the \ac{SUSY} generator \Qa
+commutes with $P^{\mu}$ and hence also $P^{\mu}P_{\mu} = m^2$. The consequence
+of this is that superpartners should have equal mass. This is clearly at odd
+with experiment, since no additional superpartners have so far been
+obsevered.
+
+If supersymmetry is to be a symmetry of the universe, some additional mechanism
+must be incorporated into the theory to explain these differing masses. Taking
+inspiration from \ac{EWSB}, the supersymmetry is said to be spontaneously
+broken. Supersymmetry would therefore be respected by the Lagrangian but not by
+the vacuum. This would effectively ``hide'' supersymmetry at lower mass scales
+(i.e. those so far explored by experiment). There are several proposed
+mechanisms for supersymmetry breaking. These will be discussed more fully at a
+later point.
+
+Throughout, discussion will be restricted to so-called ``soft'' \ac{SUSY}
+breaking. Having invoked supersymmetry initially as a solution to the hierarchy
+problem, it is desirable that the breaking of \ac{SUSY} not prevent the
+cancellations which stabilise the Higgs mass. This restricts \ac{SUSY} breaking
+terms in the Lagrangian to ones with positive mass dimension
+\cite{susy_primer}. These is known as soft \ac{SUSY} breaking.
 
 
+\section{\acl{MSSM}}
+The \acl{MSSM} is a minimal extension of the \ac{SM} to include soft
+\ac{SUSY}-breaking terms. Since the mechanism and dynamics of this breaking are
+unknown, the theory introduces 120 additional parameters to cover all possibly
+breaking terms. This proves extraordinarily problematic from the point of view
+of experimental \ac{SUSY} searches. In Chapter~\ref{sec:framework}, it will be
+shown how simplified models can offer a much simpler context for interpretation
+of results.
 
-\section{\ac{MSSM}}
+We shall now discuss the particle content of the \ac{MSSM}, a summary of which
+is presented in Table~\ref{tbl:susy_particles}. The basic forms of allowed
+supermultiplets were discussed in Section~\ref{sec:consequences}. Each fermion
+in the \ac{SM} is placed into a chiral supermultiplet with a \spinzero
+``sfermion''. These are written with a tilde, e.g. $\PSe_L$ for the
+``selectron''. Left-handed and right-handed components must lie in separate
+chiral supermultiplets. It is important to note that the subscripts on the
+sfermions indicate the chirality of the partner fermion. Being \spinzero bosons,
+the sfermions are not chiral.
+
+Similarly the \ac{SM} gauge bosons are placed into gauge supermultiplets. The
+corresponding superpartners are referred to generically as ``gauginos'' or more
+specifically as ``Winos'', ``Bino'', ``gluinos''.
+
+For the Higgs field, one might expect it to be placed into a single chiral
+supermultiplet with a \spinhalf superpartner. This turns out not to be possible
+for two reasons. Firstly, for reasons beyond the scope of this discussion, such
+a theory would suffer a gauge anomaly after quantisation. Secondly, the
+structure of the Yukawa couplings (see Section~\ref{sec:theory_yukawa}) actually
+requires two Higgs supermultiplets to give mass to up and down type quarks. The
+complex scalar doublets with hypercharge, $Y=\pm\frac{1}{2}$ will be referred to
+as $\PHiggs_u$ and $\PHiggs_d$ respectively. The weak isospin components of
+these are then $\PHiggs_u^+$, $\PHiggs_u^0$, $\PHiggs_d^0$ and $\PHiggs_d^-$
+where the superscript indicates electric charge.
+
+The fermionic superpartners of each Higgs field, the Higgsinos, are then denoted
+$\PSHiggs_u$ and $\PSHiggs_d$. The physical \ac{SM} Higgs is taken to be a
+linear combination of the neutral components $\PHiggs_u^0$ and $\PHiggs_d^0$.
+
+\input{tables/susy_particles}
+\input{tables/susy_gauginos}
