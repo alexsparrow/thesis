@@ -244,7 +244,6 @@ the solenoid.
 \subsubsection{\acl{HE}}
 
 
-\subsection{Magnet}
 \subsection{Muon Chambers}
 As has already been said, sensitive detection of muons is one of \ac{CMS}'s key
 design goals. Since the effect of radiative losses in the tracker is much less
@@ -312,3 +311,72 @@ storage technology over the last few decades, such storage capacities are
 clearly infeasible both in terms of capacity and \ac{IO} requirements. For these
 reasons, a system capable of quickly rejecting a very large fraction of
 collisions is required. This is known as the trigger.
+
+The trigger at \ac{CMS} is split into two stages. The first is known as the
+\ac{L1T}. Since it must operate at the full \ac{LHC} bunch-crossing frequency,
+it is implemented almost entirely within electronic logic - either programmable
+devices (principally \acp{FPGA}) or custom designed \acp{ASIC}. This is designed
+to reduce the rate to \unit{100}{\kilo\hertz}. This forms the input for the
+second stage, the \ac{HLT}. Due to the much lower rate, this is implemented
+instead in software running in a computing farm. A key difference between the
+two trigger stages is that the \ac{HLT} has access to a full readout of the
+detector. This is similar to the reconstruction used for offline analysis and
+allows much more sophisticated trigger decisions to be made.
+
+The \ac{L1T} must produce a trigger decision with minimal latency. This latency
+is chiefly limited by the size of the pipeline on the \ac{APV25} chip used to
+readout from the silicon strip tracker. The \ac{APV25} samples the voltage read
+out from the silicon strips at \unit{25}{\nano\second} intervals. The depth of
+this pipeline is 192 samples, after which the readout is discarded if a trigger
+accept signal has not been received. This constrains the \ac{L1T} to provide a
+decision within $\approx \unit{3.2}{\micro\second}$.
+
+The \ac{L1T}, unlike the \ac{HLT} is greatly limited in the detector information
+it may use for a trigger decision. It is also limited in the complexity of the
+algorithms it may use to make these decisions. This is due both to latency and
+bandwidth restrictions. Another key distinction with respect to the \ac{HLT} is
+that the \ac{L1T} does not have access to tracking information. This prevents,
+for instance, any distinction between electrons and photons. The challenge for
+the \ac{L1T} is therefore not only to make a fast decision using limited
+information from the detector, but also to ensure that potentially interesting
+events are retained and passed onto the \ac{HLT} for more thorough analysis.
+
+The structure of the \ac{L1T} is shown in Figure~TODO. At the top sits the
+\ac{GT}. This receives objects from the two trigger subsystems: the
+\ac{GCT} and \ac{GMT}. Objects are received, ranked according to their energy
+and quality along with their coordinates in $\eta$ and $\phi$. These objects are
+fed to 128 reprogrammable algorithms, each producing a trigger decision. This
+trigger decision is then compared with a mask in order to give a single
+decision. This mask may be altered as desired to achieve different data-taking
+objectives. The final trigger decision is then sent to the Timing, Trigger and
+Control subsystem in order to initiate a readout of the detector.
+
+The calorimeter trigger subsystem begins with the \ac{TPG}. This sums energy
+deposits from the \ac{ECAL} and \ac{HCAL} into trigger towers. This information
+is received by the \ac{RCT}. This system is tasked with finding electron/photon
+candidates and further summing the trigger tower energy measurements into
+\ac{RCT} regions. These consist of $4\times 4$ trigger towers (except in the
+\ac{HF} where only a single trigger tower is included). The \ac{RCT} also
+records a ``tau-veto'' bit, used to distinguish jets from hadronic tau decays.
+
+The output of the \ac{RCT} is then processed by the \ac{GCT}. The \ac{GCT} logic
+is implemented entirely in \acp{FPGA}. The \ac{GCT} has a number of
+responsibilities. Firstly, it sorts the list of electron/photon candidates and
+passes the four highest ranked objects to the \ac{GT}. Secondly, it
+performs a simpled jet-finding algorithm on the energy regions received from the
+\ac{RCT}. This identifies local maxima as jets and distinguishes between
+\emph{forward}, \emph{central} and \emph{tau} jets. The last category includes
+jets for which none of the constituent regions has the aforementioned tau veto
+bit set. The four highest ranked of each category are forwarded to the \ac{GCT}.
+
+The final task of the \ac{GCT} is to form global energy sums. These are the
+total transverse energy, missing transverse energy, jet counts and \HT (the
+scalar sum of the jet energies). These too are forwarded to the \ac{GT} to be
+used in the trigger decision.
+
+The muon trigger receives input from all three muon subdetectors: \acp{RPC},
+\acp{CSC} and \acp{DT}. These are integrated in the \ac{GMT} which also receives
+isolation and minimum ionising particle information from the \ac{GCT} for each
+calorimeter region. The muons received from each subdetector are matched and
+sorted by transverse momentum and quality. The four highest rank candidates are
+forwarded to the \ac{GT}.
