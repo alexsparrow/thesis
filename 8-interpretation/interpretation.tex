@@ -54,9 +54,8 @@ Models'', chosen by theorists to represent a wide range of possible \ac{NP}
 theories, categorised according to their phenomenological properties.
 
 \section{Statistical Methods}
-\subsection{Background}
 
-\subsection{Modelling the Single Lepton Analysis}
+\section{Modelling the Single Lepton Analysis}
 As described in the previous section, the core component of many statistical
 interpretations is the construction of an appopriate likelihood function. The
 likelihood must model all statistical and systematic effects and is thus highly
@@ -64,7 +63,7 @@ dependent on the experiment. The situation is considerably complicated when
 shape information is included, for which relevant bin-to-bin correlations must
 be included.
 
-\subsubsection{Notation}
+\subsection{Notation}
 It will be helpful to define some notation. In the following, a subscript index
 is assumed to run over the binned variable in the analysis
 (i.e. \STlep). All nuisance parameters are written as $\nu^{(i)}$ where the
@@ -75,7 +74,7 @@ given nuisance parameter and are written $x(\nu)$. The nominal value of this
 variable, being that which is measured in \ac{MC} or in real data is denoted
 $\bar{x}$.
 
-\subsubsection{The Likelihood Function}
+\subsection{The Likelihood Function}
 In constructing the likelihood, we start by writing down the number of events
 expected for each bin (assigned the index $i=0,1,2...$):
 \begin{equation}
@@ -119,7 +118,7 @@ $x$
   each systematic $\alpha$.
 \end{itemize}
 
-\subsubsection{The Signal Yield}
+\subsection{The Signal Yield}
 The signal yield per bin is constructed as follows
 \begin{equation}
 \NSigi = \mu \times \epsilon_i(\nu^{(\alpha)}) \times \sigma \times L \times \nu^{\textrm{lumi}}
@@ -135,7 +134,7 @@ with
 estimate of the integrated luminosity.
 \end{itemize}
 
-\subsubsection{Background Prediction}
+\subsection{Background Prediction}
 The background prediction per bin is then written as
 \begin{equation}
 \NBkgi = \RCSi(\nu_i^{(\alpha)}, \nu^{(\beta)}) \times \NControli(\nu_i^{(\gamma)})
@@ -151,7 +150,7 @@ where
 ($L_P > 0.3$)
 \end{itemize}
 
-\subsubsection{Parameterising Systematics}
+\subsection{Parameterising Systematics}
 In reality, it is almost always impossible to obtain a full functional form for
 a variable $x$ (e.g. \RCSi, \NControli) in terms of a set of nuisance parameters
 $\nu^{(\alpha)}$. Writing the Taylor expansion of $x(\nu^{(\alpha)})$ for two terms to
@@ -335,7 +334,7 @@ Equation~\ref{eqn:fSMideal}.
                   &\approx& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}
 \end{eqnarray*}
 
-\subsubsection{Uncertainties on \NControli}
+\subsection{Uncertainties on \NControli}
 The dominant systematic uncertainty relating to the \LPcontrol region yield
 arises from the limited statistics of the sample. This is especially true at
 high \STlep. Accordingly, a nuisance parameter is added to the likelihood and
@@ -365,8 +364,6 @@ not included in the final calculations. The contribution is seen to be small and
 unnecessary complication of the likelihood function tends to increase the
 processing time, especially when running a large number of toy experiments.
 
-
-\section{Results}
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:inter_pl_80_240_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_240}}\quad
@@ -380,54 +377,31 @@ processing time, especially when running a large number of toy experiments.
 \begin{figure}
 \centering
 \subfloat[Statistical Uncertainties Only]{
-  \label{fig:inter_pl_80_240_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_240_bgsysts_no_sigsysts_no_sigcon_no}}\quad
+  \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_no_sigsysts_no_sigcon_no}}\quad
 \subfloat[Background Systematics]{
-  \label{fig:inter_pl_80_240_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_240_bgsysts_yes_sigsysts_no_sigcon_no}}\\
+  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_no_sigcon_no}}\\
 \subfloat[Signal Systematics]{
-  \label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_240_bgsysts_yes_sigsysts_yes_sigcon_no}}\quad
+  \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_no}}\quad
 \subfloat[Signal Contamination]{
-  \label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_240_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
+  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
 \subfloat[Muon Channel Only]{
-  \label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_80_240_bgsysts_yes_sigsysts_yes_sigcon_yes}}
-\caption[]{}
-\label{fig:cls1}
-\end{figure}
-
-\begin{figure}
-\centering
-\subfloat[Statistical Uncertainties Only]{
-  \label{fig:inter_pl_80_240_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_no_sigsysts_no_sigcon_no}}\quad
-\subfloat[Background Systematics]{
-  \label{fig:inter_pl_80_240_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_no_sigcon_no}}\\
-\subfloat[Signal Systematics]{
-  \label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_no}}\quad
-\subfloat[Signal Contamination]{
-  \label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
-\subfloat[Muon Channel Only]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
+  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
 \caption[]{}
 \label{fig:cls2}
 \end{figure}
 
+\section{Results}
+The likelihood model is used to provide interpretation within the context of two
+\ac{NP} models: \ac{mSUGRA} and the \ac{T2tt} simplified model described in
+Section~TODO.
 
-\begin{figure}
-\centering
-\subfloat[]{\label{fig:inter_t2tt_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_250}}
-\subfloat[]{\label{fig:inter_t2tt_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_350}}\\
-\subfloat[]{\label{fig:inter_t2tt_mu_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_450}}
-\subfloat[]{\label{fig:inter_t2tt_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_total}}
-\caption[]{}
-\label{fig:inter_t2tt_mu}
-\end{figure}
-
-\begin{figure}
-\centering
-\subfloat[]{\label{fig:inter_t2tt_el_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_250}}
-\subfloat[]{\label{fig:inter_t2tt_el_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_350}}\\
-\subfloat[]{\label{fig:inter_t2tt_el_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_450}}
-\subfloat[]{\label{fig:inter_t2tt_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_total}}
-\caption[]{}
-\label{fig:inter_t2tt_el}
-\end{figure}
+\subsection{\ac{mSUGRA}}
+The efficiency per \STlep bin of the analysis selection as a function of the
+\ac{mSUGRA} parameter space is shown in Figures~\ref{fig:inter_msugra_mu} and
+\ref{fig:inter_msugra_el} for muons and electrons respectively. The ``holes'' in
+the \ac{mSUGRA} sample are due to incomplete data samples at the time of
+publication. The relation of the \STlep variable to the model parameters is
+readily apparent.
 
 \begin{figure}
 \centering
@@ -450,12 +424,46 @@ processing time, especially when running a large number of toy experiments.
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\textwidth]{fig/t2tt_limit}
+\includegraphics[width=\textwidth]{fig/RA4_ExclusionLimit_tanb10}
+\end{figure}
+
+\subsection{\ac{T2tt}}
+Similary the efficiency per \STlep bin with respect to the \ac{T2tt} parameter
+space is shown in Figures~\ref{fig:inter_t2tt_mu} and \ref{fig:inter_t2tt_el}
+respectively.
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:inter_t2tt_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_250}}
+\subfloat[]{\label{fig:inter_t2tt_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_350}}\\
+\subfloat[]{\label{fig:inter_t2tt_mu_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_450}}
+\subfloat[]{\label{fig:inter_t2tt_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_total}}
+\caption[]{}
+\label{fig:inter_t2tt_mu}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\textwidth]{fig/RA4_ExclusionLimit_tanb10}
+\centering
+\subfloat[]{\label{fig:inter_t2tt_el_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_250}}
+\subfloat[]{\label{fig:inter_t2tt_el_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_350}}\\
+\subfloat[]{\label{fig:inter_t2tt_el_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_450}}
+\subfloat[]{\label{fig:inter_t2tt_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_total}}
+\caption[]{}
+\label{fig:inter_t2tt_el}
 \end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}
+\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}
+\caption[]{}
+\label{fig:inter_t2tt}
+\end{figure}
+
+\begin{figure}
+
+\end{figure}
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../thesis"
