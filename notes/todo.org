@@ -7,11 +7,21 @@
    CLOSED: [2012-02-13 Mon 22:15]
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
 Mostly done!
+** TODO More on phenomenology
+* Theoretical Framework
+** TODO SMS ensure this section makes sense
+
+** TODO mSUGRA
 * Detector
 ** TODO HCAL
-** TODO DAQ
-** TODO HLT/L1
+** DONE DAQ
+   CLOSED: [2012-02-20 Mon 19:38]
+   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:38]
+** DONE HLT/L1
+   CLOSED: [2012-02-20 Mon 19:39]
+   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
 *** Mostly done. Still need something on computing at CMS.
+
 * Reconstruction
 ** DONE Muons
    CLOSED: [2012-01-18 Wed 16:01]
@@ -46,6 +56,8 @@ Mostly done!
 ** TODO Wpol conclusion
 ** Would be nice to have the JEC uncertainty ratios for electrons too
 ** Would be nice to have some diagrams illustrating the QCD kinematics
+** TODO Comparison with blackhat
+** TODO Reference SM section for chirality + possibly equiv theorem
 
 * SUSY Section
 ** DONE ALL!
@@ -53,11 +65,16 @@ Mostly done!
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
 * Limits
 ** TODO Limits section: signal systematics size (in the note I hope)
-** TODO PL and CLs plots
+** DONE PL and CLs plots
+   CLOSED: [2012-02-20 Mon 19:39]
+   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
 ** TODO PL limit
-** TODO SMS limit
-** TODO Statistical background
+** DONE SMS limit
+   CLOSED: [2012-02-20 Mon 19:39]
+   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
+** DONE Statistical background
+   CLOSED: [2012-02-20 Mon 19:39]
+   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
 ** DONE Efficiency plots
    CLOSED: [2012-02-13 Mon 22:16]
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
-** TODO SMS ensure this section makes sense
