@@ -241,7 +241,39 @@ compact design and necessitates the placement of a ``tail catcher'' outside of
 the solenoid.
 
 \subsubsection{\acl{HB}}
+The \ac{HB} comprises 36 azimuthal wedges, with 18 in each half barrel. Each
+wedge consists of alternating layers of brass absorber plates and plastic
+scintillators. The light from these plates is then carried via wavelengthing
+shifting fibres to a \ac{HPD} for readout. The number of interaction lengths
+increases with polar angle, from 5.82 at $90\degrees$ to 10.6 at $|\eta|=1.3$
+\cite{hcal_design}.
+
 \subsubsection{\acl{HE}}
+The \ac{HE} covers the rapidity range $1.3 < |\eta| < 3$ and receives a larger
+radiation flux than the \ac{HB}. Each endcap consists of 36 wedges, and
+wavelength shifting fibres are once again used to take like from plastic
+scintillators to \acp{HPD}. Including the \ac{ECAL}, the \ac{HE} depth is
+equivalent to $\approx 10$ interaction lengths.
+
+\subsubsection{\acl{HO}}
+The \ac{HO} or ``tail catcher'' provides increased sampling depth in the
+rapidity region $|\eta| < 1.3$ where the \ac{HB} and \ac{EB} do not provide
+sufficient containment. Since the \ac{HO} lies outside the solenoid, its design
+is constrained by that of the muon chambers - with 5 rings in $\eta$. The
+solenoid coil provides additional absorption, giving the calorimeter system a
+minimum depth of 11.6 interaction lengths.
+
+\subsubsection{\acl{HF}}
+The \ac{HF} is positioned in the rapidity range $|\eta|>3$ and consequently must
+endure a much larger particle flux - approximately \unit{760}{\GeV} per
+proton-proton interaction (versus $\approx \unit{100}{\GeV}$ for the rest of the
+detector). Radiation hardness was thus a leading consideration in its design.
+
+Quartz fibres are interleaved between steel absorbers. Shower particles above
+the Cherenkov threshold ($E \geq \unit{190}{\keV}$ for electrons) produce
+Cherenkov light. This is routed to the rear of the calorimeter and readout by
+\acp{PMT}. The \ac{HF} is most sensitive to the electromagnetic component of the
+shower.
 
 
 \subsection{Muon Chambers}
