@@ -79,3 +79,5 @@ Mostly done!
 ** DONE Efficiency plots
    CLOSED: [2012-02-13 Mon 22:16]
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
+
+** TODO Why were all the backgrounds combined into 1?
