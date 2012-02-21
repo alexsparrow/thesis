@@ -86,6 +86,7 @@ increasing funtion, its maxima coincide with the maxima of $\likelihood$.
 
 
 \subsection{Profile Likelihood and Wilk's Theorem}
+\label{sec:inter_profile_likelihood}
 The likelihood function for a complex experiment may depend on a large number of
 free parameters. A number of these may be introduced to describe experimental
 effects such as backgrounds or uncertainties which are not directly relevant to
@@ -188,6 +189,7 @@ is the one-sided profile likelihood \cite{cl_computation, modified_frequentist, 
 
 
 \section{Modelling the Single Lepton Analysis}
+\label{sec:inter_1lepton}
 As described in the previous section, the core component of many statistical
 interpretations is the construction of an appopriate likelihood function. The
 likelihood must model all statistical and systematic effects and is thus highly
@@ -496,7 +498,24 @@ not included in the final calculations. The contribution is seen to be small and
 unnecessary complication of the likelihood function tends to increase the
 processing time, especially when running a large number of toy experiments.
 
-\begin{figure}
+\section{Validation}
+To validate the correct working of the model, a number of cross-checks were
+performed. Firstly, the Profile Likelihood and \CLs methods were compared and
+found to agree. In general, the \CLs method is expected to be more conservative
+in convering the full range of the nuisance parameters in the model.
+
+To see how the Profile Likelihood and \CLs results change with modifications to
+the likelihood function, a representative point in the \ac{mSUGRA} plane are
+chosen. These are $(m_0, m_{\frac{1}{2}}) = (80, 400)$, close to the edge of the
+region excluded by data (the point $(m_0, m_{\frac{1}{2}}) = (80, 240)$ can be
+seen in Section~\ref{sec:app_inter_validation}).
+
+The Profile Likelihood function for this point can be seen in
+Figure~\ref{fig:inter_pl}. It can be seen that adding the various systematic
+effects to the model, and also removing the electron channel appear to have the
+expected effect on the resulting upper limit.
+
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_400}}\quad
 \subfloat[]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_400}}
@@ -504,7 +523,11 @@ processing time, especially when running a large number of toy experiments.
 \label{fig:inter_pl}
 \end{figure}
 
-\begin{figure}
+The distributions of the test statistic used to calculate \CLs are shown in
+Figure~\ref{fig:inter_cls}. Again the effects of adding systematic parameters
+and removing the electron channel appears to have the expected effect on
+\CLs.
+\begin{figure}[h!]
 \centering
 \subfloat[Statistical Uncertainties Only]{
   \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_no_sigsysts_no_sigcon_no}}\quad
@@ -533,7 +556,7 @@ the \ac{mSUGRA} sample are due to incomplete data samples at the time of
 publication. The relation of the \STlep variable to the model parameters is
 readily apparent.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:inter_msugra_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_250}}
 \subfloat[]{\label{fig:inter_msugra_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_350}}\\
@@ -543,7 +566,7 @@ readily apparent.
 \label{fig:inter_msugra_mu}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:inter_msugra_el_eff250}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_250}}
 \subfloat[]{\label{fig:inter_msugra_el_eff350}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_350}}\\
@@ -554,13 +577,16 @@ readily apparent.
 \end{figure}
 
 For consistency with other \ac{SUSY} searches at the \ac{LHC}, a limit has been
-set using the \CLs method described in Section~\ref{sec:inter_cls}. Whilst
-it is possible, to set an upper limit on the signal strength parameter, $\mu$,
-this becomes highly computationally intensive. Instead, a simple exclusion was
+set using the \CLs method described in Section~\ref{sec:inter_cls}. Whilst it is
+possible, to set an upper limit on the signal strength parameter, $\mu$, this
+becomes highly computationally intensive. Instead, a simple exclusion was
 produced assuming \ac{NLO} cross-sections. This is shown in
-Figure~\ref{fig:inter_msugra_exclusion}.
+Figure~\ref{fig:inter_msugra_exclusion}. All terms discussed in
+Section~\ref{sec:inter_1lepton} have been included. The expected limit and $\pm
+1\sigma$ bands were evaluated by setting the observations for each bin to be
+exactly that predicted from data.
 
-\begin{figure}
+\begin{figure}[h!]
 \includegraphics[width=\textwidth]{fig/RA4_ExclusionLimit_tanb10}
 \caption[]{}
 \label{fig:inter_msugra_exclusion}
@@ -591,16 +617,23 @@ respectively.
 \end{figure}
 
 
+For the \ac{T2tt} result it is desirable to have not only an exclusion plot, but
+an upper limit on the cross-section. To reduce computation time, the limit was
+set using a Profile Likelihood method (see
+Section~\ref{sec:inter_profile_likelihood}). In addition, the uncertainties on
+the signal efficiency and the signal contamination were not included. The upper
+limit on the \ac{T2tt} cross-section is shown in
+Figure~\ref{fig:inter_t2tt_limit}. The contours show this limit as a function of
+the expected stop production cross-section calculated using Prospino (TODO check
+and cite). Figure~\ref{fig:inter_t2tt_limit_1d} shows the upper limit in
+one-dimension for $M_{LSP} = \unit{50}{\GeV}$.
+
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}
-\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}
+\subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}}
+\subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}}
 \caption[]{}
 \label{fig:inter_t2tt}
-\end{figure}
-
-\begin{figure}
-
 \end{figure}
 
 %%% Local Variables:
