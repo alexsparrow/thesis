@@ -175,8 +175,15 @@ where the null hypothesis now represents a background-only ($b$) scenario, and
 the alternate, signal-plus-background ($s+b$). Using the \CLs to test the
 alternate hypothesis, instead of a p-value, penalises cases where the test
 statistic provides little sensitivity - since $CL_b$ will be large. For a 95\%
-exclusion, $\CLs < 0.05$ is required, as before.
+exclusion, $\CLs < 0.05$ is required, as before. \CLs may also be used to derive
+an upper limit on some parameter by scanning through different values of the
+parameter of interest in order to obtain a 95\% upper limit. This is known as
+``hypothesis test inversion''.
 
+Several additional details are relevant to the discussion here. Firstly, the toy
+experiments used to generate distributions of the test statistic redice values
+of the nuisance parameters around their expected values. The test statistic used
+is the one-sided profile likelihood \cite{cl_computation, modified_frequentist, atlas_cms_higgs}.
 
 
 
