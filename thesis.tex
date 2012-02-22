@@ -34,6 +34,7 @@ pdfauthor = {\textcopyright\ Alex Sparrow}
 \begin{mainmatter}
   \linenumbers
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
+  \input{introduction}
   \import{1-sm/}{sm}
   \import{2-susy/}{susy}
   \import{3-framework/}{framework}
@@ -42,7 +43,7 @@ pdfauthor = {\textcopyright\ Alex Sparrow}
   \import{6-wpol/}{wpol}
   \import{7-susysearch/}{susysearch}
   \import{8-interpretation/}{interpretation}
-
+  \input{conclusion}
   %% To ignore a specific chapter while working on another,
   %% making the build faster, comment it out like this:
   %\input{chap4}
