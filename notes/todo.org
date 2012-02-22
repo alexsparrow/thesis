@@ -81,3 +81,5 @@ Mostly done!
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
 
 ** TODO Why were all the backgrounds combined into 1?
+** TODO mSUGRA plot: make clear tanbeta and mu values
+** TODO Resolve language mSUGRA <-> CMSSM
