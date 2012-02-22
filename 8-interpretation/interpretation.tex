@@ -58,7 +58,7 @@ theories, categorised according to their phenomenological properties.
 Consider some statistical model believe to describe a set of experimental data
 and depdendent on a set of parameters, $\theta$. The likelihood for given values
 of $\theta$ and given a set of experimental observations $X$, is the probability
-of observing $X$ given $\theta$. Considered as a function of the parameter
+of observing $X$ given $\theta$ \cite{statistical_methods}. Considered as a function of the parameter
 $\theta$ given experimental measurements, $X$,
 \begin{equation}
 \likelihood\left(\theta|X\right) = P\left(X|\theta\right)
@@ -505,10 +505,11 @@ found to agree. In general, the \CLs method is expected to be more conservative
 in convering the full range of the nuisance parameters in the model.
 
 To see how the Profile Likelihood and \CLs results change with modifications to
-the likelihood function, a representative point in the \ac{mSUGRA} plane are
-chosen. These are $(m_0, m_{\frac{1}{2}}) = (80, 400)$, close to the edge of the
-region excluded by data (the point $(m_0, m_{\frac{1}{2}}) = (80, 240)$ can be
-seen in Section~\ref{sec:app_inter_validation}).
+the likelihood function, a representative point in the \ac{mSUGRA} plane
+($\tan\beta=10$, $A_0=0$, $\mu>0$) are chosen. These are $(m_0, m_{\frac{1}{2}})
+= (80, 400)$, close to the edge of the region excluded by data (the point $(m_0,
+m_{\frac{1}{2}}) = (80, 240)$ can be seen in
+Section~\ref{sec:app_inter_validation}).
 
 The Profile Likelihood function for this point can be seen in
 Figure~\ref{fig:inter_pl}. It can be seen that adding the various systematic
@@ -545,7 +546,7 @@ and removing the electron channel appears to have the expected effect on
 
 \section{Results}
 The likelihood model is used to provide interpretation within the context of two
-\ac{NP} models: \ac{mSUGRA} and the \ac{T2tt} simplified model described in
+\ac{NP} models: \ac{mSUGRA} and the \T2tt simplified model described in
 Section~TODO.
 
 \subsection{\ac{mSUGRA}}
@@ -592,8 +593,8 @@ exactly that predicted from data.
 \label{fig:inter_msugra_exclusion}
 \end{figure}
 
-\subsection{\ac{T2tt}}
-Similary the efficiency per \STlep bin with respect to the \ac{T2tt} parameter
+\subsection{\T2tt}
+Similary the efficiency per \STlep bin with respect to the \T2tt parameter
 space is shown in Figures~\ref{fig:inter_t2tt_mu} and \ref{fig:inter_t2tt_el}
 respectively.
 \begin{figure}
@@ -617,12 +618,12 @@ respectively.
 \end{figure}
 
 
-For the \ac{T2tt} result it is desirable to have not only an exclusion plot, but
+For the \T2tt result it is desirable to have not only an exclusion plot, but
 an upper limit on the cross-section. To reduce computation time, the limit was
 set using a Profile Likelihood method (see
 Section~\ref{sec:inter_profile_likelihood}). In addition, the uncertainties on
 the signal efficiency and the signal contamination were not included. The upper
-limit on the \ac{T2tt} cross-section is shown in
+limit on the \T2tt cross-section is shown in
 Figure~\ref{fig:inter_t2tt_limit}. The contours show this limit as a function of
 the expected stop production cross-section calculated using Prospino (TODO check
 and cite). Figure~\ref{fig:inter_t2tt_limit_1d} shows the upper limit in
