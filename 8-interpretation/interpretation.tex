@@ -396,7 +396,7 @@ For uncertainties of the first kind, independent nuisance paramters must be
 included for each analysis bin. For uncertainties of the second kind, a
 single nuisance parameter will be included for all bins. This achieves the
 desired correlation. A full list of the nuisance parameters used is shown in
-Table~\ref{tbl:systematic_parameters}.
+Table~\ref{tbl:inter_systematic_parameters}.
 
 \input{tables/systematic_parameters}
 
@@ -498,6 +498,55 @@ not included in the final calculations. The contribution is seen to be small and
 unnecessary complication of the likelihood function tends to increase the
 processing time, especially when running a large number of toy experiments.
 
+\subsection{Signal Systematics}
+As can be seen in Table~\ref{tbl:inter_systematic_parameters}, a number of
+nuisance parameters are assigned for systematic uncertainties affecting the
+expected signal yield.
+
+Both the luminosity estimate and the trigger efficiency are subject to
+uncertainties which would effect the expected signal yield. Uncertainties of 4\%
+and 1\% are assigned.
+
+The signal efficiency will also be affected by the choice of \acp{PDF} in the
+simulated samples and the calculation of the \ac{NLO} cross-sections. Whilst in
+principal these would be expected to vary across the parameter space of a given
+theoretical model, the complexity of the calculation involved in accurately
+evaluating this systematic led us to assign a conservative 10\% systematic.
+
+For the jet energy scale and \MET resolution uncertainty, these are calculated
+as for the background case (see Sections~\ref{sec:susy_jes_uncertainty} and
+\ref{sec:susy_metres_uncertainty}). These are calculated individually for
+different signal hypotheses. As summary of all uncertainties assigned for the
+signal efficiencies, along with their exact or approximate size, is shown in
+Table~\ref{tbl:inter_signal_systematics}.
+
+\input{tables/signal_systematics}
+
+
+\begin{figure}[h!]
+\centering
+\subfloat[]{\label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_400}}\quad
+\subfloat[]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_400}}
+\caption[]{}
+\label{fig:inter_pl}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfloat[Statistical Uncertainties Only]{
+  \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_no_sigsysts_no_sigcon_no}}\quad
+\subfloat[Background Systematics]{
+  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_no_sigcon_no}}\\
+\subfloat[Signal Systematics]{
+  \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_no}}\quad
+\subfloat[Signal Contamination]{
+  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
+\subfloat[Muon Channel Only]{
+  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
+\caption[]{}
+\label{fig:inter_cls}
+\end{figure}
+
 \section{Validation}
 To validate the correct working of the model, a number of cross-checks were
 performed. Firstly, the Profile Likelihood and \CLs methods were compared and
@@ -516,46 +565,18 @@ Figure~\ref{fig:inter_pl}. It can be seen that adding the various systematic
 effects to the model, and also removing the electron channel appear to have the
 expected effect on the resulting upper limit.
 
-\begin{figure}[h!]
-\centering
-\subfloat[]{\label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_400}}\quad
-\subfloat[]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_400}}
-\caption[]{}
-\label{fig:inter_pl}
-\end{figure}
+
 
 The distributions of the test statistic used to calculate \CLs are shown in
 Figure~\ref{fig:inter_cls}. Again the effects of adding systematic parameters
 and removing the electron channel appears to have the expected effect on
 \CLs.
-\begin{figure}[h!]
-\centering
-\subfloat[Statistical Uncertainties Only]{
-  \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_no_sigsysts_no_sigcon_no}}\quad
-\subfloat[Background Systematics]{
-  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_no_sigcon_no}}\\
-\subfloat[Signal Systematics]{
-  \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_no}}\quad
-\subfloat[Signal Contamination]{
-  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
-\subfloat[Muon Channel Only]{
-  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
-\caption[]{}
-\label{fig:inter_cls}
-\end{figure}
+
 
 \section{Results}
 The likelihood model is used to provide interpretation within the context of two
 \ac{NP} models: \ac{mSUGRA} and the \T2tt simplified model described in
 Section~TODO.
-
-\subsection{\ac{mSUGRA}}
-The efficiency per \STlep bin of the analysis selection as a function of the
-\ac{mSUGRA} parameter space is shown in Figures~\ref{fig:inter_msugra_mu} and
-\ref{fig:inter_msugra_el} for muons and electrons respectively. The ``holes'' in
-the \ac{mSUGRA} sample are due to incomplete data samples at the time of
-publication. The relation of the \STlep variable to the model parameters is
-readily apparent.
 
 \begin{figure}[h!]
 \centering
@@ -577,6 +598,20 @@ readily apparent.
 \label{fig:inter_msugra_el}
 \end{figure}
 
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{fig/RA4_ExclusionLimit_tanb10}
+\caption[]{}
+\label{fig:inter_msugra_exclusion}
+\end{figure}
+
+\subsection{\ac{mSUGRA}}
+The efficiency per \STlep bin of the analysis selection as a function of the
+\ac{mSUGRA} parameter space is shown in Figures~\ref{fig:inter_msugra_mu} and
+\ref{fig:inter_msugra_el} for muons and electrons respectively. The ``holes'' in
+the \ac{mSUGRA} sample are due to incomplete data samples at the time of
+publication. The relation of the \STlep variable to the model parameters is
+readily apparent.
+
 For consistency with other \ac{SUSY} searches at the \ac{LHC}, a limit has been
 set using the \CLs method described in Section~\ref{sec:inter_cls}. Whilst it is
 possible, to set an upper limit on the signal strength parameter, $\mu$, this
@@ -587,16 +622,7 @@ Section~\ref{sec:inter_1lepton} have been included. The expected limit and $\pm
 1\sigma$ bands were evaluated by setting the observations for each bin to be
 exactly that predicted from data.
 
-\begin{figure}[h!]
-\includegraphics[width=\textwidth]{fig/RA4_ExclusionLimit_tanb10}
-\caption[]{}
-\label{fig:inter_msugra_exclusion}
-\end{figure}
 
-\subsection{\T2tt}
-Similary the efficiency per \STlep bin with respect to the \T2tt parameter
-space is shown in Figures~\ref{fig:inter_t2tt_mu} and \ref{fig:inter_t2tt_el}
-respectively.
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:inter_t2tt_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_250}}
@@ -607,7 +633,7 @@ respectively.
 \label{fig:inter_t2tt_mu}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:inter_t2tt_el_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_250}}
 \subfloat[]{\label{fig:inter_t2tt_el_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_350}}\\
@@ -617,6 +643,18 @@ respectively.
 \label{fig:inter_t2tt_el}
 \end{figure}
 
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}}
+\subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}}
+\caption[]{}
+\label{fig:inter_t2tt}
+\end{figure}
+
+\subsection{\T2tt}[h!]
+Similary the efficiency per \STlep bin with respect to the \T2tt parameter
+space is shown in Figures~\ref{fig:inter_t2tt_mu} and \ref{fig:inter_t2tt_el}
+respectively.
 
 For the \T2tt result it is desirable to have not only an exclusion plot, but
 an upper limit on the cross-section. To reduce computation time, the limit was
@@ -629,13 +667,7 @@ the expected stop production cross-section calculated using Prospino (TODO check
 and cite). Figure~\ref{fig:inter_t2tt_limit_1d} shows the upper limit in
 one-dimension for $M_{LSP} = \unit{50}{\GeV}$.
 
-\begin{figure}
-\centering
-\subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}}
-\subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}}
-\caption[]{}
-\label{fig:inter_t2tt}
-\end{figure}
+
 
 %%% Local Variables:
 %%% mode: latex
