@@ -2,6 +2,7 @@
 ** DONE ALL!
    CLOSED: [2012-02-13 Mon 22:15]
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
+** TODO Higgs mass
 * SUSY
 ** DONE ALL!
    CLOSED: [2012-02-13 Mon 22:15]
@@ -10,11 +11,12 @@ Mostly done!
 ** TODO More on phenomenology
 ** TODO Previous limits
 * Theoretical Framework
-** TODO SMS ensure this section makes sense
-
+** TODO SMS ensure this section makes sense and is correct
 ** TODO mSUGRA
 * Detector
-** TODO HCAL
+** DONE HCAL
+   CLOSED: [2012-02-23 Thu 11:59]
+   - State "DONE"       from "TODO"       [2012-02-23 Thu 11:59]
 ** DONE DAQ
    CLOSED: [2012-02-20 Mon 19:38]
    - State "DONE"       from "TODO"       [2012-02-20 Mon 19:38]
@@ -65,7 +67,9 @@ Mostly done!
    CLOSED: [2012-02-13 Mon 22:16]
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
 * Limits
-** TODO Limits section: signal systematics size (in the note I hope)
+** DONE Limits section: signal systematics size (in the note I hope)
+   CLOSED: [2012-02-23 Thu 11:08]
+   - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
 ** DONE PL and CLs plots
    CLOSED: [2012-02-20 Mon 19:39]
    - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
@@ -81,5 +85,14 @@ Mostly done!
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
 
 ** TODO Why were all the backgrounds combined into 1?
-** TODO mSUGRA plot: make clear tanbeta and mu values
+** DONE mSUGRA plot: make clear tanbeta and mu values
+   CLOSED: [2012-02-23 Thu 11:08]
+   - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
 ** TODO Resolve language mSUGRA <-> CMSSM
+*** From Alex
+*** TODO More conclusions generally.
+*** TODO Explain origin of PDF uncertainty
+*** TODO Signal contamination in the control region is correlated across bins!
+*** TODO Why were signal systematics not included
+*** TODO Clarify meaning of "expected effect" in the Validation section -> looks reasonably
+*** TODO T2tt needs to be properly described with Feyn diagrams
