@@ -308,6 +308,23 @@ Section~\ref{sec:polarisation}. In particular, at the LHC and for suitably high
 \section{Modelling New Physics}
 \label{sec:framework_susy}
 \subsection{\acl{CMSSM}}
+It was said in Chapter~\ref{sec:susy} that the \ac{MSSM} is problematic
+from the point of view of collider searches due to the extremely large number of
+parameters associated with supersymmetry breaking. In order to make quantitative
+statements about the sensitivity of a given experimental search, a more
+restricted theory must be considered.
+
+One such theory that has often been used is the \ac{CMSSM}. The \ac{CMSSM}
+reduces the parameter space of the \ac{MSSM} to just 4 parameters. Four of these
+are continuous:
+\begin{itemize}
+\item a universal trilinear scalar coupling, $A_0$;
+\item a single scalar mass, $m_0$;
+\item a single gaugino mass, $m_{\frac{1}{2}}$;
+\item $\tan\beta$ where $\beta$ is the ratio of the Higgs' vacuum expectation values and
+\item $sign \mu$ where $\mu$ is the self-coupling of the Higgs field.
+\end{itemize}
+
 
 \subsection{Simplified Models}
 \label{sec:sms}
@@ -345,7 +362,8 @@ in much more complicated theories may be spanned.
 Although the concept of a simplified model is quite general, the discussion here
 will focus on those inspired by \ac{SUSY} or ``\ac{SUSY}-like'' theories, and
 more specifically those relevant to the single-leptonic experimental search
-described in previous chapters.
+described in previous chapters. As will be seen in the next section, these offer
+a much richer set of phenomenologies than those allowed in the \ac{CMSSM}.
 
 % \todo[size=\tiny, linespacing=0.5]{Mention that SMS are used for characterisation of discovery as well as
 %   design of searches}
@@ -365,16 +383,18 @@ Since these topologies are largely inspired by \Rparity conserving \ac{SUSY},
 similar terminology and notation will be used to refer to their particle
 content. This should not be taken to suggest that these topologies are exclusive
 to \ac{SUSY} type theories. For instance, the mass splittings between the
-constituent particles are allowed to be much larger than for the \ac{CMSSM}
-\cite{interpretation_pas}.
+constituent particles are allowed to be much larger than for the \ac{CMSSM}.
+%\cite{interpretation_pas}.
 
-The topologies considered here, can be broken into two classes. The first begin
-with pair-production of neutral, coloured objects analogous to gluinos. The
-second, in analogue to squark pair-production, begins with pair-production of
-charged, coloured objects. In either case, the squark or gluino type particle
-may either decay directly to an \ac{LSP} or proceed via some intermediate
-particles (comparable to the heavy electroweakinos of \ac{SUSY}) - a cascade
-decay.
+The topologies considered here can be split into two categories. The first
+begins with pair-production of a neutral, coloured object, similar to the
+gluino. The second is initiated by production of a charged, coloured object,
+similar to the squark. As for the \ac{CMSSM}, these are expected to be produced
+most abundantly at the \ac{LHC}.
+
+In either case, the squark or gluino type particle may then decay, either
+directly to an \ac{LSP} or proceed via some intermediate particles (comparable
+to the heavy electroweakinos of \ac{SUSY}) - a cascade decay.
 
 The naming convention adopted here gives each model a name, T$x$. For models
 resembling pair production of the gluinos, $x$ will be an odd integer and for
@@ -384,24 +404,23 @@ both particles, one cascade and one direct decay and two cascade decays. The
 squark-type models are similarly labelled 2, 3 and 4 representing the same
 combinations of direct and cascade decays.
 
-% The first topology, T1 arises from pair production of neutral, coloured objects
-% $\tilde{G}$ (the gluinos of \ac{SUSY} theories). The second topology, T2 instead
-% arises from pair production of a charged, coloured particle $\tilde{Q}$
-% (effectively the squark). Both topologies consider only pair-produced
-% superpartners or in other words they conserve an $R$-parity type quantum
-% number. In addition to the superpartners produced in the intial interaction,
-% there are a number of intermediate states $\tilde{X}^0_i$ and
-% $\tilde{X}^{\pm}_j$. In terms of \ac{SUSY} particles these would be analogues of
-% the neutralinos and charginos respectively. Importantly, $\tilde{X}^0_1$ is
-% defined to be the lightest superpartner - a dark matter candidate and the source
-% of missing energy in the events.
+\begin{figure}
+\includegraphics[width=\textwidth]{fig/gluino_sms_decays}
+\caption{Illustration of the gluino decay modes within the T1 simplified model
+  topology. \cite{alves_simplified_2011}}
+\label{fig:gluino_sms_decays}
+\end{figure}
 
-\subsubsection{T1 Simplified Model Topology}
-In the T1 simplified model, the $\tilde{Q}$ are assumed to be heavier than the
-$\tilde{G}$ and thus the only decay mode available is via an off-shell
-$\tilde{Q}$. Three such cascade decays leading to the $\tilde{X}^0_1$ are shown in
-Figure~\ref{fig:gluino_sms_decays}. The first, is a direct 3-body decay to the
-\ac{LSP}. This dominates in the following \ac{mSUGRA} scenarios:
+\subsubsection{Connection to Supersymmetry}
+Considering first the gluino pair-production models
+(Figure~\ref{fig:gluino_sms_decays}), we shall assume that the squarks are
+heavier and therefore kinematically inaccessible. If this were not the case, the
+phenomenology would be better described by the squark-type models.
+
+In such supersymmetric models, the gluino may decay only via an off-shell squark
+\cite{alwall_simplified}. This may be either directly to the LSP or indirectly
+via intermediate states. Direct decays correspond to \ac{SUSY} scenarios where
+either \cite{alves_simplified_2011}:
 \begin{itemize}
 \item $\PSgxzi \approx \PSB$ and the $\PSq_{R}$ are lightest or the $\PSW$ is kinematically
   inaccessible.
@@ -411,31 +430,15 @@ Figure~\ref{fig:gluino_sms_decays}. The first, is a direct 3-body decay to the
   $\PSB$ and $PSW$ are inaccessible.
 \end{itemize}
 
-\begin{figure}
-\includegraphics[width=\textwidth]{fig/gluino_sms_decays}
-\caption{Illustration of the gluino decay modes within the T1 simplified model
-  topology. \cite{alves_simplified_2011}}
-\label{fig:gluino_sms_decays}
-\end{figure}
+This is not generally true in either \ac{mSUGRA} or \ac{GMSB} but does
+correspond to certain \ac{AMSB} scenarios \cite{alves_simplified_2011}.
 
-In most \ac{mSUGRA} or \ac{GMSB} models, the $\PSgxzi \approx \PSB$ and there is
-not a strong left-right mass splitting in the squarks. Therefore, it is unlikely
-for the direct decays to dominate. In most cases, 1-step cascade decays
-will be favoured. In these the, gluino decays first to either a $\PSgxpm$ or a
-heavy $\PSgxz$. This will subsequently decay via either a $\PW$ or a $\PZ$ to
-the $\PSgxzi$.
+Alternatively, the gluino may undergo a cascade decay via an intermediate mass
+state, either a chargino or a heavy neutralino. This will subsequently decay to
+the \ac{LSP} via either a $\PW$ or a $\PZ$ boson.
 
-\subsubsection{T2 Simplified Model Topology}
-For the T2 simplified model, the produced $\tilde{Q}$ can decay as follows:
-\begin{eqnarray}
-\tilde{Q} &\longrightarrow \tilde{G} \Pq \label{eqn:t2gluino}\\
-\tilde{Q} &\longrightarrow \tilde{X}^0_i \Pq \\
-\tilde{Q} &\longrightarrow \tilde{X}^\pm_i \Pq
-\end{eqnarray}
-If allowed, the \ref{eqn:t2gluino} decay will dominate since it has QCD
-strength.
-
-\subsubsection{T3 Simplified Mode Toplogy}
+The situation is similar in the case of squark pair-production, except that in
+the absence of the off-shell squark, the jet multiplicity is reduced.
 
 \subsubsection{Combining Topologies}
 For phenomenological purposes, each separate decay topology may be considered as
