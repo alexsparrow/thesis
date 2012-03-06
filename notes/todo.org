@@ -1,3 +1,7 @@
+* General
+** TODO Ensure technical details of MC are described e.g. GEANT, Pythia etc
+** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
+
 * SM
 ** DONE ALL!
    CLOSED: [2012-02-13 Mon 22:15]
@@ -10,6 +14,7 @@
 Mostly done!
 ** TODO More on phenomenology
 ** TODO Previous limits
+** TODO Described SUSY breaking possibilities in more detail
 * Theoretical Framework
 ** TODO SMS ensure this section makes sense and is correct
 ** TODO mSUGRA
