@@ -336,8 +336,14 @@ The efficiency per \STlep bin of the analysis selection as a function of the
 \ac{CMSSM} parameter space is shown in Figures~\ref{fig:inter_msugra_mu} and
 \ref{fig:inter_msugra_el} for muons and electrons respectively. The ``holes'' in
 the \ac{mSUGRA} sample are due to incomplete data samples at the time of
-publication. The relation of the \STlep variable to the model parameters is
-readily apparent.
+publication.
+
+The efficiencies give a good indication of the efficiency of the analysis in
+different regions of the parameter space. Firstly, it can be seen that
+regardless of the \STlep bin, significant efficiency is achieved only for values
+of $\Mzero < \unit{1000}{\GeV}$. The correlation of \STlep and \Mhalf should
+also be noted, with the higher bins generally sensitive to larger values of
+\Mhalf.
 
 \subsubsection{Exclusion}
 For consistency with other \ac{SUSY} searches at the \ac{LHC}, a limit has been
@@ -359,50 +365,7 @@ in each model were varied in steps. By varying the masses of the squark or
 gluino, \ac{LSP} and other intermediate particles, a grid of simplified model
 points is created. These are then processed further as for the \ac{CMSSM}.
 
-\begin{figure}[h!]
-\centering
-\subfloat[]{\label{fig:inter_t2tt_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_250}}
-\subfloat[]{\label{fig:inter_t2tt_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_350}}\\
-\subfloat[]{\label{fig:inter_t2tt_mu_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_450}}
-\subfloat[]{\label{fig:inter_t2tt_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_total}}
-\caption[]{}
-\label{fig:inter_t2tt_mu}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\subfloat[]{\label{fig:inter_t2tt_el_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_250}}
-\subfloat[]{\label{fig:inter_t2tt_el_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_350}}\\
-\subfloat[]{\label{fig:inter_t2tt_el_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_450}}
-\subfloat[]{\label{fig:inter_t2tt_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_total}}
-\caption[]{}
-\label{fig:inter_t2tt_el}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}}
-\subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}}
-\caption[]{}
-\label{fig:inter_t2tt}
-\end{figure}
-
-\subsubsection{\Ttwott}
-Similary the efficiency per \STlep bin with respect to the \Ttwott parameter
-space is shown in Figures~\ref{fig:inter_t2tt_mu} and \ref{fig:inter_t2tt_el}
-respectively.
-
-For the \Ttwott result it is desirable to have not only an exclusion plot, but
-an upper limit on the cross-section. To reduce computation time, the limit was
-set using a Profile Likelihood method (see
-Section~\ref{sec:inter_profile_likelihood}). In addition, the uncertainties on
-the signal efficiency and the signal contamination were not included. The upper
-limit on the \Ttwott cross-section is shown in
-Figure~\ref{fig:inter_t2tt_limit}. The contours show this limit as a function of
-the expected stop production cross-section calculated using Prospino (TODO check
-and cite). Figure~\ref{fig:inter_t2tt_limit_1d} shows the upper limit in
-one-dimension for $M_{LSP} = \unit{50}{\GeV}$.
-
+\subsection{\TthreeW}
 \begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_muons_eff_total}}
@@ -439,7 +402,50 @@ one-dimension for $M_{LSP} = \unit{50}{\GeV}$.
 \label{fig:inter_t3w_0p75}
 \end{figure}
 
-\subsection{\TthreeW}
+\subsubsection{\Ttwott}
+The efficiency per \STlep bin with respect to the \Ttwott parameter
+space is shown in Figures~\ref{fig:inter_t2tt_mu} and \ref{fig:inter_t2tt_el}
+respectively.
+
+For the \Ttwott result it is desirable to have not only an exclusion plot, but
+an upper limit on the cross-section. To reduce computation time, the limit was
+set using a Profile Likelihood method (see
+Section~\ref{sec:inter_profile_likelihood}). In addition, the uncertainties on
+the signal efficiency and the signal contamination were not included. The upper
+limit on the \Ttwott cross-section is shown in
+Figure~\ref{fig:inter_t2tt_limit}. The contours show this limit as a function of
+the expected stop production cross-section calculated using Prospino (TODO check
+and cite). Figure~\ref{fig:inter_t2tt_limit_1d} shows the upper limit in
+one-dimension for $M_{LSP} = \unit{50}{\GeV}$.
+
+\begin{figure}[h!]
+\centering
+\subfloat[]{\label{fig:inter_t2tt_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_250}}
+\subfloat[]{\label{fig:inter_t2tt_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_350}}\\
+\subfloat[]{\label{fig:inter_t2tt_mu_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_450}}
+\subfloat[]{\label{fig:inter_t2tt_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_total}}
+\caption[]{}
+\label{fig:inter_t2tt_mu}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfloat[]{\label{fig:inter_t2tt_el_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_250}}
+\subfloat[]{\label{fig:inter_t2tt_el_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_350}}\\
+\subfloat[]{\label{fig:inter_t2tt_el_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_450}}
+\subfloat[]{\label{fig:inter_t2tt_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_total}}
+\caption[]{}
+\label{fig:inter_t2tt_el}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}}
+\subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}}
+\caption[]{}
+\label{fig:inter_t2tt}
+\end{figure}
+
 
 
 
