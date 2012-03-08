@@ -1,2 +1,4 @@
 For an explanation of real vs complex scalar field
 http://physics.stackexchange.com/questions/3503/what-is-the-difference-between-complex-field-and-two-scalar-fields
+
+For the dependence of masses on m0, m12 in mSUGRA see sparticles p289-290

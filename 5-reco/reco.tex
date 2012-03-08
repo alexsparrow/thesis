@@ -34,9 +34,9 @@ silicon tracker and the muon chambers.
 For each standalone muon, the set of tracker tracks is searched and the best
 matching candidate selected. For each pairing found in this way, a Kalman-filter
 fit is again performed, this time using hits from both the silicon tracker and
-the muon chambers. This fit accounts for average expected energy losess,
+the muon chambers. This fit accounts for average expected energy losses,
 magnetic field and multiple scattering effects. The tracks reconstructed by this
-procedure are known as global muons. Once again, certain modofications are
+procedure are known as global muons. Once again, certain modifications are
 required for reconstructing cosmic ray muons - for instance in the case that
 cosmic muons traverse the entire detector, leaving two standalone muons on
 either side of \ac{CMS}.
@@ -56,7 +56,7 @@ in each chamber are fit individually to obtain seeds - a position and direction
 vector along with an estimate of the transverse momentum. These form the basis
 of a track fit in the muon chambers based on the Kalman-filter technique. The
 fit is constrained to the vertex in order to reject cosmic ray muons. Since much
-of the callibration and validation work for the muon system was performed using
+of the calibration and validation work for the muon system was performed using
 cosmic rays, a separate algorithm was developed for this purpose
 \cite{cms_mu_reco_cosmic}.
 
@@ -68,8 +68,8 @@ muons if they share a muon segment. The fit results from each algorithm are
 retained.
 
 An analysis is then able to tune its identification cuts to meet certain
-efficiency or purity requirements for a particular kinematic range. A selection
-of pre-defined selections are available:
+efficiency or purity requirements for a particular kinematic range. A number1 of
+pre-defined selections are available:
 \begin{itemize}
 \item Soft muons are required to be reconstructed as tracker muons with a muon
   segment in the outermost station matching the position and direction expected
@@ -81,7 +81,7 @@ of pre-defined selections are available:
   muon track fit with a normalised $\chisq < 10$, at least two muon stations
   with matching muon segments, at least 10 hits in the silicon tracker (with at
   least 1 pixel hit) and a transverse impact parameter $\dxy <
-  \unit{2}{\milli\metre}$. This selection significantly supresses
+  \unit{2}{\milli\metre}$. This selection significantly suppresses
   decays-in-flight at the cost of a small loss in efficiency for prompt muons.
 \end{itemize}
 
@@ -122,9 +122,9 @@ capabilities but also for robustness during early the data-taking period. Cut
 values have been chosen for a number of working points, defined by their
 efficiency with respect to a simulated \Wenu sample, and optimising the
 background rejection power using an iterative procedure. Different cut values
-are chosen in the \ac{CMS} barrel and encap regions.
+are chosen in the \ac{CMS} barrel and endcap regions.
 
-The cut variables used are described below, with cut-values for eaching working
+The cut variables used are described below, with cut-values for each working
 point shown in Table~\ref{tbl:reco_electronid}
 \begin{itemize}
 \item \sigmaieta is a measure of the \ac{RMS} shower width of the electron
@@ -134,7 +134,7 @@ point shown in Table~\ref{tbl:reco_electronid}
 \item Tracker, \ac{ECAL} and \ac{HCAL} isolation quantities summed in a cone
   $\Delta R < 0.3$. Within the tracker, a threshold of \unit{700}{\GeV} is
   applied to the tracks contributing to the sum. Similarly, in the ac{ECAL}, a
-  zero-supression cut is applied. The cone is centred on the track direction at
+  zero-suppression cut is applied. The cone is centred on the track direction at
   the vertex for the tracker isolation, and the supercluster for the calorimeter
   quantities.
 \item \HoverE is the ratio of the energy deposited in the \ac{HCAL} behind the
@@ -161,7 +161,7 @@ Four types of jets are reconstructed at \ac{CMS}: \acp{Calo} jets, \ac{PF} jets,
 deposits in the \ac{ECAL} and \ac{HCAL}, combined into calorimeter
 towers. Calorimeter towers consist of one or more \ac{HCAL} cells with
 geometrically matched \ac{ECAL} crystals. The exact details of this association
-varies between the barrel and endcap regions. Electronics noise is supressed by
+varies between the barrel and endcap regions. Electronics noise is suppressed by
 applying a threshold to calorimeter cells, with pile-up effects reduced by a
 requirement on the tower energy.
 
@@ -224,7 +224,7 @@ components of jets and hadronic tau decays - primarily charged hadrons, neutral
 hadrons and photons. This provides an improved measurement of the jet energy and
 thus also of \MET.
 
-The particle flow algorithm procedes by linking the tracks and energy clusters
+The particle flow algorithm proceeds by linking the tracks and energy clusters
 to form blocks. A single block main contain some combination of a charged
 particle track, one or more energy clusters and a muon. The fine granularity of
 the \ac{CMS} detector ensures that blocks typically contain 1, 2 or 3 elements.
@@ -301,7 +301,7 @@ The next step is electron reconstruction. Electron tracks in the block are first
 selected by a pre-identification step - electrons often leave short tracks and
 lose energy via bremsstrahlung. Pre-identified electrons are then refit with a
 Gaussian Sum Filter (see Section~TODO) and projected into the \ac{ECAL}.
-Candidates passing tracking and calometric criteria are reconstructed as
+Candidates passing tracking and calorimetric criteria are reconstructed as
 particle flow electrons. The track and associated \ac{ECAL} clusters are then
 removed from the block.
 
@@ -313,36 +313,36 @@ measurement of the calorimeter.
 
 Reconstruction of photons and neutral hadrons involves comparison of the track
 momentum to the calorimetric energy. The cluster energies in the \ac{ECAL} are
-callibrated for photons and the \ac{HCAL} for \unit{50}{\GeV} pions. For the
-comparison to be valid, these must be recallibrated to account for
+calibrated for photons and the \ac{HCAL} for \unit{50}{\GeV} pions. For the
+comparison to be valid, these must be re-calibrated to account for
 non-linearities in the \ac{HCAL} as well as the differing response of the
 \ac{ECAL} to hadrons.
 
 In the case that several tracks are linked to a single \ac{HCAL} cluster, the
-total momenta of the tracks is compared to the callibrated calorimetric energy.
+total momenta of the tracks is compared to the calibrated calorimetric energy.
 Tracks linked to multiple clusters are resolved by preserving the closest link
 or links in certain cases. The track momentum is then compared to the total
-callibrated calometric energy.
+calibrated calorimetric energy.
 
 In the rare case that the energy is smaller than the track momentum by more than
 three standard deviations, a relaxed search for fake tracks and global muons is
 initiated. Global muons are identified as \ac{PF} muons if their momentum is
-measured with an uncertainty below 25\%. Tracks are then progrssively removed
+measured with an uncertainty below 25\%. Tracks are then progressively removed
 from the block, those with largest momentum uncertainty first, until either all
 tracks with an uncertainty $>\unit{1}{\GeV}$ have been considered or the total
-track momentum has decreased below the calorimetric energy. The reamining tracks
+track momentum has decreased below the calorimetric energy. The remaining tracks
 are interpreted as charged hadrons with momentum and energy taken from the track
 momentum assuming the charged pion mass hypothesis. If the calorimeter energy
 and track momentum are compatible within their uncertainties, the momentum is
 redefined by a fit to both track momenta and the energy cluster. This is helpful
 at very high energies, where the track parameters may be less well measured.
 
-In the case that the callibrated energy is greater than the total track momentum
-by more than the caloririmetric energy resolution, the excess is interpreted as
+In the case that the calibrated energy is greater than the total track momentum
+by more than the calorimetric energy resolution, the excess is interpreted as
 a photon and possibly a neutral hadron. If the excess is greater than the
 \ac{ECAL} energy, a photon is created with this energy and the rest of the
 excess interpreted as a neutral hadron. Otherwise, a photon only is
-reconstructed from the uncallibrated \ac{ECAL} energy. This stems from the
+reconstructed from the uncalibrated \ac{ECAL} energy. This stems from the
 observation that photons carry 25\% of the energy of a jet, with neutral hadrons
 only 3\%.
 
@@ -378,7 +378,7 @@ reconstruction.
 \caption[]{Jet angular resolution (\ac{RMS}) as a function of \Pt for
   \subref{fig:reco_pf_jet_etares} $\eta$ and \subref{fig:reco_pf_jet_phires}
   $\phi$. Calo-jets are shown as open squares and \ac{PF} jets as upward
-  triangles. The curves are fit with an expontential function of $\Pt$.}
+  triangles. The curves are fit with an exponential function of $\Pt$.}
 \label{fig:reco_pf_jet_angulares}
 \end{figure}
 
@@ -388,7 +388,7 @@ reconstruction.
 \subfloat[]{\label{fig:reco_pf_met_phires}\includegraphics[width=0.45\textwidth]{fig/pf_met_phires}}\quad
 \caption[]{\subref{fig:reco_pf_met_metres}$\sigma(\MET)/\MET^{\textrm{true}}$ and
   \subref{fig:reco_pf_met_phires} $\sigma(\phi)$ as a function of true \MET in
-  \ttbar events as detmined by a Gaussian fit to each $\MET^{\textrm{true}}$
+  \ttbar events as determined by a Gaussian fit to each $\MET^{\textrm{true}}$
   bin. Squares represent Calo-\MET, and upwards triangles \ac{PF} \MET. The
   solid curves ares fits through these points. The dashed lines indicate the
   \ac{RMS} width of each bin.}

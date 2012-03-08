@@ -25,7 +25,7 @@ is actually feasible and not washed out by some experimental effect.
 
 Unless otherwise noted, the \Wjets samples used is produced using the
 \ac{MADGRAPH} generator interfaced to \ac{PYTHIA}. The generated sample
-comprised approximately 15 million events with the acp{PDF} taken from the
+comprised approximately 15 million events with the \acp{PDF} taken from the
 ac{CTEQL1} set within the \ac{LHAPDF} software package.
 
 Shown in Figure~TODO are $\cos\thetastar$ distributions at generator level in
@@ -52,7 +52,7 @@ that any remaining momentum imbalance is due to the missing neutrino. At a
 hadron collider, the boost of the colliding partons is not known and thus, the
 component of the neutrino momentum parallel to the beam line cannot be inferred
 from the missing momentum. This prevents unique determination of the \PW
-momentum, introducing a two-fold amiguity on the measurement of $P^{\PW}_z$ and
+momentum, introducing a two-fold ambiguity on the measurement of $P^{\PW}_z$ and
 thus making it impossible to fully reconstruct the helicity frame. Although the
 possibility exists of either picking one solution and applying correction
 factors for the error this causes in the results or taking both solutions and
@@ -118,13 +118,13 @@ for \PW bosons with $\PtW > \unit{200}{\GeV}$ and $\PtW > \unit{400}{\GeV}$.
 \subsubsection{Correlation with \phistar}
 For large \PtW, \LP is mostly uncorrelated with \phistar since even for values
 $|\phistar > \frac{\pi}{2}$, the lepton will still be collinear with the \PW in
-the lab frame. In constrast, for low values of \PtW, the lepton in the lab frame
+the lab frame. In contrast, for low values of \PtW, the lepton in the lab frame
 may have a large angular separation from the \PW. In extreme cases, the lepton
 and the \PW may even be anti-parallel in the lab frame. This leads to a widening
 of the \LP distribution and a much larger correlation with
 \phistar. This correlation is shown in Figure~TODO.
 
-\subsection{Template Reweighting Method}
+\subsection{Template Re-weighting Method}
 \label{sec:wpol_reweighting}
 As has so far been described, the $\cos\thetastar$ distribution is of great
 interest in the measurement of the \PW boson helicity. The \LP variable provides
@@ -135,10 +135,10 @@ distribution, thus preventing a direct measurement of the helicity
 fractions. In addition, the \LP distribution will be subject to a number of
 detector and acceptance related effects, changing its shape.
 
-\subsubsection{Reweighting $\cos\thetastar$}
-To account for all such experimental issues, a template reweighting method is
+\subsubsection{Re-weighting $\cos\thetastar$}
+To account for all such experimental issues, a template re-weighting method is
 employed. Effectively, Monte Carlo simulation is used to derive three
-reweighting factors, each a function of $\cos\thetastar$ and binned in boson
+re-weighting factors, each a function of $\cos\thetastar$ and binned in boson
 charge, \PtW and \YW. These can be written as
 \begin{equation}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
@@ -158,13 +158,13 @@ as follows,
 \sigma^{\pm}_{+1} &=& \frac{1}{4}\left(1\pm\cos\thetastar\right)^2\\
 \end{eqnarray*}
 A given simulated event is then taken, its $\cos\thetastar$ value calculated and
-a reweighting factor derived from Eqn~\ref{eqn:wpol_reweighting_factor}
+a re-weighting factor derived from Eqn~\ref{eqn:wpol_reweighting_factor}
 accounting for the \PtW, \YW and charge of the \PW boson. The binning is
 important, as the helicity fractions are expected to vary significantly with
 these parameters.
 
-This reweighting procedure avoids the need to generate separate Monte Carlo
-event samples for each polarisation state. Using the reweighted sample, any
+This re-weighting procedure avoids the need to generate separate Monte Carlo
+event samples for each polarisation state. Using the re-weighted sample, any
 distribution may be produced corresponding to a pure sample of polarised \PW
 bosons. In particular, this allows the derivation of \LP shape templates which
 may then be fit to the corresponding data distribution in order to extract the
@@ -190,13 +190,13 @@ where $b$ indicates a bin within the $\cos\thetastar$ distribution.
 
 \subsubsection{\PtW and \YW Dependence}
 Although the $\cos\thetastar$ templates are independent of \PtW and \YW by
-definition, the \LP templates vary with phase space. Although the reweighting
+definition, the \LP templates vary with phase space. Although the re-weighting
 factor as defined in Eqn~\ref{eqn:wpol_reweighting_factor} ensures that the
 $\cos\thetastar$ distribution corresponds to a pure helicity state, it does not
 account for the variation of the helicity fractions within the \PW phase
 space. Furthermore, the analysis seeks to measure the values of the helicity
 fractions averages over a region of phase space corresponding to reconstruction
-level cuts. An extra reweighting factor is defined which effectively gives
+level cuts. An extra re-weighting factor is defined which effectively gives
 preference to regions containing more bosons of the desired \PW helicity,
 \begin{equation}
 R_i\left(\PtW, \YW, \pm\right) =
@@ -227,13 +227,13 @@ performed. Firstly, the generator-level helicity fractions within the phase
 space of the reconstruction level \PW acceptance cuts are extracted. Essentially
 the $\cos\thetastar$ distribution is plotted from a simulated sample of events
 which have passed the reconstruction level \PtW cut. The distribution is fit,
-once again using Eqn~\ref{eqn:wpol_helicity_fractions} and values of \f0, fL and
+once again using Eqn~\ref{eqn:wpol_helicity_fractions} and values of \f0, \fL and
 \fR are extracted for both boson charges. This defines the baseline expectation
 for the helicity fractions and is shown in Table~\ref{tbl:wpol_closure_tests}.
 
 The first closure test has been performed in the muon channel only. The
 generator level \LP templates for each helicity state are generated using the
-reweighting method as described in Section~\ref{sec:wpol_reweighting} but excluding
+re-weighting method as described in Section~\ref{sec:wpol_reweighting} but excluding
 the acceptance correction. The phase space again corresponds to the
 reconstruction levels cut on \PtW. The binned maximum likelihood fit is then
 performed (see Section~\ref{sec:wpol_fitting}) and the helicity parameters
@@ -261,7 +261,7 @@ at high \PtW. The $f_i$ coefficients determine the polar angle distribution
 (\thetastar) via Eqn~\ref{eqn:wpol_helicity_fractions}. This distribution cannot
 be reconstructed directly due to an ambiguity in the reconstruction of the \PW
 boson rest frame. Instead the \LP variable, found to be highly correlated with
-$\cos\thetastar$ in the limit of large \PtW is taken instead. Via a reweighting
+$\cos\thetastar$ in the limit of large \PtW is taken instead. Via a re-weighting
 method, \LP distributions are constructed from Monte-Carlo simulation
 corresponding to 100\% left-handed, right-handed and longitudinally polarised
 \PW bosons. These shapes may then be used in a fit to data in order to extract
@@ -284,7 +284,7 @@ uncertainty on the shape and normalisation must be accounted for and propagated
 into the total uncertainties on the helicity fractions. Introducing an
 appropriate template into the fit adds an additional parameter to account for
 the relative normalisation as well as uncertainties stemming from the template
-shape. This is particularly problematic in the case of \ac{QCD} multijet events
+shape. This is particularly problematic in the case of \ac{QCD} multi-jet events
 where the underlying processes are felt to be poorly understood. This
 necessitates the use of a data-driven template which, as will be seen, brings an
 additional set of difficulties.
@@ -303,7 +303,7 @@ polarisation. Therefore, we find that the two most essential selection
 requirements are:
 \begin{itemize}
 \item A single isolated lepton typical of a \PW decay
-\item An event toplogy consistent with a large transverse momentum \PW. As shall
+\item An event topology consistent with a large transverse momentum \PW. As shall
   be seen in Section~\ref{sec:wpol_wpt}, there is some freedom in the exact
   variables used to achieve this selection.
 \end{itemize}
@@ -316,7 +316,7 @@ criteria. The principal background sources may be categorised as follows:
   effects.
 \item \ttbar production where $t\longrightarrow\Pbeauty\PW$ and the \PW then decays
   leptonically.
-\item \ac{QCD} multijet events. This can be due to jet punch-through overlapping
+\item \ac{QCD} multi-jet events. This can be due to jet punch-through overlapping
   with a charged hadron or heavy-flavour decays. Electrons face a much higher
   background due primarily to photon conversions and overlap between charged
   hadrons and \Ppizero. The charged hadron leaves a track, whilst the \Ppizero
@@ -344,12 +344,12 @@ The requirements placed on the muon are as follows:
 \item More than 10 hits in the tracker.
 \item Bad muon fits are rejected by requiring $\chi^2 < 10$ on the global muon
   fit (tracker and muon chambers)
-\item The transverse impact parameter of the muon with respect ot the beamspot
+\item The transverse impact parameter of the muon with respect to the beam-spot
   is required to be $ < \unit{2}{\milli\metre}$. This is a fairly loose
   requirement but still rejects the majority of cosmic muons.
 \item At least 1 hit is required in the pixels of the tracker in order to remove
   in-flight decays.
-\item The tracker muon reconstruction must involve at least 2 muon stations. This supresses
+\item The tracker muon reconstruction must involve at least 2 muon stations. This suppresses
   punch-through and accidental matchings and ensures compatibility with the
   trigger.
 \item The global muon reconstruction must involve at least 1 valid hit in the
@@ -374,7 +374,7 @@ referred to as \textbf{Loose}.
 \subsubsection{Electrons}
 \label{sec:wpol_electronid}
 The electron identification variables used are as described in
-Section~\ref{sec:reco_electron_id}. In order to achieve a strong supression of
+Section~\ref{sec:reco_electron_id}. In order to achieve a strong suppression of
 the \ac{QCD} multi-jet background, the decision was made to choose a tighter
 working point than other \ac{CMS} analyses - the 70\% efficiency working
 point. Electrons passing these criteria will be referred to as
@@ -415,7 +415,7 @@ large transverse momentum serves to enhance the polarisation effect described in
 Section~\ref{sec:polarisation}. It also ensures the correlation of \LP with
 $\cos\thetastar$ and thus improves the measurement of the helicity
 fractions. There are several means of reconstructing the \PtW at \ac{CMS}. The
-first, which was initially used for this analyis was the hadronic recoil of the
+first, which was initially used for this analysis was the hadronic recoil of the
 event. This is effectively the so-called missing hadronic energy of the
 event, or \MHT,
 % TODO Perhaps this should be moved somewhere else?
@@ -426,7 +426,7 @@ where the $j$ is taken to run over some subset of the jets in the event as
 defined in Section~\ref{sec:wpol_jets} with some minimum transverse momentum
 requirement. The sum is taken to denote a vectorial sum. Since the \PW and the
 jets must balance in the lab frame, this in principal provides an accurate
-measurement of \PtW. However, the reconstruction fo the jets is difficult and
+measurement of \PtW. However, the reconstruction of the jets is difficult and
 subject to uncertainties in the jet energy scale. A higher resolution
 measurement can be achieved by utilising instead the \MET (effectively the
 neutrino) and the lepton in the event. This leads to the definition,
@@ -440,7 +440,7 @@ A second question, is then the choice of the minimum cut value to place on
 \PtW. On the one hand, increasing this cuts reduces the statistics of the
 sample. A related difficulty for this analysis was the small size of the
 simulated $\PW\longrightarrow\Pl\Pgn$ sample, particularly at higher \PtW. On
-the other hand, the enhancment of the polarisation effect and the increased
+the other hand, the enhancement of the polarisation effect and the increased
 correlation between $\cos\thetastar$ motivate a larger cut value. The benefits of
 these two effects could also be gained by binning the sample in \PtW and
 performing independent fits within each bin. Unfortunately, the data sample
@@ -451,10 +451,10 @@ a moderately large cut $\PtW > \unit{50}{\GeV}$ was adopted.
 \subsubsection{Missing Transverse Energy}
 In terms of rejecting backgrounds, tightening object definitions can only
 achieve so much. Additional rejection power can be gained via additional
-kinematic cuts on the event topologogy. As has already been stated, the \ac{QCD}
-multijet background is the most problematic due to the fact that it is
+kinematic cuts on the event topology. As has already been stated, the \ac{QCD}
+multi-jet background is the most problematic due to the fact that it is
 relatively poorly modelled by Monte Carlo event generators. The simplest way to
-reject such events is via a missing energy type cut. \ac{QCD} multijet events do
+reject such events is via a missing energy type cut. \ac{QCD} multi-jet events do
 not typically contain a source of genuine missing energy. Experimentally
 observed \MET from these events is typically due to jet mismeasurements,
 detector noise or other problems with the event reconstruction. In addition, for
@@ -467,7 +467,7 @@ problem. Specifically, the \MET cut is effectively a selection on the momentum
 of the neutrino in \PW events. This removes events, where for instance the
 lepton has taken the majority of the momentum from the \PW and the neutrino is
 thus very soft. This of course alters the shape of the \LP distribution. Of
-course, the template reweighting method will account for this acceptance
+course, the template re-weighting method will account for this acceptance
 effect via appropriate changes in the helicity templates. This change is shown
 in Figure~TODO. However, as can be seen, the sculpting of the \LP distribution
 serves to remove the differences between the left and right-handed template
@@ -489,27 +489,27 @@ The angular dependence (i.e. the $\cos\Delta\phi$ term) will effectively
 compensate \PW decays in which either the charged or neutral lepton is soft
 since these topologies will in general have a larger angular separation. Since a
 momentum imbalance is exactly what is expected from the transverse polarisation
-effect, the \MT cut avoids directly supressing this effect.
+effect, the \MT cut avoids directly suppressing this effect.
 
 Now considering the effect of the \MT cut on the background components, it is
-not expected to strongly supress either the \Zjets or \ttbar backgrounds since
+not expected to strongly suppress either the \Zjets or \ttbar backgrounds since
 these both contain real decays of a heavy particle. In the case of \ac{QCD}
-multijet events, a balanced jet system has been badly reconstructed
+multi-jet events, a balanced jet system has been badly reconstructed
 such that one of the jets has been misidentified as a lepton. In general, the
 fake \MET signature from these events will be small and thus rejected by the \MT
 cut. In the case that the \MET component is larger due to a badly measured jet,
 there are two possibilities:
 \begin{itemize}
-\item The mismeasurement has occured on the jet that has been misidentified as a
-  lepton. Since $\Delta\phi \sim 0$, the \MT cut should strongly supress these
+\item The mismeasurement has occurred on the jet that has been misidentified as a
+  lepton. Since $\Delta\phi \sim 0$, the \MT cut should strongly suppress these
   events.
 \item The mismeasurement has occurred on one of the other jets in the event. In
   this case, \MT may be large due to the large angular separation. Note however,
-  that these events will in general be supressed by the cut on \PtW
+  that these events will in general be suppressed by the cut on \PtW
 \end{itemize}
 
 For the muon channel, it was found that a reasonably moderate cut $\MT >
-\unit{30}{\GeV}$ was able to reduce the \ac{QCD} multijet background to
+\unit{30}{\GeV}$ was able to reduce the \ac{QCD} multi-jet background to
 negligible levels. This was first demonstrated in simulation and then
 cross-checked via comparison with genuine data. In the case of the electrons,
 the background proved far more problematic. In the end, an $\MT >
@@ -526,7 +526,7 @@ Table~\ref{tbl:wpol_cutflow}.
 \input{tables/wpol_cutflow}
 
 \subsection{Triggers}
-During the 2010 data taking period, the \ac{LHC} instantenous luminosity
+During the 2010 data taking period, the \ac{LHC} instantaneous luminosity
 continued to evolve rapidly. The increased luminosity necessitated tightening of
 the various object trigger requirements in order to maintain a suitable rate for
 offline storage. This required careful selection of triggers for the analysis in
@@ -558,7 +558,7 @@ lepton. In contrast, the electron trigger thresholds evolved more rapidly,
 Where \texttt{EleX} indicates an electron with $p_T > \unit{X}{\GeV}$. The
 \texttt{LW} and \texttt{SW} stand for large window and small window
 respectively. Here, window refers to the electron pixel-matching window and thus
-the large window cut is looser and intended to be used during startup
+the large window cut is looser and intended to be used during start-up
 conditions. All triggers include \HoverE cuts on the electron. In addition,
 those with \texttt{CaloEleId} or \texttt{TightEleId} impose additional electron
 identification requirements. The first applies only a \sigmaieta cut (see
