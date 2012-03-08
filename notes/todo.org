@@ -1,6 +1,7 @@
 * General
 ** TODO Ensure technical details of MC are described e.g. GEANT, Pythia etc
 ** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
+** TODO LM points. Are they explained?
 
 * SM
 ** DONE ALL!
@@ -15,9 +16,13 @@ Mostly done!
 ** TODO More on phenomenology
 ** TODO Previous limits
 ** TODO Described SUSY breaking possibilities in more detail
+** TODO mention SUSY higgs searches
 * Theoretical Framework
 ** TODO SMS ensure this section makes sense and is correct
-** TODO mSUGRA
+** TODO Describe single lepton specific topologies
+** DONE mSUGRA
+   CLOSED: [2012-03-08 Thu 16:06]
+   - State "DONE"       from "TODO"       [2012-03-08 Thu 16:06]
 * Detector
 ** DONE HCAL
    CLOSED: [2012-02-23 Thu 11:59]
@@ -94,6 +99,9 @@ Mostly done!
    CLOSED: [2012-02-23 Thu 11:08]
    - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
 ** TODO Resolve language mSUGRA <-> CMSSM
+** TODO State that SMS exclusions have PDF errors
+** TODO T3W sms
+
 *** From Alex
 *** TODO More conclusions generally.
 *** TODO Explain origin of PDF uncertainty
