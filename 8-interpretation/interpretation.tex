@@ -359,7 +359,7 @@ Section~\ref{sec:inter_1lepton} have been included. The expected limit and $\pm
 exactly that predicted from data.
 
 The exclusion seems to be well predicted by the efficiency maps, with
-significant exclusion on \Mhalf axis only at low \Mzero.
+significant exclusion on the \Mhalf axis only at low \Mzero.
 
 
 \subsection{Simplified Models}
@@ -370,18 +370,63 @@ in each model were varied in steps. By varying the masses of the squark or
 gluino, \ac{LSP} and other intermediate particles, a grid of simplified model
 points is created. These are then processed further as for the \ac{CMSSM}.
 
-\subsection{\TthreeW}
+For the simplified models shown here, the mother and daugther particles masses
+(\Mgluino or \Mstop and \Mlsp) have been varied in steps of \unit{20}{\GeV}. The
+requirement that the mother particle be at least as massive as the daughter
+excludes half of the parameter space representing unphysical scenarios.
+
+To provide the most detailed interpretation of the simplified models, it is
+desirable to calculate an upper limit on the cross-section for each grid
+point. This can be contrasted to the case of the \ac{CMSSM}, where the
+cross-section at each point is known and a simple exclusion contour is
+sufficient. Due to the comptuational difficulty of calculating a confidence
+interval using the \CLs method, the profile likelihood method has been used
+instead. In addition, further simplification of the likelihood is achieved by
+removing the signal contamination systematic and including only the \ac{PDF}
+uncertainty on the signal contamination.
+% TODO: justify
+
+\subsubsection{\TthreeW}
+For the \TthreeW model, the intermediate mass state in the cascade decay
+introduces an additional mass parameter, $m_{\PScharginopm}$. Of course, this
+parameter should lie somewhere between the mother and daughter particles'
+masses. To study a range of scenarios without having to consider the full
+three-dimensional volume of the parameter space, three scenarios are
+considered. Choosing values of the intermediate particle mass as
+\begin{equation*}
+\Mchargino = x \Mgluino + (1-x)\Mlsp
+\end{equation*}
+limits have been set for 3 values of the parameter $x$ - 0.25, 0.5 and
+0.75. Intuitively, these represent cases where the intermediate particle mass is
+closer to the daughter, intermediate between daughter and mother and closer to
+the mother respectively.
+
+Figure~\ref{fig:inter_t3w_eff} shows total efficiency as a function of
+$(\Mgluino, \Mlsp)$ for each plane in $x$, separated by lepton channel. The
+efficiency is seen to decrease as the mother and daugther move closer in
+mass. When the mass splitting is small, less energy is available for hadronic
+and leptonic activity in the event, and thus the efficiency of the analysis cuts
+is reduced.
+
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_muons_eff_total}}
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_electrons_eff_total}}\\
+\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_muons_eff_total}}
+\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_electrons_eff_total}}\\
 \subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_muons_eff_total}}
 \subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_electrons_eff_total}}\\
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_muons_eff_total}}
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_electrons_eff_total}}
+\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_muons_eff_total}}
+\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_electrons_eff_total}}
 \caption[]{}
 \label{fig:inter_t3w_eff}
 \end{figure}
+
+The limits for the each value of $x$ (0.25, 0.5 and 0.75) are shown in
+Figures~\ref{fig:inter_t3w_0p75}, \ref{fig:inter_t3w_0p50} and
+\ref{fig:inter_t3w_0p25} respectively. The exclusion is with respect to a
+refernce cross-section for squark production calculated assuming
+\ac{QCD}-strength couplings.
+
+% TODO: more spiel here
 
 \begin{figure}[h!]
 \centering
@@ -408,20 +453,13 @@ points is created. These are then processed further as for the \ac{CMSSM}.
 \end{figure}
 
 \subsubsection{\Ttwott}
-The efficiency per \STlep bin with respect to the \Ttwott parameter
-space is shown in Figures~\ref{fig:inter_t2tt_mu} and \ref{fig:inter_t2tt_el}
-respectively.
+The \Ttwott model, as previously discussed, is of theoretical interest for
+describing \ac{SUSY} theories with light stop squarks.
 
-For the \Ttwott result it is desirable to have not only an exclusion plot, but
-an upper limit on the cross-section. To reduce computation time, the limit was
-set using a Profile Likelihood method (see
-Section~\ref{sec:inter_profile_likelihood}). In addition, the uncertainties on
-the signal efficiency and the signal contamination were not included. The upper
-limit on the \Ttwott cross-section is shown in
-Figure~\ref{fig:inter_t2tt_limit}. The contours show this limit as a function of
-the expected stop production cross-section calculated using Prospino (TODO check
-and cite). Figure~\ref{fig:inter_t2tt_limit_1d} shows the upper limit in
-one-dimension for $M_{LSP} = \unit{50}{\GeV}$.
+Efficiencies for each point in the $(\Mstop, \Mlsp)$ plane are shown in
+Figures~\ref{fig:inter_t2tt_mu} and \ref{fig:inter_t2tt_el} for muons and
+electrons respectively. Efficiencies are shown per \STlep bin in order to gauge
+the effect of this cut on the efficiency.
 
 \begin{figure}[h!]
 \centering
@@ -442,6 +480,10 @@ one-dimension for $M_{LSP} = \unit{50}{\GeV}$.
 \caption[]{}
 \label{fig:inter_t2tt_el}
 \end{figure}
+
+Limits are shown in a similar fashion to the \TthreeW case in
+Figure~\ref{fig:inter_t2tt}. It can be seen that very little exclusion is
+achieved with respect to the stop cross-section predicted from \ac{QCD}.
 
 \begin{figure}[h!]
 \centering
