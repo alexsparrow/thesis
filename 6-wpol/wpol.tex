@@ -752,13 +752,21 @@ plotted for those events surviving a combined cut on the \MET and \MT.
 
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{fig/ewpol_significance}
-\caption{Plot showing the significance of the electron channel TODO}
+\caption[Plots illustrating the signal significance in the electron channel with
+respect to varying cuts on \MET and \MT.]{Plots illustrating the signal
+  significance in the electron channel with respect to varying cuts on \MET and
+  \MT. Top-left shows the dependence of the signal (solid lines) and background
+  yields (dotted lines) for varying \MET (red) and \MT (blue) cuts. Similarly
+  top-right shows the signal significance using the metric $S/B$ and bottom-left
+  using the metric $S/\sqrt{S+B}$.}
 \label{fig:wpol_ele_significance}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.7\textwidth]{fig/qcd_nom}
-\caption{Plot showing the significance of the electron channel TODO}
+\includegraphics[width=0.5\textwidth]{fig/qcd_nom}
+\caption{Two dimensional plot showing the dependence of \fQCD on \MET and \MT
+  cuts in the electron channel as observed in simulation. \fQCD represents the
+  fraction of the total event yield originating from \ac{QCD} multijet events.}
 \label{fig:wpol_met_mt_fqcd}
 \end{figure}
 
@@ -838,9 +846,6 @@ into a single template to mimimize statistical uncertainty.
 \label{fig:wpol_ele_sel_antisel}
 \end{figure}
 
-
-\subsection{ECAL Transparency}
-
 \section{Systematics}
 \label{sec:wpol_systematics}
 The template reweighting method necessary for the extraction of the helicity
@@ -913,16 +918,18 @@ range of $[0,1.3]$ was an appropriate choice for both channels and both charges.
 
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:wpol_mujecunc_p}\includegraphics[width=0.4\textwidth]{fig/pLP_jecuncratios}}\quad
-\subfloat[]{\label{fig:wpol_mujecunc_m}\includegraphics[width=0.4\textwidth]{fig/mLP_jecuncratios}}
-\caption{}
+\subfloat[$\LP(\APmuon)$]{\label{fig:wpol_mujecunc_p}\includegraphics[width=0.4\textwidth]{fig/pLP_jecuncratios}}\quad
+\subfloat[$\LP(\Pmuon)$]{\label{fig:wpol_mujecunc_m}\includegraphics[width=0.4\textwidth]{fig/mLP_jecuncratios}}
+\caption{Relative change of the muon \LP distribution due to the effect of the
+  jet energy scale uncertainty. The black line corresponds to an upward shift
+  with respect to the original distribution, and the red line a downward shift.}
 \label{fig:wpol_mujecunc}
 \end{figure}
 
 The jet energy scale uncertainty follows the standard prescription for \ac{CMS}
 analyses. Firstly, the unclustered component of the missing energy is calculated as,
 \begin{equation}
-\vec{E}^{\textrm{unclustered}}_T = -(\MET + \Ptl + \sum_i \vec{p}_T^{\textrm{jet},i}
+\vec{E}^{\textrm{unclustered}}_T = -\MET + \Ptl + \sum_i \vec{p}_T^{\textrm{jet},i}
 \end{equation}
 where the index $i$ runs over all jets with $\Pt > \unit{10}{\GeV}$ in the event
 as reconstructed by the particle flow algorithm. The unclustered energy is then
@@ -1001,24 +1008,24 @@ since applying these global corrections per-event will widen the monetum
 distribution while correcting the mean.
 
 The transparency corrections were derived for the \PW charge asymmetry
-measurement TODO. The detector is divided into 6 $\eta$ bins. The \Zee mass
-distribution in data is then divided into $6 + ^6C_2$ categories corresponding
-to cases where a \PZ is reconstructed from electrons in $\eta$ bins $i$ and $j$.
-For each category a mass template is derived from simulation. A simultaneous fit
-is then performed over the 21 categories, where each template is scaled by the
-factor $1/\sqrt{s_is_j}$ and smeared by a resolution term $\sqrt{\sigma_i^2 +
-  \sigma_j^2}$. The end result of this is a set of 6 scale terms and 6
-resolution terms. These are plotted in Figure~\ref{fig:wpol_ecal_transp_corr}.
-The scale terms should be applied to data, whilst the resolution should be
-applied in simulation.
+measurement~\cite{w_charge_asymmetry}. The detector is divided into 6 $\eta$
+bins. The \Zee mass distribution in data is then divided into $6 + ^6C_2$
+categories corresponding to cases where a \PZ is reconstructed from electrons in
+$\eta$ bins $i$ and $j$.  For each category a mass template is derived from
+simulation. A simultaneous fit is then performed over the 21 categories, where
+each template is scaled by the factor $1/\sqrt{s_is_j}$ and smeared by a
+resolution term $\sqrt{\sigma_i^2 + \sigma_j^2}$. The end result of this is a
+set of 6 scale terms and 6 resolution terms. These are plotted in
+Figure~\ref{fig:wpol_ecal_transp_corr}.  The scale terms should be applied to
+data, whilst the resolution should be applied in simulation.
 
 \begin{figure}
-\centering
-\subfloat[]{\label{fig:wpol_ecal_transp_scale}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_scale}}\quad
-\subfloat[]{\label{fig:wpol_ecal_transp_sigma}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_sigma}}\quad
-\caption[]{\ac{ECAL} transparency correction factors for
-  \subref{fig:wpol_ecal_transp_scale} scale and
-  \subref{fig:wpol_ecal_transp_sigma} resolution.}
+  \centering
+  \subfloat[Scale]{\label{fig:wpol_ecal_transp_scale}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_scale}}\quad
+  \subfloat[Resolution]{\label{fig:wpol_ecal_transp_sigma}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_sigma}}\quad
+\caption[]{\ac{ECAL} transparency correction factors as a function of
+  pseudorapidity for \subref{fig:wpol_ecal_transp_scale} scale and
+  \subref{fig:wpol_ecal_transp_sigma} resolution~\cite{w_charge_asymmetry_an}}
 \label{fig:wpol_ecal_transp_corr}
 \end{figure}
 
@@ -1152,7 +1159,12 @@ observed with a large significance.
 \subfloat[]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\\
 \subfloat[]{\label{fig:wpol_fit_mu_plus}\includegraphics[width=0.45\textwidth]{fig/MC_WHelicityFramePlots_PlusICVar}}\quad
 \subfloat[]{\label{fig:wpol_fit_mu_minus}\includegraphics[width=0.45\textwidth]{fig/MC_WHelicityFramePlots_MinusICVar}}
-\caption{Fit results}
+\caption{Results of the binned maximum likelihood fit to \unit{36}{\invpb} of
+  data at $\sqrt{s} = \unit{7}{\TeV}$. The left-handed helicity template is
+  shown in red, the right-handed in green and the longitudinal in blue, with
+  normalisations as chosen by the fit. The yellow and red shaded regions are the
+  electroweak and \ac{QCD} background shapes, where the latter is obtained from
+  data.}
 \label{fig:wpol_fit_results}
 \end{figure}
 
@@ -1161,7 +1173,11 @@ observed with a large significance.
 \centering
 \subfloat[]{\label{fig:wpol_contour_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_contour_plus}}\quad
 \subfloat[]{\label{fig:wpol_contour_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_contour_minus}}
-\caption{Contours}
+\caption{Error ellipses in the $(\f0, \fLmfR)$ plane for \unit{36}{\invpb} of
+  data in the electron channel. The black point indicates the best fit
+  value. The 68\% confidence level contour is shown as a green shaded ellipse
+  for the statistical uncertainty and as a black outline for the total
+  uncertainty. }
 \label{fig:wpol_contour_ele}
 \end{figure}
 
@@ -1169,7 +1185,11 @@ observed with a large significance.
 \centering
 \subfloat[]{\label{fig:wpol_contour_mu_plus}\includegraphics[width=0.45\textwidth]{fig/muon_contour_plus}}\quad
 \subfloat[]{\label{fig:wpol_contour_mu_minus}\includegraphics[width=0.45\textwidth]{fig/muon_contour_minus}}
-\caption{Contours}
+\caption{Error ellipses in the $(\f0, \fLmfR)$ plane for \unit{36}{\invpb} of
+  data in the muon channel. The black point indicates the best fit
+  value. The 68\% confidence level contour is shown as a green shaded ellipse
+  for the statistical uncertainty and as a black outline for the total
+  uncertainty.}
 \label{fig:wpol_contour_mu}
 \end{figure}
 
@@ -1180,7 +1200,11 @@ Figure~\ref{fig:wpol_contour_comb}.
 \centering
 \subfloat[]{\label{fig:wpol_contour_comb_plus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_plus}}\quad
 \subfloat[]{\label{fig:wpol_contour_comb_minus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_minus}}
-\caption{Contours}
+\caption{Error ellipses in the $(\f0, \fLmfR)$ plane for \unit{36}{\invpb} of
+  data combined across electron and muon channels. The black point indicates the
+  best fit value. The 68\% confidence level contour is shown as a green shaded
+  ellipse for the statistical uncertainty and as a black outline for the total
+  uncertainty.}
 \label{fig:wpol_contour_comb}
 \end{figure}
 
@@ -1209,8 +1233,8 @@ Whilst the primary goal of the measurement was to confirm the transverse
 polarisation effect, the longitudinal polarisation fraction has also been
 measured, albeit with less sensitivity.
 
-After publication of this result \cite{cms_wpol_paper}, a set of theoretical
-predictions were published \cite{berger_left_handed_w}. The Blackhat Monte Carlo
+After publication of this result~\cite{cms_wpol_paper}, a set of theoretical
+predictions were published~\cite{berger_left_handed_w}. The Blackhat Monte Carlo
 generator was used to compare like-for-like with this measurement. This
 comparison is shown in Table~\ref{tbl:wpol_theory_comparison}. It can be seen
 that this measurement agrees well with the theoretical expectations.
