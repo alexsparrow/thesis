@@ -63,13 +63,13 @@ the full simulation with \ac{SM} events giving $\LP > 0$ and \ac{SUSY} events
 clustering around $\LP \sim 0$.
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:susy_lp_el_st250}\includegraphics[width=0.3\textwidth]{fig/LP250_MCandSignal_El.pdf}}\quad
-\subfloat[]{\label{fig:susy_lp_el_st350}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_El.pdf}}\quad
-\subfloat[]{\label{fig:susy_lp_el_st450}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_El.pdf}}\\
-\subfloat[]{\label{fig:susy_lp_mu_st250}\includegraphics[width=0.3\textwidth]{fig/LP250_MCandSignal_Mu.pdf}}\quad
-\subfloat[]{\label{fig:susy_lp_mu_st350}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_Mu.pdf}}\quad
-\subfloat[]{\label{fig:susy_lp_mu_st450}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_Mu.pdf}}
-\caption[]{}
+\subfloat[\Pe $250 < \STlep < 350$]{\label{fig:susy_lp_el_st250}\includegraphics[width=0.3\textwidth]{fig/LP250_MCandSignal_El.pdf}}\quad
+\subfloat[\Pe $350 < \STlep < 450$]{\label{fig:susy_lp_el_st350}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_El.pdf}}\quad
+\subfloat[\Pe $\STlep > 450$]{\label{fig:susy_lp_el_st450}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_El.pdf}}\\
+\subfloat[\Pmu $250 < \STlep < 350$]{\label{fig:susy_lp_mu_st250}\includegraphics[width=0.3\textwidth]{fig/LP250_MCandSignal_Mu.pdf}}\quad
+\subfloat[\Pmu $350 < \STlep < 450$]{\label{fig:susy_lp_mu_st350}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_Mu.pdf}}\quad
+\subfloat[\Pmu $\STlep > 450$]{\label{fig:susy_lp_mu_st450}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_Mu.pdf}}
+\caption{Distributions showing the \LP variable for each \STlep bin}
 \label{fig:susy_lp}
 \end{figure}
 
@@ -275,19 +275,19 @@ the numbers shown in Table~\ref{tbl:susy_control_yields}. The data is seen to be
 adequately described by the simulation.
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:susy_mucontrol_st}\includegraphics[width=0.3\textwidth]{fig/MuControl_ST150toInf}}\quad
-\subfloat[]{\label{fig:susy_mucontrol_mt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MT150toInf}}\quad
-\subfloat[]{\label{fig:susy_mucontrol_pt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MuPt150toInf}}
-\caption[]{}
+\subfloat[\STlep]{\label{fig:susy_mucontrol_st}\includegraphics[width=0.3\textwidth]{fig/MuControl_ST150toInf}}\quad
+\subfloat[\MT]{\label{fig:susy_mucontrol_mt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MT150toInf}}\quad
+\subfloat[\Ptmu]{\label{fig:susy_mucontrol_pt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MuPt150toInf}}
+\caption[]{Distributions of several kinematic variables as measured in the muon control sample}
 \label{fig:susy_mucontrol_kin}
 \end{figure}
 
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:susy_mucontrol_lp250}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP250}}\quad
-\subfloat[]{\label{fig:susy_mucontrol_lp350}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP350}}\quad
-\subfloat[]{\label{fig:susy_mucontrol_lp450}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP450}}
-\caption[]{}
+\subfloat[$250 < \STlep < 350$]{\label{fig:susy_mucontrol_lp250}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP250}}\quad
+\subfloat[$250 < \STlep < 450$]{\label{fig:susy_mucontrol_lp350}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP350}}\quad
+\subfloat[$\STlep > 450$]{\label{fig:susy_mucontrol_lp450}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP450}}
+\caption{Distribution of the \LP variable in bins of \STlep as measured in the muon control sample.}
 \label{fig:susy_mucontrol_lp}
 \end{figure}
 
@@ -363,10 +363,15 @@ Section~\ref{sec:susy_systematics}.
 
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:susy_elqcd_selasel}\includegraphics[width=0.5\textwidth]{fig/SelectedVsAntiSelected}}\quad\\
-\subfloat[]{\label{fig:susy_elqcd_fitresult150}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_150}}\quad
-\subfloat[]{\label{fig:susy_elqcd_fitresult250}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_250}}
-\caption[]{}
+\subfloat[Comparison of the \LP distribution between selected and anti-selected electron samples]{
+  \label{fig:susy_elqcd_selasel}\includegraphics[width=0.5\textwidth]{fig/SelectedVsAntiSelected}}\quad\\
+\subfloat[Fit results $150 < \STlep < 250$]{\label{fig:susy_elqcd_fitresult150}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_150}}\quad
+\subfloat[Fit results $250 < \STlep < 350$]{\label{fig:susy_elqcd_fitresult250}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_250}}
+\caption[]{Figure~\subref{fig:susy_elqcd_selasel} shows a comparison of the \LP
+  shape between simulated \ac{QCD} events in the selected and anti-selected
+  samples. Figures~\subref{fig:susy_elqcd_fitresult150} and
+  \subref{fig:susy_elqcd_fitresult250} show the results of the data-driven fits
+  in two \STlep bins.}
 \label{fig:susy_elqcd}
 \end{figure}
 
@@ -478,7 +483,10 @@ the systematic uncertainty.
 \centering
 \subfloat[]{\label{fig:susy_wpol_syst_plus}\includegraphics[width=0.9\textwidth]{fig/MuonStandardPlots_450_NOLP_LPPlusvar_all_ratio}}\\
 \subfloat[]{\label{fig:susy_wpol_syst_minus}\includegraphics[width=0.9\textwidth]{fig/MuonStandardPlots_450_NOLP_LPMinusvar_all_ratio}}
-\caption[]{}
+\caption[]{Shown on the left are the \LP distributions for: no change to the \PW
+  polarisation (black), an upward shift of 15\% on \fLmfR (red) and a downard
+  shift of 15\% on \fLmfR (blue). Right hand plots show the corresponding
+  ratios. Upper plots are for positive charged muons, lower plots for negatively charged muons.}
 \label{fig:susy_wpol_syst}
 \end{figure}
 
@@ -529,13 +537,13 @@ used to set limits on allowed parameter space for the \ac{CMSSM} and more
 general models.
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:susy_mu_lp250}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP250}}\quad
-\subfloat[]{\label{fig:susy_mu_lp350}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP350}}\quad
-\subfloat[]{\label{fig:susy_mu_lp450}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP450}}\\
-\subfloat[]{\label{fig:susy_el_lp250}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP250}}\quad
-\subfloat[]{\label{fig:susy_el_lp350}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP350}}\quad
-\subfloat[]{\label{fig:susy_el_lp450}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP450}}
-\caption[]{}
+\subfloat[\Pmu $250 < \STlep < 350$]{\label{fig:susy_mu_lp250}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP250}}\quad
+\subfloat[\Pmu $350 < \STlep < 450$]{\label{fig:susy_mu_lp350}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP350}}\quad
+\subfloat[\Pmu $\STlep > 450$]{\label{fig:susy_mu_lp450}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP450}}\\
+\subfloat[\Pe $250 < \STlep < 350$]{\label{fig:susy_el_lp250}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP250}}\quad
+\subfloat[\Pe $350 < \STlep < 450$]{\label{fig:susy_el_lp350}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP350}}\quad
+\subfloat[\Pe $\STlep > 450$]{\label{fig:susy_el_lp450}\includegraphics[width=0.3\textwidth]{fig/ElHad_LP450}}
+\caption[]{Comparison of the \LP shapes in each \STlep bin between data and simulation.}
 \label{fig:susy_datamc}
 \end{figure}
 

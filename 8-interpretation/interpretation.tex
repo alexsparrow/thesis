@@ -224,7 +224,9 @@ Table~\ref{tbl:inter_signal_systematics}.
 \centering
 \subfloat[]{\label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_400}}\quad
 \subfloat[]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_400}}
-\caption[]{}
+\caption[]{Comparison of the shape of the profile likelihood function with
+  different systematic effects included at the \ac{CMSSM} point $(\Mzero, Mhalf)
+  = (80, 400)$}
 \label{fig:inter_pl}
 \end{figure}
 
@@ -240,7 +242,9 @@ Table~\ref{tbl:inter_signal_systematics}.
   \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
 \subfloat[Muon Channel Only]{
   \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
-\caption[]{}
+\caption[]{Distribution of the profile likelihood test statistic for null and
+  alternate hypotheses with different systematic effects included. The values of
+  \CLb, \CLs+b and \CLs are also shown.}
 \label{fig:inter_cls}
 \end{figure}
 
@@ -275,27 +279,36 @@ Section~TODO.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_msugra_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_250}}
-\subfloat[]{\label{fig:inter_msugra_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_350}}\\
-\subfloat[]{\label{fig:inter_msugra_mu_eff450}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_450}}
-\subfloat[]{\label{fig:inter_msugra_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_total}}
-\caption[]{}
+\subfloat[$250 < \STlep < 350$]{\label{fig:inter_msugra_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_250}}
+\subfloat[$350 < \STlep < 450$]{\label{fig:inter_msugra_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_350}}\\
+\subfloat[$\STlep > 450$]{\label{fig:inter_msugra_mu_eff450}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_450}}
+\subfloat[Total]{\label{fig:inter_msugra_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/msugra_muons_eff_total}}
+\caption[Signal efficiency for the muon channel in the \ac{CMSSM}]{Signal
+  efficiency for the muon channel in the \ac{CMSSM}. The efficiency is shown
+  separately for each \STlep bin and as a total. The efficiency is shown in the
+  $(\Mzero, \Mhalf)$ plane with $\tanbeta=10$, $\Azero=0$ and $\mu > 0$.}
 \label{fig:inter_msugra_mu}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_msugra_el_eff250}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_250}}
-\subfloat[]{\label{fig:inter_msugra_el_eff350}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_350}}\\
-\subfloat[]{\label{fig:inter_msugra_el_eff450}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_450}}
-\subfloat[]{\label{fig:inter_msugra_el_efftot}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_total}}
-\caption[]{}
+\subfloat[$250 < \STlep < 350$]{\label{fig:inter_msugra_el_eff250}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_250}}
+\subfloat[$350 < \STlep < 450$]{\label{fig:inter_msugra_el_eff350}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_350}}\\
+\subfloat[$\STlep > 450$]{\label{fig:inter_msugra_el_eff450}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_450}}
+\subfloat[Total]{\label{fig:inter_msugra_el_efftot}\includegraphics[width=0.49\textwidth]{fig/msugra_electrons_eff_total}}
+\caption[Signal efficiency for the electron channel in the \ac{CMSSM}]{Signal
+  efficiency for the electron channel in the \ac{CMSSM}. The efficiency is shown
+  separately for each \STlep bin and as a total. The efficiency is shown in the
+  $(\Mzero, \Mhalf)$ plane with $\tanbeta=10$, $\Azero=0$ and $\mu > 0$.}
 \label{fig:inter_msugra_el}
 \end{figure}
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{fig/RA4_ExclusionLimit_tanb10}
-\caption[]{}
+\caption[95\% confidence level exclusion plot for the \ac{CMSSM}]{95\% confidence level exclusion plot for the
+  \ac{CMSSM}. Shown are the observed (red), expected (blue dotted) and $\pm
+  1\sigma$ exclusion bands (light blue shaded) as calculated using the \CLs
+  method. Lines of constant squark and gluino mass are also shown.}
 \label{fig:inter_msugra_exclusion}
 \end{figure}
 
@@ -359,7 +372,9 @@ Section~\ref{sec:inter_1lepton} have been included. The expected limit and $\pm
 exactly that predicted from data.
 
 The exclusion seems to be well predicted by the efficiency maps, with
-significant exclusion on the \Mhalf axis only at low \Mzero.
+significant exclusion on the \Mhalf axis only at low \Mzero. As can be seen,
+squark masses below $\approx \unit{900}{\GeV}$ and gluino masses below $\approx
+\unit{500}{\GeV}$ are excluded at 95\% confidence.
 
 
 \subsection{Simplified Models}
@@ -410,13 +425,16 @@ is reduced.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_muons_eff_total}}
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_electrons_eff_total}}\\
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_muons_eff_total}}
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_electrons_eff_total}}\\
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_muons_eff_total}}
-\subfloat[]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_electrons_eff_total}}
-\caption[]{}
+\subfloat[\Pmu $x=0.25$]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_muons_eff_total}}
+\subfloat[\Pe $x=0.25$]{\label{fig:inter_t3w_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_electrons_eff_total}}\\
+\subfloat[\Pmu $x=0.5$]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_muons_eff_total}}
+\subfloat[\Pe $x=0.5$]{\label{fig:inter_t3w_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_electrons_eff_total}}\\
+\subfloat[\Pmu $x=0.75$]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_muons_eff_total}}
+\subfloat[\Pe $x=0.75$]{\label{fig:inter_t3w_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_electrons_eff_total}}
+\caption[Plots of total signal efficiency for muon and electron channels in
+\TthreeW simplified mode]{Plots of total signal efficiency for muon and electron
+  channels in \TthreeW simplified model. Each plot shows efficiency as a function
+  of $(\Mgluino, \Mlsp)$ for a given value of \Mchargino.}
 \label{fig:inter_t3w_eff}
 \end{figure}
 
@@ -432,7 +450,15 @@ refernce cross-section for squark production calculated assuming
 \centering
 \subfloat[]{\label{fig:inter_t3w_0p25_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit}}
 \subfloat[]{\label{fig:inter_t3w_0p25_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_1d}}
-\caption[]{}
+\caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
+$x=0.75$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
+  $x=0.75$. The 95\% confidence level upper limit on the cross-section as a
+  function of $(\Mgluino, \Mlsp$) is shown in
+  \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
+  exclusion in terms 1, 10 or 100 times the gluino cross-section predicted by
+  \ac{QCD}. Figure \subref{fig:inter_t3w_0p25_limit_1d} shows the same upper
+  limit as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is
+  the \ac{QCD} cross-section for gluino production.}
 \label{fig:inter_t3w_0p25}
 \end{figure}
 
@@ -440,7 +466,15 @@ refernce cross-section for squark production calculated assuming
 \centering
 \subfloat[]{\label{fig:inter_t3w_0p50_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit}}
 \subfloat[]{\label{fig:inter_t3w_0p50_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit_1d}}
-\caption[]{}
+\caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
+$x=0.5$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
+  $x=0.5$. The 95\% confidence level upper limit on the cross-section as a
+  function of $(\Mgluino, \Mlsp$) is shown in
+  \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
+  exclusion in terms 1, 10 or 100 times the gluino cross-section predicted by
+  \ac{QCD}. Figure \subref{fig:inter_t3w_0p25_limit_1d} shows the same upper
+  limit as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is
+  the \ac{QCD} cross-section for gluino production.}
 \label{fig:inter_t3w_0p50}
 \end{figure}
 
@@ -448,7 +482,15 @@ refernce cross-section for squark production calculated assuming
 \centering
 \subfloat[]{\label{fig:inter_t3w_0p75_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit}}
 \subfloat[]{\label{fig:inter_t3w_0p75_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_1d}}
-\caption[]{}
+\caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
+  $x=0.25$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
+  $x=0.25$. The 95\% confidence level upper limit on the cross-section as a
+  function of $(\Mgluino, \Mlsp$) is shown in
+  \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
+  exclusion in terms 1, 10 or 100 times the gluino cross-section predicted by
+  \ac{QCD}. Figure \subref{fig:inter_t3w_0p25_limit_1d} shows the same upper
+  limit as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is
+  the \ac{QCD} cross-section for gluino production.}
 \label{fig:inter_t3w_0p75}
 \end{figure}
 
@@ -463,21 +505,27 @@ the effect of this cut on the efficiency.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_t2tt_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_250}}
-\subfloat[]{\label{fig:inter_t2tt_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_350}}\\
-\subfloat[]{\label{fig:inter_t2tt_mu_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_450}}
-\subfloat[]{\label{fig:inter_t2tt_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_total}}
-\caption[]{}
+\subfloat[$250 < \STlep < 350$]{\label{fig:inter_t2tt_mu_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_250}}
+\subfloat[$350 < \STlep < 450$]{\label{fig:inter_t2tt_mu_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_350}}\\
+\subfloat[$\STlep > 450$]{\label{fig:inter_t2tt_mu_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_450}}
+\subfloat[Total]{\label{fig:inter_t2tt_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_muons_eff_total}}
+\caption[Signal efficiency maps for the muon channel in the \Ttwott simplified
+  model]{Signal efficiency maps for the muon channel in the \Ttwott simplified
+  model. Efficiency is shown as a function of $(\Mstop, \Mlsp)$ for each \STlep
+  bin and for the total across all three bins.}
 \label{fig:inter_t2tt_mu}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_t2tt_el_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_250}}
-\subfloat[]{\label{fig:inter_t2tt_el_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_350}}\\
-\subfloat[]{\label{fig:inter_t2tt_el_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_450}}
-\subfloat[]{\label{fig:inter_t2tt_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_total}}
-\caption[]{}
+\subfloat[$250 < \STlep < 350$]{\label{fig:inter_t2tt_el_eff250}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_250}}
+\subfloat[$350 < \STlep < 450$]{\label{fig:inter_t2tt_el_eff350}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_350}}\\
+\subfloat[$\STlep > 450$]{\label{fig:inter_t2tt_el_eff450}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_450}}
+\subfloat[Total]{\label{fig:inter_t2tt_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t2tt_electrons_eff_total}}
+\caption[Signal efficiency maps for the electron channel in the \Ttwott simplified
+  model]{Signal efficiency maps for the electron channel in the \Ttwott simplified
+  model. Efficiency is shown as a function of $(\Mstop, \Mlsp)$ for each \STlep
+  bin and for the total across all three bins.}
 \label{fig:inter_t2tt_el}
 \end{figure}
 
@@ -489,7 +537,12 @@ achieved with respect to the stop cross-section predicted from \ac{QCD}.
 \centering
 \subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}}
 \subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}}
-\caption[]{}
+\caption[]{95\% upper limit on the cross-section for the \Ttwott simplified
+  model. The two-dimensional plot \subref{fig:inter_t2tt_limit} shows the upper
+  limit as a function of $(\Mstop, \Mlsp)$. The contours overlayed show this
+  exclusion in terms of the stop production cross-section predicted by
+  \ac{QCD}. The upper limit is shown as a function of \Mstop in
+  \subref{fig:inter_t2tt_limit_1d} for $\Mlsp = \unit{50}{\GeV}$. }
 \label{fig:inter_t2tt}
 \end{figure}
 
