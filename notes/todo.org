@@ -100,7 +100,10 @@ Mostly done!
    - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
 ** TODO Resolve language mSUGRA <-> CMSSM
 ** TODO State that SMS exclusions have PDF errors
-** TODO T3W sms
+** DONE T3W sms
+   CLOSED: [2012-03-13 Tue 15:27]
+   - State "DONE"       from "TODO"       [2012-03-13 Tue 15:27]
+** TODO ISR
 
 *** From Alex
 *** TODO More conclusions generally.
@@ -109,3 +112,8 @@ Mostly done!
 *** TODO Why were signal systematics not included
 *** TODO Clarify meaning of "expected effect" in the Validation section -> looks reasonably
 *** TODO T2tt needs to be properly described with Feyn diagrams
+
+* Alex
+** Experiment
+*** TODO Duplication of LEP/27km spiel (3.1:4-8 and 3.2:2-8)
+*** TODO
