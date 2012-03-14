@@ -141,12 +141,30 @@ point shown in Table~\ref{tbl:reco_electronid}
 \item \HoverE is the ratio of the energy deposited in the \ac{HCAL} behind the
   electron seed to that in the \ac{ECAL}. This might also be called the
   \ac{HCAL} leakage.
-\item The track associated with the electron is required to have a hit in the
-  first layer of the pixel tracker in order to reject photon conversions.
-\item Further rejection against electron conversions is provided by the
-  variables \Dist and \DeltaCotTheta. These are calculated by searching for a
-  conversion partner of the electron \ac{GSF} track. If such a partner is found,
-  the electron is rejected if both \Dist and \DeltaCotTheta are below given thresholds.
+\end{itemize}
+
+The remaining variables are chosen to reject electrons stemming from converted
+photons~\cite{cms_an_2009_159}. For conversions which occur after the first layer of the tracker, these
+may exhibit a pattern of \emph{missing hits} - i.e. layers of the inner tracker
+without a hit where one would be expected from extrapolation of the
+track. Conversions can be rejected by requiring either no such missing hits, or
+a single missing hit depending on the desired efficiency.
+
+\begin{itemize}
+\item Further rejection against electron conversions is provided by the variables
+\Dist and \DeltaCotTheta. Firstly, potential conversion partners are found by
+pre-selecting all \ac{CTF} fitted tracks in a cone $\DeltaR < 0.3$ of the
+\ac{GSF} track, and having opposite charge. For each of these, \DeltaCotTheta is
+calculated as
+\begin{equation*}
+  \DeltaCotTheta = \cot\left(\Theta_{\textrm{CTF track}}\right) - \cot\left(\Theta_{\textrm{GSF track}}\right)
+\end{equation*}
+\item \Dist is defined as the two-dimensional distance in the $x-y$ plane between the
+two tracks at the point at which they would be parallel when extrapolated. The
+choice of \ac{CTF} tracks is restricted to avoid picking the track corresponding
+to the electron. Conversion electrons will tend to have smaller values of
+\DeltaCotTheta and \Dist. If a suitable partner track is found, the electron is
+rejected if both \Dist and \DeltaCotTheta are below given thresholds.
 \end{itemize}
 
 The pseudorapidity acceptance for electrons is $|\eta| < 2.5$. However, the
