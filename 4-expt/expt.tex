@@ -1,12 +1,22 @@
-\chapter{The CMS Experiment at the Large Hadron Collider}
+\chapter{The \acl{CMS} Experiment at the \acl{LHC}}
 \label{sec:experiment}
 \section{Introduction}
-The Large Hadron Collider (LHC) is a proton-proton ($\Pp\Pp$) accelerator
-located at the CERN particle physics laboratory near Geneva, Switzerland. The
-LHC is built in the tunnels formerly occupied by the \ac{LEP} experiment, a
-\unit{27}{\kilo\metre} long ring lying on the border between France and
-Switzerland. Two beams of protons run in opposite directions around the ring and
-are made to collide at four interaction points.
+The \acf{LHC}~\cite{lhc_design_report} is a proton-proton ($\Pp\Pp$) accelerator
+located at the CERN particle physics laboratory near Geneva, Switzerland. It has
+been designed to carry out a varied program of physics research at a number of
+specialised detectors. This section will give a very brief introduction to the
+\ac{LHC} itself. The \acf{CMS} experiment, a large, general purpose detector at
+the \ac{LHC}, will be discussed in detail.
+
+\section{The \acl{LHC}}
+The \ac{LHC} is a circular $\Pp\Pp$ synchrotron with a circumference of
+\unit{27}{\kilo\metre}. It sits in a tunnel initially constructed for the
+\ac{LEP} accelerator buried at a depth of between 50 and \unit{175}{\metre}
+beneath the Franco-Swiss border. At full design specifications, 2808 bunches of
+protons will circulate around each direction of the ring, colliding at a centre
+of mass energy of \unit{14}{\TeV}. With a proton bunch spacing of
+\unit{25}{\ns}, the \ac{LHC} will eventually achieve a luminosity of
+\unit{$10^{34}$}{\rpsquare{\centi\metre}\usk\reciprocal\second}.
 
 There are four primary experiments at the LHC: \ac{ALICE}, \ac{ATLAS}, \ac{CMS}
 and \ac{LHCb}. Each one is constructed around one of the four interaction points
@@ -14,7 +24,8 @@ and records the shower of particles produced from the colliding protons. ATLAS
 and CMS are large, general purpose detectors designed to search for a variety of
 \ac{NP} signatures as well as making higher precision measurements of \ac{SM}
 parameters. \ac{ALICE} is designed to examine the products of heavy-ion
-collisions (lead-lead) in order to explore the quark gluon plasma and related
+collisions (principally lead-lead - although a number of configurations are
+possible) in order to explore the quark gluon plasma and related
 physics. Finally, the \ac{LHCb} experiment is optimised for the study of B-meson
 decays. These are important for the study of CP violation within the \ac{SM} but
 might also provide potential avenues for the discovery of \ac{NP}.
@@ -22,16 +33,6 @@ might also provide potential avenues for the discovery of \ac{NP}.
 In addition to the four larger detectors, two smaller experiments, \ac{LHCf} and
 \ac{TOTEM} lie upstream of the \ac{ATLAS} and \ac{CMS} collision points in order
 to probe more specialised forward physics phenomena.
-
-\section{The \acl{LHC}}
-The \ac{LHC} is a circular $\Pp\Pp$ synchrotron with a circumference of
-\unit{27}{km}. It sits in a tunnel initially constructed for the \ac{LEP}
-accelerator buried at a depth of between 50 and \unit{175}{\metre} beneath the
-Franco-Swiss border. At full design specifications, 2808 bunches of protons will
-circulate around each direction of the ring, colliding at a centre of mass
-energy of \unit{14}{\TeV}. With a proton bunch spacing of
-\unit{25}{\ns}, the \ac{LHC} will eventually achieve a luminosity of
-\unit{$10^{34}$}{\rpsquare{\centi\metre}\usk\reciprocal\second}.
 
 \subsection{Accelerator Complex}
 The \ac{LHC} ring itself is the final stage in an injector chain utilising a
@@ -59,10 +60,12 @@ design specified \unit{7}{\TeV} per beam.
 
 \section{The \acl{CMS} Experiment}
 \label{sec:cms}
-\ac{CMS} is a large, general purpose detector\cite{cms_jinst} designed to firmly establish or
-disprove the existence of the Higgs boson particle as well as performing
-searches for a wide variety of \ac{NP} signatures. The design goals of CMS were
-as follows (paraphrasing Design proposal):
+\ac{CMS} is a large, general purpose detector~\cite{cms_jinst} at the
+\ac{LHC}. It has been designed to search for the Higgs boson (see
+Section~\ref{sec:sm_higgs}) as well as signatures of physics beyond the \ac{SM}.
+
+The design goals of CMS were as follows (paraphrasing the technical proposal
+document~\cite{cms_technical_proposal}):
 \begin{enumerate}
 \item a high quality, redundant muon system,
 \item the best possible \ac{ECAL}
@@ -84,16 +87,16 @@ limitations on the volume of the inner detector subsystems (everything except
 for the muon chambers and return yoke).
 
 \subsection{Coordinate System}
-In order to facilitate discussion of the detector, a right-handed coordinate
-system is defined with the origin chosen to be the nominal collision point
-inside \ac{CMS}. The $x$ axis is then defined to point horizontally inwards
-towards the centre of the \ac{LHC} ring and the $y$-axis vertically
-upwards. Therefore the $z$-axis is aligned along the beam-line pointing towards
-the nearby Jura mountains. Often a cylindrical coordinate system will be used
-with where the azimuthal angle $\phi$ and radial coordinate $r$ span the $x-y$
-plane. The azimuthal angle is measured with respect to the $x$-axis. The
-pseudorapidity, $\eta = - \ln \tan \frac{\theta}{2}$ where $\theta$ is the polar
-angle measured with respect to the $z$-axis.
+The coordinate system at \ac{CMS} is right-handed with its origin placed at the
+nominal beam collision point inside \ac{CMS}. The $x$ axis is then defined to
+point horizontally inwards towards the centre of the \ac{LHC} ring and the
+$y$-axis vertically upwards. Therefore the $z$-axis is aligned along the
+beam-line pointing towards the nearby Jura mountains. Often a cylindrical
+coordinate system will be used with where the azimuthal angle $\phi$ and radial
+coordinate $r$ span the $x-y$ plane. The azimuthal angle is measured with
+respect to the $x$-axis. The pseudorapidity, $\eta = - \ln \tan
+\frac{\theta}{2}$ where $\theta$ is the polar angle measured with respect to the
+$z$-axis.
 
 \subsection{Silicon Tracker}
 The innermost subsystem of \ac{CMS} is the silicon tracker, designed to provide
@@ -192,7 +195,7 @@ grouped into $5\times 5$ supercrystals within a carbon-fibre alveolar
 structure. The endcaps are split into two halves, known as ``Dees'', each
 holding 3,662 crystals.
 
-The scintillation of the ac{ECAL} crystals as well as the amplification of the
+The scintillation of the \ac{ECAL} crystals as well as the amplification of the
 \acp{APD} varies as a function of temperature. This variation was found to be
 \unit{$\approx 4\%$}{\per\celsius}. For this reason, the \ac{ECAL} temperature
 is precisely regulated to within \unit{$\pm$ 0.05}{\celsius}.
@@ -223,7 +226,7 @@ purposes) is close to the scintillation emission peak and thus can be used to
 track the changes in the crystal transparency. The near-infrared laser is far
 from the emission peak and thus relatively stable to changes in the
 transparency. This can be used to verify the stability of the system. The lasers
-are distributed to the crystals via optical fibre and a series of
+are distributed to the crystals via optical fibres and a series of
 fan-outs. Approximately 1\% of the \ac{LHC} beam gap of
 \unit{3.17}{\micro\second} is used for transparency monitoring. A full scan of
 the entire \ac{ECAL} can be achieved in approximately 30~minutes. The lasers can
