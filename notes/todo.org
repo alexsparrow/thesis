@@ -69,7 +69,9 @@ Mostly done!
 ** TODO Wpol conclusion
 ** Would be nice to have the JEC uncertainty ratios for electrons too
 ** Would be nice to have some diagrams illustrating the QCD kinematics
-** TODO Comparison with blackhat
+** DONE Comparison with blackhat
+   CLOSED: [2012-03-14 Wed 09:52]
+   - State "DONE"       from "TODO"       [2012-03-14 Wed 09:52]
 ** TODO Reference SM section for chirality + possibly equiv theorem
 
 * SUSY Section
@@ -94,7 +96,9 @@ Mostly done!
    CLOSED: [2012-02-13 Mon 22:16]
    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
 
-** TODO Why were all the backgrounds combined into 1?
+** CANCELLED Why were all the backgrounds combined into 1?
+   CLOSED: [2012-03-14 Wed 09:52]
+   - State "CANCELLED"  from "TODO"       [2012-03-14 Wed 09:52]
 ** DONE mSUGRA plot: make clear tanbeta and mu values
    CLOSED: [2012-02-23 Thu 11:08]
    - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
@@ -115,5 +119,79 @@ Mostly done!
 
 * Alex
 ** Experiment
-*** TODO Duplication of LEP/27km spiel (3.1:4-8 and 3.2:2-8)
-*** TODO
+*** DONE Duplication of LEP in 3.1 and 3.2
+    CLOSED: [2012-03-14 Wed 10:07]
+    - State "DONE"       from "TODO"       [2012-03-14 Wed 10:07]
+*** DONE 3.1p2 CMS acronym
+    CLOSED: [2012-03-14 Wed 11:52]
+    - State "DONE"       from "TODO"       [2012-03-14 Wed 11:52]
+*** DONE lead-lead -> others possible
+    CLOSED: [2012-03-14 Wed 10:14]
+    - State "DONE"       from "TODO"       [2012-03-14 Wed 10:14]
+*** TODO 3.2: last sentence clarify
+*** DONE 3.3p1: reference spacing
+    CLOSED: [2012-03-14 Wed 10:33]
+    - State "DONE"       from "TODO"       [2012-03-14 Wed 10:33]
+*** DONE remove firmly
+    CLOSED: [2012-03-14 Wed 11:00]
+    - State "DONE"       from "TODO"       [2012-03-14 Wed 11:00]
+*** DONE paraphrading design proposal weird
+    CLOSED: [2012-03-14 Wed 11:00]
+    - State "DONE"       from "TODO"       [2012-03-14 Wed 11:00]
+*** TODO need dimensions of CMS 21m....?
+*** DONE coord system: facilitate discussion
+    CLOSED: [2012-03-14 Wed 11:56]
+    - State "DONE"       from "TODO"       [2012-03-14 Wed 11:56]
+*** TODO \phi r should have commas
+*** TODO 3.3.2 silicon strip size wrong
+*** TODO pixel tracker repeat 150*100\mu\metre?
+*** TODO Refer to figure in strip tracker
+*** TODO 3.3.3 61,200 just EB? check
+*** TODO acECAL
+*** TODO raditation
+*** TODO Laser monitoring system p3 fibre -> fibres
+*** TODO delete ECAL ADC clock
+*** TODO delete PN
+*** TODO 3.3.4 delete "type" signatures
+*** TODO 3.3.6 Delete up to sensitive - consider change of vocab
+*** TODO mass resolution?? Z' ECAL is much better
+*** TODO Drift tubes p2: superlayers
+*** TODO CSCs: DTs
+*** TODO Define RPC
+*** TODO 3.3.7: problem -> challenge
+*** TODO DAQ system
+** Object
+*** DONE 4.1p1: Replace derive -> reconstruct
+    CLOSED: [2012-03-14 Wed 09:33]
+    - State "DONE"       from "TODO"       [2012-03-14 Wed 09:33]
+
+*** TODO Mention taus
+*** TODO Put tracker/standalone before Global muons
+*** TODO 4.1p1: Abbreviate PF
+*** TODO 4.1p1: PF method??
+*** TODO 4.2.2p1: material budget jargon
+*** TODO 4.2.2p2: Clarify electron reconstruction
+*** TODO 4.2.2p3: trade-off ??
+*** TODO 4.2.2p3: reference spacing measurement...
+*** TODO W->enu spacing
+*** TODO encap
+*** TODO 4.2.2p4: acECAL
+*** TODO 700 GeV??
+*** TODO acECAL
+*** TODO zero-suppression give value
+*** TODO explain conversion rejection
+*** TODO explain what conversions are
+*** TODO 4.3p1 Calos
+*** TODO jet corrections
+*** TODO reference
+*** TODO Explain missing hits in table
+*** TODO 4.4p3 W *boson* momentum
+*** TODO ETmiss check def is negative vector sum
+*** TODO 4.5p1 low fake rate jargon
+*** TODO 4.5p2 few hundred GeV clarify
+*** TODO certain requirements...
+*** TODO 4.5.1p2: Clarify reconstructed again...
+*** TODO 4.5.2p2: two -> to
+*** TODO each cluster
+*** TODO PF diagram
+*** TODO 4.5.4p-1: jet clustering todo
