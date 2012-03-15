@@ -144,8 +144,12 @@ Mostly done!
 *** DONE coord system: facilitate discussion
     CLOSED: [2012-03-14 Wed 11:56]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 11:56]
-*** TODO \phi r should have commas
-*** TODO 3.3.2 silicon strip size wrong
+*** DONE \phi r should have commas
+    CLOSED: [2012-03-15 Thu 10:36]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 10:36]
+*** DONE 3.3.2 silicon strip size wrong
+    CLOSED: [2012-03-15 Thu 11:39]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 11:39]
 *** TODO pixel tracker repeat 150*100\mu\metre?
 *** TODO Refer to figure in strip tracker
 *** TODO 3.3.3 61,200 just EB? check
@@ -187,8 +191,12 @@ Mostly done!
 *** TODO 700 GeV??
 *** TODO acECAL
 *** TODO zero-suppression give value
-*** TODO explain conversion rejection
-*** TODO explain what conversions are
+*** DONE explain conversion rejection
+    CLOSED: [2012-03-15 Thu 11:29]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 11:29]
+*** DONE explain what conversions are
+    CLOSED: [2012-03-15 Thu 11:29]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 11:29]
 *** TODO 4.3p1 Calos
 *** TODO jet corrections
 *** TODO reference

@@ -16,11 +16,12 @@ reconstruction of jets and missing energy.
 \section{Leptons}
 \subsection{Muons}
 \label{sec:reco_muons}
-The full details of muon reconstruction at CMS are presented in
-\cite{cms_mu_reco}, \cite{cms_mu_pas}. A brief overview will be presented here, focussing on the
-aspects pertinent to the following analysis chapters. Muons are reconstructed in
-both the muon chambers and the silicon tracker. To match this redundancy in the
-measurement, a number of reconstruction algorithms are available.
+The full details of muon reconstruction at CMS are presented
+in~\cite{cms_mu_reco,cms_mu_pas}. A brief overview will be presented here,
+focussing on the aspects pertinent to the following analysis chapters. Muons are
+reconstructed in both the muon chambers and the silicon tracker. To match this
+redundancy in the measurement, a number of reconstruction algorithms are
+available.
 
 \subsubsection{Global Muons}
 Global muons are an extension of standalone muons to include measurements in the
@@ -58,8 +59,7 @@ vector along with an estimate of the transverse momentum. These form the basis
 of a track fit in the muon chambers based on the Kalman-filter technique. The
 fit is constrained to the vertex in order to reject cosmic ray muons. Since much
 of the calibration and validation work for the muon system was performed using
-cosmic rays, a separate algorithm was developed for this purpose
-\cite{cms_mu_reco_cosmic}.
+cosmic rays, a separate algorithm was developed for this purpose~\cite{cms_mu_reco_cosmic}.
 
 \subsubsection{Merging}
 Reconstructed muons from each of the algorithms detailed above are then merged
@@ -117,7 +117,7 @@ from jets and photons means that electrons at \ac{CMS} are fundamentally less
 well defined object than muons. There is therefore a much larger space to trade
 between signal efficiency and purity. Whilst more complex selection procedures
 are available (e.g. a multivariate approach), a simple cut-based selection was
-chosen for the \PW cross-section measurement\cite{cms_pas_ewk_10_002} and has been
+chosen for the \PW cross-section measurement~\cite{cms_pas_ewk_10_002} and has been
 used in this work. The variables have been chosen for their background rejection
 capabilities but also for robustness during early the data-taking period. Cut
 values have been chosen for a number of working points, defined by their
@@ -131,10 +131,10 @@ point shown in Table~\ref{tbl:reco_electronid}
 \item \sigmaieta is a measure of the \ac{RMS} shower width of the electron
   in the $\eta$ direction.
 \item \deltaphiin and \deltaetain represent the angular separation between the
-  trajectory of the \ac{GSF} track and the ac{ECAL} supercluster.
+  trajectory of the \ac{GSF} track and the \ac{ECAL} supercluster.
 \item Tracker, \ac{ECAL} and \ac{HCAL} isolation quantities summed in a cone
   $\Delta R < 0.3$. Within the tracker, a threshold of \unit{700}{\GeV} is
-  applied to the tracks contributing to the sum. Similarly, in the ac{ECAL}, a
+  applied to the tracks contributing to the sum. Similarly, in the \ac{ECAL}, a
   zero-suppression cut is applied. The cone is centred on the track direction at
   the vertex for the tracker isolation, and the supercluster for the calorimeter
   quantities.
@@ -189,7 +189,7 @@ enhanced \Pt resolution and response. \ac{PF} jets are products of the \acl{PF}
 algorithm described below. Finally, track jets are reconstructed from well
 measured tracks in the central tracker.
 
-Jets are clustered using the \antiKT algorithm \cite{antiKT} with a size
+Jets are clustered using the \antiKT algorithm~\cite{antiKT} with a size
 parameter $R=0.5$.
 
 \section{Missing Energy}
@@ -226,7 +226,7 @@ the event. The \MHT is therefore a measure of the \PW momentum.
 
 \section{Particle Flow at \ac{CMS}}
 \label{sec:reco_pf}
-The \ac{PF} algorithm \cite{cms_pf_pas} attempts to provide a global
+The \ac{PF} algorithm~\cite{cms_pf_pas} attempts to provide a global
 reconstruction of the event - accurate determination of the type, energy and
 direction of all stable particles - by combining measurements from all
 subdetectors in \ac{CMS}. This strategy is well suited for use with the \ac{CMS}
