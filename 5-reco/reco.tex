@@ -8,9 +8,9 @@ chapters. The objects of primary interest for these purposes are leptons, jets
 and missing energy. The offline reconstruction algorithms used to reconstruct
 each object will be presented, along with issues and properties related to data
 analysis. Some details of the reconstruction performance at \ac{CMS} will also
-be shown. Finally, the \acl{PF} method, which provides a global reconstruction
-of the event, will be explained in some detail. As will be seen, \ac{PF}
-combines tracking and calorimeter measurements to provide excellent
+be shown. Finally, the \acf{PF} algorithm, which provides a global
+reconstruction of the event, will be explained in some detail. As will be seen,
+\ac{PF} combines tracking and calorimeter measurements to provide excellent
 reconstruction of jets and missing energy.
 
 \section{Leptons}
@@ -90,10 +90,10 @@ pre-defined selections are available:
 \subsection{Electrons}
 \label{sec:reco_electrons}
 Electron reconstruction at \ac{CMS} makes use of measurements from both the
-silicon tracker and the \ac{ECAL}. In the case of \ac{CMS}, the material budget
-of the tracker cause electrons to radiate a large fraction of their energy
-before reaching the \ac{ECAL} - 50\% of electrons radiate more than 50\% of
-their energy in this way. For an accurate measurement of the electron energy,
+silicon tracker and the \ac{ECAL}. In the case of \ac{CMS}, the large amount of
+material in the tracker causes electrons to radiate a large fraction of their
+energy before reaching the \ac{ECAL} - 50\% of electrons radiate more than 50\%
+of their energy in this way. For an accurate measurement of the electron energy,
 this energy, radiated in the form of bremsstrahlung photons, must be
 reconstructed correctly.
 
@@ -133,11 +133,13 @@ point shown in Table~\ref{tbl:reco_electronid}
 \item \deltaphiin and \deltaetain represent the angular separation between the
   trajectory of the \ac{GSF} track and the \ac{ECAL} supercluster.
 \item Tracker, \ac{ECAL} and \ac{HCAL} isolation quantities summed in a cone
-  $\Delta R < 0.3$. Within the tracker, a threshold of \unit{700}{\GeV} is
-  applied to the tracks contributing to the sum. Similarly, in the \ac{ECAL}, a
-  zero-suppression cut is applied. The cone is centred on the track direction at
-  the vertex for the tracker isolation, and the supercluster for the calorimeter
-  quantities.
+  $\Delta R < 0.3$~\cite{lepton_isolation_an}. The energy deposits and track
+  associated with the lepton are removed. Within the tracker, a threshold of
+  \unit{700}{\MeV} is applied to the tracks contributing to the sum. Similarly,
+  in the \ac{ECAL}, a zero-suppression cut is applied (\unit{0.08}{\GeV} in
+  \ac{EB} and \unit{0.1}{\GeV} in \ac{EE}). The cone is centred on the track
+  direction at the vertex for the tracker isolation, and the supercluster for
+  the calorimeter quantities.
 \item \HoverE is the ratio of the energy deposited in the \ac{HCAL} behind the
   electron seed to that in the \ac{ECAL}. This might also be called the
   \ac{HCAL} leakage.
@@ -175,7 +177,7 @@ barrel-endcap transition region, $1.4442 < |\eta| < 1.566$ is explicitly exclude
 \subsubsection{\ac{ECAL} Transparency Corrections}
 \label{sec:reco_ecal_transparency}
 \section{Jets}
-Four types of jets are reconstructed at \ac{CMS}: \acp{Calo} jets, \ac{PF} jets,
+Four types of jets are reconstructed at \ac{CMS}: \acf{Calo} jets, \ac{PF} jets,
 \ac{JPT} jets and track jets. \ac{Calo} jets are reconstructed from energy
 deposits in the \ac{ECAL} and \ac{HCAL}, combined into calorimeter
 towers. Calorimeter towers consist of one or more \ac{HCAL} cells with
@@ -193,35 +195,45 @@ Jets are clustered using the \antiKT algorithm~\cite{antiKT} with a size
 parameter $R=0.5$.
 
 \section{Missing Energy}
-A missing energy measurement is made by considering the total momentum of some
-set of particles reconstructed in the detector and comparing this quantity to
-the initial momenta of the colliding partons. Any difference in these two
-quantities may be attributed to the presence of additional particles, not
-interacting within the volume of the detector. There are a number of ways to
-define such a signal. At a hadron collider, the initial boost of the parton
-along the beam axis is unknown. For this reason, the transverse component of the
-missing energy is normally taken instead.
+Certain particles, such as neutrinos, are not reconstructed by the \ac{CMS}
+detector. However, their presence may be inferred by considering the total
+momentum of particles reconstructed by the detector and comparing this with the
+momentum of the initial state. Any imbalance in these quantities can be
+attributed to the presence of some ``invisible'' particles - a \emph{missing
+  energy} signature.
 
-Missing transverse energy (\MET) is the most commonly used missing energy
-quantity. \MET can be measured in several ways at \ac{CMS}. Most simply, via
-\ac{Calo} \MET, which takes the negative vector sum of calorimeter tower
-energies (\ac{ECAL} and \ac{HCAL}). An energy threshold is applied to the towers
-contributing to the sum to reject electronics noise. Alternatively, \ac{PF} \MET
-instead takes the negative vector sum over the momenta of particles
-reconstructed according to the \acl{PF} algorithm. As can be seen in Section~
-\ref{sec:reco_pf}, this has been shown to provide the most sensitive \MET
-measurement at \ac{CMS}. Unless explicitly noted, it should be assumed that all
-\MET quantities in this work are calculated in this way.
+At a hadron collider, the situation is complicated by the fact that the boost of
+the initial partons parallel to the beamline is not known. Hence missing energy
+measurement along this axis is not possible. For this reason, transverse
+quantities are used instead - most commonly the \emph{missing transverse
+  energy}, \METv. This can be defined generically as
+\begin{equation*}
+\METv = -\sum_{o in \textrm{objects}} \vec{p}_T^o
+\end{equation*}
+where $p_T^o$ refers to the transverse momentum of object $o$. The chosen set of
+objects then leads to a number of alternative definitions of \METv. The
+magnitude of this quantity, often used in event selection, will be denoted \MET.
 
-Alternative missing energy quantities can be defined for other purposes. For
-instance, missing transverse hadronic energy (\MHT) is formed by taking the
-vector sum,
+At \ac{CMS}, the simplest measurement of \METv is \ac{Calo} \METv which sums
+over the calorimeter tower energies (\ac{ECAL} and \ac{HCAL}).  An energy
+threshold is applied to the towers in order to reject electronics
+noise. Alternatively, \ac{PF} \METv sums over the candidate particles output by
+the \ac{PF} algorithm. This will be discussed further in
+Section~\ref{sec:reco_pf}. As will be seen, this provides the most sensitive
+\METv measurement at \ac{CMS} and thus is used throughout the work presented
+here. It should be assumed, unless noted otherwise, that references to \METv or
+derived quantities use the \ac{PF} measurement.
+
+Alternative missing energy quantities can be defined for other purposes. Often,
+a scalar quantity is desired instead. The \emph{missing transverse hadronic
+  energy} (\MHT) is formed by taking the vector sum,
 \begin{equation}
-\MHT = -\sum_{j \in \textrm{jets}} \vec{E_T^j}
+\MHTv = -\sum_{j \in \textrm{jets}} \vec{E_T^j}
 \end{equation}
-This gives the energy of a system recoiling against jets in the event. For
-instance, in a \Wjets event, the lepton and neutrino recoil against the jets in
-the event. The \MHT is therefore a measure of the \PW momentum.
+In general, this is used to measure the energy of a system of particles
+recoiling against the jets in an event. For example, in \Wjets events, the
+recoiling system is the \PW boson. \MHTv is therefore one possible measurement
+of the \PW boson momentum, \PtW.
 
 
 \section{Particle Flow at \ac{CMS}}
@@ -231,7 +243,7 @@ reconstruction of the event - accurate determination of the type, energy and
 direction of all stable particles - by combining measurements from all
 subdetectors in \ac{CMS}. This strategy is well suited for use with the \ac{CMS}
 detector. The silicon tracker is able to reconstruct charged particle tracks
-with high efficiency and low fake rate down to transverse momenta as low as
+with high efficiency and purity down to transverse momenta as low as
 \unit{150}{\MeV}. Additionally, the granularity of the \ac{ECAL} is sufficient
 for the separation of photons and charged particle energy deposits in jets with
 \Pt of a few hundred \GeV. In contrast, the \ac{HCAL} is much coarser. However,
@@ -244,7 +256,7 @@ hadrons and photons. This provides an improved measurement of the jet energy and
 thus also of \MET.
 
 The particle flow algorithm proceeds by linking the tracks and energy clusters
-to form blocks. A single block main contain some combination of a charged
+to form blocks. A single block may contain some combination of a charged
 particle track, one or more energy clusters and a muon. The fine granularity of
 the \ac{CMS} detector ensures that blocks typically contain 1, 2 or 3 elements.
 The links between each block are parameterised by a distance which encodes the
@@ -278,15 +290,16 @@ To this end, a specialised clustering algorithm was developed. This algorithm is
 used the \ac{ECAL}, \ac{HCAL}, \ac{PS} but not in the \ac{HF} where each cell is
 taken to be a cluster.
 
-The first step of the algorithm produces seed clusters from local maxima in the
-calorimeter cells above a given energy. The second step produces topological
-clusters by extending cluster two include cells with at least one side in common
-with the cluster and an energy above a threshold related to the standard
-deviation of the electronics noise in the calorimeter. The topological clusters
-are then transformed to particle flow clusters, with a separate particle flow
-cluster for each seed comprising the topological cluster. The energy and
-position of each particle flow cluster is determined iteratively with the energy
-of each seed shared between the particle flow clusters.
+The first step of the algorithm produces \emph{seed clusters} from local maxima
+in the calorimeter cell energies meeting a minimum threshold requirement.  These
+seed clusters are then extended to include cells sharing at least one side in
+common with the original cluster and an energy exceeding a threshold chosen
+according to the standard deviation of electronics noise in the
+calorimeter. These \emph{topological clusters} are then transformed into
+\emph{particle flow clusters}, with a separate particle flow cluster for each
+seed comprising the topological cluster. The energy and position of each
+particle flow cluster is determined iteratively, with the energy of each cell
+shared among the particle flow clusters.
 
 \subsection{Building Links}
 Each track is extrapolated from the position of its last measured hit to the
