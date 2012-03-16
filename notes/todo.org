@@ -2,6 +2,8 @@
 ** TODO Ensure technical details of MC are described e.g. GEANT, Pythia etc
 ** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
 ** TODO LM points. Are they explained?
+** TODO Clarify MET vs METvector
+** TODO Clarify SMS language
 
 * SM
 ** DONE ALL!
@@ -111,7 +113,6 @@ Mostly done!
    - State "DONE"       from "TODO"       [2012-03-13 Tue 15:27]
 ** TODO ISR - cut it off?
 ** TODO ensure i've mentioned the window averaging + smoothing of the limit contours
-** TODO Clarify SMS language
 ** TODO Explain why T2tt sensitivity is low + how could be improved
 
 *** From Alex
@@ -184,9 +185,15 @@ Mostly done!
 
 *** TODO Mention taus
 *** TODO Put tracker/standalone before Global muons
-*** TODO 4.1p1: Abbreviate PF
-*** TODO 4.1p1: PF method??
-*** TODO 4.2.2p1: material budget jargon
+*** DONE 4.1p1: Abbreviate PF
+    CLOSED: [2012-03-16 Fri 19:45]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 19:45]
+*** DONE 4.1p1: PF method??
+    CLOSED: [2012-03-16 Fri 19:45]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 19:45]
+*** DONE 4.2.2p1: material budget jargon
+    CLOSED: [2012-03-16 Fri 19:40]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 19:40]
 *** TODO 4.2.2p2: Clarify electron reconstruction
 *** TODO 4.2.2p3: trade-off ??
 *** DONE 4.2.2p3: reference spacing measurement...
@@ -201,18 +208,24 @@ Mostly done!
 *** DONE 4.2.2p4: acECAL
     CLOSED: [2012-03-15 Thu 12:54]
     - State "DONE"       from "TODO"       [2012-03-15 Thu 12:54]
-*** TODO 700 GeV??
+*** DONE 700 GeV??
+    CLOSED: [2012-03-16 Fri 18:39]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 18:39]
 *** DONE acECAL
     CLOSED: [2012-03-15 Thu 12:54]
     - State "DONE"       from "TODO"       [2012-03-15 Thu 12:54]
-*** TODO zero-suppression give value
+*** DONE zero-suppression give value
+    CLOSED: [2012-03-16 Fri 18:39]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 18:39]
 *** DONE explain conversion rejection
     CLOSED: [2012-03-15 Thu 11:29]
     - State "DONE"       from "TODO"       [2012-03-15 Thu 11:29]
 *** DONE explain what conversions are
     CLOSED: [2012-03-15 Thu 11:29]
     - State "DONE"       from "TODO"       [2012-03-15 Thu 11:29]
-*** TODO 4.3p1 Calos
+*** DONE 4.3p1 Calos
+    CLOSED: [2012-03-16 Fri 18:39]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 18:39]
 *** TODO jet corrections
 *** TODO reference
 *** DONE Explain missing hits in table
@@ -220,13 +233,23 @@ Mostly done!
     - State "DONE"       from "TODO"       [2012-03-14 Wed 17:49]
 *** TODO electron id table should have inequality signs probably
 *** TODO check conversion rejection is sz with alex
-*** TODO 4.4p3 W *boson* momentum
-*** TODO ETmiss check def is negative vector sum
-*** TODO 4.5p1 low fake rate jargon
+*** DONE 4.4p3 W *boson* momentum
+    CLOSED: [2012-03-16 Fri 17:34]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 17:34]
+*** DONE ETmiss clarify notation
+    CLOSED: [2012-03-16 Fri 19:40]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 19:40]
+*** DONE 4.5p1 low fake rate jargon
+    CLOSED: [2012-03-16 Fri 19:48]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 19:48]
 *** TODO 4.5p2 few hundred GeV clarify
 *** TODO certain requirements...
 *** TODO 4.5.1p2: Clarify reconstructed again...
-*** TODO 4.5.2p2: two -> to
-*** TODO each cluster
+*** DONE 4.5.2p2: two -> to
+    CLOSED: [2012-03-16 Fri 17:48]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 17:48]
+*** DONE each cluster
+    CLOSED: [2012-03-16 Fri 17:49]
+    - State "DONE"       from "TODO"       [2012-03-16 Fri 17:49]
 *** TODO PF diagram
 *** TODO 4.5.4p-1: jet clustering todo
