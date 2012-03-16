@@ -242,10 +242,12 @@ Table~\ref{tbl:inter_signal_systematics}.
   \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
 \subfloat[Muon Channel Only]{
   \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
-\caption[]{Distribution of the profile likelihood ratio test statistic for null
+\caption[Distribution of the profile likelihood ratio test statistic for null
+and alternate hypotheses with different systematic effects
+included]{Distribution of the profile likelihood ratio test statistic for null
   and alternate hypotheses with different systematic effects included. These
   distributions have been made for the \ac{CMSSM} point $(\Mzero, \Mhalf) = (80,
-  400)$. The values of \CLb, \CLs+b and \CLs are also shown.}
+  400)$. The values of \CLb, \CLspb and \CLs are also shown.}
 \label{fig:inter_cls}
 \end{figure}
 
@@ -409,9 +411,10 @@ parameter should lie somewhere between the mother and daughter particles'
 masses. To study a range of scenarios without having to consider the full
 three-dimensional volume of the parameter space, three scenarios are
 considered. Choosing values of the intermediate particle mass as
-\begin{equation*}
+\begin{equation}
 \Mchargino = x \Mgluino + (1-x)\Mlsp
-\end{equation*}
+\label{eqn:tthreew_x}
+\end{equation}
 limits have been set for 3 values of the parameter $x$ - 0.25, 0.5 and
 0.75. Intuitively, these represent cases where the intermediate particle mass is
 closer to the daughter, intermediate between daughter and mother and closer to
@@ -444,6 +447,25 @@ Figures~\ref{fig:inter_t3w_0p75}, \ref{fig:inter_t3w_0p50} and
 \ref{fig:inter_t3w_0p25} respectively. The exclusion is with respect to a
 refernce cross-section for squark production calculated assuming
 \ac{QCD}-strength couplings.
+
+% TODO: Alex needs to check this weirdness!!
+Comparing the exclusion contours, there does not appear to be a strong
+dependence on \Mchargino. The reach of the search can be seen to improve
+slightly for lower values of $x$ when the mass splitting between the mother and
+the \ac{LSP} is reasonably large. From Eqn~\ref{eqn:tthreew_x}, these models
+have an intermediate particle with a mass closer to the \ac{LSP} than to the
+mother. In such events, the \PW would be expected to be relatively soft and the
+jets from the cascade hard. With respect to the analysis selection, the
+efficiency of the \HT cut would be expected to increase. On the other hand, for
+a softer \PW, the \STlep efficiency may decrease due to the smaller charged
+lepton momentum. Overall, the second effect is likely to be small since \STlep
+is likely to be dominated by the missing energy from the \acp{LSP}.
+
+In the cases where the mass splitting between mother and \ac{LSP} is smaller,
+models with \Mchargino close to \Mgluino appears to give better exclusion. In
+these cases, one might guess that the harder \PW is more relevant has a greater
+effect on the efficiency since there is less hadronic energy available from the
+cascade.
 
 % TODO: more spiel here
 
