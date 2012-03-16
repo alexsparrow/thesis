@@ -109,7 +109,10 @@ Mostly done!
 ** DONE T3W sms
    CLOSED: [2012-03-13 Tue 15:27]
    - State "DONE"       from "TODO"       [2012-03-13 Tue 15:27]
-** TODO ISR
+** TODO ISR - cut it off?
+** TODO ensure i've mentioned the window averaging + smoothing of the limit contours
+** TODO Clarify SMS language
+** TODO Explain why T2tt sensitivity is low + how could be improved
 
 *** From Alex
 *** TODO More conclusions generally.
@@ -150,7 +153,9 @@ Mostly done!
 *** DONE 3.3.2 silicon strip size wrong
     CLOSED: [2012-03-15 Thu 11:39]
     - State "DONE"       from "TODO"       [2012-03-15 Thu 11:39]
-*** TODO pixel tracker repeat 150*100\mu\metre?
+*** DONE pixel tracker repeat 150*100\mu\metre?
+    CLOSED: [2012-03-15 Thu 12:33]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 12:33]
 *** TODO Refer to figure in strip tracker
 *** TODO 3.3.3 61,200 just EB? check
 *** DONE acECAL
@@ -184,12 +189,22 @@ Mostly done!
 *** TODO 4.2.2p1: material budget jargon
 *** TODO 4.2.2p2: Clarify electron reconstruction
 *** TODO 4.2.2p3: trade-off ??
-*** TODO 4.2.2p3: reference spacing measurement...
-*** TODO W->enu spacing
-*** TODO encap
-*** TODO 4.2.2p4: acECAL
+*** DONE 4.2.2p3: reference spacing measurement...
+    CLOSED: [2012-03-15 Thu 14:06]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 14:06]
+*** DONE W->enu spacing
+    CLOSED: [2012-03-15 Thu 13:15]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 13:15]
+*** DONE encap
+    CLOSED: [2012-03-15 Thu 12:54]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 12:54]
+*** DONE 4.2.2p4: acECAL
+    CLOSED: [2012-03-15 Thu 12:54]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 12:54]
 *** TODO 700 GeV??
-*** TODO acECAL
+*** DONE acECAL
+    CLOSED: [2012-03-15 Thu 12:54]
+    - State "DONE"       from "TODO"       [2012-03-15 Thu 12:54]
 *** TODO zero-suppression give value
 *** DONE explain conversion rejection
     CLOSED: [2012-03-15 Thu 11:29]
