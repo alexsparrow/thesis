@@ -283,3 +283,28 @@ Mostly done!
     - State "DONE"       from "TODO"       [2012-03-16 Fri 17:49]
 *** TODO PF diagram
 *** TODO 4.5.4p-1: jet clustering todo
+** Interpretation
+*** TODO 8.1: considerations -> consideration
+*** TODO 8.2.1: believe -> believed
+*** TODO dependent
+*** TODO likelihood is given as
+*** TODO consistency with 8.1 in eqn 8.2
+*** TODO 8.2.4: CLs - distinguish between the two hypotheses
+*** TODO 8.2.4: The CLs method
+*** TODO redice
+*** TODO 8.3.2: poi signal strength brackets weird
+*** TODO systematic uncertainties
+*** TODO systematics
+*** TODO background predictiin
+*** TODO indepdenent
+*** TODO 8.3.6: generator statistics -> MC statistics
+*** TODO signal contamination in the control region is correlated
+*** TODO cross-section calculations
+*** TODO the luminosity measurement (reference?)
+*** TODO 8.3.7: setup
+*** TODO 8.3.8: setup
+*** TODO 8.4: a representative point in the CMSSM plane was chosen
+*** TODO This is
+*** TODO clarify expected effect
+*** TODO clarify expected effect CLs
+*** TODO signal efficiency uncertainties
