@@ -4,6 +4,7 @@
 ** TODO LM points. Are they explained?
 ** TODO Clarify MET vs METvector
 ** TODO Clarify SMS language
+** TODO Clarify QCD language
 
 * SM
 ** DONE ALL!
@@ -121,7 +122,9 @@ Mostly done!
 *** TODO Signal contamination in the control region is correlated across bins!
 *** TODO Why were signal systematics not included
 *** TODO Clarify meaning of "expected effect" in the Validation section -> looks reasonably
-*** TODO T2tt needs to be properly described with Feyn diagrams
+*** DONE T2tt needs to be properly described with Feyn diagrams
+    CLOSED: [2012-03-18 Sun 13:56]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 13:56]
 
 * Alex
 ** Experiment
