@@ -3,19 +3,21 @@
 \section{Introduction}
 The \acf{LHC}~\cite{lhc_design_report} is a proton-proton ($\Pp\Pp$) accelerator
 located at the CERN particle physics laboratory near Geneva, Switzerland. It has
-been designed to carry out a varied program of physics research at a number of
+been designed to carry out a broad program of physics research at a number of
 specialised detectors. This section will give a very brief introduction to the
 \ac{LHC} itself. The \acf{CMS} experiment, a large, general purpose detector at
 the \ac{LHC}, will be discussed in detail.
 
 \section{The \acl{LHC}}
-The \ac{LHC} is a circular $\Pp\Pp$ synchrotron with a circumference of
-\unit{27}{\kilo\metre}. It sits in a tunnel initially constructed for the
-\ac{LEP} accelerator buried at a depth of between 50 and \unit{175}{\metre}
-beneath the Franco-Swiss border. At full design specifications, 2808 bunches of
-protons will circulate around each direction of the ring, colliding at a centre
-of mass energy of \unit{14}{\TeV}. With a proton bunch spacing of
-\unit{25}{\ns}, the \ac{LHC} will eventually achieve a luminosity of
+The \ac{LHC} is a circular synchrotron, \unit{27}{\kilo\metre} in circumference,
+sitting on the border between France and Switzerland. It has been built in a
+tunnel initially constructed to house the \ac{LEP} accelerator, buried at a
+depth of between 50 and \unit{175}{\metre} underground. Whilst primarily, a
+$\Pp\Pp$ accelarator, the \ac{LHC} will also undertake a heavy-ion physics
+program. At full design specifications, 2808 bunches of protons will circulate
+around each direction of the ring, colliding at a centre of mass energy of
+\unit{14}{\TeV}. It is designed to eventually reach a proton bunch spacing of
+\unit{25}{\ns} and an instantaneous luminosity of
 \unit{$10^{34}$}{\rpsquare{\centi\metre}\usk\reciprocal\second}.
 
 There are four primary experiments at the LHC: \ac{ALICE}, \ac{ATLAS}, \ac{CMS}
@@ -78,13 +80,13 @@ document~\cite{cms_technical_proposal}):
 \caption{The CMS Detector}
 \end{figure}
 
-These goals motivated the design of a traditional cylindrical detector,
-\unit{21.5}{\metre} in length and \unit{15}{\metre} in diameter. A key feature
-of the design is the \unit{4}{\tesla} superconducting solenoid. The bending
-field supplied provides accurate muon momentum resolution up to energies of
-\unit{$\approx$ 1}{\TeV}. The size of the solenoid placed stringent
-limitations on the volume of the inner detector subsystems (everything except
-for the muon chambers and return yoke).
+\ac{CMS} adopts a traditional cylindrical design, \unit{21.5}{\metre} in length
+and \unit{15}{\metre} in diameter. A key feature of the detector is the
+\unit{4}{\tesla} superconducting solenoid. The bending field supplied provides
+accurate muon momentum resolution up to energies of \unit{$\approx$
+  1}{\TeV}. The size of the solenoid placed stringent limitations on the volume
+of the inner detector subsystems (everything except for the muon chambers and
+return yoke).
 
 \subsection{Coordinate System}
 The coordinate system at \ac{CMS} is right-handed with its origin placed at the
@@ -170,11 +172,12 @@ barrel (or $r$ in the endcaps). The resolution of this measurement is
 \subsection{\acl{ECAL}}
 The \ac{ECAL} surrounds the silicon tracker and provides a high resolution
 measurement of electromagnetic showers within a homogeneous, hermetic
-calorimeter composed of 61,200 lead tungstate (PbWO$_4$) crystals. This material
-was chosen for its high density, short radiation length and small Moli\`{e}re
-radius. Scintillation photons are then recorded by \ac{APD}s in the barrel and
-\ac{VPT}s in the endcap. The driving motivation for the \ac{ECAL} design was the
-detection of the low-mass favoured Higgs decay channel
+calorimeter~\cite{ecal_paper}. The barrel region along comprises 61,200 lead
+tungstate (PbWO$_4$) crystals, with 7,324 in each of the two endcaps. This
+material was chosen for its high density, short radiation length and small
+Moli\`{e}re radius. Scintillation photons are then recorded by \ac{APD}s in the
+barrel and \ac{VPT}s in the endcap. The driving motivation for the \ac{ECAL}
+design was the detection of the low-mass favoured Higgs decay channel
 $PH\longrightarrow\gamma\gamma$.
 
 \subsubsection{\acl{EB}}
@@ -228,22 +231,21 @@ fan-outs. Approximately 1\% of the \ac{LHC} beam gap of
 the entire \ac{ECAL} can be achieved in approximately 30~minutes. The lasers can
 be pulsed at $\approx \unit{80}{\mega\hertz}$ with a pulse timing jitter of
 \unit{3}{\nano\second}. This is adequate for synchronisation with the \ac{LHC}
-bunch crossings and \ac{ECAL} \ac{ADC} clock.
+bunch crossings.
 
 The transparency of the crystals is derived from the response of the \ac{APD}
-normalised to the height of the laser pulse, as measured using a silicon \ac{PN}
+normalised to the height of the laser pulse, as measured using a silicon
 photodiode. Due to differences in path length and optical spectra between the
 laser and the scintillation light, the transparency of the crystals may be
 related to the measured transparency via a power law.
 
-
 \subsection{\acl{HCAL}}
 Accurate measurement of hadronic showers is crucial for analyses involving jets
-or missing energy type signatures. The \ac{HCAL} lies between the outer edge of
-the ECAL and the inner edge of the solenoid ($\unit{1.77}{\metre} < r <
-\unit{2.95}{\metre}$). This constrains the size of the \ac{HCAL} to a relatively
-compact design and necessitates the placement of a ``tail catcher'' outside of
-the solenoid.
+or missing energy signatures. The \ac{HCAL}~\cite{hcal_paper} lies between the
+outer edge of the ECAL and the inner edge of the solenoid ($\unit{1.77}{\metre}
+< r < \unit{2.95}{\metre}$). This constrains the size of the \ac{HCAL} to a
+relatively compact design and necessitates the placement of a ``tail catcher''
+outside of the solenoid.
 
 \subsubsection{\acl{HB}}
 The \ac{HB} comprises 36 azimuthal wedges, with 18 in each half barrel. Each
@@ -282,65 +284,68 @@ shower.
 
 
 \subsection{Muon Chambers}
-As has already been said, sensitive detection of muons is one of \ac{CMS}'s key
-design goals. Since the effect of radiative losses in the tracker is much less
-for muons than it is for electrons, muons are able to provide a much finer mass
-resolution which can be used in a variety of physics searches and
-measurements. The muon system at CMS is responsible for muon identification,
-momentum measurement and triggering (for further detail see
-Section~\ref{sec:trigger}). Three types of detectors are used, chosen for
-different regions of the detector according to the magnetic field, muon rate and
-response time required for input to the trigger.
+Accurate measurement of muons is one of \ac{CMS}'s key design goals. Since the
+effect of radiative losses in the tracker is much less for muons than it is for
+electrons, muons are able to provide a much finer mass resolution which can be
+used in a variety of physics searches and measurements. The muon system at CMS
+is responsible for muon identification, momentum measurement and triggering (for
+further detail see Section~\ref{sec:trigger}). Three types of detectors are
+used, chosen for different regions of the detector according to the magnetic
+field, muon rate and response time required for input to the trigger.
 
-\subsubsection{\acl{DT}}
+\subsubsection{\aclp{DT}}
 In the barrel region, the magnetic field is relatively uniform and the muon flux
-low enough to allow the use of drift tubes. These identify muons in the region
-$|\eta| < 1.2$. The drift chamber was first developed as a refinement of earlier
-wire proportional chamber designs in which the drift time of the electrons to
-the anode wire is used to provide additional spatial resolution. This allows the
-wire spacing to be increased thus reducing the electronics requirements.
+low enough to allow the use of the \acf{DT}~\cite{dt_paper}. These identify
+muons in the region $|\eta| < 1.2$. The drift chamber was first developed as a
+refinement of earlier wire proportional chamber designs in which the drift time
+of the electrons to the anode wire is used to provide additional spatial
+resolution. This allows the wire spacing to be increased, thus reducing the
+electronics requirements.
 
-Each drift chamber is composed of 2 (or 3) superlayers, which are further
-divided into 4 layers of rectangular drift cells. Of the four concentric muon
-stations in the barrel, the inner three contains 60 drift chambers and the
+Each \ac{DT} is composed of 2 (or 3) ``super-layers'', with each super-layer
+further divided into 4 layers of rectangular drift cells. Of the four concentric
+muon stations in the barrel, the inner three contains 60 drift chambers and the
 outermost 70. The wires in the outer two layers of each drift cell are oriented
 parallel to the beam line, providing a measurement in the $r\phi$ direction (the
 magnetic bending plane). The inner two layers are perpendicularly aligned,
 giving a measurement of the $z$ coordinate.
 
-\subsubsection{\acl{CSC}}
+\subsubsection{\aclp{CSC}}
 In the endcap region, the large muon and background rate coupled with the large,
-non-uniform magnetic field prevent the use of \ac{DT}s. Instead, \acl{CSC}s are
-used. The CMS Muon endcap consists of 468 \ac{CSC}s, each a trapezoidal
-multiwire proportional chamber arranged radially covering an azimuthal angle
-$\Delta\phi$ of either 10 or 20 degrees. Each \ac{CSC} is a multiwire
-proportional chamber with 6 anode wire planes interleaved with 7 cathode strip
-planes. The wire readout provides a measurement of the $\phi$ coordinate whilst
-$r$ position information is obtained by interpolating charges on the cathode
-strips.
+non-uniform magnetic field prevent the use of \acp{DT}. Instead, an alternative
+detector, the \acf{CSC} is used~\cite{csc_paper}. The CMS muon system endcap
+consists of 468 \acp{CSC}, each a trapezoidal multiwire proportional chamber
+arranged radially covering an azimuthal angle $\Delta\phi$ of either 10 or 20
+degrees. Each \ac{CSC} is a multiwire proportional chamber with 6 anode wire
+planes interleaved with 7 cathode strip planes. The wire readout provides a
+measurement of the $\phi$ coordinate whilst $r$ position information is obtained
+by interpolating charges on the cathode strips.
 
-\subsubsection{\acl{RPC}}
-In order to provide a fast trigger signal (see Section~\ref{sec:trigger}), a
-muon detector capable of providing a fast signal is required. This is the
-\acl{RPC}, a gaseous parallel-plate detector with spatial resolution suitable
-for both barrel and endcap regions and a response time much less than the
-\unit{25}{\nano\second} between consecutive \ac{LHC} bunch crossings.
+\subsubsection{\aclp{RPC}}
+The trigger (see Section~\ref{sec:trigger}) requires a muon detector capable of
+providing a fast signal with adequate spatial resolution. This is the
+\acf{RPC}~\cite{rpc_paper}, a gaseous parallel-plate detector with spatial
+resolution suitable for both barrel and endcap regions and a response time much
+less than the \unit{25}{\nano\second} between consecutive \ac{LHC} bunch
+crossings. This allows the \ac{RPC} to unambiguously identify the bunch-crossing
+assignment for a muon track, even in the presence of the large backgrounds and
+high rates of the \ac{LHC} environment.
 
 \subsection{Data Acquisition and Trigger System}
 \label{sec:trigger}
 The high luminosity at the \ac{LHC} brings with it a large particle flux. Along
-with the requirements of precise position and momentum measurements, this has
-motivated the fine granularity present across each \ac{CMS} sub-detector. The
+with the requirements of precise position and momentum measurements, this
+motivated the fine granularity present in each \ac{CMS} sub-detector. The
 natural consequence of this is an extremely large number of readout channels,
-approximately 55 million across the whole detector. To make matters
-worse, it is planned that the \ac{LHC} will eventually reach a bunch spacing of
-only \unit{25}{\nano\second}. This places a tight latency requirement on the
-\ac{DAQ} system.
+approximately 55 million across the whole detector. To make matters worse, it is
+planned that the \ac{LHC} will eventually reach a bunch spacing of only
+\unit{25}{\nano\second}. This places a tight latency requirement on the \ac{DAQ}
+system.
 
 Tightly coupled to the \ac{DAQ} is the trigger system. The huge number of
-readout channels in \ac{CMS} is not only a problem in terms of the bandwidth of
-the \ac{DAQ} but also poses serious problems relating to long-term storage
-requirements. A digitised, zero-suppressed event dump from \ac{CMS} is
+readout channels in \ac{CMS} is not only a challenge in terms of the bandwidth
+of the \ac{DAQ} but also poses serious difficulties relating to long-term
+storage requirements. A digitised, zero-suppressed event dump from \ac{CMS} is
 approximately \unit{2}{\mega\byte} in size. With an event rate of up to
 \unit{40}{\mega\hertz}, this would potentially require a storage rate of
 \unit{80}{\tera\byte\per\second}. Even with the rapid improvement of disk

@@ -134,7 +134,9 @@ Mostly done!
 *** DONE lead-lead -> others possible
     CLOSED: [2012-03-14 Wed 10:14]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 10:14]
-*** TODO 3.2: last sentence clarify
+*** DONE 3.2: last sentence clarify
+    CLOSED: [2012-03-18 Sun 12:07]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:07]
 *** DONE 3.3p1: reference spacing
     CLOSED: [2012-03-14 Wed 10:33]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 10:33]
@@ -144,7 +146,9 @@ Mostly done!
 *** DONE paraphrading design proposal weird
     CLOSED: [2012-03-14 Wed 11:00]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 11:00]
-*** TODO need dimensions of CMS 21m....?
+*** DONE need dimensions of CMS 21m....?
+    CLOSED: [2012-03-18 Sun 12:15]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:15]
 *** DONE coord system: facilitate discussion
     CLOSED: [2012-03-14 Wed 11:56]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 11:56]
@@ -158,7 +162,9 @@ Mostly done!
     CLOSED: [2012-03-15 Thu 12:33]
     - State "DONE"       from "TODO"       [2012-03-15 Thu 12:33]
 *** TODO Refer to figure in strip tracker
-*** TODO 3.3.3 61,200 just EB? check
+*** DONE 3.3.3 61,200 just EB? check
+    CLOSED: [2012-03-18 Sun 12:11]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:11]
 *** DONE acECAL
     CLOSED: [2012-03-14 Wed 11:59]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 11:59]
@@ -168,16 +174,37 @@ Mostly done!
 *** DONE Laser monitoring system p3 fibre -> fibres
     CLOSED: [2012-03-14 Wed 12:02]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 12:02]
-*** TODO delete ECAL ADC clock
-*** TODO delete PN
-*** TODO 3.3.4 delete "type" signatures
-*** TODO 3.3.6 Delete up to sensitive - consider change of vocab
+*** DONE delete ECAL ADC clock
+    CLOSED: [2012-03-18 Sun 12:16]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:16]
+*** DONE delete PN
+    CLOSED: [2012-03-18 Sun 12:16]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:16]
+*** DONE 3.3.4 delete "type" signatures
+    CLOSED: [2012-03-18 Sun 12:19]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:19]
+*** DONE 3.3.6 Delete up to sensitive - consider change of vocab
+    CLOSED: [2012-03-18 Sun 12:19]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:19]
 *** TODO mass resolution?? Z' ECAL is much better
-*** TODO Drift tubes p2: superlayers
-*** TODO CSCs: DTs
-*** TODO Define RPC
-*** TODO 3.3.7: problem -> challenge
-*** TODO DAQ system
+*** DONE Drift tubes p2: superlayers
+    CLOSED: [2012-03-18 Sun 13:54]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 13:54]
+*** DONE CSCs: DTs
+    CLOSED: [2012-03-18 Sun 13:07]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 13:07]
+*** DONE Define RPC
+    CLOSED: [2012-03-18 Sun 13:07]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 13:07]
+*** DONE 3.3.7: problem -> challenge
+    CLOSED: [2012-03-18 Sun 12:21]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:21]
+*** DONE delete has, across -> in
+    CLOSED: [2012-03-18 Sun 12:20]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:20]
+*** DONE DAQ system
+    CLOSED: [2012-03-18 Sun 12:21]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 12:21]
 ** Object
 *** DONE 4.1p1: Replace derive -> reconstruct
     CLOSED: [2012-03-14 Wed 09:33]
