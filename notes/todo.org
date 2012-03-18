@@ -285,9 +285,15 @@ Mostly done!
 *** TODO 4.5.4p-1: jet clustering todo
 ** Interpretation
 *** TODO 8.1: considerations -> consideration
-*** TODO 8.2.1: believe -> believed
-*** TODO dependent
-*** TODO likelihood is given as
+*** DONE 8.2.1: believe -> believed
+    CLOSED: [2012-03-18 Sun 22:22]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 22:22]
+*** DONE dependent
+    CLOSED: [2012-03-18 Sun 22:22]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 22:22]
+*** DONE likelihood is given as
+    CLOSED: [2012-03-18 Sun 22:22]
+    - State "DONE"       from "TODO"       [2012-03-18 Sun 22:22]
 *** TODO consistency with 8.1 in eqn 8.2
 *** TODO 8.2.4: CLs - distinguish between the two hypotheses
 *** TODO 8.2.4: The CLs method
