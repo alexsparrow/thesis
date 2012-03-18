@@ -5,6 +5,8 @@
 ** TODO Clarify MET vs METvector
 ** TODO Clarify SMS language
 ** TODO Clarify QCD language
+** TODO Consistent Eqn./Chapter/Section etc.
+** TODO Clarify test statistic used in limits
 
 * SM
 ** DONE ALL!
