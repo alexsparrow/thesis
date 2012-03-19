@@ -121,14 +121,18 @@ Mostly done!
 ** DONE mSUGRA plot: make clear tanbeta and mu values
    CLOSED: [2012-02-23 Thu 11:08]
    - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
-** TODO Resolve language mSUGRA <-> CMSSM
+** DONE Resolve language mSUGRA <-> CMSSM
+   CLOSED: [2012-03-19 Mon 17:04]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:04]
 ** TODO State that SMS exclusions have PDF errors
 ** DONE T3W sms
    CLOSED: [2012-03-13 Tue 15:27]
    - State "DONE"       from "TODO"       [2012-03-13 Tue 15:27]
 ** TODO ISR - cut it off?
 ** TODO ensure i've mentioned the window averaging + smoothing of the limit contours
-** TODO Explain why T2tt sensitivity is low + how could be improved
+** DONE Explain why T2tt sensitivity is low + how could be improved
+   CLOSED: [2012-03-19 Mon 17:04]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:04]
 
 *** From Alex
 *** TODO More conclusions generally.
@@ -230,7 +234,9 @@ Mostly done!
 *** DONE Mention taus
     CLOSED: [2012-03-19 Mon 16:42]
     - State "DONE"       from "TODO"       [2012-03-19 Mon 16:42]
-*** TODO Put tracker/standalone before Global muons
+*** DONE Put tracker/standalone before Global muons
+    CLOSED: [2012-03-19 Mon 17:05]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 17:05]
 *** DONE 4.1p1: Abbreviate PF
     CLOSED: [2012-03-16 Fri 19:45]
     - State "DONE"       from "TODO"       [2012-03-16 Fri 19:45]

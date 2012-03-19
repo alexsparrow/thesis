@@ -28,6 +28,24 @@ reconstructed in both the muon chambers and the silicon tracker. To match this
 redundancy in the measurement, a number of reconstruction algorithms are
 available.
 
+\subsubsection{Tracker Muons}
+Tracker muons begin as tracks in the silicon tracker. All tracks with a $\Pt >
+\unit{0.5}{\GeV}$ and $p > \unit{2.5}{\GeV}$ are considered as muon candidates
+and extrapolated to the muon stations, accounting for expected energy loss and
+multiple scattering effects. If at least one muon track segment matches the
+extrapolated tracker track, a tracker muon is reconstructed. This algorithm is
+more efficient at low momentum ($p < \unit{5}{\GeV}$) since it requires only a
+single segment in the muon chambers.
+
+\subsubsection{Standalone Muons}
+Standalone muons are based solely on measurements in the muon chambers. The hits
+in each chamber are fit individually to obtain seeds - a position and direction
+vector along with an estimate of the transverse momentum. These form the basis
+of a track fit in the muon chambers based on the Kalman-filter technique. The
+fit is constrained to the vertex in order to reject cosmic ray muons. Since much
+of the calibration and validation work for the muon system was performed using
+cosmic rays, a separate algorithm was developed for this purpose~\cite{cms_mu_reco_cosmic}.
+
 \subsubsection{Global Muons}
 Global muons are an extension of standalone muons to include measurements in the
 silicon tracker. For muons with a transverse momentum below $\approx$
@@ -47,24 +65,6 @@ procedure are known as global muons. Once again, certain modifications are
 required for reconstructing cosmic ray muons - for instance in the case that
 cosmic muons traverse the entire detector, leaving two standalone muons on
 either side of \ac{CMS}.
-
-\subsubsection{Tracker Muons}
-Tracker muons, in contrast to Global muons begin as tracks in the silicon
-tracker. All tracks with a $\Pt > \unit{0.5}{\GeV}$ and $p > \unit{2.5}{\GeV}$
-are considered as muon candidates and extrapolated to the muon stations,
-accounting for expected energy loss and multiple scattering effects. If at least
-one muon track segment matches the extrapolated tracker track, a tracker muon is
-reconstructed. This algorithm is more efficient at low momentum ($p <
-\unit{5}{\GeV}$) since it requires only a single segment in the muon chambers.
-
-\subsubsection{Standalone Muons}
-Standalone muons are based solely on measurements in the muon chambers. The hits
-in each chamber are fit individually to obtain seeds - a position and direction
-vector along with an estimate of the transverse momentum. These form the basis
-of a track fit in the muon chambers based on the Kalman-filter technique. The
-fit is constrained to the vertex in order to reject cosmic ray muons. Since much
-of the calibration and validation work for the muon system was performed using
-cosmic rays, a separate algorithm was developed for this purpose~\cite{cms_mu_reco_cosmic}.
 
 \subsubsection{Merging}
 Reconstructed muons from each of the algorithms detailed above are then merged
