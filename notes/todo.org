@@ -17,6 +17,8 @@
    CLOSED: [2012-03-19 Mon 17:00]
    - State "DONE"       from "TODO"       [2012-03-19 Mon 17:00]
 ** TODO Reproduce CLs plots with new labelling qmu
+** TODO Redo SMS limits with increased PDF uncertainty (20%?) since there are none in currently!!
+*** TODO   Mention in the LS vs LP plot that this does not include signal uncertainties
 
 * SM
 ** DONE ALL!
@@ -363,6 +365,10 @@ Mostly done!
 *** DONE This is
     CLOSED: [2012-03-19 Mon 16:22]
     - State "DONE"       from "TODO"       [2012-03-19 Mon 16:22]
-*** TODO clarify expected effect
-*** TODO clarify expected effect CLs
+*** DONE clarify expected effect
+    CLOSED: [2012-03-19 Mon 17:46]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 17:46]
+*** DONE clarify expected effect CLs
+    CLOSED: [2012-03-19 Mon 17:46]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 17:46]
 *** TODO signal efficiency uncertainties

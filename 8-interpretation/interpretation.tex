@@ -228,7 +228,7 @@ Table~\ref{tbl:inter_signal_systematics}.
 \centering
 \subfloat[]{\label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_400}}\quad
 \subfloat[]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_400}}
-\caption[]{Comparison of the shape of the profile likelihood function with
+\caption{Comparison of the shape of the profile likelihood function with
   different systematic effects included at the \ac{CMSSM} point $(\Mzero, Mhalf)
   = (80, 400)$}
 \label{fig:inter_pl}
@@ -269,19 +269,27 @@ m_{\frac{1}{2}}) = (80, 400)$, close to the edge of the region excluded by data
 
 The Profile Likelihood function for this point can be seen in
 Figure~\ref{fig:inter_pl}. It can be seen that adding the various systematic
-effects to the model, and also removing the electron channel appear to have the
-expected effect on the resulting upper limit.
+effects to the model, and also removing the electron channel appear to worsen
+the exclusion. This shows, qualitatively at least, that the model is behaving as
+expected. For this particular model point, the signal contamination appears to
+have the largest effect, followed by the background uncertainties and then the
+signal uncertainties. Note that certain uncertainties are included in all cases:
+the effect of limited statistics in the control region, and the luminosity
+uncertainty. Since the former is actually the dominant uncertainty on the
+background prediction, this perhaps explains why it appears to have a relatively
+small effect.
 
 The distributions of the test statistic used to calculate \CLs are shown in
-Figure~\ref{fig:inter_cls}. Again the effects of adding systematic parameters
-and removing the electron channel appears to have the expected effect on
-\CLs.
-
+Figure~\ref{fig:inter_cls}. Again the effect of introducing additional
+systematic parameters and removing the electron channel causes \CLs to
+increase. This particular point goes from being strongly excluded at $> 95\%$
+confidence level with both lepton channels, to not being excluded when the
+electrons are removed.
 
 \section{Results}
 The likelihood model is used to provide interpretation within the context of two
 \ac{NP} models: \ac{CMSSM} and the \Ttwott simplified model described in
-Section~TODO.
+Section~\ref{sec:sms}.
 
 \begin{figure}[h!]
 \centering
