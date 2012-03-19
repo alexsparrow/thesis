@@ -26,14 +26,14 @@ expected for each bin (assigned the index $i=0,1,2...$):
 \NExpi = \NSigi(\mu, \nu^{(j)}) +
 \NBkgi(\nu^{(k)}) \\
 \end{equation}
-where \NSigi is the expected signal yield for a chosen
-signal model and \NBkgi is the data-driven background
-prediction. As can be seen, the signal yield is a function of the \ac{poi} (the
-signal strength) and some number of nuisance parameters where the index $j$
-will run over a set of systematics relevant to the signal yield. Ignoring
-signal contamination effects (which will be discussed later), the bacground
-yield depends only on the nuisance parameters $\nu^{(k)}$ where $k$ is taken to run
-over the set of systematics relevant to the bacground prediction.
+where \NSigi is the expected signal yield for a chosen signal model and \NBkgi
+is the data-driven background prediction. As can be seen, the signal yield is a
+function of the \ac{poi} - the signal strength - and some number of nuisance
+parameters where the index $j$ will run over a set of systematic uncertainties
+relevant to the signal yield. Ignoring signal contamination effects (which will
+be discussed later), the bacground yield depends only on the nuisance parameters
+$\nu^{(k)}$ where $k$ is taken to run over the set of systematic uncertainties
+relevant to the background prediction.
 
 Without giving an explicit functional form for the signal yield and background
 prediction, the form of the likelihood function may be constructed. The
@@ -44,7 +44,7 @@ likelihood must include:
   yields.
 \item Terms providing prior constraints on the various nuisance
   parameters. Certain uncertainties are statistical in nature and thus,
-  indepdent nuisance parameters are assigned per bin along with a corresponding
+  independent nuisance parameters are assigned per bin along with a corresponding
   prior pdf. In other cases, the underlying systematic variation is considered
   to have a 100\% correlated effect across the bins. In these cases, a single
   nuisance parameter and prior pdf is assigned.
@@ -78,6 +78,10 @@ with
 \item $\nu^{\textrm{lumi}}$ the nuisance parameter associated with uncertainty in the
 estimate of the integrated luminosity.
 \end{itemize}
+The \ac{poi}, $\mu$ then represents the ratio of the upper limit on the
+cross-section to the chosen model cross-section, $\sigma$. Note that for the
+simplified model limits, the parameter $\sigma$ was set to 1 and therefore the
+\ac{poi} itself represents a cross-section.
 
 \subsection{Background Prediction}
 The background prediction per bin is then written as
@@ -86,7 +90,7 @@ The background prediction per bin is then written as
 \end{equation}
 where
 \begin{itemize}
-\item \RCSi is the translation ratio as defined in Section TODO,
+\item \RCSi is the translation ratio as defined in Equation~\ref{eqn:susysearch_RCS},
 \item The nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{\gamma}$ represent
   statistical uncertainties uncorrelated between the bins.
 \item The nuisance parameters $\nu_i^{(\beta)}$ represent systematic
@@ -196,18 +200,19 @@ The nuisance parameters incorporated in the model described thus far are of two
 types.
 \begin{enumerate}
 \item Statistical uncertainties assumed to be uncorrelated across analysis
-  bins. This includes uncertainties arising from limited generator statistics,
+  bins. This includes uncertainties arising from limited Monte Carlo statistics,
   limited data in the control region and signal contamination in the control
   region.
 \item Systematic uncertainties arising from detector artefacts or theoretical
-  uncertainties such as jet energy scale, standard model cross-sections and
-  integrated luminosity measurement.
+  uncertainties such as jet energy scale, standard model cross-section
+  calculations and the luminosity measurement~\cite{cms_lumi_measurement}.
 \end{enumerate}
 For uncertainties of the first kind, independent nuisance paramters must be
-included for each analysis bin. For uncertainties of the second kind, a
-single nuisance parameter will be included for all bins. This achieves the
-desired correlation. A full list of the nuisance parameters used is shown in
-Table~\ref{tbl:inter_systematic_parameters}.
+included for each analysis bin. For uncertainties of the second kind, a single
+nuisance parameter will be included for all bins. This achieves the desired
+correlation. A full list of the nuisance parameters used is shown in
+Table~\ref{tbl:inter_systematic_parameters}. For the work presented here,
+Gaussian prior distributions have been used for all nuisance parameters.
 
 \input{tables/systematic_parameters}
 
@@ -236,7 +241,7 @@ The expected number of \ac{SUSY} events $\NSUSYi =
 \mu\times\epsilon^{\textrm{control}}_i\times\sigma\times L$ where
 $\epsilon^{\textrm{control}}_i$ is the efficiency calculated for \ac{SUSY}
 events entering the \LPcontrol control region. To reflect these constraints, we
-setup an appropriate prior distribution
+set up an appropriate prior distribution
 \begin{equation}
 X(\nu^{\textrm{SM}}) = \Gauss \left( \frac{\NSMi}{\NSMi + \mu\times\epsilon_i^{\textrm{control}}\times\sigma\times L}
 ; \nu^{\textrm{SM}} \right)
@@ -257,7 +262,8 @@ rewritten as
 X(\nu^{\textrm{SM}}_i) = \Gauss \left( \frac{\NSMi}{\NSMi + \epsilon_i^{\textrm{control}}\times\sigma\times L}
 ; \nu^{\textrm{SM}}_i \right)
 \end{equation}
-The term included in the background prediction (\ref{eqn:bgprediction}) is modified to
+The term included in the background prediction (Equation~\ref{eqn:bgprediction})
+is modified to
 \begin{equation}
 f^{\textrm{SM}}_i = 1 - \mu \times \left(1- \nu^{\textrm{SM}}_i\right)
 \end{equation}
@@ -304,7 +310,7 @@ uncertainty accounting for the limited generator statistics used to construct
 the fit templates. Additional errors coming from jet energy scale uncertainty
 and missing energy resolution were found to be small. Proper inclusion of these
 into the likelihood would need to ensure correlation with the nuisance
-parameters representing these uncertainties. The relevant terms were setup but
+parameters representing these uncertainties. The relevant terms were set up but
 not included in the final calculations. The contribution is seen to be small and
 unnecessary complication of the likelihood function tends to increase the
 processing time, especially when running a large number of toy experiments.

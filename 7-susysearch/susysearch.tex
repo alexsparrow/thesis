@@ -57,10 +57,12 @@ to validate the analysis method.
 
 \section{Analysis Method}
 The \LP distributions for \ac{SM} backgrounds and two benchmark \ac{SUSY} models
-are shown in Figure~\ref{fig:susy_lp}. Firstly it can be seen that the heuristic
-discussion of the \LP shape given in Section~\ref{sec:susy_sm} is confirmed by
-the full simulation with \ac{SM} events giving $\LP > 0$ and \ac{SUSY} events
-clustering around $\LP \sim 0$.
+are shown in Figure~\ref{fig:susy_lp}. The benchmark points LM1 and LM6
+correspond to the \ac{CMSSM} points $(\Mzero, \Mhalf) = (60, 250)$ and $(85,
+400)$ respectively, with $\tanbeta =10$ and $\Azero = 0$. Firstly it can be seen
+that the heuristic discussion of the \LP shape given in
+Section~\ref{sec:susy_sm} is confirmed by the simulation - with \ac{SM} events
+at $\LP > 0$ and \ac{SUSY} events clustering around $\LP \sim 0$.
 \begin{figure}
 \centering
 \subfloat[\Pe $250 < \STlep < 350$]{\label{fig:susy_lp_el_st250}\includegraphics[width=0.3\textwidth]{fig/LP250_MCandSignal_El.pdf}}\quad
@@ -87,6 +89,7 @@ To predict the \ac{SM} background contamination in the \LPsignal region, a
 translation factor, \RCS is calculated in simulation. This is defined as
 \begin{equation}
 \RCS = \frac{N^{\textrm{MC}}(\LPsignal)}{N^{\textrm{MC}}(\LPcontrol)}
+\label{eqn:susysearch_RCS}
 \end{equation}
 where $N^{\textrm{MC}}(\LPsignal)$ and $N^{\textrm{MC}}(\LPcontrol)$ represent
 the population, as calculated in simulation of \ac{SM} events in the signal and
@@ -209,11 +212,12 @@ channel, validation work was performed instead in the $150 < \STlep <
 \unit{250}{\GeV}$ bin. Trigger thresholds in the control sample necessitated
 increasing the transverse momentum cut on the muon to \unit{35}{\GeV}.
 
-The full cutflow is shown in Table~\ref{tbl:susy_cutflow}.
+The full sequence of selection requirements is shown in
+Table~\ref{tbl:susy_cutflow}. The corresponding event yields, as measured in
+simulation are shown in Tables~\ref{tbl:susy_mcexp_signal} and
+\ref{tbl:susy_mcexp_control} for the signal and control regions respectively.
 
 \input{tables/susy_cutflow}
-
-\subsection{Monte Carlo Expectations}
 \input{tables/mc_exp_signal}
 \input{tables/mc_exp_control}
 

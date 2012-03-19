@@ -1,12 +1,22 @@
 * General
 ** TODO Ensure technical details of MC are described e.g. GEANT, Pythia etc
 ** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
-** TODO LM points. Are they explained?
+** DONE LM points. Are they explained?
+   CLOSED: [2012-03-19 Mon 15:09]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 15:09]
 ** TODO Clarify MET vs METvector
-** TODO Clarify SMS language
+** DONE Clarify SMS language
+   CLOSED: [2012-03-19 Mon 16:56]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 16:56]
 ** TODO Clarify QCD language
 ** TODO Consistent Eqn./Chapter/Section etc.
-** TODO Clarify test statistic used in limits
+** DONE Clarify test statistic used in limits
+   CLOSED: [2012-03-19 Mon 15:16]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 15:16]
+** DONE Monte carlo expectation section in susysearch chapter
+   CLOSED: [2012-03-19 Mon 17:00]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:00]
+** TODO Reproduce CLs plots with new labelling qmu
 
 * SM
 ** DONE ALL!
@@ -24,7 +34,9 @@ Mostly done!
 ** TODO mention SUSY higgs searches
 * Theoretical Framework
 ** TODO SMS ensure this section makes sense and is correct
-** TODO Describe single lepton specific topologies
+** DONE Describe single lepton specific topologies
+   CLOSED: [2012-03-19 Mon 17:00]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:00]
 ** DONE mSUGRA
    CLOSED: [2012-03-08 Thu 16:06]
    - State "DONE"       from "TODO"       [2012-03-08 Thu 16:06]
@@ -215,7 +227,9 @@ Mostly done!
     CLOSED: [2012-03-14 Wed 09:33]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 09:33]
 
-*** TODO Mention taus
+*** DONE Mention taus
+    CLOSED: [2012-03-19 Mon 16:42]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:42]
 *** TODO Put tracker/standalone before Global muons
 *** DONE 4.1p1: Abbreviate PF
     CLOSED: [2012-03-16 Fri 19:45]
@@ -297,22 +311,52 @@ Mostly done!
     CLOSED: [2012-03-18 Sun 22:22]
     - State "DONE"       from "TODO"       [2012-03-18 Sun 22:22]
 *** TODO consistency with 8.1 in eqn 8.2
-*** TODO 8.2.4: CLs - distinguish between the two hypotheses
-*** TODO 8.2.4: The CLs method
-*** TODO redice
-*** TODO 8.3.2: poi signal strength brackets weird
-*** TODO systematic uncertainties
-*** TODO systematics
-*** TODO background predictiin
-*** TODO indepdenent
-*** TODO 8.3.6: generator statistics -> MC statistics
+*** DONE 8.2.4: CLs - distinguish between the two hypotheses
+    CLOSED: [2012-03-19 Mon 16:00]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:00]
+*** DONE 8.2.4: The CLs method
+    CLOSED: [2012-03-19 Mon 16:00]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:00]
+*** DONE redice
+    CLOSED: [2012-03-19 Mon 16:05]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:05]
+*** DONE 8.3.2: poi signal strength brackets weird
+    CLOSED: [2012-03-19 Mon 16:07]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:07]
+*** DONE systematic uncertainties
+    CLOSED: [2012-03-19 Mon 16:08]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:08]
+*** DONE systematics
+    CLOSED: [2012-03-19 Mon 16:08]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:08]
+*** DONE background predictiin
+    CLOSED: [2012-03-19 Mon 16:08]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:08]
+*** DONE indepdenent
+    CLOSED: [2012-03-19 Mon 16:08]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:08]
+*** DONE 8.3.6: generator statistics -> MC statistics
+    CLOSED: [2012-03-19 Mon 16:09]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:09]
 *** TODO signal contamination in the control region is correlated
-*** TODO cross-section calculations
-*** TODO the luminosity measurement (reference?)
-*** TODO 8.3.7: setup
-*** TODO 8.3.8: setup
-*** TODO 8.4: a representative point in the CMSSM plane was chosen
-*** TODO This is
+*** DONE cross-section calculations
+    CLOSED: [2012-03-19 Mon 16:10]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:10]
+*** DONE the luminosity measurement (reference?)
+    CLOSED: [2012-03-19 Mon 16:10]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:10]
+*** DONE 8.3.7: setup
+    CLOSED: [2012-03-19 Mon 16:15]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:15]
+*** DONE 8.3.8: setup
+    CLOSED: [2012-03-19 Mon 16:15]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:15]
+*** DONE 8.4: a representative point in the CMSSM plane was chosen
+    CLOSED: [2012-03-19 Mon 16:21]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:21]
+*** DONE This is
+    CLOSED: [2012-03-19 Mon 16:22]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 16:22]
 *** TODO clarify expected effect
 *** TODO clarify expected effect CLs
 *** TODO signal efficiency uncertainties

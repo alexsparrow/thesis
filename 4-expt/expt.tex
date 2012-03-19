@@ -76,17 +76,19 @@ document~\cite{cms_technical_proposal}):
 \end{enumerate}
 
 \begin{figure}
+\centering
 \includegraphics[width=0.7\textwidth]{fig/cms_complete_labelled}
 \caption{The CMS Detector}
+\label{fig:expt_cms}
 \end{figure}
 
-\ac{CMS} adopts a traditional cylindrical design, \unit{21.5}{\metre} in length
-and \unit{15}{\metre} in diameter. A key feature of the detector is the
-\unit{4}{\tesla} superconducting solenoid. The bending field supplied provides
-accurate muon momentum resolution up to energies of \unit{$\approx$
-  1}{\TeV}. The size of the solenoid placed stringent limitations on the volume
-of the inner detector subsystems (everything except for the muon chambers and
-return yoke).
+\ac{CMS} adopts a traditional cylindrical design (see
+Figure~\ref{fig:expt_cms}), \unit{21.5}{\metre} in length and \unit{15}{\metre}
+in diameter. A key feature of the detector is the \unit{4}{\tesla}
+superconducting solenoid. The bending field supplied provides accurate muon
+momentum resolution up to energies of \unit{$\approx$ 1}{\TeV}. The size of the
+solenoid placed stringent limitations on the volume of the inner detector
+subsystems (everything except for the muon chambers and return yoke).
 
 \subsection{Coordinate System}
 The coordinate system at \ac{CMS} is right-handed with its origin placed at the
@@ -383,15 +385,22 @@ the \ac{L1T} is therefore not only to make a fast decision using limited
 information from the detector, but also to ensure that potentially interesting
 events are retained and passed onto the \ac{HLT} for more thorough analysis.
 
-The structure of the \ac{L1T} is shown in Figure~TODO. At the top sits the
-\ac{GT}. This receives objects from the two trigger subsystems: the
-\ac{GCT} and \ac{GMT}. Objects are received, ranked according to their energy
-and quality along with their coordinates in $\eta$ and $\phi$. These objects are
-fed to 128 reprogrammable algorithms, each producing a trigger decision. This
-trigger decision is then compared with a mask in order to give a single
-decision. This mask may be altered as desired to achieve different data-taking
-objectives. The final trigger decision is then sent to the Timing, Trigger and
-Control subsystem in order to initiate a readout of the detector.
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{fig/trigger}
+\caption{The \ac{CMS} \acl{L1T}}
+\label{fig:expt_cms_trigger}
+\end{figure}
+
+The structure of the \ac{L1T} is shown in Figure~\ref{fig:expt_cms_trigger}. At
+the top sits the \ac{GT}. This receives objects from the two trigger subsystems:
+the \ac{GCT} and \ac{GMT}. Objects are received, ranked according to their
+energy and quality along with their coordinates in $\eta$ and $\phi$. These
+objects are fed to 128 reprogrammable algorithms, each producing a trigger
+decision. This trigger decision is then compared with a mask in order to give a
+single decision. This mask may be altered as desired to achieve different
+data-taking objectives. The final trigger decision is then sent to the Timing,
+Trigger and Control subsystem in order to initiate a readout of the detector.
 
 The calorimeter trigger subsystem begins with the \ac{TPG}. This sums energy
 deposits from the \ac{ECAL} and \ac{HCAL} into trigger towers. This information

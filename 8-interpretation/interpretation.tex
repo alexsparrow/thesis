@@ -161,10 +161,10 @@ One deficiency of the above method is that often the two hypotheses will not be
 so well separated. This situation is shown in
 Figure~\ref{fig:inter_cls_explain2}. In this case, the p-value for the alternate
 hypothesis is small and so would result in an exclusion. This is undesirable
-since the test statistic is clearly not sensitive enough to distinguish the two
-hypotheses.
+since the test statistic is clearly not sensitive enough to distinguish between
+the two hypotheses.
 
-To address this problem, the \CLs hypothesis test may be used instead,
+To address this problem, the \CLs hypothesis test may be used instead~\cite{cls},
 \begin{equation*}
 \CLs = \frac{CL_{s+b}}{CL_{b}}
 \end{equation*}
@@ -177,15 +177,18 @@ where the null hypothesis now represents a background-only ($b$) scenario, and
 the alternate, signal-plus-background ($s+b$). Using the \CLs to test the
 alternate hypothesis, instead of a p-value, penalises cases where the test
 statistic provides little sensitivity - since $CL_b$ will be large. For a 95\%
-exclusion, $\CLs < 0.05$ is required, as before. \CLs may also be used to derive
-an upper limit on some parameter by scanning through different values of the
-parameter of interest in order to obtain a 95\% upper limit. This is known as
-``hypothesis test inversion''.
+exclusion, $\CLs < 0.05$ is required, as before. The \CLs method may also be
+used to derive an upper limit on some parameter by scanning through different
+values of the parameter of interest in order to obtain a 95\% upper limit. This
+is known as ``hypothesis test inversion''.
 
-Several additional details are relevant to the discussion here. Firstly, the toy
-experiments used to generate distributions of the test statistic redice values
-of the nuisance parameters around their expected values. The test statistic used
-is the one-sided profile likelihood ratio, $q$~\cite{cl_computation, modified_frequentist, atlas_cms_higgs}.
+Several additional details are relevant to the discussion here. For the toy
+experiments used to generate the test statistic distributions, the nuisance
+parameters are each sampled randomly according to their expected
+distributions. This ensures that the full range of their uncertainties is
+covered. The test statistic that has been used is the one-sided profile
+likelihood ratio, $\qmu=-2\ln\lambda$~\cite{cl_computation,
+  modified_frequentist, atlas_cms_higgs}.
 
 \section{The Single Lepton Supersymmetry Search}
 The full development of the likelihood function used to model the single lepton
@@ -260,10 +263,9 @@ in convering the full range of the nuisance parameters in the model.
 
 To see how the Profile Likelihood and \CLs results change with modifications to
 the likelihood function, a representative point in the \ac{CMSSM} plane
-($\tan\beta=10$, $A_0=0$, $\mu>0$) are chosen. These are $(m_0, m_{\frac{1}{2}})
-= (80, 400)$, close to the edge of the region excluded by data (the point $(m_0,
-m_{\frac{1}{2}}) = (80, 240)$ can be seen in
-Section~\ref{sec:app_inter_validation}).
+($\tan\beta=10$, $A_0=0$, $\mu>0$) has been chosen. This is $(m_0,
+m_{\frac{1}{2}}) = (80, 400)$, close to the edge of the region excluded by data
+(additional detail can be found in Appendix~\ref{sec:app_inter_validation}).
 
 The Profile Likelihood function for this point can be seen in
 Figure~\ref{fig:inter_pl}. It can be seen that adding the various systematic
@@ -338,10 +340,10 @@ monte carlo samples. The \ac{CMSSM} sample is produced using the Pythia event
 generator, with the two mass parameters varied independently in steps of
 \unit{20}{\GeV} to produce a grid. For each grid point, 10000 events were
 generated. Due to the large number of events, the detector response was not
-processed with the full \ac{GEANT} reconstruction software but instead with a
-faster, parameterised simulation tool. This has been extensively validated and
-tuned against the full detector simulation and shown to give adequate results
-for many analyses.
+processed with the full GEANT4~\cite{geant_paper} reconstruction software but
+instead with a faster, parameterised simulation tool. This has been extensively
+validated and tuned against the full detector simulation and shown to give
+adequate results for many analyses.
 
 Having evaluated the efficiencies per \STlep bin for each \ac{CMSSM} grid point,
 the \ac{NLO} cross-sections were calculated using the PROSPINO
