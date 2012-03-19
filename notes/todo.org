@@ -7,25 +7,20 @@
 ** TODO proofread the whole thing
 ** TODO check all references are in fact referenced
 ** TODO instances of New Physics/BSM physics should be made consistent
+** TODO Reference SUSY PAS
 * SM
 ** TODO SM Higgs mass
 * SUSY
 ** TODO More on phenomenology
+   SCHEDULED: <2012-03-20 Tue>
 ** TODO Previous limits
 ** TODO Described SUSY breaking possibilities in more detail
 ** TODO mention SUSY higgs searches
 * Experiment
 ** TODO CMS: computing
 ** TODO CMS: Refer to figure in strip tracker + add figure
-** TODO SMS ensure this section makes sense and is correct
 * Object Reconstruction
 ** TODO 4.2.2p2: Clarify electron reconstruction
-   SCHEDULED: <2012-03-20 Tue>
-** TODO 4.2.2p3: trade-off ??
-   SCHEDULED: <2012-03-20 Tue>
-** TODO 4.3p1 jet corrections
-   SCHEDULED: <2012-03-20 Tue>
-** TODO reference
    SCHEDULED: <2012-03-20 Tue>
 ** TODO electron id table should have inequality signs probably
 ** TODO check conversion rejection is sz with alex
@@ -71,6 +66,7 @@
    Explain how its been cut off, why and check with Alex
 ** TODO ensure i've mentioned the window averaging + smoothing of the limit contours
    SCHEDULED: <2012-03-20 Tue>
+** TODO SMS ensure this section makes sense and is correct
 
 
 
@@ -414,3 +410,12 @@ Mostly done!
    - State "DONE"       from "TODO"       [2012-03-14 Wed 09:52]
 ** CANCELLED 8.1: considerations -> consideration
    CLOSED: [2012-03-19 Mon 19:12]
+** DONE 4.2.2p3: trade-off ??
+   CLOSED: [2012-03-19 Mon 20:58] SCHEDULED: <2012-03-20 Tue>
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 20:58]
+** DONE 4.3p1 jet corrections
+   CLOSED: [2012-03-19 Mon 21:34] SCHEDULED: <2012-03-20 Tue>
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 21:34]
+** DONE reference
+   CLOSED: [2012-03-19 Mon 21:34] SCHEDULED: <2012-03-20 Tue>
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 21:34]

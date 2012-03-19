@@ -119,16 +119,17 @@ electron energy loss and fitted with a \ac{GSF}.
 \label{sec:reco_electron_id}
 The large bremsstrahlung induced energy loss coupled with larger backgrounds
 from jets and photons means that electrons at \ac{CMS} are fundamentally less
-well defined object than muons. There is therefore a much larger space to trade
-between signal efficiency and purity. Whilst more complex selection procedures
-are available (e.g. a multivariate approach), a simple cut-based selection was
-chosen for the \PW cross-section measurement~\cite{cms_pas_ewk_10_002} and has been
-used in this work. The variables have been chosen for their background rejection
-capabilities but also for robustness during early the data-taking period. Cut
-values have been chosen for a number of working points, defined by their
-efficiency with respect to a simulated \Wenu sample, and optimising the
-background rejection power using an iterative procedure. Different cut values
-are chosen in the \ac{CMS} barrel and endcap regions.
+well defined object than muons. There is therefore a much larger space to
+trade-off between signal efficiency and purity. Whilst more complex selection
+procedures are available (e.g. a multivariate approach), a simple cut-based
+selection was chosen for the \PW cross-section
+measurement~\cite{cms_pas_ewk_10_002} and has been used in this work. The
+variables have been chosen for their background rejection capabilities but also
+for robustness during early the data-taking period. Cut values have been chosen
+for a number of working points, defined by their efficiency with respect to a
+simulated \Wenu sample, and optimising the background rejection power using an
+iterative procedure. Different cut values are chosen in the \ac{CMS} barrel and
+endcap regions.
 
 The cut variables used are described below, with cut-values for each working
 point shown in Table~\ref{tbl:reco_electronid}
@@ -183,13 +184,13 @@ barrel-endcap transition region, $1.4442 < |\eta| < 1.566$ is explicitly exclude
 \label{sec:reco_ecal_transparency}
 \section{Jets}
 Four types of jets are reconstructed at \ac{CMS}: \acf{Calo} jets, \ac{PF} jets,
-\ac{JPT} jets and track jets. \ac{Calo} jets are reconstructed from energy
-deposits in the \ac{ECAL} and \ac{HCAL}, combined into calorimeter
-towers. Calorimeter towers consist of one or more \ac{HCAL} cells with
-geometrically matched \ac{ECAL} crystals. The exact details of this association
-varies between the barrel and endcap regions. Electronics noise is suppressed by
-applying a threshold to calorimeter cells, with pile-up effects reduced by a
-requirement on the tower energy.
+\ac{JPT} jets and track jets~\cite{jet_perf_pas}. \ac{Calo} jets are
+reconstructed from energy deposits in the \ac{ECAL} and \ac{HCAL}, combined into
+calorimeter towers. Calorimeter towers consist of one or more \ac{HCAL} cells
+with geometrically matched \ac{ECAL} crystals. The exact details of this
+association varies between the barrel and endcap regions. Electronics noise is
+suppressed by applying a threshold to calorimeter cells, with pile-up effects
+reduced by a requirement on the tower energy.
 
 \ac{JPT} jets associate tracks with \ac{Calo} jets, using the tracker to give
 enhanced \Pt resolution and response. \ac{PF} jets are products of the \acl{PF}
@@ -197,7 +198,37 @@ algorithm described below. Finally, track jets are reconstructed from well
 measured tracks in the central tracker.
 
 Jets are clustered using the \antiKT algorithm~\cite{antiKT} with a size
-parameter $R=0.5$.
+parameter $R=0.5$. Since the jet energy as measured by the detector is generally
+different from the corresponding particle jet energy, jet energy corrections are
+applied~\cite{jet_energy_cms, jet_energy_pas}. At \ac{CMS}, these have been been
+factorised into three parts:
+\begin{itemize}
+\item \emph{offset corrections} remove excess energy from electronics noise and
+  pile-up;
+\item \emph{relative corrections} attempt to remove variations in jet response
+  with respect to pseudorapidity
+\item \emph{absolute corrections} attempt to remove variations in jet response
+  with respect to \Pt.
+\end{itemize}
+These are measured using a variety of techniques including the balancing of
+dijets, \gammajets and \Zjets events. Figures~\ref{fig:reco_jet_energy_corr}
+show these correction factors as a function of $\eta$ for two values of the jet
+\Pt. With these corrections applied, the residual uncertainty has been evaluated
+as a function of jet $\eta$ and \Pt. This will turn out to be a dominant source
+of systematic uncertainty for the analyses presented here.
+
+\begin{figure}
+  \centering
+  \subfloat[\unit{50}{\GeV}]{\label{fig:jet_energy_corr_50}\includegraphics[width=0.45\textwidth]{fig/jet_energy_corr_pt50.pdf}}\quad
+  \subfloat[\unit{200}{\GeV}]{\label{fig:jet_energy_corr_200}\includegraphics[width=0.45\textwidth]{fig/jet_energy_corr_pt200.pdf}}\quad
+  \caption[Total jet energy correction factor as a function of $\eta$ for jets
+  with transverse momenta of \unit{50}{\GeV} and \unit{200}{\GeV}]{Total jet
+    energy correction factor as a function of $\eta$ for jets with transverse
+    momenta of \unit{50}{\GeV} and \unit{200}{\GeV}. Corrections are shown for
+    \ac{Calo}, \ac{JPT} and \ac{PF} jets separately. The bands indicate the
+    corresponding uncertainties.}
+  \label{fig:reco_jet_energy_corr}
+\end{figure}
 
 \section{Missing Energy}
 Certain particles, such as neutrinos, are not reconstructed by the \ac{CMS}
