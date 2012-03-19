@@ -1,80 +1,43 @@
 * General
 ** TODO Ensure technical details of MC are described e.g. GEANT, Pythia etc
 ** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
-** DONE LM points. Are they explained?
-   CLOSED: [2012-03-19 Mon 15:09]
-   - State "DONE"       from "TODO"       [2012-03-19 Mon 15:09]
 ** TODO Clarify MET vs METvector
-** DONE Clarify SMS language
-   CLOSED: [2012-03-19 Mon 16:56]
-   - State "DONE"       from "TODO"       [2012-03-19 Mon 16:56]
-** TODO Clarify QCD language
+** TODO Clarify QCD language throughout
 ** TODO Consistent Eqn./Chapter/Section etc.
-** DONE Clarify test statistic used in limits
-   CLOSED: [2012-03-19 Mon 15:16]
-   - State "DONE"       from "TODO"       [2012-03-19 Mon 15:16]
-** DONE Monte carlo expectation section in susysearch chapter
-   CLOSED: [2012-03-19 Mon 17:00]
-   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:00]
-** TODO Reproduce CLs plots with new labelling qmu
-** TODO Redo SMS limits with increased PDF uncertainty (20%?) since there are none in currently!!
-*** TODO   Mention in the LS vs LP plot that this does not include signal uncertainties
-
+** TODO proofread the whole thing
+** TODO check all references are in fact referenced
+** TODO instances of New Physics/BSM physics should be made consistent
 * SM
-** DONE ALL!
-   CLOSED: [2012-02-13 Mon 22:15]
-   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
-** TODO Higgs mass
+** TODO SM Higgs mass
 * SUSY
-** DONE ALL!
-   CLOSED: [2012-02-13 Mon 22:15]
-   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
-Mostly done!
 ** TODO More on phenomenology
 ** TODO Previous limits
 ** TODO Described SUSY breaking possibilities in more detail
 ** TODO mention SUSY higgs searches
-* Theoretical Framework
+* Experiment
+** TODO CMS: computing
+** TODO CMS: Refer to figure in strip tracker + add figure
 ** TODO SMS ensure this section makes sense and is correct
-** DONE Describe single lepton specific topologies
-   CLOSED: [2012-03-19 Mon 17:00]
-   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:00]
-** DONE mSUGRA
-   CLOSED: [2012-03-08 Thu 16:06]
-   - State "DONE"       from "TODO"       [2012-03-08 Thu 16:06]
-* Detector
-** DONE HCAL
-   CLOSED: [2012-02-23 Thu 11:59]
-   - State "DONE"       from "TODO"       [2012-02-23 Thu 11:59]
-** DONE DAQ
-   CLOSED: [2012-02-20 Mon 19:38]
-   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:38]
-** DONE HLT/L1
-   CLOSED: [2012-02-20 Mon 19:39]
-   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
-*** Mostly done. Still need something on computing at CMS.
-
-* Reconstruction
-** DONE Muons
-   CLOSED: [2012-01-18 Wed 16:01]
-   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:01]
-*** TODO Maybe move the muon id from wpol here?
-** DONE Electrons
-   CLOSED: [2012-01-18 Wed 16:01]
-   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:01]
-*** DONE Conversion Rejection
-    CLOSED: [2012-03-14 Wed 17:48]
-    - State "DONE"       from "TODO"       [2012-03-14 Wed 17:48]
-** DONE Jets
-   CLOSED: [2012-01-18 Wed 16:02]
-   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
-** DONE MET
-   CLOSED: [2012-01-18 Wed 16:02]
-   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
-** DONE PF
-   CLOSED: [2012-01-18 Wed 16:02]
-   - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
-
+* Object Reconstruction
+** TODO 4.2.2p2: Clarify electron reconstruction
+   SCHEDULED: <2012-03-20 Tue>
+** TODO 4.2.2p3: trade-off ??
+   SCHEDULED: <2012-03-20 Tue>
+** TODO 4.3p1 jet corrections
+   SCHEDULED: <2012-03-20 Tue>
+** TODO reference
+   SCHEDULED: <2012-03-20 Tue>
+** TODO electron id table should have inequality signs probably
+** TODO check conversion rejection is sz with alex
+** TODO 4.5p2 few hundred GeV clarify
+   SCHEDULED: <2012-03-20 Tue>
+** TODO certain requirements...
+   SCHEDULED: <2012-03-20 Tue>
+** TODO 4.5.1p2: Clarify reconstructed again...
+   SCHEDULED: <2012-03-20 Tue>
+** TODO PF diagram
+** TODO 4.5.4p-1: jet clustering todo
+   SCHEDULED: <2012-03-20 Tue>
 * Wpol
 ** TODO Mention equivalence theorem in wpol section
 ** TODO Acceptance correction in wpol section
@@ -83,71 +46,146 @@ Mostly done!
 ** TODO Ensure fitting section is accurate
 ** TODO QCD penalty term
 ** TODO description of the 3-charge requirement in wpol and reco chapters
-** DONE Wpol section. Mention that instead of choosing a variable correlated to costheta*, one may also pick one of the two solutions in pz.
 ** TODO Wpol: data/mc plots and explain the normalisation of QCD
    CLOSED: [2011-12-07 Wed 20:52]
    - State "DONE"       from "TODO"       [2011-12-07 Wed 20:52]
 ** TODO Wpol conclusion
-** Would be nice to have the JEC uncertainty ratios for electrons too
-** Would be nice to have some diagrams illustrating the QCD kinematics
-** DONE Comparison with blackhat
-   CLOSED: [2012-03-14 Wed 09:52]
-   - State "DONE"       from "TODO"       [2012-03-14 Wed 09:52]
+** TODO Would be nice to have the JEC uncertainty ratios for electrons too
+** TODO Would be nice to have some diagrams illustrating the QCD kinematics
 ** TODO Reference SM section for chirality + possibly equiv theorem
-
-* SUSY Section
-** DONE ALL!
-   CLOSED: [2012-02-13 Mon 22:16]
-   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
-* Limits
-** DONE Limits section: signal systematics size (in the note I hope)
-   CLOSED: [2012-02-23 Thu 11:08]
-   - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
-** DONE PL and CLs plots
-   CLOSED: [2012-02-20 Mon 19:39]
-   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
-** TODO PL limit
-** DONE SMS limit
-   CLOSED: [2012-02-20 Mon 19:39]
-   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
-** DONE Statistical background
-   CLOSED: [2012-02-20 Mon 19:39]
-   - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
-** DONE Efficiency plots
-   CLOSED: [2012-02-13 Mon 22:16]
-   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
-
-** CANCELLED Why were all the backgrounds combined into 1?
-   CLOSED: [2012-03-14 Wed 09:52]
-   - State "CANCELLED"  from "TODO"       [2012-03-14 Wed 09:52]
-** DONE mSUGRA plot: make clear tanbeta and mu values
-   CLOSED: [2012-02-23 Thu 11:08]
-   - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
-** DONE Resolve language mSUGRA <-> CMSSM
-   CLOSED: [2012-03-19 Mon 17:04]
-   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:04]
-** TODO State that SMS exclusions have PDF errors
-** DONE T3W sms
-   CLOSED: [2012-03-13 Tue 15:27]
-   - State "DONE"       from "TODO"       [2012-03-13 Tue 15:27]
-** TODO ISR - cut it off?
+   SCHEDULED: <2012-03-20 Tue>
+** TODO additional plots showing data/mc
+* SUSY Search
+** Still need comments from Alex
+* Interpretation
+** TODO consistency with 8.1 in eqn 8.2
+   - State "CANCELLED"  from "TODO"       [2012-03-19 Mon 19:12]
+** TODO 8.3.6: signal contamination in the control region is correlated
+   SCHEDULED: <2012-03-20 Tue>
+** TODO Redo SMS limits with increased PDF uncertainty (20%?) since there are none in currently!!
+   SCHEDULED: <2012-03-20 Tue>
+   Also ensure this is properly described throughout text
+   LS/LP comparison plot should make it clear this is a different result
+** TODO ISR
+   SCHEDULED: <2012-03-20 Tue>
+   Explain how its been cut off, why and check with Alex
 ** TODO ensure i've mentioned the window averaging + smoothing of the limit contours
-** DONE Explain why T2tt sensitivity is low + how could be improved
-   CLOSED: [2012-03-19 Mon 17:04]
-   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:04]
+   SCHEDULED: <2012-03-20 Tue>
 
-*** From Alex
-*** TODO More conclusions generally.
-*** TODO Explain origin of PDF uncertainty
-*** TODO Signal contamination in the control region is correlated across bins!
-*** TODO Why were signal systematics not included
-*** TODO Clarify meaning of "expected effect" in the Validation section -> looks reasonably
-*** DONE T2tt needs to be properly described with Feyn diagrams
-    CLOSED: [2012-03-18 Sun 13:56]
-    - State "DONE"       from "TODO"       [2012-03-18 Sun 13:56]
 
-* Alex
-** Experiment
+
+* Old
+  :VISIBILITY: folded
+** DONE ALL!
+   CLOSED: [2012-02-13 Mon 22:15]
+   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
+** SM
+*** DONE ALL!
+    CLOSED: [2012-02-13 Mon 22:15]
+    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
+
+** DONE ALL!
+   CLOSED: [2012-02-13 Mon 22:15]
+   - State "DONE"       from "TODO"       [2012-02-13 Mon 22:15]
+Mostly done!
+
+** Detector
+*** DONE HCAL
+    CLOSED: [2012-02-23 Thu 11:59]
+    - State "DONE"       from "TODO"       [2012-02-23 Thu 11:59]
+*** DONE DAQ
+    CLOSED: [2012-02-20 Mon 19:38]
+    - State "DONE"       from "TODO"       [2012-02-20 Mon 19:38]
+*** DONE HLT/L1
+    CLOSED: [2012-02-20 Mon 19:39]
+    - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
+
+** Theoretical Framework
+*** DONE Describe single lepton specific topologies
+    CLOSED: [2012-03-19 Mon 17:00]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 17:00]
+*** DONE mSUGRA
+    CLOSED: [2012-03-08 Thu 16:06]
+    - State "DONE"       from "TODO"       [2012-03-08 Thu 16:06]
+
+** Reconstruction
+*** DONE Muons
+    CLOSED: [2012-01-18 Wed 16:01]
+    - State "DONE"       from "TODO"       [2012-01-18 Wed 16:01]
+**** CANCELLED Maybe move the muon id from wpol here?
+     CLOSED: [2012-03-19 Mon 18:25]
+     - State "CANCELLED"  from "TODO"       [2012-03-19 Mon 18:25]
+*** DONE Electrons
+    CLOSED: [2012-01-18 Wed 16:01]
+    - State "DONE"       from "TODO"       [2012-01-18 Wed 16:01]
+**** DONE Conversion Rejection
+     CLOSED: [2012-03-14 Wed 17:48]
+     - State "DONE"       from "TODO"       [2012-03-14 Wed 17:48]
+*** DONE Jets
+    CLOSED: [2012-01-18 Wed 16:02]
+    - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
+*** DONE MET
+    CLOSED: [2012-01-18 Wed 16:02]
+    - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
+*** DONE PF
+    CLOSED: [2012-01-18 Wed 16:02]
+    - State "DONE"       from "TODO"       [2012-01-18 Wed 16:02]
+
+** Limits
+*** DONE Limits section: signal systematics size (in the note I hope)
+    CLOSED: [2012-02-23 Thu 11:08]
+    - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
+*** DONE PL and CLs plots
+    CLOSED: [2012-02-20 Mon 19:39]
+    - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
+*** CANCELLED PL limit
+    CLOSED: [2012-03-19 Mon 18:25]
+    - State "CANCELLED"  from "TODO"       [2012-03-19 Mon 18:25]
+*** DONE SMS limit
+    CLOSED: [2012-02-20 Mon 19:39]
+    - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
+*** DONE Statistical background
+    CLOSED: [2012-02-20 Mon 19:39]
+    - State "DONE"       from "TODO"       [2012-02-20 Mon 19:39]
+*** DONE Efficiency plots
+    CLOSED: [2012-02-13 Mon 22:16]
+    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
+
+*** CANCELLED Why were all the backgrounds combined into 1?
+    CLOSED: [2012-03-14 Wed 09:52]
+    - State "CANCELLED"  from "TODO"       [2012-03-14 Wed 09:52]
+*** DONE mSUGRA plot: make clear tanbeta and mu values
+    CLOSED: [2012-02-23 Thu 11:08]
+    - State "DONE"       from "TODO"       [2012-02-23 Thu 11:08]
+*** DONE Resolve language mSUGRA <-> CMSSM
+    CLOSED: [2012-03-19 Mon 17:04]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 17:04]
+
+*** DONE T3W sms
+    CLOSED: [2012-03-13 Tue 15:27]
+    - State "DONE"       from "TODO"       [2012-03-13 Tue 15:27]
+
+*** DONE Explain why T2tt sensitivity is low + how could be improved
+    CLOSED: [2012-03-19 Mon 17:04]
+    - State "DONE"       from "TODO"       [2012-03-19 Mon 17:04]
+
+** SUSY Section
+*** DONE ALL!
+    CLOSED: [2012-02-13 Mon 22:16]
+    - State "DONE"       from "TODO"       [2012-02-13 Mon 22:16]
+** DONE LM points. Are they explained?
+   CLOSED: [2012-03-19 Mon 15:09]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 15:09]
+** DONE Clarify SMS language
+   CLOSED: [2012-03-19 Mon 16:56]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 16:56]
+** DONE Clarify test statistic used in limits
+   CLOSED: [2012-03-19 Mon 15:16]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 15:16]
+** DONE Monte carlo expectation section in susysearch chapter
+   CLOSED: [2012-03-19 Mon 17:00]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 17:00]
+** Experiment [Alex]
 *** DONE Duplication of LEP in 3.1 and 3.2
     CLOSED: [2012-03-14 Wed 10:07]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 10:07]
@@ -184,7 +222,7 @@ Mostly done!
 *** DONE pixel tracker repeat 150*100\mu\metre?
     CLOSED: [2012-03-15 Thu 12:33]
     - State "DONE"       from "TODO"       [2012-03-15 Thu 12:33]
-*** TODO Refer to figure in strip tracker
+
 *** DONE 3.3.3 61,200 just EB? check
     CLOSED: [2012-03-18 Sun 12:11]
     - State "DONE"       from "TODO"       [2012-03-18 Sun 12:11]
@@ -209,7 +247,7 @@ Mostly done!
 *** DONE 3.3.6 Delete up to sensitive - consider change of vocab
     CLOSED: [2012-03-18 Sun 12:19]
     - State "DONE"       from "TODO"       [2012-03-18 Sun 12:19]
-*** TODO mass resolution?? Z' ECAL is much better
+
 *** DONE Drift tubes p2: superlayers
     CLOSED: [2012-03-18 Sun 13:54]
     - State "DONE"       from "TODO"       [2012-03-18 Sun 13:54]
@@ -228,7 +266,7 @@ Mostly done!
 *** DONE DAQ system
     CLOSED: [2012-03-18 Sun 12:21]
     - State "DONE"       from "TODO"       [2012-03-18 Sun 12:21]
-** Object
+** Object [Alex]
 *** DONE 4.1p1: Replace derive -> reconstruct
     CLOSED: [2012-03-14 Wed 09:33]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 09:33]
@@ -248,8 +286,7 @@ Mostly done!
 *** DONE 4.2.2p1: material budget jargon
     CLOSED: [2012-03-16 Fri 19:40]
     - State "DONE"       from "TODO"       [2012-03-16 Fri 19:40]
-*** TODO 4.2.2p2: Clarify electron reconstruction
-*** TODO 4.2.2p3: trade-off ??
+
 *** DONE 4.2.2p3: reference spacing measurement...
     CLOSED: [2012-03-15 Thu 14:06]
     - State "DONE"       from "TODO"       [2012-03-15 Thu 14:06]
@@ -280,13 +317,10 @@ Mostly done!
 *** DONE 4.3p1 Calos
     CLOSED: [2012-03-16 Fri 18:39]
     - State "DONE"       from "TODO"       [2012-03-16 Fri 18:39]
-*** TODO jet corrections
-*** TODO reference
 *** DONE Explain missing hits in table
     CLOSED: [2012-03-14 Wed 17:49]
     - State "DONE"       from "TODO"       [2012-03-14 Wed 17:49]
-*** TODO electron id table should have inequality signs probably
-*** TODO check conversion rejection is sz with alex
+
 *** DONE 4.4p3 W *boson* momentum
     CLOSED: [2012-03-16 Fri 17:34]
     - State "DONE"       from "TODO"       [2012-03-16 Fri 17:34]
@@ -296,19 +330,13 @@ Mostly done!
 *** DONE 4.5p1 low fake rate jargon
     CLOSED: [2012-03-16 Fri 19:48]
     - State "DONE"       from "TODO"       [2012-03-16 Fri 19:48]
-*** TODO 4.5p2 few hundred GeV clarify
-*** TODO certain requirements...
-*** TODO 4.5.1p2: Clarify reconstructed again...
 *** DONE 4.5.2p2: two -> to
     CLOSED: [2012-03-16 Fri 17:48]
     - State "DONE"       from "TODO"       [2012-03-16 Fri 17:48]
 *** DONE each cluster
     CLOSED: [2012-03-16 Fri 17:49]
     - State "DONE"       from "TODO"       [2012-03-16 Fri 17:49]
-*** TODO PF diagram
-*** TODO 4.5.4p-1: jet clustering todo
-** Interpretation
-*** TODO 8.1: considerations -> consideration
+** Interpretation [Alex]
 *** DONE 8.2.1: believe -> believed
     CLOSED: [2012-03-18 Sun 22:22]
     - State "DONE"       from "TODO"       [2012-03-18 Sun 22:22]
@@ -318,7 +346,6 @@ Mostly done!
 *** DONE likelihood is given as
     CLOSED: [2012-03-18 Sun 22:22]
     - State "DONE"       from "TODO"       [2012-03-18 Sun 22:22]
-*** TODO consistency with 8.1 in eqn 8.2
 *** DONE 8.2.4: CLs - distinguish between the two hypotheses
     CLOSED: [2012-03-19 Mon 16:00]
     - State "DONE"       from "TODO"       [2012-03-19 Mon 16:00]
@@ -346,7 +373,6 @@ Mostly done!
 *** DONE 8.3.6: generator statistics -> MC statistics
     CLOSED: [2012-03-19 Mon 16:09]
     - State "DONE"       from "TODO"       [2012-03-19 Mon 16:09]
-*** TODO signal contamination in the control region is correlated
 *** DONE cross-section calculations
     CLOSED: [2012-03-19 Mon 16:10]
     - State "DONE"       from "TODO"       [2012-03-19 Mon 16:10]
@@ -371,4 +397,20 @@ Mostly done!
 *** DONE clarify expected effect CLs
     CLOSED: [2012-03-19 Mon 17:46]
     - State "DONE"       from "TODO"       [2012-03-19 Mon 17:46]
-*** TODO signal efficiency uncertainties
+
+** DONE T2tt needs to be properly described with Feyn diagrams
+   CLOSED: [2012-03-18 Sun 13:56]
+   - State "DONE"       from "TODO"       [2012-03-18 Sun 13:56]
+
+** DONE Clarify meaning of "expected effect" in the Validation section -> looks reasonably
+   CLOSED: [2012-03-19 Mon 18:32]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 18:32]
+** DONE Reproduce CLs plots with new labelling qmu
+   CLOSED: [2012-03-19 Mon 18:34]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 18:34]
+** DONE Wpol section. Mention that instead of choosing a variable correlated to costheta*, one may also pick one of the two solutions in pz.
+** DONE Comparison with blackhat
+   CLOSED: [2012-03-14 Wed 09:52]
+   - State "DONE"       from "TODO"       [2012-03-14 Wed 09:52]
+** CANCELLED 8.1: considerations -> consideration
+   CLOSED: [2012-03-19 Mon 19:12]
