@@ -7,7 +7,6 @@
 ** TODO check all references are in fact referenced
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Say that CMSSM is mSUGRA inspired
-** TODO Say that CMSSM is mSUGRA inspired
 ** TODO Monte carlo, MC
 ** TODO references for PDF sets
 ** TODO combined isolation definition
@@ -41,6 +40,7 @@
 ** TODO 4.5.4p-1: jet clustering todo
    SCHEDULED: <2012-03-20 Tue>
 * Wpol
+** TODO CMSSW version
 ** TODO Mention equivalence theorem in wpol section
 ** TODO Acceptance correction in wpol section
 ** TODO Combined fit explanation
@@ -58,7 +58,6 @@
    SCHEDULED: <2012-03-20 Tue>
 ** TODO additional plots showing data/mc
 ** General Alex
-*** TODO Smallcaps for generator names
 *** TODO Hyphenate W-boson when used as an adjective e.g. W-boson mass
 *** TODO Statistics, systematics, cutflow jargon
 *** TODO Bold the Z+jets etc in titles
@@ -100,36 +99,72 @@
 *** TODO agreement between mu and e
 *** TODO relative precision
 ** Alex SUSY search
-*** TODO 7.1: provides -> provide
+*** FINISHED 7.1: provides -> provide
+    CLOSED: [2012-03-20 Tue 19:44]
 *** TODO 7.2: asSUSY
 *** TODO single lepton -> single-lepton
 *** TODO Rewriting. Which equation is this?
-*** TODO sideband -> control region
+*** DONE sideband -> control region
+    CLOSED: [2012-03-20 Tue 19:53]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:53]
 *** TODO Ref for CMSSM
-*** TODO 7.4.2: thoseused
-*** TODO adjustements
+*** DONE 7.4.2: thoseused
+    CLOSED: [2012-03-20 Tue 19:56]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
+*** DONE adjustements
+    CLOSED: [2012-03-20 Tue 19:56]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
 *** TODO different analysis requirements...
 *** TODO Explain why not using all PF objects
-*** TODO 7.5: supressing
-*** TODO analysis -> search
-*** TODO cutflow
-*** TODO 7.6: "cross-triggers"
-*** TODO througout
-*** TODO delete "exact"
-*** TODO cut was used
+*** DONE 7.5: supressing
+    CLOSED: [2012-03-20 Tue 19:56]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
+*** DONE analysis -> search
+    CLOSED: [2012-03-20 Tue 19:57]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:57]
+*** DONE cutflow
+    CLOSED: [2012-03-20 Tue 19:58]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:58]
+*** 7.6: Rearrange sentence
+*** DONE 7.6: "cross-triggers"
+    CLOSED: [2012-03-20 Tue 20:00]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:00]
+*** DONE througout
+    CLOSED: [2012-03-20 Tue 20:02]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:02]
+*** DONE delete "exact"
+    CLOSED: [2012-03-20 Tue 20:05]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:05]
+*** DONE cut was used
+    CLOSED: [2012-03-20 Tue 20:06]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:06]
 *** TODO statistics
-*** TODO 7.7: the jet multiplicity cut
-*** TODO that new physics will
+*** DONE 7.7: the jet multiplicity cut
+    CLOSED: [2012-03-20 Tue 20:10]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:10]
+*** DONE that new physics will
+    CLOSED: [2012-03-20 Tue 20:10]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:10]
 *** TODO Shown are the yields per subprocess
-*** TODO observed
+*** DONE observed
+    CLOSED: [2012-03-20 Tue 20:22]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
 *** TODO SUSY triggers -> explain
-*** TODO The data is seen -> are seen
+*** DONE The data is seen -> are seen
+    CLOSED: [2012-03-20 Tue 20:22]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
 *** TODO inverting - it isn't really
-*** TODO supressing
-*** TODO an ETmiss
+*** DONE supressing
+    CLOSED: [2012-03-20 Tue 20:22]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
+*** DONE an ETmiss
+    CLOSED: [2012-03-20 Tue 20:22]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
 *** TODO explain sigma(D0) > 3
 *** TODO 7.8.2: statistics are hurt
-*** TODO QCD template was affected
+*** DONE QCD template was affected
+    CLOSED: [2012-03-20 Tue 20:33]
+    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:33]
 *** TODO Figure 7.4: separate
 *** TODO 7.9.1: Poisson uncertainty
 *** TODO 7.9.2: limited statistics of simulated events
@@ -660,3 +695,6 @@ Mostly done!
 ** DONE 6.6.3: cut flow
    CLOSED: [2012-03-20 Tue 14:18]
    - State "DONE"       from "TODO"       [2012-03-20 Tue 14:18]
+** DONE Smallcaps for generator names
+   CLOSED: [2012-03-20 Tue 19:42]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 19:42]

@@ -6,7 +6,7 @@ its own right, also finds application to searches for \acl{NP}. The first of
 these, comes from a more complete understanding of the \MET distribution in
 \Wjets events - an important background to many \ac{SUSY} searches. The second,
 is that the polarisation of the \PW coupled with the methods described in the
-previous chapter provides a means to discrimate \ac{SUSY} events from \ac{SM}
+previous chapter provide a means to discrimate \ac{SUSY} events from \ac{SM}
 backgrounds. In the following sections, a \ac{SUSY} search applying these ideas
 will be described~\cite{susy_ra4_pas}.
 
@@ -53,8 +53,8 @@ introducing a strong dependence on the energy scale. For the purposes of this
 analysis, 4 \STlep bins are employed. These are: $150 < \STlep < 250$, $250 <
 \STlep < 350$, $350 < \STlep < 450$ and $\STlep > \unit{450}{\GeV}$. The lowest
 region, $\STlep_{150}$ is taken to be at too low an energy scale to contain
-\ac{SUSY} processes not excluded by previous searches. It is used as a sideband
-to validate the analysis method.
+\ac{SUSY} processes not excluded by previous searches. It is used as a control
+region to validate the analysis method.
 
 \section{Analysis Method}
 The \LP distributions for \ac{SM} backgrounds and two benchmark \ac{SUSY} models
@@ -141,9 +141,9 @@ this selection.
 \subsection{Muons}
 Muon reconstruction is described in Section~\ref{sec:reco_muons}. Global muons
 are selected with a number of additional quality requirements. These are similar
-to thoseused in the \PW polarisation analysis (see Section~\ref{sec:wpol_muons})
-with certain adjustements made to ensure consistency with other analyses or
-adapt to the different analysis requirements.
+to thos eused in the \PW polarisation analysis (see
+Section~\ref{sec:wpol_muons}) with certain adjustments made to ensure
+consistency with other analyses or adapt to the different analysis requirements.
 \begin{itemize}
 \item A normalized $\chi^2 < 10$ on the global muon fit
 \item More than 10 hits in the tracker (including at least 1 pixel hit) and
@@ -187,7 +187,8 @@ smaller than 20\%, the \METv receives a vectorial correction.
 \section{Analysis Selection}
 Selection begins with a set of event cleaning cuts common to many analyses at
 \ac{CMS}. These address known detector and reconstruction problems as well as
-supressing machine backgrounds. They are fully detailed in~\cite{susy_selection_an}.
+suppressing machine backgrounds. They are fully detailed
+in~\cite{susy_selection_an}.
 
 Lepton selection requires exactly one \textbf{Tight} electron or muon. To remove
 dilepton events and minimise overlap with searches in multilepton final states,
@@ -197,7 +198,7 @@ After the initial lepton selection cuts, events can enter two independent
 samples. The first is a control sample, inverting the jet multiplicity cut to
 obtain a sample known to be overwhelmingly dominated by \ac{SM} backgrounds. To
 compensate, this sample is selected with a slightly relaxed \HT cut. The second
-sample is then used for the final analysis. A jet multiplicity cut, $\Njets \geq
+sample is then used for the actual search. A jet multiplicity cut, $\Njets \geq
 3$ is applied as well as an \HT cut.
 
 The data-driven control sample was used to test the analysis techniques before
@@ -228,34 +229,34 @@ Due to the construction of \STlep, events may be selected with moderate \MET
 necessitates a different trigger strategy to that used in other leptonic
 \ac{SUSY} searches at \ac{CMS} which typically only select high \MET events.
 
-For the search sample, a set of single-lepton cross-triggers are used, selecting
-events with a single lepton in association with a large amount of hadronic
-activity, \HT. As the luminosity increased during the 2011 run, it was necessary
-to introduce a third requirement: a moderate cut on the \MET. The full list of
-triggers used for both lepton channels are shown in
+For the search sample, a set of single-lepton ``cross-triggers'' are used,
+selecting events with a single lepton in association with a large amount of
+hadronic activity, \HT. As the luminosity increased during the 2011 run, it was
+necessary to introduce a third requirement: a moderate cut on the \MET. The full
+list of triggers used for both lepton channels are shown in
 Table~\ref{tbl:susy_triggers}
 
 \input{tables/susy_triggers}
 
 All signal and background Monte Carlo samples are from the Summer11 \ac{CMS}
-\unit{7}{\TeV} production using \cmssw version 4.2. All processes are simulated using
-the \madgraph matrix element generator, with the exception of the \ac{QCD} and
-\ac{SUSY} signal samples which use \pythia version 6. All datasets, with the
+\unit{7}{\TeV} production using \cmssw version 4.2. All processes are simulated
+using the \madgraph matrix element generator, with the exception of the \ac{QCD}
+and \ac{SUSY} signal samples which use \pythia version 6. All datasets, with the
 exception of the \ac{SUSY} signal scan used to derive the limit use the full
-detector simulation. The \ac{SUSY} signal scan uses the \ac{FASTSIM} simplified
+detector simulation. The \ac{SUSY} signal scan uses the \fastsim simplified
 simulation package to reduce processing time. All samples contain data-like
-pile-up conditions, with a reweighting procedure used througout to reflect the
-exact vertex multiplicity distribution in the data.
+pile-up conditions, with a reweighting procedure used throughout to reflect the
+vertex multiplicity distribution in the data.
 
 In addition to the standard \Wjets sample, an enriched sample with a
-generator-level $\HT > \unit{300}{\GeV}$ cut. This increases the available
-statistics, minimising the statistical error on \RCS.
+generator-level $\HT > \unit{300}{\GeV}$ cut was used. This increases the
+available, minimising the statistical error on \RCS.
 
 \section{Control Region}
 In order to test that the simulation of electroweak background processes can be
 relied upon for the calculation of the translation factor \RCS, the procedure is
 first performed in the control sample. With the jet multiplicity cut inverted,
-supersymmetry signals should be highly diluted in this sample. It is expected
+any supersymmetry signal should be highly diluted in this sample. It is expected
 therefore that the background prediction in the signal region should agree well
 with the observed signal yield. Furthermore, the level of agreement between data
 and simulation is also important in establishing the method.
@@ -264,7 +265,7 @@ A summary of the yields in the \LPcontrol and \LPsignal regions in the $<3$~jet
 control sample is given in Table~\ref{tbl:susy_control_yields}. Shown are the
 yields per subprocess from simulation - used to calculate the factor \RCS, the
 yields in data and the resulting background prediction. Comparing the background
-prediction, it is seen to agree within errors with the observe number of events
+prediction, it is seen to agree within errors with the observed number of events
 in the signal region. The uncertainties stem from the limited data statistics of
 the control region and the limited Monte Carlo statistics used in the
 calculation of \RCS.
@@ -275,8 +276,8 @@ Comparisons of the variables \STlep, \MT and \Ptmu between data and simulation
 are shown in Figure~\ref{fig:susy_mucontrol_kin}. A similar comparison is shown
 for the \LP variable in bins of \STlep in
 Figure~\ref{fig:susy_mucontrol_lp}. These distributions are those used to derive
-the numbers shown in Table~\ref{tbl:susy_control_yields}. The data is seen to be
-adequately described by the simulation.
+the numbers shown in Table~\ref{tbl:susy_control_yields}. The data are seen to
+be adequately described by the simulation.
 \begin{figure}
 \centering
 \subfloat[\STlep]{\label{fig:susy_mucontrol_st}\includegraphics[width=0.3\textwidth]{fig/MuControl_ST150toInf}}\quad
@@ -308,8 +309,8 @@ adaptation.
 \subsection{Muons}
 A conservative upper limit on the \ac{QCD} background in the muon channel is
 obtained from a data-driven control sample by inverting the isolation cut, $0.2
-< \CombIso < 0.5$. In order to further enrich \ac{QCD} events whilst supressing
-electroweak backgrounds in this sample, a $\MET < \unit{20}{\GeV}$ cut is also
+< \CombIso < 0.5$. In order to further enrich \ac{QCD} events whilst suppressing
+electroweak backgrounds in this sample, an $\MET < \unit{20}{\GeV}$ cut is also
 applied. Even with these cuts, significant electroweak contamination
 remains. The significance of the vertex impact paramter is used as an additional
 handle by requiring $\sigma(D_0) > 3$. The ratio $N(\CombIso < 0.1/N(0.2 <
@@ -331,11 +332,12 @@ larger than that used for the previous measurement, statistics are hurt by the
 generally tighter kinematic cuts.
 
 In addition, it was observed during studies for the \PW polarisation measurement
-that the shape of the QCD template was affects by a cut on \PtW. Thus it should
+that the shape of the QCD template was affected by a cut on \PtW. Thus it should
 be assumed to depend too on \STlep, necessitating the use of independent
 templates for each \STlep bin. A comparison of the selected and anti-selected
-shapes in simulated \ac{QCD} events is shown in Figure~\ref{fig:susy_elqcd_selasel}. This may be
-compared with those derived in the \PW polarisation analysis (see
+shapes in simulated \ac{QCD} events is shown in
+Figure~\ref{fig:susy_elqcd_selasel}. This may be compared with those derived in
+the \PW polarisation analysis (see
 Figure~\ref{fig:wpol_ele_sel_antisel}). Differences may be accounted for by the
 modified electron selection and kinematic cuts.
 
