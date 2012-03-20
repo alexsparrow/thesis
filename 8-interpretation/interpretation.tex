@@ -45,7 +45,7 @@ the results of the analysis. These will then be applied to the \ac{CMSSM} and to
 the two simplified models described previously: \TthreeW and \Ttwott.
 
 \section{Statistical Methods}
-\subsection{Likelihoods}
+\subsection{The Likelihood Function}
 Consider some statistical model believed to describe a set of experimental data
 and dependent on a set of parameters, $\theta$. The likelihood for given values
 of $\theta$ and given a set of experimental observations $X$, is the probability
@@ -54,20 +54,23 @@ function of the parameter $\theta$ given experimental measurements, $X$, the
 likelihood may be written
 \begin{equation}
 \likelihood\left(\theta|X\right) = P\left(X|\theta\right)
+\label{eqn:inter_likelihood}
 \end{equation}
 where $P\left(X|\theta\right)$ should be read as ``the probability of $X$ given
 $\theta$''.
 
 Likelihood functions are an important tool in comparing theoretical expectations
 to experiment. Often, two proposed values for the parameter $\theta$ will be
-compared by taking the \emph{likelihood ratio},
+compared using the \emph{likelihood ratio},
 \begin{equation}
   \likelihoodratio = \frac{\likelihood\left(\theta_1|X\right)}{\likelihood\left(\theta_2|X\right)} = \frac{\alpha P\left(X|\theta_1\right)}{\alpha P\left(X|\theta_2\right)}
 \label{eqn:inter_likelihood_ratio}
 \end{equation}
-where $\alpha$ is some constant of proportionality relating the likelihood
-function and the probability. This is known as a \emph{likelihood ratio test}
-and may be used to compare two hypotheses.
+Here, the numerator and denominator are related to
+Eqn~\ref{eqn:inter_likelihood} by a constant $\alpha$. Here, as in many uses of
+the likelihood function, such constant factors can be safely ignored.  This is
+known as a \emph{likelihood ratio test} and may be used to compare two
+hypotheses.
 
 An important use of the likelihood function is in estimation of the parameters
 $\theta$ given some set of observations. The value of $\theta$ which maximises
@@ -406,6 +409,10 @@ instead. In addition, further simplification of the likelihood is achieved by
 removing the signal contamination systematic and including only the \ac{PDF}
 uncertainty on the signal contamination.
 % TODO: justify
+
+For the following limit plots, holes in the sample have been filled by taking
+the average observed limit of surrounding points. A similar procedure has also
+been used to produce smooth exclusion contours.
 
 \subsubsection{\TthreeW}
 For the \TthreeW model, the intermediate mass state in the cascade decay

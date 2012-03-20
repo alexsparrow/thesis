@@ -1,13 +1,12 @@
 * General
 ** TODO Ensure technical details of MC are described e.g. GEANT, Pythia etc
 ** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
-** TODO Clarify MET vs METvector
 ** TODO Clarify QCD language throughout
 ** TODO Consistent Eqn./Chapter/Section etc.
 ** TODO proofread the whole thing
 ** TODO check all references are in fact referenced
 ** TODO instances of New Physics/BSM physics should be made consistent
-** TODO Reference SUSY PAS
+** TODO Say that CMSSM is mSUGRA inspired
 * SM
 ** TODO SM Higgs mass
 * SUSY
@@ -18,11 +17,13 @@
 ** TODO mention SUSY higgs searches
 * Experiment
 ** TODO CMS: computing
+   SCHEDULED: <2012-03-20 Tue>
 ** TODO CMS: Refer to figure in strip tracker + add figure
 * Object Reconstruction
 ** TODO 4.2.2p2: Clarify electron reconstruction
    SCHEDULED: <2012-03-20 Tue>
 ** TODO electron id table should have inequality signs probably
+   SCHEDULED: <2012-03-20 Tue>
 ** TODO check conversion rejection is sz with alex
 ** TODO 4.5p2 few hundred GeV clarify
    SCHEDULED: <2012-03-20 Tue>
@@ -41,22 +42,18 @@
 ** TODO Ensure fitting section is accurate
 ** TODO QCD penalty term
 ** TODO description of the 3-charge requirement in wpol and reco chapters
+   SCHEDULED: <2012-03-20 Tue>
 ** TODO Wpol: data/mc plots and explain the normalisation of QCD
    CLOSED: [2011-12-07 Wed 20:52]
    - State "DONE"       from "TODO"       [2011-12-07 Wed 20:52]
-** TODO Wpol conclusion
 ** TODO Would be nice to have the JEC uncertainty ratios for electrons too
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
 ** TODO Reference SM section for chirality + possibly equiv theorem
    SCHEDULED: <2012-03-20 Tue>
 ** TODO additional plots showing data/mc
 * SUSY Search
-** Still need comments from Alex
+** OMG lots of comments
 * Interpretation
-** TODO consistency with 8.1 in eqn 8.2
-   - State "CANCELLED"  from "TODO"       [2012-03-19 Mon 19:12]
-** TODO 8.3.6: signal contamination in the control region is correlated
-   SCHEDULED: <2012-03-20 Tue>
 ** TODO Redo SMS limits with increased PDF uncertainty (20%?) since there are none in currently!!
    SCHEDULED: <2012-03-20 Tue>
    Also ensure this is properly described throughout text
@@ -64,8 +61,6 @@
 ** TODO ISR
    SCHEDULED: <2012-03-20 Tue>
    Explain how its been cut off, why and check with Alex
-** TODO ensure i've mentioned the window averaging + smoothing of the limit contours
-   SCHEDULED: <2012-03-20 Tue>
 ** TODO SMS ensure this section makes sense and is correct
 
 
@@ -419,3 +414,21 @@ Mostly done!
 ** DONE reference
    CLOSED: [2012-03-19 Mon 21:34] SCHEDULED: <2012-03-20 Tue>
    - State "DONE"       from "TODO"       [2012-03-19 Mon 21:34]
+** DONE Wpol conclusion
+   CLOSED: [2012-03-19 Mon 22:16]
+   - State "DONE"       from "TODO"       [2012-03-19 Mon 22:16]
+** DONE Reference SUSY PAS
+   CLOSED: [2012-03-20 Tue 10:09] SCHEDULED: <2012-03-20 Tue>
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 10:09]
+** DONE Clarify MET vs METvector
+   CLOSED: [2012-03-20 Tue 09:42] SCHEDULED: <2012-03-20 Tue>
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 09:42]
+** DONE ensure i've mentioned the window averaging + smoothing of the limit contours
+   CLOSED: [2012-03-20 Tue 10:18] SCHEDULED: <2012-03-20 Tue>
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 10:18]
+** DONE 8.3.6: signal contamination in the control region is correlated
+   CLOSED: [2012-03-20 Tue 09:54] SCHEDULED: <2012-03-20 Tue>
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 09:54]
+** DONE consistency with 8.1 in eqn 8.2
+   CLOSED: [2012-03-20 Tue 10:35] SCHEDULED: <2012-03-20 Tue>
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 10:35]

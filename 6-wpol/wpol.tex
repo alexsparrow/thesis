@@ -63,11 +63,11 @@ with $\cos\thetastar$ at suitably high $\PtW$ and yet also directly calculable
 from transverse detector-level quantities. This variable is the Lepton Projection
 variable or \LP and is defined as follows
 \begin{equation}
-  \LP = \frac{\Ptl.\PtW}{\left|\PtW\right|^2}
+  \LP = \frac{\Ptlv.\PtWv}{\left|\PtWv\right|^2}
 \label{eqn:lp_def}
 \end{equation}
-where \Ptl and \PtW are the transverse momenta of the charged lepton and \PW
-boson respectively and $\PtW = \Ptl +\MET$.
+where \Ptlv and \PtWv are the transverse momenta of the charged lepton and \PW
+boson respectively and $\PtWv = \Ptlv +\METv$.
 
 \subsubsection{Correlation of $\cos\thetastar$ With \LP}
 To motivate the use of the \LP variable in measuring $\cos\thetastar$ at high
@@ -419,24 +419,24 @@ momentum of the \PW, \PtW. As has been discussed, requiring \PW bosons with a
 large transverse momentum serves to enhance the polarisation effect described in
 Section~\ref{sec:polarisation}. It also ensures the correlation of \LP with
 $\cos\thetastar$ and thus improves the measurement of the helicity
-fractions. There are several means of reconstructing the \PtW at \ac{CMS}. The
+fractions. There are several means of reconstructing the \PtWv at \ac{CMS}. The
 first, which was initially used for this analysis was the hadronic recoil of the
 event. This is effectively the so-called missing hadronic energy of the
 event, or \MHT,
 % TODO Perhaps this should be moved somewhere else?
 \begin{equation}
-\PtW^{\textrm{had}} = - \sum_{j \in \textrm{jets}} \vec{j}
+\PtWvhad = - \sum_{j \in \textrm{jets}} \vec{j}
 \end{equation}
 where the $j$ is taken to run over some subset of the jets in the event as
 defined in Section~\ref{sec:wpol_jets} with some minimum transverse momentum
 requirement. The sum is taken to denote a vectorial sum. Since the \PW and the
 jets must balance in the lab frame, this in principal provides an accurate
-measurement of \PtW. However, the reconstruction of the jets is difficult and
+measurement of \PtWv. However, the reconstruction of the jets is difficult and
 subject to uncertainties in the jet energy scale. A higher resolution
-measurement can be achieved by utilising instead the \MET (effectively the
+measurement can be achieved by utilising instead the \METv (effectively the
 neutrino) and the lepton in the event. This leads to the definition,
 \begin{equation}
-\PtW^{\textrm{lep}} = \vec{\Pl} + \vec{\MET}
+  \PtWvlep = \Ptlv + \METv
 \end{equation}
 This provides a higher resolution measurement of \PtW, as can be seen in
 Figure~TODO. It is thus the variable adopted in this analysis.
@@ -487,7 +487,7 @@ approximate the invariant mass of a particle by using only transverse
 quantities. It is defined as follows
 
 \begin{equation}
-\MT = \sqrt{2\Ptl\MET\left(1 - \cos\Delta\phi\left(\Ptl, \MET\right)\right)}
+\MT = \sqrt{2\Ptl\MET\left(1 - \cos\Delta\phi\left(\Ptlv, \METv\right)\right)}
 \end{equation}
 
 The angular dependence (i.e. the $\cos\Delta\phi$ term) will effectively
@@ -716,13 +716,13 @@ templates in the fit.
 \subsection{Kinematics}
 Before continuing, it is useful to discuss the appearance of the \ac{QCD}
 background in terms of the \LP variable. To make this clear, consider the
-measurement of \PtW via the hadronic recoil in a balanced multi-jet event where
+measurement of \PtWv via the hadronic recoil in a balanced multi-jet event where
 a single jet has been misreconstructed as an electron. In this case, the
 hadronic recoil will tend to point along the axis of the fake electron. If the
-hadronic recoil is then used as a measurement of \PtW, it will be approximately
-collinear with the \Pt of the fake electron and thus will yield a value of $\LP
+hadronic recoil is then used as a measurement of \PtWv, it will be approximately
+collinear with the \Ptlv of the fake electron and thus will yield a value of $\LP
 \sim 1$. This can also be seen when the \PtW measurment is taken to be the
-vector sum of \Ptl and \MET. The fake electron will tend to be poorly
+vector sum of \Ptlv and \METv. The fake electron will tend to be poorly
 reconstructed and thus collinear with the source of fake \MET, again leading to
 $\LP \sim 1$. A similar argument can be made in the case of \gammajets events
 where now the photon is the source of both fake \MET and the fake lepton.
@@ -867,10 +867,11 @@ theoretical uncertainties.
 \subsection{Experimental Uncertainties}
 In considering the potential sources of systematic error, it is helpful to think
 first in terms of the construction of the \LP variable. This involves two
-detector level quantities: the missing transverse energy \MET and the transverse
-momentum of the charged lepton \Ptl. The first quantity is derived from the
-particle flow algorithm, as discussed in Section~\ref{sec:reco_pf}. The leading
-source of uncertainty is due to the callibration of the jet energy scale.
+detector level quantities: the missing transverse energy \METv and the
+transverse momentum of the charged lepton \Ptlv. The first quantity is derived
+from the particle flow algorithm, as discussed in Section~\ref{sec:reco_pf}. The
+leading source of uncertainty is due to the callibration of the jet energy
+scale.
 
 \subsubsection{Jet Energy Scale}
 \label{sec:wpol_syst_jec}
@@ -880,18 +881,17 @@ of jet \Pt and $\eta$. In the case of a global miscallibration of this
 measurement, jet energy measurements in data would be pushed upwards or
 downwards with respect to the values predicted by simulation. If one imagines a
 perfectly balanced dijet system in the centre of the detector, the resulting
-effect on the \MET will of course be cancelled. However, this will rarely be the
-case. In particular, in the case of \Wjets production, the hadronic system will
-be recoiling against the \PW. For relatively high transverse momentum \PW
-bosons, the \MET is very likely to point away from the recoiling jets. This
+effect on the \METv will of course be cancelled. However, this will rarely be
+the case. In particular, in the case of \Wjets production, the hadronic system
+will be recoiling against the \PW. For relatively high transverse momentum \PW
+bosons, the \METv is very likely to point away from the recoiling jets. This
 suggests that the effect of an upward or downard shift in the jet energy scale
-is likely to have an opposite effect on the \MET scale and be highly correlated
+is likely to have an opposite effect on the \METv scale and be highly correlated
 betwen events. In other words, a shift in the jet energy scale will, to first
 order, lead to an opposite shift in the \MET distribution. Of course there are
 angular effects of an adjustment to the jet energy scale, which were fully
 modelled in simulation. For now a heuristic argument will suffice to understand
 the most striking effects.
-
 
 The dominant effect of the jet energy scale on the fitted helicity fractions is
 due to the change in the \LP shape. Of course, the effect will also affect the
@@ -901,15 +901,16 @@ calculated \LP. For an upwards shift in the jet energy scale, the \MET will tend
 to shift downwards and thus to larger values of \LP. Conversely, for a downward
 shift in the jet energy scale, the \MET scale will increase and therefore \LP
 will shift to smaller values. This very approximate argument is born out in the
-full modelling in simulation. This is illustrated in Figure~\ref{fig:wpol_mujecunc}
-showing the fractional change of the \LP distribution in the muon channel for
-upward and downward shifts in the jet energy scale. Clearly, the effect is quite
-large and most severe towards the edges of the \LP distribution (i.e. $\LP < 0$
-and $\LP > 1$). There are two reasons for this. Firstly, that in these regions
-the \LP distribution is rising or falling rapidly. Bin to bin migration will
-thus yield larger changes. Secondly, the change in the value of \LP for a single
-event in response to a change in the jet energy scale is expected to be linear
-in \LP to first order.
+full modelling in simulation. This is illustrated in
+Figure~\ref{fig:wpol_mujecunc} showing the fractional change of the \LP
+distribution in the muon channel for upward and downward shifts in the jet
+energy scale. Clearly, the effect is quite large and most severe towards the
+edges of the \LP distribution (i.e. $\LP < 0$ and $\LP > 1$). There are two
+reasons for this. Firstly, that in these regions the \LP distribution is rising
+or falling rapidly. Bin to bin migration will thus yield larger
+changes. Secondly, the change in the value of \LP for a single event in response
+to a change in the jet energy scale is expected to be linear in \LP to first
+order.
 
 The jet energy scale is the dominant source of systematic uncertainty for both
 electron and muon channels. The effect can be mitigated somewhat however by the
@@ -937,24 +938,24 @@ range of $[0,1.3]$ was an appropriate choice for both channels and both charges.
 The jet energy scale uncertainty follows the standard prescription for \ac{CMS}
 analyses. Firstly, the unclustered component of the missing energy is calculated as,
 \begin{equation}
-\vec{E}^{\textrm{unclustered}}_T = -\MET + \Ptl + \sum_i \vec{p}_T^{\textrm{jet},i}
+\vec{E}^{\textrm{unclustered}}_T = -\METv + \Ptlv + \sum_i \vec{p}_T^{\textrm{jet},i}
 \end{equation}
 where the index $i$ runs over all jets with $\Pt > \unit{10}{\GeV}$ in the event
 as reconstructed by the particle flow algorithm. The unclustered energy is then
-scaled either up or down within its uncertainty (taken to be 5\%). The \MET is
-then recalculated from this displaced unclustered energy,
+scaled either up or down within its uncertainty (taken to be 5\%). \METv is then
+recalculated from this displaced unclustered energy,
 \begin{equation}
-\MET \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptl - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i}
+\METv \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptlv - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i}
 \end{equation}
 where $u(p_T, \eta)$ is a map specifying the relative uncertainty on the jet
 energy scale as a function of jet transverse momentum and pseudorapidity. The
 scale applied to the jet momenta will be in the same direction as that of the
 unclustered energy. When calculating the effect on the results, this displaced
-value is then used in place of the \MET and all \MET derived quantities. The end
-product of this are two modified \LP shapes corresponding to upward and downward
-fluctuations in the jet energy scale. Since the shifted \MET has been applied
-consistently throughout the analysis, the smaller effects on \PtW and \MT are
-also included.
+value is then used in place of the \METv and all \METv derived quantities. The
+end product of this are two modified \LP shapes corresponding to upward and
+downward fluctuations in the jet energy scale. Since the shifted \METv has been
+applied consistently throughout the analysis, the smaller effects on \PtW and
+\MT are also included.
 
 The value of the jet energy scale systematic is determined in simulation by
 fitting the unaltered template (with no jet energy scale adjustment) to

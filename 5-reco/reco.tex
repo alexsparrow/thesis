@@ -248,7 +248,8 @@ quantities are used instead - most commonly the \emph{missing transverse
 \end{equation*}
 where $p_T^o$ refers to the transverse momentum of object $o$. The chosen set of
 objects then leads to a number of alternative definitions of \METv. The
-magnitude of this quantity, often used in event selection, will be denoted \MET.
+magnitude of this quantity, often used in event selection, will be denoted
+\MET. Similar notation will be used for other transverse vector quantities.
 
 At \ac{CMS}, the simplest measurement of \METv is \ac{Calo} \METv which sums
 over the calorimeter tower energies (\ac{ECAL} and \ac{HCAL}).  An energy
@@ -269,14 +270,14 @@ a scalar quantity is desired instead. The \emph{missing transverse hadronic
 In general, this is used to measure the energy of a system of particles
 recoiling against the jets in an event. For example, in \Wjets events, the
 recoiling system is the \PW boson. \MHTv is therefore one possible measurement
-of the \PW boson momentum, \PtW.
+of the \PW boson transverse momentum, \PtWv.
 
 
 \section{Particle Flow at \ac{CMS}}
 \label{sec:reco_pf}
-The \ac{PF} algorithm~\cite{cms_pf_pas, cms_pf_pas2} attempts to provide a global
-reconstruction of the event - accurate determination of the type, energy and
-direction of all stable particles - by combining measurements from all
+The \ac{PF} algorithm~\cite{cms_pf_pas, cms_pf_pas2} attempts to provide a
+global reconstruction of the event - accurate determination of the type, energy
+and direction of all stable particles - by combining measurements from all
 subdetectors in \ac{CMS}. This strategy is well suited for use with the \ac{CMS}
 detector. The silicon tracker is able to reconstruct charged particle tracks
 with high efficiency and purity down to transverse momenta as low as
@@ -289,7 +290,7 @@ associated with neutral hadrons as an excess on top of that accounted for by
 matching the deposits with charged tracks. The \ac{PF} algorithm is able to
 reconstruct the components of jets and hadronic tau decays - primarily charged
 hadrons, neutral hadrons and photons. This provides an improved measurement of
-the jet energy and thus also of \MET.
+the jet energy and thus also of \METv.
 
 The particle flow algorithm proceeds by linking the tracks and energy clusters
 to form blocks. A single block may contain some combination of a charged
@@ -423,9 +424,8 @@ algorithm (see Section~TODO) using the full set of particle flow objects.
 
 \subsection{Physics Performance}
 Two aspects of the performance of the \ac{PF} reconstruction are of relevance to
-the analysis description that will follow: \acl{MET} measurement and jet
+the analysis description that will follow: measurement of \METv and jet
 reconstruction.
-
 
 \begin{figure}
 \centering

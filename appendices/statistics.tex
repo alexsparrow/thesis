@@ -200,29 +200,32 @@ The nuisance parameters incorporated in the model described thus far are of two
 types.
 \begin{enumerate}
 \item Statistical uncertainties assumed to be uncorrelated across analysis
-  bins. This includes uncertainties arising from limited Monte Carlo statistics,
-  limited data in the control region and signal contamination in the control
-  region.
+  bins. This includes uncertainties arising from limited Monte Carlo statistics
+  and limited data in the control region.
 \item Systematic uncertainties arising from detector artefacts or theoretical
   uncertainties such as jet energy scale, standard model cross-section
   calculations and the luminosity measurement~\cite{cms_lumi_measurement}.
 \end{enumerate}
 For uncertainties of the first kind, independent nuisance paramters must be
 included for each analysis bin. For uncertainties of the second kind, a single
-nuisance parameter will be included for all bins. This achieves the desired
+nuisance parameter will be included for all bins - giving the desired
 correlation. A full list of the nuisance parameters used is shown in
 Table~\ref{tbl:inter_systematic_parameters}. For the work presented here,
 Gaussian prior distributions have been used for all nuisance parameters.
 
 \input{tables/systematic_parameters}
 
+An additional nuisance parameter reflecting signal contamination in the control
+region requires a more careful choice of likelihood terms. This is described in
+the next section.
+
 \subsection{Signal Contamination}
-It can be seen in Figure~TODO that the region \LPcontrol may have a substantial
-component of \ac{SUSY} events depending on the particular model under
-consideration. Signal contamination increases \NControl leading to an
+It can be seen in Figure~\ref{fig:susy_lp} that the region \LPcontrol may have a
+substantial component of \ac{SUSY} events depending on the particular model
+under consideration. Signal contamination increases \NControl leading to an
 overprediction of \NBkg. To account for this, the \NBkgi term is modifed to
-reflect the assumption that some fraction of the yield \NControli will be
-due to \ac{SUSY} contamination. Rewriting,
+reflect the assumption that some fraction of the yield \NControli will be due to
+\ac{SUSY} contamination. Rewriting,
 
 \begin{equation}
 \NBkgi(\mu, \nu^{(\alpha)}) = \RbarCS_i \times \prod_{j}\left( \frac{\RbarCS_i

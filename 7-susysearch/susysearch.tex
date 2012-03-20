@@ -28,13 +28,13 @@ events containing a charged lepton and \MET originating from a \PW decay with
 large transverse momentum, the alignment of the charged lepton and neutrino
 gives an \LP distribution confined to the range $[0,1]$. In contrast, for
 \ac{SUSY} events the \MET component is larger than the lepton momentum and thus
-the \PtW is likely to point in the direction of the \MET. Since the direction
-of the charged lepton momentum and \MET will be mostly uncorrelated, \LP is
+the \PtWv is likely to point in the direction of the \METv. Since the direction
+of the charged lepton momentum and \METv will be mostly uncorrelated, \LP is
 likely to tend to small values. Rewriting,
 \begin{equation}
-\LP = \frac{\Ptl}{\PtW}\cos\left(\PtW, \Ptl\right)
+\LP = \frac{\Ptl}{\PtW}\cos\left(\PtWv, \Ptlv\right)
 \end{equation}
-it can be seen that in cases where the angle between the \MET and \Ptl is more
+it can be seen that in cases where the angle between the \METv and \Ptlv is more
 than 90\degrees, \LP will become negative.
 
 A second important difference between \ac{SUSY} and \ac{SM} events is related to
@@ -43,7 +43,7 @@ the overall energy scale of the events. As discussed in Chapter~\ref{sec:susy},
 \ac{SM} events. To provide some measure of this energy scale without biasing the
 polarisation, the variable \STlep is constructed as follows,
 \begin{equation}
-\STlep = |\Ptl| + |\MET|
+\STlep = \Ptl + \MET
 \end{equation}
 where it should be noted that \STlep is a scalar quantity. For \PW decays,
 $\STlep \approx \PtW$. Since the energy scale of \ac{SUSY} is unknown, \STlep is
@@ -168,7 +168,7 @@ impact parameter criteria loosened as for the muon case.
 
 \subsection{Resolving Ambiguities}
 Since the leptons used in this analysis use the traditional reconstruction
-methods at \ac{CMS} while jets and \MET are taken from the \ac{PF} algorithm,
+methods at \ac{CMS} while jets and \METv are taken from the \ac{PF} algorithm,
 ambiguities can exist. In order to avoid double counting, these ambiguities are
 resolved by several cleaning steps.
 
@@ -176,12 +176,12 @@ To remove jets dominated by a lepton, any jet found within a cone of 0.1 (0.3)
 of a selected muon (electron) is removed from consideration. In addition, muons
 within a cone of 0.3 of any jet are rejected.
 
-A second step corrects the \MET for differences between \ac{PF} and global muon
+A second step corrects the \METv for differences between \ac{PF} and global muon
 reconstruction. Each global muon is matched to a corresponding \ac{PF} muon
 within a cone of $\DeltaR < 0.1$. The absolute relative difference between the
 transverse momenta is then calculated. For cases where no match is found or this
 difference is $> 20\%$, the event is rejected. For cases where the difference is
-smaller than 20\%, the \MET receives a vectorial collection.
+smaller than 20\%, the \METv receives a vectorial correction.
 
 \section{Analysis Selection}
 Selection begins with a set of event cleaning cuts common to many analyses at
