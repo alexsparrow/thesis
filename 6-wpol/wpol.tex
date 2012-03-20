@@ -24,10 +24,10 @@ quantities. This is vital to ensure that the measurement of helicity fractions
 is actually feasible and not washed out by some experimental effect.
 
 Unless otherwise noted, the \Wjets samples used is produced using the
-\ac{MADGRAPH}~\cite{madgraph} generator interfaced to
-\ac{PYTHIA}~\cite{pythia}. The generated sample comprised approximately 15
-million events with the \acp{PDF} taken from the ac{CTEQL1} set within the
-\ac{LHAPDF} software package.
+\madgraph~\cite{madgraph} generator interfaced to \pythia~\cite{pythia}. The
+generated sample comprised approximately 15 million events with the \acp{PDF}
+taken from the \cteqsixlone set within the \lhapdf software
+package~\cite{lhapdf, lhapdf_web}.
 
 Shown in Figure~TODO are $\cos\thetastar$ distributions at generator level in
 bins of \PtW for \PWp along with a fit to
@@ -63,11 +63,11 @@ with $\cos\thetastar$ at suitably high $\PtW$ and yet also directly calculable
 from transverse detector-level quantities. This variable is the Lepton Projection
 variable or \LP and is defined as follows
 \begin{equation}
-  \LP = \frac{\Ptl.\PtW}{\left|\PtW\right|^2}
+  \LP = \frac{\Ptlv.\PtWv}{\left|\PtWv\right|^2}
 \label{eqn:lp_def}
 \end{equation}
-where \Ptl and \PtW are the transverse momenta of the charged lepton and \PW
-boson respectively and $\PtW = \Ptl +\MET$.
+where \Ptlv and \PtWv are the transverse momenta of the charged lepton and \PW
+boson respectively and $\PtWv = \Ptlv +\METv$.
 
 \subsubsection{Correlation of $\cos\thetastar$ With \LP}
 To motivate the use of the \LP variable in measuring $\cos\thetastar$ at high
@@ -96,8 +96,8 @@ To see the correlation, we first consider the quantity $\LP^{3D}$,
 &=& \frac{\MW}{2\mPW}\sqrt{\gamma^2(\cos\thetastar +\beta)^2 + \sin^2\thetastar}\\
 &=&
 \frac{\MW}{2\mPW}\sqrt{\gamma^2\cos^2\thetastar + 2\gamma^2\cos\thetastar\beta
-  + \gamma^2\beta^2 + \sin^2\theta*} \\
-&=&\frac{\MW}{2\mPW}\sqrt{\left(\frac{\mPW}{\MW}\right)^2\cos\thetastar^2 +
+  + \gamma^2\beta^2 + \sin^2\thetastar} \\
+&=&\frac{\MW}{2\mPW}\sqrt{\left(\frac{\mPW}{\MW}\right)^2\cos^2\thetastar +
   2\gamma^2\cos\thetastar\beta +\gamma^2\beta^2 +1}\\
 &=&\frac{\MW}{2\mPW}\sqrt{\left(\frac{\mPW}{\MW}\right)^2\cos\thetastar^2 +
 2\frac{\mPW\EW}{\MW^2}\cos\thetastar + \left(\frac{\mPW}{\MW}\right)^2 + 1}\\
@@ -118,7 +118,7 @@ for \PW bosons with $\PtW > \unit{200}{\GeV}$ and $\PtW > \unit{400}{\GeV}$.
 
 \subsubsection{Correlation with \phistar}
 For large \PtW, \LP is mostly uncorrelated with \phistar since even for values
-$|\phistar > \frac{\pi}{2}$, the lepton will still be collinear with the \PW in
+$\phistar > \frac{\pi}{2}$, the lepton will still be collinear with the \PW in
 the lab frame. In contrast, for low values of \PtW, the lepton in the lab frame
 may have a large angular separation from the \PW. In extreme cases, the lepton
 and the \PW may even be anti-parallel in the lab frame. This leads to a widening
@@ -236,15 +236,16 @@ once again using Eqn~\ref{eqn:wpol_helicity_fractions} and values of \f0, \fL an
 \fR are extracted for both boson charges. This defines the baseline expectation
 for the helicity fractions and is shown in Table~\ref{tbl:wpol_closure_tests}.
 
-The first closure test has been performed in the muon channel only. The
-generator level \LP templates for each helicity state are generated using the
-re-weighting method as described in Section~\ref{sec:wpol_reweighting} but excluding
-the acceptance correction. The phase space again corresponds to the
-reconstruction levels cut on \PtW. The binned maximum likelihood fit is then
-performed (see Section~\ref{sec:wpol_fitting}) and the helicity parameters
-obtained are shown in Table~\ref{tbl:wpol_closure_tests}. The agreement with the
-aforementioned generator level values is seen to be within the statistical error
-of the simulated sample.
+As a first closure test, the generator level \LP templates for each helicity
+state are generated using the re-weighting method as described in
+Section~\ref{sec:wpol_reweighting} but excluding the acceptance correction. The
+phase space again corresponds to the reconstruction levels cut on \PtW. The
+binned maximum likelihood fit is then performed (see
+Section~\ref{sec:wpol_fitting}) and the helicity parameters obtained are shown
+in Table~\ref{tbl:wpol_closure_tests}. The agreement with the aforementioned
+generator level values is seen to be within the statistical error of the
+simulated sample. Since at generator level, muon and electron channels should be
+very similar, this was performed only in the muon channel.
 
 Finally, a full reconstruction level closure test was performed in both electron
 and muon channels and applying all of the analysis cuts listed in
@@ -280,19 +281,19 @@ to either and electron or a muon are included in the dataset. Secondly,
 information from both electron and muon channels may be combined to constrain
 the helicity fractions.
 
-In order to perform this analysis, it is vital that a highly pure sample of \PW
-bosons is collected. Additional background contamination must be accounted for
-in the fitting procedure, either by subtraction or by incorporation of an
-appropriate shape template. However this is handled, it will inevitably
-introduce additional uncertainty into the fit. In the case of subtraction,
-uncertainty on the shape and normalisation must be accounted for and propagated
-into the total uncertainties on the helicity fractions. Introducing an
+In order to perform this analysis, it is vital that a highly pure sample of
+events containing \PW bosons is collected. Additional background contamination
+must be accounted for in the fitting procedure, either by subtraction or by
+incorporating an appropriate shape template. However this is handled, it will
+inevitably introduce additional uncertainty into the fit. In the case of
+subtraction, uncertainty on the shape and normalisation must be accounted for
+and propagated into the uncertainties on the helicity fractions. Introducing an
 appropriate template into the fit adds an additional parameter to account for
 the relative normalisation as well as uncertainties stemming from the template
 shape. This is particularly problematic in the case of \ac{QCD} multi-jet events
 where the underlying processes are felt to be poorly understood. This
 necessitates the use of a data-driven template which, as will be seen, brings an
-additional set of difficulties.
+additional set of complications.
 
 \subsection{Backgrounds}
 \label{sec:wpol_backgrounds}
@@ -317,17 +318,18 @@ will be shown, this can be largely eliminated via additional selection
 criteria. The principal background sources may be categorised as follows:
 \begin{itemize}
 \item Drell-Yan production leading to a dilepton final state in which one of the
-  leptons is missed due to acceptance, poor reconstruction or other detector
-  effects.
+  leptons is missed due to limited acceptance, poor reconstruction or other
+  detector effects such as electronics noise.
 \item \ttbar production where $t\longrightarrow\Pbeauty\PW$ and the \PW then decays
   leptonically.
-\item \ac{QCD} multi-jet events. This can be due to jet punch-through overlapping
-  with a charged hadron or heavy-flavour decays. Electrons face a much higher
-  background due primarily to photon conversions and overlap between charged
-  hadrons and \Ppizero. The charged hadron leaves a track, whilst the \Ppizero
-  decay leads to a shower of photons in the \ac{ECAL}.
+\item \ac{QCD} multi-jet events. In the muon channel, this can result from jet
+  punch-through overlapping with a charged hadron or heavy-flavour
+  decays. Electrons face a much higher background due primarily to photon
+  conversions and overlap between charged hadrons and \Ppizero. The charged
+  hadron leaves a track, whilst the \Ppizero decay leads to a shower of photons
+  in the \ac{ECAL}.
 \item For the electron channel only, there is an additional background from the
-  conversion of promptly produced photons in \gammajets.
+  conversion of promptly produced photons in \gammajets events.
 \end{itemize}
 
 \subsection{Leptons}
@@ -354,17 +356,17 @@ The requirements placed on the muon are as follows:
   requirement but still rejects the majority of cosmic muons.
 \item At least 1 hit is required in the pixels of the tracker in order to remove
   in-flight decays.
-\item The tracker muon reconstruction must involve at least 2 muon stations. This suppresses
-  punch-through and accidental matchings and ensures compatibility with the
-  trigger.
+\item The tracker muon reconstruction must involve at least 2 muon
+  stations. This suppresses punch-through and accidental matchings and ensures
+  compatibility with the trigger.
 \item The global muon reconstruction must involve at least 1 valid hit in the
   muon chambers; again to guard against decays in flight and punch-through.
 \item A cut on the muon pseudorapidity $|\eta| < 2.1$ in order to ensure
   compatibility with the trigger requirements.
-\item A cut on the combined isolation,
+\item A cut on the \emph{combined isolation},
 \begin{equation}
-\CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
-  E_T^{\textrm{had}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Ptmu} < 0.1
+  \CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
+    E_T^{\textrm{em}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Ptmu} < 0.1
 \label{eqn:wpol_mu_comb_iso}
 \end{equation}
 where the sums run over the tracks in the tracker or the energy deposits in the
@@ -419,35 +421,35 @@ momentum of the \PW, \PtW. As has been discussed, requiring \PW bosons with a
 large transverse momentum serves to enhance the polarisation effect described in
 Section~\ref{sec:polarisation}. It also ensures the correlation of \LP with
 $\cos\thetastar$ and thus improves the measurement of the helicity
-fractions. There are several means of reconstructing the \PtW at \ac{CMS}. The
+fractions. There are several means of reconstructing the \PtWv at \ac{CMS}. The
 first, which was initially used for this analysis was the hadronic recoil of the
 event. This is effectively the so-called missing hadronic energy of the
 event, or \MHT,
 % TODO Perhaps this should be moved somewhere else?
 \begin{equation}
-\PtW^{\textrm{had}} = - \sum_{j \in \textrm{jets}} \vec{j}
+\PtWvhad = - \sum_{j \in \textrm{jets}} \vec{j}
 \end{equation}
 where the $j$ is taken to run over some subset of the jets in the event as
 defined in Section~\ref{sec:wpol_jets} with some minimum transverse momentum
 requirement. The sum is taken to denote a vectorial sum. Since the \PW and the
 jets must balance in the lab frame, this in principal provides an accurate
-measurement of \PtW. However, the reconstruction of the jets is difficult and
+measurement of \PtWv. However, the reconstruction of the jets is difficult and
 subject to uncertainties in the jet energy scale. A higher resolution
-measurement can be achieved by utilising instead the \MET (effectively the
+measurement can be achieved by utilising instead the \METv (effectively the
 neutrino) and the lepton in the event. This leads to the definition,
 \begin{equation}
-\PtW^{\textrm{lep}} = \vec{\Pl} + \vec{\MET}
+  \PtWvlep = \Ptlv + \METv
 \end{equation}
 This provides a higher resolution measurement of \PtW, as can be seen in
 Figure~TODO. It is thus the variable adopted in this analysis.
 
 A second question, is then the choice of the minimum cut value to place on
-\PtW. On the one hand, increasing this cuts reduces the statistics of the
+\PtW. On the one hand, increasing this cut reduces the statistics of the
 sample. A related difficulty for this analysis was the small size of the
 simulated $\PW\longrightarrow\Pl\Pgn$ sample, particularly at higher \PtW. On
 the other hand, the enhancement of the polarisation effect and the increased
-correlation between $\cos\thetastar$ motivate a larger cut value. The benefits of
-these two effects could also be gained by binning the sample in \PtW and
+correlation between $\cos\thetastar$ motivate a larger cut value. The benefits
+of these two effects could also be gained by binning the sample in \PtW and
 performing independent fits within each bin. Unfortunately, the data sample
 available had inadequate statistics to make such an approach feasible. Instead,
 a moderately large cut $\PtW > \unit{50}{\GeV}$ was adopted.
@@ -487,7 +489,7 @@ approximate the invariant mass of a particle by using only transverse
 quantities. It is defined as follows
 
 \begin{equation}
-\MT = \sqrt{2\Ptl\MET\left(1 - \cos\Delta\phi\left(\Ptl, \MET\right)\right)}
+\MT = \sqrt{2\Ptl\MET\left(1 - \cos\Delta\phi\left(\Ptlv, \METv\right)\right)}
 \end{equation}
 
 The angular dependence (i.e. the $\cos\Delta\phi$ term) will effectively
@@ -522,7 +524,7 @@ the background proved far more problematic. In the end, an $\MT >
 the optimisation study in the electron channel, see
 Section~\ref{sec:wpol_electron_opt}.
 
-\subsection{Cut Flow}
+\subsection{Selection Requirements}
 \label{sec:wpol_cutflow}
 Having discussed the selection requirements to be used in this analysis, the
 actual cuts and cut values will now be presented. These are shown in
@@ -576,12 +578,12 @@ angular matching variables between the track and the supercluster (\deltaphiin,
 For each background component listed in Section~\ref{sec:wpol_backgrounds}, an
 appropriate simulated sample was used. In the case of the \Zjets, \ttbar and
 \gammajets, the generator setup was as for the \Wjets sample - the \ac{MADGRAPH}
-matrix element generator interfaced to
-\ac{PYTHIA}. In the case of the \ac{QCD} background, a number of
-samples were used. In the case of the Muon channel, this was a sample generated
-using \ac{PYTHIA} and binned in terms of the transverse momentum of the hard
-interaction, \pthat. This ensures adequate statistics even in the regions of
-high \pthat that will tend to pass the analysis selection.
+matrix element generator interfaced to \pythia. In the case of the \ac{QCD}
+background, a number of samples were used. In the case of the Muon channel, this
+was a sample generated using \pythia and binned in terms of the transverse
+momentum of the hard interaction, \pthat. This ensures adequate statistical
+precision, even in the regions of high \pthat that will tend to pass the
+analysis selection.
 
 For the electrons, still larger statistics were required in order to study the
 \ac{QCD} background properties. For these, \ac{QCD} samples were further
@@ -620,9 +622,10 @@ templates and extracts the most probably values of \fL, \fR and \f0 from the
 data distribution. In order to test the procedure, this method is also applied
 to Monte Carlo ``pseudodata'' to ensure that fitted helicity fractions match
 those derived from the analytical fit (see Section~TODO) to within the quoted
-errors. The fit itself is implemented in the \ac{RooFit} software framework,
-which assists in constructing an appropriate likelihood function and performing
-the necessary minimisation using the \ac{MINUIT} numerical optimisation code.
+errors. The fit itself is implemented in the \roofit software
+framework~\cite{roofit_paper, roofit_web}, which assists in constructing an
+appropriate likelihood function and performing the necessary minimisation using
+the \minuit numerical optimisation code~\cite{minuit_paper}.
 
 The number of signal events in a given histogram bin $i$ in terms of the
 helicity fractions can be written as
@@ -645,15 +648,16 @@ incorporated into the fit as follows:
 \begin{equation}
 E^j = f_{\textrm{sig}} S^j + (1-f_{\textrm{sig}}) B^j
 \end{equation}
-where $f_{\textrm{sig}}$ is the ratio of the \Wjets yield to the total simulated
-yield and $B^j$ is the combined \LP template for the \Zjets and \ttbar
+where $f_{\textrm{sig}}$ is the ratio of the simulated \Wjets yield to the total
+simulated yield and $B^j$ is the combined \LP template for the \Zjets and \ttbar
 backgrounds. It should be emphasised that the variable $f_{\textrm{sig}}$ is not
 free in the fit and thus does not introduce an additional degree of freedom.
 
 The previous formula is adequate for modelling the muon channel. For the
-electron channel, it has already been shown that \ac{QCD} multijet events as
-well as \gammajets production provide a non-negligible additional
-contribution. To deal with this, the formula is extended as follows:
+electron channel, it has already been shown that (see
+Table~\ref{tbl:wpol_electron_yields}) \ac{QCD} multijet events as well as
+\gammajets production provide a non-negligible additional contribution. To deal
+with this, the formula is extended as follows:
 \begin{equation}
 N^j = (1 - f_{\textrm{qcd}}) E^j + f_{\textrm{qcd}}Q^j
 \end{equation}
@@ -675,12 +679,8 @@ to the electron channel.
 It has been noted that the helicity fractions are charge dependent but lepton
 flavour independent. This suggests that the measurement may be refined by
 simultaneously fitting both muon and electron channels. Due to the lower
-efficiencies in the electron channel, this is not quite a doubling of the
-available statistics but should significantly reduce the statistical error. The
-simultaneous fit multiplies the likelihood terms,
-\begin{equation*}
-\likelihood_{\textrm{sim}} = \likelihood_{\Pgm} \times \likelihood_{\Pe}
-\end{equation*}
+efficiencies in the electron channel, this is not quite a doubling of the sample
+size but should still significantly reduce the statistical error.
 
 
 % TODO more on minimization here
@@ -715,20 +715,20 @@ templates in the fit.
 
 \subsection{Kinematics}
 Before continuing, it is useful to discuss the appearance of the \ac{QCD}
-background in terms of the \LP variable. To make this clear, consider the
-measurement of \PtW via the hadronic recoil in a balanced multi-jet event where
+background in terms of the \LP variable. Consider the
+measurement of \PtWv via the hadronic recoil in a balanced multi-jet event where
 a single jet has been misreconstructed as an electron. In this case, the
 hadronic recoil will tend to point along the axis of the fake electron. If the
-hadronic recoil is then used as a measurement of \PtW, it will be approximately
-collinear with the \Pt of the fake electron and thus will yield a value of $\LP
+hadronic recoil is then used as a measurement of \PtWv, it will be approximately
+collinear with the \Ptlv of the fake electron and thus will yield a value of $\LP
 \sim 1$. This can also be seen when the \PtW measurment is taken to be the
-vector sum of \Ptl and \MET. The fake electron will tend to be poorly
+vector sum of \Ptlv and \METv. The fake electron will tend to be poorly
 reconstructed and thus collinear with the source of fake \MET, again leading to
 $\LP \sim 1$. A similar argument can be made in the case of \gammajets events
 where now the photon is the source of both fake \MET and the fake lepton.
 
 
-\subsection{Cut Flow Optimisation}
+\subsection{Optimisation of Selection Requirements}
 \label{sec:wpol_electron_opt}with
 A key challenge in the electron channel was posed by the significant background
 from \ac{QCD} multijet events. The $\MT > \unit{30}{\GeV}$ cut applied in the
@@ -860,38 +860,38 @@ The template reweighting method necessary for the extraction of the helicity
 fractions introduces an inescapable dependence on Monte Carlo simulation. One of
 the challenges for this analysis is to ensure that any potential mismodelling
 within the simulation which might affect the construction of the \LP templates
-is properly accounted for and included as systematic uncertainties on the final
-result. Such systematics may be broadly divided into experimental and
+is properly accounted for and included in the systematic uncertainty on the
+final result. Such systematics may be broadly divided into experimental and
 theoretical uncertainties.
 
 \subsection{Experimental Uncertainties}
 In considering the potential sources of systematic error, it is helpful to think
 first in terms of the construction of the \LP variable. This involves two
-detector level quantities: the missing transverse energy \MET and the transverse
-momentum of the charged lepton \Ptl. The first quantity is derived from the
-particle flow algorithm, as discussed in Section~\ref{sec:reco_pf}. The leading
-source of uncertainty is due to the callibration of the jet energy scale.
+detector level quantities: the missing transverse energy \METv and the
+transverse momentum of the charged lepton \Ptlv. The first quantity is derived
+from the particle flow algorithm, as discussed in Section~\ref{sec:reco_pf}. The
+leading source of uncertainty is due to the callibration of the jet energy
+scale.
 
 \subsubsection{Jet Energy Scale}
 \label{sec:wpol_syst_jec}
-The jet energy scale is discussed in detail in Section~TODO. The uncertainty on
-its callibration has been thoroughly studied and is parameterised as a function
-of jet \Pt and $\eta$. In the case of a global miscallibration of this
-measurement, jet energy measurements in data would be pushed upwards or
+The jet energy scale is discussed in Section~\ref{sec:reco_jets}. The
+uncertainty on its calibration has been thoroughly studied and is parameterised
+as a function of jet \Pt and $\eta$. In the case of a global miscalibration of
+this measurement, jet energy measurements in data would be pushed upwards or
 downwards with respect to the values predicted by simulation. If one imagines a
 perfectly balanced dijet system in the centre of the detector, the resulting
-effect on the \MET will of course be cancelled. However, this will rarely be the
-case. In particular, in the case of \Wjets production, the hadronic system will
-be recoiling against the \PW. For relatively high transverse momentum \PW
-bosons, the \MET is very likely to point away from the recoiling jets. This
+effect on the \METv will of course be cancelled. However, this will rarely be
+the case. In particular, in the case of \Wjets production, the hadronic system
+will be recoiling against the \PW. For relatively high transverse momentum \PW
+bosons, the \METv is very likely to point away from the recoiling jets. This
 suggests that the effect of an upward or downard shift in the jet energy scale
-is likely to have an opposite effect on the \MET scale and be highly correlated
-betwen events. In other words, a shift in the jet energy scale will, to first
+is likely to have an opposite effect on the \METv scale and be highly correlated
+between events. In other words, a shift in the jet energy scale will, to first
 order, lead to an opposite shift in the \MET distribution. Of course there are
 angular effects of an adjustment to the jet energy scale, which were fully
 modelled in simulation. For now a heuristic argument will suffice to understand
 the most striking effects.
-
 
 The dominant effect of the jet energy scale on the fitted helicity fractions is
 due to the change in the \LP shape. Of course, the effect will also affect the
@@ -901,15 +901,16 @@ calculated \LP. For an upwards shift in the jet energy scale, the \MET will tend
 to shift downwards and thus to larger values of \LP. Conversely, for a downward
 shift in the jet energy scale, the \MET scale will increase and therefore \LP
 will shift to smaller values. This very approximate argument is born out in the
-full modelling in simulation. This is illustrated in Figure~\ref{fig:wpol_mujecunc}
-showing the fractional change of the \LP distribution in the muon channel for
-upward and downward shifts in the jet energy scale. Clearly, the effect is quite
-large and most severe towards the edges of the \LP distribution (i.e. $\LP < 0$
-and $\LP > 1$). There are two reasons for this. Firstly, that in these regions
-the \LP distribution is rising or falling rapidly. Bin to bin migration will
-thus yield larger changes. Secondly, the change in the value of \LP for a single
-event in response to a change in the jet energy scale is expected to be linear
-in \LP to first order.
+full modelling in simulation. This is illustrated in
+Figure~\ref{fig:wpol_mujecunc} showing the fractional change of the \LP
+distribution in the muon channel for upward and downward shifts in the jet
+energy scale. Clearly, the effect is quite large and most severe towards the
+edges of the \LP distribution (i.e. $\LP < 0$ and $\LP > 1$). There are two
+reasons for this. Firstly, that in these regions the \LP distribution is rising
+or falling rapidly. Bin to bin migration will thus yield larger
+changes. Secondly, the change in the value of \LP for a single event in response
+to a change in the jet energy scale is expected to be linear in \LP to first
+order.
 
 The jet energy scale is the dominant source of systematic uncertainty for both
 electron and muon channels. The effect can be mitigated somewhat however by the
@@ -920,7 +921,7 @@ contribute a lot to the fit. Reducing the fit range too drastically may remove
 too much information from the fit, increasing the statistical error and negating
 any benefits from the reduced systematic uncertainty. An optimisation study was
 undertaken in both lepton channels and for both charges to choose an optimal fit
-range.  The quadrature sum of the statistical and systematic errors was
+range.  The quadratic sum of the statistical and systematic errors was
 calculated for a selection of possible fit ranges. It was determined that a fit
 range of $[0,1.3]$ was an appropriate choice for both channels and both charges.
 
@@ -937,24 +938,24 @@ range of $[0,1.3]$ was an appropriate choice for both channels and both charges.
 The jet energy scale uncertainty follows the standard prescription for \ac{CMS}
 analyses. Firstly, the unclustered component of the missing energy is calculated as,
 \begin{equation}
-\vec{E}^{\textrm{unclustered}}_T = -\MET + \Ptl + \sum_i \vec{p}_T^{\textrm{jet},i}
+\vec{E}^{\textrm{unclustered}}_T = -\METv + \Ptlv + \sum_i \vec{p}_T^{\textrm{jet},i}
 \end{equation}
 where the index $i$ runs over all jets with $\Pt > \unit{10}{\GeV}$ in the event
 as reconstructed by the particle flow algorithm. The unclustered energy is then
-scaled either up or down within its uncertainty (taken to be 5\%). The \MET is
-then recalculated from this displaced unclustered energy,
+scaled either up or down within its uncertainty (taken to be 5\%). \METv is then
+recalculated from this displaced unclustered energy,
 \begin{equation}
-\MET \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptl - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i}
+\METv \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptlv - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i}
 \end{equation}
 where $u(p_T, \eta)$ is a map specifying the relative uncertainty on the jet
 energy scale as a function of jet transverse momentum and pseudorapidity. The
 scale applied to the jet momenta will be in the same direction as that of the
 unclustered energy. When calculating the effect on the results, this displaced
-value is then used in place of the \MET and all \MET derived quantities. The end
-product of this are two modified \LP shapes corresponding to upward and downward
-fluctuations in the jet energy scale. Since the shifted \MET has been applied
-consistently throughout the analysis, the smaller effects on \PtW and \MT are
-also included.
+value is then used in place of the \METv and all \METv derived quantities. The
+end product of this are two modified \LP shapes corresponding to upward and
+downward fluctuations in the jet energy scale. Since the shifted \METv has been
+applied consistently throughout the analysis, the smaller effects on \PtW and
+\MT are also included.
 
 The value of the jet energy scale systematic is determined in simulation by
 fitting the unaltered template (with no jet energy scale adjustment) to
@@ -966,7 +967,7 @@ uncertainty is then taken to be largest of the two errors.
 \subsubsection{\MET Resolution}
 In addition to the modelling of the jet energy scale, another possible source of
 mismeasurement stems from the resolution effects included in the simulation of
-the detector. The resolution predicted by the Monte Carlo is believed to
+the detector. The resolution predicted by the Monte Carlo is known to
 considerably underestimate that observed in the data. To account for this,
 additional ``smearing'' was applied to the missing transverse energy in
 simulation. The difference between this ``increased resolution'' case and the
@@ -980,44 +981,43 @@ particle or a generator level \Ptau, the following quantity is calculated,
 \begin{equation}
 \Delta\PtW = \frac{\left(\PtW\right)^{\textrm{GEN}} - \left ( \PtW \right)^{\textrm{RECO}}}{\left(\PtW\right)^{\textrm{GEN}}}
 \end{equation}
-This is the relative differnce between the reconstruction and generator level
+This is the relative difference between the reconstruction and generator level
 \PtW. This distribution is then divided into bins of generator level \PtW. Each
-bin is fit with a Gaussian distribution in order to extract the resolution as a
-function of \PtW, $\sigma_{\PW}$. This is effectively the \PtW resolution as
-modelled by the detector simulation.
+bin is fit with a Gaussian distribution in order to extract the resolution,
+$\sigma_{\PW}$ as a function of \PtW. This is the \PtW resolution as modelled by
+the detector simulation.
 
 The simulated sample is then used again, this time ``smearing'' the
 reconstruction level \PtW quantity such that the resolution is increased by
 10\%.
 
-\subsubsection{Lepton Scale}
+\subsubsection{Lepton Momentum Scale}
 The second contribution to the \LP shape uncertainty comes from the lepton
 momentum measurement. The character and magnitude of the uncertainty is quite
-different between the electron and muon channels.
+different for the electron and muon channels.
 
 The muon momentum scale uncertainty due to material and B-field uncertainties
 has been shown to be small. However, a charge asymmetric \Pt bias might appear
 via ``$\chi^2$ invariant modes''. By calculating the difference in the \PZ mass
-between events with a positive and negatively charged leading muon (in terms of
-\Pt), the size of this effect can be judged. No significant effect is observed
-in data. The errors on this measurement are used to place an upper bound on such
-an effect. The effect is found to be less than 1\% at a \Ptmu of
+between events with a positively and negatively charged leading muon (in terms
+of \Pt), the size of this effect can be judged. No significant effect is
+observed in data. The errors on this measurement are used to place an upper
+bound on such an effect. The effect is found to be less than 1\% at a \Ptmu of
 \unit{100}{\GeV} and this is taken as a systematic uncertainty. This is
 propagated to the helicity fractions by adjusting the \Ptmu in simulation by
 $\pm 1\%$ and taking the difference from the unaltered case.
 
-As described in Section~\ref{sec:reco_ecal_transparency}, the electron momentum is
+As described in Section~\ref{sec:reco_electrons}, the electron momentum is
 corrected using continuous measurements of the \ac{ECAL} crystal
 transparency. Unfortunately, these were not fully validated on the timescale of
-this analysis (they were ready in the \ac{CMSSW} software version 3.9). Instead,
-an alternative set of corrections were used, derived globally for the
-dataset. This naturally has implications for the electron energy resolution,
-since applying these global corrections per-event will widen the monetum
-distribution while correcting the mean.
+this analysis. Instead, an alternative set of corrections were used, derived
+globally for the dataset. This naturally has implications for the electron
+energy resolution, since applying these global corrections per-event will widen
+the momentum distribution while correcting the mean.
 
 The transparency corrections were derived for the \PW charge asymmetry
-measurement~\cite{w_charge_asymmetry}. The detector is divided into 6 $\eta$
-bins. The \Zee mass distribution in data is then divided into $6 + ^6C_2$
+measurement~\cite{w_charge_asymmetry}. The detector is divided into 6 bins in
+$\eta$. The \Zee mass distribution in data is then divided into $6 + ^6C_2$
 categories corresponding to cases where a \PZ is reconstructed from electrons in
 $\eta$ bins $i$ and $j$.  For each category a mass template is derived from
 simulation. A simultaneous fit is then performed over the 21 categories, where
@@ -1064,7 +1064,7 @@ The first systematic represents the degree, as can be judged from the enriched
 shape of the \ac{QCD} events in the selected region. In other words, the bias
 introduced by any correlation between \LP and the track-supercluster matching
 variables, as far as can be judged in simulation. This is evaluated by
-performing TODO toy experiments. For each toy experiment, the Monte Carlo
+performing 500 toy experiments. For each toy experiment, the Monte Carlo
 pseudodata is first fitted using the \ac{QCD} template taken directly from the
 selected region. This represents the case, where the \ac{QCD} has been modelled
 perfectly by the template. Then the pseudodata is refit using the anti-selected
@@ -1077,23 +1077,25 @@ taken as a systematic uncertainty. This is performed separately for both
 charges.
 
 The second systematic represents the uncertainty introduced by the very limited
-statistics available in the simulated \ac{QCD}/\gammajets samples. This was
-evaluated by redicing the Monte Carlo anti-selected template 500 times. Each
-rediced template is fitted along with the standard signal and electroweak
+statistics available in the simulated \ac{QCD}/\gammajets samples. The bins of
+the Monte Carlo anti-selected template were each fluctuated about their mean
+values and within their statistical uncertainties. This procedure is performed
+for the whole template 500 times, to give 500 ``re-diced'' templates. Each
+re-diced template is then fitted along with the standard signal and electroweak
 background templates to the pseudodata. The ensemble distributions of \f0 and
 \fLmfR are then plotted and the \ac{RMS} widths taken to be the systematic
 uncertainty due to limited statistics in the \ac{QCD} template.
 
 \subsubsection{Vertex Multiplicity}
-The pile-up situation at \ac{CMS} was evolving rapidly as the instantaneous
-luminosity increased. Due to the long lead-time in the generation of simulated
-samples, it was not feasible to produce samples with vertex multiplicity
-distributions exactly matching those present in data. In order to correct the
-simulation to match the data, the simulated and observed vertex distributions
-were compared. The simulated samples were then reweighted to account for this
-difference. A systematic uncertainty is assigned by allowing the reweighting
-factors to vary within their statistical uncertainties. The uncertainty was
-tested in the muon channel and found to be negligible.
+The vertex multiplicity changed rapidly during data taking. Due to the long
+lead-time in the production of simulated samples, it was not feasible to produce
+samples with vertex multiplicity distributions exactly matching those present in
+data. In order to correct the simulation to match the data, the simulated and
+observed vertex distributions were compared. The simulated samples were then
+reweighted to account for this difference. A systematic uncertainty is assigned
+by allowing the reweighting factors to vary within their statistical
+uncertainties. The uncertainty was tested in the muon channel and found to be
+negligible.
 
 \subsubsection{Charge Misidentification}
 \label{sec:wpol_syst_charge_misid}
@@ -1118,7 +1120,7 @@ coefficients. This was tested in simulation by varying each parameter \Ai by
 found to have a very small dependence on the values of the other \Ai.
 
 \subsubsection{\ac{PDF} Uncertainties}
-This analysis used a \Wjets Monte Carlo sample, generated using the \ac{CTEQ6L1}
+This analysis used a \Wjets Monte Carlo sample, generated using the \cteqsixlone
 \ac{PDF} set. This is a set of 41 \ac{PDF} distributions. All results in this
 analysis are calculated using the best fit value of this set. To determine the
 uncertainty associated with this assumption, each alternative \ac{PDF} from the

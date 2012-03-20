@@ -639,6 +639,58 @@ author = "E. and Mirkes"
       year         = "2009",
 }
 
+@INPROCEEDINGS{ecal_transparency,
+   author = {{Sofiatti}, C.},
+    title = "{Study of the crystal transparency changes of the CMS ECAL}",
+booktitle = {APS Division of Nuclear Physics Meeting Abstracts},
+     year = 2011,
+    month = oct,
+   adsurl = {http://adsabs.harvard.edu/abs/2011APS..DNP.EA122S},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{laser_monitoring,
+  author={Vladlen Timciuc and the Cms Ecal Group},
+  title={Database usage in the CMS ECAL laser monitoring system},
+  journal={Journal of Physics: Conference Series},
+  volume={219},
+  number={2},
+  pages={022045},
+  url={http://stacks.iop.org/1742-6596/219/i=2/a=022045},
+  year={2010},
+  abstract={The CMS detector at the LHC is equipped with a high precision
+                  electromagnetic crystal calorimeter (ECAL). The crystals
+                  undergo a transparency change when exposed to radiation during
+                  LHC operation, which recovers in absence of irradiation on the
+                  time scale of hours. This change of the crystal response is
+                  monitored with a laser system which performs a transparency
+                  measurement of each crystal every twenty minutes. The
+                  monitoring data is analyzed on a PC farm attached to the
+                  central data acquisition system of CMS. After analyzing the
+                  raw data, a reduced data set is stored in the Online Master
+                  Data Base (OMDS) which is connected to the online computing
+                  infrastructure of CMS. The data stored in OMDS, representing
+                  the largest data set stored in OMDS for ECAL, contains all the
+                  necessary information to perform detailed crystal response
+                  monitoring, as well as an analysis of the dynamics of the
+                  transparency change. For the CMS physics event data
+                  reconstruction, only a reduced set of information from the
+                  transparency measurement is required. This data is stored in
+                  the Off-line Reconstruction Conditions Database Off-line
+                  subset (ORCOFF). To transfer the data from the OMDS to ORCOFF,
+                  the reduced data is transferred to Off-line Reconstruction
+                  Conditions DB On-line subset (ORCON) in a procedure known as
+                  Online to Offline transfer, which includes various checks for
+                  data consistency. In this talk we describe the laser
+                  monitoring work flow and the specifics of the database usage
+                  for the ECAL laser monitoring system. The strategy implemented
+                  to optimize the data transfer and to perform quality checks is
+                  being presented.}
+}
+
+
+
+
 @article{hcal_paper,
       collaboration = {CMS},
       title        = "Performance of the CMS Hadron Calorimeter with Cosmic Ray
@@ -889,6 +941,7 @@ Plehn and David L. Rainwater and Tim Stelzer},
   year={2007},
   abstract={We present the latest developments of the MadGraph/MadEvent Monte Carlo event generator and several applications to hadron collider physics. In the current version events at the parton, hadron and detector level can be generated directly from a web interface, for arbitrary processes in the Standard Model and in several physics scenarios beyond it (HEFT, MSSM, 2HDM). The most important additions are: a new framework for implementing user-defined new physics models; a standalone running mode for creating and testing matrix elements; generation of events corresponding to different processes, such as signal(s) and backgrounds, in the same run; two platforms for data analysis, where events are accessible at the parton, hadron and detector level; and the generation of inclusive multi-jet samples by combining parton-level events with parton showers. To illustrate the new capabilities of the package some applications to hadron collider physics are presented: I. Higgs search in pp → H → W + W − : signal and backgrounds. II. Higgs CP properties: pp → Hjj in the HEFT. III. Spin of a new resonance from lepton angular distributions. IV. Single-top and Higgs associated production in a generic 2HDM. V. Comparison of strong SUSY pair production at the SPS points. VI. Inclusive W +jets matched samples: comparison with Tevatron data.}
 }
+
 @article{pythia,
   author={Torbjörn Sjöstrand and Stephen Mrenna and Peter Skands},
   title={PYTHIA 6.4 physics and manual},
@@ -899,6 +952,21 @@ Plehn and David L. Rainwater and Tim Stelzer},
   url={http://stacks.iop.org/1126-6708/2006/i=05/a=026},
   year={2006},
   abstract={The Pythia program can be used to generate high-energy-physics `events', i.e. sets of outgoing particles produced in the interactions between two incoming particles. The objective is to provide as accurate as possible a representation of event properties in a wide range of reactions, within and beyond the Standard Model, with emphasis on those where strong interactions play a rôle, directly or indirectly, and therefore multihadronic final states are produced. The physics is then not understood well enough to give an exact description; instead the program has to be based on a combination of analytical results and various QCD-based models. This physics input is summarized here, for areas such as hard subprocesses, initial- and final-state parton showers, underlying events and beam remnants, fragmentation and decays, and much more. Furthermore, extensive information is provided on all program elements: subroutines and functions, switches and parameters, and particle and process data. This should allow the user to tailor the generation task to the topics of interest. The code and further information may be found on the Pythia web page: http://www.thep.lu.se/~torbjorn/Pythia.html [http://www.thep.lu.se/~torbjorn/Pythia.html] .}
+}
+
+@article{lhapdf,
+     author    = "Whalley, M. R. and Bourilkov, D. and Group, R. C.",
+     title     = "{The Les Houches Accord PDFs (LHAPDF) and Lhaglue}",
+     year      = "2005",
+     eprint    = "hep-ph/0508110",
+     archivePrefix = "arXiv",
+     SLACcitation  = "%%CITATION = HEP-PH/0508110;%%"
+}
+
+@online{lhapdf_web,
+url = {http://hepforge.cedar.ac.uk/lhapdf/},
+author = {Mike Whalley and Andy Buckley},
+title = {LHAPDF web page}
 }
 
 @article {cms_w_paper,
@@ -915,6 +983,36 @@ Plehn and David L. Rainwater and Tim Stelzer},
    url = {http://dx.doi.org/10.1007/JHEP10(2011)132},
    note = {10.1007/JHEP10(2011)132},
    year = {2011}
+}
+
+@article{roofit_paper,
+   author = {{Verkerke}, W. and {Kirkby}, D.},
+    title = "{The RooFit toolkit for data modeling}",
+  journal = {ArXiv Physics e-prints},
+   eprint = {arXiv:physics/0306116},
+ keywords = {Physics - Data Analysis, Statistics and Probability},
+     year = 2003,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2003physics...6116V},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@online{roofit_web,
+url = {http://roofit.sourceforge.net/},
+author = {Wouter Verkerke and David Kirkby},
+title = {RooFit web page}
+}
+
+@Article{minuit_paper,
+     author    = "James, F. and Roos, M.",
+     title     = "{Minuit: A System for Function Minimization and Analysis of
+                  the Parameter Errors and Correlations}",
+     journal   = "Comput. Phys. Commun.",
+     volume    = "10",
+     year      = "1975",
+     pages     = "343-367",
+     doi       = "10.1016/0010-4655(75)90039-9",
+     SLACcitation  = "%%CITATION = CPHCB,10,343;%%"
 }
 
 @techreport{w_charge_asymmetry_an,
@@ -946,6 +1044,14 @@ Plehn and David L. Rainwater and Tim Stelzer},
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SUSY Search
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@techreport{susy_ra4_pas,
+      title        = "Search for new physics with single-leptons at the LHC",
+      year         = "2011",
+      number = {SUS-11-015},
+      url = "http://cdsweb.cern.ch/record/1380922?ln=en",
+      institution = {CMS}
+
+}
 
 @article{susy_selection_an,
    author={W. Adam and  C. Adleff and  O. Buchmueller and  A. Cakir and  F. Costanza and
@@ -1075,7 +1181,9 @@ archivePrefix = "arXiv",
 @techreport{cms_lumi_measurement,
       title        = "Measurement of CMS Luminosity",
       year         = "2010",
-      collaboration = {{CMS}},
-      number       = {EWK-10-004}
+      institution = {CMS},
+      collaboration = {CMS},
+      number       = {EWK-10-004 }
+
 }
 }
