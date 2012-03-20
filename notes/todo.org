@@ -7,6 +7,10 @@
 ** TODO check all references are in fact referenced
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Say that CMSSM is mSUGRA inspired
+** TODO Monte carlo, MC
+** TODO references for PDF sets
+** TODO combined isolation definition
+** TODO Reference RooStats in interpretation chapter
 * SM
 ** TODO SM Higgs mass
 * SUSY
@@ -51,8 +55,92 @@
 ** TODO Reference SM section for chirality + possibly equiv theorem
    SCHEDULED: <2012-03-20 Tue>
 ** TODO additional plots showing data/mc
-* SUSY Search
-** OMG lots of comments
+** General Alex
+*** TODO Smallcaps for generator names
+*** TODO Hyphenate W-boson when used as an adjective e.g. W-boson mass
+*** TODO Statistics, systematics, cutflow jargon
+*** TODO Bold the Z+jets etc in titles
+** Alex Wpol
+*** TODO 6.1: W+jets jargon
+*** TODO 6.1: clarify NLO
+*** TODO 6.1: clarify "dominant background"
+*** TODO 6.2.2: Correlation of costheta*: Define MW
+*** TODO Define gamma, beta (refer to appendix)
+*** TODO define EW
+*** TODO confirm equation for costheta* is correct
+*** TODO 6.2.3: ensure YW defined
+*** TODO More explanation needed in PTW and YW dependence
+*** TODO Table 6.1: Errors? explain why etc?
+*** TODO 6.3.7: Values for H/E etc in the trigger
+*** TODO Table 6.3:C++ style ==
+*** TODO MT -> T roman style
+*** TODO Table 6.4 and 6.3 should be more consistent
+*** TODO 6.5: cross-sections -> cross-section calculations and reference
+*** TODO Reverse statement in last paragraph
+*** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
+*** TODO cut flow: cut applied in the muon channel - clarify and show
+*** TODO Figure 6.5: Tidy up
+*** TODO 6.6.4: Mention that its all done in MC
+*** TODO JES: 5% from where? - ref
+*** TODO ETmiss syst: Make clear this is an overestimate
+*** TODO Ensure PTWRECO, GEN etc. are defined
+*** TODO ETmiss resolution: 10% where is this from?
+*** TODO lep mom scale: reference invariant modes
+*** TODO Change the lepton scale bit to I did A. B would be an improvment
+*** TODO More explanation on transparency correction figures
+*** TODO PDF uncertainties - average fluctuation why?
+*** TODO Why 25% for Z and 50 for ttbar
+*** TODO table 6.6: extra horizontal line
+*** TODO Table 6.8: extra horizontal lines
+*** TODO Discuss these tables more
+*** TODO Figure 6.9: preliminary
+*** TODO Conclusions: comment on goodness of fit
+*** TODO agreement between mu and e
+*** TODO relative precision
+** Alex SUSY search
+*** TODO 7.1: provides -> provide
+*** TODO 7.2: asSUSY
+*** TODO single lepton -> single-lepton
+*** TODO Rewriting. Which equation is this?
+*** TODO sideband -> control region
+*** TODO Ref for CMSSM
+*** TODO 7.4.2: thoseused
+*** TODO adjustements
+*** TODO different analysis requirements...
+*** TODO Explain why not using all PF objects
+*** TODO 7.5: supressing
+*** TODO analysis -> search
+*** TODO cutflow
+*** TODO 7.6: "cross-triggers"
+*** TODO througout
+*** TODO delete "exact"
+*** TODO cut was used
+*** TODO statistics
+*** TODO 7.7: the jet multiplicity cut
+*** TODO that new physics will
+*** TODO Shown are the yields per subprocess
+*** TODO observed
+*** TODO SUSY triggers -> explain
+*** TODO The data is seen -> are seen
+*** TODO inverting - it isn't really
+*** TODO supressing
+*** TODO an ETmiss
+*** TODO explain sigma(D0) > 3
+*** TODO 7.8.2: statistics are hurt
+*** TODO QCD template was affected
+*** TODO Figure 7.4: separate
+*** TODO 7.9.1: Poisson uncertainty
+*** TODO 7.9.2: limited statistics of simulated events
+*** TODO rediced
+*** TODO Hadronic recoil resolution: overestimate
+*** TODO Explain 30% and 50% figures for W/ttbar
+*** TODO Muon momentum scale: reference and explain more
+*** TODO PDFs: ref them & explain a bit better that this is on top of what was seen before
+*** TODO Figure 7.5: Improve
+*** TODO Trigger efficiency bit -> make briefer
+*** TODO Table 7.6 and 7.7 should be clarified
+
+
 * Interpretation
 ** TODO Redo SMS limits with increased PDF uncertainty (20%?) since there are none in currently!!
    SCHEDULED: <2012-03-20 Tue>
@@ -432,3 +520,141 @@ Mostly done!
 ** DONE consistency with 8.1 in eqn 8.2
    CLOSED: [2012-03-20 Tue 10:35] SCHEDULED: <2012-03-20 Tue>
    - State "DONE"       from "TODO"       [2012-03-20 Tue 10:35]
+** DONE 6.2.1p2: Tidy up acronyms for MC generators
+   CLOSED: [2012-03-20 Tue 13:27]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:27]
+** DONE phistar remove accidental ket
+   CLOSED: [2012-03-20 Tue 13:29]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:29]
+** DONE Closure test: has been -> was
+   CLOSED: [2012-03-20 Tue 13:31]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:31]
+** DONE muon channel only. why? generator level expected to be the same
+   CLOSED: [2012-03-20 Tue 13:35]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:35]
+** DONE theta* -> theta^* and cos^2
+   CLOSED: [2012-03-20 Tue 13:29]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:29]
+** DONE \gamma+jet events
+   CLOSED: [2012-03-20 Tue 15:05]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 15:05]
+** DONE 6.3.1p3: Events containing W bosons
+   CLOSED: [2012-03-20 Tue 13:39]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:39]
+** DONE incorporating an
+   CLOSED: [2012-03-20 Tue 13:39]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:39]
+** DONE line12: delete total
+   CLOSED: [2012-03-20 Tue 13:39]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:39]
+** DONE difficulties -> complications
+   CLOSED: [2012-03-20 Tue 13:39]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:39]
+** DONE 6.3.2: limited acceptance
+   CLOSED: [2012-03-20 Tue 13:42]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:42]
+** DONE detector effects - give more detail
+   CLOSED: [2012-03-20 Tue 13:46]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:46]
+** DONE punch-through in the mu channel
+   CLOSED: [2012-03-20 Tue 13:47]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:47]
+** DONE 6.3.3: ot->to
+   CLOSED: [2012-03-20 Tue 13:47]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:47]
+** DONE suppresses.
+   CLOSED: [2012-03-20 Tue 13:51]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:51]
+** DONE Typo in Icomb equation. ECAL.
+   CLOSED: [2012-03-20 Tue 13:50]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:50]
+** DONE 6.3.5: cuts -> cut
+   CLOSED: [2012-03-20 Tue 13:51]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:51]
+** DONE supressing
+   CLOSED: [2012-03-20 Tue 13:52]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:52]
+** DONE 6.3.6: Cut Flow title
+   CLOSED: [2012-03-20 Tue 13:52]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:52]
+** DONE 6.4: statistical precision
+   CLOSED: [2012-03-20 Tue 13:53]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 13:53]
+** DONE 6.5: Reference RooFit and MINUIT -> ensure not duplicated in interpretation section
+   CLOSED: [2012-03-20 Tue 14:03]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:03]
+** DONE simulated W+jets
+   CLOSED: [2012-03-20 Tue 14:12]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:12]
+** DONE has already been shown where
+   CLOSED: [2012-03-20 Tue 14:15]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:15]
+** DONE 6.5.1: statistics
+   CLOSED: [2012-03-20 Tue 14:17]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:17]
+** DONE Remove likelihood
+   CLOSED: [2012-03-20 Tue 14:17]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:17]
+** DONE 6.6.2: Delete To make this clear
+   CLOSED: [2012-03-20 Tue 14:18]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:18]
+** DONE 6.7: in the systematic uncertainties
+   CLOSED: [2012-03-20 Tue 14:45]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:45]
+** DONE Jet energy scale: refer previous section
+   CLOSED: [2012-03-20 Tue 14:45]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:45]
+** DONE callibration
+   CLOSED: [2012-03-20 Tue 14:46]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:46]
+** DONE betwen
+   CLOSED: [2012-03-20 Tue 14:46]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:46]
+** DONE quadratic
+   CLOSED: [2012-03-20 Tue 14:47]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:47]
+** DONE vector quantitities
+   CLOSED: [2012-03-20 Tue 12:35]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 12:35]
+** DONE ETmiss resolution - believed -> known
+   CLOSED: [2012-03-20 Tue 14:47]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:47]
+** DONE differnce
+   CLOSED: [2012-03-20 Tue 14:47]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:47]
+** DONE Move sigmaW
+   CLOSED: [2012-03-20 Tue 14:48]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:48]
+** DONE effectively
+   CLOSED: [2012-03-20 Tue 14:48]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:48]
+** DONE Lepton Momentum Scale
+   CLOSED: [2012-03-20 Tue 14:48]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:48]
+** DONE between -> for
+   CLOSED: [2012-03-20 Tue 14:49]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:49]
+** DONE positvely
+   CLOSED: [2012-03-20 Tue 14:49]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:49]
+** DONE Delete the CMSSW39 bit
+   CLOSED: [2012-03-20 Tue 14:49]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:49]
+** DONE monetum
+   CLOSED: [2012-03-20 Tue 14:49]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:49]
+** DONE Reference charge asymm
+   CLOSED: [2012-03-20 Tue 14:49]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:49]
+** DONE eta bins -> bins in eta
+   CLOSED: [2012-03-20 Tue 14:50]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:50]
+** DONE QCD background estimation: redicing
+   CLOSED: [2012-03-20 Tue 14:58]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:58]
+** DONE Vertex multiplicity: situation at CMS. evolving
+   CLOSED: [2012-03-20 Tue 14:59]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:59]
+** DONE 6.6.3: cut flow
+   CLOSED: [2012-03-20 Tue 14:18]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 14:18]

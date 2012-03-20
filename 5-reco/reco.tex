@@ -115,6 +115,12 @@ seeds (2 or 3 hits) in the inner layers of the tracker. Electron tracks are then
 built from these track seeds. The trajectory is reconstructed accounting for the
 electron energy loss and fitted with a \ac{GSF}.
 
+As described in Section~\ref{sec:expt_laser_monitoring}, electron energies are
+corrected to account for changes in the transparency of the \ac{ECAL}
+crystals. For the \PW polarisation measurement, a set of ``ad-hoc'' corrections
+were calculated from fits to the \PZ mass. For the \ac{SUSY} search analysis,
+more sophisticated corrections were available~\cite{laser_monitoring}.
+
 \subsubsection{Electron Identification}
 \label{sec:reco_electron_id}
 The large bremsstrahlung induced energy loss coupled with larger backgrounds
@@ -180,9 +186,8 @@ barrel-endcap transition region, $1.4442 < |\eta| < 1.566$ is explicitly exclude
 
 \input{tables/electron_id}
 
-\subsubsection{\ac{ECAL} Transparency Corrections}
-\label{sec:reco_ecal_transparency}
 \section{Jets}
+\label{sec:reco_jets}
 Four types of jets are reconstructed at \ac{CMS}: \acf{Calo} jets, \ac{PF} jets,
 \ac{JPT} jets and track jets~\cite{jet_perf_pas}. \ac{Calo} jets are
 reconstructed from energy deposits in the \ac{ECAL} and \ac{HCAL}, combined into

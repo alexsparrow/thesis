@@ -343,13 +343,13 @@ monte carlo samples. The \ac{CMSSM} sample is produced using the Pythia event
 generator, with the two mass parameters varied independently in steps of
 \unit{20}{\GeV} to produce a grid. For each grid point, 10000 events were
 generated. Due to the large number of events, the detector response was not
-processed with the full GEANT4~\cite{geant_paper} reconstruction software but
+processed with the full \geantfour~\cite{geant_paper} reconstruction software but
 instead with a faster, parameterised simulation tool. This has been extensively
 validated and tuned against the full detector simulation and shown to give
 adequate results for many analyses.
 
 Having evaluated the efficiencies per \STlep bin for each \ac{CMSSM} grid point,
-the \ac{NLO} cross-sections were calculated using the PROSPINO
+the \ac{NLO} cross-sections were calculated using the \prospino
 package~\cite{prospino}. These were then input to the limit code, along with the
 required uncertainties and model-independent parameters.
 
