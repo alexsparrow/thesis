@@ -9,8 +9,11 @@
 ** TODO Say that CMSSM is mSUGRA inspired
 ** TODO Monte carlo, MC
 ** TODO references for PDF sets
+   SCHEDULED: <2012-03-21 Wed 09:00>
+** TODO MT -> T roman style (generally transverse stuff)
 ** TODO combined isolation definition
 ** TODO Reference RooStats in interpretation chapter
+   SCHEDULED: <2012-03-21 Wed 09:30>
 
 * SM
 ** TODO SM Higgs mass
@@ -22,23 +25,24 @@
 ** TODO mention SUSY higgs searches
 * Experiment
 ** TODO CMS: computing
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-22 Thu>
 ** TODO CMS: Refer to figure in strip tracker + add figure
 * Object Reconstruction
 ** TODO 4.2.2p2: Clarify electron reconstruction
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-21 Wed 15:00>
 ** TODO electron id table should have inequality signs probably
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-21 Wed 11:00>
 ** TODO check conversion rejection is sz with alex
 ** TODO 4.5p2 few hundred GeV clarify
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-21 Wed 14:00>
 ** TODO certain requirements...
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-22 Thu 11:00>
 ** TODO 4.5.1p2: Clarify reconstructed again...
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-22 Thu>
 ** TODO PF diagram
+   SCHEDULED: <2012-03-22 Thu>
 ** TODO 4.5.4p-1: jet clustering todo
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-22 Thu>
 * Wpol
 ** TODO CMSSW version
 ** TODO Mention equivalence theorem in wpol section
@@ -48,7 +52,7 @@
 ** TODO Ensure fitting section is accurate
 ** TODO QCD penalty term
 ** TODO description of the 3-charge requirement in wpol and reco chapters
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-21 Wed 10:00>
 ** TODO Wpol: data/mc plots and explain the normalisation of QCD
    CLOSED: [2011-12-07 Wed 20:52]
    - State "DONE"       from "TODO"       [2011-12-07 Wed 20:52]
@@ -63,128 +67,122 @@
 *** TODO Bold the Z+jets etc in titles
 ** Alex Wpol
 *** TODO 6.1: W+jets jargon
+    SCHEDULED: <2012-03-22 Thu>
 *** TODO 6.1: clarify NLO
+    SCHEDULED: <2012-03-22 Thu>
 *** TODO 6.1: clarify "dominant background"
+    SCHEDULED: <2012-03-22 Thu>
 *** TODO 6.2.2: Correlation of costheta*: Define MW
+    SCHEDULED: <2012-03-22 Thu 09:00>
 *** TODO Define gamma, beta (refer to appendix)
+    SCHEDULED: <2012-03-22 Thu 09:30>
 *** TODO define EW
+    SCHEDULED: <2012-03-22 Thu 09:00>
 *** TODO confirm equation for costheta* is correct
+    SCHEDULED: <2012-03-22 Thu 09:30>
 *** TODO 6.2.3: ensure YW defined
+    SCHEDULED: <2012-03-22 Thu 09:00>
 *** TODO More explanation needed in PTW and YW dependence
+    SCHEDULED: <2012-03-22 Thu>
 *** TODO Table 6.1: Errors? explain why etc?
+    SCHEDULED: <2012-03-22 Thu 10:30>
 *** TODO 6.3.7: Values for H/E etc in the trigger
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO Table 6.3:C++ style ==
-*** TODO MT -> T roman style
+    SCHEDULED: <2012-03-22 Thu 10:00>
 *** TODO Table 6.4 and 6.3 should be more consistent
+    SCHEDULED: <2012-03-22 Thu>
 *** TODO 6.5: cross-sections -> cross-section calculations and reference
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO Reverse statement in last paragraph
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
+    SCHEDULED: <2012-03-22 Thu 10:30>
 *** TODO cut flow: cut applied in the muon channel - clarify and show
 *** TODO Figure 6.5: Tidy up
 *** TODO 6.6.4: Mention that its all done in MC
+    SCHEDULED: <2012-03-21 Wed 10:30>
 *** TODO JES: 5% from where? - ref
+    SCHEDULED: <2012-03-22 Thu>
 *** TODO ETmiss syst: Make clear this is an overestimate
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO Ensure PTWRECO, GEN etc. are defined
+    SCHEDULED: <2012-03-22 Thu 09:00>
 *** TODO ETmiss resolution: 10% where is this from?
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO lep mom scale: reference invariant modes
 *** TODO Change the lepton scale bit to I did A. B would be an improvment
+    SCHEDULED: <2012-03-22 Thu 11:00>
 *** TODO More explanation on transparency correction figures
+    SCHEDULED: <2012-03-21 Wed 11:00>
 *** TODO PDF uncertainties - average fluctuation why?
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO Why 25% for Z and 50 for ttbar
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO table 6.6: extra horizontal line
+    SCHEDULED: <2012-03-21 Wed 09:30>
 *** TODO Table 6.8: extra horizontal lines
+    SCHEDULED: <2012-03-21 Wed 09:30>
 *** TODO Discuss these tables more
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO Figure 6.9: preliminary
+    SCHEDULED: <2012-03-22 Thu>
 *** TODO Conclusions: comment on goodness of fit
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO agreement between mu and e
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO relative precision
+    SCHEDULED: <2012-03-23 Fri>
 ** Alex SUSY search
-*** FINISHED 7.1: provides -> provide
-    CLOSED: [2012-03-20 Tue 19:44]
-*** TODO 7.2: asSUSY
-*** TODO single lepton -> single-lepton
-*** TODO Rewriting. Which equation is this?
-*** DONE sideband -> control region
-    CLOSED: [2012-03-20 Tue 19:53]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:53]
-*** TODO Ref for CMSSM
-*** DONE 7.4.2: thoseused
-    CLOSED: [2012-03-20 Tue 19:56]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
-*** DONE adjustements
-    CLOSED: [2012-03-20 Tue 19:56]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
-*** TODO different analysis requirements...
-*** TODO Explain why not using all PF objects
-*** DONE 7.5: supressing
-    CLOSED: [2012-03-20 Tue 19:56]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
-*** DONE analysis -> search
-    CLOSED: [2012-03-20 Tue 19:57]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:57]
-*** DONE cutflow
-    CLOSED: [2012-03-20 Tue 19:58]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:58]
-*** 7.6: Rearrange sentence
-*** DONE 7.6: "cross-triggers"
-    CLOSED: [2012-03-20 Tue 20:00]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:00]
-*** DONE througout
-    CLOSED: [2012-03-20 Tue 20:02]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:02]
-*** DONE delete "exact"
-    CLOSED: [2012-03-20 Tue 20:05]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:05]
-*** DONE cut was used
-    CLOSED: [2012-03-20 Tue 20:06]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:06]
-*** TODO statistics
-*** DONE 7.7: the jet multiplicity cut
-    CLOSED: [2012-03-20 Tue 20:10]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:10]
-*** DONE that new physics will
-    CLOSED: [2012-03-20 Tue 20:10]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:10]
-*** TODO Shown are the yields per subprocess
-*** DONE observed
-    CLOSED: [2012-03-20 Tue 20:22]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
-*** TODO SUSY triggers -> explain
-*** DONE The data is seen -> are seen
-    CLOSED: [2012-03-20 Tue 20:22]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
-*** TODO inverting - it isn't really
-*** DONE supressing
-    CLOSED: [2012-03-20 Tue 20:22]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
-*** DONE an ETmiss
-    CLOSED: [2012-03-20 Tue 20:22]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
-*** TODO explain sigma(D0) > 3
+*** TODO 7.2: single lepton -> single-lepton
+*** TODO 7.2: Rewriting. Which equation is this?
+    SCHEDULED: <2012-03-21 Wed 10:30>
+*** TODO 7.3: Ref for CMSSM
+*** TODO 7.4.2: different analysis requirements...
+    SCHEDULED: <2012-03-21 Wed 14:00>
+*** TODO 7.4.4: Explain why not using all PF objects
+    SCHEDULED: <2012-03-23 Fri>
+*** TODO 7.6: Rearrange sentence
+    SCHEDULED: <2012-03-21 Wed 11:00>
+*** TODO 7.6: statistics
+    SCHEDULED: <2012-03-21 Wed 11:30>
+*** TODO 7.7: Shown are the yields per subprocess
+    SCHEDULED: <2012-03-21 Wed 11:30>
+*** TODO Table 7.4: SUSY triggers -> explain
+    SCHEDULED: <2012-03-23 Fri>
+*** TODO 7.8.1: inverting - it isn't really
+    SCHEDULED: <2012-03-21 Wed 10:00>
+*** TODO 7.8.1: explain sigma(D0) > 3
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO 7.8.2: statistics are hurt
-*** DONE QCD template was affected
-    CLOSED: [2012-03-20 Tue 20:33]
-    - State "DONE"       from "TODO"       [2012-03-20 Tue 20:33]
+    SCHEDULED: <2012-03-21 Wed 11:30>
 *** TODO Figure 7.4: separate
+    SCHEDULED: <2012-03-21 Wed 09:00>
 *** TODO 7.9.1: Poisson uncertainty
+    SCHEDULED: <2012-03-22 Thu 10:00>
 *** TODO 7.9.2: limited statistics of simulated events
 *** TODO rediced
+    SCHEDULED: <2012-03-21 Wed 11:30>
 *** TODO Hadronic recoil resolution: overestimate
+    SCHEDULED: <2012-03-22 Thu>
 *** TODO Explain 30% and 50% figures for W/ttbar
+    SCHEDULED: <2012-03-23 Fri>
 *** TODO Muon momentum scale: reference and explain more
 *** TODO PDFs: ref them & explain a bit better that this is on top of what was seen before
 *** TODO Figure 7.5: Improve
 *** TODO Trigger efficiency bit -> make briefer
+    SCHEDULED: <2012-03-21 Wed 14:30>
 *** TODO Table 7.6 and 7.7 should be clarified
+    SCHEDULED: <2012-03-23 Fri>
 
 
 * Interpretation
 ** TODO Redo SMS limits with increased PDF uncertainty (20%?) since there are none in currently!!
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-21 Wed 15:00>
    Also ensure this is properly described throughout text
    LS/LP comparison plot should make it clear this is a different result
 ** TODO ISR
-   SCHEDULED: <2012-03-20 Tue>
+   SCHEDULED: <2012-03-21 Wed 14:00>
    Explain how its been cut off, why and check with Alex
 ** TODO SMS ensure this section makes sense and is correct
 
@@ -698,3 +696,60 @@ Mostly done!
 ** DONE Smallcaps for generator names
    CLOSED: [2012-03-20 Tue 19:42]
    - State "DONE"       from "TODO"       [2012-03-20 Tue 19:42]
+** DONE 7.1: provides -> provide
+   CLOSED: [2012-03-20 Tue 19:44]
+   - State "DONE"       from "FINISHED"   [2012-03-20 Tue 20:46]
+** DONE 7.2: asSUSY
+   CLOSED: [2012-03-20 Tue 20:46]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:46]
+** DONE 7.4.2: thoseused
+   CLOSED: [2012-03-20 Tue 19:56]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
+** DONE adjustements
+   CLOSED: [2012-03-20 Tue 19:56]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
+** DONE 7.5: supressing
+   CLOSED: [2012-03-20 Tue 19:56]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 19:56]
+** DONE analysis -> search
+   CLOSED: [2012-03-20 Tue 19:57]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 19:57]
+** DONE cutflow
+   CLOSED: [2012-03-20 Tue 19:58]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 19:58]
+** DONE 7.6: "cross-triggers"
+   CLOSED: [2012-03-20 Tue 20:00]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:00]
+** DONE througout
+   CLOSED: [2012-03-20 Tue 20:02]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:02]
+** DONE delete "exact"
+   CLOSED: [2012-03-20 Tue 20:05]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:05]
+** DONE cut was used
+   CLOSED: [2012-03-20 Tue 20:06]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:06]
+** DONE 7.7: the jet multiplicity cut
+   CLOSED: [2012-03-20 Tue 20:10]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:10]
+** DONE that new physics will
+   CLOSED: [2012-03-20 Tue 20:10]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:10]
+** DONE observed
+   CLOSED: [2012-03-20 Tue 20:22]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
+** DONE The data is seen -> are seen
+   CLOSED: [2012-03-20 Tue 20:22]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
+** DONE supressing
+   CLOSED: [2012-03-20 Tue 20:22]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
+** DONE an ETmiss
+   CLOSED: [2012-03-20 Tue 20:22]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:22]
+** DONE QCD template was affected
+   CLOSED: [2012-03-20 Tue 20:33]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 20:33]
+** DONE sideband -> control region
+   CLOSED: [2012-03-20 Tue 19:53]
+   - State "DONE"       from "TODO"       [2012-03-20 Tue 19:53]
