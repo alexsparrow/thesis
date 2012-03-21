@@ -388,10 +388,18 @@ point. Electrons passing these criteria will be referred to as
 \textbf{Tight}. For the purposes of vetoing dilepton events, the 95\% efficiency
 cuts were used. These will be referred to as \textbf{Loose} electrons.
 
-An additional requirement placed on the electron is that three distinct
-measurements of the charge agree. This ensures that the charge misidentification
-rate is suitably low for any resulting systematic uncertainty to be neglected
-(see Section~\ref{sec:wpol_syst_charge_misid}).
+In addition to the requirements of Section~\ref{sec:reco_electron_id}, three independent
+measurements of the charge are required to agree. These are measured as follows~\cite{wcharge_asymm2}:
+\begin{itemize}
+\item from the direction of curvature of the \ac{GSF} track;
+\item from the track trajectory reconstructed using a Kalman filter;
+\item from the azimuthal angle between the vector from the nominal interaction
+  point to the \ac{ECAL} cluster and the vector joining the interaction point to
+  the innermost hit of the \ac{GSF} track.
+\end{itemize}
+This requirement ensures that the charge misidentification rate is suitably low
+for any resulting systematic uncertainty to be neglected (see
+Section~\ref{sec:wpol_syst_charge_misid}).
 % TODO more detail on the choice of the 70\% working point. Perhaps should be
 % added later on.
 
@@ -821,7 +829,7 @@ expected that they will share similar kinematic properties.
 
 A variable suitable for inversion in this procedure must satisfy two
 criteria. Firstly, it must provide separation power between the \ac{QCD}
-background we wish to model and the other electroweak signal and background
+background that we wish to model and the other electroweak signal and background
 events. Secondly, the \LP shape must be similar between the selected and
 anti-selected regions. Put another way, the inverted variable must be
 uncorrelated with \LP. An additional requirement is that the anti-selected
@@ -829,12 +837,12 @@ region (which may be the result of several inverted variables) contain adequate
 statistics for construction of a shape template.
 
 As the analysis was developed, a variety of anti-selection regions were tested
-in simulation. One practical problem is that adequate statistics for these tests
-could only be obtained by using the enriched \ac{QCD} sample. Since this sample
-has an implicit cut on the electron isolation, it was not possible to study the
-inversion of this variable. Many combinations of the electron identification
-variables were tried. Many proved to be correlated with \LP via either the
-leptonic or missing energy component.
+using Monte Carlo samples. One practical problem is that adequate statistics for
+these tests could only be obtained by using the enriched \ac{QCD} sample. Since
+this sample has an implicit cut on the electron isolation, it was not possible
+to study the inversion of this variable. Many combinations of the electron
+identification variables were tried. Many proved to be correlated with \LP via
+either the leptonic or missing energy component.
 
 In the end, the best compromise was achieved by inverting the track-supercluster
 matching parameters, \deltaetain and \deltaphiin, on the leading electron. A
@@ -1022,18 +1030,18 @@ categories corresponding to cases where a \PZ is reconstructed from electrons in
 $\eta$ bins $i$ and $j$.  For each category a mass template is derived from
 simulation. A simultaneous fit is then performed over the 21 categories, where
 each template is scaled by the factor $1/\sqrt{s_is_j}$ and smeared by a
-resolution term $\sqrt{\sigma_i^2 + \sigma_j^2}$. The end result of this is a
-set of 6 scale terms and 6 resolution terms. These are plotted in
+resolution term $\sqrt{\sigma_i^2 + \sigma_j^2}$. This results in a set of 6
+scale terms, $s_i$ and 6 resolution terms, $\sigma_i$. These are shown in
 Figure~\ref{fig:wpol_ecal_transp_corr}.  The scale terms should be applied to
 data, whilst the resolution should be applied in simulation.
 
 \begin{figure}
   \centering
-  \subfloat[Scale]{\label{fig:wpol_ecal_transp_scale}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_scale}}\quad
-  \subfloat[Resolution]{\label{fig:wpol_ecal_transp_sigma}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_sigma}}\quad
-\caption[]{\ac{ECAL} transparency correction factors as a function of
-  pseudorapidity for \subref{fig:wpol_ecal_transp_scale} scale and
-  \subref{fig:wpol_ecal_transp_sigma} resolution~\cite{w_charge_asymmetry_an}}
+  \subfloat[Scale corrections, $s_i$]{\label{fig:wpol_ecal_transp_scale}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_scale}}\quad
+  \subfloat[Resolution corrections, $\sigma_i$]{\label{fig:wpol_ecal_transp_sigma}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_sigma}}\quad
+  \caption{\ac{ECAL} transparency correction factors as a function of
+    pseudorapidity. These are determined from a fit to the \PZ mass distribution
+    as described in the text~\cite{w_charge_asymmetry_an}.}
 \label{fig:wpol_ecal_transp_corr}
 \end{figure}
 
@@ -1121,16 +1129,16 @@ found to have a very small dependence on the values of the other \Ai.
 
 \subsubsection{\ac{PDF} Uncertainties}
 This analysis used a \Wjets Monte Carlo sample, generated using the \cteqsixlone
-\ac{PDF} set. This is a set of 41 \ac{PDF} distributions. All results in this
-analysis are calculated using the best fit value of this set. To determine the
-uncertainty associated with this assumption, each alternative \ac{PDF} from the
-set is selected and modelled in the Monte Carlo via a reweighting
-procedure. From this, 40 separate \LP distributions are derived representing
-pseudodata assuming an alternative \ac{PDF} from the set. Each distribution is
-then fit using the standard set of templates. The associated uncertainty is then
-taken to be the average fluctuation from the nominal fit value across the 40 set
-of alternate \acp{PDF}. This is found to be negligible for all polarisation
-parameters ($< 0.01\%$).
+\ac{PDF} set~\cite{cteq6l1}. This is a set of 41 \ac{PDF} distributions. All
+results in this analysis are calculated using the best fit value of this set. To
+determine the uncertainty associated with this assumption, each alternative
+\ac{PDF} from the set is selected and modelled in the Monte Carlo via a
+reweighting procedure. From this, 40 separate \LP distributions are derived
+representing pseudodata assuming an alternative \ac{PDF} from the set. Each
+distribution is then fit using the standard set of templates. The associated
+uncertainty is then taken to be the average fluctuation from the nominal fit
+value across the 40 set of alternate \acp{PDF}. This is found to be negligible
+for all polarisation parameters ($< 0.01\%$).
 
 \subsubsection{\Zjets and \ttbar Backgrounds}
 For the purposes of the fit, the cross-sections of the electroweak backgrounds

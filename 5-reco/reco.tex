@@ -129,7 +129,7 @@ well defined object than muons. There is therefore a much larger space to
 trade-off between signal efficiency and purity. Whilst more complex selection
 procedures are available (e.g. a multivariate approach), a simple cut-based
 selection was chosen for the \PW cross-section
-measurement~\cite{cms_pas_ewk_10_002} and has been used in this work. The
+measurement~\cite{cms_pas_ewk_10_002, simple_eleid_web} and has been used in this work. The
 variables have been chosen for their background rejection capabilities but also
 for robustness during early the data-taking period. Cut values have been chosen
 for a number of working points, defined by their efficiency with respect to a
@@ -151,7 +151,14 @@ point shown in Table~\ref{tbl:reco_electronid}
   in the \ac{ECAL}, a zero-suppression cut is applied (\unit{0.08}{\GeV} in
   \ac{EB} and \unit{0.1}{\GeV} in \ac{EE}). The cone is centred on the track
   direction at the vertex for the tracker isolation, and the supercluster for
-  the calorimeter quantities.
+  the calorimeter quantities. The combined isolation, \CombIso, is then defined
+  as
+  \begin{equation*}
+    \CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
+    E_T^{\textrm{em}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Pte}
+   \end{equation*}
+   where the sums run over the aforementioned tracks, \ac{ECAL} energy deposits
+   and \ac{HCAL} energy deposits.
 \item \HoverE is the ratio of the energy deposited in the \ac{HCAL} behind the
   electron seed to that in the \ac{ECAL}. This might also be called the
   \ac{HCAL} leakage.

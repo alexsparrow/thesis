@@ -31,7 +31,7 @@ gives an \LP distribution confined to the range $[0,1]$. In contrast, for
 \ac{SUSY} events the \MET component is larger than the lepton momentum and thus
 the \PtWv is likely to point in the direction of the \METv. Since the direction
 of the charged lepton momentum and \METv will be mostly uncorrelated, \LP is
-likely to tend to small values. Rewriting,
+likely to tend to small values. Rewriting Equation~\ref{eqn:lp_def},
 \begin{equation}
 \LP = \frac{\Ptl}{\PtW}\cos\left(\PtWv, \Ptlv\right)
 \end{equation}
@@ -225,7 +225,7 @@ simulation are shown in Tables~\ref{tbl:susy_mcexp_signal} and
 
 \section{Triggers and Datasets}
 Due to the construction of \STlep, events may be selected with moderate \MET
-(and a high \Pt lepton) or large \MET (and a modertate \Pt lepton). This
+(and a large lepton \Pt) or large \MET (and a moderate lepton \Pt). This
 necessitates a different trigger strategy to that used in other leptonic
 \ac{SUSY} searches at \ac{CMS} which typically only select high \MET events.
 
@@ -249,8 +249,8 @@ pile-up conditions, with a reweighting procedure used throughout to reflect the
 vertex multiplicity distribution in the data.
 
 In addition to the standard \Wjets sample, an enriched sample with a
-generator-level $\HT > \unit{300}{\GeV}$ cut was used. This increases the
-available, minimising the statistical error on \RCS.
+generator-level $\HT > \unit{300}{\GeV}$ cut was used. The larger event sample
+reduces the statistical error on \RCS.
 
 \section{Control Region}
 In order to test that the simulation of electroweak background processes can be
@@ -262,9 +262,9 @@ with the observed signal yield. Furthermore, the level of agreement between data
 and simulation is also important in establishing the method.
 
 A summary of the yields in the \LPcontrol and \LPsignal regions in the $<3$~jet
-control sample is given in Table~\ref{tbl:susy_control_yields}. Shown are the
-yields per subprocess from simulation - used to calculate the factor \RCS, the
-yields in data and the resulting background prediction. Comparing the background
+control sample is given in Table~\ref{tbl:susy_control_yields}. The yields for
+each \ac{SM} subprocess are shown, used to calculate the factor \RCS, the yields
+in data and the resulting background prediction. Comparing the background
 prediction, it is seen to agree within errors with the observed number of events
 in the signal region. The uncertainties stem from the limited data statistics of
 the control region and the limited Monte Carlo statistics used in the
@@ -308,17 +308,17 @@ adaptation.
 
 \subsection{Muons}
 A conservative upper limit on the \ac{QCD} background in the muon channel is
-obtained from a data-driven control sample by inverting the isolation cut, $0.2
-< \CombIso < 0.5$. In order to further enrich \ac{QCD} events whilst suppressing
-electroweak backgrounds in this sample, an $\MET < \unit{20}{\GeV}$ cut is also
-applied. Even with these cuts, significant electroweak contamination
-remains. The significance of the vertex impact paramter is used as an additional
-handle by requiring $\sigma(D_0) > 3$. The ratio $N(\CombIso < 0.1/N(0.2 <
-\CombIso < 0.5)$ in this sample is then used to derive an upper limit on the
-\ac{QCD} contribution. This limit is conservative given that electroweak
-background are present in the ratio. It is seen in Table~TODO that the \ac{QCD}
-background is negligible in all \STlep bins and is ignored in the subsequent
-analysis.
+obtained from a data-driven control sample by loosening the isolation
+requirement to $0.2 < \CombIso < 0.5$. In order to further enrich \ac{QCD}
+events whilst suppressing electroweak backgrounds in this sample, an $\MET <
+\unit{20}{\GeV}$ cut is also applied. Even with these cuts, significant
+electroweak contamination remains. The significance of the vertex impact
+paramter is used as an additional handle by requiring $\sigma(D_0) > 3$. The
+ratio $N(\CombIso < 0.1/N(0.2 < \CombIso < 0.5)$ in this sample is then used to
+derive an upper limit on the \ac{QCD} contribution. This limit is conservative
+given that electroweak background are present in the ratio. It is seen in
+Table~TODO that the \ac{QCD} background is negligible in all \STlep bins and is
+ignored in the subsequent analysis.
 
 \subsection{Electrons}
 \label{sec:susy_electron_bgpredict}
@@ -328,8 +328,8 @@ variables \deltaetain and \deltaphiin are inverted. In addition, to ensure
 adequate statistics the \D0 and \Dz cuts are removed and the isolation cut is
 relaxed. The \D0 and \Dz cuts were not present in the \PW polarisation
 selection. Although the present analysis benefits from a dataset $\sim 30$ times
-larger than that used for the previous measurement, statistics are hurt by the
-generally tighter kinematic cuts.
+larger than that used for the previous measurement, this increase is partly
+offset by generally tighter kinematic cuts.
 
 In addition, it was observed during studies for the \PW polarisation measurement
 that the shape of the QCD template was affected by a cut on \PtW. Thus it should
@@ -367,17 +367,21 @@ simulation is performed using only the electroweak background components. The
 additional uncertainties introduced by this procedure will be covered in
 Section~\ref{sec:susy_systematics}.
 
+
 \begin{figure}
 \centering
-\subfloat[Comparison of the \LP distribution between selected and anti-selected electron samples]{
-  \label{fig:susy_elqcd_selasel}\includegraphics[width=0.5\textwidth]{fig/SelectedVsAntiSelected}}\quad\\
+\includegraphics[width=0.7\textwidth]{fig/SelectedVsAntiSelected}
+\caption{A comparison of the \LP shape between simulated \ac{QCD} events in the
+  selected and anti-selected samples.}
+\label{fig:susy_elqcd_selasel}
+\end{figure}
+
+
+\begin{figure}
+\centering
 \subfloat[Fit results $150 < \STlep < 250$]{\label{fig:susy_elqcd_fitresult150}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_150}}\quad
 \subfloat[Fit results $250 < \STlep < 350$]{\label{fig:susy_elqcd_fitresult250}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_250}}
-\caption[]{Figure~\subref{fig:susy_elqcd_selasel} shows a comparison of the \LP
-  shape between simulated \ac{QCD} events in the selected and anti-selected
-  samples. Figures~\subref{fig:susy_elqcd_fitresult150} and
-  \subref{fig:susy_elqcd_fitresult250} show the results of the data-driven fits
-  in two \STlep bins.}
+\caption{Results of fits to the \ac{QCD} background shape in two \STlep bins.}
 \label{fig:susy_elqcd}
 \end{figure}
 
@@ -427,10 +431,10 @@ fitting procedure. The electroweak templates used in the fit also suffer from
 limited statistics, thus leading to an additional source of uncertainty on
 \NControl. This is accounted for in a similar manner to the statistical
 uncertainty of the \ac{QCD} template in the \PW polarisation analysis (see
-Section~\ref{sec:wpol_syst_ele_bgest}. The templates are rediced 200 times
-according to the statistical error per bin. Each rediced template is then used
-to repeat the fit procedure. The variance of this ensemble of fits is then taken
-to be the statistical uncertainty. For the systematics quoted in
+Section~\ref{sec:wpol_syst_ele_bgest}. The templates are flcutuated randomly 200
+times according to the statistical error per bin. Each rediced template is then
+used to repeat the fit procedure. The variance of this ensemble of fits is then
+taken to be the statistical uncertainty. For the systematics quoted in
 Table~\ref{tbl:susy_syst_muons}, this is propagated into \RCS. For the limit, as
 will be seen, it is taken as an uncertainty on \NControl.
 
@@ -506,9 +510,10 @@ is then propagated into \RCS.
 \subsubsection{\acl{PDF} Uncertainties}
 The uncertainty stemming from the choice of \acp{PDF} was handled slightly
 differently to the \PW polarisation case. The Monte Carlo was reweighted to the
-central value of both CTEQ66 and MSTW2008NLO68CL \ac{PDF} sets and the resulting
-change in \RCS was found to be 1\% for $\STlep < \unit{450}{\GeV}$ and 5\% for
-$\STlep > \unit{450}{\GeV}$. This systematic uncertainty is therefore seen to be
+central value of both \cteqsixtysix~\cite{cteq66} and \mstwnlo~\cite{mstw1,
+  mstw2, mstw3} \ac{PDF} sets and the resulting change in \RCS was found to be
+1\% for $\STlep < \unit{450}{\GeV}$ and 5\% for $\STlep >
+\unit{450}{\GeV}$. This systematic uncertainty is therefore seen to be
 negligible.
 
 \subsubsection{Trigger Efficiency}

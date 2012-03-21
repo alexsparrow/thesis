@@ -8,12 +8,16 @@
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Say that CMSSM is mSUGRA inspired
 ** TODO Monte carlo, MC
-** TODO references for PDF sets
-   SCHEDULED: <2012-03-21 Wed 09:00>
+** DONE references for PDF sets
+   CLOSED: [2012-03-21 Wed 09:41] SCHEDULED: <2012-03-21 Wed 09:00>
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 09:41]
 ** TODO MT -> T roman style (generally transverse stuff)
-** TODO combined isolation definition
-** TODO Reference RooStats in interpretation chapter
-   SCHEDULED: <2012-03-21 Wed 09:30>
+** DONE combined isolation definition
+   CLOSED: [2012-03-21 Wed 11:33]
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 11:33]
+** DONE Reference RooStats in interpretation chapter
+   CLOSED: [2012-03-21 Wed 09:51] SCHEDULED: <2012-03-21 Wed 09:30>
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 09:51]
 
 * SM
 ** TODO SM Higgs mass
@@ -30,8 +34,9 @@
 * Object Reconstruction
 ** TODO 4.2.2p2: Clarify electron reconstruction
    SCHEDULED: <2012-03-21 Wed 15:00>
-** TODO electron id table should have inequality signs probably
-   SCHEDULED: <2012-03-21 Wed 11:00>
+** DONE electron id table should have inequality signs probably
+   CLOSED: [2012-03-21 Wed 11:06] SCHEDULED: <2012-03-21 Wed 11:00>
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 11:06]
 ** TODO check conversion rejection is sz with alex
 ** TODO 4.5p2 few hundred GeV clarify
    SCHEDULED: <2012-03-21 Wed 14:00>
@@ -51,8 +56,9 @@
 ** TODO Ensure that I've properly set out that we are fitting f0 and fL - fR
 ** TODO Ensure fitting section is accurate
 ** TODO QCD penalty term
-** TODO description of the 3-charge requirement in wpol and reco chapters
-   SCHEDULED: <2012-03-21 Wed 10:00>
+** DONE description of the 3-charge requirement in wpol and reco chapters
+   CLOSED: [2012-03-21 Wed 10:04] SCHEDULED: <2012-03-21 Wed 10:00>
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 10:04]
 ** TODO Wpol: data/mc plots and explain the normalisation of QCD
    CLOSED: [2011-12-07 Wed 20:52]
    - State "DONE"       from "TODO"       [2011-12-07 Wed 20:52]
@@ -100,8 +106,9 @@
     SCHEDULED: <2012-03-22 Thu 10:30>
 *** TODO cut flow: cut applied in the muon channel - clarify and show
 *** TODO Figure 6.5: Tidy up
-*** TODO 6.6.4: Mention that its all done in MC
-    SCHEDULED: <2012-03-21 Wed 10:30>
+*** DONE 6.6.4: Mention that its all done in MC
+    CLOSED: [2012-03-21 Wed 10:24] SCHEDULED: <2012-03-21 Wed 10:30>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 10:24]
 *** TODO JES: 5% from where? - ref
     SCHEDULED: <2012-03-22 Thu>
 *** TODO ETmiss syst: Make clear this is an overestimate
@@ -119,10 +126,12 @@
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Why 25% for Z and 50 for ttbar
     SCHEDULED: <2012-03-23 Fri>
-*** TODO table 6.6: extra horizontal line
-    SCHEDULED: <2012-03-21 Wed 09:30>
-*** TODO Table 6.8: extra horizontal lines
-    SCHEDULED: <2012-03-21 Wed 09:30>
+*** DONE table 6.6: extra horizontal line
+    CLOSED: [2012-03-21 Wed 09:53] SCHEDULED: <2012-03-21 Wed 09:30>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 09:53]
+*** DONE Table 6.8: extra horizontal lines
+    CLOSED: [2012-03-21 Wed 09:53] SCHEDULED: <2012-03-21 Wed 09:30>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 09:53]
 *** TODO Discuss these tables more
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Figure 6.9: preliminary
@@ -135,34 +144,42 @@
     SCHEDULED: <2012-03-23 Fri>
 ** Alex SUSY search
 *** TODO 7.2: single lepton -> single-lepton
-*** TODO 7.2: Rewriting. Which equation is this?
-    SCHEDULED: <2012-03-21 Wed 10:30>
+*** DONE 7.2: Rewriting. Which equation is this?
+    CLOSED: [2012-03-21 Wed 10:22] SCHEDULED: <2012-03-21 Wed 10:30>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 10:22]
 *** TODO 7.3: Ref for CMSSM
 *** TODO 7.4.2: different analysis requirements...
     SCHEDULED: <2012-03-21 Wed 14:00>
 *** TODO 7.4.4: Explain why not using all PF objects
     SCHEDULED: <2012-03-23 Fri>
-*** TODO 7.6: Rearrange sentence
-    SCHEDULED: <2012-03-21 Wed 11:00>
-*** TODO 7.6: statistics
-    SCHEDULED: <2012-03-21 Wed 11:30>
-*** TODO 7.7: Shown are the yields per subprocess
-    SCHEDULED: <2012-03-21 Wed 11:30>
+*** DONE 7.6: Rearrange sentence and modertate
+    CLOSED: [2012-03-21 Wed 10:09] SCHEDULED: <2012-03-21 Wed 11:00>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 10:09]
+*** DONE 7.6: statistics
+    CLOSED: [2012-03-21 Wed 10:34] SCHEDULED: <2012-03-21 Wed 11:30>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 10:34]
+*** DONE 7.7: Shown are the yields per subprocess
+    CLOSED: [2012-03-21 Wed 10:08] SCHEDULED: <2012-03-21 Wed 11:30>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 10:08]
 *** TODO Table 7.4: SUSY triggers -> explain
     SCHEDULED: <2012-03-23 Fri>
-*** TODO 7.8.1: inverting - it isn't really
-    SCHEDULED: <2012-03-21 Wed 10:00>
+*** DONE 7.8.1: inverting - it isn't really
+    CLOSED: [2012-03-21 Wed 10:06] SCHEDULED: <2012-03-21 Wed 10:00>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 10:06]
 *** TODO 7.8.1: explain sigma(D0) > 3
     SCHEDULED: <2012-03-23 Fri>
-*** TODO 7.8.2: statistics are hurt
-    SCHEDULED: <2012-03-21 Wed 11:30>
-*** TODO Figure 7.4: separate
-    SCHEDULED: <2012-03-21 Wed 09:00>
+*** DONE 7.8.2: statistics are hurt
+    CLOSED: [2012-03-21 Wed 10:38] SCHEDULED: <2012-03-21 Wed 11:30>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 10:38]
+*** DONE Figure 7.4: separate
+    CLOSED: [2012-03-21 Wed 09:45] SCHEDULED: <2012-03-21 Wed 09:00>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 09:45]
 *** TODO 7.9.1: Poisson uncertainty
     SCHEDULED: <2012-03-22 Thu 10:00>
 *** TODO 7.9.2: limited statistics of simulated events
-*** TODO rediced
-    SCHEDULED: <2012-03-21 Wed 11:30>
+*** DONE rediced
+    CLOSED: [2012-03-21 Wed 10:39] SCHEDULED: <2012-03-21 Wed 11:30>
+    - State "DONE"       from "TODO"       [2012-03-21 Wed 10:39]
 *** TODO Hadronic recoil resolution: overestimate
     SCHEDULED: <2012-03-22 Thu>
 *** TODO Explain 30% and 50% figures for W/ttbar
