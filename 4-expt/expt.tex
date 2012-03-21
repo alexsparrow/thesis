@@ -334,21 +334,21 @@ high rates of the \ac{LHC} environment.
 
 \subsection{Data Acquisition and Trigger System}
 \label{sec:trigger}
-The high luminosity at the \ac{LHC} brings with it a large particle flux. Along
-with the requirements of precise position and momentum measurements, this
-motivated the fine granularity present in each \ac{CMS} sub-detector. The
+The high luminosity of the \ac{LHC} beam brings with it a very large particle
+flux. Along with the requirements of precise position and momentum measurement,
+this motivated the fine granularity of the various \ac{CMS} subdetectors. The
 natural consequence of this is an extremely large number of readout channels,
 approximately 55 million across the whole detector. To make matters worse, it is
 planned that the \ac{LHC} will eventually reach a bunch spacing of only
 \unit{25}{\nano\second}. This places a tight latency requirement on the \ac{DAQ}
 system.
 
-Tightly coupled to the \ac{DAQ} is the trigger system. The huge number of
-readout channels in \ac{CMS} is not only a challenge in terms of the bandwidth
-of the \ac{DAQ} but also poses serious difficulties relating to long-term
-storage requirements. A digitised, zero-suppressed event dump from \ac{CMS} is
-approximately \unit{2}{\mega\byte} in size. With an event rate of up to
-\unit{40}{\mega\hertz}, this would potentially require a storage rate of
+Tightly coupled to the \ac{DAQ} is the trigger system~\cite{tridas}. The huge
+number of readout channels in \ac{CMS} is not only a challenge in terms of the
+bandwidth of the \ac{DAQ} but also poses serious difficulties relating to
+long-term storage requirements. A digitised, zero-suppressed event dump from
+\ac{CMS} is approximately \unit{2}{\mega\byte} in size. With an event rate of up
+to \unit{40}{\mega\hertz}, this would potentially require a storage rate of
 \unit{80}{\tera\byte\per\second}. Even with the rapid improvement of disk
 storage technology over the last few decades, such storage capacities are
 clearly infeasible both in terms of capacity and \ac{IO} requirements. For these
@@ -430,3 +430,25 @@ isolation and minimum ionising particle information from the \ac{GCT} for each
 calorimeter region. The muons received from each subdetector are matched and
 sorted by transverse momentum and quality. The four highest rank candidates are
 forwarded to the \ac{GT}.
+
+\subsection{Computing at \ac{CMS}}
+\label{sec:cms_computing}
+To mee the extremely large computation and storage requirements of data analysis
+at the \ac{LHC}, analysis tasks are performed using a dedicated computing
+grid~\cite{lhc_grid}. Reconstructed events are sent to the ``tier-0'' storage
+site at \ac{CERN} and additional copies are forwarded to a number of ``tier-1''
+sites around the world. ``Tier-2'' and ``Tier-3'' sites make further copies of
+data as required. User analysis jobs can then be submitted from any site and
+routed to a site where the data is available.
+
+Events recorded by the \ac{CMS} detector pass through a chain of reconstruction
+stages. At each stage, higher-level physics objects are generally built out of
+simpler ones, with a consequent reduction in the data size. Analysis users may
+choose to perform their analysis on any of these layers, depending on their
+needs. The processing and analysis tools make up the \cmssw software framework.
+
+Monte Carlo events are processed using either a detailed \geantfour
+simulation~\cite{geant_paper} or a faster, parameterised model of the response
+known as \fastsim. This simulates the response of the \ac{CMS} subdetectors to
+the generated particles, after which simulated and real data are processed
+identically.

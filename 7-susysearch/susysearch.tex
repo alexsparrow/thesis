@@ -141,9 +141,9 @@ this selection.
 \subsection{Muons}
 Muon reconstruction is described in Section~\ref{sec:reco_muons}. Global muons
 are selected with a number of additional quality requirements. These are similar
-to thos eused in the \PW polarisation analysis (see
+to those used in the \PW polarisation analysis (see
 Section~\ref{sec:wpol_muons}) with certain adjustments made to ensure
-consistency with other analyses or adapt to the different analysis requirements.
+consistency with other \ac{SUSY} analyses.
 \begin{itemize}
 \item A normalized $\chi^2 < 10$ on the global muon fit
 \item More than 10 hits in the tracker (including at least 1 pixel hit) and
@@ -416,15 +416,15 @@ described.
 \subsection{Limited Statistics in the Control Region \texorpdfstring{\LPcontrol}{\LPcontrolBM}}
 The effect of finite statistics in the control region is naturally more
 pronounced in the larger \STlep bins. For the muon channel, this is simply
-calculated as the Poisson uncertainty ($\sqrt{N}$) of the number of events in
-the control region. For electrons, this uncertainty is taken as the error on the
-fitted electroweak component of the background.
+calculated as the Poisson uncertainty on the number of events in the control
+region. For electrons, this iss taken as the uncertainty on the electroweak
+component of the background as determined by the fit.
 
 \subsection{Limited Monte Carlo Statistics}
 \label{sec:susy_syst_mcstats}
-The limited statistics of simulated events results in an uncertainty for both
-channels in the calculation of \RCS. This is calculated by simple propagation of
-errors.
+The limited number of simulated events results in a systematic uncertainty in
+the calculation of \RCS for both channels. This is calculated by simple
+propagation of errors.
 
 For the electron channel, things are once again complicated by the \ac{QCD}
 fitting procedure. The electroweak templates used in the fit also suffer from
@@ -450,11 +450,11 @@ of the two.
 
 \subsubsection{Hadronic Recoil Resolution}
 \label{sec:susy_metres_uncertainty}
-The resolution of the hadronic recoil has previously been measured
-in~\cite{cms_met_pas}. The resolution measured in data is seen to be 10\% larger
-than predicted by simulation. To account for this, the recoil is smeared by an
-additional 10\% perpendicular and parallel to its direction. The resulting shift
-in \RCS is taken as the uncertainty.
+As for the \PW polarisation measurement, the hadronic recoil resolution measured
+in data is seen to be 10\% larger than predicted by
+simulation~\cite{cms_met_paper, cms_met_pas}. To account for this, the recoil is
+smeared by an additional 10\% perpendicular and parallel to its direction. The
+resulting shift in \RCS is taken as the uncertainty.
 
 \subsubsection{\Wjets/\ttbar Cross Section}
 Te use of \RCS avoids any dependence on the absolute values of theoretical
@@ -517,14 +517,21 @@ central value of both \cteqsixtysix~\cite{cteq66} and \mstwnlo~\cite{mstw1,
 negligible.
 
 \subsubsection{Trigger Efficiency}
-Whilst the efficiencies of the trigger are found to be uncorrelated with the
-lepton \Pt, an $\eta$ dependence is observed. This variation is found to be 18\%
-in the muon channel and 5\% in the electron channel. In addition, at the plateau
-of the trigger turn-on curve, a difference of efficiency between data and
-simulation is observed: 5\% in the muon channel and $\approx 1\%$ for
-electrons. To estimate the combined effect of the $\eta$ dependence and the
-discrepancy between data and Monte Carlo, the HLT\_Mu15 trigger is applied in
-simulation. The effect on \RCS is seen to be $<1\%$ across all $\eta$ bins.
+The exact selection of triggers listed in Table~\ref{tbl:susy_triggers} was
+unavailable in the Monte Carlo samples. Small differences in the efficiency in
+the plateau of the trigger turn-on curve were observed in both channels as well
+as a dependence on the pseudorapidity of the lepton. The effect of these
+differences was evaluated by applying the \texttt{HLT\_Mu15} trigger in
+simulation. The effect on \RCS was found to be $<1\%$ across all $\eta$ bins.
+
+% Whilst the efficiencies of the trigger are found to be uncorrelated with the
+% lepton \Pt, an $\eta$ dependence is observed. This variation is found to be 18\%
+% in the muon channel and 5\% in the electron channel. In addition, at the plateau
+% of the trigger turn-on curve, a difference of efficiency between data and
+% simulation is observed: 5\% in the muon channel and $\approx 1\%$ for
+% electrons. To estimate the combined effect of the $\eta$ dependence and the
+% discrepancy between data and Monte Carlo, the HLT\_Mu15 trigger is applied in
+% simulation. The effect on \RCS is seen to be $<1\%$ across all $\eta$ bins.
 
 The relative uncertainties on \RCS for each significant systematic effect listed
 above are shown in Table~\ref{tbl:susy_syst_muons} for the muon channel and

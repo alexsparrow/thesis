@@ -388,14 +388,14 @@ author = "C.S. Aulakh and R.N. Mohapatra"
 	pages = {5692--5703}
 }
 
-@book{qcd_collider_physics,
-contentTitle = {Frontmatter},
-author = {R. K. Ellis, W. J. Stirling and B. R. Webber},
-bookTitle = {QCD and Collider Physics},
-publisher = {Cambridge University Press},
-year = {1996},
-url = {http://dx.doi.org/10.1017/CBO9780511628788}
-}
+@Comment @book{qcd_collider_physics,
+@Comment contentTitle = {Frontmatter},
+@Comment author = {R. K. Ellis, W. J. Stirling and B. R. Webber},
+@Comment bookTitle = {QCD and Collider Physics},
+@Comment publisher = {Cambridge University Press},
+@Comment year = {1996},
+@Comment url = {http://dx.doi.org/10.1017/CBO9780511628788}
+@Comment }
 
 @article{mirkes_w_1992,
 title = "Angular decay distribution of leptons from W-bosons at NLO in hadronic collisions",
@@ -767,6 +767,30 @@ booktitle = {APS Division of Nuclear Physics Meeting Abstracts},
    year = {2008}
 }
 
+@book{tridas,
+      collaboration = {CMS},
+      title        = "CMS TriDAS project: Technical Design Report; 1, the trigger
+                      systems",
+      series       = "Technical Design Report CMS",
+}
+
+@book{lhc_grid,
+      author       = "Eck, Christoph and Knobloch, J and Robertson, Leslie and
+                      Bird, I and Bos, K and Brook, N and Düllmann, D and Fisk, I
+                      and Foster, D and Gibbard, B and Grandi, C and Grey, F and
+                      Harvey, J and Heiss, A and Hemmer, F and Jarp, S and Jones,
+                      R and Kelsey, D and Lamanna, M and Marten, H and Mato-Vila,
+                      P and Ould-Saada, F and Panzer-Steindel, B and Perini, L and
+                      Schutz, Y and Schwickerath, U and Shiers, J and Wenaus, T",
+      title        = "LHC computing Grid: Technical Design Report. Version 1.06
+                      (20 Jun 2005)",
+      publisher    = "CERN",
+      address      = "Geneva",
+      series       = "Technical Design Report LCG",
+      year         = "2005",
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Reconstruction
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -822,6 +846,16 @@ booktitle = {APS Division of Nuclear Physics Meeting Abstracts},
       number = {PFT-10-002}
 }
 
+@techreport{cms_pf_pas3,
+      title        = "Commissioning of the Particle-flow Event Reconstruction
+                      with the first LHC collisions recorded in the CMS detector",
+      year = 2010,
+      number = {PFT-10-001},
+      collaboration = {CMS},
+      url = {http://cdsweb.cern.ch/record/1247373}
+}
+
+
 @article{cms_mu_reco,
   author={CMS Collaboration},
   title={Performance of CMS muon reconstruction in cosmic-ray events},
@@ -834,7 +868,7 @@ booktitle = {APS Division of Nuclear Physics Meeting Abstracts},
 }
 
 
-@article {cms_mu_reco_cosmic,
+@article{cms_mu_reco_cosmic,
    author = {Liu, Chang and Neumeister, Norbert and Amapane, Nicola and Bedoya, Cristina and Bellan, Riccardo and Biallass, Philipp and Bolognesi, Sara and Cerminara, Gianluca and Fouz Iglesias, Mary-Cruz and Giunta, Marina and Guiducci, Luigi and Hoepfner, Kerstin and Lacaprara, Stefano and Masetti, Gianni and Meneguzzo, Anna and Paolucci, Pierluigi and Puerta Pelayo, Jesus and Travaglini, Riccardo and Zanetti, Marco and Villanueva, Carlos},
    affiliation = {Purdue University Department of Physics West Lafayette IN USA},
    title = {Reconstruction of cosmic and beam-halo muons with the CMS detector},
@@ -871,8 +905,20 @@ institution = {{The CMS Collaboration}},
 number = {AN 2009-159}
 }
 
-@article {cms_ele_reco,
-   author = {Baffioni, S. and Charlot, C. and Ferri, F. and Futyan, D. and Meridiani, P. and Puljak, I. and Rovelli, C. and Salerno, R. and Sirois, Y.},
+@article{cms_ele_reco_pas,
+      title        = "Electron reconstruction and identification at sqrt(s) = 7
+                      TeV",
+      year         = "2010",
+      number = {EGM-10-004},
+      institution = {CMS},
+      collaboration = {CMS},
+      url = {http://cdsweb.cern.ch/record/1299116}
+}
+
+@article{cms_ele_reco,
+   author = {Baffioni, S. and Charlot, C. and Ferri, F. and Futyan, D. and
+                  Meridiani, P. and Puljak, I. and Rovelli, C. and Salerno,
+                  R. and Sirois, Y.},
    affiliation = {Ecole Polytechnique and IN2P3-CNRS Laboratoire Leprince-Ringuet 91128 Palaiseau Cedex France 91128 Palaiseau Cedex France},
    title = {Electron reconstruction in CMS},
    journal = {The European Physical Journal C - Particles and Fields},
@@ -885,6 +931,18 @@ number = {AN 2009-159}
    url = {http://dx.doi.org/10.1140/epjc/s10052-006-0175-5},
    note = {10.1140/epjc/s10052-006-0175-5},
    year = {2007}
+}
+
+@article{gsf,
+  author={W Adam and R Frühwirth and A Strandlie and T Todorov},
+  title={Reconstruction of electrons with the Gaussian-sum filter in the CMS tracker at the LHC},
+  journal={Journal of Physics G: Nuclear and Particle Physics},
+  volume={31},
+  number={9},
+  pages={N9},
+  url={http://stacks.iop.org/0954-3899/31/i=9/a=N01},
+  year={2005},
+  abstract={The bremsstrahlung energy loss distribution of electrons propagating in matter is highly non-Gaussian. Because the Kalman filter relies solely on Gaussian probability density functions, it is not necessarily the optimal reconstruction algorithm for electron tracks. A Gaussian-sum filter (GSF) algorithm for electron reconstruction in the CMS tracker has therefore been developed and implemented. The basic idea is to model the bremsstrahlung energy loss distribution by a Gaussian mixture rather than by a single Gaussian. It is shown that the GSF is able to improve the momentum resolution of electrons compared to the standard Kalman filter. The momentum resolution and the quality of the error estimate are studied both with a fast simulation, modelling the radiative energy loss in a simplified detector, and the full CMS tracker simulation.}
 }
 
 @techreport{lepton_isolation_an,
@@ -1095,12 +1153,32 @@ title={Preselection and sample properties for SUSY searches in the single lepton
 number={CMS AN -2011/315}
 }
 
-@article{cms_met_pas,
+@techreport{cms_met_pas,
       title        = "CMS MET Performance in Events Containing Electroweak Bosons
                       from pp Collisions at sqrt(s)=7 TeV",
       year         = "2010",
-      collaboration = {CMS}
+      collaboration = {CMS},
+      number = {JME-10-005},
+      url ={http://cdsweb.cern.ch/record/1294501}
 }
+
+@ARTICLE{cms_met_paper,
+   author = {{CMS collaboration}},
+    title = "{Missing transverse energy performance of the CMS detector}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1106.5048},
+ primaryClass = "physics.ins-det",
+     year = 2011,
+    month = sep,
+   volume = 6,
+    pages = {9001},
+      doi = {10.1088/1748-0221/6/09/P09001},
+   adsurl = {http://adsabs.harvard.edu/abs/2011JInst...6.9001C},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
 
 @ARTICLE{cteq66,
    author = {{Nadolsky}, P.~M. and {Lai}, H.-L. and {Cao}, Q.-H. and {Huston}, J. and
@@ -1306,4 +1384,15 @@ title = {RooStats web page}
       number       = {EWK-10-004 }
 
 }
+
+@article{pdg,
+  author={K Nakamura and Particle Data Group},
+  title={Review of Particle Physics},
+  journal={Journal of Physics G: Nuclear and Particle Physics},
+  volume={37},
+  number={7A},
+  pages={075021},
+  url={http://stacks.iop.org/0954-3899/37/i=7A/a=075021},
+  year={2010},
+  abstract={This biennial Review summarizes much of particle physics. Using data from previous editions, plus 2158 new measurements from 551 papers, we list, evaluate, and average measured properties of gauge bosons, leptons, quarks, mesons, and baryons. We also summarize searches for hypothetical particles such as Higgs bosons, heavy neutrinos, and supersymmetric particles. All the particle properties and search limits are listed in Summary Tables. We also give numerous tables, figures, formulae, and reviews of topics such as the Standard Model, particle detectors, probability, and statistics. Among the 108 reviews are many that are new or heavily revised including those on neutrino mass, mixing, and oscillations, QCD, top quark, CKM quark-mixing matrix, V ud & V us , V cb & V ub , fragmentation functions, particle detectors for accelerator and non-accelerator physics, magnetic monopoles, cosmological parameters, and big bang cosmology. A booklet is available containing the Summary Tables and abbreviated versions of some of the other sections of this full Review . All tables, listings, and reviews (and errata) are also available on the Particle Data Group website: pdg.lbl.gov [http://pdg.lbl.gov] .}
 }

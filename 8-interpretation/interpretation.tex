@@ -186,12 +186,13 @@ likelihood ratio, $\qmu=-2\ln\lambda$~\cite{cl_computation,
 
 \section{The Single Lepton Supersymmetry Search}
 The full development of the likelihood function used to model the single lepton
-supersymmetry search is covered in complete detail in
+supersymmetry search is covered in detail in
 Appendix~\ref{sec:inter_1lepton}. In this section, only a few pertinent points
 will be discussed. Firstly, the evaluation of model-dependent systematic effects
 associated with the signal yield. Secondly, some discussion of validation work
 performed to demonstrate that the statistical procedure and software
-infrastructure are functioning as expected.
+infrastructure are functioning as expected. The statistical procedure has been
+implemented using the \roostats software framework~\cite{roostats, roostats_web}.
 
 \subsection{Signal Systematics}
 As can be seen in Table~\ref{tbl:inter_systematic_parameters}, a number of
@@ -231,13 +232,13 @@ Table~\ref{tbl:inter_signal_systematics}.
 \begin{figure}[h!]
 \centering
 \subfloat[Statistical Uncertainties Only]{
-  \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_no_sigsysts_no_sigcon_no}}\quad
+  \label{fig:inter_cls_80_400_syst1}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_no_sigsysts_no_sigcon_no}}\quad
 \subfloat[Background Systematics]{
-  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_no_sigcon_no}}\\
+  \label{fig:inter_cls_80_400_syst2}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_no_sigcon_no}}\\
 \subfloat[Signal Systematics]{
-  \label{fig:inter_cls_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_no}}\quad
+  \label{fig:inter_cls_80_400_syst3}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_no}}\quad
 \subfloat[Signal Contamination]{
-  \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
+  \label{fig:inter_cls_80_400_syst4}\includegraphics[width=0.47\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}\\
 \subfloat[Muon Channel Only]{
   \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/exp_muon_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
 \caption[Distribution of the profile likelihood ratio test statistic for null
@@ -342,11 +343,11 @@ evaluated using the same analysis procedure as used for the data and \ac{SM}
 monte carlo samples. The \ac{CMSSM} sample is produced using the Pythia event
 generator, with the two mass parameters varied independently in steps of
 \unit{20}{\GeV} to produce a grid. For each grid point, 10000 events were
-generated. Due to the large number of events, the detector response was not
-processed with the full \geantfour~\cite{geant_paper} reconstruction software but
-instead with a faster, parameterised simulation tool. This has been extensively
-validated and tuned against the full detector simulation and shown to give
-adequate results for many analyses.
+generated. Due to the large number of events, the detector response was
+simulated using the \fastsim simulation package (see
+Section~\ref{sec:cms_computing}). This has been extensively validated and tuned
+against the full detector simulation and shown to give adequate results for many
+analyses.
 
 Having evaluated the efficiencies per \STlep bin for each \ac{CMSSM} grid point,
 the \ac{NLO} cross-sections were calculated using the \prospino
@@ -439,12 +440,12 @@ is reduced.
 
 \begin{figure}[h!]
 \centering
-\subfloat[\Pmu, $x=0.25$]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_muons_eff_total}}
-\subfloat[\Pe, $x=0.25$]{\label{fig:inter_t3w_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_electrons_eff_total}}\\
-\subfloat[\Pmu, $x=0.5$]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_muons_eff_total}}
-\subfloat[\Pe, $x=0.5$]{\label{fig:inter_t3w_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_electrons_eff_total}}\\
-\subfloat[\Pmu, $x=0.75$]{\label{fig:inter_t3w_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_muons_eff_total}}
-\subfloat[\Pe, $x=0.75$]{\label{fig:inter_t3w_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_electrons_eff_total}}
+\subfloat[\Pmu, $x=0.25$]{\label{fig:inter_t3w_0p75_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_muons_eff_total}}
+\subfloat[\Pe, $x=0.25$]{\label{fig:inter_t3w_0p75_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_electrons_eff_total}}\\
+\subfloat[\Pmu, $x=0.5$]{\label{fig:inter_t3w_0p50_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_muons_eff_total}}
+\subfloat[\Pe, $x=0.5$]{\label{fig:inter_t3w_0p50_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_electrons_eff_total}}\\
+\subfloat[\Pmu, $x=0.75$]{\label{fig:inter_t3w_0p25_mu_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_muons_eff_total}}
+\subfloat[\Pe, $x=0.75$]{\label{fig:inter_t3w_0p25_el_efftot}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_electrons_eff_total}}
 \caption[Plots of total signal efficiency for muon and electron channels in
 \TthreeW simplified mode]{Plots of total signal efficiency for muon and electron
   channels in \TthreeW simplified model. Each plot shows efficiency as a function
@@ -454,11 +455,23 @@ is reduced.
 
 The observed limits for the each value of $x$ (0.25, 0.5 and 0.75) are shown in
 Figures~\ref{fig:inter_t3w_0p75}, \ref{fig:inter_t3w_0p50} and
-\ref{fig:inter_t3w_0p25} respectively. The exclusion is with respect to a
-refernce cross-section for squark production calculated assuming
-\ac{QCD}-strength couplings.
+\ref{fig:inter_t3w_0p25} respectively. The exclusion contours are related to a
+reference cross-section for squark production calculated assuming
+\ac{QCD}-strength couplings using \prospino.
 
 % TODO: Alex needs to check this weirdness!!
+For points where $\Mgluino \approx \Mlsp$, there is relatively little energy
+available in the cascade. This generally reduces the \HT present in the event,
+and consequently the efficiency. Events entering the sample in this region tend
+to be dominated by \ac{ISR} which is known to be relatively poorly modelled in
+simulation. For this reason, the region immediately below the diagonal has been
+excluded from the limit. This excluded range was chosen to remove regions where
+the upper limit appeared to fluctuate at random. For $x=0.50$ and $x=0.75$, the
+region $\Mgluino - \Mlsp < \unit{100}{\GeV}$ was excluded. For $x=0.25$,
+\Mchargino is close to \Mlsp and presumably the efficiency is more sensitive to
+\ac{ISR} effect. In this case the region $\Mgluino - \Mlsp < \unit{140}{\GeV}$
+was excluded.
+
 Comparing the exclusion contours, there does not appear to be a strong
 dependence on \Mchargino. The reach of the search can be seen to improve
 slightly for lower values of $x$ when the mass splitting between the mother and

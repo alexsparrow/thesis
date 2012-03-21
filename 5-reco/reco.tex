@@ -103,17 +103,30 @@ this energy, radiated in the form of bremsstrahlung photons, must be
 reconstructed correctly.
 
 \subsubsection{Reconstruction}
-Electron seeds are derived by two separate algorithms: tracker driven and
-\ac{ECAL} driven. Tracker driven seeds are suitable for low-\Pt electrons and
-for electrons produced inside jets. \ac{ECAL} driven seeds begin with the
-reconstruction of \ac{ECAL} superclusters with transverse energy $\Et >
-\unit{4}{\GeV}$. Superclusters are a group of one or more \ac{ECAL} clusters
-constructed to account for the width energy spread in $\phi$ and narrow width in
-$\eta$ characteristic of the bending effect of the \ac{CMS} magnet on electrons
-radiating in the tracker. The supercluster seeds are first matched to track
-seeds (2 or 3 hits) in the inner layers of the tracker. Electron tracks are then
-built from these track seeds. The trajectory is reconstructed accounting for the
-electron energy loss and fitted with a \ac{GSF}.
+Electron seeds are derived using two separate algorithms: \emph{tracker-driven}
+and \emph{\ac{ECAL}-driven}~\ref{cms_ele_reco}. The tracker-driven algorithm was
+developed for the purposes of the \ac{PF} algorithm. It is most suitable for
+low-\Pt electrons and electrons produced inside jets. Seeds are found by
+extrapolating \ac{GSF} tracks in the tracker from their outermost measurement to
+the \ac{ECAL}. If a matching cluster is found, a tracker-driven seed is
+created~\cite{cms_pf_pas3}.
+
+\ac{ECAL}-driven seeds begin with the reconstruction of \ac{ECAL} superclusters
+with transverse energy, $\Et > \unit{4}{\GeV}$. A supercluster is a group of one
+or more \ac{ECAL} clusters constructed to account for the narrow $\eta$ width
+and spread in $\phi$ due to the bending effect of the \ac{CMS} magnet on
+electrons radiating in the tracker~\cite{cms_ele_reco_pas}. These superclusters
+are then matched to track seeds with two or three hits in the inner layers of
+the tracker. Electron tracks are built from these track seeds. Trajectories are
+calculated accounting for energy loss in the tracker. These are then fit with a
+\ac{GSF}~\cite{gsf}.
+
+Candidates found only by the tracker-driven method must pass a pre-selection
+based on a multivariate analysis~\cite{cms_pf_pas3}. Candidates found by the
+\ac{ECAL}-driven algorithm are pre-selected by matching the \ac{GSF} track to
+the supercluster in $\eta$ and $\phi$. \ac{ECAL}-driven seeds failing this
+matching requirement, but selected by the track-driven multivariate
+pre-selection are kept.
 
 As described in Section~\ref{sec:expt_laser_monitoring}, electron energies are
 corrected to account for changes in the transparency of the \ac{ECAL}
@@ -238,7 +251,7 @@ of systematic uncertainty for the analyses presented here.
     energy correction factor as a function of $\eta$ for jets with transverse
     momenta of \unit{50}{\GeV} and \unit{200}{\GeV}. Corrections are shown for
     \ac{Calo}, \ac{JPT} and \ac{PF} jets separately. The bands indicate the
-    corresponding uncertainties.}
+    corresponding uncertainties~\cite{jet_energy_pas}.}
   \label{fig:reco_jet_energy_corr}
 \end{figure}
 
@@ -309,8 +322,9 @@ to form blocks. A single block may contain some combination of a charged
 particle track, one or more energy clusters and a muon. The fine granularity of
 the \ac{CMS} detector ensures that blocks typically contain 1, 2 or 3 elements.
 The links between each block are parameterised by a distance which encodes the
-quality of the link. In order for \ac{PF} reconstruction to work correctly, it
-is important that the inputs to the algorithm match certain requirements
+quality of the link. Advanced tracking and calorimeter clustering algorithms
+have been developed to meet the needs of the \ac{PF} algorithm. These will now
+be explained.
 
 \subsection{Iterative Tracking}
 The measurements of momentum and direction of charged hadrons provided by the
@@ -322,14 +336,14 @@ avoid excess energy counting.
 To meet these requirements, tracks are reconstructed using an iterative
 algorithm. This begins by reconstructing tracks with very tight selection
 requirements. Hits which can be unambiguously assigned in this step are then
-removed from consideration and the remaining hits are reconstructed again, this
-time with loosened selection criteria. This procedure is repeated with
-progressively looser selection criteria ensuring high efficiency, whilst the
-removal of hits at each stage reduces the fake rate induced by combinatorics.
-After three iterations, tracks originating close to the beam line are
-reconstructed with an efficiency of 99.5\% for muons and $>90\%$ for charged
-hadrons. The fourth and fifth iterations relax constrains on the vertex,
-reconstructing secondary charged particles.
+removed from consideration. The algorithm is iterated, attempting to reconstruct
+tracks from the remaining hits, this time with loosened selection criteria. This
+procedure is repeated with progressively looser selection criteria. This ensures
+high efficiency, whilst the removal of hits at each stage reduces the fake rate
+induced by combinatorics.  After three iterations, tracks originating close to
+the beam line are reconstructed with an efficiency of 99.5\% for muons and
+$>90\%$ for charged hadrons. The fourth and fifth iterations relax constrains on
+the vertex, reconstructing secondary charged particles.
 
 \subsection{Calorimeter Clustering}
 The success of the \ac{PF} reconstruction is dependent on certain aspects of the

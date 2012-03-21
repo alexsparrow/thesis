@@ -7,9 +7,9 @@ opportunity for furthering understanding of the underlying Electroweak and
 of processes for which highly precise \ac{NLO} calculations have been performed,
 experimental measurements can give a direct constraint on the \acp{PDF}. \Wjets
 production is also of considerable interest in the context of \ac{NP} searches
-where these events are often a dominant background. Finally, the neutrino in the
-leptonic decay mode provides a source of ``real'' missing energy which can be
-useful in the understanding of detector effects relevant to searches for
+where these events are often a significant background. Finally, the neutrino in
+the leptonic decay mode provides a source of ``real'' missing energy which can
+be useful in the understanding of detector effects relevant to searches for
 \acs{WIMP}-type particles present in \ac{SUSY} and other theories.
 
 \section{Measuring the Helicity Fractions of the \texorpdfstring{\PW}{W} Boson}
@@ -29,16 +29,33 @@ generated sample comprised approximately 15 million events with the \acp{PDF}
 taken from the \cteqsixlone set within the \lhapdf software
 package~\cite{lhapdf, lhapdf_web}.
 
-Shown in Figure~TODO are $\cos\thetastar$ distributions at generator level in
-bins of \PtW for \PWp along with a fit to
+Shown in Figure~\ref{fig:wpol_costheta} are $\cos\thetastar$ distributions at
+generator level in bins of \PtW for \PWp along with a fit to
 Eqn~\ref{eqn:wpol_helicity_fractions}. The polarisation is manifest in the
 dominance of the $(1-\cos\thetastar)^2$ term, leading to the peak at
 $\cos\thetastar = -1$. This reflects the fact that the left-handed particle (the
 neutrino in this case) is taking most of the energy. Similarly for \PWm, the
-peak is at $\cos\thetastar = 1$, where this time the electron is more
-energetic.
+peak is at $\cos\thetastar = 1$, where this time the electron is more energetic.
 
-% TODO cos thetastar plots
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{fig/MC_CosThetaStar1Plus}
+\caption{Distribution of $\cos\thetastar$ for \PWp bosons in three bins of \PtW.}
+\label{fig:wpol_costheta}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[$\PtW > \unit{200}{\GeV}$]{
+  \label{fig:wpol_costheta_corr200}\includegraphics[width=0.47\textwidth]{fig/LP_corr200}}\quad
+\subfloat[[$\PtW > \unit{400}{\GeV}$]{
+  \label{fig:wpol_costheta_corr400}\includegraphics[width=0.47\textwidth]{fig/LP_corr400}}\quad
+\caption{Correlation of $\cos\thetastar$ and $2\LP - 1$ for \PW bosons in
+  simulation. The correlation is shown for two different cuts on the transverse
+  momentum, \PtW.}
+\label{fig:wpol_costheta_corr}
+\end{figure}
+
 % TODO evolution of Ai with PtW
 
 \subsection{The Lepton Projection Variable}
@@ -76,18 +93,21 @@ lepton momentum in the helicity frame,
 \begin{equation}
 \mPl' = \mPl_{\parallel}' + \mPl_{\perp}'
 \end{equation}
-where $\mPl_{\parallel}'$ and $\mPl_{\perp}'$ are respectively the
-components of the lepton momentum parallel and perpendicular to the
-z-axis. Neglecting the mass of the lepton, $\mPl' = \MW/2$ and therefore
+where $\mPl_{\parallel}'$ and $\mPl_{\perp}'$ are respectively the components of
+the lepton momentum parallel and perpendicular to the z-axis. Neglecting the
+mass of the lepton, $\mPl' = \MW/2$ - where $\MW$ is the \PW-boson mass - and
+therefore
 \begin{eqnarray*}
 \mPl_{\parallel}' &=& \frac{\MW}{2}\cos\thetastar \\
 \mPl_{\perp}'| &=& \frac{\MW}{2}\sin\thetastar \\
 \end{eqnarray*}
-Boosting into the lab frame (i.e. along the $-z$ axis of the helicity frame).
+Boosting into the lab frame (i.e. along the $-z$ axis of the helicity frame),
 \begin{eqnarray*}
 \mPl_{\parallel} = \gamma \frac{\MW}{2} \left (\cos\thetastar +\beta\right )
 \mPl_{\perp} = \mPl_{\perp}'
 \end{eqnarray*}
+where $\gamma$ and $\beta$ have their usual definitions (see Appendix~\ref{app:kinematics}).
+
 To see the correlation, we first consider the quantity $\LP^{3D}$,
 \begin{eqnarray*}
 \LP^{3D} &=& \frac{\mPl}{\mPW} \\
@@ -104,17 +124,18 @@ To see the correlation, we first consider the quantity $\LP^{3D}$,
 &=&\frac{1}{2\mPW}\sqrt{\mPW^2\cos^2\thetastar + 2\mPW\EW\cos\thetastar + \mPW^2 + \MW^2}\\
 &=&\frac{1}{2\mPW}\left(\mPW\cos\thetastar + \EW\right)
 \end{eqnarray*}
-Rearranging it is seen that
+where \EW is the \PW-boson energy. Rearranging it is seen that
 \begin{equation}
-\cos\thetastar = 2\LP^{3D} - \frac{\mPW}{\EW}
+\cos\thetastar = 2\LP^{3D} - \frac{\EW}{\mPW}
 \end{equation}
 In the high \PtW limit, the $z$ component of the \PW can be neglected and thus
-$\LP^{3D} \longrightarrow \LP$ and $\mPW >> \EW$ so
+$\LP^{3D} \longrightarrow \LP$ and $\mPW \longrightarrow \EW$ so
 \begin{equation}
  \cos\thetastar \longrightarrow 2\LP - 1
 \end{equation}
-The correlation between $\cos\thetastar$ and $2\LP -1$ is shown in Figure~TODO
-for \PW bosons with $\PtW > \unit{200}{\GeV}$ and $\PtW > \unit{400}{\GeV}$.
+The correlation between $\cos\thetastar$ and $2\LP -1$ is shown in
+Figure~\ref{fig:wpol_costheta_corr} for \PW bosons with $\PtW >
+\unit{200}{\GeV}$ and $\PtW > \unit{400}{\GeV}$.
 
 \subsubsection{Correlation with \phistar}
 For large \PtW, \LP is mostly uncorrelated with \phistar since even for values
@@ -123,7 +144,7 @@ the lab frame. In contrast, for low values of \PtW, the lepton in the lab frame
 may have a large angular separation from the \PW. In extreme cases, the lepton
 and the \PW may even be anti-parallel in the lab frame. This leads to a widening
 of the \LP distribution and a much larger correlation with
-\phistar. This correlation is shown in Figure~TODO.
+\phistar.
 
 \subsection{Template Re-weighting Method}
 \label{sec:wpol_reweighting}
@@ -139,8 +160,9 @@ detector and acceptance related effects, changing its shape.
 \subsubsection{Re-weighting $\cos\thetastar$}
 To account for all such experimental issues, a template re-weighting method is
 employed. Effectively, Monte Carlo simulation is used to derive three
-re-weighting factors, each a function of $\cos\thetastar$ and binned in boson
-charge, \PtW and \YW. These can be written as
+re-weighting factors, each a function of $\cos\thetastar$ and binned according
+to boson charge, transverse momentum, \PtW, and rapidity, \YW. These can be
+written as
 \begin{equation}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1}
@@ -609,6 +631,8 @@ variables used in the filtering procedure may no longer be studied in their full
 range. This is an impediment to certain background estimation studies which can
 choose to invert certain lepton identification cuts.
 
+Both data and Monte Carlo samples have been simulated using \cmssw version 3.8.
+
 \subsection{Monte Carlo Signal and Background Expectations}
 \label{sec:wpol_yields}
 The expected event yields across the relevant simulated samples are shown in
@@ -862,7 +886,7 @@ into a single template to mimimize statistical uncertainty.
 \label{fig:wpol_ele_sel_antisel}
 \end{figure}
 
-\section{Systematics}
+\section{Systematic Uncertainties}
 \label{sec:wpol_systematics}
 The template reweighting method necessary for the extraction of the helicity
 fractions introduces an inescapable dependence on Monte Carlo simulation. One of
@@ -950,8 +974,9 @@ analyses. Firstly, the unclustered component of the missing energy is calculated
 \end{equation}
 where the index $i$ runs over all jets with $\Pt > \unit{10}{\GeV}$ in the event
 as reconstructed by the particle flow algorithm. The unclustered energy is then
-scaled either up or down within its uncertainty (taken to be 5\%). \METv is then
-recalculated from this displaced unclustered energy,
+scaled either up or down within its uncertainty - taken to be
+5\%~\cite{jet_energy_pas}. \METv is then recalculated from this displaced
+unclustered energy,
 \begin{equation}
 \METv \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptlv - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i}
 \end{equation}
@@ -976,28 +1001,29 @@ uncertainty is then taken to be largest of the two errors.
 In addition to the modelling of the jet energy scale, another possible source of
 mismeasurement stems from the resolution effects included in the simulation of
 the detector. The resolution predicted by the Monte Carlo is known to
-considerably underestimate that observed in the data. To account for this,
-additional ``smearing'' was applied to the missing transverse energy in
-simulation. The difference between this ``increased resolution'' case and the
-nominal conditions in simulation is then taken as an additional source of
-systematic error.
+considerably underestimate that observed in the data~\cite{cms_met_paper,
+  cms_met_pas}. To account for this, additional ``smearing'' was applied to the
+missing transverse energy in simulation. The difference between this ``increased
+resolution'' case and the nominal conditions in simulation is then taken as an
+additional source of systematic error.
 
 As the first step of the procedure, the resolution on \PtW is extracted from the
 simulation in bins of the generator level \PtW quantity. For simulated \Wjets
 events with a reconstructed electron or muon and a matching generator level
 particle or a generator level \Ptau, the following quantity is calculated,
 \begin{equation}
-\Delta\PtW = \frac{\left(\PtW\right)^{\textrm{GEN}} - \left ( \PtW \right)^{\textrm{RECO}}}{\left(\PtW\right)^{\textrm{GEN}}}
+\Delta\PtW = \frac{\PtWgen - \PtWreco}{\PtWgen}
 \end{equation}
-This is the relative difference between the reconstruction and generator level
-\PtW. This distribution is then divided into bins of generator level \PtW. Each
-bin is fit with a Gaussian distribution in order to extract the resolution,
-$\sigma_{\PW}$ as a function of \PtW. This is the \PtW resolution as modelled by
-the detector simulation.
+where \PtWreco and \PtWgen refer to the reconstruction and generator level \PW
+transverse momentum respectively. This is the relative difference between the
+reconstruction and generator level \PtW. This distribution is then divided into
+bins of generator level \PtW. Each bin is fit with a Gaussian distribution in
+order to extract the resolution, $\sigma_{\PW}$ as a function of \PtW. This is
+the \PtW resolution as modelled by the detector simulation.
 
 The simulated sample is then used again, this time ``smearing'' the
 reconstruction level \PtW quantity such that the resolution is increased by
-10\%.
+10\%. This is the value measured in~\cite{cms_met_paper}.
 
 \subsubsection{Lepton Momentum Scale}
 The second contribution to the \LP shape uncertainty comes from the lepton
