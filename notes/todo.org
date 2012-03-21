@@ -6,7 +6,6 @@
 ** TODO proofread the whole thing
 ** TODO check all references are in fact referenced
 ** TODO instances of New Physics/BSM physics should be made consistent
-** TODO Say that CMSSM is mSUGRA inspired
 ** TODO Monte carlo, MC
 ** TODO MT -> T roman style (generally transverse stuff)
 * SM
@@ -83,14 +82,12 @@
     SCHEDULED: <2012-03-23 Fri>
 ** Alex SUSY search
 *** TODO 7.2: single lepton -> single-lepton
-*** TODO 7.3: Ref for CMSSM
 *** TODO 7.4.4: Explain why not using all PF objects
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Table 7.4: SUSY triggers -> explain
     SCHEDULED: <2012-03-23 Fri>
 *** TODO 7.8.1: explain sigma(D0) > 3
     SCHEDULED: <2012-03-23 Fri>
-*** TODO 7.9.2: limited statistics of simulated events
 *** TODO Hadronic recoil resolution: overestimate
     SCHEDULED: <2012-03-22 Thu>
 *** TODO Explain 30% and 50% figures for W/ttbar
@@ -103,10 +100,12 @@
 
 
 * Interpretation
-** TODO Redo SMS limits with increased PDF uncertainty (20%?) since there are none in currently!!
-   SCHEDULED: <2012-03-21 Wed 15:00>
+** DONE Redo SMS limits with increased PDF uncertainty (25%?) since there are none in currently!!
+   CLOSED: [2012-03-21 Wed 17:30] SCHEDULED: <2012-03-21 Wed 15:00>
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 17:30]
    Also ensure this is properly described throughout text
    LS/LP comparison plot should make it clear this is a different result
+** TODO Why 10% PDF uncertainty?
 ** TODO SMS ensure this section makes sense and is correct
 
 
@@ -792,3 +791,12 @@ Mostly done!
 ** DONE ETmiss resolution: 10% where is this from?
    CLOSED: [2012-03-21 Wed 15:52] SCHEDULED: <2012-03-23 Fri>
    - State "DONE"       from "TODO"       [2012-03-21 Wed 15:52]
+** DONE 7.3: Ref for CMSSM
+   CLOSED: [2012-03-21 Wed 16:05]
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 16:05]
+** DONE 7.9.2: limited statistics of simulated events
+   CLOSED: [2012-03-21 Wed 16:07]
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 16:07]
+** DONE Say that CMSSM is mSUGRA inspired
+   CLOSED: [2012-03-21 Wed 16:36]
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 16:36]

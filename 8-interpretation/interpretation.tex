@@ -407,9 +407,18 @@ cross-section at each point is known and a simple exclusion contour is
 sufficient. Due to the comptuational difficulty of calculating a confidence
 interval using the \CLs method, the profile likelihood method has been used
 instead. In addition, further simplification of the likelihood is achieved by
-removing the signal contamination systematic and including only the \ac{PDF}
-uncertainty on the signal contamination.
-% TODO: justify
+including a single nuisance parameter for the signal efficiency
+uncertainty. This is then assigned a conservative 25\% uncertainty, constant
+across the \ac{SMS} parameter space. This value was chosen by taking
+representative values of the \MET scale and resolution uncertainties given in
+Table~\ref{tbl:inter_signal_systematics} and adding in quadrature with the 10\%
+\ac{PDF} uncertainty:
+\begin{equation*}
+\left(\underbrace{10\%}_{\textrm{\ac{PDF}}}\right)^2 +
+\left(\underbrace{15\%}_{\textrm{\ac{JES}}}\right)^2 +
+\left(\underbrace{10\%}_{\textrm{\ac{MET} resolution}}\right)^2 +
+= \approx 20\%
+\end{equation*}
 
 For the following limit plots, holes in the sample have been filled by taking
 the average observed limit of surrounding points. A similar procedure has also
@@ -494,8 +503,8 @@ cascade.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_t3w_0p25_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit}}
-\subfloat[]{\label{fig:inter_t3w_0p25_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_1d}}
+\subfloat[]{\label{fig:inter_t3w_0p25_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_sigsyst}}
+\subfloat[]{\label{fig:inter_t3w_0p25_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_sigsyst_1d}}
 \caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
 $x=0.75$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
   $x=0.75$. The 95\% confidence level upper limit on the cross-section as a
@@ -510,8 +519,8 @@ $x=0.75$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
 
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:inter_t3w_0p50_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit}}
-\subfloat[]{\label{fig:inter_t3w_0p50_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit_1d}}
+\subfloat[]{\label{fig:inter_t3w_0p50_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit_sigsyst}}
+\subfloat[]{\label{fig:inter_t3w_0p50_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit_sigsyst_1d}}
 \caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
 $x=0.5$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
   $x=0.5$. The 95\% confidence level upper limit on the cross-section as a
@@ -526,8 +535,8 @@ $x=0.5$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
 
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:inter_t3w_0p75_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit}}
-\subfloat[]{\label{fig:inter_t3w_0p75_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_1d}}
+\subfloat[]{\label{fig:inter_t3w_0p75_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst}}
+\subfloat[]{\label{fig:inter_t3w_0p75_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst_1d}}
 \caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
   $x=0.25$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
   $x=0.25$. The 95\% confidence level upper limit on the cross-section as a
@@ -583,8 +592,8 @@ improved sensitivity.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit}}
-\subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_1d}}
+\subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_sigsyst}}
+\subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_sigsyst_1d}}
 \caption[]{95\% upper limit on the cross-section for the \Ttwott simplified
   model. The two-dimensional plot \subref{fig:inter_t2tt_limit} shows the upper
   limit as a function of $(\Mstop, \Mlsp)$. The contours overlayed show this
