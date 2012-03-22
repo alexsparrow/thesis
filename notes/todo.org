@@ -59,8 +59,9 @@
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Why 25% for Z and 50 for ttbar
     SCHEDULED: <2012-03-23 Fri>
-*** TODO Discuss these tables more (syst tables)
-    SCHEDULED: <2012-03-23 Fri>
+*** DONE Discuss these tables more (syst tables)
+    CLOSED: [2012-03-22 Thu 16:50] SCHEDULED: <2012-03-23 Fri>
+    - State "DONE"       from "TODO"       [2012-03-22 Thu 16:50]
 ** Alex SUSY search
 *** TODO 7.4.4: Explain why not using all PF objects
     SCHEDULED: <2012-03-23 Fri>

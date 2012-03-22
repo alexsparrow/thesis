@@ -10,14 +10,13 @@ be included.
 
 \subsection{Notation}
 It will be helpful to define some notation. In the following, a subscript index
-is assumed to run over the binned variable in the analysis
-(i.e. \STlep). All nuisance parameters are written as $\nu^{(i)}$ where the
-superscript index is taken to run over some set of systematics
-(e.g. $\nu^{\textrm{jes}}$ might represent a jet energy scale
-uncertainty). Certain variables $x$ are known to have a functional dependence on a
-given nuisance parameter and are written $x(\nu)$. The nominal value of this
-variable, being that which is measured in \ac{MC} or in real data is denoted
-$\bar{x}$.
+is assumed to run over the binned variable in the analysis (i.e. \STlep). All
+nuisance parameters are written as $\nu^{(i)}$ where the superscript index is
+taken to run over some set of systematics (e.g. $\nu^{\textrm{jes}}$ might
+represent the \acl{JES} uncertainty). Certain variables $x$ are known to have a
+functional dependence on a given nuisance parameter and are written
+$x(\nu)$. The nominal value of this variable, being that which is measured in
+\ac{MC} or in real data is denoted $\bar{x}$.
 
 \subsection{The Likelihood Function}
 In constructing the likelihood, we start by writing down the number of events
@@ -203,7 +202,7 @@ types.
   bins. This includes uncertainties arising from limited Monte Carlo statistics
   and limited data in the control region.
 \item Systematic uncertainties arising from detector artefacts or theoretical
-  uncertainties such as jet energy scale, standard model cross-section
+  uncertainties such as \ac{JES}, standard model cross-section
   calculations and the luminosity measurement~\cite{cms_lumi_measurement}.
 \end{enumerate}
 For uncertainties of the first kind, independent nuisance paramters must be
@@ -310,11 +309,11 @@ region \LPsignal is \ac{QCD} free.
 The uncertainty included via the prior distribution of $\nu^{\textrm{QCD}}$ was
 the quadrature sum of the statistical error from the fitting procedure and an
 uncertainty accounting for the limited generator statistics used to construct
-the fit templates. Additional errors coming from jet energy scale uncertainty
-and missing energy resolution were found to be small. Proper inclusion of these
-into the likelihood would need to ensure correlation with the nuisance
-parameters representing these uncertainties. The relevant terms were set up but
-not included in the final calculations. The contribution is seen to be small and
+the fit templates. Additional errors coming from the \ac{JES} uncertainty and
+missing energy resolution were found to be small. Proper inclusion of these into
+the likelihood would need to ensure correlation with the nuisance parameters
+representing these uncertainties. The relevant terms were set up but not
+included in the final calculations. The contribution is seen to be small and
 unnecessary complication of the likelihood function tends to increase the
 processing time, especially when running a large number of toy experiments.
 

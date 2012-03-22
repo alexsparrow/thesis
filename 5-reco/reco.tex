@@ -220,11 +220,12 @@ reduced by a requirement on the tower energy.
 \ac{JPT} jets associate tracks with \ac{Calo} jets, using the tracker to give
 enhanced \Pt resolution and response. \ac{PF} jets are products of the \acl{PF}
 algorithm described below. Finally, track jets are reconstructed from well
-measured tracks in the central tracker.
+measured tracks in the central tracker. Jets are clustered using the \antiKT
+algorithm~\cite{antiKT} with a size parameter $R=0.5$.
 
-Jets are clustered using the \antiKT algorithm~\cite{antiKT} with a size
-parameter $R=0.5$. Since the jet energy as measured by the detector is generally
-different from the corresponding particle jet energy, jet energy corrections are
+\subsection{Jet Energy Corrections and \acl{JES}}
+Since the jet energy as measured by the detector is generally different from the
+corresponding particle jet energy, jet energy corrections are
 applied~\cite{jet_energy_cms, jet_energy_pas}. At \ac{CMS}, these have been been
 factorised into three parts:
 \begin{itemize}
@@ -238,9 +239,9 @@ factorised into three parts:
 These are measured using a variety of techniques including the balancing of
 dijets, \gammajets and \Zjets events. Figures~\ref{fig:reco_jet_energy_corr}
 show these correction factors as a function of $\eta$ for two values of the jet
-\Pt. With these corrections applied, the residual uncertainty has been evaluated
-as a function of jet $\eta$ and \Pt. This will turn out to be a dominant source
-of systematic uncertainty for the analyses presented here.
+\Pt. With these corrections applied, the residual uncertainty on the \ac{JES}
+has been evaluated as a function of jet $\eta$ and \Pt. This will turn out to be
+a dominant source of systematic uncertainty for the analyses presented here.
 
 \begin{figure}
   \centering

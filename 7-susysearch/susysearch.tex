@@ -108,9 +108,9 @@ at relatively large integrated luminosities.
 
 The advantage of the translation factor \RCS is that by taking the ratio from
 simulation, there is significant cancellation of many systematic uncertainties,
-including in particular the jet energy scale that proved to be significant for
-the \PW polarisation analysis (see Section~\ref{sec:wpol_syst_jec}). Since these
-uncertainties do not cancel completely, they will be full evaluated in
+including, in particular, the \ac{JES} uncertainty that proved to be significant
+for the \PW polarisation analysis (see Section~\ref{sec:wpol_syst_jec}). Since
+these uncertainties do not cancel completely, they will be full evaluated in
 Section~\ref{sec:susy_systematics} and are included in the statistical treatment
 described in Chapter~\ref{sec:interpretation}.
 
@@ -393,10 +393,10 @@ uncertainties. It has already been said that the construction of \RCS is
 intended to minimise some of these uncertainties by ensuring some degree of
 cancellation. Experience from the \PW polarisation measurement showed that the
 \LP variable is highly sensitive to certain uncertainties - in particular the
-jet energy scale. The size of these uncertainties was thus evaluated early-on in
-the development of the analysis and continued throughout. Several of the
-systematics procedures were adopted or adapted from those used for the previous
-measurement (see Section~\ref{sec:wpol_systematics}).
+\ac{JES}. The size of these uncertainties was thus evaluated early-on in the
+development of the analysis and continued throughout. Several of the systematics
+procedures were adopted or adapted from those used for the previous measurement
+(see Section~\ref{sec:wpol_systematics}).
 
 The background prediction may be written as follows,
 \begin{equation}
@@ -438,7 +438,7 @@ taken to be the statistical uncertainty. For the systematics quoted in
 Table~\ref{tbl:susy_syst_muons}, this is propagated into \RCS. For the limit, as
 will be seen, it is taken as an uncertainty on \NControl.
 
-\subsubsection{Jet Energy Scale Uncertainty}
+\subsection{\acl{JES}Uncertainty}
 \label{sec:susy_jes_uncertainty}
 This procedure was changed with respect to the \PW polarisation measurement in
 order to harmonise with other analyses. Each jet in the event, as well as the
@@ -448,7 +448,7 @@ is found to be smaller than the Monte Carlo statistical error
 (Section~\ref{sec:susy_syst_mcstats}), the uncertainty is taken to be the larger
 of the two.
 
-\subsubsection{Hadronic Recoil Resolution}
+\subsection{Hadronic Recoil Resolution}
 \label{sec:susy_metres_uncertainty}
 As for the \PW polarisation measurement, the hadronic recoil resolution measured
 in data is seen to be 10\% larger than predicted by
@@ -456,7 +456,7 @@ simulation~\cite{cms_met_paper, cms_met_pas}. To account for this, the recoil is
 smeared by an additional 10\% perpendicular and parallel to its direction. The
 resulting shift in \RCS is taken as the uncertainty.
 
-\subsubsection{\Wjets/\ttbar Cross Section}
+\subsection{\Wjets/\ttbar Cross Section}
 Te use of \RCS avoids any dependence on the absolute values of theoretical
 cross-sections. However, since the \Wjets and \ttbar lead to different \LP
 shapes, changes to their relative normalisations will result in changes to
@@ -477,7 +477,7 @@ this effect, the muon momentum is varied as follows~\cite{susy_ra4_pas}:
 \Ptmu' = \Ptmu + \textrm{sign}(\mu) \times 0.01 {\Ptmu}^2/\unit{100}{\GeV} \times (1+\sin(\phi))
 \end{equation*}
 
-\subsubsection{\PW and \ttbar Polarisation}
+\subsection{\PW and \ttbar Polarisation}
 The polarisation in \ttbar events is found to be 5\%. Since the effect on \RCS
 is less than 5\%, this is assigned as a conservative uncertainty.
 
@@ -510,7 +510,7 @@ simulation. Since this is a relatively small fraction of the background, a
 conservative 50\% uncertainty is assumed. The resulting change in the \LP shape
 is then propagated into \RCS.
 
-\subsubsection{\acl{PDF} Uncertainties}
+\subsection{\acl{PDF} Uncertainties}
 The uncertainty stemming from the choice of \acp{PDF} was handled slightly
 differently to the \PW polarisation case. The Monte Carlo was reweighted to the
 central value of both \cteqsixtysix~\cite{cteq66} and \mstwnlo~\cite{mstw1,
@@ -519,7 +519,7 @@ central value of both \cteqsixtysix~\cite{cteq66} and \mstwnlo~\cite{mstw1,
 \unit{450}{\GeV}$. This systematic uncertainty is therefore seen to be
 negligible.
 
-\subsubsection{Trigger Efficiency}
+\subsection{Trigger Efficiency}
 The exact selection of triggers listed in Table~\ref{tbl:susy_triggers} was
 unavailable in the Monte Carlo samples. Small differences in the efficiency in
 the plateau of the trigger turn-on curve were observed in both channels as well
