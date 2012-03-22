@@ -23,6 +23,7 @@
 ** TODO check conversion rejection is sz with alex
 ** TODO check v boson production at hadron colliders is sz with alex
 ** TODO check wpol conclusion sz with alex
+** TODO check wpol syst sz with alex
 ** TODO PF diagram
    SCHEDULED: <2012-03-22 Thu>
 * Wpol
@@ -52,16 +53,8 @@
 *** TODO Figure 6.5: Tidy up
 *** TODO ETmiss syst: Make clear this is an overestimate
     SCHEDULED: <2012-03-23 Fri>
-*** DONE Change the lepton scale bit to I did A. B would be an improvment
-    CLOSED: [2012-03-22 Thu 16:33] SCHEDULED: <2012-03-22 Thu 11:00>
-    - State "DONE"       from "TODO"       [2012-03-22 Thu 16:33]
-*** TODO PDF uncertainties - average fluctuation why?
-    SCHEDULED: <2012-03-23 Fri>
 *** TODO Why 25% for Z and 50 for ttbar
     SCHEDULED: <2012-03-23 Fri>
-*** DONE Discuss these tables more (syst tables)
-    CLOSED: [2012-03-22 Thu 16:50] SCHEDULED: <2012-03-23 Fri>
-    - State "DONE"       from "TODO"       [2012-03-22 Thu 16:50]
 ** Alex SUSY search
 *** TODO 7.4.4: Explain why not using all PF objects
     SCHEDULED: <2012-03-23 Fri>
@@ -73,7 +66,6 @@
     SCHEDULED: <2012-03-22 Thu>
 *** TODO Explain 30% and 50% figures for W/ttbar
     SCHEDULED: <2012-03-23 Fri>
-*** TODO PDFs: ref them & explain a bit better that this is on top of what was seen before
 *** TODO Figure 7.5: Improve
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
@@ -825,3 +817,15 @@ Mostly done!
 ** DONE 4.5.4p-1: jet clustering todo
    CLOSED: [2012-03-22 Thu 15:40] SCHEDULED: <2012-03-22 Thu>
    - State "DONE"       from "TODO"       [2012-03-22 Thu 15:40]
+** DONE PDFs: ref them & explain a bit better that this is on top of what was seen before
+   CLOSED: [2012-03-22 Thu 18:12]
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 18:12]
+** DONE Discuss these tables more (syst tables)
+   CLOSED: [2012-03-22 Thu 16:50] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 16:50]
+** DONE Change the lepton scale bit to I did A. B would be an improvment
+   CLOSED: [2012-03-22 Thu 16:33] SCHEDULED: <2012-03-22 Thu 11:00>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 16:33]
+** DONE PDF uncertainties - average fluctuation why?
+   CLOSED: [2012-03-22 Thu 18:28] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 18:28]

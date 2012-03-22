@@ -409,15 +409,16 @@ candidates and further summing the trigger tower energy measurements into
 \ac{HF} where only a single trigger tower is included). The \ac{RCT} also
 records a ``tau-veto'' bit, used to distinguish jets from hadronic tau decays.
 
-The output of the \ac{RCT} is then processed by the \ac{GCT}. The \ac{GCT} logic
-is implemented entirely in \acp{FPGA}. The \ac{GCT} has a number of
-responsibilities. Firstly, it sorts the list of electron/photon candidates and
-passes the four highest ranked objects to the \ac{GT}. Secondly, it
-performs a simple jet-finding algorithm on the energy regions received from the
-\ac{RCT}. This identifies local maxima as jets and distinguishes between
-\emph{forward}, \emph{central} and \emph{tau} jets. The last category includes
-jets for which none of the constituent regions has the aforementioned tau veto
-bit set. The four highest ranked of each category are forwarded to the \ac{GCT}.
+The output of the \ac{RCT} is then processed by the
+\ac{GCT}~\cite{jj_thesis}. The \ac{GCT} logic is implemented entirely in
+\acp{FPGA}. The \ac{GCT} has a number of responsibilities. Firstly, it sorts the
+list of electron/photon candidates and passes the four highest ranked objects to
+the \ac{GT}. Secondly, it performs a simple jet-finding algorithm on the energy
+regions received from the \ac{RCT}. This identifies local maxima as jets and
+distinguishes between \emph{forward}, \emph{central} and \emph{tau} jets. The
+last category includes jets for which none of the constituent regions has the
+aforementioned tau veto bit set. The four highest ranked of each category are
+forwarded to the \ac{GCT}.
 
 The final task of the \ac{GCT} is to form global energy sums. These are the
 total transverse energy, missing transverse energy, jet counts and \HT (the

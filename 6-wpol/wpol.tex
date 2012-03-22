@@ -40,7 +40,7 @@ peak is at $\cos\thetastar = 1$, where this time the electron is more energetic.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{fig/MC_CosThetaStar1Plus}
+\includegraphics[width=0.98\textwidth]{fig/MC_CosThetaStar1Plus}
 \caption{Distribution of $\cos\thetastar$ for \PWp bosons in three bins of \PtW.}
 \label{fig:wpol_costheta}
 \end{figure}
@@ -78,8 +78,8 @@ factors for the error this causes in the results or taking both solutions and
 weighting them using simulated data, these introduce a great deal of
 complexity. Instead, a variable is chosen which is known to be highly correlated
 with $\cos\thetastar$ at suitably high $\PtW$ and yet also directly calculable
-from transverse detector-level quantities. This variable is the Lepton Projection
-variable or \LP and is defined as follows
+from transverse detector-level quantities. This variable is the Lepton
+Projection variable or \LP and is defined as follows~\cite{wpol_an, jad_thesis}
 \begin{equation}
   \LP = \frac{\Ptlv.\PtWv}{\left|\PtWv\right|^2}
 \label{eqn:lp_def}
@@ -109,7 +109,7 @@ Boosting into the lab frame (i.e. along the $-z$ axis of the helicity frame),
 \end{eqnarray*}
 where $\gamma$ and $\beta$ have their usual definitions (see Appendix~\ref{app:kinematics}).
 
-To see the correlation, we first consider the quantity $\LP^{3D}$,
+To see the correlation, we first consider the quantity $\LP^{3D}$~\cite{jad_thesis},
 \begin{eqnarray*}
 \LP^{3D} &=& \frac{\mPl}{\mPW} \\
 &=& \frac{1}{\mPW}\sqrt{\mPl_{\parallel}^2 + \mPl_{\perp}^2}
@@ -720,9 +720,10 @@ instead in terms of the parameters \fLmfR and \f0,
 \begin{equation}
 S^j = \fLmfR \left (\hLj -\hRj\right) + \left(1-\f0\right)\left(\hLj +\hRj\right) +\f0\hZj
 \end{equation}
-This reflects the fact that the parameter of interest is actually the difference
-between the left-handed and right-handed helicity fractions. It should be noted
-that since all helicity fractions must be non-negative,
+This is appropriate given that \f0 and \fLmfR are related to the underlying
+parameters \Azero and \Afour. It is also allows a more intuitive interpretation
+in the context of the expected transverse polarisation effect. It should be
+noted that since all helicity fractions must be non-negative,
 $\fLmfR\leq\fLpfR$. Since $\fL +\fR + \f0 = 1$, it can be seen that $\fLmfR +
 \f0 \leq 1$. This inequality defines the physical region of the parameter space.
 
@@ -1172,12 +1173,14 @@ theoretical assumptions which can alter the extracted helicity fractions.
 
 \subsubsection{\Ai Dependence}
 Measurement of \f0 and \fLmfR will depend on the values of the other \Ai
-coefficients. This was tested in simulation by varying each parameter \Ai by
-10\% of its value - an uncertainty derived from comparison of \ac{LO} and
-\ac{NLO} calculations by the Blackhat collaboration. The value of \fLmfR is
-found to have a very small dependence on the values of the other \Ai.
+coefficients (besides \Azero and \Afour). This was tested in simulation by
+varying each parameter \Ai by 10\% of its value - an uncertainty derived from
+comparison of \ac{LO} and \ac{NLO} calculations by the Blackhat
+collaboration. The value of \fLmfR is found to have a very small dependence on
+the values of the other \Ai.
 
-\subsubsection{\ac{PDF} Uncertainties}
+\subsubsection{\aclp{PDF}}
+\label{sec:wpol_syst_pdf}
 This analysis used a \Wjets Monte Carlo sample, generated using the \cteqsixlone
 \ac{PDF} set~\cite{cteq6l1}. This is a set of 41 \ac{PDF} distributions. All
 results in this analysis are calculated using the best fit value of this set. To
@@ -1185,10 +1188,10 @@ determine the uncertainty associated with this assumption, each alternative
 \ac{PDF} from the set is selected and modelled in the Monte Carlo via a
 reweighting procedure. From this, 40 separate \LP distributions are derived
 representing pseudodata assuming an alternative \ac{PDF} from the set. Each
-distribution is then fit using the standard set of templates. The associated
-uncertainty is then taken to be the average fluctuation from the nominal fit
-value across the 40 set of alternate \acp{PDF}. This is found to be negligible
-for all polarisation parameters ($< 0.01\%$).
+distribution is then fit using the standard set of templates. The effect on the
+fit results is seen to be negligible across the set of alternate \acp{PDF}. The
+average fluctuation from the nominal fit value is found to be $< 0.01\%$ across
+all polarisation parameters.
 
 \subsubsection{\Zjets and \ttbar Backgrounds}
 For the purposes of the fit, the cross-sections of the electroweak backgrounds
@@ -1210,7 +1213,11 @@ correlation of \fLmfR and \fQCD.
 
 The effect of the leading uncertainties on the combined fit is shown in
 Table~\ref{tbl:wpol_combined_syst}. The introduction of the electron channel is
-seen to increase the overall systematic uncertainty.
+seen to increase the overall systematic uncertainty. Theory uncertainties are
+shown in Table~\ref{tbl:wpol_theory_syst}. The uncertainties from the other \Ai
+parameters are seen to be small. The dependence on the \Zjets and \ttbar
+cross-sections is also seen to be small, mostly $<1\%$. The total theoretical
+uncertainty is seen to be similar in both lepton channels.
 
 \input{tables/syst_muons}
 \input{tables/syst_electrons} \input{tables/syst_combined}
@@ -1220,8 +1227,8 @@ seen to increase the overall systematic uncertainty.
 \label{sec:wpol_results}
 \subsection{Datasets}
 For this analysis, the full \ac{CMS} 2010 dataset was used with an estimated
-integrated luminosity of \unit{36}{\invpicobarn}. The centre of mass energy
-was $\sqrt{s} = \unit{7}{\TeV}$.
+integrated luminosity of \unit{36}{\invpicobarn} at a centre of mass energy,
+$\sqrt{s} = \unit{7}{\TeV}$.
 
 \subsection{Fit Results}
 The individual fits of the \Pep, \Pem, \Pgmp and \Pgmm channels to the 2010
@@ -1323,9 +1330,9 @@ addition of the muon channel.
 \section{Conclusions}
 As has been seen, the transverse polarisation of the \PW boson has been measured
 at \ac{CMS} using \unit{36}{\invpb} of data from the 2010 run of the
-\ac{LHC}. The parameter, \fLmfR has been measured independently in the muon and
-electron channels for leptons of identical charge and for \PW boson with
-transverse momentum greater than \unit{50}{\GeV}. In addition, a combined
+\ac{LHC}. The parameter, $\fLmfR \sim \Afour$ has been measured independently in
+the muon and electron channels for leptons of identical charge and for \PW boson
+with transverse momentum greater than \unit{50}{\GeV}. In addition, a combined
 measurement has been obtained via a simultaneous fit to both channels, again
 separated by lepton charge.
 
@@ -1337,8 +1344,8 @@ $\sigma$ respectively. Finally, a simultaneous fit yields significances of 6.5
 and 3.8 $\sigma$ respectively.
 
 Whilst the primary goal of the measurement was to confirm the transverse
-polarisation effect, the longitudinal polarisation fraction has also been
-measured, albeit with less sensitivity.
+polarisation effect, the longitudinal polarisation fraction, $\f0 \approx
+\Azero$ has also been measured, albeit with less sensitivity.
 
 After publication of this result~\cite{cms_wpol_paper}, a set of theoretical
 predictions at \ac{NLO} were published~\cite{berger_left_handed_w}. The Blackhat
