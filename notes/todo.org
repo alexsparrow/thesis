@@ -25,9 +25,6 @@
 ** TODO check wpol conclusion sz with alex
 ** TODO PF diagram
    SCHEDULED: <2012-03-22 Thu>
-** DONE 4.5.4p-1: jet clustering todo
-   CLOSED: [2012-03-22 Thu 15:40] SCHEDULED: <2012-03-22 Thu>
-   - State "DONE"       from "TODO"       [2012-03-22 Thu 15:40]
 * Wpol
 ** TODO CMSSW version
 ** TODO Mention equivalence theorem in wpol section
@@ -55,8 +52,9 @@
 *** TODO Figure 6.5: Tidy up
 *** TODO ETmiss syst: Make clear this is an overestimate
     SCHEDULED: <2012-03-23 Fri>
-*** TODO Change the lepton scale bit to I did A. B would be an improvment
-    SCHEDULED: <2012-03-22 Thu 11:00>
+*** DONE Change the lepton scale bit to I did A. B would be an improvment
+    CLOSED: [2012-03-22 Thu 16:33] SCHEDULED: <2012-03-22 Thu 11:00>
+    - State "DONE"       from "TODO"       [2012-03-22 Thu 16:33]
 *** TODO PDF uncertainties - average fluctuation why?
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Why 25% for Z and 50 for ttbar
@@ -823,3 +821,6 @@ Mostly done!
 ** DONE cut flow: cut applied in the muon channel - clarify and show
    CLOSED: [2012-03-22 Thu 15:33]
    - State "DONE"       from "TODO"       [2012-03-22 Thu 15:33]
+** DONE 4.5.4p-1: jet clustering todo
+   CLOSED: [2012-03-22 Thu 15:40] SCHEDULED: <2012-03-22 Thu>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 15:40]

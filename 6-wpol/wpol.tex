@@ -924,69 +924,69 @@ from the particle flow algorithm, as discussed in Section~\ref{sec:reco_pf}. The
 leading source of uncertainty is due to the callibration of the jet energy
 scale.
 
-\subsubsection{Jet Energy Scale}
+\subsubsection{\acf{JES}}
 \label{sec:wpol_syst_jec}
-The jet energy scale is discussed in Section~\ref{sec:reco_jets}. The
-uncertainty on its calibration has been thoroughly studied and is parameterised
-as a function of jet \Pt and $\eta$. In the case of a global miscalibration of
-this measurement, jet energy measurements in data would be pushed upwards or
-downwards with respect to the values predicted by simulation. If one imagines a
-perfectly balanced dijet system in the centre of the detector, the resulting
-effect on the \METv will of course be cancelled. However, this will rarely be
-the case. In particular, in the case of \Wjets production, the hadronic system
-will be recoiling against the \PW. For relatively high transverse momentum \PW
-bosons, the \METv is very likely to point away from the recoiling jets. This
-suggests that the effect of an upward or downard shift in the jet energy scale
-is likely to have an opposite effect on the \METv scale and be highly correlated
-between events. In other words, a shift in the jet energy scale will, to first
-order, lead to an opposite shift in the \MET distribution. Of course there are
-angular effects of an adjustment to the jet energy scale, which were fully
-modelled in simulation. For now a heuristic argument will suffice to understand
-the most striking effects.
+The \ac{JES} is discussed in Section~\ref{sec:reco_jets}. The uncertainty on its
+calibration has been thoroughly studied and is parameterised as a function of
+jet \Pt and $\eta$. In the case of a global miscalibration of this measurement,
+jet energy measurements in data would be pushed upwards or downwards with
+respect to the values predicted by simulation. If one imagines a perfectly
+balanced dijet system in the centre of the detector, the resulting effect on the
+\METv will of course be cancelled. However, this will rarely be the case. In
+particular, in the case of \Wjets production, the hadronic system will be
+recoiling against the \PW. For relatively high transverse momentum \PW bosons,
+the \METv is very likely to point away from the recoiling jets. This suggests
+that the effect of an upward or downard shift in the \ac{JES} is likely to have
+an opposite effect on the \METv scale and be highly correlated between
+events. In other words, a shift in the \ac{JES} will, to first order,
+lead to an opposite shift in the \MET distribution. Of course there are angular
+effects of an adjustment to the \ac{JES}, which were fully modelled in
+simulation. For now a heuristic argument will suffice to understand the most
+striking effects.
 
-The dominant effect of the jet energy scale on the fitted helicity fractions is
-due to the change in the \LP shape. Of course, the effect will also affect the
-cuts on \PtW and \MT and this has also been modelled in simulation. The shift in
-the \MET due to the jet energy scale will correspond directly to a shift in the
-calculated \LP. For an upwards shift in the jet energy scale, the \MET will tend
-to shift downwards and thus to larger values of \LP. Conversely, for a downward
-shift in the jet energy scale, the \MET scale will increase and therefore \LP
-will shift to smaller values. This very approximate argument is born out in the
-full modelling in simulation. This is illustrated in
-Figure~\ref{fig:wpol_mujecunc} showing the fractional change of the \LP
-distribution in the muon channel for upward and downward shifts in the jet
-energy scale. Clearly, the effect is quite large and most severe towards the
-edges of the \LP distribution (i.e. $\LP < 0$ and $\LP > 1$). There are two
-reasons for this. Firstly, that in these regions the \LP distribution is rising
-or falling rapidly. Bin to bin migration will thus yield larger
-changes. Secondly, the change in the value of \LP for a single event in response
-to a change in the jet energy scale is expected to be linear in \LP to first
-order.
+The dominant effect of the \ac{JES} on the fitted helicity fractions is due to
+the change in the \LP shape. Of course, the effect will also affect the cuts on
+\PtW and \MT and this has also been modelled in simulation. The shift in the
+\MET due to the \ac{JES} will correspond directly to a shift in the calculated
+\LP. For an upwards shift in the \ac{JES}, the \MET will tend to shift
+downwards and thus to larger values of \LP. Conversely, for a downward shift in
+the \ac{JES}, the \MET scale will increase and therefore \LP will shift
+to smaller values. This very approximate argument is born out in the full
+modelling in simulation. This is illustrated in Figure~\ref{fig:wpol_mujecunc}
+showing the fractional change of the \LP distribution in the muon channel for
+upward and downward shifts in the \ac{JES}. Clearly, the effect is quite
+large and most severe towards the edges of the \LP distribution (i.e. $\LP < 0$
+and $\LP > 1$). There are two reasons for this. Firstly, that in these regions
+the \LP distribution is rising or falling rapidly. Bin to bin migration will
+thus yield larger changes. Secondly, the change in the value of \LP for a single
+event in response to a change in the \ac{JES} is expected to be linear
+in \LP to first order.
 
-The jet energy scale is the dominant source of systematic uncertainty for both
-electron and muon channels. The effect can be mitigated somewhat however by the
-observation that a restricted fit range will insulate the measurement from the
-most severe changes to the \LP shape. Whilst the edges of the \LP distribution
-are the source of the largest jet energy scale uncertainty, they also tend to
-contribute a lot to the fit. Reducing the fit range too drastically may remove
-too much information from the fit, increasing the statistical error and negating
-any benefits from the reduced systematic uncertainty. An optimisation study was
-undertaken in both lepton channels and for both charges to choose an optimal fit
-range.  The quadratic sum of the statistical and systematic errors was
-calculated for a selection of possible fit ranges. It was determined that a fit
-range of $[0,1.3]$ was an appropriate choice for both channels and both charges.
+The \ac{JES} is the dominant source of systematic uncertainty in the muon
+channel and very significant in the electron channel. The effect can be
+mitigated somewhat however by the observation that a restricted fit range will
+insulate the measurement from the most severe changes to the \LP shape. Whilst
+the edges of the \LP distribution are the source of the largest \ac{JES}
+uncertainty, they also tend to contribute a lot to the fit. Reducing the fit
+range too drastically may remove too much information from the fit, increasing
+the statistical error and negating any benefits from the reduced systematic
+uncertainty. An optimisation study was undertaken in both lepton channels and
+for both charges to choose an optimal fit range.  The quadratic sum of the
+statistical and systematic errors was calculated for a selection of possible fit
+ranges. It was determined that a fit range of $[0,1.3]$ was an appropriate
+choice for both channels and both charges.
 
 \begin{figure}
 \centering
 \subfloat[$\LP(\APmuon)$]{\label{fig:wpol_mujecunc_p}\includegraphics[width=0.4\textwidth]{fig/pLP_jecuncratios}}\quad
 \subfloat[$\LP(\Pmuon)$]{\label{fig:wpol_mujecunc_m}\includegraphics[width=0.4\textwidth]{fig/mLP_jecuncratios}}
 \caption{Relative change of the muon \LP distribution due to the effect of the
-  jet energy scale uncertainty. The black line corresponds to an upward shift
+  \ac{JES} uncertainty. The black line corresponds to an upward shift
   with respect to the original distribution, and the red line a downward shift.}
 \label{fig:wpol_mujecunc}
 \end{figure}
 
-The jet energy scale uncertainty follows the standard prescription for \ac{CMS}
+The \ac{JES} uncertainty follows the standard prescription for \ac{CMS}
 analyses. Firstly, the unclustered component of the missing energy is calculated as,
 \begin{equation}
 \vec{E}^{\textrm{unclustered}}_T = -\METv + \Ptlv + \sum_i \vec{p}_T^{\textrm{jet},i}
@@ -1005,19 +1005,19 @@ scale applied to the jet momenta will be in the same direction as that of the
 unclustered energy. When calculating the effect on the results, this displaced
 value is then used in place of the \METv and all \METv derived quantities. The
 end product of this are two modified \LP shapes corresponding to upward and
-downward fluctuations in the jet energy scale. Since the shifted \METv has been
+downward fluctuations in the \ac{JES}. Since the shifted \METv has been
 applied consistently throughout the analysis, the smaller effects on \PtW and
 \MT are also included.
 
-The value of the jet energy scale systematic is determined in simulation by
-fitting the unaltered template (with no jet energy scale adjustment) to
+The value of the \ac{JES} systematic is determined in simulation by
+fitting the unaltered template (with no \ac{JES} adjustment) to
 pseudodata resulting from the upward and downward shifts. Taking the difference
 of the upward and downward scaled cases with respect to the unaltered yields
 asymmetric uncertainties on each of the helicity fractions. The final systematic
 uncertainty is then taken to be largest of the two errors.
 
 \subsubsection{\MET Resolution}
-In addition to the modelling of the jet energy scale, another possible source of
+In addition to the modelling of the \ac{JES}, another possible source of
 mismeasurement stems from the resolution effects included in the simulation of
 the detector. The resolution predicted by the Monte Carlo is known to
 considerably underestimate that observed in the
@@ -1061,15 +1061,10 @@ bound on such an effect. The effect is found to be less than 1\% at a \Ptmu of
 propagated to the helicity fractions by adjusting the \Ptmu in simulation by
 $\pm 1\%$ and taking the difference from the unaltered case.
 
-As described in Section~\ref{sec:reco_electrons}, the electron momentum is
-corrected using continuous measurements of the \ac{ECAL} crystal
-transparency. Unfortunately, these were not fully validated on the timescale of
-this analysis. Instead, an alternative set of corrections were used, derived
-globally for the dataset. This naturally has implications for the electron
-energy resolution, since applying these global corrections per-event will widen
-the momentum distribution while correcting the mean.
-
-The transparency corrections were derived for the \PW charge asymmetry
+Uncertainty on the electron momentum scale is dominated by the effect of the
+\ac{ECAL} transparency changes described in
+Section~\ref{sec:expt_laser_monitoring}. Corrections to account for this effect
+were derived for the \PW charge asymmetry
 measurement~\cite{w_charge_asymmetry}. The detector is divided into 6 bins in
 $\eta$. The \Zee mass distribution in data is then divided into $6 + ^6C_2$
 categories corresponding to cases where a \PZ is reconstructed from electrons in
@@ -1102,6 +1097,15 @@ by either 50\% of 150\% of the correction factors.
 The effect of the resolution corrections on the fit results was also judged by
 applying them in Monte Carlo. The resulting change was found to be negligible,
 and thus these factors were not applied in data.
+
+Since the method described above performs a global correction, the mean of the
+lepton momentum distribution is corrected, but the wdith will also be
+increased. By making use of the continuous measurements provided by the laser
+monitoring system, this could be significantly improved. These corrections were
+not fully validated on the timescale of the analysis. As a cross-check, the
+analysis was also performed using a preliminary version of the continuous
+corrections. The results were found to be fully consistent with those obtained
+using the continuous corrections.
 
 \subsubsection{Electron \ac{QCD} Background Estimation}
 \label{sec:wpol_syst_ele_bgest}
@@ -1195,10 +1199,21 @@ uncertainty on the helicity fractions is then taken to be the largest resulting
 fluctuation from the nominal fit value. This has been calculated for both lepton
 channels.
 
+The experimental uncertainties on \fLmfR and \f0 are shown in
+Tables~\ref{tbl:wpol_mu_syst}~and~\ref{tbl:wpol_elec_syst}. The largest
+systematic uncertainty on \fLmfR in the muon channel is due to the \ac{JES} and
+in the electron channel to the \MET resolution. For the measurement of \f0, the
+\ac{JES} uncertainty dominates in both channels. The \ac{QCD} background
+estimation uncertainty is generally larger in the \PWm channel. As will be seen
+in Table~\ref{tbl:fqcd_fit_results}, this is due to an increase in the
+correlation of \fLmfR and \fQCD.
+
+The effect of the leading uncertainties on the combined fit is shown in
+Table~\ref{tbl:wpol_combined_syst}. The introduction of the electron channel is
+seen to increase the overall systematic uncertainty.
 
 \input{tables/syst_muons}
-\input{tables/syst_electrons}
-\input{tables/syst_combined}
+\input{tables/syst_electrons} \input{tables/syst_combined}
 \input{tables/syst_theory}
 
 \section{Results}
