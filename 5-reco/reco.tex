@@ -395,10 +395,10 @@ corresponding track is then removed from the block.
 The next step is electron reconstruction. Electron tracks in the block are first
 selected by a pre-identification step - electrons often leave short tracks and
 lose energy via bremsstrahlung. Pre-identified electrons are then refit with a
-Gaussian Sum Filter (see Section~TODO) and projected into the \ac{ECAL}.
-Candidates passing tracking and calorimetric criteria are reconstructed as
-particle flow electrons. The track and associated \ac{ECAL} clusters are then
-removed from the block.
+Gaussian Sum Filter (see Section~\ref{sec:reco_electrons}) and projected into
+the \ac{ECAL}.  Candidates passing tracking and calorimetric criteria are
+reconstructed as particle flow electrons. The track and associated \ac{ECAL}
+clusters are then removed from the block.
 
 Tracks remaining are then subject to a tighter set of quality requirements, in
 particular that the track \Pt uncertainty be smaller than the relative
@@ -445,8 +445,8 @@ Remaining \ac{ECAL} and \ac{HCAL} clusters not linked to a track (or for which
 the associated track was disabled in the previous steps) are reconstructed as
 photons and neutral hadrons respectively.
 
-So called \ac{PF} jets are then reconstructed using a traditional jet clustering
-algorithm (see Section~TODO) using the full set of particle flow objects.
+\ac{PF} jets are reconstructed by applying the \antikT algorithm to the full set
+of \ac{PF} objects.
 
 \subsection{Physics Performance}
 Two aspects of the performance of the \ac{PF} reconstruction are of relevance to

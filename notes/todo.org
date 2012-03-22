@@ -8,6 +8,7 @@
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Monte carlo, MC
 ** TODO MT -> T roman style (generally transverse stuff)
+** TODO 7.2: single lepton -> single-lepton
 * SM
 ** TODO SM Higgs mass
 * SUSY
@@ -21,17 +22,16 @@
 * Object Reconstruction
 ** TODO check conversion rejection is sz with alex
 ** TODO check v boson production at hadron colliders is sz with alex
+** TODO check wpol conclusion sz with alex
 ** TODO PF diagram
    SCHEDULED: <2012-03-22 Thu>
-** TODO 4.5.4p-1: jet clustering todo
-   SCHEDULED: <2012-03-22 Thu>
+** DONE 4.5.4p-1: jet clustering todo
+   CLOSED: [2012-03-22 Thu 15:40] SCHEDULED: <2012-03-22 Thu>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 15:40]
 * Wpol
 ** TODO CMSSW version
 ** TODO Mention equivalence theorem in wpol section
 ** TODO Acceptance correction in wpol section
-** TODO Combined fit explanation
-** TODO Ensure that I've properly set out that we are fitting f0 and fL - fR
-** TODO Ensure fitting section is accurate
 ** TODO QCD penalty term
 ** TODO Wpol: data/mc plots and explain the normalisation of QCD
    CLOSED: [2011-12-07 Wed 20:52]
@@ -46,30 +46,15 @@
 *** TODO Statistics, systematics, cutflow jargon
 *** TODO Bold the Z+jets etc in titles
 ** Alex Wpol
-*** DONE 6.1: clarify NLO
-    CLOSED: [2012-03-22 Thu 10:28] SCHEDULED: <2012-03-22 Thu>
-    - State "DONE"       from "TODO"       [2012-03-22 Thu 10:28]
 *** TODO More explanation needed in PTW and YW dependence
     SCHEDULED: <2012-03-22 Thu>
-*** TODO Table 6.1: Errors? explain why etc?
-    SCHEDULED: <2012-03-22 Thu 10:30>
-*** TODO 6.3.7: Values for H/E etc in the trigger
-    SCHEDULED: <2012-03-23 Fri>
 *** TODO Table 6.4 and 6.3 should be more consistent
     SCHEDULED: <2012-03-22 Thu>
-*** TODO 6.5: cross-sections -> cross-section calculations and reference
-    SCHEDULED: <2012-03-23 Fri>
-*** TODO Reverse statement in last paragraph
-    SCHEDULED: <2012-03-23 Fri>
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-03-22 Thu 10:30>
-*** TODO cut flow: cut applied in the muon channel - clarify and show
 *** TODO Figure 6.5: Tidy up
 *** TODO ETmiss syst: Make clear this is an overestimate
     SCHEDULED: <2012-03-23 Fri>
-*** DONE lep mom scale: reference invariant modes
-    CLOSED: [2012-03-22 Thu 09:06]
-    - State "DONE"       from "TODO"       [2012-03-22 Thu 09:06]
 *** TODO Change the lepton scale bit to I did A. B would be an improvment
     SCHEDULED: <2012-03-22 Thu 11:00>
 *** TODO PDF uncertainties - average fluctuation why?
@@ -78,14 +63,7 @@
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Discuss these tables more (syst tables)
     SCHEDULED: <2012-03-23 Fri>
-*** TODO Conclusions: comment on goodness of fit
-    SCHEDULED: <2012-03-23 Fri>
-*** TODO agreement between mu and e
-    SCHEDULED: <2012-03-23 Fri>
-*** TODO relative precision
-    SCHEDULED: <2012-03-23 Fri>
 ** Alex SUSY search
-*** TODO 7.2: single lepton -> single-lepton
 *** TODO 7.4.4: Explain why not using all PF objects
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Table 7.4: SUSY triggers -> explain
@@ -96,7 +74,6 @@
     SCHEDULED: <2012-03-22 Thu>
 *** TODO Explain 30% and 50% figures for W/ttbar
     SCHEDULED: <2012-03-23 Fri>
-*** TODO Muon momentum scale: reference and explain more
 *** TODO PDFs: ref them & explain a bit better that this is on top of what was seen before
 *** TODO Figure 7.5: Improve
 *** TODO Table 7.6 and 7.7 should be clarified
@@ -804,3 +781,45 @@ Mostly done!
 ** DONE Say that CMSSM is mSUGRA inspired
    CLOSED: [2012-03-21 Wed 16:36]
    - State "DONE"       from "TODO"       [2012-03-21 Wed 16:36]
+** DONE Table 6.1: Errors? explain why etc?
+   CLOSED: [2012-03-22 Thu 10:47] SCHEDULED: <2012-03-22 Thu 10:30>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 10:47]
+** DONE 6.3.7: Values for H/E etc in the trigger
+   CLOSED: [2012-03-22 Thu 11:35] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 11:35]
+** DONE lep mom scale: reference invariant modes
+   CLOSED: [2012-03-22 Thu 09:06]
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 09:06]
+** DONE 6.1: clarify NLO
+   CLOSED: [2012-03-22 Thu 10:28] SCHEDULED: <2012-03-22 Thu>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 10:28]
+** DONE 6.5: cross-sections -> cross-section calculations and reference
+   CLOSED: [2012-03-22 Thu 12:11] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 12:11]
+** DONE Reverse statement in last paragraph
+   CLOSED: [2012-03-22 Thu 12:35] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 12:35]
+** DONE Conclusions: comment on goodness of fit
+   CLOSED: [2012-03-22 Thu 13:17] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 13:17]
+** DONE agreement between mu and e
+   CLOSED: [2012-03-22 Thu 13:17] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 13:17]
+** DONE relative precision
+   CLOSED: [2012-03-22 Thu 13:17] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 13:17]
+** DONE Ensure that I've properly set out that we are fitting f0 and fL - fR !!
+   CLOSED: [2012-03-22 Thu 14:43]
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 14:43]
+** DONE Ensure fitting section is accurate
+   CLOSED: [2012-03-22 Thu 14:43]
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 14:43]
+** CANCELLED Combined fit explanation
+   CLOSED: [2012-03-22 Thu 14:47]
+   - State "CANCELLED"  from "TODO"       [2012-03-22 Thu 14:47]
+** DONE Muon momentum scale: reference and explain more
+   CLOSED: [2012-03-22 Thu 15:06]
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 15:06]
+** DONE cut flow: cut applied in the muon channel - clarify and show
+   CLOSED: [2012-03-22 Thu 15:33]
+   - State "DONE"       from "TODO"       [2012-03-22 Thu 15:33]

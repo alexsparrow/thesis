@@ -385,7 +385,7 @@ Section~\ref{sec:susy_systematics}.
 \label{fig:susy_elqcd}
 \end{figure}
 
-\section{Systematics}
+\section{Systematic Uncertainties}
 \label{sec:susy_systematics}
 For this analysis, as with the \PW polarisation measurement, unavoidable
 dependence on simulation requires careful evaluation of associated systematic
@@ -398,7 +398,7 @@ the development of the analysis and continued throughout. Several of the
 systematics procedures were adopted or adapted from those used for the previous
 measurement (see Section~\ref{sec:wpol_systematics}).
 
-The background prediction procedure may be written as follows,
+The background prediction may be written as follows,
 \begin{equation}
 \NBkgi = \RCSi \times \NControli
 \end{equation}
@@ -471,8 +471,11 @@ uncertainty is calculated simulatenously for both lepton channels in order to
 maximise available statistics.
 
 \subsubsection{Muon Momentum Scale}
-A bias on the muon momentum is introduced. This is found to be 1\% from studies
-of the \PZ mass.
+Studies of the \PZ mass indicate a bias of 1\%~\cite{cms_mu_pas}. To estimate
+this effect, the muon momentum is varied as follows~\cite{susy_ra4_pas}:
+\begin{equation*}
+\Ptmu' = \Ptmu + \textrm{sign}(\mu) \times 0.01 {\Ptmu}^2/\unit{100}{\GeV} \times (1+\sin(\phi))
+\end{equation*}
 
 \subsubsection{\PW and \ttbar Polarisation}
 The polarisation in \ttbar events is found to be 5\%. Since the effect on \RCS

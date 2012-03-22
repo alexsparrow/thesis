@@ -406,10 +406,11 @@ referred to as \textbf{Loose}.
 The electron identification variables used are as described in
 Section~\ref{sec:reco_electron_id}. In order to achieve a strong suppression of
 the \ac{QCD} multi-jet background, the decision was made to choose a tighter
-working point than other \ac{CMS} analyses - the 70\% efficiency working
-point. Electrons passing these criteria will be referred to as
-\textbf{Tight}. For the purposes of vetoing dilepton events, the 95\% efficiency
-cuts were used. These will be referred to as \textbf{Loose} electrons.
+working point than other \ac{CMS} analyses - the 70\% efficiency working point
+(see Section~\ref{sec:wpol_electron_opt}). Electrons passing these criteria will
+be referred to as \textbf{Tight}. For the purposes of vetoing dilepton events,
+the 95\% efficiency cuts were used. These will be referred to as \textbf{Loose}
+electrons.
 
 In addition to the requirements of Section~\ref{sec:reco_electron_id}, three independent
 measurements of the charge are required to agree. These are measured as follows~\cite{wcharge_asymm2}:
@@ -423,8 +424,6 @@ measurements of the charge are required to agree. These are measured as follows~
 This requirement ensures that the charge misidentification rate is suitably low
 for any resulting systematic uncertainty to be neglected (see
 Section~\ref{sec:wpol_syst_charge_misid}).
-% TODO more detail on the choice of the 70\% working point. Perhaps should be
-% added later on.
 
 \subsection{Jets}
 \label{sec:wpol_jets}
@@ -665,13 +664,15 @@ the \minuit numerical optimisation code~\cite{minuit_paper}.
 The number of signal events in a given histogram bin $i$ in terms of the
 helicity fractions can be written as
 \begin{equation}
-S^j = \fL h_L^j + \fR h_R^j + (1-\fL-\fR)h_0^j
+S^j = \fL \hLj + \fR \hRj + (1-\fL-\fR)\hZj
+\label{eqn:wpol_fit_signal}
 \end{equation}
-where $h_i^j$ are each binned helicity templates derived from the reweighting
+where \hij are each binned helicity templates derived from the reweighting
 method described in Section~\ref{sec:wpol_reweighting}. The \f0
 coefficient has been rewritten using the relation $\fL + \fR +\f0 = 1$ and thus
 it is seen to be a two parameter fit.
 
+\subsection{Electroweak Backgrounds}
 As shown in Section~\ref{sec:wpol_yields}, a non-negligible background component
 is present in both channels arising from Drell-Yan and \ttbar production. These
 can be referred to collectively as electroweak background contamination. For
@@ -683,33 +684,47 @@ calculations~\cite{ellis_wp3jet,berger_wp4jet,heavy_quark,top_quark,drellyan}. T
 combined electroweak background template is then incorporated into the fit as
 follows:
 \begin{equation}
-E^j = f_{\textrm{sig}} S^j + (1-f_{\textrm{sig}}) B^j
+E^j = \fsig S^j + (1-\fsig) B^j
 \end{equation}
-where $f_{\textrm{sig}}$ is the ratio of the simulated \Wjets yield to the total
+where \fsig is the ratio of the simulated \Wjets yield to the total
 simulated yield and $B^j$ is the combined \LP template for the \Zjets and \ttbar
-backgrounds. It should be emphasised that the variable $f_{\textrm{sig}}$ is not
+backgrounds. It should be emphasised that the variable \fsig is not
 free in the fit and thus does not introduce an additional degree of freedom.
 
+\subsection{\ac{QCD} Multi-jet Background}
 The previous formula is adequate for modelling the muon channel. For the
 electron channel, it has already been shown that (see
 Table~\ref{tbl:wpol_electron_yields}) \ac{QCD} multijet events as well as
 \gammajets production provide a non-negligible additional contribution. To deal
 with this, the formula is extended as follows:
 \begin{equation}
-N^j = (1 - f_{\textrm{qcd}}) E^j + f_{\textrm{qcd}}Q^j
+N^j = (1 - \fQCD) E^j + \fQCD Q^j
 \end{equation}
-where $f_{\textrm{qcd}}$ is the ratio of the QCD multijet/\gammajets background
+where \fQCD is the ratio of the QCD multijet/\gammajets background
 to the total event yield and $Q^j$ is a shape template derived via the procedure
 described in Section~\ref{sec:wpol_data_driven_bg}. Unfortunately, as has
 already been stated, the simulation of QCD events is not yet reliable for direct
 inclusion into the fit - as for the electroweak backgrounds. From the
 perspective of the fitting procedure, an important issue is that the relative
-fraction $f_{\textrm{qcd}}$ cannot be predicted from simulation. It is therefore
+fraction \fQCD cannot be predicted from simulation. It is therefore
 allowed to float freely in the fit. This procedure could be improved in future
 by the inclusion of an independent measurement of the \ac{QCD} contamination,
 for instance from a fit to the \MET shape. This would likely achieve better
 separation of the \ac{QCD} component from the other backgrounds and thus a
-tighter constraint on $f_{\textrm{qcd}}$.
+tighter constraint on \fQCD.
+
+\subsection{Fitting \fLmfR and \f0}
+\label{sec:wpol_fit_fmfr}
+For the final result, Equation~\ref{eqn:wpol_fit_signal} was modifed to fit
+instead in terms of the parameters \fLmfR and \f0,
+\begin{equation}
+S^j = \fLmfR \left (\hLj -\hRj\right) + \left(1-\f0\right)\left(\hLj +\hRj\right) +\f0\hZj
+\end{equation}
+This reflects the fact that the parameter of interest is actually the difference
+between the left-handed and right-handed helicity fractions. It should be noted
+that since all helicity fractions must be non-negative,
+$\fLmfR\leq\fLpfR$. Since $\fL +\fR + \f0 = 1$, it can be seen that $\fLmfR +
+\f0 \leq 1$. This inequality defines the physical region of the parameter space.
 
 \subsection{Combined Fit}
 It has been noted that the helicity fractions are charge dependent but lepton
@@ -718,9 +733,6 @@ simultaneously fitting both muon and electron channels. Due to the lower
 efficiencies in the electron channel, this is not quite a doubling of the sample
 size but should still significantly reduce the statistical error.
 
-
-% TODO more on minimization here
-% TODO
 \section{Electron Channel}
 \subsection{\ac{QCD} Background}
 The principal difficulty faced by the electron channel over-and-above the muon
@@ -765,13 +777,20 @@ where now the photon is the source of both fake \MET and the fake lepton.
 
 
 \subsection{Optimisation of Selection Requirements}
-\label{sec:wpol_electron_opt}with
+\label{sec:wpol_electron_opt}
 A key challenge in the electron channel was posed by the significant background
-from \ac{QCD} multijet events. The $\MT > \unit{30}{\GeV}$ cut applied in the
-muon channel is unable to eliminate these events. An optimisation study was
-undertaken to determine the optimal kinematic and lepton identification cuts,
-quantified by the uncertainty obtained in the final template fit. Some
-indication of the effect of the kinemtics cuts is given in
+from \ac{QCD} multijet events. Figure~\ref{fig:wpol_met_vs_mt_templates} shows
+the effect of two possible kinematic cuts on the \LP shape for signal and
+background events in simulation: $\MT > \unit{30}{\GeV}$ as used in the muon
+channel, and $\MET > \unit{30}{\GeV}$. Clearly the \MET cut is more effective at
+suppressing the \ac{QCD} background. However, the \MET cut also tends to remove
+events with a soft neutrino, or alternatively a large \Pte. This is apparent in
+the shape of the right-handed helicity template which has been ``cut away'' at
+$\LP\sim 1$.
+
+An optimisation study was undertaken to determine the optimal kinematic and
+lepton identification cuts, as determined by the uncertainties from the template
+fit. Some indication of the effect of the kinemtics cuts is given in
 Figure~\ref{fig:wpol_ele_significance}. This shows the signal and background
 yields as a function of varying \MET and \MT cuts applied after all other cuts
 listed in Table~\ref{tbl:wpol_cutflow}. The background in this case is the sum
@@ -787,6 +806,11 @@ This point is further reinforced in Figure~\ref{fig:wpol_met_mt_fqcd}. Here the
 $x$ and $y$ axes denote cut values of \MET and \MT. For each point on the plot,
 the fraction of the total event yield due to \ac{QCD} mutlijet production is
 plotted for those events surviving a combined cut on the \MET and \MT.
+
+Figure~\ref{fig:wpol_wp80_vs_wp70} compares the \LP shape in signal and
+background events using two different electron ID working points. The 70\%
+efficiency working point is seen to reject considerably more of the \ac{QCD}
+background. This motivated the use of the tighter electron ID.
 
 \begin{figure}
 \includegraphics[width=0.8\textwidth]{fig/ewpol_significance}
@@ -809,15 +833,6 @@ respect to varying cuts on \MET and \MT.]{Plots illustrating the signal
   multijet events. All other selection requirements have been applied. }
 \label{fig:wpol_met_mt_fqcd}
 \end{figure}
-
-The effect of a \MET or \MT $> \unit{30}{\GeV}$ cut on the shape of the \LP
-templates for simulated \PWp events can be seen in
-Figure~\ref{fig:wpol_met_vs_mt_templates}. The \ac{QCD} background is clearly
-much reduced in the case of the \MET cut. However, as expected, the \MET cut
-removes events with a soft neutrino. Put in a different way, these are events in
-which the positron receives most of the energy from the \PW decay. The effect of
-this is seen in the shape of the right-handed helicity templates, which has
-clearly been cut away at $\LP \sim 1$.
 
 \begin{figure}
 \centering
@@ -1005,11 +1020,11 @@ uncertainty is then taken to be largest of the two errors.
 In addition to the modelling of the jet energy scale, another possible source of
 mismeasurement stems from the resolution effects included in the simulation of
 the detector. The resolution predicted by the Monte Carlo is known to
-considerably underestimate that observed in the data~\cite{cms_met_paper,
-  cms_met_pas}. To account for this, additional ``smearing'' was applied to the
-missing transverse energy in simulation. The difference between this ``increased
-resolution'' case and the nominal conditions in simulation is then taken as an
-additional source of systematic error.
+considerably underestimate that observed in the
+data~\cite{cms_met_paper,cms_met_pas}. To account for this, additional
+``smearing'' was applied to the missing transverse energy in simulation. The
+difference between this ``increased resolution'' case and the nominal conditions
+in simulation is then taken as an additional source of systematic error.
 
 As the first step of the procedure, the resolution on \PtW is extracted from the
 simulation in bins of the generator level \PtW quantity. For simulated \Wjets
@@ -1199,14 +1214,42 @@ dataset are shown in Figure~\ref{fig:wpol_fit_results}. The signal and
 background templates are shown individually along with the fitted values of
 \fLmfR and \f0. The full error contour plots in the $(\fLmfR, \f0)$ plane are
 shown in Figures~\ref{fig:wpol_contour_ele} and \ref{fig:wpol_contour_mu} for
-electrons and muons respectively. It is clear in both cases that the predominant
-left-handed polarisation described in Section~\ref{sec:polarisation} has been
-observed with a large significance.
+electrons and muons respectively. The shading indicated the unphysical region of
+the parameter space described in Section~\ref{sec:wpol_fit_fmfr}. It is clear in
+both cases that the predominant left-handed polarisation described in
+Section~\ref{sec:polarisation} has been observed with a large significance.
+
+The error contours for the two combined fits - one per lepton charge - are shown
+in Figure~\ref{fig:wpol_contour_comb}. The results of each fit are presented in
+Table~\ref{tbl:wpol_fitresults} along with statistical and systematic
+uncertainties. Also shown are the global correlation in each case and the \chisq
+measure of the goodness-of-fit. Table~\ref{tbl:fqcd_fit_results} shows the
+results for the parameter \fQCD in the electron-only and combined fits.
+
+It is seen that the most precise measurement is provided by the muon channel
+alone. All three measurements are found to be consistent within their quoted
+uncertainties. The statistical uncertainty in the electron channel is
+approximately two times larger than for the muon channel, due to the
+significantly tighter selection requirements. Whilst the combined fit offers a
+small improvement in statistical precision over the muon channel alone, this is
+more than offset by the larger systematic uncertainties in the electron
+channel. The $\chi^2/\textrm{ndof}$ measure of the goodness of fit indicates
+that all fits are reasonably good. The $\Pep$ channel appears to be slightly
+worse - presumably due to the dip at $\LP \approx 0.5$ in the data distribution
+Figure~\ref{fig:wpol_fit_ele_plus}.
+
+Table~\ref{tbl:fqcd_fit_results} suggests the parameter \fQCD has been fit
+consistently throughout. No significant charge asymmetry is expected and none is
+observed. The larger correlation of \fLmfR in the \PWm channels appears to be
+consistent with Figure~\ref{fig:wpol_fit_ele_minus}, where the left-handed and
+\ac{QCD} templates show considerable similarity in shape. In the combined fits,
+the correlation between the helicity parameters and \fQCD is reduced by the
+addition of the muon channel.
 
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:wpol_fit_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\quad
-\subfloat[]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\\
+\subfloat[]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_MinusICVar}}\\
 \subfloat[]{\label{fig:wpol_fit_mu_plus}\includegraphics[width=0.45\textwidth]{fig/muon_MC_WHelicityFramePlots_PlusICVar}}\quad
 \subfloat[]{\label{fig:wpol_fit_mu_minus}\includegraphics[width=0.45\textwidth]{fig/muon_MC_WHelicityFramePlots_MinusICVar}}
 \caption{Results of the binned maximum likelihood fit to \unit{36}{\invpb} of
@@ -1243,9 +1286,7 @@ observed with a large significance.
 \label{fig:wpol_contour_mu}
 \end{figure}
 
-Two combined fits have also been performed across both lepton flavours, one for
-each lepton charge. The error contours are shown in
-Figure~\ref{fig:wpol_contour_comb}.
+
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:wpol_contour_comb_plus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_plus}}\quad
@@ -1258,9 +1299,6 @@ Figure~\ref{fig:wpol_contour_comb}.
 \label{fig:wpol_contour_comb}
 \end{figure}
 
-The results of each fit are presented in Table~\ref{tbl:wpol_fitresults} along
-with statistical and systematic errors. Also shown are the global correlation in
-each case and the \chisq measure of the goodness-of-fit.
 
 \input{tables/fit_results}
 \input{tables/fqcd_fit_results}
@@ -1274,20 +1312,24 @@ at \ac{CMS} using \unit{36}{\invpb} of data from the 2010 run of the
 electron channels for leptons of identical charge and for \PW boson with
 transverse momentum greater than \unit{50}{\GeV}. In addition, a combined
 measurement has been obtained via a simultaneous fit to both channels, again
-separated by lepton charge. The most precise measurement is provided by the muon
-channel alone. The dominant left-handed polarisation effect described in
-Section~\ref{sec:polarisation} is established with a significance of 7.8 and 5.1
-$\sigma$ for \PWp and \PWm respectively.
+separated by lepton charge.
+
+The most precise measurement is provided by the muon channel alone. The dominant
+left-handed polarisation effect described in Section~\ref{sec:polarisation} is
+established with a significance of 7.8 and 5.1 $\sigma$ for \PWp and \PWm
+respectively. The same is observed in the electron channel, with 3.5 and 2.0
+$\sigma$ respectively. Finally, a simultaneous fit yields significances of 6.5
+and 3.8 $\sigma$ respectively.
 
 Whilst the primary goal of the measurement was to confirm the transverse
 polarisation effect, the longitudinal polarisation fraction has also been
 measured, albeit with less sensitivity.
 
 After publication of this result~\cite{cms_wpol_paper}, a set of theoretical
-predictions were published~\cite{berger_left_handed_w}. The Blackhat Monte Carlo
-generator was used to compare like-for-like with this measurement. This
-comparison is shown in Table~\ref{tbl:wpol_theory_comparison}. It can be seen
-that this measurement agrees well with the theoretical expectations.
+predictions at \ac{NLO} were published~\cite{berger_left_handed_w}. The Blackhat
+Monte Carlo generator was used to compare like-for-like with the results of this
+analysis. The comparison is shown in Table~\ref{tbl:wpol_theory_comparison}. All
+measurements are seen to agree well with theoretical predictions.
 
 %%% Local Variables:
 %%% mode: latex
