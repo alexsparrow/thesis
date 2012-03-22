@@ -20,6 +20,7 @@
 ** TODO CMS: Refer to figure in strip tracker + add figure
 * Object Reconstruction
 ** TODO check conversion rejection is sz with alex
+** TODO check v boson production at hadron colliders is sz with alex
 ** TODO PF diagram
    SCHEDULED: <2012-03-22 Thu>
 ** TODO 4.5.4p-1: jet clustering todo
@@ -45,8 +46,9 @@
 *** TODO Statistics, systematics, cutflow jargon
 *** TODO Bold the Z+jets etc in titles
 ** Alex Wpol
-*** TODO 6.1: clarify NLO
-    SCHEDULED: <2012-03-22 Thu>
+*** DONE 6.1: clarify NLO
+    CLOSED: [2012-03-22 Thu 10:28] SCHEDULED: <2012-03-22 Thu>
+    - State "DONE"       from "TODO"       [2012-03-22 Thu 10:28]
 *** TODO More explanation needed in PTW and YW dependence
     SCHEDULED: <2012-03-22 Thu>
 *** TODO Table 6.1: Errors? explain why etc?
@@ -65,7 +67,9 @@
 *** TODO Figure 6.5: Tidy up
 *** TODO ETmiss syst: Make clear this is an overestimate
     SCHEDULED: <2012-03-23 Fri>
-*** TODO lep mom scale: reference invariant modes
+*** DONE lep mom scale: reference invariant modes
+    CLOSED: [2012-03-22 Thu 09:06]
+    - State "DONE"       from "TODO"       [2012-03-22 Thu 09:06]
 *** TODO Change the lepton scale bit to I did A. B would be an improvment
     SCHEDULED: <2012-03-22 Thu 11:00>
 *** TODO PDF uncertainties - average fluctuation why?

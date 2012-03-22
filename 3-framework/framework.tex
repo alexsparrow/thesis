@@ -5,11 +5,11 @@ The previous two chapters have given a theoretical overview of the \acl{SM} and
 realm of experiment, this chapter will provide a higher-level discussion more
 suited to the results that will be presented later on.
 
-A theoretical description of \PW production at a hadron collider is given in
+A brief account of vector boson production at a hadron collider is given in
 Section~\ref{sec:framework_wpol}, along with details of the transverse
-polarisation effect at the \ac{LHC}. This motivates the measurement described in
-Chapter~\ref{sec:wpol} and is the framework within which its experimental
-results will be interpreted.
+polarisation effect for \PW bosons at the \ac{LHC}. This motivates the
+measurement described in Chapter~\ref{sec:wpol} and forms the framework within
+which the experimental results will be interpreted.
 
 For the supersymmetry search, several possible models are discussed in
 Section~\ref{sec:framework_susy}. Given the unknown nature of \ac{SUSY}, these
@@ -20,9 +20,32 @@ of the \ac{SUSY} search will be interpreted in the context of these models.
 \section[W Polarisation]{\PW Polarisation}
 \label{sec:framework_wpol}
 Some theoretical background relating to the \acl{SM} has been presented in
-Section~\ref{sec:sm}.  Here, discussion will continue to cover the theory of \PW
-boson production in association with jets at a hadron collider. This will often
-be abbreviated as \Wjets.
+Section~\ref{sec:sm}.  Here, \PW and \PZ production in association with jets at
+hadron colliders - abbreviated respectively as \Wjets and \Zjets - will be
+briefly explained. Theoretical background to the \PW polarisation will then be
+discussed.
+
+\subsection{Vector Boson Production at Hadron Colliders}
+\label{sec:framework_vboson}
+A detailed account of massive vector boson production at hadron colliders can be
+found in~\cite{nadolsky, pink_book}. Production at hadron colliders proceeds
+predominantly via $\Pquark\APquark$ or $\Pquark\Pgluon$ interactions and is
+highly dependent on \ac{QCD} calculations. Cross-sections can be calculated as
+the product of the hard scattering cross-section evaluated in perturbative
+\ac{QCD} and a \ac{PDF}. The \ac{PDF} is a probability density function for the
+probability of finding a parton with a given fraction of the longitudinal
+momentum, $x$, as a function of the momentum transfer, $Q^2$. It is obtained
+from a fit of a parameterised model to hadronic data. Cross-section calculations
+for these processes may be referred to as \ac{LO} or \ac{NLO} indicating the
+precision of the calculation in terms of the expansion of the strong coupling
+constant, \alphas~\cite{ellis_wp3jet}.
+
+These processes have been extensively studied and significant recent progress
+made, particularly for calculation of higher jet multiplicity
+observables~\cite{berger_left_handed_w,berger_nlo_qcd_wjet}. The \Wjets
+cross-section has been calculated at \ac{NLO} for up to 4 jets~\cite{berger_wp4jet}. The discussion
+will now turn to aspects relevant to \Wjets production and in particular the
+polarisation effects.
 
 \subsection{Polarisation Effects Parallel to the Beam Line}
 For small values of \PW transverse momentum, \PtW the differential angular
@@ -33,9 +56,10 @@ distribution
 \frac{dN}{d(\cos\theta)} \propto (1\mp \cos\theta)^2
 \end{equation}
 
-It is well known from straightforward helicity arguments~\cite{mirkes_w_1994}that
-\PW produced along the beam axis will exhibit a 100\% left-handed polarisation. This
-can be seen by considering the leading order partonic subprocesses
+It is well known from straightforward helicity
+arguments~\cite{mirkes_w_1994} that \PW bosons produced along the beam axis will
+exhibit a 100\% left-handed polarisation. This can be seen by considering the
+leading order partonic subprocesses
 \begin{equation}
 \Pup\APdown \longrightarrow \PWp \qquad\textrm{and}\qquad
 \Pdown\APup\longrightarrow\PWm
@@ -93,15 +117,15 @@ similarly constrained by spin arguments (since the \PW is not coupled directly
 to the quark) and thus the polarisation will not be seen.
 
 It can be shown that for a left-handed incoming gluon, the $t$-channel diagram
-can be made to vanish. For a right-handed gluon, the \PW polarisation is not
-constrained but has been shown to become predominantly right-handed at high
-\PtW. At high \PtW, the outgoing \PW helicity will be almost 100\% correlated
-with the incoming gluon and due to a factor 4 difference in the size of the
-corresponding matrix elements, the \PW is expected to asymptotically approach an
-80\% left-handed polarisation with increasing \PtW. Due to the \VminusA
-coupling, the decay leptons may act as an analyser of the \PW
-polarisation. Having provided some motivation for the existence of the effect, a
-more detailed discussion will follow.
+can be made to vanish~\cite{berger_left_handed_w}. For a right-handed gluon, the
+\PW polarisation is not constrained but has been shown to become predominantly
+right-handed at high \PtW. At high \PtW, the outgoing \PW helicity will be
+almost 100\% correlated with the incoming gluon and due to a factor 4 difference
+in the size of the corresponding matrix elements, the \PW is expected to
+asymptotically approach an 80\% left-handed polarisation with increasing
+\PtW. Due to the \VminusA coupling, the decay leptons may act as an analyser of
+the \PW polarisation. Having provided some motivation for the existence of the
+effect, a more detailed discussion will follow.
 
 \begin{figure}
 \centering
@@ -210,7 +234,7 @@ arrangement is illustrated in Figure~\ref{fig:wpol_helicity_frame}. For $0 <
 the \PW boson and thus a smaller \Pt. Alternatively, for $\frac{\pi}{2} <
 |\phistar| < \pi$, the lepton will have a smaller rapidity and a larger \Pt.
 
-\begin{figure}
+\begin{figure}[ht!]
 %\includegraphics[width=0.8\textwidth]{fig/helicity_frame_polnote}
 \includegraphics[width=0.8\textwidth]{fig/helicity_frame_better}
 \caption[The Helicity Frame]{The Helicity Frame~\cite{berger_left_handed_w}}
@@ -218,6 +242,7 @@ the \PW boson and thus a smaller \Pt. Alternatively, for $\frac{\pi}{2} <
 \end{figure}
 
 \subsubsection{Quantifying Helicity}
+\label{sec:quant_helicity}
 The hadronic cross-section of the \PW is obtained within the parton model by
 weighting the individual parton-level cross-sections by the respective parton
 densities~\cite{mirkes_w_1994},
@@ -228,11 +253,11 @@ f_a^{h_1}\left(x_1, \mu_F^2\right)f_b^{h_2}\left(x_2, \mu_F^2\right)
 \alpha_s (\mu_R^2)\right)
 \end{equation}
 where $h_1$ and $h_2$ are the interacting hadrons and the sum runs over $a,b =
-\Pquark, \APquark, \Pgluon$. The parton density functions $f_a^{h}\left(x,
-  \mu^2\right)$ give the probability of finding a parton $a$ with momentum
-fraction $x$ in hadron $h$ when probed at a scale $\mu^2$. The
-$d\tilde{\sigma}_{ab}$ are the parton-level cross-sections for the chosen
-process(es). The hadron-level Mandelstam variables are written uppercase
+\Pquark, \APquark, \Pgluon$. The \acp{PDF} $f_a^{h}\left(x, \mu^2\right)$ give
+the probability of finding a parton $a$ with momentum fraction $x$ in hadron $h$
+when probed at a scale $\mu^2$. The $d\tilde{\sigma}_{ab}$ are the parton-level
+cross-sections for the chosen process(es). The hadron-level Mandelstam variables
+are written uppercase
 \begin{equation*}
 S = (P_1 + P_2)^2 \qquad T = (P_1 - Q)^2 \qquad U = (P_2 - Q)^2
 \end{equation*}

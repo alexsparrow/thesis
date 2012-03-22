@@ -4,13 +4,14 @@
 The study of \Wjets production at a hadron collider presents an important
 opportunity for furthering understanding of the underlying Electroweak and
 \ac{QCD} processes. In particular, since it is one of a relatively small number
-of processes for which highly precise \ac{NLO} calculations have been performed,
-experimental measurements can give a direct constraint on the \acp{PDF}. \Wjets
-production is also of considerable interest in the context of \ac{NP} searches
-where these events are often a significant background. Finally, the neutrino in
-the leptonic decay mode provides a source of ``real'' missing energy which can
-be useful in the understanding of detector effects relevant to searches for
-\acs{WIMP}-type particles present in \ac{SUSY} and other theories.
+of processes for which highly precise \ac{NLO} calculations have been performed
+(see Section~\ref{sec:framework_vboson}), experimental measurements can provide
+constraints on the \acp{PDF}. \Wjets production is also of considerable interest
+in the context of \ac{NP} searches where these events are often a significant
+background. Finally, the neutrino in the leptonic decay mode provides a source
+of ``real'' missing energy which can be useful in the understanding of detector
+effects relevant to searches for \acs{WIMP}-type particles present in \ac{SUSY}
+and other theories.
 
 \section{Measuring the Helicity Fractions of the \texorpdfstring{\PW}{W} Boson}
 \subsection{Generator and Simulation Level Expectations}
@@ -24,9 +25,9 @@ quantities. This is vital to ensure that the measurement of helicity fractions
 is actually feasible and not washed out by some experimental effect.
 
 Unless otherwise noted, the \Wjets samples used is produced using the
-\madgraph~\cite{madgraph} generator interfaced to \pythia~\cite{pythia}. The
-generated sample comprised approximately 15 million events with the \acp{PDF}
-taken from the \cteqsixlone set within the \lhapdf software
+\madgraph~\cite{madgraph} generator interfaced to \pythia version
+6~\cite{pythia}. The generated sample comprised approximately 15 million events
+with the \acp{PDF} taken from the \cteqsixlone set within the \lhapdf software
 package~\cite{lhapdf, lhapdf_web}.
 
 Shown in Figure~\ref{fig:wpol_costheta} are $\cos\thetastar$ distributions at
@@ -273,9 +274,9 @@ Finally, a full reconstruction level closure test was performed in both electron
 and muon channels and applying all of the analysis cuts listed in
 Section~\ref{sec:wpol_cutflow}. The results are also shown in
 Table~\ref{tbl:wpol_closure_tests}. The muon channel is seen to recover the
-``true'' helicity fractions to within their statistical error. The electron
-channel, further complicated by \ac{QCD} contributions is seen to close within
-the statistical error derived from the maximum likelihood fit. This corresponds
+``true'' helicity fractions to within the uncertainty of the analytical fit. The
+electron channel, further complicated by \ac{QCD} contributions is seen to close
+within the statistical error of the reconstruction-level fit. This corresponds
 to \unit{100}{\invpicobarn} of simulated data.
 
 \input{tables/closure_tests}
@@ -596,12 +597,14 @@ Where \texttt{EleX} indicates an electron with $p_T > \unit{X}{\GeV}$. The
 \texttt{LW} and \texttt{SW} stand for large window and small window
 respectively. Here, window refers to the electron pixel-matching window and thus
 the large window cut is looser and intended to be used during start-up
-conditions. All triggers include \HoverE cuts on the electron. In addition,
+conditions. All triggers include an \HoverE cut, $\HoverE < 0.15$. In addition,
 those with \texttt{CaloEleId} or \texttt{TightEleId} impose additional electron
-identification requirements. The first applies only a \sigmaieta cut (see
-Section~\ref{sec:wpol_electronid}), whilst the second applies constraints on the
-angular matching variables between the track and the supercluster (\deltaphiin,
-\deltaetain) in addition to the \texttt{CaloEleId} requirement.
+identification requirements. The former applies an additional \sigmaieta cut
+(0.014 in the barrel and 0.032 in the endcaps). The latter applies constraints
+on the angular matching variables between the track and the supercluster
+($\deltaetain < 0.01$, $\deltaphiin < 0.08$) in addition to the \sigmaieta
+requirement. These should be compared with the values in
+Table~\ref{tbl:reco_electronid}.
 
 \section{Monte Carlo Expectation}
 \subsubsection{Simulated Samples}
@@ -675,8 +678,10 @@ can be referred to collectively as electroweak background contamination. For
 these processes, the simulation is believed to be accurate enough to include
 simulated \LP shape templates directly in the fit. In addition, the ratio of the
 \Wjets vs electroweak background contributions is fixed assuming \ac{NLO}
-cross-sections. The combined electroweak background template is then
-incorporated into the fit as follows:
+cross-section
+calculations~\cite{ellis_wp3jet,berger_wp4jet,heavy_quark,top_quark,drellyan}. The
+combined electroweak background template is then incorporated into the fit as
+follows:
 \begin{equation}
 E^j = f_{\textrm{sig}} S^j + (1-f_{\textrm{sig}}) B^j
 \end{equation}
@@ -699,13 +704,12 @@ described in Section~\ref{sec:wpol_data_driven_bg}. Unfortunately, as has
 already been stated, the simulation of QCD events is not yet reliable for direct
 inclusion into the fit - as for the electroweak backgrounds. From the
 perspective of the fitting procedure, an important issue is that the relative
-fraction $f_{\textrm{qcd}}$ cannot be predicted from simulation. It must either
-be fixed by some data-driven measurement or allowed to float freely in the
-fit. Whilst an independent measurement might perform better - given that \LP is
-not designed to discriminate between electroweak and qcd backgrounds - it was
-not possible on the timescale of this analysis. Instead, the value of
-$f_{\textrm{qcd}}$ is allowed to float, introducing an extra degree of freedom
-to the electron channel.
+fraction $f_{\textrm{qcd}}$ cannot be predicted from simulation. It is therefore
+allowed to float freely in the fit. This procedure could be improved in future
+by the inclusion of an independent measurement of the \ac{QCD} contamination,
+for instance from a fit to the \MET shape. This would likely achieve better
+separation of the \ac{QCD} component from the other backgrounds and thus a
+tighter constraint on $f_{\textrm{qcd}}$.
 
 \subsection{Combined Fit}
 It has been noted that the helicity fractions are charge dependent but lepton
@@ -1032,7 +1036,8 @@ different for the electron and muon channels.
 
 The muon momentum scale uncertainty due to material and B-field uncertainties
 has been shown to be small. However, a charge asymmetric \Pt bias might appear
-via ``$\chi^2$ invariant modes''. By calculating the difference in the \PZ mass
+via ``$\chi^2$ invariant modes''~\cite[section
+2.4]{matthias_edelhoff_thesis}. By calculating the difference in the \PZ mass
 between events with a positively and negatively charged leading muon (in terms
 of \Pt), the size of this effect can be judged. No significant effect is
 observed in data. The errors on this measurement are used to place an upper
