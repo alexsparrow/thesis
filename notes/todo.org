@@ -67,7 +67,8 @@
 ** TODO Why 10% PDF uncertainty?
 ** TODO SMS ensure this section makes sense and is correct
 
-
+Given the weirdness with the Wjets sample, I should possibly redo the SMS limits
+using the lower stats one. If it makes a big difference, I should switch it out.
 
 * Old
   :VISIBILITY: folded
