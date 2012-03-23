@@ -25,21 +25,15 @@
 ** TODO check wpol conclusion sz with alex
 ** TODO check wpol syst sz with alex
 ** TODO check MET resolution systematic bit with alex
-** TODO PF diagram
-   SCHEDULED: <2012-03-22 Thu>
+** TODO check wz about hadron decays for sigma(D0)
 * Wpol
 ** TODO CMSSW version
-** DONE Mention equivalence theorem in wpol section
-   CLOSED: [2012-03-23 Fri 09:56]
-   - State "DONE"       from "TODO"       [2012-03-23 Fri 09:56]
 ** TODO Acceptance correction in wpol section
 ** TODO QCD penalty term
 ** TODO Wpol: data/mc plots and explain the normalisation of QCD
-   CLOSED: [2011-12-07 Wed 20:52]
-   - State "DONE"       from "TODO"       [2011-12-07 Wed 20:52]
 ** TODO Would be nice to have the JEC uncertainty ratios for electrons too
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
-** TODO Reference SM section for chirality + possibly equiv theorem
+** TODO Reference SM section for chirality
    SCHEDULED: <2012-03-20 Tue>
 ** TODO additional plots showing data/mc
 ** General Alex
@@ -57,10 +51,6 @@
 ** Alex SUSY search
 *** TODO 7.4.4: Explain why not using all PF objects
     SCHEDULED: <2012-03-23 Fri>
-*** TODO 7.8.1: explain sigma(D0) > 3
-    SCHEDULED: <2012-03-23 Fri>
-*** TODO Hadronic recoil resolution: overestimate
-    SCHEDULED: <2012-03-22 Thu>
 *** TODO Explain 30% and 50% figures for W/ttbar
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Figure 7.5: Improve
@@ -835,3 +825,15 @@ Mostly done!
 ** DONE Table 7.4: SUSY triggers -> explain
    CLOSED: [2012-03-23 Fri 13:08] SCHEDULED: <2012-03-23 Fri>
    - State "DONE"       from "TODO"       [2012-03-23 Fri 13:08]
+** DONE 7.8.1: explain sigma(D0) > 3
+   CLOSED: [2012-03-23 Fri 14:28] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-23 Fri 14:28]
+** DONE Hadronic recoil resolution: overestimate
+   CLOSED: [2012-03-23 Fri 14:40] SCHEDULED: <2012-03-22 Thu>
+   - State "DONE"       from "TODO"       [2012-03-23 Fri 14:40]
+** DONE PF diagram
+   CLOSED: [2012-03-23 Fri 15:18] SCHEDULED: <2012-03-22 Thu>
+   - State "DONE"       from "TODO"       [2012-03-23 Fri 15:18]
+** DONE Mention equivalence theorem in wpol section
+   CLOSED: [2012-03-23 Fri 09:56]
+   - State "DONE"       from "TODO"       [2012-03-23 Fri 09:56]
