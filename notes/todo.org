@@ -24,11 +24,14 @@
 ** TODO check v boson production at hadron colliders is sz with alex
 ** TODO check wpol conclusion sz with alex
 ** TODO check wpol syst sz with alex
+** TODO check MET resolution systematic bit with alex
 ** TODO PF diagram
    SCHEDULED: <2012-03-22 Thu>
 * Wpol
 ** TODO CMSSW version
-** TODO Mention equivalence theorem in wpol section
+** DONE Mention equivalence theorem in wpol section
+   CLOSED: [2012-03-23 Fri 09:56]
+   - State "DONE"       from "TODO"       [2012-03-23 Fri 09:56]
 ** TODO Acceptance correction in wpol section
 ** TODO QCD penalty term
 ** TODO Wpol: data/mc plots and explain the normalisation of QCD
@@ -44,21 +47,15 @@
 *** TODO Statistics, systematics, cutflow jargon
 *** TODO Bold the Z+jets etc in titles
 ** Alex Wpol
-*** TODO More explanation needed in PTW and YW dependence
-    SCHEDULED: <2012-03-22 Thu>
 *** TODO Table 6.4 and 6.3 should be more consistent
     SCHEDULED: <2012-03-22 Thu>
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-03-22 Thu 10:30>
 *** TODO Figure 6.5: Tidy up
-*** TODO ETmiss syst: Make clear this is an overestimate
-    SCHEDULED: <2012-03-23 Fri>
 *** TODO Why 25% for Z and 50 for ttbar
     SCHEDULED: <2012-03-23 Fri>
 ** Alex SUSY search
 *** TODO 7.4.4: Explain why not using all PF objects
-    SCHEDULED: <2012-03-23 Fri>
-*** TODO Table 7.4: SUSY triggers -> explain
     SCHEDULED: <2012-03-23 Fri>
 *** TODO 7.8.1: explain sigma(D0) > 3
     SCHEDULED: <2012-03-23 Fri>
@@ -829,3 +826,12 @@ Mostly done!
 ** DONE PDF uncertainties - average fluctuation why?
    CLOSED: [2012-03-22 Thu 18:28] SCHEDULED: <2012-03-23 Fri>
    - State "DONE"       from "TODO"       [2012-03-22 Thu 18:28]
+** DONE ETmiss syst: Make clear this is an overestimate
+   CLOSED: [2012-03-23 Fri 10:42] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-23 Fri 10:42]
+** DONE More explanation needed in PTW and YW dependence
+   CLOSED: [2012-03-23 Fri 11:18] SCHEDULED: <2012-03-22 Thu>
+   - State "DONE"       from "TODO"       [2012-03-23 Fri 11:18]
+** DONE Table 7.4: SUSY triggers -> explain
+   CLOSED: [2012-03-23 Fri 13:08] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-23 Fri 13:08]

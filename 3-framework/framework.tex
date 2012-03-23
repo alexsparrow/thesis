@@ -206,15 +206,9 @@ dominant left-handed polarisation mode.
 \end{figure}
 
 As has been seen, the proton-proton environment at the \ac{LHC} is expected to
-lead to a dominance of left-handed over right-handed helicity states for high
-transverse momentum \PW bosons. It is this effect which we intend to measure. In
-addition to the transverse polarisation effect, measurement of the longitudinal
-mode is also possible. However, as will be seen this is much harder to measure
-at a hadron collider. In the next section, theoretical background related to
-helicity measurement will be presented.
-
-% TODO Equivalence theorem
-% TODO charge asymmetry
+lead to a dominance of left-handed over right-handed helicity states for \PW
+bosons with large transverse momentum. In the next section, theoretical
+background related to helicity measurement will be presented.
 
 \subsection{Studying Helicity}
 
@@ -332,15 +326,51 @@ and replacing for the elements of the D-matrices in terms of $\cos\thetastar$
 \frac{\fR}{4} \left(1\pm\cos\thetastar_{\Plpm}\right)^2
 \label{eqn:wpol_helicity_fractions}
 \end{equation}
-Note that the helicity fractions $f_i$ have been relabelled to give a more
+Note that the helicity fractions \ffi have been relabelled to give a more
 intuitive interpretation as the left-handed, right-handed and longitudinal
-helicity fractions. Comparing now to Eqn~\ref{eqn:wpol_xs_Ai}, we identify $A_0
-\sim f_0$ and $A_4 \sim \pm \fLmfR$. Whilst the $A_i$ are the more fundamental
-parameters from a theoretical point of view, the helicity fractions \f0, \fL and
-\fR are more readily interpreted in the context of the predictions of
-Section~\ref{sec:polarisation}. In particular, at the LHC and for suitably high
-\PtW, it is expected that $\fL > \fR$ and $\fL > \f0$.
+helicity fractions. Comparing now to Eqn~\ref{eqn:wpol_xs_Ai}, we identify
+\begin{eqnarray}
+A_0 \sim f_0\\
+A_4 \sim \pm \fLmfR
+\end{eqnarray}
+Whilst the $A_i$ are the more fundamental parameters from a theoretical point of
+view, the helicity fractions \f0, \fL and \fR will sometimes be more convenient
+for experimental discussions. The other \Ai parameters will mostly not be
+discussed, though their small effect on the measurement will be evaluated.
 
+In Chapter~\ref{sec:polarisation}, the measurement of the helicity fractions
+\fL, \fR and \f0 will be described. The primary intention is to confirm the
+prediction that the left-handed mode dominates at high \PtW, or equivalently,
+$\fLmfR > 0$. It is also expected that $\fL > \f0$.
+
+The evolution of the polarisation fractions with \PtW has also been
+studied~\cite{berger_left_handed_w}. The evolution of \fL, \fR and \f0 for the
+\PWp is shown in Figure~\ref{fig:framework_ptw}. Firstly, the increase of \fLmfR
+with \PtW can be seen. Secondly, because of the equivalence
+theorem~\cite{equiv_theorem,tev_physics,gounaris,cornwall,elementary_pp}, the
+longitudinal mode behaves as the corresponding Goldstone boson (see
+Section~\ref{sec:sm_goldstone}) at large \PtW. This leads to the dip in \f0.
+
+Whilst the dependence on \PtW make for a very interesting measurement, it was
+found to be infeasible with the relatively small data sample used for this
+analysis.
+
+\begin{figure}[h]
+\centering
+\subfloat[\fL]{\label{fig:framework_ptw_fL}\includegraphics[width=0.29\textwidth]{fig/fL_Wp}}
+\subfloat[\fR]{\label{fig:framework_ptw_fR}\includegraphics[width=0.29\textwidth]{fig/fR_Wp}}
+\subfloat[\f0]{\label{fig:framework_ptw_f0}\includegraphics[width=0.29\textwidth]{fig/f0_Wp}}
+\caption{The polarisation fractions \fL, \fR and \f0 as a function of \PtW for
+  \PWp production are shown in the upper panes of
+  Figures~\ref{fig:framework_ptw_fL}, \ref{fig:framework_ptw_fR} and
+  \ref{fig:framework_ptw_f0} respectively. Three predictions are shown: the
+  fixed-order \ac{NLO} result as a solid black line, the \ac{ME+PS} result as
+  red dashed line and the fixed-order \ac{LO} result as a dotted blue
+  line. Uncertainties are indicated by thin vertical lines. The lower pane in
+  each plot show the ratio of each prediction with respect to the \ac{NLO}
+  prediction~\cite{berger_left_handed_w}.}
+\label{fig:framework_ptw}
+\end{figure}
 
 \section{Modelling New Physics}
 \label{sec:framework_susy}

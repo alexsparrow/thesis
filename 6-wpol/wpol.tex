@@ -21,7 +21,7 @@ both at the pure generator level and at the level of reconstructed, simulated
 events. This firstly ensures that the expected effects are adequately modelled
 by the chosen \ac{MC} generator and secondly allows the testing of the
 theoretical expectations in the context of ``real'' detector-level
-quantities. This is vital to ensure that the measurement of helicity fractions
+quantities. This is vital to ensure that the measurebmenbt of helicity fractions
 is actually feasible and not washed out by some experimental effect.
 
 Unless otherwise noted, the \Wjets samples used is produced using the
@@ -167,11 +167,11 @@ written as
 \begin{equation}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1}
-  f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}
+  \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}
 \label{eqn:wpol_reweighting_factor}
 \end{equation}
 where the index $i$ is taken to represent the 3 helicity states of the \PW
-boson. The $f_i$ are constants derived from an analytical fit to the
+boson. The \ffi are constants derived from an analytical fit to the
 $\cos\thetastar$ distribution in bins of \PtW, \YW and charge. They are
 effectively the helicity fractions ``baked in'' to the Monte-Carlo. The
 functional form of $\sigma$ is taken from Eqn~\ref{eqn:wpol_helicity_fractions}
@@ -206,45 +206,48 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\int_{b}^{b+\Delta\cos\thetastar}\sigma^\pm_i\left(\cos\thetastar\right)/\int_{-1}^{1}
 \sigma^\pm_i\left(\cos\thetastar\right)}{
 \int_{b}^{b+\Delta\cos\thetastar} \displaystyle\sum_{i=-1}^{i=+1}
-f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)/
-\int_{-1}^{1} f_i^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)
+\ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)/
+\int_{-1}^{1} \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)
 }
 \end{equation}
 where $b$ indicates a bin within the $\cos\thetastar$ distribution.
 
 \subsubsection{\PtW and \YW Dependence}
-Although the $\cos\thetastar$ templates are independent of \PtW and \YW by
-definition, the \LP templates vary with phase space. Although the re-weighting
-factor as defined in Eqn~\ref{eqn:wpol_reweighting_factor} ensures that the
-$\cos\thetastar$ distribution corresponds to a pure helicity state, it does not
-account for the variation of the helicity fractions within the \PW phase
-space. Furthermore, the analysis seeks to measure the values of the helicity
-fractions averages over a region of phase space corresponding to reconstruction
-level cuts. An extra re-weighting factor is defined which effectively gives
-preference to regions containing more bosons of the desired \PW helicity,
+Although the $\cos\thetastar$ templates for each helicity state are independent
+of \PtW and \YW, the \LP templates are seen to vary. Additionally, the \ffi
+parameters are also known to vary across the phase space of the \PW boson. The
+intent of this analysis is to measure the \emph{average values} of these
+parameters across a region of the \PW phase space. Consequently, the \LP
+helicity templates must be corrected to account for these variations. Put
+another way, the left-handed template for example, should embody the \LP shape
+in regions of the phase space known to contain more left-handed \PW bosons. This
+step is not necessary for the $\cos\thetastar$ templates, since by definition,
+they are invariant across the \PW phase space
+
+An extra re-weighting factor is defined which effectively gives preference to
+regions containing more bosons of the desired \PW helicity,
 \begin{equation}
 R_i\left(\PtW, \YW, \pm\right) =
 \frac{{f'}_i \left(\PtW, \YW, \pm\right)}{{f'}_i^{\textrm{all}}}
 \end{equation}
 where ${f'}_i\left(\PtW, \YW, \pm\right)$ is the fraction of \PW bosons in the
-appropriate \PtW and \YW bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the same
-fraction integrated over all of the phase space bins. The prime added to the
-fraction is significant. It indicates that the phase space of the helicity
+appropriate \PtW and \YW bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the
+same fraction integrated over all of the phase space bins. The prime added to
+the fraction is significant. It indicates that the phase space of the helicity
 fractions is that obtained after application of a reconstruction-level cut on
 \PtW. This must be the same cut value as employed in the analysis itself and is,
 due to experimental and resolution effects, significantly different from a
-generator-level cut on the same quantity. This can be seen in
-Figure~\ref{fig:wpol_genreco}.
+generator-level cut on the same quantity. The \PW phase space is shown in
+Figure~\ref{fig:wpol_genreco} after a reconstruction level cut, $\PtW >
+\unit{50}{\GeV}$.
 
 \begin{figure}
-\centering
-\subfloat[Two-dimensional distribution of \YW vs \PtW at generator level]{
+  \centering \subfloat[\YW vs \PtW]{
   \label{fig:wpol_genreco_wpt_eta}\includegraphics[width=0.47\textwidth]{fig/WPTvsY_mcreco50toinf}}\quad
-\subfloat[The \PtW distribution at generator level after a reconstruction level
-cut of \unit{50}{\GeV}]{
+\subfloat[\PtW]{
   \label{fig:wpol_genreco_ppt}\includegraphics[width=0.47\textwidth]{fig/ptw_mcrecocut}}\quad
-\caption[Generator level \PW phase space distributions.]{Generator level \PW
-  phase space distributions.}
+\caption{Generator level \PW phase space distributions after a
+  reconstruction-level cut, $\PtW > \unit{50}{\GeV}$.}
 \label{fig:wpol_genreco}
 \end{figure}
 
@@ -286,7 +289,7 @@ to \unit{100}{\invpicobarn} of simulated data.
 To summarise what has already been said, the goal of this analysis is to extract
 the helicity fractions (\fL, \fR and \f0) of the \PW boson and thus establish
 the dominant left-handed polarisation effect present in theoretical predictions
-at high \PtW. The $f_i$ coefficients determine the polar angle distribution
+at high \PtW. The \ffi coefficients determine the polar angle distribution
 (\thetastar) via Eqn~\ref{eqn:wpol_helicity_fractions}. This distribution cannot
 be reconstructed directly due to an ambiguity in the reconstruction of the \PW
 boson rest frame. Instead the \LP variable, found to be highly correlated with
@@ -296,7 +299,7 @@ corresponding to 100\% left-handed, right-handed and longitudinally polarised
 \PW bosons. These shapes may then be used in a fit to data in order to extract
 the helicity fractions themselves.
 
-It should be noted that the $f_i$ coefficients are expected to differ between
+It should be noted that the \ffi coefficients are expected to differ between
 \PWp and \PWm. However, they are not expected to depend on the flavour of the
 decay lepton. This is relevant to two aspects of this analysis. Firstly, as
 shall be seen, the $\PW\longrightarrow\Ptau\Pgn$ decays where the \Ptau decays
@@ -471,7 +474,20 @@ lepton in the event. This leads to the definition,
   \PtWvlep = \Ptlv + \METv
 \end{equation}
 This provides a higher resolution measurement of \PtW, as can be seen in
-Figure~TODO. It is thus the variable adopted in this analysis.
+Figure~\ref{fig:wpol_mht_res}. It is thus the variable adopted in this analysis.
+
+\begin{figure}
+  \centering
+  \subfloat[]{\label{fig:wpol_mht_res1}\includegraphics[width=0.4\textwidth]{fig/mht_res1.png}}\quad
+  \subfloat[]{\label{fig:wpol_mht_res2}\includegraphics[width=0.4\textwidth]{fig/mht_res2.png}}
+  \caption[Comparison of the helicity and background template
+  shapes]{Figure~\ref{fig:wpol_mht_res1} shows the reconstruction-level \PtW
+    resolution, $\left(\PtWgen - \PtWreco\right)/\PtWgen$, in the electron
+    channel, using $\PtWvlep$ (black) and $\PtWvhad$
+    (red). Figure~\ref{fig:wpol_mht_res2} shows the same resolutions as a
+    function of \PtWgen.}
+  \label{fig:wpol_mht_res}
+\end{figure}
 
 A second question, is then the choice of the minimum cut value to place on
 \PtW. On the one hand, increasing this cut reduces the statistics of the
@@ -563,6 +579,7 @@ Table~\ref{tbl:wpol_cutflow}.
 \input{tables/wpol_cutflow}
 
 \subsection{Triggers}
+\label{sec:wpol_triggers}
 During the 2010 data taking period, the \ac{LHC} instantaneous luminosity
 continued to evolve rapidly. The increased luminosity necessitated tightening of
 the various object trigger requirements in order to maintain a suitable rate for
@@ -578,8 +595,11 @@ triggers used were as follows:
 \texttt{HLT\_Mu15\_v1} & \textrm{run} \geq 147146
 \end{cases}
 \end{equation*}
-Where the number in the trigger name indicates the \Pt threshold applied to the
-lepton. In contrast, the electron trigger thresholds evolved more rapidly,
+The naming scheme is that used by the \ac{HLT} at \ac{CMS}. The number in the
+trigger name indicates the \Pt threshold applied to the lepton. The string
+\texttt{vX}, differentiate different versions of the trigger key.
+
+In contrast, the electron trigger thresholds evolved more rapidly,
 \begin{equation*}
 \begin{cases}
   \texttt{HLT\_Ele10\_LW\_L1R} & \textrm{run} < 140041 \\
@@ -591,10 +611,10 @@ lepton. In contrast, the electron trigger thresholds evolved more rapidly,
   \texttt{HLT\_Ele22\_SW\_TightEleId\_L1R\_v3} & \textrm{run} \geq 149181
 \end{cases}
 \end{equation*}
-% https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideEgammaHLT
+
 Where \texttt{EleX} indicates an electron with $p_T > \unit{X}{\GeV}$. The
 \texttt{LW} and \texttt{SW} stand for large window and small window
-respectively. Here, window refers to the electron pixel-matching window and thus
+respectively~\cite{egamma_hlt_twiki}. Here, window refers to the electron pixel-matching window and thus
 the large window cut is looser and intended to be used during start-up
 conditions. All triggers include an \HoverE cut, $\HoverE < 0.15$. In addition,
 those with \texttt{CaloEleId} or \texttt{TightEleId} impose additional electron
@@ -1043,7 +1063,13 @@ the \PtW resolution as modelled by the detector simulation.
 
 The simulated sample is then used again, this time ``smearing'' the
 reconstruction level \PtW quantity such that the resolution is increased by
-10\%. This is the value measured in~\cite{cms_met_paper}.
+10\%. This is the value measured in~\cite{cms_met_paper}. These are fit with the
+``unsmeared'' templates and the difference with respect to the nominal is
+assigned as a systematic. A less conservative estimate could be obtained by
+correcting the resolution in simulation to match the data and then assigning the
+uncertainty of the correction as the systematic uncertainty. However, since this
+uncertainty has not been precisely estimated, the simpler, more conservative
+estimate was used.
 
 \subsubsection{Lepton Momentum Scale}
 The second contribution to the \LP shape uncertainty comes from the lepton
@@ -1086,7 +1112,6 @@ data, whilst the resolution should be applied in simulation.
     as described in the text~\cite{w_charge_asymmetry_an}.}
 \label{fig:wpol_ecal_transp_corr}
 \end{figure}
-
 
 The scale corrections have been applied in data. An conservative 50\%
 uncertainty was taken on the value of the correction factors. The lepton

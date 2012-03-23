@@ -232,9 +232,23 @@ necessitates a different trigger strategy to that used in other leptonic
 For the search sample, a set of single-lepton ``cross-triggers'' are used,
 selecting events with a single lepton in association with a large amount of
 hadronic activity, \HT. As the luminosity increased during the 2011 run, it was
-necessary to introduce a third requirement: a moderate cut on the \MET. The full
-list of triggers used for both lepton channels are shown in
-Table~\ref{tbl:susy_triggers}
+necessary to introduce a third requirement: a moderate cut on the \MET.
+
+The full list of triggers used for both lepton search channels and the muon
+control sample are shown in Table~\ref{tbl:susy_triggers}. The naming scheme is
+similar to that used in Section~\ref{sec:wpol_triggers}. \texttt{HTX} and
+\texttt{PFMHTX} refer to cuts $\HT > \unit{X}{\GeV}$ and particle-flow $\MHT >
+\unit{X}{\GeV}$. The string \texttt{CaloId} indicates cuts applied on \HoverE
+and \sigmaieta. \texttt{TrkId} uses the angular matching variables: \deltaetain
+and \deltaphiin. Similarly, \texttt{CaloIso} and \texttt{TrkIso} select using
+the corresponding isolation variables. The suffixes \texttt{VL}, \texttt{L} and
+\texttt{T} stand for ``very-loose'', ``loose'' and ``tight'' respectively -
+referring to the ``tightness'' of the cut applied to the quantity concerned. The
+\texttt{VL} selection requirements are broadly comparable to the
+\texttt{CaloEleId} and \texttt{TightEleId} triggers used for the \PW
+polarisation analysis. The \texttt{T} requirements are looser than the 80\%
+efficiency working point. The trigger requirements are all chosen to be looser
+than the offline selection.
 
 \input{tables/susy_triggers}
 
@@ -313,12 +327,14 @@ requirement to $0.2 < \CombIso < 0.5$. In order to further enrich \ac{QCD}
 events whilst suppressing electroweak backgrounds in this sample, an $\MET <
 \unit{20}{\GeV}$ cut is also applied. Even with these cuts, significant
 electroweak contamination remains. The significance of the vertex impact
-paramter is used as an additional handle by requiring $\sigma(D_0) > 3$. The
-ratio $N(\CombIso < 0.1/N(0.2 < \CombIso < 0.5)$ in this sample is then used to
-derive an upper limit on the \ac{QCD} contribution. This limit is conservative
-given that electroweak background are present in the ratio. It is seen in
-Table~TODO that the \ac{QCD} background is negligible in all \STlep bins and is
-ignored in the subsequent analysis.
+paramter is used as an additional handle by requiring $\sigma(D_0) > 3$. By
+selecting muons displaced from the primary vertex, backgrounds from hadron
+decays are enhanced~\cite{ttbar_paper_cms}. The ratio $N(\CombIso < 0.1/N(0.2 <
+\CombIso < 0.5)$ in this sample is then used to derive an upper limit on the
+\ac{QCD} contribution. This limit is conservative given that electroweak
+background are present in the ratio. It is seen in Table~TODO that the \ac{QCD}
+background is negligible in all \STlep bins and is ignored in the subsequent
+analysis.
 
 \subsection{Electrons}
 \label{sec:susy_electron_bgpredict}
@@ -454,7 +470,8 @@ As for the \PW polarisation measurement, the hadronic recoil resolution measured
 in data is seen to be 10\% larger than predicted by
 simulation~\cite{cms_met_paper, cms_met_pas}. To account for this, the recoil is
 smeared by an additional 10\% perpendicular and parallel to its direction. The
-resulting shift in \RCS is taken as the uncertainty.
+resulting shift in \RCS is taken as the uncertainty. As for the \PW polarisation
+case, this is a conservative estimate of the uncertainty.
 
 \subsection{\Wjets/\ttbar Cross Section}
 Te use of \RCS avoids any dependence on the absolute values of theoretical
