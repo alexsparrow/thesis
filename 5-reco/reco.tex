@@ -319,20 +319,30 @@ hadrons, neutral hadrons and photons. This provides an improved measurement of
 the jet energy and thus also of \METv.
 
 The particle flow algorithm proceeds by linking the tracks and energy clusters
-to form blocks. A single block may contain some combination of a charged
-particle track, one or more energy clusters and a muon. The fine granularity of
-the \ac{CMS} detector ensures that blocks typically contain 1, 2 or 3 elements.
-The links between each block are parameterised by a distance which encodes the
-quality of the link. Advanced tracking and calorimeter clustering algorithms
-have been developed to meet the needs of the \ac{PF} algorithm. These will now
-be explained.
+to form blocks. A typical event display illustrating this process is shown in
+Figure~\ref{fig:reco_pf_diag}. A single block may contain some combination of a
+charged particle track, one or more energy clusters and a muon. The fine
+granularity of the \ac{CMS} detector ensures that blocks typically contain 1, 2
+or 3 elements.  The links between each block are parameterised by a distance
+which encodes the quality of the link. Advanced tracking and calorimeter
+clustering algorithms have been developed to meet the needs of the \ac{PF}
+algorithm. These will now be explained.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:reco_pf_jet_etares}\includegraphics[width=0.45\textwidth]{fig/pf_diag1}}\\
-\subfloat[]{\label{fig:reco_pf_jet_phires}\includegraphics[width=0.45\textwidth]{fig/pf_diag2}}\quad
-\subfloat[]{\label{fig:reco_pf_jet_phires}\includegraphics[width=0.45\textwidth]{fig/pf_diag3}}
-\caption{}
+\subfloat[]{\label{fig:reco_pf_diag1}\includegraphics[width=0.7\textwidth]{fig/pf_diag1}}\\
+\subfloat[]{\label{fig:reco_pf_diag2}\includegraphics[width=0.45\textwidth]{fig/pf_diag2}}\quad
+\subfloat[]{\label{fig:reco_pf_diag3}\includegraphics[width=0.45\textwidth]{fig/pf_diag3}}
+\caption[]{An event display showing a hadronic jet in~\subref{fig:reco_pf_diag1}
+  the $(x,y)$-plane, \subref{fig:reco_pf_diag2} an $(\eta,\phi)$ view at the
+  surface of the \ac{ECAL} and~\subref{fig:reco_pf_diag3} the same orientation
+  at the surface of the \ac{HCAL}. These two surfaces appear as circular arcs
+  in~\subref{fig:reco_pf_diag1}. The \PKlong, \Ppim, \Ppip, \Ppizero and the two
+  photons from its decay are shown. The \PKlong, \Ppim and two photons result in
+  clear, well-speparated \ac{ECAL} cluters - round points labelled E1 to
+  E4~\ref{fig:reco_pf_diag2}. The \Ppip and \Ppim are reconstructed as charged
+  tracks - green lines labelled T1 and T2 - which point to the two \ac{HCAL}
+  clusters - round points labelled H1 and H2.}
 \label{fig:reco_pf_diag}
 \end{figure}
 
