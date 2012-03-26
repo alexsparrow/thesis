@@ -252,7 +252,7 @@ Figure~\ref{fig:wpol_genreco} after a reconstruction level cut, $\PtW >
 \end{figure}
 
 \subsubsection{Closure Test}
-% Perhaps this section should be moved?
+\label{sec:wpol_closure}
 To ensure that the method is working correctly, several closure tests were
 performed. Firstly, the generator-level helicity fractions within the phase
 space of the reconstruction level \PW acceptance cuts are extracted. Essentially
@@ -519,14 +519,11 @@ However, a cut applied directly on the \MET introduces an additional
 problem. Specifically, the \MET cut is effectively a selection on the momentum
 of the neutrino in \PW events. This removes events, where for instance the
 lepton has taken the majority of the momentum from the \PW and the neutrino is
-thus very soft. This of course alters the shape of the \LP distribution. Of
-course, the template re-weighting method will account for this acceptance
-effect via appropriate changes in the helicity templates. This change is shown
-in Figure~TODO. However, as can be seen, the sculpting of the \LP distribution
-serves to remove the differences between the left and right-handed template
-shapes, thus increasing their correlation. This becomes problematic within the
-fitting procedure, where the similar shapes naturally make the inference of the
-helicity fractions more difficult.
+thus very soft. This alters the shape of the \LP distribution. This will be
+accounted for in the template shapes - to be specific the left-handed and
+right-handed templates will become more similar in shape. This increases their
+correlation in the fit and is thus undesirable. More will be said of this in
+relation to the electron measurement in Section~\ref{sec:wpol_electron_opt}.
 
 For this reason, it is desirable to cut on a variable that is not intrinsically
 correlated with either the charged or neutral lepton momentum. The transverse
@@ -666,6 +663,38 @@ unenriched sample in the case of the muons and the sum of the
 \input{tables/electron_yields}
 \input{tables/muon_yields}
 
+\begin{figure}
+\centering
+\subfloat[$\Ptl\left(\Pelectron\right)$]{\label{fig:wpol_datamc_ele_leppt_plus}\includegraphics[width=0.29\textwidth]{fig/ele_LeptonPtPlus}}
+\subfloat[$\LP\left(\Pelectron\right)$]{\label{fig:wpol_datamc_ele_lp_plus}\includegraphics[width=0.29\textwidth]{fig/ele_ICVarPlus}}
+\subfloat[$\PtW\left(\Pelectron\right)$]{\label{fig:wpol_datamc_ele_wpt_plus}\includegraphics[width=0.29\textwidth]{fig/ele_WPtPlus}}\\
+\subfloat[$\Ptl\left(\APelectron\right)$]{\label{fig:wpol_datamc_ele_leppt_minus}\includegraphics[width=0.29\textwidth]{fig/ele_LeptonPtMinus}}
+\subfloat[$\LP\left(\APelectron\right)$]{\label{fig:wpol_datamc_ele_lp_minus}\includegraphics[width=0.29\textwidth]{fig/ele_ICVarMinus}}
+\subfloat[$\PtW\left(\APelectron\right)$]{\label{fig:wpol_datamc_ele_wpt_minus}\includegraphics[width=0.29\textwidth]{fig/ele_WPtMinus}}\\
+\subfloat[$\MET\left(\Pe\right)$]{\label{fig:wpol_datamc_ele_pfmet}\includegraphics[width=0.29\textwidth]{fig/ele_pfMET}}
+\subfloat[$\MT\left(\Pe\right)$]{\label{fig:wpol_datamc_ele_mt}\includegraphics[width=0.29\textwidth]{fig/ele_MT}}
+\caption{Comparison of data and Monte Carlo in the electron channel with all
+  selection requirements applied. The \ac{QCD} contribution in each case is
+  taken from the anti-selected data sample. Its normalisation has been chosen by
+  subtracting the total electroweak background yield from that observed in data
+  and scaling the anti-selected sample to fit the remainder.}
+\label{fig:wpol_datamc_ele}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[$\Ptl\left(\Pmuon\right)$]{\label{fig:wpol_datamc_mu_leppt_plus}\includegraphics[width=0.29\textwidth]{fig/datamc_ptmuonplus}}
+\subfloat[$\LP\left(\Pmuon\right)$]{\label{fig:wpol_datamc_mu_lp_plus}\includegraphics[width=0.29\textwidth]{fig/datamc_lpvarplus}}
+\subfloat[$\PtW\left(\Pmuon\right)$]{\label{fig:wpol_datamc_mu_mt_plus}\includegraphics[width=0.29\textwidth]{fig/datamc_recoptwplus}}\\
+\subfloat[$\Ptl\left(\APmuon\right)$]{\label{fig:wpol_datamc_mu_leppt_minus}\includegraphics[width=0.29\textwidth]{fig/datamc_ptmuonminus}}
+\subfloat[$\LP\left(\APmuon\right)$]{\label{fig:wpol_datamc_mu_lp_minus}\includegraphics[width=0.29\textwidth]{fig/datamc_lpvarminus}}
+\subfloat[$\PtW\left(\APmuon\right)$]{\label{fig:wpol_datamc_mu_mt_minus}\includegraphics[width=0.29\textwidth]{fig/datamc_recoptwminus}}
+\caption{Comparison of data and Monte Carlo in the electron channel with all
+  selection requirements applied.}
+\label{fig:wpol_datamc_ele}
+\end{figure}
+
+
 \section{Fitting Procedure}
 \label{sec:wpol_fitting}
 In order to extract the helicity fractions in
@@ -675,7 +704,7 @@ helicity states, a number of data-driven or Monte-Carlo estimated background
 templates and extracts the most probably values of \fL, \fR and \f0 from the
 data distribution. In order to test the procedure, this method is also applied
 to Monte Carlo ``pseudodata'' to ensure that fitted helicity fractions match
-those derived from the analytical fit (see Section~TODO) to within the quoted
+those derived from the analytical fit (see Section~\ref{sec:wpol_closure}) to within the quoted
 errors. The fit itself is implemented in the \roofit software
 framework~\cite{roofit_paper, roofit_web}, which assists in constructing an
 appropriate likelihood function and performing the necessary minimisation using
@@ -807,7 +836,8 @@ channel, and $\MET > \unit{30}{\GeV}$. Clearly the \MET cut is more effective at
 suppressing the \ac{QCD} background. However, the \MET cut also tends to remove
 events with a soft neutrino, or alternatively a large \Pte. This is apparent in
 the shape of the right-handed helicity template which has been ``cut away'' at
-$\LP\sim 1$.
+$\LP\sim 1$. The correlation of the left-handed and right-handed components is
+increased, and the uncertainty from the fit is increased.
 
 An optimisation study was undertaken to determine the optimal kinematic and
 lepton identification cuts, as determined by the uncertainties from the template
