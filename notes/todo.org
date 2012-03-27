@@ -28,7 +28,6 @@
 ** TODO check wz about hadron decays for sigma(D0)
 ** TODO check W/ttbar systematics
 * Wpol
-** TODO CMSSW version
 ** TODO Acceptance correction in wpol section
 ** TODO QCD penalty term
 ** TODO Would be nice to have the JEC uncertainty ratios for electrons too
@@ -849,3 +848,6 @@ Mostly done!
    - State "DONE"       from "TODO"       [2012-03-27 Tue 13:09]
 ** FINISHED MT -> T roman style (generally transverse stuff)
    CLOSED: [2012-03-27 Tue 13:08]
+** DONE CMSSW version
+   CLOSED: [2012-03-27 Tue 15:53]
+   - State "DONE"       from "TODO"       [2012-03-27 Tue 15:53]
