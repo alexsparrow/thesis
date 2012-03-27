@@ -8,7 +8,6 @@
 ** TODO check all references are in fact referenced
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Monte carlo, MC
-** TODO MT -> T roman style (generally transverse stuff)
 ** TODO 7.2: single lepton -> single-lepton
 * SM
 ** TODO SM Higgs mass
@@ -36,7 +35,6 @@
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
 ** TODO Reference SM section for chirality
    SCHEDULED: <2012-03-20 Tue>
-** TODO additional plots showing data/mc
 ** General Alex
 *** TODO Hyphenate W-boson when used as an adjective e.g. W-boson mass
 *** TODO Statistics, systematics, cutflow jargon
@@ -843,5 +841,11 @@ Mostly done!
 ** DONE Explain 30% and 50% figures for W/ttbar
    CLOSED: [2012-03-27 Tue 11:02] SCHEDULED: <2012-03-23 Fri>
    - State "DONE"       from "TODO"       [2012-03-27 Tue 11:02]
-** TODO Why 25% for Z and 50 for ttbar
-   SCHEDULED: <2012-03-23 Fri>
+** DONE Why 25% for Z and 50 for ttbar
+   CLOSED: [2012-03-27 Tue 13:09] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-27 Tue 13:09]
+** DONE additional plots showing data/mc
+   CLOSED: [2012-03-27 Tue 13:09]
+   - State "DONE"       from "TODO"       [2012-03-27 Tue 13:09]
+** FINISHED MT -> T roman style (generally transverse stuff)
+   CLOSED: [2012-03-27 Tue 13:08]
