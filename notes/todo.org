@@ -27,11 +27,11 @@
 ** TODO check wpol syst sz with alex
 ** TODO check MET resolution systematic bit with alex
 ** TODO check wz about hadron decays for sigma(D0)
+** TODO check W/ttbar systematics
 * Wpol
 ** TODO CMSSW version
 ** TODO Acceptance correction in wpol section
 ** TODO QCD penalty term
-** TODO Wpol: data/mc plots and explain the normalisation of QCD
 ** TODO Would be nice to have the JEC uncertainty ratios for electrons too
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
 ** TODO Reference SM section for chirality
@@ -47,12 +47,8 @@
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-03-22 Thu 10:30>
 *** TODO Figure 6.5: Tidy up
-*** TODO Why 25% for Z and 50 for ttbar
-    SCHEDULED: <2012-03-23 Fri>
 ** Alex SUSY search
 *** TODO 7.4.4: Explain why not using all PF objects
-    SCHEDULED: <2012-03-23 Fri>
-*** TODO Explain 30% and 50% figures for W/ttbar
     SCHEDULED: <2012-03-23 Fri>
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
@@ -841,3 +837,11 @@ Mostly done!
 ** DONE Figure 7.5: Improve
    CLOSED: [2012-03-26 Mon 13:29]
    - State "DONE"       from "TODO"       [2012-03-26 Mon 13:29]
+** DONE Wpol: data/mc plots and explain the normalisation of QCD
+   CLOSED: [2012-03-26 Mon 20:20]
+   - State "DONE"       from "TODO"       [2012-03-26 Mon 20:20]
+** DONE Explain 30% and 50% figures for W/ttbar
+   CLOSED: [2012-03-27 Tue 11:02] SCHEDULED: <2012-03-23 Fri>
+   - State "DONE"       from "TODO"       [2012-03-27 Tue 11:02]
+** TODO Why 25% for Z and 50 for ttbar
+   SCHEDULED: <2012-03-23 Fri>
