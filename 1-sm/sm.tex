@@ -302,12 +302,25 @@ the spacetime metric. Writing an appropriate Lagrangian, one obtains,
 \Psi^{\dagger}\gamma_0
 \end{equation}
 One important aspect of spinors is a property known as ``handedness'' or
-\emph{chirality}. Physically speaking, a left-handed particle is one whose spin
-is aligned with its direction of motion and a right-handed one whose spin is
+\emph{chirality}. Physically speaking, a right-handed particle is one whose spin
+is aligned with its direction of motion and a left-handed one whose spin is
 oppositely aligned. Note that a left-handed anti-spinor corresponds to a right
 handed physical particle (see~\cite{peskin_schroeder}).
 
+A related, but distinct concept is that of \emph{helicity}. Helicity is the
+projection of a particle's spin onto its momentum,
+\begin{equation*}
+h = \frac{S\dot p}{\left|p\right|}.
+\end{equation*}
+In cases where the spin is aligned with the particle's momentum, it is said to
+have right-handed helicity. In cases where it is anti-aligned, it has
+left-handed helicity. Massless particles may not have zero helicity. Particles
+with helicity $h=\pm 1$ are said to be \emph{transversely polarised} and $h=0$,
+\emph{longitudinally polarised}.
+%TODO: refer to this bit
+
 \subsection{The Electroweak Theory}
+\label{sec:sm_electroweak}
 A striking property of the electroweak theory is the observation of maximal
 parity violation by Wu et al.~\cite{wu_parity}. By observing the $\beta$ decay of
 Cobalt-60 atoms. The atoms had their spins polarised by a magnetic field and the
@@ -316,7 +329,7 @@ emitted preferentially in the opposite direction to their spin. This implies
 that the neutrino momentum in the decay is always aligned in an opposite to its
 spin - i.e. the neutrino is left-handed. More generally, the weak gauge bosons
 interact only with left-handed particles and right-handed anti-particles. This
-is also referred to as the $(V-A)$ nature of the theory - since the Lagrangian
+is also referred to as the \VminusA nature of the theory - since the Lagrangian
 contains ``vector minus axial'' terms which lead to parity violation. Parity
 violation will be of vital importance to the analysis presented in
 Chapter~\ref{sec:wpol}.
