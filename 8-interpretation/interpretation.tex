@@ -53,8 +53,8 @@ of observing $X$ given $\theta$~\cite{statistical_methods}. Considered as a
 function of the parameter $\theta$ given experimental measurements, $X$, the
 likelihood may be written
 \begin{equation}
-\likelihood\left(\theta|X\right) = P\left(X|\theta\right)
 \label{eqn:inter_likelihood}
+\likelihood\left(\theta|X\right) = P\left(X|\theta\right)
 \end{equation}
 where $P\left(X|\theta\right)$ should be read as ``the probability of $X$ given
 $\theta$''.
@@ -63,8 +63,8 @@ Likelihood functions are an important tool in comparing theoretical expectations
 to experiment. Often, two proposed values for the parameter $\theta$ will be
 compared using the \emph{likelihood ratio},
 \begin{equation}
-  \likelihoodratio = \frac{\likelihood\left(\theta_1|X\right)}{\likelihood\left(\theta_2|X\right)} = \frac{\alpha P\left(X|\theta_1\right)}{\alpha P\left(X|\theta_2\right)}
 \label{eqn:inter_likelihood_ratio}
+  \likelihoodratio = \frac{\likelihood\left(\theta_1|X\right)}{\likelihood\left(\theta_2|X\right)} = \frac{\alpha P\left(X|\theta_1\right)}{\alpha P\left(X|\theta_2\right)}
 \end{equation}
 Here, the numerator and denominator are related to
 Eqn~\ref{eqn:inter_likelihood} by a constant $\alpha$. Here, as in many uses of
@@ -431,8 +431,8 @@ masses. To study a range of scenarios without having to consider the full
 three-dimensional volume of the parameter space, three scenarios are
 considered. Choosing values of the intermediate particle mass as
 \begin{equation}
-\Mchargino = x \Mgluino + (1-x)\Mlsp
 \label{eqn:tthreew_x}
+\Mchargino = x \Mgluino + (1-x)\Mlsp
 \end{equation}
 limits have been set for 3 values of the parameter $x$ - 0.25, 0.5 and
 0.75. Intuitively, these represent cases where the intermediate particle mass is
@@ -499,21 +499,20 @@ effect on the efficiency since there is less hadronic energy available from the
 cascade.
 
 % TODO: more spiel here
-
-\begin{figure}[h!]
+\begin{figure}
 \centering
-\subfloat[]{\label{fig:inter_t3w_0p25_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_sigsyst}}
-\subfloat[]{\label{fig:inter_t3w_0p25_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_sigsyst_1d}}
+\subfloat[]{\label{fig:inter_t3w_0p75_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst}}
+\subfloat[]{\label{fig:inter_t3w_0p75_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst_1d}}
 \caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
-$x=0.75$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
-  $x=0.75$. The 95\% confidence level upper limit on the cross-section as a
+  $x=0.25$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
+  $x=0.25$. The 95\% confidence level upper limit on the cross-section as a
   function of $(\Mgluino, \Mlsp$) is shown in
   \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
   exclusion in terms 1, 10 or 100 times the gluino cross-section predicted by
   \ac{QCD}. Figure \subref{fig:inter_t3w_0p25_limit_1d} shows the same upper
   limit as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is
   the \ac{QCD} cross-section for gluino production.}
-\label{fig:inter_t3w_0p25}
+\label{fig:inter_t3w_0p75}
 \end{figure}
 
 \begin{figure}
@@ -532,21 +531,22 @@ $x=0.5$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
 \label{fig:inter_t3w_0p50}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_t3w_0p75_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst}}
-\subfloat[]{\label{fig:inter_t3w_0p75_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst_1d}}
+\subfloat[]{\label{fig:inter_t3w_0p25_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_sigsyst}}
+\subfloat[]{\label{fig:inter_t3w_0p25_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_sigsyst_1d}}
 \caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
-  $x=0.25$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
-  $x=0.25$. The 95\% confidence level upper limit on the cross-section as a
+$x=0.75$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
+  $x=0.75$. The 95\% confidence level upper limit on the cross-section as a
   function of $(\Mgluino, \Mlsp$) is shown in
   \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
   exclusion in terms 1, 10 or 100 times the gluino cross-section predicted by
   \ac{QCD}. Figure \subref{fig:inter_t3w_0p25_limit_1d} shows the same upper
   limit as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is
   the \ac{QCD} cross-section for gluino production.}
-\label{fig:inter_t3w_0p75}
+\label{fig:inter_t3w_0p25}
 \end{figure}
+
 
 \subsubsection{\Ttwott}
 The \Ttwott model, as previously discussed, is of theoretical interest for

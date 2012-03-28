@@ -78,8 +78,8 @@ with $\cos\thetastar$ at suitably high $\PtW$ and yet also directly calculable
 from transverse detector-level quantities. This variable is the Lepton
 Projection variable or \LP and is defined as follows~\cite{wpol_an, jad_thesis}
 \begin{equation}
-  \LP = \frac{\Ptlv.\PtWv}{\left|\PtWv\right|^2}
 \label{eqn:lp_def}
+  \LP = \frac{\Ptlv.\PtWv}{\left|\PtWv\right|^2}
 \end{equation}
 where \Ptlv and \PtWv are the transverse momenta of the charged lepton and \PW
 boson respectively and $\PtWv = \Ptlv +\METv$.
@@ -162,10 +162,10 @@ re-weighting factors, each a function of $\cos\thetastar$ and binned according
 to boson charge, transverse momentum, \PtW, and rapidity, \YW. These can be
 written as
 \begin{equation}
+\label{eqn:wpol_reweighting_factor}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1}
   \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}
-\label{eqn:wpol_reweighting_factor}
 \end{equation}
 where the index $i$ is taken to represent the 3 helicity states of the \PW
 boson. The \ffi are constants derived from an analytical fit to the
@@ -388,9 +388,9 @@ The requirements placed on the muon are as follows:
   compatibility with the trigger requirements.
 \item A cut on the \emph{combined isolation},
 \begin{equation}
+\label{eqn:wpol_mu_comb_iso}
   \CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
     E_T^{\textrm{em}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Ptmu} < 0.1
-\label{eqn:wpol_mu_comb_iso}
 \end{equation}
 where the sums run over the tracks in the tracker or the energy deposits in the
 \ac{ECAL} and \ac{HCAL} within a cone of $\Delta R = \sqrt{(\Delta\eta)^2 +
@@ -681,8 +681,8 @@ the \minuit numerical optimisation code~\cite{minuit_paper}.
 The number of signal events in a given histogram bin $i$ in terms of the
 helicity fractions can be written as
 \begin{equation}
-S^j = \fL \hLj + \fR \hRj + (1-\fL-\fR)\hZj
 \label{eqn:wpol_fit_signal}
+S^j = \fL \hLj + \fR \hRj + (1-\fL-\fR)\hZj
 \end{equation}
 where \hij are each binned helicity templates derived from the reweighting
 method described in Section~\ref{sec:wpol_reweighting}. The \f0

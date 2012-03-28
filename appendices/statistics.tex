@@ -124,20 +124,20 @@ parameters. For small deviations from the mean,
 and ignoring terms $O(\epsilon^2)$
 
 \begin{equation}
+\label{eqn:stats:taylor}
 x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
 (\nu^{(A)} - a)\left.\frac{\partial x}{\partial\nu^{(A)}}\right|_{\nu^{(A)}=a} +
 (\nu^{(B)} - b)\left.\frac{\partial x}{\partial\nu^{(B)}}\right|_{\nu^{(B)}=b}
-\label{eqn:stats:taylor}
 \end{equation}
 Since the derivatives in Equation~\ref{eqn:stats:taylor} will in practice be
 derived from some finite variation of the underlying quantity associated with
 each nuisance parameter, the infinitessimal derivatives must be replaced by
 finite changes. It is also sensible to set $a=b=0$.
 \begin{equation}
+\label{eqn:stats:taylor2}
 x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
 \nu^{(A)}\frac{\Delta x}{\Delta\nu^{(A)}} +
 \nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}}
-\label{eqn:stats:taylor2}
 \end{equation}
 Since the value of $x$ is often associated with a physical quantity such as an
 efficiency or an event yield, it is desirable to constrain it to positive
@@ -174,11 +174,11 @@ Ignoring terms greater than $O(\nu^2)$,
 \end{eqnarray*}
 and therefore
 \begin{equation}
+\label{eqn:stats:systderiv}
 x(\nu^{(A)}, \nu^{(B)}, \ldots) \approx \frac{1}{\bar{x}^{N-1}} \prod_{j = A, B,
   \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) \approx
 \bar{x} \prod_{j = A, B,
   \ldots} \frac{1}{\bar{x}}\left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right)
-\label{eqn:stats:systderiv}
 \end{equation}
 
 Using Equation~\ref{eqn:stats:systderiv}, the signal yield can be rewritten as follows
@@ -227,12 +227,12 @@ reflect the assumption that some fraction of the yield \NControli will be due to
 \ac{SUSY} contamination. Rewriting,
 
 \begin{equation}
+\label{eqn:bgprediction}
 \NBkgi(\mu, \nu^{(\alpha)}) = \RbarCS_i \times \prod_{j}\left( \frac{\RbarCS_i
     + \nu^{(\alpha)}\frac{\Delta\RCSi}{\Delta\nu^{(\alpha)}}}{\RbarCS_i}\right)
 \times \NbarControl_i \times f^{\textrm{SM}}_i(\mu) \times \prod_{k}\left( \frac{\NbarControl_i
     +
     \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right)
-\label{eqn:bgprediction}
 \end{equation}
 where $f^{\textrm{SM}}_i$ represents the fraction of \NControli expected to be
 \ac{SM} events given the current signal hypothesis i.e.
@@ -250,9 +250,9 @@ X(\nu^{\textrm{SM}}) = \Gauss \left( \frac{\NSMi}{\NSMi + \mu\times\epsilon_i^{\
 \end{equation}
 and $f^{\textrm{SM}}_i \equiv \nu^{\textrm{SM}}_i$. Calculating the expected value of the nuisance parameter,
 \begin{eqnarray}
+\label{eqn:fSMideal}
 <f^{\textrm{SM}}_i> &=& \frac{\NSMi}{\NSMi + \mu\NSUSYi} \\
                    &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}
-\label{eqn:fSMideal}
 \end{eqnarray}
 Technical problems associated with adding a functional dependence on the
 \ac{poi} $\mu$ to the mean of the prior distribution necessitated a slightly

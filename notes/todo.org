@@ -17,6 +17,7 @@
 ** TODO Previous limits
 ** TODO Described SUSY breaking possibilities in more detail
 ** TODO mention SUSY higgs searches
+** TODO GMSB/AMSB: discuss what they are and ref
 * Experiment
 ** TODO CMS: Refer to figure in strip tracker + add figure
 * Object Reconstruction
@@ -30,7 +31,6 @@
 * Wpol
 ** TODO Acceptance correction in wpol section
 ** TODO QCD penalty term
-** TODO Would be nice to have the JEC uncertainty ratios for electrons too
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
 ** TODO Reference SM section for chirality
    SCHEDULED: <2012-03-20 Tue>
@@ -50,7 +50,6 @@
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
 
-
 * Interpretation
 ** DONE Redo SMS limits with increased PDF uncertainty (25%?) since there are none in currently!!
    CLOSED: [2012-03-21 Wed 17:30] SCHEDULED: <2012-03-21 Wed 15:00>
@@ -60,8 +59,18 @@
 ** TODO Why 10% PDF uncertainty?
 ** TODO SMS ensure this section makes sense and is correct
 
-Given the weirdness with the Wjets sample, I should possibly redo the SMS limits
-using the lower stats one. If it makes a big difference, I should switch it out.
+
+* Alex
+** SM
+*** TODO 1.2p1: unification -> rephrase
+*** TODO 1.5.3: non-linear. reference?
+*** TODO Maybe more on QCD or a summary at the end
+** SUSY
+*** TODO Dark Matter: citation needed
+*** TODO Table captions
+*** TODO Clarify last bit of hadron colliders
+*** TODO Smooth ending to SUSY chapter
+*** TODO More refs
 
 * Old
   :VISIBILITY: folded
@@ -851,3 +860,75 @@ Mostly done!
 ** DONE CMSSW version
    CLOSED: [2012-03-27 Tue 15:53]
    - State "DONE"       from "TODO"       [2012-03-27 Tue 15:53]
+** CANCELLED Would be nice to have the JEC uncertainty ratios for electrons too
+   CLOSED: [2012-03-27 Tue 15:53]
+   - State "CANCELLED"  from "TODO"       [2012-03-27 Tue 15:53]
+** DONE 1.1p1: large and small
+   CLOSED: [2012-03-28 Wed 14:42]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 14:42]
+** DONE UA2, UA1 acronyms
+   CLOSED: [2012-03-28 Wed 14:43]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 14:43]
+** DONE delete "believed to be"
+   CLOSED: [2012-03-28 Wed 14:54]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 14:54]
+** DONE Reference majorana neutrino searches
+   CLOSED: [2012-03-28 Wed 15:57]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:57]
+** DONE truth
+   CLOSED: [2012-03-28 Wed 14:54]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 14:54]
+** DONE 1.3.4 Symmetries: Equation 1.3.3
+   CLOSED: [2012-03-28 Wed 15:17]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:17]
+** DONE Yang Mills exp
+   CLOSED: [2012-03-28 Wed 15:20]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:20]
+** DONE 1.3.6 Yang Mills: as for the field, \phi in ...
+   CLOSED: [2012-03-28 Wed 15:03]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:03]
+** DONE 1.3.7 Spin/Chirality: missing bracket
+   CLOSED: [2012-03-28 Wed 15:04]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:04]
+** DONE Eqn 1.2.1: Spacing
+   CLOSED: [2012-03-28 Wed 15:42]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:42]
+** DONE 1.3.8 extra SU(2) weirdness
+   CLOSED: [2012-03-28 Wed 15:03]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:03]
+** DONE 1.4.1: phi0
+   CLOSED: [2012-03-28 Wed 15:15]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:15]
+** DONE Higgs Mechanism: eqn 1.44: line numbering
+   CLOSED: [2012-03-28 Wed 15:42]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:42]
+** DONE 1.5.1: Quarks - no need to (CKM)
+   CLOSED: [2012-03-28 Wed 15:23]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 15:23]
+** DONE delete "appears to"
+   CLOSED: [2012-03-28 Wed 16:52]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:52]
+** DONE 2.1: "feels right"
+   CLOSED: [2012-03-28 Wed 16:52]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:52]
+** DONE 2.2: Switch first approach to second approach
+   CLOSED: [2012-03-28 Wed 16:53]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:53]
+** DONE R-parity: odd number of SUSY particles
+   CLOSED: [2012-03-28 Wed 16:53]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:53]
+** DONE 2.3.4: Bit too chatty first sentence
+   CLOSED: [2012-03-28 Wed 16:54]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:54]
+** DONE at a later time
+   CLOSED: [2012-03-28 Wed 16:56]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:56]
+** DONE e+e- colliders
+   CLOSED: [2012-03-28 Wed 16:58]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:58]
+** DONE \Pelectron weird
+   CLOSED: [2012-03-28 Wed 16:58]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:58]
+** DONE 100MeV weirdness
+   CLOSED: [2012-03-28 Wed 16:59]
+   - State "DONE"       from "TODO"       [2012-03-28 Wed 16:59]

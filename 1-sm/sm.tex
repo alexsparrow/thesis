@@ -4,10 +4,10 @@
 The \acl{SM} of particle physics is the best available theory describing the
 interactions of all known fundamental particles. It is perhaps the most
 extensively tested of any fundamental theory of nature, having withstood the
-scrutiny of several decades of data-taking at a number of large, high-energy
-physics experiments. However, despite this success, there appear to be a number
-of major theoretical deficiencies in desperate need of attention. In this
-chapter, the foundations of the theory will be laid out in a concise manner. The
+scrutiny of several decades of data-taking at a number of high-energy physics
+experiments. However, despite this success, there appear to be a number of major
+theoretical deficiencies in desperate need of attention. In this chapter, the
+foundations of the theory will be laid out in a concise manner. The
 aforementioned theoretical difficulties will be described in detail. This will
 serve to motivate the potential solutions offered by the following chapter, and
 ultimately the analysis work that has been undertaken.
@@ -17,9 +17,8 @@ complete theory, seemingly designed to match the currently observed set of
 fundamental particles, this is not how it came into being. The theory was built
 up over much of the second half of the 20th century and actually successfully
 predicted a number of discoveries. Perhaps the best example of this is the
-discovery of the \PW and \PZ bosons by the \ac{UA1} and \ac{UA2} experiments at
-\ac{CERN} in 1983. These had been theorised by Weinberg, Glashow and Salam in
-1968.
+discovery of the \PW and \PZ bosons by the UA1 and UA2 experiments at \ac{CERN}
+in 1983. These had been theorised by Weinberg, Glashow and Salam in 1968.
 
 \section{Particles and Fundamental Forces}
 \label{sec:theory:particles}
@@ -30,8 +29,8 @@ three, is not part of the \ac{SM}.
 
 Within the \ac{SM}, each fundamental force is mediated by one or more ``gauge
 bosons''. For electromagnetism, this is the photon, for the weak force, the
-\PWp, \PWm and \PZ. Strong interactions are believed to be mediated by a set of
-8 ``gluons'' (\Pg). Each boson is a vector particle and thus has a spin of 1.
+\PWp, \PWm and \PZ. Strong interactions are mediated by a set of 8 ``gluons''
+(\Pg). Each boson is a vector particle and thus has a spin of 1.
 
 In addition to the bosons, the \ac{SM} must of course catalogue the many matter
 particles discovered by experiment. These are the fermions and may be further
@@ -48,10 +47,11 @@ The quarks also appear to occupy three generations, with two quarks occupying
 each. The first of each generation is referred to as an ``up-type'' quark and
 has charge $+\frac{2}{3}\ec$, the second ``down-type'' with charge
 $-\frac{1}{3}\ec$. The up-type quarks are (in order of increasing mass): up
-(\Pup), charm (\Pcharm) and top (\Ptop). Similarly, the respective down-type
-partners are: down (\Pdown), strange (\Pstrange) and bottom\footnote{also known
-  as beauty} (\Pbottom). In addition to electromagnetism and the weak force,
-quarks interact via the strong nuclear force.
+(\Pup), charm (\Pcharm) and top (\Ptop)\footnote{also known as
+  truth}. Similarly, the respective down-type partners are: down (\Pdown),
+strange (\Pstrange) and bottom\footnote{also known as beauty} (\Pbottom). In
+addition to electromagnetism and the weak force, quarks interact via the strong
+nuclear force.
 
 Each of the fermions is associated with an anti-particle partner, with opposite
 charge. For the charged leptons, the charge may be indicated by a superscript,
@@ -60,7 +60,8 @@ normally be denoted \APup, \APdown etc. In the case of the neutrinos, being
 electromagnetically neutral, the question of the nature of the anti-particles is
 as yet unanswered. It is theoretically possible for a neutrino to be its own
 anti-particle, $\Pnulepton = \APnulepton$. This would make the neutrino a
-``Majorana Fermion'' and is an area of active experimental research.
+``Majorana Fermion''~\cite{majorana} and is an area of active experimental
+research~\cite{majorana_neutrinos}.
 
 The particle content and properties of the \ac{SM} seem, at first glance, to be
 quite arbitrary. Why are there three forces? Why does the Weak sector have three
@@ -94,8 +95,8 @@ potential, $\Amu = (\emV, \emA)$ and similarly taking a 4-vector differential
 operator, $\dmu = (\partial/\partial t, -\nablav)$, the gauge transformation
 takes the form
 \begin{equation}
-\Amu \longrightarrow \Amu - \dmu\chi
 \label{eqn:theory_gauge_transform}
+\Amu \longrightarrow \Amu - \dmu\chi
 \end{equation}
 In this form, the Maxwell equations can be rewritten as
 \begin{equation}
@@ -141,10 +142,10 @@ To see how a theory can be written in terms of a Lagrangian, we will first
 approach a highly simplified example, namely that of a \emph{real scalar
   field}. The Lagrangian density for such a theory may be written as follows
 \begin{equation}
+\label{eqn:theory_phi4}
 \lagrangiand =
 \frac{1}{2}\left(\partial_{\mu}\phi(x))(\partial^{\mu}\phi(x)\right) -
 \frac{1}{2}m^2\phi^2(x) - \frac{\lambda}{4!}\phi^4(x)
-\label{eqn:theory_phi4}
 \end{equation}
 The three components of this expression are known respectively as the
 \emph{kinetic term}, the \emph{mass term} and the \emph{interaction term}. The
@@ -153,8 +154,8 @@ kind of particle $\phi$, $m$ is the mass of the particle and $\lambda$ a
 constant controlling the strength of the interaction between particles in the
 theory.
 
-Setting $\lambda = 0$ and applying the Euler-Lagrange relations
-to \ref{eqn:theory_phi4}, one obtains
+Setting $\lambda = 0$ and applying the Euler-Lagrange relations to
+Equation~\ref{eqn:theory_phi4}, one obtains
 \begin{equation}
 \partial^{\mu}\partial_{\mu} \phi + m^2\phi = 0
 \end{equation}
@@ -178,16 +179,16 @@ made by considering only its symmetries.
 We will now take a slightly more realistic example, that of a complex scalar
 field. The Lagrangian for this theory may be written as follows,
 \begin{equation}
+\label{eqn:theory_complex_scalar}
 \lagrangiand =
 \frac{1}{2}\left(\partial_{\mu}\phi(x))(\partial^{\mu}\phi(x)\right)^* -
 \frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right)
-\label{eqn:theory_complex_scalar}
 \end{equation}
 where the field $\phi$ is now a complex quantity. This field is seen to possess
 an additional symmetry
 \begin{equation}
-\phi \longrightarrow e^{i\theta}\phi
 \label{eqn:theory_phase_transform}
+\phi \longrightarrow e^{i\theta}\phi
 \end{equation}
 where $\theta$ is some arbitrary parameter (constant, for the moment, in
 spacetime). This is known as a global \Uone symmetry and has a single generator
@@ -197,16 +198,16 @@ When the transformation of Eqn~\ref{eqn:theory_phase_transform} is extended such
 that the parameter $\theta$ is a function of the spacetime coordinate $x$, the
 Lagrangian is no longer invariant,
 \begin{equation}
+\label{eqn:theory_gauge_dL}
 \delta\lagrangiand = \left(\partial_{\mu}
   \theta\right) \left[i\left(\partial^{\mu} \phi^*\right)\phi
   -i\phi^*\left(\partial^{\mu} \phi\right)\right] +
 \left(\partial_{\mu}\theta\right)\left(\partial^{\mu}\theta\right)\left|\phi\right|^2
-\label{eqn:theory_gauge_dL}
 \end{equation}
 In order to compensate for this change, we define the covariant derivative as follows
 \begin{equation}
-D_{\mu} = \partial_{\mu} + igB_{\mu}(x)
 \label{eqn:theory_cov_deriv}
+D_{\mu} = \partial_{\mu} + igB_{\mu}(x)
 \end{equation}
 where $B$ is taken to be a new four-vector field and $g$ is some constant. This
 operator must transform under a change of phase in such a way as to cancel the
@@ -228,10 +229,10 @@ introduced. This field then appears as a gauge boson in the theory, in this case
 an analogue of the photon. Incorporating the Maxwell equations into the
 Lagrangian, one arrives at \acl{SQED}.
 \begin{equation}
+\label{eqn:scalar_qed}
   \lagrangiand = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \left(D_{\mu}\phi\right)\left(D^{\mu}\phi\right)^*
   - \frac{1}{2}m^2\left|\phi(x)\right|^2 -
   \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right)
-\label{eqn:scalar_qed}
 \end{equation}
 
 The procedure which has just been outlined is known as the \emph{gauge
@@ -249,7 +250,7 @@ shall now discuss the inclusion of additional gauge bosons by moving to a
 Extending the symmetry group to \SUtwo and replacing the single complex field
 $\phi$ by a vector of complex fields $\Phi$,
 \begin{eqnarray*}
-\Phi \longrightarrow \Phi' = \exp{i\theta(x) + iT^a W^a_{\mu}}\Phi\\
+\Phi \longrightarrow \Phi' = \exp\left(i\theta(x) + iT^a W^a_{\mu}\right)\Phi\\
 D_{\mu} = \partial_{\mu} + igT^a_{\mu}
 \end{eqnarray*}
 where $T^a$ are the generators of the group \SUtwo, $T^a = \frac{1}{2}\sigma^a$
@@ -274,10 +275,10 @@ It would seem that a model based on a symmetry group $\SUtwo\times\Uone$ would
 appear to give the correct number of degrees of freedom for a unification of the
 electromagnetic and weak nuclear forces. One problem in particular is the fact
 that the weak bosons are massive and the photon massless. It turns out that
-giving the bosons mass directly in the Lagrangian (as for the field $\phi$
-in \ref{eqn:scalar_qed}) breaks gauge invariance. Another more subtle issue is
-that the \PWp and \PWm would be uncharged in this picture, since the \SUtwo
-component is able to commute with the \Uone part.
+giving the bosons mass directly in the Lagrangian (as for the field $\phi$ in
+Equation~\ref{eqn:scalar_qed}) breaks gauge invariance. Another more subtle
+issue is that the \PWp and \PWm would be uncharged in this picture, since the
+\SUtwo component is able to commute with the \Uone part.
 
 \subsection{Spin and Chirality}
 Having arrived at a toy gauge theory bearing some similarity to the \ac{SM}, it
@@ -293,11 +294,11 @@ a different equation of motion, known as the \emph{Dirac Equation},
 i\gamma^\mu \partial_{\mu}\Psi + m\Psi = 0
 \end{equation}
 where $\Psi$ is a spinor and $\gamma^{\mu}$ are known as the Dirac matrices
-(see e.g.~\cite{aitchison}. The Dirac matrices obey the anti-commutation
+(see e.g.~\cite{aitchison}). The Dirac matrices obey the anti-commutation
 relation $\{\gamma^{\mu}, \gamma^{\nu}\} = 2g^{\mu\nu}$ where $g^{\mu\nu}$ is
 the spacetime metric. Writing an appropriate Lagrangian, one obtains,
 \begin{equation}
-\bar{\Psi} \left (i\gamma^{\mu}\partial_{\mu} -m\right)\Psi \quad \bar{\Psi} =
+\bar{\Psi} \left (i\gamma^{\mu}\partial_{\mu} -m\right)\Psi \qquad \textrm{and} \qquad \bar{\Psi} =
 \Psi^{\dagger}\gamma_0
 \end{equation}
 One important aspect of spinors is a property known as ``handedness'' or
@@ -348,7 +349,7 @@ Considering the Lagrangian as
 \lagrangiand = \lagrangiand_{\textrm{gauge}} + \lagrangiand_{\textrm{free}}
 \end{equation}
 and writing the analogue of the tensor \Fmunu for the gauge group
-$\SUtwo_{\textrm{L}}\times\Uone$ $\SUtwo\times\Uone$,
+$\SUtwo_{\textrm{L}}\times\Uone$,
 \begin{equation}
 \lagrangiand_{\textrm{gauge}} = -\frac{1}{4} W^{a\mu\nu} W^a_{\mu\nu}
 -\frac{1}{4} B^{\mu\nu}B_{\mu\nu}
@@ -430,8 +431,8 @@ where $V$ is the potential
 \begin{equation}
 V(\phi) = \frac{1}{2}\mu^2\phi^2 + \frac{1}{4}\lambda\phi^4
 \end{equation}
-The lowest energy states are spacetime independent ($\partial_{\mu} \phi_0 = 0$)
-and minimising $V$ we find,
+The lowest energy states, $\phi_0$, are spacetime independent ($\partial_{\mu}
+\phi_0 = 0$) and minimising $V$ we find,
 \begin{equation}
 \phi_0 \left (\mu^2 + \lambda\phi_0^2\right) = 0
 \end{equation}
@@ -503,7 +504,7 @@ perturbations, the fields may be expanded around the vacuum as follows,
 \phi' + \frac{v}{\sqrt{2}}
 \end{equation}
 When substituted into the Lagrangian this gives
-\begin{align}
+\begin{align*}
   \lagrangiand =
   \frac{1}{2}\left(\partial_{\mu}\phi'_1\right)\left(\partial^{\mu}\phi'_1\right)
   - \frac{1}{2}\left(-2\mu^2\right){\phi'_1}^2 +
@@ -511,7 +512,7 @@ When substituted into the Lagrangian this gives
   + \textrm{interaction terms}\\
   - \frac{1}{4}F_{\mu\nu}^{\mu\nu} +
   \frac{q^2v^2}{2}gvA_{\mu}\left(\partial^{\mu}\phi'_2\right)
-\end{align}
+\end{align*}
 Two thing should be noted about the resulting Lagrangian. Firstly, that it
 possesses a scalar field with mass $\sqrt{-2\mu^2}$ and secondly a vector
 boson $A_{\mu}$ with mass $gv$. The final term is problematic, but can be
@@ -569,7 +570,7 @@ with a doublet for each of the three generations. The right-handed components
 are once again in a singlet representation.
 
 The weak eigenstates of the quarks are rotated with respect to their mass
-eigenstates via the \ac{CKM} matrix. This encodes the strength of various
+eigenstates via the \acl{CKM} matrix. This encodes the strength of various
 flavour-changing weak decays.
 
 \subsection{Colour}
