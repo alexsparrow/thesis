@@ -54,7 +54,7 @@ function of the parameter $\theta$ given experimental measurements, $X$, the
 likelihood may be written
 \begin{equation}
 \label{eqn:inter_likelihood}
-\likelihood\left(\theta|X\right) = P\left(X|\theta\right)
+\likelihood\left(\theta|X\right) = P\left(X|\theta\right),
 \end{equation}
 where $P\left(X|\theta\right)$ should be read as ``the probability of $X$ given
 $\theta$''.
@@ -64,7 +64,7 @@ to experiment. Often, two proposed values for the parameter $\theta$ will be
 compared using the \emph{likelihood ratio},
 \begin{equation}
 \label{eqn:inter_likelihood_ratio}
-  \likelihoodratio = \frac{\likelihood\left(\theta_1|X\right)}{\likelihood\left(\theta_2|X\right)} = \frac{\alpha P\left(X|\theta_1\right)}{\alpha P\left(X|\theta_2\right)}
+  \likelihoodratio = \frac{\likelihood\left(\theta_1|X\right)}{\likelihood\left(\theta_2|X\right)} = \frac{\alpha P\left(X|\theta_1\right)}{\alpha P\left(X|\theta_2\right)}.
 \end{equation}
 Here, the numerator and denominator are related to
 Eqn~\ref{eqn:inter_likelihood} by a constant $\alpha$. Here, as in many uses of
@@ -92,9 +92,9 @@ parameters to be measured by the experiment are known as \emph{parameters of
 The full likelihood function may be reduced to a ``profile likelihood'', by
 rewriting the nuisance parameters in terms of the parameters of interest. For
 instance, the profile likelihood ratio,
-\begin{equation}
-  \lambda = \frac{\likelihood\left(\mu, \hat{\hat{\nu}}\left(\mu\right)\right)}{\likelihood\left(\hat{\mu}, \hat{\nu}\right)}
-\end{equation}
+\begin{equation*}
+  \lambda = \frac{\likelihood\left(\mu, \hat{\hat{\nu}}\left(\mu\right)\right)}{\likelihood\left(\hat{\mu}, \hat{\nu}\right)},
+\end{equation*}
 where $\mu$ are the parameters of interest and $\nu$ the nuisance
 paramters. $\hat{\mu}$ and $\hat{\nu}$ are the \acp{MLE} of $\mu$ and $\nu$
 respectively. $\hat{\hat{\nu}}$ is the \emph{conditional} \ac{MLE} of $\nu$ -
@@ -130,7 +130,7 @@ number of signal events observed or the likelihood ratio. For a given
 hypothesis, a critical region $W$ can be defined where the probility of measuring
 such a value given the hypothesis is below some threashold,
 \begin{equation*}
-P\left(x \in W|H\right) \leq \alpha
+P\left(x \in W|H\right) \leq \alpha,
 \end{equation*}
 where $x$ is the test statistic and $\alpha$ is some small constant - normally
 $0.05$. If the measured value of $x$ is found to be in the critical region, the
@@ -160,12 +160,12 @@ the two hypotheses.
 
 To address this problem, the \CLs hypothesis test may be used instead~\cite{cls},
 \begin{equation*}
-\CLs = \frac{CL_{s+b}}{CL_{b}}
+\CLs = \frac{CL_{s+b}}{CL_{b}},
 \end{equation*}
 where, for the example shown in Figure~\ref{fig:inter_cls_explain2},
 \begin{eqnarray*}
 CL_{s+b} = P\left(x > x_0 | H_1\right)\\
-CL_b = 1 - P\left(x < x_0 | H_0\right)
+CL_b = 1 - P\left(x < x_0 | H_0\right),
 \end{eqnarray*}
 where the null hypothesis now represents a background-only ($b$) scenario, and
 the alternate, signal-plus-background ($s+b$). Using the \CLs to test the
@@ -416,7 +416,7 @@ Table~\ref{tbl:inter_signal_systematics} and adding in quadrature with the 10\%
 \underbrace{\left(10\%\right)^2}_{\textrm{\ac{PDF}}} +
 \underbrace{\left(15\%\right)^2}_{\textrm{\ac{JES}}} +
 \underbrace{\left(10\%\right)^2}_{\MET~\textrm{resolution}}
-\approx 20\%
+\approx 20\%.
 \end{equation*}
 
 For the following limit plots, holes in the sample have been filled by taking
@@ -429,10 +429,10 @@ introduces an additional mass parameter, $m_{\PScharginopm}$. Of course, this
 parameter should lie somewhere between the mother and daughter particles'
 masses. To study a range of scenarios without having to consider the full
 three-dimensional volume of the parameter space, three scenarios are
-considered. Choosing values of the intermediate particle mass as
+considered. Choosing values of the intermediate particle mass according to
 \begin{equation}
 \label{eqn:tthreew_x}
-\Mchargino = x \Mgluino + (1-x)\Mlsp
+\Mchargino = x \Mgluino + (1-x)\Mlsp,
 \end{equation}
 limits have been set for 3 values of the parameter $x$ - 0.25, 0.5 and
 0.75. Intuitively, these represent cases where the intermediate particle mass is

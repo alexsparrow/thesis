@@ -74,18 +74,18 @@ The theoretical principle of gauge invariance can be seen in Maxwell's theory of
 electromagnetism~\cite{aitchison}. Recall that the electric (\emE) and magnetic
 (\emB) components of the field may be written in terms of a vector potential
 (\emA) and a scalar potential \emV as follows:
-\begin{eqnarray}
+\begin{eqnarray*}
 \emB = \nablav \times \emA \\
-\emE = -\nablav \emV - \frac{\partial \emA}{\partial t}
-\end{eqnarray}
+\emE = -\nablav \emV - \frac{\partial \emA}{\partial t}.
+\end{eqnarray*}
 It can be seen that these equations do not relate a given (\emB, \emE) to unique
 values of \emA and \emV. In particular, if the following transformations are
 applied simultaneously to \emA and \emV, the values of \emB and \emE will be
 unchanged,
-\begin{eqnarray}
+\begin{eqnarray*}
 \emA \longrightarrow \emA + \nablav \chi \\
-\emV \longrightarrow  \emV - \frac{\partial \chi}{\partial t}
-\end{eqnarray}
+\emV \longrightarrow  \emV - \frac{\partial \chi}{\partial t},
+\end{eqnarray*}
 where $\chi$ is some arbitrary function. Such transformations are known as
 ``gauge transformations'' and similarly \emB and \emE are said to be ``gauge
 invariant''.
@@ -96,16 +96,16 @@ operator, $\dmu = (\partial/\partial t, -\nablav)$, the gauge transformation
 takes the form
 \begin{equation}
 \label{eqn:theory_gauge_transform}
-\Amu \longrightarrow \Amu - \dmu\chi
+\Amu \longrightarrow \Amu - \dmu\chi.
 \end{equation}
 In this form, the Maxwell equations can be rewritten as
-\begin{equation}
-\dmu \Fmunu = j^{\nu}_{\textrm{em}}
-\end{equation}
+\begin{equation*}
+\dmu \Fmunu = j^{\nu}_{\textrm{em}},
+\end{equation*}
 where $\Fmunu$ is the electromagnetic tensor, defined as
-\begin{equation}
-\Fmunu = \dmu\Anu - \dnu\Amu
-\end{equation}
+\begin{equation*}
+\Fmunu = \dmu\Anu - \dnu\Amu.
+\end{equation*}
 It can be seen that under the gauge transformation
 (Eqn~\ref{eqn:theory_gauge_transform}), $\Fmunu$ is invariant. This confirms the
 gauge invariance of the Maxwell equations.
@@ -114,22 +114,22 @@ gauge invariance of the Maxwell equations.
 Before continuing, it is useful to review the Lagrangian formalism and the
 principle of least action. The action, \action, is a quantity associated with a
 physical system, used to characterise its dynamics. The action can be written
-\begin{equation}
-  S = \int dt \lagrangian = \int d^4 x \lagrangiand
-\end{equation}
+\begin{equation*}
+  S = \int dt \lagrangian = \int d^4 x \lagrangiand,
+\end{equation*}
 where \lagrangian is the \emph{Lagrangian}, and \lagrangiand the
 \emph{Lagrangian density} and
-\begin{equation}
-\lagrangian = \int d^3 x \lagrangiand
-\end{equation}
+\begin{equation*}
+\lagrangian = \int d^3 x \lagrangiand.
+\end{equation*}
 The Lagrangian is a function of some generalised coordinates \phii describing
 the dynamics of the system and their derivatives $\dmu \phii$. From this, the
 Euler-Lagrange relation can be used to derive an equation of motion for the
 system,
-\begin{equation}
+\begin{equation*}
 \frac{\partial \lagrangiand}{\partial \phii} - \partial_{\mu} \left (
-  \frac{\partial \lagrangiand}{\partial\left(\partial_{\mu} \phii\right)}\right) = 0
-\end{equation}
+  \frac{\partial \lagrangiand}{\partial\left(\partial_{\mu} \phii\right)}\right) = 0.
+\end{equation*}
 By writing down such a Lagrangian, a theory can be fully described. In order to
 perform calculation of real measurable quantities, the theory must be
 quantised. This is a complex procedure involving \emph{renormalisation}
@@ -140,12 +140,12 @@ i.e. mass to the fourth power.
 \subsection{A Real Scalar Field}
 To see how a theory can be written in terms of a Lagrangian, we will first
 approach a highly simplified example, namely that of a \emph{real scalar
-  field}. The Lagrangian density for such a theory may be written as follows
+  field}. The Lagrangian density for such a theory may be written as follows:
 \begin{equation}
 \label{eqn:theory_phi4}
 \lagrangiand =
 \frac{1}{2}\left(\partial_{\mu}\phi(x))(\partial^{\mu}\phi(x)\right) -
-\frac{1}{2}m^2\phi^2(x) - \frac{\lambda}{4!}\phi^4(x)
+\frac{1}{2}m^2\phi^2(x) - \frac{\lambda}{4!}\phi^4(x).
 \end{equation}
 The three components of this expression are known respectively as the
 \emph{kinetic term}, the \emph{mass term} and the \emph{interaction term}. The
@@ -156,9 +156,9 @@ theory.
 
 Setting $\lambda = 0$ and applying the Euler-Lagrange relations to
 Equation~\ref{eqn:theory_phi4}, one obtains
-\begin{equation}
-\partial^{\mu}\partial_{\mu} \phi + m^2\phi = 0
-\end{equation}
+\begin{equation*}
+\partial^{\mu}\partial_{\mu} \phi + m^2\phi = 0,
+\end{equation*}
 which can be recognised as the Klein-Gordon equation describing the motion of a
 scalar particle.
 
@@ -182,13 +182,13 @@ field. The Lagrangian for this theory may be written as follows,
 \label{eqn:theory_complex_scalar}
 \lagrangiand =
 \frac{1}{2}\left(\partial_{\mu}\phi(x))(\partial^{\mu}\phi(x)\right)^* -
-\frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right)
+\frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right),
 \end{equation}
 where the field $\phi$ is now a complex quantity. This field is seen to possess
-an additional symmetry
+an additional symmetry,
 \begin{equation}
 \label{eqn:theory_phase_transform}
-\phi \longrightarrow e^{i\theta}\phi
+\phi \longrightarrow e^{i\theta}\phi,
 \end{equation}
 where $\theta$ is some arbitrary parameter (constant, for the moment, in
 spacetime). This is known as a global \Uone symmetry and has a single generator
@@ -202,37 +202,37 @@ Lagrangian is no longer invariant,
 \delta\lagrangiand = \left(\partial_{\mu}
   \theta\right) \left[i\left(\partial^{\mu} \phi^*\right)\phi
   -i\phi^*\left(\partial^{\mu} \phi\right)\right] +
-\left(\partial_{\mu}\theta\right)\left(\partial^{\mu}\theta\right)\left|\phi\right|^2
+\left(\partial_{\mu}\theta\right)\left(\partial^{\mu}\theta\right)\left|\phi\right|^2.
 \end{equation}
 In order to compensate for this change, we define the covariant derivative as follows
 \begin{equation}
 \label{eqn:theory_cov_deriv}
-D_{\mu} = \partial_{\mu} + igB_{\mu}(x)
+D_{\mu} = \partial_{\mu} + igB_{\mu}(x),
 \end{equation}
 where $B$ is taken to be a new four-vector field and $g$ is some constant. This
 operator must transform under a change of phase in such a way as to cancel the
 additional terms in Equation~\ref{eqn:theory_gauge_dL}. The Lagrangian would
 then be rewritten as follows,
-\begin{equation}
+\begin{equation*}
   \lagrangiand = \left(D_{\mu}\phi\right)\left(D^{\mu}\phi\right)^*
-  - \frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right)
-\end{equation}
+  - \frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right).
+\end{equation*}
 It can be shown that this requires the $B_{\mu}$ field to transform as follows
-\begin{equation}
-B_{\mu} \longrightarrow B'_{\mu} = B_{\mu} - \frac{1}{g}\partial_{\mu}\theta
-\end{equation}
+\begin{equation*}
+B_{\mu} \longrightarrow B'_{\mu} = B_{\mu} - \frac{1}{g}\partial_{\mu}\theta.
+\end{equation*}
 It can be seen that this is the same transformation as that applied to the
 electromagnetic four-vector field in
 Equation~\ref{eqn:theory_gauge_transform}. By requiring the fields to be
 symmetric under a \Uone phase transformation, a new field must be
 introduced. This field then appears as a gauge boson in the theory, in this case
 an analogue of the photon. Incorporating the Maxwell equations into the
-Lagrangian, one arrives at \acl{SQED}.
+Lagrangian, one arrives at \acl{SQED},
 \begin{equation}
 \label{eqn:scalar_qed}
   \lagrangiand = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \left(D_{\mu}\phi\right)\left(D^{\mu}\phi\right)^*
   - \frac{1}{2}m^2\left|\phi(x)\right|^2 -
-  \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right)
+  \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right).
 \end{equation}
 
 The procedure which has just been outlined is known as the \emph{gauge
@@ -251,7 +251,7 @@ Extending the symmetry group to \SUtwo and replacing the single complex field
 $\phi$ by a vector of complex fields $\Phi$,
 \begin{eqnarray*}
 \Phi \longrightarrow \Phi' = \exp\left(i\theta(x) + iT^a W^a_{\mu}\right)\Phi\\
-D_{\mu} = \partial_{\mu} + igT^a_{\mu}
+D_{\mu} = \partial_{\mu} + igT^a_{\mu},
 \end{eqnarray*}
 where $T^a$ are the generators of the group \SUtwo, $T^a = \frac{1}{2}\sigma^a$
 and the $\sigma^a$ are the well-known Pauli matrices. Notice that this symmetry
@@ -265,7 +265,7 @@ local gauge invariance,
 \begin{eqnarray*}
 \lagrangiand = -\frac{1}{4}F^a_{\mu\nu}F^{\mu\nu} \\
 F^a_{\mu\nu} = \partial_{\mu} A^a_{\nu} - \partial_{\nu} A^a_{\mu} + g f^{abc}
-A^b_{\mu} A^c_{\nu}
+A^b_{\mu} A^c_{\nu},
 \end{eqnarray*}
 where $f^{abc}$ are known as structure constants. The additional quadratic terms
 in the Lagrangian lead to self interactions, just as is observed in the weak
@@ -290,17 +290,17 @@ spin - intrinsic angular momentum.
 Fermionic degrees of freedom are represented as \emph{spinors}. These transform
 in a different manner to vectors under spatial rotations. In addition, they obey
 a different equation of motion, known as the \emph{Dirac Equation},
-\begin{equation}
-i\gamma^\mu \partial_{\mu}\Psi + m\Psi = 0
-\end{equation}
+\begin{equation*}
+i\gamma^\mu \partial_{\mu}\Psi + m\Psi = 0,
+\end{equation*}
 where $\Psi$ is a spinor and $\gamma^{\mu}$ are known as the Dirac matrices
 (see e.g.~\cite{aitchison}). The Dirac matrices obey the anti-commutation
 relation $\{\gamma^{\mu}, \gamma^{\nu}\} = 2g^{\mu\nu}$ where $g^{\mu\nu}$ is
-the spacetime metric. Writing an appropriate Lagrangian, one obtains,
-\begin{equation}
+the spacetime metric. Writing an appropriate Lagrangian, one obtains
+\begin{equation*}
 \bar{\Psi} \left (i\gamma^{\mu}\partial_{\mu} -m\right)\Psi \qquad \textrm{and} \qquad \bar{\Psi} =
-\Psi^{\dagger}\gamma_0
-\end{equation}
+\Psi^{\dagger}\gamma_0.
+\end{equation*}
 One important aspect of spinors is a property known as ``handedness'' or
 \emph{chirality}. Physically speaking, a right-handed particle is one whose spin
 is aligned with its direction of motion and a left-handed one whose spin is
@@ -344,65 +344,65 @@ not electromagnetism but ``hypercharge''. This is essential to overcoming the
 issues with $\SUtwo\times\Uone$ already described.
 
 The fermions themselves are placed into ``isospin'' doublets coupling a charged
-lepton with a neutrino.
-\begin{equation}
+lepton with a neutrino,
+\begin{equation*}
 \PsiL = \left(\begin{array}{c} \Pgn_{\textrm{L}} \\
-    \Plepton_{\textrm{L}} \end{array}\right)
-\end{equation}
+    \Plepton_{\textrm{L}} \end{array}\right),
+\end{equation*}
 where $\Pgn_{\textrm{L}}$ and $\Plepton_{\textrm{L}}$ are left-handed spinor
 fields representing a neutral and charged lepton respectively. The right-handed
 component of the charged lepton (which does interact electromagnetically) is
-incorporated as an isospin singlet
-\begin{equation}
-\PsiR = \Plepton_{\textrm{R}}
-\end{equation}
+incorporated as an isospin singlet,
+\begin{equation*}
+\PsiR = \Plepton_{\textrm{R}}.
+\end{equation*}
 
 
 Considering the Lagrangian as
-\begin{equation}
-\lagrangiand = \lagrangiand_{\textrm{gauge}} + \lagrangiand_{\textrm{free}}
-\end{equation}
+\begin{equation*}
+\lagrangiand = \lagrangiand_{\textrm{gauge}} + \lagrangiand_{\textrm{free}},
+\end{equation*}
 and writing the analogue of the tensor \Fmunu for the gauge group
 $\SUtwo_{\textrm{L}}\times\Uone$,
-\begin{equation}
+\begin{equation*}
 \lagrangiand_{\textrm{gauge}} = -\frac{1}{4} W^{a\mu\nu} W^a_{\mu\nu}
--\frac{1}{4} B^{\mu\nu}B_{\mu\nu}
-\end{equation}
+-\frac{1}{4} B^{\mu\nu}B_{\mu\nu},
+\end{equation*}
 where
 \begin{eqnarray*}
 W^{a}_{\mu\nu} = \partial_{\mu} W^a_{\nu} - \partial_{\nu}W^a_{\mu} + g f^{abc}
 W^{b}_{\mu} W^c_{\nu}\\
-B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}
+B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu},
 \end{eqnarray*}
 The piece of the Lagrangian for free leptons is then,
-\begin{equation}
+\begin{equation*}
 \lagrangiand_{\textrm{leptons}} = \APsiL i \gamma^{\mu} D_{\mu} \PsiL + \APsiR i
-\gamma^{\mu} D_{\mu} \PsiR
-\end{equation}
+\gamma^{\mu} D_{\mu} \PsiR.
+\end{equation*}
 The covariant derivative is written
-\begin{equation}
-D_{\mu} = \partial_{\mu} + i g W^a_{\mu} T^a + i g' B^{\mu}\frac{Y}{2}
-\end{equation}
+\begin{equation*}
+D_{\mu} = \partial_{\mu} + i g W^a_{\mu} T^a + i g' B^{\mu}\frac{Y}{2},
+\end{equation*}
 where the $T^a = \frac{1}{2}\sigma^a$ when acting on a left-handed spinor and
 zero otherwise. Similarly, the hypercharge $Y$ is $-1$ for left-handed spinors
 and $-2$ for right-handed. The $g$ and $g'$ are coupling constants.
 
 It can then be seen that the physical \PWp and \PWm are superpositions,
-\begin{equation}
-\PWpm_{\mu} = \frac{1}{\sqrt{2}}\left(\PW^1_{\mu} + \PW^2_{\mu}\right)
-\end{equation}
+\begin{equation*}
+\PWpm_{\mu} = \frac{1}{\sqrt{2}}\left(\PW^1_{\mu} + \PW^2_{\mu}\right),
+\end{equation*}
 and the photon and \PZ,
-\begin{equation}
+\begin{equation*}
 \left(\begin{array}{c}A_{\mu} \\ Z_{\mu} \end{array}\right ) =
   \left ( \begin{array}{cc} \cos\thetaw & \sin\thetaw \\ -\sin\thetaw &
       \cos\thetaw\end{array}\right)
-\left ( \begin{array}{c} B_{\mu} \\ W^3_{\mu} \end{array} \right )
-\end{equation}
+\left ( \begin{array}{c} B_{\mu} \\ W^3_{\mu} \end{array} \right ),
+\end{equation*}
 where $\thetaw$ is known as the Weinberg angle. It is related to the coupling
 constants $g$ and $g'$ by
 \begin{eqnarray}
 \sin\thetaw = \frac{g'}{\sqrt{g + {g'}^2}} \\
-\cos\thetaw = \frac{g}{\sqrt{g + {g'}^2}}
+\cos\thetaw = \frac{g}{\sqrt{g + {g'}^2}}.
 \end{eqnarray}
 
 So it can be seen that by introducing weak isospin and hypercharge, a more
@@ -417,10 +417,10 @@ in the weak sector.
 This model is now remarkably close to the full electroweak theory. Unfortunately
 two major problems remain - both relating to mass. Firstly, the mass of the
 leptons has not been included. Naively one would be tempted to add a mass term
-\begin{equation}
+\begin{equation*}
 m\APsiL\PsiL = m(\APneutrino_{\textrm{L}}\Pneutrino_{L} +
-\APlepton_{\textrm{L}}\Plepton_{\textrm{L}})
-\end{equation}
+\APlepton_{\textrm{L}}\Plepton_{\textrm{L}}).
+\end{equation*}
 However, this term vanishes (this can be seen by applying left-handed and
 right-handed projection operators to the spinors). The second issue relates to
 the mass of the gauge bosons - in particular how to generate masses for the
@@ -437,19 +437,19 @@ state of the theory ``breaks'' the symmetry down to a smaller group.
 \subsection{A Real Scalar Field}
 To illustrate how this works, we will return to a simplified model with a real
 scalar field
-\begin{equation}
+\begin{equation*}
 \lagrangiand = \left(\partial^{\mu}\phi\right)\left(\partial_{\mu}\phi\right)
--V(\phi)
-\end{equation}
-where $V$ is the potential
-\begin{equation}
-V(\phi) = \frac{1}{2}\mu^2\phi^2 + \frac{1}{4}\lambda\phi^4
-\end{equation}
+-V(\phi),
+\end{equation*}
+where $V$ is the potential,
+\begin{equation*}
+V(\phi) = \frac{1}{2}\mu^2\phi^2 + \frac{1}{4}\lambda\phi^4.
+\end{equation*}
 The lowest energy states, $\phi_0$, are spacetime independent ($\partial_{\mu}
 \phi_0 = 0$) and minimising $V$ we find,
-\begin{equation}
-\phi_0 \left (\mu^2 + \lambda\phi_0^2\right) = 0
-\end{equation}
+\begin{equation*}
+\phi_0 \left (\mu^2 + \lambda\phi_0^2\right) = 0.
+\end{equation*}
 To ensure that total energy is bounded below, $\lambda$ should be positive. For
 $\mu^2 > 0$, there is one solution $\phi_0 = 0$. For $\mu^2 < 0$, there are two
 solutions $\phi^\pm_0 = \pm \sqrt{-\mu^2/\lambda}$. Recall that the initial
@@ -458,46 +458,46 @@ Lagrangian is invariant under the transformation $\phi \longrightarrow
 no longer invariant under this symmetry. Furthermore, it is possible to expand
 around the new vacuum (e.g. $\phi_0^\pm$), $v=\sqrt{-\mu^2/\lambda}$ and define
 a new field $\phi'$,
-\begin{equation}
-\phi' \equiv \phi - v
-\end{equation}
+\begin{equation*}
+\phi' \equiv \phi - v,
+\end{equation*}
 the Lagrangian becomes
-\begin{equation}
+\begin{equation*}
 \lagrangiand = \frac{1}{2}
 \left(\partial_{\mu}\phi'\right)\left(\partial^{\mu}\phi'\right)
 -\frac{1}{2}\left(\sqrt{-2\mu^2}\right)^2{\phi'}^2 - \lambda v {\phi'}^3
--\frac{1}{4}\lambda{\phi'}^4
-\end{equation}
+-\frac{1}{4}\lambda{\phi'}^4,
+\end{equation*}
 which, with the addition of the $\phi^3$ term, no longer respects the $\phi
 \longrightarrow -\phi$ symmetry.
 
 \subsection{A Complex Scalar Field and Goldstone's Theorem}
 \label{sec:sm_goldstone}
 Moving now to the case of a complex scalar field,
-\begin{equation}
+\begin{equation*}
 \lagrangiand = \left(\partial_{\mu}\phi\right)\left(\partial^{\mu}\phi^*\right)
-- V\left(\phi^*\phi\right)
-\end{equation}
+- V\left(\phi^*\phi\right),
+\end{equation*}
 where the potential is written
-\begin{equation}
+\begin{equation*}
 V\left(\phi^*\phi\right) = \mu^2\left(\phi^*\phi\right) +
-\lambda\left(\phi*\phi\right)^2
-\end{equation}
+\lambda\left(\phi*\phi\right)^2,
+\end{equation*}
 the vacua are now $\left|\phi_0\right|^2 = -\mu^2/2\lambda$. The vacuum is now
 symmetric under a global \Uone symmetry (as is the original Lagrangian). Writing
-\begin{equation}
-\phi = \frac{1}{\sqrt{2}}\left(\phi_1 + i\phi_2\right)
-\end{equation}
+\begin{equation*}
+\phi = \frac{1}{\sqrt{2}}\left(\phi_1 + i\phi_2\right),
+\end{equation*}
 and picking a vacuum configuration $\phi_1 = v$, $\phi_2 = 0$ we can once again
 expand around the new vacuum. This yields the Lagrangian,
-\begin{equation}
+\begin{equation*}
   \lagrangiand =
   \frac{1}{2}\left(\partial_{\mu}\phi'_1\right)\left(\partial^{\mu}\phi'_1\right)
   -\frac{1}{2}\left(-2\mu^2\right){\phi'_1}^2 +
   \frac{1}{2}\left(\partial_{\mu}\phi'_2\right)\left(\partial^{\mu}\phi'_2\right)
-  + \textrm{(interaction terms)}
-\end{equation}
-we can now identify a massive scalar field $\phi_1$ and a massless scalar field
+  + \textrm{(interaction terms)}.
+\end{equation*}
+We can now identify a massive scalar field $\phi_1$ and a massless scalar field
 $\phi_2$. This is an example of Goldstone's theorem - when an exact continuous
 global symmetry is broken, a massless scalar field will appear for each broken
 group generator. In this case, the original \Uone symmetry of the group has been
@@ -513,10 +513,10 @@ into a local one.
 
 Consider again the case of \ac{SQED} (Eqn~\ref{eqn:scalar_qed}). For small
 perturbations, the fields may be expanded around the vacuum as follows,
-\begin{equation}
+\begin{equation*}
 \phi = \exp\left(i\frac{\phi'_2}{v}\right)\frac{1}{\sqrt{2}}\left(\phi'_1 + v\right) \approx
-\phi' + \frac{v}{\sqrt{2}}
-\end{equation}
+\phi' + \frac{v}{\sqrt{2}}.
+\end{equation*}
 When substituted into the Lagrangian this gives
 \begin{align*}
   \lagrangiand =
@@ -525,7 +525,7 @@ When substituted into the Lagrangian this gives
   \frac{1}{2}\left(\partial_{\mu}\phi'_2\right)\left(\partial^{\mu}\phi'_2\right)
   + \textrm{interaction terms}\\
   - \frac{1}{4}F_{\mu\nu}^{\mu\nu} +
-  \frac{q^2v^2}{2}gvA_{\mu}\left(\partial^{\mu}\phi'_2\right)
+  \frac{q^2v^2}{2}gvA_{\mu}\left(\partial^{\mu}\phi'_2\right).
 \end{align*}
 Two thing should be noted about the resulting Lagrangian. Firstly, that it
 possesses a scalar field with mass $\sqrt{-2\mu^2}$ and secondly a vector
@@ -554,15 +554,15 @@ It was noted in Section~\ref{sec:remaining_issues} that it is not possible to
 write down a straight forward mass term for the fermions in the electroweak
 theory. It turns out that this problem is also solved by the Higgs mechanism by
 the addition of a Yukawa coupling,
-\begin{equation}
-\lagrangiand = g \left(\APsiL \phi \PsiR + \APsiR\phi^{\dagger}\PsiL\right)
-\end{equation}
+\begin{equation*}
+\lagrangiand = g \left(\APsiL \phi \PsiR + \APsiR\phi^{\dagger}\PsiL\right),
+\end{equation*}
 where $\phi$ is the Higgs field. When $\phi$ acquires a vacuum expectation value
 via \ac{EWSB}, it can be seen that the fermion field $\Psi$ acquires a mass like
 term - with
-\begin{equation}
-m_{\Psi} = \frac{gv}{\sqrt{2}}
-\end{equation}
+\begin{equation*}
+m_{\Psi} = \frac{gv}{\sqrt{2}}.
+\end{equation*}
 It is thought that all \ac{SM} fermions acquire their mass in this way.
 
 \section{\acl{QCD}}
@@ -577,9 +577,9 @@ the theory will be given with further details available in~\cite{pink_book}.
 The quarks can be included straightforwardly into the \ac{SM} in a similar
 manner to the leptons. The left-handed components of up and down type are paired
 into doublets as follows:
-\begin{equation}
-Q=\left(\begin{array}{c}\Pup_{\textrm{L}} \\ \Pdown_{\textrm{L}}\end{array}\right)
-\end{equation}
+\begin{equation*}
+Q=\left(\begin{array}{c}\Pup_{\textrm{L}} \\ \Pdown_{\textrm{L}}\end{array}\right),
+\end{equation*}
 with a doublet for each of the three generations. The right-handed components
 are once again in a singlet representation.
 

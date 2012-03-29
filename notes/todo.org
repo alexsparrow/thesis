@@ -9,13 +9,19 @@
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Monte carlo, MC
 ** TODO 7.2: single lepton -> single-lepton
-** TODO Equations: remove numbering
-   - Done equation for wpol, susy and reco chapters
+** TODO Preface
+** TODO Front quote
+** TODO Section/Chapter titles
+** TODO Figure placement
+** TODO Figure captions
+** TODO List punctutation
+** TODO Equation references
+** TODO Figure references
+** TODO Tables - resize to fit page
+** TODO Alex's corrections to into/abstract/conclusion
 * SM
 ** TODO SM Higgs mass
 * SUSY
-** TODO More on phenomenology
-   SCHEDULED: <2012-03-20 Tue>
 ** TODO Previous limits
 ** TODO Described SUSY breaking possibilities in more detail
 ** TODO mention SUSY higgs searches
@@ -984,3 +990,10 @@ Mostly done!
 ** DONE costheta* gives
    CLOSED: [2012-03-29 Thu 11:37]
    - State "DONE"       from "TODO"       [2012-03-29 Thu 11:37]
+** DONE Equations: remove numbering
+   CLOSED: [2012-03-29 Thu 13:59]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 13:59]
+   - Done equation for wpol, susy and reco chapters, stats
+** CANCELLED More on phenomenology
+   CLOSED: [2012-03-29 Thu 14:00] SCHEDULED: <2012-03-20 Tue>
+   - State "CANCELLED"  from "TODO"       [2012-03-29 Thu 14:00]

@@ -21,10 +21,10 @@ $x(\nu)$. The nominal value of this variable, being that which is measured in
 \subsection{The Likelihood Function}
 In constructing the likelihood, we start by writing down the number of events
 expected for each bin (assigned the index $i=0,1,2...$):
-\begin{equation}
+\begin{equation*}
 \NExpi = \NSigi(\mu, \nu^{(j)}) +
-\NBkgi(\nu^{(k)}) \\
-\end{equation}
+\NBkgi(\nu^{(k)}),
+\end{equation*}
 where \NSigi is the expected signal yield for a chosen signal model and \NBkgi
 is the data-driven background prediction. As can be seen, the signal yield is a
 function of the \ac{poi} - the signal strength - and some number of nuisance
@@ -50,24 +50,23 @@ likelihood must include:
 \end{enumerate}
 
 The form of the likelihood is as follows,
-\begin{equation}
+\begin{equation*}
 \mathcal{L} = \prod_i \Poisson(\NExpi ; \NObsi)
-\prod_{\alpha \in \Theta}  X_\alpha(\nu^{(\alpha)})
-\end{equation}
+\prod_{\alpha \in \Theta}  X_\alpha(\nu^{(\alpha)}),
+\end{equation*}
 where
 \begin{itemize}
 \item $\mathcal{P}(\mu;x)$ denotes a Poisson distribution with mean $\mu$ and value
-$x$
-\item The $X_\alpha(\nu^{(\alpha)})$ represent some prior pdf associated with
+$x$;
+\item the $X_\alpha(\nu^{(\alpha)})$ represent some prior pdf associated with
   each systematic $\alpha$.
 \end{itemize}
 
 \subsection{The Signal Yield}
-The signal yield per bin is constructed as follows
-\begin{equation}
-\NSigi = \mu \times \epsilon_i(\nu^{(\alpha)}) \times \sigma \times L \times \nu^{\textrm{lumi}}
-\end{equation}
-
+The signal yield per bin is constructed as follows:
+\begin{equation*}
+\NSigi = \mu \times \epsilon_i(\nu^{(\alpha)}) \times \sigma \times L \times \nu^{\textrm{lumi}},
+\end{equation*}
 with
 \begin{itemize}
 \item $\epsilon_i(\nu^{(\alpha)})$ is the efficiency of the $i$th bin assumed to be
@@ -84,9 +83,9 @@ simplified model limits, the parameter $\sigma$ was set to 1 and therefore the
 
 \subsection{Background Prediction}
 The background prediction per bin is then written as
-\begin{equation}
-\NBkgi = \RCSi(\nu_i^{(\alpha)}, \nu^{(\beta)}) \times \NControli(\nu_i^{(\gamma)})
-\end{equation}
+\begin{equation*}
+\NBkgi = \RCSi(\nu_i^{(\alpha)}, \nu^{(\beta)}) \times \NControli(\nu_i^{(\gamma)}),
+\end{equation*}
 where
 \begin{itemize}
 \item \RCSi is the translation ratio as defined in Equation~\ref{eqn:susysearch_RCS},
@@ -95,7 +94,7 @@ where
 \item The nuisance parameters $\nu_i^{(\beta)}$ represent systematic
   uncertainties assumed to be 100\% correlated across the bins.
 \item \NControli the observed number of events in the control region
-($L_P > 0.3$)
+(\LPcontrol)
 \end{itemize}
 
 \subsection{Parameterising Systematics}
@@ -113,39 +112,39 @@ x(a,b) +
 + (\nu^{(B)} - b)^2 \frac{\partial^2 x}{\partial \left(\nu^{(B)}\right)^2}
 + 2(\nu^{(A)} - a)(\nu^{(B)} - b)\frac{\partial^2 x}{\partial
   \nu^{(A)}\partial\nu^{(B)}}
-\right]
+\right].
 \end{align*}
 Assuming the expansion is performed with respect to the mean of x, $\bar{x}$,
 the values of $a$ and $b$ are seen to be the mean values of the corresponding nuisance
 parameters. For small deviations from the mean,
-\begin{equation}
- (\nu^{(A)} - a) \sim (\nu^{(B)} - b) \sim \epsilon \sim 0
-\end{equation}
-and ignoring terms $O(\epsilon^2)$
+\begin{equation*}
+ (\nu^{(A)} - a) \sim (\nu^{(B)} - b) \sim \epsilon \sim 0,
+\end{equation*}
+and ignoring terms $O(\epsilon^2)$,
 
 \begin{equation}
 \label{eqn:stats:taylor}
 x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
 (\nu^{(A)} - a)\left.\frac{\partial x}{\partial\nu^{(A)}}\right|_{\nu^{(A)}=a} +
-(\nu^{(B)} - b)\left.\frac{\partial x}{\partial\nu^{(B)}}\right|_{\nu^{(B)}=b}
+(\nu^{(B)} - b)\left.\frac{\partial x}{\partial\nu^{(B)}}\right|_{\nu^{(B)}=b}.
 \end{equation}
 Since the derivatives in Equation~\ref{eqn:stats:taylor} will in practice be
 derived from some finite variation of the underlying quantity associated with
 each nuisance parameter, the infinitessimal derivatives must be replaced by
-finite changes. It is also sensible to set $a=b=0$.
+finite changes. It is also sensible to set $a=b=0$,
 \begin{equation}
 \label{eqn:stats:taylor2}
 x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
 \nu^{(A)}\frac{\Delta x}{\Delta\nu^{(A)}} +
-\nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}}
+\nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}}.
 \end{equation}
 Since the value of $x$ is often associated with a physical quantity such as an
 efficiency or an event yield, it is desirable to constrain it to positive
 values. This can be achieved providing the range of each nuisance parameter is
-set such that
-\begin{equation}
-\nu^{(\alpha)}\times\frac{\Delta x}{\Delta \nu^{(\alpha)}} < \bar{x}
-\end{equation}
+set such that,
+\begin{equation*}
+\nu^{(\alpha)}\times\frac{\Delta x}{\Delta \nu^{(\alpha)}} < \bar{x}.
+\end{equation*}
 
 The previous derivation can be simply extended two $N > 2$ nuisance
 parameters. Generalising and rewriting Equation~\ref{eqn:stats:taylor2},
@@ -155,22 +154,22 @@ x(\nu^{(A)}, \nu^{(B)}, \ldots) &\approx& \bar{x} +
 \nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}} + \ldots \\
 &\approx& \frac{1}{\bar{x}^{N-1}} \left\{ \bar{x}^N +
 \bar{x}^{N-1} \nu^{(A)}\frac{\Delta x}{\Delta\nu^{(A)}} +
-\bar{x}^{N-1} \nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}} + \ldots \right\}
+\bar{x}^{N-1} \nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}} + \ldots \right\}.
 \end{eqnarray*}
-Trying to rewrite as a product,
+If we attempt to rewrite as a product,
 \begin{eqnarray*}
 \prod_{j=A, B, \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) &=&
 \bar{x}^N + \bar{x}^{N-1} \sum_{j=A, B, \ldots} \nu^{(\alpha)}\frac{\Delta x}{\Delta \nu^{(\alpha)}} \\
 &&+ \bar{x}^{N-2}\sum_{j=A, B, \ldots} \sum_{k=A, B, \ldots} \nu^{(\alpha)}\nu^{(\beta)}\frac{\Delta x}{\Delta
   \nu^{(\alpha)}}\frac{\Delta x}{\Delta \nu^{(\beta)}} \\
-&&+ \ldots +O(\nu^N)
+&&+ \ldots +O(\nu^N).
 \end{eqnarray*}
 Ignoring terms greater than $O(\nu^2)$,
 \begin{eqnarray*}
 \prod_{j=A, B, \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) &\approx&
 \bar{x}^N + \bar{x}^{N-1} \sum_{j=A, B, \ldots} \nu^{(\alpha)}\frac{\Delta x}{\Delta
   \nu^{(\alpha)}} \\
-&\approx& \bar{x}^{N-1} x(\nu^{(A)}, \nu^{(B)}, \ldots)
+&\approx& \bar{x}^{N-1} x(\nu^{(A)}, \nu^{(B)}, \ldots),
 \end{eqnarray*}
 and therefore
 \begin{equation}
@@ -178,21 +177,21 @@ and therefore
 x(\nu^{(A)}, \nu^{(B)}, \ldots) \approx \frac{1}{\bar{x}^{N-1}} \prod_{j = A, B,
   \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) \approx
 \bar{x} \prod_{j = A, B,
-  \ldots} \frac{1}{\bar{x}}\left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right)
+  \ldots} \frac{1}{\bar{x}}\left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right).
 \end{equation}
 
-Using Equation~\ref{eqn:stats:systderiv}, the signal yield can be rewritten as follows
-\begin{equation}
+Using Equation~\ref{eqn:stats:systderiv}, the signal yield can be rewritten as follows:
+\begin{equation*}
 \NSigi = \mu \times \bar{\epsilon}_i \times \prod_{j}\left(\frac{\bar{\epsilon}_i
-    + \nu^{(\alpha)}\frac{\Delta\epsilon_i}{\Delta\nu^{(\alpha)}}}{\bar{\epsilon}_i}\right) \sigma \times L \times \nu^{\textrm{lumi}}
-\end{equation}
-and the background prediction
-\begin{equation}
+    + \nu^{(\alpha)}\frac{\Delta\epsilon_i}{\Delta\nu^{(\alpha)}}}{\bar{\epsilon}_i}\right) \sigma \times L \times \nu^{\textrm{lumi}},
+\end{equation*}
+and the background prediction,
+\begin{equation*}
 \NBkgi = \RbarCS_i \times \prod_{j}\left( \frac{\RbarCS_i
     + \nu^{(\alpha)}\frac{\Delta\RCSi}{\Delta\nu^{(\alpha)}}}{\RbarCS_i}\right)
 \times \NbarControl_i \times \prod_{k}\left( \frac{\NbarControl_i
-    + \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right)
-\end{equation}
+    + \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right).
+\end{equation*}
 
 \subsection{Nuisance Parameters}
 The nuisance parameters incorporated in the model described thus far are of two
@@ -232,27 +231,27 @@ reflect the assumption that some fraction of the yield \NControli will be due to
     + \nu^{(\alpha)}\frac{\Delta\RCSi}{\Delta\nu^{(\alpha)}}}{\RbarCS_i}\right)
 \times \NbarControl_i \times f^{\textrm{SM}}_i(\mu) \times \prod_{k}\left( \frac{\NbarControl_i
     +
-    \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right)
+    \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right),
 \end{equation}
 where $f^{\textrm{SM}}_i$ represents the fraction of \NControli expected to be
 \ac{SM} events given the current signal hypothesis i.e.
-\begin{equation}
-f^{\textrm{SM}}_i(\mu) = \frac{\NSMi}{\NSMi + \NSUSYi(\mu)}
-\end{equation}
+\begin{equation*}
+f^{\textrm{SM}}_i(\mu) = \frac{\NSMi}{\NSMi + \NSUSYi(\mu)}.
+\end{equation*}
 The expected number of \ac{SUSY} events $\NSUSYi =
 \mu\times\epsilon^{\textrm{control}}_i\times\sigma\times L$ where
 $\epsilon^{\textrm{control}}_i$ is the efficiency calculated for \ac{SUSY}
 events entering the \LPcontrol control region. To reflect these constraints, we
-set up an appropriate prior distribution
-\begin{equation}
+set up an appropriate prior distribution,
+\begin{equation*}
 X(\nu^{\textrm{SM}}) = \Gauss \left( \frac{\NSMi}{\NSMi + \mu\times\epsilon_i^{\textrm{control}}\times\sigma\times L}
-; \nu^{\textrm{SM}} \right)
-\end{equation}
+; \nu^{\textrm{SM}} \right),
+\end{equation*}
 and $f^{\textrm{SM}}_i \equiv \nu^{\textrm{SM}}_i$. Calculating the expected value of the nuisance parameter,
 \begin{eqnarray}
 \label{eqn:fSMideal}
-<f^{\textrm{SM}}_i> &=& \frac{\NSMi}{\NSMi + \mu\NSUSYi} \\
-                   &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}
+<f^{\textrm{SM}}_i> &=& \frac{\NSMi}{\NSMi + \mu\NSUSYi}\nonumber \\
+                   &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}.
 \end{eqnarray}
 Technical problems associated with adding a functional dependence on the
 \ac{poi} $\mu$ to the mean of the prior distribution necessitated a slightly
@@ -260,20 +259,20 @@ altered formulation. As will be shown, this formulation is approximately
 equivalent given certain assumptions about the range of $\mu$ and the degree of
 signal contamination. The prior distribution included in \likelihood is
 rewritten as
-\begin{equation}
+\begin{equation*}
 X(\nu^{\textrm{SM}}_i) = \Gauss \left( \frac{\NSMi}{\NSMi + \epsilon_i^{\textrm{control}}\times\sigma\times L}
-; \nu^{\textrm{SM}}_i \right)
-\end{equation}
+; \nu^{\textrm{SM}}_i \right).
+\end{equation*}
 The term included in the background prediction (Equation~\ref{eqn:bgprediction})
 is modified to
-\begin{equation}
-f^{\textrm{SM}}_i = 1 - \mu \times \left(1- \nu^{\textrm{SM}}_i\right)
-\end{equation}
+\begin{equation*}
+f^{\textrm{SM}}_i = 1 - \mu \times \left(1- \nu^{\textrm{SM}}_i\right).
+\end{equation*}
 It can be seen that for $\mu=0$, $f^{\textrm{SM}}_i=1$ and for $\mu=1$,
 $f^{\textrm{SM}}_i=\nu^{\textrm{SM}}_i$ as required. It will now be shown that
 for a suitable range of $\mu$ and for small values of $\NSUSYi/\NControli$, the
 expectation value of $f^{\textrm{SM}}_i$ will be equivalent to
-Equation~\ref{eqn:fSMideal}.
+Equation~\ref{eqn:fSMideal}:
 \begin{eqnarray*}
 <f^{\textrm{SM}}_i> &=& 1 - \mu \times \left(1-<\nu^{\textrm{SM}}>\right) \\
                   &=& 1 - \mu  + \mu\frac{\NSMi}{\NSMi + \NSUSYi} \\
@@ -284,7 +283,7 @@ Equation~\ref{eqn:fSMideal}.
                   &\approx& \frac{\NSMi}{\left(\NSMi +\NSUSYi\right)\left( 1 - (1-\mu)\frac{\NSUSYi}{\NSMi}\right)} \\
                   &=& \frac{\NSMi}{\NSMi + \mu\NSUSYi - (1-\mu)\frac{\NSUSYi^2}{\NSMi}}\\
                   &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi} - (1-\mu)\left(\frac{\NSUSYi}{\NSMi}\right)^2} \\
-                  &\approx& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}
+                  &\approx& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}.
 \end{eqnarray*}
 
 \subsection{Uncertainties on \texorpdfstring{\NControli}{NControli}}

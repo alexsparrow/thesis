@@ -32,9 +32,9 @@ gives an \LP distribution confined to the range $[0,1]$. In contrast, for
 the \PtWv is likely to point in the direction of the \METv. Since the direction
 of the charged lepton momentum and \METv will be mostly uncorrelated, \LP is
 likely to tend to small values. Rewriting Equation~\ref{eqn:lp_def},
-\begin{equation}
-\LP = \frac{\Ptl}{\PtW}\cos\left(\PtWv, \Ptlv\right)
-\end{equation}
+\begin{equation*}
+\LP = \frac{\Ptl}{\PtW}\cos\left(\PtWv, \Ptlv\right),
+\end{equation*}
 it can be seen that in cases where the angle between the \METv and \Ptlv is more
 than 90\degrees, \LP will become negative.
 
@@ -43,9 +43,9 @@ the overall energy scale of the events. As discussed in Chapter~\ref{sec:susy},
 \ac{SUSY} decays are expected to begin with initial states much heavier than in
 \ac{SM} events. To provide some measure of this energy scale without biasing the
 polarisation, the variable \STlep is constructed as follows,
-\begin{equation}
-\STlep = \Ptl + \MET
-\end{equation}
+\begin{equation*}
+\STlep = \Ptl + \MET,
+\end{equation*}
 where it should be noted that \STlep is a scalar quantity. For \PW decays,
 $\STlep \approx \PtW$. Since the energy scale of \ac{SUSY} is unknown, \STlep is
 used to define search regions. This allows the search to be optimised without
@@ -90,16 +90,16 @@ To predict the \ac{SM} background contamination in the \LPsignal region, a
 translation factor, \RCS is calculated in simulation. This is defined as
 \begin{equation}
 \label{eqn:susysearch_RCS}
-\RCS = \frac{N^{\textrm{MC}}(\LPsignal)}{N^{\textrm{MC}}(\LPcontrol)}
+\RCS = \frac{N^{\textrm{MC}}(\LPsignal)}{N^{\textrm{MC}}(\LPcontrol)},
 \end{equation}
 where $N^{\textrm{MC}}(\LPsignal)$ and $N^{\textrm{MC}}(\LPcontrol)$ represent
 the population, as calculated in simulation of \ac{SM} events in the signal and
 control regions respectively. Once calculated, \RCS may be used along with a
 measurement of the control region in data to predict the \ac{SM} background
 contribution present in the signal region,
-\begin{equation}
-N^{\textrm{data}}(\LPsignal) = \RCS N^{\textrm{data}}(\LPcontrol)
-\end{equation}
+\begin{equation*}
+N^{\textrm{data}}(\LPsignal) = \RCS N^{\textrm{data}}(\LPcontrol).
+\end{equation*}
 Whilst in principle it is possible to perform a more, or even completely,
 data-driven prediction by performing a template fit to the \LP shape in the
 control region and extrapolating into the signal region, this strategy was
@@ -415,9 +415,9 @@ procedures were adopted or adapted from those used for the previous measurement
 (see Section~\ref{sec:wpol_systematics}).
 
 The background prediction may be written as follows,
-\begin{equation}
-\NBkgi = \RCSi \times \NControli
-\end{equation}
+\begin{equation*}
+\NBkgi = \RCSi \times \NControli,
+\end{equation*}
 where \NBkgi is the predicted background for \LPsignal in \STlep bin $i$, \RCSi
 the corresponding translation factor and \NControli the expected electroweak
 yield in the region \LPcontrol (i.e. for the muons, simply the event yield
@@ -498,7 +498,7 @@ statistics.
 Studies of the \PZ mass indicate a bias of 1\%~\cite{cms_mu_pas}. To estimate
 this effect, the muon momentum is varied as follows~\cite{susy_ra4_pas}:
 \begin{equation*}
-\Ptmu' = \Ptmu + \textrm{sign}(\mu) \times 0.01 {\Ptmu}^2/\unit{100}{\GeV} \times (1+\sin(\phi))
+\Ptmu' = \Ptmu + \textrm{sign}(\mu) \times 0.01 {\Ptmu}^2/\unit{100}{\GeV} \times (1+\sin(\phi)).
 \end{equation*}
 
 \subsection[\texorpdfstring{\PW}{W} and \texorpdfstring{\ttbar}{tt} Polarisation]{\boldmath{\PW} and \boldmath{\ttbar} Polarisation}
