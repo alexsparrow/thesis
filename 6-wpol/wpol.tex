@@ -1,4 +1,4 @@
-\chapter{Measuring the Polarisation of the \texorpdfstring{$\PW$}{W} Boson}
+\chapter{Measuring the Polarisation of the \texorpdfstring{\PW}{W} Boson}
 \label{sec:wpol}
 \section{Introduction}
 The study of \Wjets production at a hadron collider presents an important
@@ -76,10 +76,10 @@ weighting them using simulated data, these introduce a great deal of
 complexity. Instead, a variable is chosen which is known to be highly correlated
 with $\cos\thetastar$ at suitably high $\PtW$ and yet also directly calculable
 from transverse detector-level quantities. This variable is the Lepton
-Projection variable or \LP and is defined as follows~\cite{wpol_an, jad_thesis}
+Projection variable or \LP and is defined as follows~\cite{wpol_an, jad_thesis},
 \begin{equation}
 \label{eqn:lp_def}
-  \LP = \frac{\Ptlv.\PtWv}{\left|\PtWv\right|^2}
+  \LP = \frac{\Ptlv.\PtWv}{\left|\PtWv\right|^2},
 \end{equation}
 where \Ptlv and \PtWv are the transverse momenta of the charged lepton and \PW
 boson respectively and $\PtWv = \Ptlv +\METv$.
@@ -88,13 +88,13 @@ boson respectively and $\PtWv = \Ptlv +\METv$.
 To motivate the use of the \LP variable in measuring $\cos\thetastar$ at high
 \PtW, the correlation can be demonstrated analytically. Consider the decay
 lepton momentum in the helicity frame,
-\begin{equation}
-\mPl' = \mPl_{\parallel}' + \mPl_{\perp}'
-\end{equation}
+\begin{equation*}
+\mPl' = \mPl_{\parallel}' + \mPl_{\perp}',
+\end{equation*}
 where $\mPl_{\parallel}'$ and $\mPl_{\perp}'$ are respectively the components of
 the lepton momentum parallel and perpendicular to the z-axis. Neglecting the
-mass of the lepton, $\mPl' = \MW/2$ - where $\MW$ is the \PW-boson mass - and
-therefore
+mass of the lepton, $\mPl' = \MW/2$ - where $\MW$ is the mass of the \PW boson -
+and therefore
 \begin{eqnarray*}
 \mPl_{\parallel}' &=& \frac{\MW}{2}\cos\thetastar \\
 \mPl_{\perp}'| &=& \frac{\MW}{2}\sin\thetastar \\
@@ -123,14 +123,14 @@ To see the correlation, we first consider the quantity $\LP^{3D}$~\cite{jad_thes
 &=&\frac{1}{2\mPW}\left(\mPW\cos\thetastar + \EW\right)
 \end{eqnarray*}
 where \EW is the \PW-boson energy. Rearranging it is seen that
-\begin{equation}
-\cos\thetastar = 2\LP^{3D} - \frac{\EW}{\mPW}
-\end{equation}
+\begin{equation*}
+\cos\thetastar = 2\LP^{3D} - \frac{\EW}{\mPW}.
+\end{equation*}
 In the high \PtW limit, the $z$ component of the \PW can be neglected and thus
 $\LP^{3D} \longrightarrow \LP$ and $\mPW \longrightarrow \EW$ so
-\begin{equation}
- \cos\thetastar \longrightarrow 2\LP - 1
-\end{equation}
+\begin{equation*}
+ \cos\thetastar \longrightarrow 2\LP - 1.
+\end{equation*}
 The correlation between $\cos\thetastar$ and $2\LP -1$ is shown in
 Figure~\ref{fig:wpol_costheta_corr} for \PW bosons with $\PtW >
 \unit{200}{\GeV}$ and $\PtW > \unit{400}{\GeV}$.
@@ -165,7 +165,7 @@ written as
 \label{eqn:wpol_reweighting_factor}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1}
-  \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}
+  \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)},
 \end{equation}
 where the index $i$ is taken to represent the 3 helicity states of the \PW
 boson. The \ffi are constants derived from an analytical fit to the
@@ -196,17 +196,16 @@ the Monte Carlo and detector simulation.
 In reality, a small modification to Eqn~\ref{eqn:wpol_reweighting_factor} is
 required to account for the finite statistics of the generated sample. The
 functions $\sigma^{\pm}_{i}$ become instead integrals over a small slice
-($\Delta\cos\thetastar = 0.01$) of a binned $\cos\thetastar$ distribution.
-
-\begin{equation}
+($\Delta\cos\thetastar = 0.01$) of a binned $\cos\thetastar$ distribution:
+\begin{equation*}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\int_{b}^{b+\Delta\cos\thetastar}\sigma^\pm_i\left(\cos\thetastar\right)/\int_{-1}^{1}
 \sigma^\pm_i\left(\cos\thetastar\right)}{
 \int_{b}^{b+\Delta\cos\thetastar} \displaystyle\sum_{i=-1}^{i=+1}
 \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)/
 \int_{-1}^{1} \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)
-}
-\end{equation}
+},
+\end{equation*}
 where $b$ indicates a bin within the $\cos\thetastar$ distribution.
 
 \subsubsection{\boldmath{\PtW} and \boldmath{\YW} Dependence}
@@ -223,10 +222,10 @@ they are invariant across the \PW phase space
 
 An extra re-weighting factor is defined which effectively gives preference to
 regions containing more bosons of the desired \PW helicity,
-\begin{equation}
+\begin{equation*}
 R_i\left(\PtW, \YW, \pm\right) =
-\frac{{f'}_i \left(\PtW, \YW, \pm\right)}{{f'}_i^{\textrm{all}}}
-\end{equation}
+\frac{{f'}_i \left(\PtW, \YW, \pm\right)}{{f'}_i^{\textrm{all}}},
+\end{equation*}
 where ${f'}_i\left(\PtW, \YW, \pm\right)$ is the fraction of \PW bosons in the
 appropriate \PtW and \YW bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the
 same fraction integrated over all of the phase space bins. The prime added to
@@ -390,7 +389,7 @@ The requirements placed on the muon are as follows:
 \begin{equation}
 \label{eqn:wpol_mu_comb_iso}
   \CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
-    E_T^{\textrm{em}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Ptmu} < 0.1
+    E_T^{\textrm{em}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Ptmu} < 0.1,
 \end{equation}
 where the sums run over the tracks in the tracker or the energy deposits in the
 \ac{ECAL} and \ac{HCAL} within a cone of $\Delta R = \sqrt{(\Delta\eta)^2 +
@@ -456,9 +455,9 @@ first, which was initially used for this analysis was the hadronic recoil of the
 event. This is effectively the so-called missing hadronic energy of the
 event, or \MHT,
 % TODO Perhaps this should be moved somewhere else?
-\begin{equation}
-\PtWvhad = - \sum_{j \in \textrm{jets}} \vec{j}
-\end{equation}
+\begin{equation*}
+\PtWvhad = - \sum_{j \in \textrm{jets}} \vec{j},
+\end{equation*}
 where the $j$ is taken to run over some subset of the jets in the event as
 defined in Section~\ref{sec:wpol_jets} with some minimum transverse momentum
 requirement. The sum is taken to denote a vectorial sum. Since the \PW and the
@@ -467,9 +466,9 @@ measurement of \PtWv. However, the reconstruction of the jets is difficult and
 subject to uncertainties in the \ac{JES}. A higher resolution measurement can be
 achieved by utilising instead the \METv (effectively the neutrino) and the
 lepton in the event. This leads to the definition,
-\begin{equation}
-  \PtWvlep = \Ptlv + \METv
-\end{equation}
+\begin{equation*}
+  \PtWvlep = \Ptlv + \METv.
+\end{equation*}
 This provides a higher resolution measurement of \PtW, as can be seen in
 Figure~\ref{fig:wpol_mht_res}. It is thus the variable adopted in this analysis.
 
@@ -526,11 +525,10 @@ For this reason, it is desirable to cut on a variable that is not intrinsically
 correlated with either the charged or neutral lepton momentum. The transverse
 mass, \MT, is one such variable. Transverse mass is a variable chosen to
 approximate the invariant mass of a particle by using only transverse
-quantities. It is defined as follows
-
-\begin{equation}
-\MT = \sqrt{2\Ptl\MET\left(1 - \cos\Delta\phi\left(\Ptlv, \METv\right)\right)}
-\end{equation}
+quantities. It is defined as follows:
+\begin{equation*}
+\MT = \sqrt{2\Ptl\MET\left(1 - \cos\Delta\phi\left(\Ptlv, \METv\right)\right)}.
+\end{equation*}
 
 The angular dependence (i.e. the $\cos\Delta\phi$ term) will effectively
 compensate \PW decays in which either the charged or neutral lepton is soft
@@ -586,7 +584,7 @@ triggers used were as follows:
 \begin{equation*}
 \begin{cases}
 \texttt{HLT\_Mu9}          & \textrm{run} < 147146 \\
-\texttt{HLT\_Mu15\_v1} & \textrm{run} \geq 147146
+\texttt{HLT\_Mu15\_v1} & \textrm{run} \geq 147146.
 \end{cases}
 \end{equation*}
 The naming scheme is that used by the \ac{HLT} at \ac{CMS}. The number in the
@@ -602,7 +600,7 @@ In contrast, the electron trigger thresholds evolved more rapidly,
   \texttt{HLT\_Ele17\_SW\_CaloEleId\_L1R} & 146428 \leq \textrm{run} < 147117 \\
   \texttt{HLT\_Ele17\_SW\_TightEleId\_L1R} & 147117 \leq \textrm{run} < 148819 \\
   \texttt{HLT\_Ele22\_SW\_TightEleId\_L1R\_v2} & \textrm{run} 148819 \leq \textrm{run} < 149181 \\
-  \texttt{HLT\_Ele22\_SW\_TightEleId\_L1R\_v3} & \textrm{run} \geq 149181
+  \texttt{HLT\_Ele22\_SW\_TightEleId\_L1R\_v3} & \textrm{run} \geq 149181.
 \end{cases}
 \end{equation*}
 
@@ -682,7 +680,7 @@ The number of signal events in a given histogram bin $i$ in terms of the
 helicity fractions can be written as
 \begin{equation}
 \label{eqn:wpol_fit_signal}
-S^j = \fL \hLj + \fR \hRj + (1-\fL-\fR)\hZj
+S^j = \fL \hLj + \fR \hRj + (1-\fL-\fR)\hZj,
 \end{equation}
 where \hij are each binned helicity templates derived from the reweighting
 method described in Section~\ref{sec:wpol_reweighting}. The \f0
@@ -700,9 +698,9 @@ cross-section
 calculations~\cite{ellis_wp3jet,berger_wp4jet,heavy_quark,top_quark,drellyan}. The
 combined electroweak background template is then incorporated into the fit as
 follows:
-\begin{equation}
-E^j = \fsig S^j + (1-\fsig) B^j
-\end{equation}
+\begin{equation*}
+E^j = \fsig S^j + (1-\fsig) B^j,
+\end{equation*}
 where \fsig is the ratio of the simulated \Wjets yield to the total
 simulated yield and $B^j$ is the combined \LP template for the \Zjets and \ttbar
 backgrounds. It should be emphasised that the variable \fsig is not
@@ -714,9 +712,9 @@ electron channel, it has already been shown that (see
 Table~\ref{tbl:wpol_electron_yields}) \ac{QCD} multijet events as well as
 \gammajets production provide a non-negligible additional contribution. To deal
 with this, the formula is extended as follows:
-\begin{equation}
-N^j = (1 - \fQCD) E^j + \fQCD Q^j
-\end{equation}
+\begin{equation*}
+N^j = (1 - \fQCD) E^j + \fQCD Q^j,
+\end{equation*}
 where \fQCD is the ratio of the QCD multijet/\gammajets background
 to the total event yield and $Q^j$ is a shape template derived via the procedure
 described in Section~\ref{sec:wpol_data_driven_bg}. Unfortunately, as has
@@ -734,9 +732,9 @@ tighter constraint on \fQCD.
 \label{sec:wpol_fit_fmfr}
 For the final result, Equation~\ref{eqn:wpol_fit_signal} was modifed to fit
 instead in terms of the parameters \fLmfR and \f0,
-\begin{equation}
-S^j = \fLmfR \left (\hLj -\hRj\right) + \left(1-\f0\right)\left(\hLj +\hRj\right) +\f0\hZj
-\end{equation}
+\begin{equation*}
+S^j = \fLmfR \left (\hLj -\hRj\right) + \left(1-\f0\right)\left(\hLj +\hRj\right) +\f0\hZj.
+\end{equation*}
 This is appropriate given that \f0 and \fLmfR are related to the underlying
 parameters \Azero and \Afour. It is also allows a more intuitive interpretation
 in the context of the expected transverse polarisation effect. It should be
@@ -1007,17 +1005,17 @@ choice for both channels and both charges.
 
 The \ac{JES} uncertainty follows the standard prescription for \ac{CMS}
 analyses. Firstly, the unclustered component of the missing energy is calculated as,
-\begin{equation}
-\vec{E}^{\textrm{unclustered}}_T = -\METv + \Ptlv + \sum_i \vec{p}_T^{\textrm{jet},i}
-\end{equation}
+\begin{equation*}
+\vec{E}^{\textrm{unclustered}}_T = -\METv + \Ptlv + \sum_i \vec{p}_T^{\textrm{jet},i},
+\end{equation*}
 where the index $i$ runs over all jets with $\Pt > \unit{10}{\GeV}$ in the event
 as reconstructed by the particle flow algorithm. The unclustered energy is then
 scaled either up or down within its uncertainty - taken to be
 5\%~\cite{jet_energy_pas}. \METv is then recalculated from this displaced
 unclustered energy,
-\begin{equation}
-\METv \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptlv - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i}
-\end{equation}
+\begin{equation*}
+\METv \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptlv - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i},
+\end{equation*}
 where $u(p_T, \eta)$ is a map specifying the relative uncertainty on the jet
 energy scale as a function of jet transverse momentum and pseudorapidity. The
 scale applied to the jet momenta will be in the same direction as that of the
@@ -1049,9 +1047,9 @@ As the first step of the procedure, the resolution on \PtW is extracted from the
 simulation in bins of the generator level \PtW quantity. For simulated \Wjets
 events with a reconstructed electron or muon and a matching generator level
 particle or a generator level \Ptau, the following quantity is calculated,
-\begin{equation}
-\Delta\PtW = \frac{\PtWgen - \PtWreco}{\PtWgen}
-\end{equation}
+\begin{equation*}
+\Delta\PtW = \frac{\PtWgen - \PtWreco}{\PtWgen},
+\end{equation*}
 where \PtWreco and \PtWgen refer to the reconstruction and generator level \PW
 transverse momentum respectively. This is the relative difference between the
 reconstruction and generator level \PtW. This distribution is then divided into
@@ -1253,7 +1251,7 @@ uncertainty is seen to be similar in both lepton channels.
 \section{Results}
 \label{sec:wpol_results}
 For this analysis, the full \ac{CMS} 2010 dataset was used with an estimated
-integrated luminosity of \unit{36}{\invpicobarn} at a centre of mass energy,
+integrated luminosity of \unit{36}{\invpicobarn} at a centre-of-mass energy,
 $\sqrt{s} = \unit{7}{\TeV}$.
 
 A number of kinematic distributions are compared between data and simulation in

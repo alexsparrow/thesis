@@ -141,17 +141,17 @@ from jets and photons means that electrons at \ac{CMS} are fundamentally less
 well defined object than muons. There is therefore a much larger space to
 trade-off between signal efficiency and purity. Whilst more complex selection
 procedures are available (e.g. a multivariate approach), a simple cut-based
-selection was chosen for the \PW cross-section
-measurement~\cite{cms_pas_ewk_10_002, simple_eleid_web} and has been used in this work. The
-variables have been chosen for their background rejection capabilities but also
-for robustness during early the data-taking period. Cut values have been chosen
-for a number of working points, defined by their efficiency with respect to a
-simulated \Wenu sample, and optimising the background rejection power using an
-iterative procedure. Different cut values are chosen in the \ac{CMS} barrel and
-endcap regions.
+selection was chosen for the measurement of the \PW
+cross-section~\cite{cms_pas_ewk_10_002, simple_eleid_web} and has been used in
+this work. The variables have been chosen for their background rejection
+capabilities but also for robustness during early the data-taking period. Cut
+values have been chosen for a number of working points, defined by their
+efficiency with respect to a simulated \Wenu sample, and optimising the
+background rejection power using an iterative procedure. Different cut values
+are chosen in the \ac{CMS} barrel and endcap regions.
 
 The cut variables used are described below, with cut-values for each working
-point shown in Table~\ref{tbl:reco_electronid}
+point shown in Table~\ref{tbl:reco_electronid}.
 \begin{itemize}
 \item \sigmaieta is a measure of the \ac{RMS} shower width of the electron
   in the $\eta$ direction.
@@ -168,7 +168,7 @@ point shown in Table~\ref{tbl:reco_electronid}
   as
   \begin{equation*}
     \CombIso = \frac{\sum_{\textrm{tracks}} p_T^{\textrm{track}} + \sum_{\textrm{dep}}
-    E_T^{\textrm{em}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Pte}
+    E_T^{\textrm{em}} + \sum_{\textrm{dep}} E_T^{\textrm{had}}}{\Pte},
    \end{equation*}
    where the sums run over the aforementioned tracks, \ac{ECAL} energy deposits
    and \ac{HCAL} energy deposits.
@@ -191,7 +191,7 @@ such missing hits, or a single missing hit depending on the desired efficiency.
   0.3$ of the \ac{GSF} track, and having opposite charge. For each of these,
   \DeltaCotThetanm is calculated as
 \begin{equation*}
-  \DeltaCotThetanm = \cot\left(\Theta_{\textrm{CTF track}}\right) - \cot\left(\Theta_{\textrm{GSF track}}\right)
+  \DeltaCotThetanm = \cot\left(\Theta_{\textrm{CTF track}}\right) - \cot\left(\Theta_{\textrm{GSF track}}\right).
 \end{equation*}
 \item \Distnm is defined as the two-dimensional distance in the $x-y$ plane between the
 two tracks at the point at which they would be parallel when extrapolated. The
@@ -270,7 +270,7 @@ measurement along this axis is not possible. For this reason, transverse
 quantities are used instead - most commonly the \emph{missing transverse
   energy}, \METv. This can be defined generically as
 \begin{equation*}
-\METv = -\sum_{o in \textrm{objects}} \vec{p}_T^o
+\METv = -\sum_{o in \textrm{objects}} \vec{p}_T^o,
 \end{equation*}
 where $p_T^o$ refers to the transverse momentum of object $o$. The chosen set of
 objects then leads to a number of alternative definitions of \METv. The
@@ -290,9 +290,9 @@ derived quantities use the \ac{PF} measurement.
 Alternative missing energy quantities can be defined for other purposes. Often,
 a scalar quantity is desired instead. The \emph{missing transverse hadronic
   energy} (\MHT) is formed by taking the vector sum,
-\begin{equation}
-\MHTv = -\sum_{j \in \textrm{jets}} \vec{E_T^j}
-\end{equation}
+\begin{equation*}
+\MHTv = -\sum_{j \in \textrm{jets}} \vec{E_T^j}.
+\end{equation*}
 In general, this is used to measure the energy of a system of particles
 recoiling against the jets in an event. For example, in \Wjets events, the
 recoiling system is the \PW boson. \MHTv is therefore one possible measurement

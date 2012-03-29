@@ -9,9 +9,10 @@
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Monte carlo, MC
 ** TODO 7.2: single lepton -> single-lepton
+** TODO Equations: remove numbering
+   - Done equation for wpol, susy and reco chapters
 * SM
 ** TODO SM Higgs mass
-** TODO Helicity
 * SUSY
 ** TODO More on phenomenology
    SCHEDULED: <2012-03-20 Tue>
@@ -19,8 +20,6 @@
 ** TODO Described SUSY breaking possibilities in more detail
 ** TODO mention SUSY higgs searches
 ** TODO GMSB/AMSB: discuss what they are and ref
-* Experiment
-** TODO CMS: Refer to figure in strip tracker + add figure
 * Object Reconstruction
 ** TODO check conversion rejection is sz with alex
 ** TODO check v boson production at hadron colliders is sz with alex
@@ -39,6 +38,18 @@
 *** TODO Hyphenate W-boson when used as an adjective e.g. W-boson mass
 *** TODO Statistics, systematics, cutflow jargon
 *** TODO Bold the Z+jets etc in titles
+** Alex Frameworks
+*** TODO valence quarks
+*** TODO as an analyser
+*** TODO Quantifying helicity: line numbering
+*** TODO Ends abruptly
+*** TODO 3.2.2: little effect on the physics - only true at low integrated lumi
+*** TODO For instance the mass splittings...
+*** TODO similar
+*** TODO naming convention SMS
+*** TODO CMSSM m0-m12 mass relation
+*** TODO more spiel at the end & mention characterising a discovery
+
 ** Alex Wpol
 *** TODO Table 6.4 and 6.3 should be more consistent
     SCHEDULED: <2012-03-22 Thu>
@@ -59,8 +70,6 @@
    LS/LP comparison plot should make it clear this is a different result
 ** TODO Why 10% PDF uncertainty?
 ** TODO SMS ensure this section makes sense and is correct
-
-
 * Alex
 ** SM
 *** TODO 1.2p1: unification -> rephrase
@@ -933,3 +942,45 @@ Mostly done!
 ** DONE 100MeV weirdness
    CLOSED: [2012-03-28 Wed 16:59]
    - State "DONE"       from "TODO"       [2012-03-28 Wed 16:59]
+** DONE Validation plots are flipped
+   CLOSED: [2012-03-29 Thu 10:46]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 10:46]
+** DONE Helicity
+   CLOSED: [2012-03-29 Thu 11:24]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:24]
+** DONE CMS: Refer to figure in strip tracker + add figure
+   CLOSED: [2012-03-29 Thu 11:29]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:29]
+** DONE centre-of-mass
+   CLOSED: [2012-03-29 Thu 11:20]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:20]
+** DONE PDF
+   CLOSED: [2012-03-29 Thu 11:33]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:33]
+** DONE parton density functions
+   CLOSED: [2012-03-29 Thu 11:33]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:33]
+** DONE daugther
+   CLOSED: [2012-03-29 Thu 11:22]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:22]
+** DONE reference spacing
+   CLOSED: [2012-03-29 Thu 11:34]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:34]
+** DONE 3.1.1: comma after PtW
+   CLOSED: [2012-03-29 Thu 11:35]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:35]
+** DONE W bosons
+   CLOSED: [2012-03-29 Thu 11:34]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:34]
+** DONE 3.1.2: W boson
+   CLOSED: [2012-03-29 Thu 11:36]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:36]
+** DONE Delete PtW
+   CLOSED: [2012-03-29 Thu 11:36]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:36]
+** DONE one need only
+   CLOSED: [2012-03-29 Thu 11:36]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:36]
+** DONE costheta* gives
+   CLOSED: [2012-03-29 Thu 11:37]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 11:37]
