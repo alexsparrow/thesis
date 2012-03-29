@@ -30,7 +30,7 @@ Unless otherwise noted, the \Wjets samples used is produced using the
 with the \acp{PDF} taken from the \cteqsixlone set within the \lhapdf software
 package~\cite{lhapdf, lhapdf_web}.
 
-Shown in Figure~\ref{fig:wpol_costheta} are $\cos\thetastar$ distributions at
+Shown in \fig~\ref{fig:wpol_costheta} are $\cos\thetastar$ distributions at
 generator level in bins of \PtW for \PWp along with a fit to
 \eqn~\ref{eqn:wpol_helicity_fractions}. The polarisation is manifest in the
 dominance of the $(1-\cos\thetastar)^2$ term, leading to the peak at
@@ -132,7 +132,7 @@ $\LP^{3D} \longrightarrow \LP$ and $\mPW \longrightarrow \EW$ so
  \cos\thetastar \longrightarrow 2\LP - 1.
 \end{equation*}
 The correlation between $\cos\thetastar$ and $2\LP -1$ is shown in
-Figure~\ref{fig:wpol_costheta_corr} for \PW bosons with $\PtW >
+\fig~\ref{fig:wpol_costheta_corr} for \PW bosons with $\PtW >
 \unit{200}{\GeV}$ and $\PtW > \unit{400}{\GeV}$.
 
 \subsubsection{Correlation with \boldmath{\phistar}}
@@ -234,7 +234,7 @@ fractions is that obtained after application of a reconstruction-level cut on
 \PtW. This must be the same cut value as employed in the analysis itself and is,
 due to experimental and resolution effects, significantly different from a
 generator-level cut on the same quantity. The \PW phase space is shown in
-Figure~\ref{fig:wpol_genreco} after a reconstruction level cut, $\PtW >
+\fig~\ref{fig:wpol_genreco} after a reconstruction level cut, $\PtW >
 \unit{50}{\GeV}$.
 
 \begin{figure}
@@ -470,17 +470,17 @@ lepton in the event. This leads to the definition,
   \PtWvlep = \Ptlv + \METv.
 \end{equation*}
 This provides a higher resolution measurement of \PtW, as can be seen in
-Figure~\ref{fig:wpol_mht_res}. It is thus the variable adopted in this analysis.
+\fig~\ref{fig:wpol_mht_res}. It is thus the variable adopted in this analysis.
 
 \begin{figure}
   \centering
   \subfloat[]{\label{fig:wpol_mht_res1}\includegraphics[width=0.4\textwidth]{fig/mht_res1.png}}\quad
   \subfloat[]{\label{fig:wpol_mht_res2}\includegraphics[width=0.4\textwidth]{fig/mht_res2.png}}
   \caption[Comparison of the helicity and background template
-  shapes]{Figure~\ref{fig:wpol_mht_res1} shows the reconstruction-level \PtW
+  shapes]{\fig~\ref{fig:wpol_mht_res1} shows the reconstruction-level \PtW
     resolution, $\left(\PtWgen - \PtWreco\right)/\PtWgen$, in the electron
     channel, using $\PtWvlep$ (black) and $\PtWvhad$
-    (red). Figure~\ref{fig:wpol_mht_res2} shows the same resolutions as a
+    (red). \fig~\ref{fig:wpol_mht_res2} shows the same resolutions as a
     function of \PtWgen.}
   \label{fig:wpol_mht_res}
 \end{figure}
@@ -795,7 +795,7 @@ where now the photon is the source of both fake \MET and the fake lepton.
 \subsection{Optimisation of Selection Requirements}
 \label{sec:wpol_electron_opt}
 A key challenge in the electron channel was posed by the significant background
-from \ac{QCD} multijet events. Figure~\ref{fig:wpol_met_vs_mt_templates} shows
+from \ac{QCD} multijet events. \fig~\ref{fig:wpol_met_vs_mt_templates} shows
 the effect of two possible kinematic cuts on the \LP shape for signal and
 background events in simulation: $\MT > \unit{30}{\GeV}$ as used in the muon
 channel, and $\MET > \unit{30}{\GeV}$. Clearly the \MET cut is more effective at
@@ -808,7 +808,7 @@ increased, and the uncertainty from the fit is increased.
 An optimisation study was undertaken to determine the optimal kinematic and
 lepton identification cuts, as determined by the uncertainties from the template
 fit. Some indication of the effect of the kinemtics cuts is given in
-Figure~\ref{fig:wpol_ele_significance}. This shows the signal and background
+\fig~\ref{fig:wpol_ele_significance}. This shows the signal and background
 yields as a function of varying \MET and \MT cuts applied after all other cuts
 listed in Table~\ref{tbl:wpol_cutflow}. The background in this case is the sum
 of the processes listed in Section~\ref{sec:wpol_backgrounds}. Also shown are
@@ -819,12 +819,12 @@ reduced signal statistics. The significance plots could also be construed to
 support a \MET cut over an \MT but of course, since the final results are
 extracted from a template fit, the \LP shape must also be considered.
 
-This point is further reinforced in Figure~\ref{fig:wpol_met_mt_fqcd}. Here the
+This point is further reinforced in \fig~\ref{fig:wpol_met_mt_fqcd}. Here the
 $x$ and $y$ axes denote cut values of \MET and \MT. For each point on the plot,
 the fraction of the total event yield due to \ac{QCD} mutlijet production is
 plotted for those events surviving a combined cut on the \MET and \MT.
 
-Figure~\ref{fig:wpol_wp80_vs_wp70} compares the \LP shape in signal and
+\fig~\ref{fig:wpol_wp80_vs_wp70} compares the \LP shape in signal and
 background events using two different electron ID working points. The 70\%
 efficiency working point is seen to reject considerably more of the \ac{QCD}
 background. This motivated the use of the tighter electron ID.
@@ -907,7 +907,7 @@ either the leptonic or missing energy component.
 In the end, the best compromise was achieved by inverting the track-supercluster
 matching parameters, \deltaetain and \deltaphiin, on the leading electron. A
 comparison of the selected and anti-selected shapes derived from this procedure
-is shown in Figure~\ref{fig:wpol_ele_sel_antisel} before and after the \MT
+is shown in \fig~\ref{fig:wpol_ele_sel_antisel} before and after the \MT
 cut. The \LP shape for \ac{QCD} background is not believed to have a charge
 dependence and thus the shapes for positive and negative charge are combined
 into a single template to mimimize statistical uncertainty.
@@ -965,19 +965,19 @@ The dominant effect of the \ac{JES} on the fitted helicity fractions is due to
 the change in the \LP shape. Of course, the effect will also affect the cuts on
 \PtW and \MT and this has also been modelled in simulation. The shift in the
 \MET due to the \ac{JES} will correspond directly to a shift in the calculated
-\LP. For an upwards shift in the \ac{JES}, the \MET will tend to shift
-downwards and thus to larger values of \LP. Conversely, for a downward shift in
-the \ac{JES}, the \MET scale will increase and therefore \LP will shift
-to smaller values. This very approximate argument is born out in the full
-modelling in simulation. This is illustrated in Figure~\ref{fig:wpol_mujecunc}
-showing the fractional change of the \LP distribution in the muon channel for
-upward and downward shifts in the \ac{JES}. Clearly, the effect is quite
-large and most severe towards the edges of the \LP distribution (i.e. $\LP < 0$
-and $\LP > 1$). There are two reasons for this. Firstly, that in these regions
-the \LP distribution is rising or falling rapidly. Bin to bin migration will
-thus yield larger changes. Secondly, the change in the value of \LP for a single
-event in response to a change in the \ac{JES} is expected to be linear
-in \LP to first order.
+\LP. For an upwards shift in the \ac{JES}, the \MET will tend to shift downwards
+and thus to larger values of \LP. Conversely, for a downward shift in the
+\ac{JES}, the \MET scale will increase and therefore \LP will shift to smaller
+values. This very approximate argument is born out in the full modelling in
+simulation. This is illustrated in \fig~\ref{fig:wpol_mujecunc} showing the
+fractional change of the \LP distribution in the muon channel for upward and
+downward shifts in the \ac{JES}. Clearly, the effect is quite large and most
+severe towards the edges of the \LP distribution (i.e. $\LP < 0$ and $\LP >
+1$). There are two reasons for this. Firstly, that in these regions the \LP
+distribution is rising or falling rapidly. Bin to bin migration will thus yield
+larger changes. Secondly, the change in the value of \LP for a single event in
+response to a change in the \ac{JES} is expected to be linear in \LP to first
+order.
 
 The \ac{JES} is the dominant source of systematic uncertainty in the muon
 channel and very significant in the electron channel. The effect can be
@@ -1096,7 +1096,7 @@ simulation. A simultaneous fit is then performed over the 21 categories, where
 each template is scaled by the factor $1/\sqrt{s_is_j}$ and smeared by a
 resolution term $\sqrt{\sigma_i^2 + \sigma_j^2}$. This results in a set of 6
 scale terms, $s_i$ and 6 resolution terms, $\sigma_i$. These are shown in
-Figure~\ref{fig:wpol_ecal_transp_corr}.  The scale terms should be applied to
+\fig~\ref{fig:wpol_ecal_transp_corr}.  The scale terms should be applied to
 data, whilst the resolution should be applied in simulation.
 
 \begin{figure}
@@ -1255,7 +1255,7 @@ integrated luminosity of \unit{36}{\invpicobarn} at a centre-of-mass energy,
 $\sqrt{s} = \unit{7}{\TeV}$.
 
 A number of kinematic distributions are compared between data and simulation in
-Figures~\ref{fig:wpol_datamc_ele}~and~\ref{fig:wpol_datamc_mu}. For both
+\figs~\ref{fig:wpol_datamc_ele}~and~\ref{fig:wpol_datamc_mu}. For both
 channels, the electoweak backgrounds are taken from the corresponding Monte
 Carlo samples. The \ac{QCD} component is negliglbe in the muon channel. For the
 electron channel, it is taken from the anti-selected data sample (see
@@ -1309,17 +1309,17 @@ samples.
 
 \subsection{Fit Results}
 The individual fits of the \Pep, \Pem, \Pgmp and \Pgmm channels to the 2010
-dataset are shown in Figure~\ref{fig:wpol_fit_results}. The signal and
+dataset are shown in \fig~\ref{fig:wpol_fit_results}. The signal and
 background templates are shown individually along with the fitted values of
 \fLmfR and \f0. The full error contour plots in the $(\fLmfR, \f0)$ plane are
-shown in Figures~\ref{fig:wpol_contour_ele} and \ref{fig:wpol_contour_mu} for
+shown in \figs~\ref{fig:wpol_contour_ele} and \ref{fig:wpol_contour_mu} for
 electrons and muons respectively. The shading indicated the unphysical region of
 the parameter space described in Section~\ref{sec:wpol_fit_fmfr}. It is clear in
 both cases that the predominant left-handed polarisation described in
 Section~\ref{sec:polarisation} has been observed with a large significance.
 
 The error contours for the two combined fits - one per lepton charge - are shown
-in Figure~\ref{fig:wpol_contour_comb}. The results of each fit are presented in
+in \fig~\ref{fig:wpol_contour_comb}. The results of each fit are presented in
 Table~\ref{tbl:wpol_fitresults} along with statistical and systematic
 uncertainties. Also shown are the global correlation in each case and the \chisq
 measure of the goodness-of-fit. Table~\ref{tbl:fqcd_fit_results} shows the
@@ -1335,12 +1335,12 @@ more than offset by the larger systematic uncertainties in the electron
 channel. The $\chi^2/\textrm{ndof}$ measure of the goodness of fit indicates
 that all fits are reasonably good. The $\Pep$ channel appears to be slightly
 worse - presumably due to the dip at $\LP \approx 0.5$ in the data distribution
-Figure~\ref{fig:wpol_fit_ele_plus}.
+\fig~\ref{fig:wpol_fit_ele_plus}.
 
 Table~\ref{tbl:fqcd_fit_results} suggests the parameter \fQCD has been fit
 consistently throughout. No significant charge asymmetry is expected and none is
 observed. The larger correlation of \fLmfR in the \PWm channels appears to be
-consistent with Figure~\ref{fig:wpol_fit_ele_minus}, where the left-handed and
+consistent with \fig~\ref{fig:wpol_fit_ele_minus}, where the left-handed and
 \ac{QCD} templates show considerable similarity in shape. In the combined fits,
 the correlation between the helicity parameters and \fQCD is reduced by the
 addition of the muon channel.

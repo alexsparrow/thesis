@@ -14,7 +14,6 @@
 ** TODO Section/Chapter titles
 ** TODO Figure placement
 ** TODO Figure captions
-** TODO List punctutation
 ** TODO Figure references
 ** TODO Tables - resize to fit page
 ** TODO Alex's corrections to into/abstract/conclusion
@@ -45,7 +44,6 @@
 ** Alex Frameworks
 *** TODO valence quarks
 *** TODO as an analyser
-*** TODO Quantifying helicity: line numbering
 *** TODO Ends abruptly
 *** TODO 3.2.2: little effect on the physics - only true at low integrated lumi
 *** TODO For instance the mass splittings...
@@ -78,7 +76,6 @@
 *** TODO 1.5.3: non-linear. reference?
 *** TODO Maybe more on QCD or a summary at the end
 ** SUSY
-*** TODO Dark Matter: citation needed
 *** TODO Table captions
 *** TODO Clarify last bit of hadron colliders
 *** TODO Smooth ending to SUSY chapter
@@ -1002,3 +999,12 @@ Mostly done!
 ** CANCELLED Described SUSY breaking possibilities in more detail
    CLOSED: [2012-03-29 Thu 14:18]
    - State "CANCELLED"  from "TODO"       [2012-03-29 Thu 14:18]
+** DONE Dark Matter: citation needed
+   CLOSED: [2012-03-29 Thu 21:48]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 21:48]
+** DONE Quantifying helicity: line numbering
+   CLOSED: [2012-03-29 Thu 21:56]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 21:56]
+** DONE List punctutation
+   CLOSED: [2012-03-29 Thu 21:57]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 21:57]
