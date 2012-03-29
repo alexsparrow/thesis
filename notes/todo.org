@@ -15,7 +15,6 @@
 ** TODO Figure placement
 ** TODO Figure captions
 ** TODO List punctutation
-** TODO Equation references
 ** TODO Figure references
 ** TODO Tables - resize to fit page
 ** TODO Alex's corrections to into/abstract/conclusion
@@ -23,7 +22,6 @@
 ** TODO SM Higgs mass
 * SUSY
 ** TODO Previous limits
-** TODO Described SUSY breaking possibilities in more detail
 ** TODO mention SUSY higgs searches
 ** TODO GMSB/AMSB: discuss what they are and ref
 * Object Reconstruction
@@ -57,8 +55,6 @@
 *** TODO more spiel at the end & mention characterising a discovery
 
 ** Alex Wpol
-*** TODO Table 6.4 and 6.3 should be more consistent
-    SCHEDULED: <2012-03-22 Thu>
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-03-22 Thu 10:30>
 *** TODO Figure 6.5: Tidy up
@@ -997,3 +993,12 @@ Mostly done!
 ** CANCELLED More on phenomenology
    CLOSED: [2012-03-29 Thu 14:00] SCHEDULED: <2012-03-20 Tue>
    - State "CANCELLED"  from "TODO"       [2012-03-29 Thu 14:00]
+** DONE Equation references
+   CLOSED: [2012-03-29 Thu 14:09]
+   - State "DONE"       from "TODO"       [2012-03-29 Thu 14:09]
+** CANCELLED Table 6.4 and 6.3 should be more consistent
+   CLOSED: [2012-03-29 Thu 14:18] SCHEDULED: <2012-03-22 Thu>
+   - State "CANCELLED"  from "TODO"       [2012-03-29 Thu 14:18]
+** CANCELLED Described SUSY breaking possibilities in more detail
+   CLOSED: [2012-03-29 Thu 14:18]
+   - State "CANCELLED"  from "TODO"       [2012-03-29 Thu 14:18]

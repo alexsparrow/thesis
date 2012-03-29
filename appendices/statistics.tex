@@ -54,10 +54,10 @@ The form of the likelihood is as follows,
 \mathcal{L} = \prod_i \Poisson(\NExpi ; \NObsi)
 \prod_{\alpha \in \Theta}  X_\alpha(\nu^{(\alpha)}),
 \end{equation*}
-where
+where:
 \begin{itemize}
 \item $\mathcal{P}(\mu;x)$ denotes a Poisson distribution with mean $\mu$ and value
-$x$;
+$x$ and
 \item the $X_\alpha(\nu^{(\alpha)})$ represent some prior pdf associated with
   each systematic $\alpha$.
 \end{itemize}
@@ -67,12 +67,12 @@ The signal yield per bin is constructed as follows:
 \begin{equation*}
 \NSigi = \mu \times \epsilon_i(\nu^{(\alpha)}) \times \sigma \times L \times \nu^{\textrm{lumi}},
 \end{equation*}
-with
+with:
 \begin{itemize}
 \item $\epsilon_i(\nu^{(\alpha)})$ is the efficiency of the $i$th bin assumed to be
-  dependent on a set of nuisance parameters $\nu^{(\alpha)}$.
-\item $\sigma$ the cross-section of the signal model being considered,
-\item $L$ the integrated luminosity,
+  dependent on a set of nuisance parameters $\nu^{(\alpha)}$;
+\item $\sigma$ the cross-section of the signal model being considered;
+\item $L$ the integrated luminosity and
 \item $\nu^{\textrm{lumi}}$ the nuisance parameter associated with uncertainty in the
 estimate of the integrated luminosity.
 \end{itemize}
@@ -86,13 +86,13 @@ The background prediction per bin is then written as
 \begin{equation*}
 \NBkgi = \RCSi(\nu_i^{(\alpha)}, \nu^{(\beta)}) \times \NControli(\nu_i^{(\gamma)}),
 \end{equation*}
-where
+where:
 \begin{itemize}
-\item \RCSi is the translation ratio as defined in \eqn~\ref{eqn:susysearch_RCS},
-\item The nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{\gamma}$ represent
-  statistical uncertainties uncorrelated between the bins.
-\item The nuisance parameters $\nu_i^{(\beta)}$ represent systematic
-  uncertainties assumed to be 100\% correlated across the bins.
+\item \RCSi is the translation ratio as defined in \eqn~\ref{eqn:susysearch_RCS};
+\item the nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{\gamma}$ represent
+  statistical uncertainties uncorrelated between the bins;
+\item the nuisance parameters $\nu_i^{(\beta)}$ represent systematic
+  uncertainties assumed to be 100\% correlated across the bins and
 \item \NControli the observed number of events in the control region
 (\LPcontrol)
 \end{itemize}

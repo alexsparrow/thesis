@@ -127,11 +127,11 @@ described and motivated further in~\cite{susy_selection_an}.
 \subsection{Jets and Missing Energy}
 Jets and missing energy quantities are taken from the particle flow algorithm,
 as described in Section~\ref{sec:reco_pf}. In addition, jets are required to
-pass the ``LOOSE'' selection criteria, namely
+pass the ``LOOSE'' selection criteria, namely:
 \begin{itemize}
-\item At least two particles - at least one of them charged - in the jet.
-\item Fraction of jet energy carried by neutral hadrons less than 99\%.
-\item Charged and neutral electromagnetic fractions both less than 99\%.
+\item at least two particles - at least one of them charged - in the jet;
+\item the fraction of jet energy carried by neutral hadrons is less than 99\% and
+\item charged and neutral electromagnetic fractions both less than 99\%.
 \end{itemize}
 All jets are required to have a transverse momentum, $\Pt > \unit{40}{\GeV}$ and
 are required to be within the fiducial region of the tracker, $|\eta| <
@@ -143,18 +143,18 @@ Muon reconstruction is described in Section~\ref{sec:reco_muons}. Global muons
 are selected with a number of additional quality requirements. These are similar
 to those used in the \PW polarisation analysis (see
 Section~\ref{sec:wpol_muons}) with certain adjustments made to ensure
-consistency with other \ac{SUSY} analyses.
+consistency with other \ac{SUSY} analyses:
 \begin{itemize}
-\item A normalized $\chi^2 < 10$ on the global muon fit
-\item More than 10 hits in the tracker (including at least 1 pixel hit) and
-  $\geq 2$ matching segments in the muon chambers.
-\item A transverse distance to the nominal interaction point, $d_0 <
+\item a normalized $\chi^2 < 10$ on the global muon fit;
+\item more than 10 hits in the tracker (including at least 1 pixel hit) and
+  $\geq 2$ matching segments in the muon chambers;
+\item a transverse distance to the nominal interaction point, $d_0 <
   \unit{200}{\micro\metre}$ and longitudinal distance to the primary vertex $d_z
-  < \unit{1}{\centi\metre}$
-\item The uncertainty on the muon transverse momentum $\sigma(\Pt)/\Pt^2 <
-  \unit{0.001}{\reciprocal\GeV}$
-\item Each global muon must also qualify as a tracker muon.
-\item A combined relative isolation (see \eqn~\ref{eqn:wpol_mu_comb_iso}) $\CombIso < 0.1$.
+  < \unit{1}{\centi\metre}$;
+\item the uncertainty on the muon transverse momentum $\sigma(\Pt)/\Pt^2 <
+  \unit{0.001}{\reciprocal\GeV}$;
+\item each global muon must also qualify as a tracker muon and
+\item a combined relative isolation (see \eqn~\ref{eqn:wpol_mu_comb_iso}) $\CombIso < 0.1$.
 \end{itemize}
 
 \textbf{Tight} muons are defined by the requirements given above. \textbf{Loose}
