@@ -88,7 +88,7 @@ The background prediction per bin is then written as
 \end{equation*}
 where
 \begin{itemize}
-\item \RCSi is the translation ratio as defined in Equation~\ref{eqn:susysearch_RCS},
+\item \RCSi is the translation ratio as defined in \eqn~\ref{eqn:susysearch_RCS},
 \item The nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{\gamma}$ represent
   statistical uncertainties uncorrelated between the bins.
 \item The nuisance parameters $\nu_i^{(\beta)}$ represent systematic
@@ -128,7 +128,7 @@ x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
 (\nu^{(A)} - a)\left.\frac{\partial x}{\partial\nu^{(A)}}\right|_{\nu^{(A)}=a} +
 (\nu^{(B)} - b)\left.\frac{\partial x}{\partial\nu^{(B)}}\right|_{\nu^{(B)}=b}.
 \end{equation}
-Since the derivatives in Equation~\ref{eqn:stats:taylor} will in practice be
+Since the derivatives in \eqn~\ref{eqn:stats:taylor} will in practice be
 derived from some finite variation of the underlying quantity associated with
 each nuisance parameter, the infinitessimal derivatives must be replaced by
 finite changes. It is also sensible to set $a=b=0$,
@@ -147,7 +147,7 @@ set such that,
 \end{equation*}
 
 The previous derivation can be simply extended two $N > 2$ nuisance
-parameters. Generalising and rewriting Equation~\ref{eqn:stats:taylor2},
+parameters. Generalising and rewriting \eqn~\ref{eqn:stats:taylor2},
 \begin{eqnarray*}
 x(\nu^{(A)}, \nu^{(B)}, \ldots) &\approx& \bar{x} +
 \nu^{(A)}\frac{\Delta x}{\Delta\nu^{(A)}} +
@@ -180,7 +180,7 @@ x(\nu^{(A)}, \nu^{(B)}, \ldots) \approx \frac{1}{\bar{x}^{N-1}} \prod_{j = A, B,
   \ldots} \frac{1}{\bar{x}}\left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right).
 \end{equation}
 
-Using Equation~\ref{eqn:stats:systderiv}, the signal yield can be rewritten as follows:
+Using \eqn~\ref{eqn:stats:systderiv}, the signal yield can be rewritten as follows:
 \begin{equation*}
 \NSigi = \mu \times \bar{\epsilon}_i \times \prod_{j}\left(\frac{\bar{\epsilon}_i
     + \nu^{(\alpha)}\frac{\Delta\epsilon_i}{\Delta\nu^{(\alpha)}}}{\bar{\epsilon}_i}\right) \sigma \times L \times \nu^{\textrm{lumi}},
@@ -263,7 +263,7 @@ rewritten as
 X(\nu^{\textrm{SM}}_i) = \Gauss \left( \frac{\NSMi}{\NSMi + \epsilon_i^{\textrm{control}}\times\sigma\times L}
 ; \nu^{\textrm{SM}}_i \right).
 \end{equation*}
-The term included in the background prediction (Equation~\ref{eqn:bgprediction})
+The term included in the background prediction (\eqn~\ref{eqn:bgprediction})
 is modified to
 \begin{equation*}
 f^{\textrm{SM}}_i = 1 - \mu \times \left(1- \nu^{\textrm{SM}}_i\right).
@@ -272,7 +272,7 @@ It can be seen that for $\mu=0$, $f^{\textrm{SM}}_i=1$ and for $\mu=1$,
 $f^{\textrm{SM}}_i=\nu^{\textrm{SM}}_i$ as required. It will now be shown that
 for a suitable range of $\mu$ and for small values of $\NSUSYi/\NControli$, the
 expectation value of $f^{\textrm{SM}}_i$ will be equivalent to
-Equation~\ref{eqn:fSMideal}:
+\eqn~\ref{eqn:fSMideal}:
 \begin{eqnarray*}
 <f^{\textrm{SM}}_i> &=& 1 - \mu \times \left(1-<\nu^{\textrm{SM}}>\right) \\
                   &=& 1 - \mu  + \mu\frac{\NSMi}{\NSMi + \NSUSYi} \\

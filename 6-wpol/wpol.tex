@@ -32,7 +32,7 @@ package~\cite{lhapdf, lhapdf_web}.
 
 Shown in Figure~\ref{fig:wpol_costheta} are $\cos\thetastar$ distributions at
 generator level in bins of \PtW for \PWp along with a fit to
-Eqn~\ref{eqn:wpol_helicity_fractions}. The polarisation is manifest in the
+\eqn~\ref{eqn:wpol_helicity_fractions}. The polarisation is manifest in the
 dominance of the $(1-\cos\thetastar)^2$ term, leading to the peak at
 $\cos\thetastar = -1$. This reflects the fact that the left-handed particle (the
 neutrino in this case) is taking most of the energy. Similarly for \PWm, the
@@ -171,7 +171,7 @@ where the index $i$ is taken to represent the 3 helicity states of the \PW
 boson. The \ffi are constants derived from an analytical fit to the
 $\cos\thetastar$ distribution in bins of \PtW, \YW and charge. They are
 effectively the helicity fractions ``baked in'' to the Monte-Carlo. The
-functional form of $\sigma$ is taken from Eqn~\ref{eqn:wpol_helicity_fractions}
+functional form of $\sigma$ is taken from \eqn~\ref{eqn:wpol_helicity_fractions}
 as follows,
 \begin{eqnarray*}
 \sigma^{\pm}_{-1} &=& \frac{1}{4}\left(1\mp\cos\thetastar\right)^2\\
@@ -179,7 +179,7 @@ as follows,
 \sigma^{\pm}_{+1} &=& \frac{1}{4}\left(1\pm\cos\thetastar\right)^2.
 \end{eqnarray*}
 A given simulated event is then taken, its $\cos\thetastar$ value calculated and
-a re-weighting factor derived from Eqn~\ref{eqn:wpol_reweighting_factor}
+a re-weighting factor derived from \eqn~\ref{eqn:wpol_reweighting_factor}
 accounting for the \PtW, \YW and charge of the \PW boson. The binning is
 important, as the helicity fractions are expected to vary significantly with
 these parameters.
@@ -193,7 +193,7 @@ helicity fractions. This ensures that all experimental and acceptance effects
 can be accounted for - providing of course that they are adequately modelled by
 the Monte Carlo and detector simulation.
 
-In reality, a small modification to Eqn~\ref{eqn:wpol_reweighting_factor} is
+In reality, a small modification to \eqn~\ref{eqn:wpol_reweighting_factor} is
 required to account for the finite statistics of the generated sample. The
 functions $\sigma^{\pm}_{i}$ become instead integrals over a small slice
 ($\Delta\cos\thetastar = 0.01$) of a binned $\cos\thetastar$ distribution:
@@ -254,7 +254,7 @@ performed. Firstly, the generator-level helicity fractions within the phase
 space of the reconstruction level \PW acceptance cuts are extracted. Essentially
 the $\cos\thetastar$ distribution is plotted from a simulated sample of events
 which have passed the reconstruction level \PtW cut. The distribution is fit,
-once again using Eqn~\ref{eqn:wpol_helicity_fractions} and values of \f0, \fL and
+once again using \eqn~\ref{eqn:wpol_helicity_fractions} and values of \f0, \fL and
 \fR are extracted for both boson charges. This defines the baseline expectation
 for the helicity fractions and is shown in Table~\ref{tbl:wpol_closure_tests}.
 
@@ -286,7 +286,7 @@ To summarise what has already been said, the goal of this analysis is to extract
 the helicity fractions (\fL, \fR and \f0) of the \PW boson and thus establish
 the dominant left-handed polarisation effect present in theoretical predictions
 at high \PtW. The \ffi coefficients determine the polar angle distribution
-(\thetastar) via Eqn~\ref{eqn:wpol_helicity_fractions}. This distribution cannot
+(\thetastar) via \eqn~\ref{eqn:wpol_helicity_fractions}. This distribution cannot
 be reconstructed directly due to an ambiguity in the reconstruction of the \PW
 boson rest frame. Instead the \LP variable, found to be highly correlated with
 $\cos\thetastar$ in the limit of large \PtW is taken instead. Via a re-weighting
@@ -664,7 +664,7 @@ unenriched sample in the case of the muons and the sum of the
 \section{Fitting Procedure}
 \label{sec:wpol_fitting}
 In order to extract the helicity fractions in
-Eqn~\ref{eqn:wpol_helicity_fractions}, a binned maximum likelihood fitting
+\eqn~\ref{eqn:wpol_helicity_fractions}, a binned maximum likelihood fitting
 procedure is performed. This takes \LP shape templates from the three \PW
 helicity states, a number of data-driven or Monte-Carlo estimated background
 templates and extracts the most probably values of \fL, \fR and \f0 from the
