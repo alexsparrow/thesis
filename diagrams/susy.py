@@ -15,7 +15,7 @@ def susy_1lepton(fname):
     ml1 = MultiLine(p1, v1, 3)
     ml2 = MultiLine(p2, v2, 3)
     in_blob = Ellipse(x=int_x, y=0,  xradius=0.5,# fill=[GREY],
-                      yradius=1.5, points=[v1,v2]).setFillStyle(HATCHED45)
+                      yradius=1.5, points=[v1,v2]).setFillStyle(HATCHED135)
 
     int_two_x = 0
     v3 = Vertex(int_two_x, 2)
@@ -39,14 +39,18 @@ def susy_1lepton(fname):
     quark2 = Fermion(v_squark1, p_quark2).addLabel(r"\Pquark")
     chargino1 = Gaugino(v_squark1, v_chargino1).addLabel(r"\PScharginopm")
 
+    chargino1.invert()
     int_five_x = 5
     int_six_x = 6
     v_w1 = Vertex(int_five_x, 1)
     p_lsp1 = Point(int_six_x, -1)
 
     w1 = Vector(v_chargino1, v_w1).addLabel(r"\PW")
+    w1.setAmplitude(0.2)
+    w1.invert()
     lsp1 = Gaugino(v_chargino1, p_lsp1).addLabel(r"\PSneutralinoOne")
-
+    lsp1.set3D()
+    lsp1.invert()
 
     p_lepton1 = Point(int_six_x, 1.5)
     p_neutrino1 = Point(int_six_x, 0.5)
@@ -68,6 +72,8 @@ def susy_1lepton(fname):
 
     quark4 = Fermion(v_squark2, p_quark4).addLabel(r"\Pquark")
     lsp2 = Gaugino(v_squark2, p_lsp2).addLabel(r"\PSneutralinoOne")
+    lsp2.invert()
+    lsp2.set3D()
 
     fd.draw(fname)
 
