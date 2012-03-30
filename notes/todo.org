@@ -20,7 +20,7 @@
 ** TODO mention SUSY higgs searches
 ** TODO GMSB/AMSB: discuss what they are and ref
 * Expt
-*** TODO ECAL resolution
+** TODO
 * Object Reconstruction
 ** TODO check conversion rejection is sz with alex
 ** TODO check v boson production at hadron colliders is sz with alex
@@ -43,7 +43,6 @@
 ** Alex Frameworks
 *** TODO Ends abruptly
 *** TODO For instance the mass splittings...
-*** TODO similar
 *** TODO CMSSM m0-m12 mass relation
 *** TODO more spiel at the end & mention characterising a discovery
 
@@ -1032,3 +1031,6 @@ Mostly done!
 ** CANCELLED Ensure technical details of MC are described e.g. GEANT, Pythia etc
    CLOSED: [2012-03-30 Fri 13:31]
    - State "CANCELLED"  from "TODO"       [2012-03-30 Fri 13:31]
+** DONE similar
+   CLOSED: [2012-03-30 Fri 16:44]
+   - State "DONE"       from "TODO"       [2012-03-30 Fri 16:44]
