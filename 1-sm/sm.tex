@@ -238,7 +238,7 @@ Lagrangian, one arrives at \acl{SQED},
 The procedure which has just been outlined is known as the \emph{gauge
   principle}. Whilst it might seem an interesting but trivial result, it turns
 out that all particles and interactions of the \ac{SM} (see
-Section~\ref{sec:theory:particles}) can be predicted by repeating this procedure
+\sec~\ref{sec:theory:particles}) can be predicted by repeating this procedure
 with larger symmetry groups.
 
 \subsection{Yang-Mills Theory}
@@ -334,7 +334,7 @@ interact only with left-handed particles and right-handed anti-particles. This
 is also referred to as the \VminusA nature of the theory - since the Lagrangian
 contains ``vector minus axial'' terms which lead to parity violation. Parity
 violation will be of vital importance to the analysis presented in
-Chapter~\ref{sec:wpol}.
+\chap~\ref{sec:wpol}.
 
 It is not necessary for us to fully detail the electroweak sector of the \ac{SM}
 Lagrangian. For the sake of completeness, an outline of the construction of the
@@ -552,7 +552,7 @@ searches.
 
 \subsection{Yukawa Couplings}
 \label{sec:theory_yukawa}
-It was noted in Section~\ref{sec:remaining_issues} that it is not possible to
+It was noted in \sec~\ref{sec:remaining_issues} that it is not possible to
 write down a straight forward mass term for the fermions in the electroweak
 theory. It turns out that this problem is also solved by the Higgs mechanism by
 the addition of a Yukawa coupling,
@@ -569,16 +569,16 @@ It is thought that all \ac{SM} fermions acquire their mass in this way.
 
 \section{\acl{QCD}}
 So far the discussion has covered only the electroweak sector of the \ac{SM} -
-leptons, weak gauge bosons and the Higgs particle. The incorporation of
-\acl{QCD} at first appears to be quite straightforward. However, it turns out
-that performing useful calculations in the theory is a very difficult procedure
-- much more so than for the theories presented so far. Here, a brief summary of
-the theory will be given with further details available in~\cite{pink_book}.
+leptons, weak gauge bosons and the Higgs particle. The strong force is
+incorporated in a framework known as \ac{QCD}.  Whilst this at first appears to
+be quite straightforward, certain properties of the strong force often make
+calculations considerably more difficult. Here, a brief summary of the theory
+will be given with further details available in~\cite{pink_book}.
 
 \subsection{Quarks}
-The quarks can be included straightforwardly into the \ac{SM} in a similar
-manner to the leptons. The left-handed components of up and down type are paired
-into doublets as follows:
+The quarks can be included in the \ac{SM} in a similar manner to the
+leptons. The left-handed components of up and down type are paired into doublets
+as follows:
 \begin{equation*}
 Q=\left(\begin{array}{c}\Pup_{\textrm{L}} \\ \Pdown_{\textrm{L}}\end{array}\right),
 \end{equation*}
@@ -591,35 +591,37 @@ flavour-changing weak decays.
 
 \subsection{Colour}
 Inclusion of \ac{QCD} in the \ac{SM} continues in the same manner as for the
-electroweak force. The local gauge symmetry group is extended to include
-$\SUthree_{C}$ where the $C$ indicates a new conserved quantity - \emph{colour
-  charge}. The quarks, of which six flavours are currently known, each carry one
-of three colour charges, labelled \emph{red}, \emph{green} and \emph{blue}. As
-before, local invariance under this transformation group requires the
-introduction of a covariant derivative and a set of 8 gauge bosons - the gluons.
+electroweak force. The local gauge symmetry group is extended to include an
+additional product, $\SUthree_{C}$ where the $C$ indicates a new conserved
+quantity - \emph{colour charge}. The quarks, of which six flavours are currently
+known, each carry one of three colour charges, labelled \emph{red}, \emph{green}
+and \emph{blue}. As before, local invariance under this transformation group
+requires the introduction of a covariant derivative and a set of 8 gauge bosons
+- the gluons.
 
 \subsection{Unique Properties}
-The calculational difficulties with \ac{QCD} arise from the fact that the theory
-is highly non-linear. This originally stems from the non-Abelian nature of
-\SUthree leading to self interaction of the gluons. Whilst this is also true to
-some extent in the weak sector, for \ac{QCD} it is considerably more
-problematic. Non-linearity makes perturbative calculation within \ac{QCD}
-difficult. Whilst other calculation techniques have been developed such as
-Lattice \ac{QCD}~\cite{lattice_qcd}, it is often the case that \ac{QCD}
-processes are poorly understood.
+It has been seen in the case of the weak force that the non-Abelian nature of
+the gauge group gives rise to self-interactions of the corresponding gauge
+bosons. The same is true for the \SUthree gauge group of \ac{QCD}. However, in
+this case the situation is further complicated by the energy-scaling behaviour
+of the strong coupling constant.
 
-It turns out that \ac{QCD} is most amenable to perturbative calculation at large
-energies and short distances. Conversely, the long distance, low energy
-behaviour is relatively poorly understood. This is related to two striking
-properties of \ac{QCD}.
+At large energies (or equivalently, short distances), the strong coupling
+constant becomes relatively small~\cite{lattice_qcd} and perturbation theory can
+be used reliably. This is a phenomenon known as \emph{asymptotic
+  freedom}~\cite{asymptotic_freedom}. At lower energies (or long distances), the
+coupling constant becomes much larger. This causes the theory to become highly
+non-linear~\cite{lattice_qcd2} and standard perturbation theory can no longer be
+used.
 
-The first is a phenomenon known as \emph{confinement}. This is a feature
-observed by experiment, not derived directly from the theory.  Essentially
-confinement forces quarks to exist as bound states - baryons or mesons and
-forbids the existence of free quarks.  This is a consequence of the scaling of
-the strong force with distance - in particular that the force becomes
-arbitrarily strong at large distances, or equivalently, low energies.
+An additional phenomenon, not predicted by perturbation
+theory~\cite{perturbative_qcd_handbook} is \emph{confinement}. Confinement
+forbids the existence of free quarks, forcing them to exist only as bound states
+- baryons or mesons. This observation has been repeatedly confirmed by a number
+of experimental searches~\cite[p.~30]{pdg}.
 
-A complementary aspect of the scale dependence of the force is known as
-\emph{asymptotic freedom}. This causes the strong field to appear very weak at
-large energy scales, or equivalently, small distances.
+Many additional techniques have been developed to tackle these difficults, for
+instance Lattice \ac{QCD}~\cite{lattice_qcd}. In spite of this, \ac{QCD}
+processes are often poorly understood at low energies. This has important
+consequences for high energy physics experiments and will be an important
+consideration in subsequent chapters.

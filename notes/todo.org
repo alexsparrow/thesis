@@ -3,7 +3,6 @@
 ** TODO Ensure technical details of MC are described e.g. GEANT, Pythia etc
 ** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
 ** TODO Clarify QCD language throughout
-** TODO Consistent Eqn./Chapter/Section etc.
 ** TODO proofread the whole thing
 ** TODO check all references are in fact referenced
 ** TODO instances of New Physics/BSM physics should be made consistent
@@ -42,13 +41,9 @@
 *** TODO Statistics, systematics, cutflow jargon
 *** TODO Bold the Z+jets etc in titles
 ** Alex Frameworks
-*** TODO valence quarks
-*** TODO as an analyser
 *** TODO Ends abruptly
-*** TODO 3.2.2: little effect on the physics - only true at low integrated lumi
 *** TODO For instance the mass splittings...
 *** TODO similar
-*** TODO naming convention SMS
 *** TODO CMSSM m0-m12 mass relation
 *** TODO more spiel at the end & mention characterising a discovery
 
@@ -57,10 +52,16 @@
     SCHEDULED: <2012-03-22 Thu 10:30>
 *** TODO Figure 6.5: Tidy up
 ** Alex SUSY search
-*** TODO 7.4.4: Explain why not using all PF objects
-    SCHEDULED: <2012-03-23 Fri>
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
+** SM
+*** TODO 1.2p1: unification -> rephrase
+*** TODO Maybe more on QCD or a summary at the end
+** SUSY
+*** TODO Table captions
+*** TODO Clarify last bit of hadron colliders
+*** TODO Smooth ending to SUSY chapter
+*** TODO More refs
 
 * Interpretation
 ** DONE Redo SMS limits with increased PDF uncertainty (25%?) since there are none in currently!!
@@ -71,15 +72,7 @@
 ** TODO Why 10% PDF uncertainty?
 ** TODO SMS ensure this section makes sense and is correct
 * Alex
-** SM
-*** TODO 1.2p1: unification -> rephrase
-*** TODO 1.5.3: non-linear. reference?
-*** TODO Maybe more on QCD or a summary at the end
-** SUSY
-*** TODO Table captions
-*** TODO Clarify last bit of hadron colliders
-*** TODO Smooth ending to SUSY chapter
-*** TODO More refs
+
 
 * Old
   :VISIBILITY: folded
@@ -1011,3 +1004,24 @@ Mostly done!
 ** DONE Figure references
    CLOSED: [2012-03-29 Thu 23:01]
    - State "DONE"       from "TODO"       [2012-03-29 Thu 23:01]
+** DONE as an analyser
+   CLOSED: [2012-03-30 Fri 07:37]
+   - State "DONE"       from "TODO"       [2012-03-30 Fri 07:37]
+** DONE valence quarks
+   CLOSED: [2012-03-30 Fri 07:37]
+   - State "DONE"       from "TODO"       [2012-03-30 Fri 07:37]
+** DONE 3.2.2: little effect on the physics - only true at low integrated lumi
+   CLOSED: [2012-03-30 Fri 07:42]
+   - State "DONE"       from "TODO"       [2012-03-30 Fri 07:42]
+** DONE naming convention SMS
+   CLOSED: [2012-03-30 Fri 07:43]
+   - State "DONE"       from "TODO"       [2012-03-30 Fri 07:43]
+** CANCELLED 7.4.4: Explain why not using all PF objects
+   CLOSED: [2012-03-30 Fri 07:45] SCHEDULED: <2012-03-23 Fri>
+   - State "CANCELLED"  from "TODO"       [2012-03-30 Fri 07:45]
+** DONE Consistent Eqn./Chapter/Section etc.
+   CLOSED: [2012-03-30 Fri 07:51]
+   - State "DONE"       from "TODO"       [2012-03-30 Fri 07:51]
+** DONE 1.5.3: non-linear. reference?
+   CLOSED: [2012-03-30 Fri 09:28]
+   - State "DONE"       from "TODO"       [2012-03-30 Fri 09:28]
