@@ -1,13 +1,11 @@
 /vols/cms01/as1604/SUSY-svn/WPol2/scripts/ElPlots
 * General
-** TODO Ensure technical details of MC are described e.g. GEANT, Pythia etc
 ** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
 ** TODO Clarify QCD language throughout
 ** TODO proofread the whole thing
 ** TODO check all references are in fact referenced
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Monte carlo, MC
-** TODO 7.2: single lepton -> single-lepton
 ** TODO Preface
 ** TODO Front quote
 ** TODO Section/Chapter titles
@@ -21,6 +19,8 @@
 ** TODO Previous limits
 ** TODO mention SUSY higgs searches
 ** TODO GMSB/AMSB: discuss what they are and ref
+* Expt
+*** TODO ECAL resolution
 * Object Reconstruction
 ** TODO check conversion rejection is sz with alex
 ** TODO check v boson production at hadron colliders is sz with alex
@@ -1026,3 +1026,9 @@ Mostly done!
 ** DONE 1.5.3: non-linear. reference?
    CLOSED: [2012-03-30 Fri 09:28]
    - State "DONE"       from "TODO"       [2012-03-30 Fri 09:28]
+** DONE 7.2: single lepton -> single-lepton
+   CLOSED: [2012-03-30 Fri 13:30]
+   - State "DONE"       from "TODO"       [2012-03-30 Fri 13:30]
+** CANCELLED Ensure technical details of MC are described e.g. GEANT, Pythia etc
+   CLOSED: [2012-03-30 Fri 13:31]
+   - State "CANCELLED"  from "TODO"       [2012-03-30 Fri 13:31]
