@@ -14,7 +14,7 @@
 ** TODO Figure placement
 ** TODO Figure captions
 ** TODO Tables - resize to fit page
-** TODO Alex's corrections to into/abstract/conclusion
+** TODO Alex's corrections to intro/abstract/conclusion
 * SM
 ** TODO SM Higgs mass
 * SUSY
@@ -1004,8 +1004,9 @@ Mostly done!
 ** DONE Figure references
    CLOSED: [2012-03-29 Thu 23:01]
    - State "DONE"       from "TODO"       [2012-03-29 Thu 23:01]
-** DONE as an analyser
+** CANCELLED as an analyser
    CLOSED: [2012-03-30 Fri 07:37]
+   - State "CANCELLED"  from "DONE"       [2012-03-30 Fri 09:38]
    - State "DONE"       from "TODO"       [2012-03-30 Fri 07:37]
 ** DONE valence quarks
    CLOSED: [2012-03-30 Fri 07:37]
