@@ -4,13 +4,13 @@
 The \acl{SM} of particle physics is the best available theory describing the
 interactions of all known fundamental particles. It is perhaps the most
 extensively tested of any fundamental theory of nature, having withstood the
-scrutiny of several decades of data-taking at a number of high-energy physics
+scrutiny of several decades of data-taking at a multitude of high-energy physics
 experiments. However, despite this success, there appear to be a number of major
 theoretical deficiencies in desperate need of attention. In this chapter, the
-foundations of the theory will be laid out in a concise manner. The
-aforementioned theoretical difficulties will be described in detail. This will
-serve to motivate the potential solutions offered by the following chapter, and
-ultimately the analysis work that has been undertaken.
+foundations of the theory will be laid out in a concise manner. As well as being
+of direct relevance to the measurement described in Chapter~\ref{sec:wpol}, this
+will inform discussion of the aforementioned theoretical issues, and potential
+solutions, in Chapter~\ref{sec:susy}.
 
 It is important to note that, although the \ac{SM} will be presented here as a
 complete theory, seemingly designed to match the currently observed set of
@@ -18,32 +18,33 @@ fundamental particles, this is not how it came into being. The theory was built
 up over much of the second half of the 20th century and actually successfully
 predicted a number of discoveries. Perhaps the best example of this is the
 discovery of the \PW and \PZ bosons by the UA1 and UA2 experiments at \ac{CERN}
-in 1983. These had been theorised by Weinberg, Glashow and Salam in 1968.
+in 1983~\cite{ua1_w, ua1_z}. These had been theorised by Weinberg,
+Glashow and Salam in 1968~\cite{weinberg,glashow,salam}.
 
 \section{Particles and Fundamental Forces}
 \label{sec:theory:particles}
-The \ac{SM} represents the unification of three of the four known fundamental
-forces, namely: electromagnetism, the weak nuclear force and the strong nuclear
-force. The other force, gravity, having resisted unification with the other
-three, is not part of the \ac{SM}.
+The \ac{SM} incorporates three of the four known fundamental forces, namely:
+electromagnetism, the weak nuclear force and the strong nuclear force. The other
+force, gravity, having resisted unification with the other three, is not part of
+the \ac{SM}.
 
 Within the \ac{SM}, each fundamental force is mediated by one or more ``gauge
 bosons''. For electromagnetism, this is the photon, for the weak force, the
-\PWp, \PWm and \PZ. Strong interactions are mediated by a set of 8 ``gluons''
-(\Pg). Each boson is a vector particle and thus has a spin of 1.
+\PWp, \PWm and \PZ bosons. Strong interactions are mediated by a set of 8
+``gluons'' (\Pg). The bosons are all vector particles with a spin of 1.
 
-In addition to the bosons, the \ac{SM} must of course catalogue the many matter
-particles discovered by experiment. These are the fermions and may be further
-subdivided into leptons and quarks. The leptons, or ``light particles'' may be
-divided into three generations. Each generation associates a relatively heavy
-charged lepton with a much lighter neutral partner, referred to as a
-neutrino. The charged leptons are: the electron (\Pe), the muon (\Pgm) and the
-tau lepton (\Ptau). Each has the same charge, typically written in terms of the
-charge carried by a single electron, \ec. The corresponding neutrinos are then
-referred to as the electron neutrino (\Pnue), muon neutrino (\Pnum) and tau
-neutrino (\Pnut) respectively.
+As a complete theory of the known fundamental particles, the \ac{SM} must also
+describe the many matter particles discovered by eexperiment. These are the
+``fermions'', of which there are two varieties - leptons and quarks. The
+leptons, or ``light particles'', make up three generations. Each generation
+associates a relatively heavy charged lepton with a much lighter neutral
+partner, a ``neutrino''. The charged leptons are: the electron, \Pe, the muon,
+\Pgm, and the tau lepton, \Ptau. Each has identical charge, typically written in
+terms of the charge carried by a single electron, \ec. The corresponding neutral
+leptons are then referred to as the electron neutrino, \Pnue, muon neutrino,
+\Pnum, and tau neutrino, \Pnut.
 
-The quarks also appear to occupy three generations, with two quarks occupying
+The quarks are also arranged in three generations, with two quarks occupying
 each. The first of each generation is referred to as an ``up-type'' quark and
 has charge $+\frac{2}{3}\ec$, the second ``down-type'' with charge
 $-\frac{1}{3}\ec$. The up-type quarks are (in order of increasing mass): up
@@ -66,8 +67,9 @@ research~\cite{majorana_neutrinos}.
 The particle content and properties of the \ac{SM} seem, at first glance, to be
 quite arbitrary. Why are there three forces? Why does the Weak sector have three
 bosons, and the electromagnetic only one. Some of these questions may be
-answered by constructing the \ac{SM} as a gauge theory. This will be outlined in
-the next section.
+answered by constructing the \ac{SM} as a so-called ``gauge theory''. This will
+be explained in the next section.
+
 \section{Electroweak Gauge Theory}
 \subsection{Gauge Invariance}
 The theoretical principle of gauge invariance can be seen in Maxwell's theory of
@@ -75,7 +77,7 @@ electromagnetism~\cite{aitchison}. Recall that the electric (\emE) and magnetic
 (\emB) components of the field may be written in terms of a vector potential
 (\emA) and a scalar potential \emV as follows:
 \begin{eqnarray*}
-\emB = \nablav \times \emA \\
+\emB = \nablav \times \emA \textrm{and} \\
 \emE = -\nablav \emV - \frac{\partial \emA}{\partial t}.
 \end{eqnarray*}
 It can be seen that these equations do not relate a given (\emB, \emE) to unique
@@ -83,17 +85,17 @@ values of \emA and \emV. In particular, if the following transformations are
 applied simultaneously to \emA and \emV, the values of \emB and \emE will be
 unchanged,
 \begin{eqnarray*}
-\emA \longrightarrow \emA + \nablav \chi \\
+\emA \longrightarrow \emA + \nablav \chi \textrm{and}\\
 \emV \longrightarrow  \emV - \frac{\partial \chi}{\partial t},
 \end{eqnarray*}
 where $\chi$ is some arbitrary function. Such transformations are known as
-``gauge transformations'' and similarly \emB and \emE are said to be ``gauge
+``gauge transformations'' and \emB and \emE are said to be ``gauge
 invariant''.
 
 If the scalar and vector potentials are rewritten in terms of a single 4-vector
-potential, $\Amu = (\emV, \emA)$ and similarly taking a 4-vector differential
-operator, $\dmu = (\partial/\partial t, -\nablav)$, the gauge transformation
-takes the form
+potential, $\Amu = (\emV, \emA)$ and taking a 4-vector differential operator,
+$\dmu = (\partial/\partial t, -\nablav)$, the gauge transformation takes the
+form
 \begin{equation}
 \label{eqn:theory_gauge_transform}
 \Amu \longrightarrow \Amu - \dmu\chi.
@@ -106,9 +108,9 @@ where $\Fmunu$ is the electromagnetic tensor, defined as
 \begin{equation*}
 \Fmunu = \dmu\Anu - \dnu\Amu.
 \end{equation*}
-It can be seen that under the gauge transformation
-(\eqn~\ref{eqn:theory_gauge_transform}), $\Fmunu$ is invariant. This confirms the
-gauge invariance of the Maxwell equations.
+and $j^{\nu}_{\textrm{em}}$ is the ``current''. It can be seen that $\Fmunu$ is
+invariant under the gauge transformation (\eqn~\ref{eqn:theory_gauge_transform})
+and thus the Maxwell equations are gauge invariant.
 
 \subsection{The Principle of Least Action and Lagrangian Formalism}
 Before continuing, it is useful to review the Lagrangian formalism and the
@@ -130,12 +132,12 @@ system,
 \frac{\partial \lagrangiand}{\partial \phii} - \partial_{\mu} \left (
   \frac{\partial \lagrangiand}{\partial\left(\partial_{\mu} \phii\right)}\right) = 0.
 \end{equation*}
-By writing down such a Lagrangian, a theory can be fully described. In order to
-perform calculation of real measurable quantities, the theory must be
-quantised. This is a complex procedure involving \emph{renormalisation}
+By writing down a suitable Lagrangian, a theory may be fully described. However,
+inn order to perform calculation of real, measurable quantities, the theory must
+first be quantised. This is a complex procedure involving \emph{renormalisation}
 techniques which are beyond the scope of this discussion. We shall only note
 that renormalisability requires a theory with dimensionality at most $[M]^4$
-i.e. mass to the fourth power.
+i.e. mass to the fourth power~\cite{peskin_schroeder}.
 
 \subsection{A Real Scalar Field}
 To see how a theory can be written in terms of a Lagrangian, we will first
@@ -157,9 +159,9 @@ theory.
 Setting $\lambda = 0$ and applying the Euler-Lagrange relations to
 Equation~\ref{eqn:theory_phi4}, one obtains
 \begin{equation*}
-\partial^{\mu}\partial_{\mu} \phi + m^2\phi = 0,
+\partial^{\mu}\partial_{\mu} \phi + m^2\phi = 0.
 \end{equation*}
-which can be recognised as the Klein-Gordon equation describing the motion of a
+This can be recognised as the Klein-Gordon equation describing the motion of a
 scalar particle.
 
 \subsection{Symmetries}
@@ -170,13 +172,13 @@ global symmetries of the theory - global in the sense that they are performed
 identically at all points in spacetime. These symmetries can be classified in
 terms of the mathematical theory of groups.
 
-Noether's theorem states that for a theory with a continuous symmetry, each
-generator of the corresponding symmetry group corresponds to a conserved current
-in the theory. This allows predictions about the physics of given theory to be
-made by considering only its symmetries.
+Noether's theorem states, that for a theory with a continuous symmetry, each
+generator of the symmetry group corresponds to a conserved current in the
+theory~\cite{qft_nutshell}. This elucidates many aspects of the physics of a
+given theory by considering only its symmetries.
 
 \subsection{Complex Scalar Fields and the Gauge Principle}
-We will now take a slightly more realistic example, that of a complex scalar
+We will now take a slightly more realistic example - that of a complex scalar
 field. The Lagrangian for this theory may be written as follows,
 \begin{equation}
 \label{eqn:theory_complex_scalar}
@@ -192,11 +194,13 @@ an additional symmetry,
 \end{equation}
 where $\theta$ is some arbitrary parameter (constant, for the moment, in
 spacetime). This is known as a global \Uone symmetry and has a single generator
-- and therefore also a single conserved current.
+- and therefore, by Noether's theorem, a single conserved current.
 
-When the transformation of \eqn~\ref{eqn:theory_phase_transform} is extended such
-that the parameter $\theta$ is a function of the spacetime coordinate $x$, the
-Lagrangian is no longer invariant,
+The transformation of \eqn~\ref{eqn:theory_phase_transform} can be extended such
+that the parameter $\theta$ becomes a function of the spacetime coordinate, $x$
+- a ``local'' symmetry transformation. The Lagrangian is then no longer
+invariant with respect to this transformation. The symmetry is said to be
+``broken'',
 \begin{equation}
 \label{eqn:theory_gauge_dL}
 \delta\lagrangiand = \left(\partial_{\mu}
@@ -204,15 +208,16 @@ Lagrangian is no longer invariant,
   -i\phi^*\left(\partial^{\mu} \phi\right)\right] +
 \left(\partial_{\mu}\theta\right)\left(\partial^{\mu}\theta\right)\left|\phi\right|^2.
 \end{equation}
-In order to compensate for this change, we define the covariant derivative as follows
+In order to compensate for this change, we define the ``covariant derivative''
+as follows
 \begin{equation}
 \label{eqn:theory_cov_deriv}
 D_{\mu} = \partial_{\mu} + igB_{\mu}(x),
 \end{equation}
-where $B$ is taken to be a new four-vector field and $g$ is some constant. This
+where $B$ is taken to be a new four-vector field and $g$ a constant. This
 operator must transform under a change of phase in such a way as to cancel the
-additional terms in \eqn~\ref{eqn:theory_gauge_dL}. The Lagrangian would
-then be rewritten as follows,
+additional terms in \eqn~\ref{eqn:theory_gauge_dL}. The Lagrangian would then be
+rewritten as follows,
 \begin{equation*}
   \lagrangiand = \left(D_{\mu}\phi\right)\left(D^{\mu}\phi\right)^*
   - \frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right).
@@ -221,13 +226,12 @@ It can be shown that this requires the $B_{\mu}$ field to transform as follows
 \begin{equation*}
 B_{\mu} \longrightarrow B'_{\mu} = B_{\mu} - \frac{1}{g}\partial_{\mu}\theta.
 \end{equation*}
-It can be seen that this is the same transformation as that applied to the
-electromagnetic four-vector field in
-\eqn~\ref{eqn:theory_gauge_transform}. By requiring the fields to be
-symmetric under a \Uone phase transformation, a new field must be
-introduced. This field then appears as a gauge boson in the theory, in this case
-an analogue of the photon. Incorporating the Maxwell equations into the
-Lagrangian, one arrives at \acl{SQED},
+This is seen to be the same transformation as that applied to the
+electromagnetic four-vector field in \eqn~\ref{eqn:theory_gauge_transform}. By
+requiring the fields to be symmetric under a local \Uone phase transformation, a
+new field must be introduced. This field then appears as a gauge boson in the
+theory - in this case an analogue of the photon. Incorporating the Maxwell
+equations into the Lagrangian, one arrives at \acf{SQED},
 \begin{equation}
 \label{eqn:scalar_qed}
   \lagrangiand = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \left(D_{\mu}\phi\right)\left(D^{\mu}\phi\right)^*
@@ -235,20 +239,19 @@ Lagrangian, one arrives at \acl{SQED},
   \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right).
 \end{equation}
 
-The procedure which has just been outlined is known as the \emph{gauge
-  principle}. Whilst it might seem an interesting but trivial result, it turns
+The procedure which has just been outlined is an example of the \emph{gauge
+  principle}. This might seem an interesting, but trivial result, but it turns
 out that all particles and interactions of the \ac{SM} (see
-\sec~\ref{sec:theory:particles}) can be predicted by repeating this procedure
-with larger symmetry groups.
+\sec~\ref{sec:theory:particles}) can be predicted by essentially repeating this
+procedure with larger symmetry groups.
 
 \subsection{Yang-Mills Theory}
-Having shown within a highly simplified model, how the gauge principle can be
-used to predict the existence of gauge bosons by enforcing a local symmetry, we
-shall now discuss the inclusion of additional gauge bosons by moving to a
-``larger'' local symmetry group.
+We have seen how the gauge principle can be applied, within a highly simplified
+model, to predict the existence of gauge bosons by enforcing a local
+symmetry. This will now be extended to ``larger'' symmetry groups.
 
 Extending the symmetry group to \SUtwo and replacing the single complex field
-$\phi$ by a vector of complex fields $\Phi$,
+$\phi$ by a vector of complex fields, $\Phi$,
 \begin{eqnarray*}
 \Phi \longrightarrow \Phi' = \exp\left(i\theta(x) + iT^a W^a_{\mu}\right)\Phi\\
 D_{\mu} = \partial_{\mu} + igT^a_{\mu},
@@ -259,34 +262,34 @@ group predicts the existence of three gauge bosons - matching the three weak
 gauge bosons: \PZ, \PWp and \PWm. This is an example of a Yang-Mills
 theory~\cite{yangmills}.
 
-Another important aspect of this toy theory is related to the structure of the
-symmetry group \SUtwo. Namely, that since the group is not Abelian - meaning
-that its generators do not commute - the Lagrangian must be modified to ensure
-local gauge invariance,
+An important aspect of this toy theory is related to the structure of the
+symmetry group \SUtwo. In particular, the generator of this symmetry group do
+not commute - they are said to be ``non-Abelian''. This requires the Lagrangian
+to be modifed to maintain local gauge invariance,
 \begin{eqnarray*}
-\lagrangiand = -\frac{1}{4}F^a_{\mu\nu}F^{\mu\nu} \\
+\lagrangiand = -\frac{1}{4}F^a_{\mu\nu}F^{\mu\nu} \textrm{where}\\
 F^a_{\mu\nu} = \partial_{\mu} A^a_{\nu} - \partial_{\nu} A^a_{\mu} + g f^{abc}
 A^b_{\mu} A^c_{\nu},
 \end{eqnarray*}
-where $f^{abc}$ are known as structure constants. The additional quadratic terms
-in the Lagrangian lead to self interactions, just as is observed in the weak
-sector.
+and $f^{abc}$ are known as \emph{structure constants} of the group \SUtwo. The
+additional quadratic terms in the Lagrangian lead to self interactions, just as
+is observed in the weak sector.
 
 It would seem that a model based on a symmetry group $\SUtwo\times\Uone$ would
 appear to give the correct number of degrees of freedom for a unification of the
-electromagnetic and weak nuclear forces. One problem in particular is the fact
-that the weak bosons are massive and the photon massless. It turns out that
-giving the bosons mass directly in the Lagrangian (as for the field $\phi$ in
-\eqn~\ref{eqn:scalar_qed}) breaks gauge invariance. Another more subtle
-issue is that the \PWp and \PWm would be uncharged in this picture, since the
-\SUtwo component is able to commute with the \Uone part.
+electromagnetic and weak nuclear forces. One immediate problem is the fact that
+the weak bosons are known to be massive. It is not possible to introduce
+straightforward mass terms into the Lagrangian whilst maintaing gauge
+invariance. Another more subtle issue is that the \PWp and \PWm would be
+uncharged in this picture, since the \SUtwo component is able to commute with
+the \Uone part. % Refs here would be good
 
 \subsection{Spin and Chirality}
 Having arrived at a toy gauge theory bearing some similarity to the \ac{SM}, it
-is important to introduce a concept not yet represented in the theory -
-spin. The Lagrangians presented so far have worked only with scalar fields, but
-these are known to not represent the physical world. In reality, particles have
-spin - intrinsic angular momentum.
+is important to introduce a concept not yet represented in the theory. The
+Lagrangians presented so far have worked only with scalar fields, but these are
+known to not represent the physical world. In reality, particles have intrinsic
+angular momentum or \emph{spin}.
 
 Fermionic degrees of freedom are represented as \emph{spinors}. These transform
 in a different manner to vectors under spatial rotations. In addition, they obey
@@ -294,57 +297,61 @@ a different equation of motion, known as the \emph{Dirac Equation},
 \begin{equation*}
 i\gamma^\mu \partial_{\mu}\Psi + m\Psi = 0,
 \end{equation*}
-where $\Psi$ is a spinor and $\gamma^{\mu}$ are known as the Dirac matrices
-(see e.g.~\cite{aitchison}). The Dirac matrices obey the anti-commutation
-relation $\{\gamma^{\mu}, \gamma^{\nu}\} = 2g^{\mu\nu}$ where $g^{\mu\nu}$ is
-the spacetime metric. Writing an appropriate Lagrangian, one obtains
+where $\Psi$ is a spinor and $\gamma^{\mu}$ are known as the Dirac matrices (see
+e.g.~\cite{aitchison}). The Dirac matrices obey the anti-commutation relation
+$\{\gamma^{\mu}, \gamma^{\nu}\} = 2g^{\mu\nu}$ where $g^{\mu\nu}$ is the
+spacetime metric. A suitable Lagrangian may be written as
 \begin{equation*}
 \bar{\Psi} \left (i\gamma^{\mu}\partial_{\mu} -m\right)\Psi \qquad \textrm{and} \qquad \bar{\Psi} =
 \Psi^{\dagger}\gamma_0.
 \end{equation*}
-One important aspect of spinors is a property known as ``handedness'' or
-\emph{chirality}. Physically speaking, a right-handed particle is one whose spin
+An important aspect of spinors is a property known as ``handedness'' or
+\emph{chirality}. Spinors have both ``left-handed'' and ``right-handed''
+components. A particle's chirality is related to its transformation properties
+under the \poincare group - the symmetry group of spacetime.
+
+Physically speaking, a right-handed particle is one whose spin
 is aligned with its direction of motion and a left-handed one whose spin is
 oppositely aligned. Note that a left-handed anti-spinor corresponds to a right
-handed physical particle (see~\cite{peskin_schroeder}).
+handed physical particle~\cite{peskin_schroeder}.
 
-A related, but distinct concept is that of \emph{helicity}. Helicity is the
-projection of a particle's spin onto its momentum,
+A related, but distinct concept, is \emph{helicity}. Helicity is the projection
+of a particle's spin onto its momentum,
 \begin{equation*}
-h = \frac{S\dot p}{\left|p\right|}.
+h = \frac{S.p}{\left|p\right|}.
 \end{equation*}
-In cases where the spin is aligned with the particle's momentum, it is said to
+In cases where the particle's spin is aligned with its momentum, it is said to
 have right-handed helicity. In cases where it is anti-aligned, it has
 left-handed helicity. For massless particles, the helicity and chirality states
-are equivalent, and the helicity is non-zero. Particles with helicity $h=\pm 1$
-are said to be \emph{transversely polarised} and $h=0$, \emph{longitudinally
-  polarised}.
+are equivalent, and the helicity must be non-zero. Particles with helicity,
+$h=\pm 1$, are said to be \emph{transversely polarised} and $h=0$,
+\emph{longitudinally polarised}.
 %TODO: refer to this bit
 
-\subsection{The Electroweak Theory}
-\label{sec:sm_electroweak}
-A striking property of the electroweak theory is the observation of maximal
-parity violation by Wu et al.~\cite{wu_parity}. By observing the $\beta$ decay of
-Cobalt-60 atoms. The atoms had their spins polarised by a magnetic field and the
-angular distribution of electrons was measured. It was seen that electrons were
-emitted preferentially in the opposite direction to their spin. This implies
-that the neutrino momentum in the decay is always aligned in an opposite to its
-spin - i.e. the neutrino is left-handed. More generally, the weak gauge bosons
-interact only with left-handed particles and right-handed anti-particles. This
-is also referred to as the \VminusA nature of the theory - since the Lagrangian
-contains ``vector minus axial'' terms which lead to parity violation. Parity
-violation will be of vital importance to the analysis presented in
-\chap~\ref{sec:wpol}.
+\subsection{The Electroweak Theory}\label{sec:sm_electroweak}
+A striking property of the electroweak theory is the observation of parity
+violation by Wu et al.~\cite{wu_parity} in the $\beta$ decay of Cobalt-60
+atoms. The spins of the atoms were polarised by a magnetic field. The angular
+distribution of the $\beta$ electrons was then measured. It was seen that
+electrons were emitted preferentially in the direction opposite to their
+spin. This implies that the neutrino momentum in the decay is always opposite to
+its spin - i.e. the neutrino is left-handed. More generally, the weak gauge
+bosons interact only with left-handed particles and right-handed
+anti-particles. Parity is thus said to be \emph{maximally} violated. The
+coupling of the weak bosons has a ``vector minus axial'' or \VminusA form which
+leads to parity violation. Parity violation will be of vital importance to the
+analysis presented in \chap~\ref{sec:wpol}.
 
 It is not necessary for us to fully detail the electroweak sector of the \ac{SM}
 Lagrangian. For the sake of completeness, an outline of the construction of the
 theory will be given. Firstly, the symmetry group chosen is
-$\SUtwo_{\textrm{L}}\times \Uone_{Y}$ where the subscript $L$ indicates the
-coupling only to left-handed spinors and the $Y$ that the $\Uone$ group here is
-not electromagnetism but ``hypercharge''. This is essential to overcoming the
-issues with $\SUtwo\times\Uone$ already described.
+$\SUtwo_{\textrm{L}}\times \Uone_{Y}$ where the subscript $L$ indicates a
+coupling only to left-handed spinors. The $Y$ refers to the fact that the
+$\Uone$ group here is not electromagnetism but ``hypercharge''. This is
+essential to overcoming the issues with $\SUtwo\times\Uone$ which have already
+been described.
 
-The fermions themselves are placed into ``isospin'' doublets coupling a charged
+The fermions themselves are placed into ``isospin'' doublets, coupling a charged
 lepton with a neutrino,
 \begin{equation*}
 \PsiL = \left(\begin{array}{c} \Pgn_{\textrm{L}} \\
@@ -352,19 +359,19 @@ lepton with a neutrino,
 \end{equation*}
 where $\Pgn_{\textrm{L}}$ and $\Plepton_{\textrm{L}}$ are left-handed spinor
 fields representing a neutral and charged lepton respectively. The right-handed
-component of the charged lepton (which does interact electromagnetically) is
-incorporated as an isospin singlet,
+component of the charged lepton (which \emph{does} interact electromagnetically)
+is incorporated as an isospin singlet,
 \begin{equation*}
 \PsiR = \Plepton_{\textrm{R}}.
 \end{equation*}
 
 
-Considering the Lagrangian as
+Dividing the Lagrangian as follows,
 \begin{equation*}
 \lagrangiand = \lagrangiand_{\textrm{gauge}} + \lagrangiand_{\textrm{free}},
 \end{equation*}
-and writing the analogue of the tensor \Fmunu for the gauge group
-$\SUtwo_{\textrm{L}}\times\Uone$,
+and writing the analogue of the tensor, \Fmunu, for the gauge group
+$\SUtwo_{\textrm{L}}\times\Uone$, one obtains
 \begin{equation*}
 \lagrangiand_{\textrm{gauge}} = -\frac{1}{4} W^{a\mu\nu} W^a_{\mu\nu}
 -\frac{1}{4} B^{\mu\nu}B_{\mu\nu},
@@ -372,27 +379,27 @@ $\SUtwo_{\textrm{L}}\times\Uone$,
 where
 \begin{eqnarray*}
 W^{a}_{\mu\nu} = \partial_{\mu} W^a_{\nu} - \partial_{\nu}W^a_{\mu} + g f^{abc}
-W^{b}_{\mu} W^c_{\nu}\\
-B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu},
+W^{b}_{\mu} W^c_{\nu} \textrm{and}\\
+B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}.
 \end{eqnarray*}
 The piece of the Lagrangian for free leptons is then,
 \begin{equation*}
 \lagrangiand_{\textrm{leptons}} = \APsiL i \gamma^{\mu} D_{\mu} \PsiL + \APsiR i
 \gamma^{\mu} D_{\mu} \PsiR.
 \end{equation*}
-The covariant derivative is written
+with the covariant derivative
 \begin{equation*}
 D_{\mu} = \partial_{\mu} + i g W^a_{\mu} T^a + i g' B^{\mu}\frac{Y}{2},
 \end{equation*}
-where the $T^a = \frac{1}{2}\sigma^a$ when acting on a left-handed spinor and
+where $T^a = \frac{1}{2}\sigma^a$ when acting on a left-handed spinor and
 zero otherwise. Similarly, the hypercharge $Y$ is $-1$ for left-handed spinors
 and $-2$ for right-handed. The $g$ and $g'$ are coupling constants.
 
-It can then be seen that the physical \PWp and \PWm are superpositions,
+The physical \PWp and \PWm bosons are superpositions,
 \begin{equation*}
 \PWpm_{\mu} = \frac{1}{\sqrt{2}}\left(\PW^1_{\mu} + \PW^2_{\mu}\right),
 \end{equation*}
-and the photon and \PZ,
+as are the photon and \PZ boson,
 \begin{equation*}
 \left(\begin{array}{c}A_{\mu} \\ Z_{\mu} \end{array}\right ) =
   \left ( \begin{array}{cc} \cos\thetaw & \sin\thetaw \\ -\sin\thetaw &
@@ -406,37 +413,35 @@ constants $g$ and $g'$ by
 \cos\thetaw = \frac{g}{\sqrt{g + {g'}^2}}.
 \end{eqnarray}
 
-So it can be seen that by introducing weak isospin and hypercharge, a more
-consistent theory has been constructed. The $\Uone_{\textrm{EM}}$ symmetry
-describing electromagnetism is now formed from a superposition of generators in
-the \SUtwo and $\Uone_{\textrm{Y}}$ groups. This model now includes the correct
-charge assignments to the gauge bosons as well as the parity violation observed
-in the weak sector.
+The $\Uone_{\textrm{EM}}$ symmetry describing electromagnetism is now formed
+from a superposition of generators in the \SUtwo and $\Uone_{\textrm{Y}}$
+groups. This model now includes the correct charge assignments to the gauge
+bosons. Parity violation in the weak sector has also been included.
 
-\subsection{Remaining Issues}
-\label{sec:remaining_issues}
-This model is now remarkably close to the full electroweak theory. Unfortunately
-two major problems remain - both relating to mass. Firstly, the mass of the
-leptons has not been included. Naively one would be tempted to add a mass term
+\subsection{Remaining Issues}\label{sec:remaining_issues}
+The above model is now remarkably close to the full electroweak
+theory. Unfortunately, two major problems remain - both of them relating to
+mass. Firstly, the leptons do not yet have mass. Naively, one might be tempted to
+add a mass term with the following form:
 \begin{equation*}
 m\APsiL\PsiL = m(\APneutrino_{\textrm{L}}\Pneutrino_{L} +
 \APlepton_{\textrm{L}}\Plepton_{\textrm{L}}).
 \end{equation*}
-However, this term vanishes (this can be seen by applying left-handed and
-right-handed projection operators to the spinors). The second issue relates to
-the mass of the gauge bosons - in particular how to generate masses for the
-\PWp, \PWm and \PZ whilst leaving the photon massless. Both issues will be
-addressed in the next section.
+However, terms of this form are required to vanish. This can be seen by applying
+left-handed and right-handed projection operators to the spinors. The second
+issue relates to the mass of the gauge bosons - in particular how to generate
+masses for the \PWp, \PWm and \PZ bosons whilst leaving the photon
+massless. Both issues will be addressed in the next section.
 
 \section{\acl{EWSB}}
 \label{sec:theory_ewsb}
-In order to give mass to the weak gauge bosons (and other fermions in the
-\ac{SM}), a mechanism called \acl{EWSB} is employed. This posits that although
-the Lagrangian is invariant under some group of transformations, the vacuum
-state of the theory ``breaks'' the symmetry down to a smaller group.
+In order to give mass to the weak gauge bosons, as well as other fermions in the
+\ac{SM}), a mechanism called \acf{EWSB} is employed. This posits that, although
+the actual Lagrangian is invariant under a certain symmetry group, the vacuum
+state of the theory is not.
 
 \subsection{A Real Scalar Field}
-To illustrate how this works, we will return to a simplified model with a real
+To illustrate \ac{EWSB}, we will return to a simplified model with a single real
 scalar field
 \begin{equation*}
 \lagrangiand = \left(\partial^{\mu}\phi\right)\left(\partial_{\mu}\phi\right)
@@ -457,12 +462,12 @@ solutions $\phi^\pm_0 = \pm \sqrt{-\mu^2/\lambda}$. Recall that the initial
 Lagrangian is invariant under the transformation $\phi \longrightarrow
 -\phi$. Given that one of the two possible vacua must be chosen, the vacuum is
 no longer invariant under this symmetry. Furthermore, it is possible to expand
-around the new vacuum (e.g. $\phi_0^\pm$), $v=\sqrt{-\mu^2/\lambda}$ and define
-a new field $\phi'$,
+around the new vacuum (i.e. either $\phi_0^+$ or $\phi_0^-$),
+$v=\sqrt{-\mu^2/\lambda}$ and define a new field $\phi'$ such that
 \begin{equation*}
-\phi' \equiv \phi - v,
+\phi' \equiv \phi - v.
 \end{equation*}
-the Lagrangian becomes
+The Lagrangian becomes
 \begin{equation*}
 \lagrangiand = \frac{1}{2}
 \left(\partial_{\mu}\phi'\right)\left(\partial^{\mu}\phi'\right)
@@ -505,13 +510,12 @@ group generator~\cite{nambu, goldstone}. In this case, the original \Uone
 symmetry of the group has been broken, resulting in a single massless Goldstone
 boson.
 
-\subsection{The Higgs Mechanism}
-\label{sec:sm_higgs}
+\subsection{The Higgs Mechanism}\label{sec:sm_higgs}
 Massless scalar Goldstone bosons are theoretically undesirable as they have not
-been observed by experiment. Fortunately, the Higgs mechanism~\cite{higgs} offers
-a solution to this problem while also giving the necessary mass to the weak
-gauge bosons. This is accomplished by turning the global symmetry shown above
-into a local one.
+been observed by experiment. Fortunately, the Higgs mechanism~\cite{higgs}
+offers a solution to this problem, while also giving the necessary mass to the
+weak gauge bosons. This is accomplished by extending the global symmetry shown
+above to a local one.
 
 Consider again the case of \ac{SQED} (\eqn~\ref{eqn:scalar_qed}). For small
 perturbations, the fields may be expanded around the vacuum as follows,
@@ -519,43 +523,44 @@ perturbations, the fields may be expanded around the vacuum as follows,
 \phi = \exp\left(i\frac{\phi'_2}{v}\right)\frac{1}{\sqrt{2}}\left(\phi'_1 + v\right) \approx
 \phi' + \frac{v}{\sqrt{2}}.
 \end{equation*}
-When substituted into the Lagrangian this gives
-\begin{align*}
+When substituted into the Lagrangian, this gives
+\begin{align}
+\label{eqn:higgs_lag}
   \lagrangiand =
   \frac{1}{2}\left(\partial_{\mu}\phi'_1\right)\left(\partial^{\mu}\phi'_1\right)
   - \frac{1}{2}\left(-2\mu^2\right){\phi'_1}^2 +
   \frac{1}{2}\left(\partial_{\mu}\phi'_2\right)\left(\partial^{\mu}\phi'_2\right)
-  + \textrm{interaction terms}\\
+  + \textrm{interaction terms}\nonumber\\
   - \frac{1}{4}F_{\mu\nu}^{\mu\nu} +
   \frac{q^2v^2}{2}gvA_{\mu}\left(\partial^{\mu}\phi'_2\right).
 \end{align*}
 Two thing should be noted about the resulting Lagrangian. Firstly, that it
-possesses a scalar field with mass $\sqrt{-2\mu^2}$ and secondly a vector
-boson $A_{\mu}$ with mass $gv$. The final term is problematic, but can be
-easily removed by moving to the ``unitary gauge''.
+possesses a scalar field with mass $\sqrt{-2\mu^2}$. Secondly that the vector
+boson $A_{\mu}$ has acquired a mass, $gv$. The last term in
+\eqn~\ref{eqn:higgs_lag} is problematic, but can be removed by moving to the
+``unitary gauge''.
 
 It can be seen that the Goldstone boson has been absorbed into the vector boson,
-adding an additional degree of freedom and allowing it to acquire mass. This is
+adding an additional degree of freedom and causing it to acquire mass. This is
 the essence of the mechanism employed in the \ac{SM} to give mass to the weak
 gauge bosons whilst leaving the photon massless. The
 $\SUtwo_{\textrm{L}}\times\Uone_{Y}$ symmetry of the \ac{SM} is broken down to
 the $\Uone_{\textrm{EM}}$ symmetry of electromagnetism. Goldstone bosons for
-each broken generator are absorbed by the \PWp, \PWm and \PZ causing them to
-acquire mass. The symmetry corresponding to electromagnetism remains unbroken,
-leaving the photon massless.
+each broken generator are absorbed by the \PWp, \PWm and \PZ - giving them
+mass. The symmetry corresponding to electromagnetism remains unbroken, and hence
+the photon remains massless.
 
-It should be noted that, in addition to the massive vector bosons, the Higgs
-mechanism predicts the existence of a massive scalar (a spin$-0$ particle) - the
-$\phi$ field in the Lagrangian above. This is the famous Higgs particle which
-has been the focus of extensive and continuing (as of this writing) experimental
-searches.
+It should be noted that the Higgs mechanism also predicts the existence of a
+massive scalar (a spin$-0$ particle) - the $\phi$ field in the Lagrangian
+above. This is the famous Higgs particle which has been the focus of many recent
+particle physics experiments - including the \ac{LHC}.
 
 \subsection{Yukawa Couplings}
 \label{sec:theory_yukawa}
-It was noted in \sec~\ref{sec:remaining_issues} that it is not possible to
-write down a straight forward mass term for the fermions in the electroweak
-theory. It turns out that this problem is also solved by the Higgs mechanism by
-the addition of a Yukawa coupling,
+It was noted in \sec~\ref{sec:remaining_issues} that it is not possible to write
+down a straight forward mass term for the fermions in the electroweak theory. It
+turns out that this problem is also solved by the Higgs mechanism by the
+addition of a ``Yukawa coupling'' to the Lagrangian,
 \begin{equation*}
 \lagrangiand = g \left(\APsiL \phi \PsiR + \APsiR\phi^{\dagger}\PsiL\right),
 \end{equation*}
@@ -565,25 +570,24 @@ term - with
 \begin{equation*}
 m_{\Psi} = \frac{gv}{\sqrt{2}}.
 \end{equation*}
-It is thought that all \ac{SM} fermions acquire their mass in this way.
+It is thought that all \ac{SM} fermions acquire mass in this way.
 
 \section{\acl{QCD}}
-So far the discussion has covered only the electroweak sector of the \ac{SM} -
-leptons, weak gauge bosons and the Higgs particle. The strong force is
-incorporated in a framework known as \ac{QCD}.  Whilst this at first appears to
+The preceding discussion has covered only the electroweak sector of the \ac{SM}
+- leptons, electroweak gauge bosons and the Higgs particle. The strong force is
+incorporated within the framework of \ac{QCD}.  Whilst this at first appears to
 be quite straightforward, certain properties of the strong force often make
 calculations considerably more difficult. Here, a brief summary of the theory
 will be given with further details available in~\cite{pink_book}.
 
 \subsection{Quarks}
 The quarks can be included in the \ac{SM} in a similar manner to the
-leptons. The left-handed components of up and down type are paired into doublets
-as follows:
+leptons. The left-handed components of up and down type are paired into doublets,
 \begin{equation*}
-Q=\left(\begin{array}{c}\Pup_{\textrm{L}} \\ \Pdown_{\textrm{L}}\end{array}\right),
+Q=\left(\begin{array}{c}\Pup_{\textrm{L}} \\ \Pdown_{\textrm{L}}\end{array}\right).
 \end{equation*}
-with a doublet for each of the three generations. The right-handed components
-are once again in a singlet representation.
+There is one such doublet for each of the three generations. The right-handed
+components are once again placed in a singlet representation.
 
 The weak eigenstates of the quarks are rotated with respect to their mass
 eigenstates via the \acl{CKM} matrix. This encodes the strength of various
@@ -593,20 +597,20 @@ flavour-changing weak decays.
 Inclusion of \ac{QCD} in the \ac{SM} continues in the same manner as for the
 electroweak force. The local gauge symmetry group is extended to include an
 additional product, $\SUthree_{C}$ where the $C$ indicates a new conserved
-quantity - \emph{colour charge}. The quarks, of which six flavours are currently
-known, each carry one of three colour charges, labelled \emph{red}, \emph{green}
-and \emph{blue}. As before, local invariance under this transformation group
-requires the introduction of a covariant derivative and a set of 8 gauge bosons
-- the gluons.
+quantity - \emph{colour charge}. The quarks - of which six flavours are
+currently known - each carry one of three colour charges. These are labelled
+\emph{red}, \emph{green} and \emph{blue}. As before, local invariance under this
+transformation group requires the introduction of a covariant derivative and a
+set of 8 gauge bosons - the gluons.
 
 \subsection{Unique Properties}
-It has been seen in the case of the weak force that the non-Abelian nature of
-the gauge group gives rise to self-interactions of the corresponding gauge
-bosons. The same is true for the \SUthree gauge group of \ac{QCD}. However, in
-this case the situation is further complicated by the energy-scaling behaviour
-of the strong coupling constant.
+In the case of the weak force, it was seen that the non-Abelian generators of
+the \SUtwo group give rise to self-interactions in the gauge bosons. The same is
+true for the \SUthree gauge group of \ac{QCD}. However, in this case the
+situation is further complicated by the energy-scaling behaviour of the strong
+coupling constant.
 
-At large energies (or equivalently, short distances), the strong coupling
+At large energies - or equivalently, short distances - the strong coupling
 constant becomes relatively small~\cite{lattice_qcd} and perturbation theory can
 be used reliably. This is a phenomenon known as \emph{asymptotic
   freedom}~\cite{asymptotic_freedom}. At lower energies (or long distances), the
@@ -620,8 +624,15 @@ forbids the existence of free quarks, forcing them to exist only as bound states
 - baryons or mesons. This observation has been repeatedly confirmed by a number
 of experimental searches~\cite[p.~30]{pdg}.
 
-Many additional techniques have been developed to tackle these difficults, for
+Many additional techniques have been developed to tackle these difficulties, for
 instance Lattice \ac{QCD}~\cite{lattice_qcd}. In spite of this, \ac{QCD}
-processes are often poorly understood at low energies. This has important
-consequences for high energy physics experiments and will be an important
-consideration in subsequent chapters.
+processes are often poorly understood, particularly at low energies. This has
+important consequences for high energy physics experiments and will be an
+important consideration in subsequent chapters.
+
+Having covered necessary material on the \ac{SM}, it can be seen that the
+\ac{SM} appears to be enormously successful in explaining the fundamental
+particles and forces so far observed in experiments. Seemingly, the only
+remaining issue is the discovery of the Higgs boson, which has not yet been
+observed experimentally. However, even with the Higgs boson discovered, a number
+of additional problems remain. These will be explored in the next chapter.

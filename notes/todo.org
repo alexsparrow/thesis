@@ -1,51 +1,43 @@
 /vols/cms01/as1604/SUSY-svn/WPol2/scripts/ElPlots
-* General
-** TODO PROSPINO, Madgraph, Pythia etc. cite and give version numbers
+* Tasks
 ** TODO Clarify QCD language throughout
-** TODO proofread the whole thing
+** TODO helicity fraction -> polarisation fractions
+** TODO proofread
 ** TODO check all references are in fact referenced
+** TODO go through reference formatting
 ** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Monte carlo, MC
-** TODO Preface
 ** TODO Front quote
 ** TODO Section/Chapter titles
 ** TODO Figure placement
 ** TODO Figure captions
 ** TODO Tables - resize to fit page
 ** TODO Alex's corrections to intro/abstract/conclusion
-* SM
-** TODO SM Higgs mass
+** TODO More refs
+** TODO statistics jargon
+** TODO boldmath in titles
+** TODO Add summaries at end of susy and interp chapters
+** TODO Interpretation: Why 10% PDF uncertainty?
+** TODO Add year to title page and department
+** TODO SUSYv2/colophon - make less weird
+** TODO Background -> background processes
+** TODO em dash
+** TODO wpol contours - excluded region
 * SUSY
 ** TODO Previous limits
 ** TODO mention SUSY higgs searches
 ** TODO GMSB/AMSB: discuss what they are and ref
 * Expt
-** TODO
-* Object Reconstruction
-** TODO check conversion rejection is sz with alex
-** TODO check v boson production at hadron colliders is sz with alex
-** TODO check wpol conclusion sz with alex
-** TODO check wpol syst sz with alex
-** TODO check MET resolution systematic bit with alex
-** TODO check wz about hadron decays for sigma(D0)
-** TODO check W/ttbar systematics
-** TODO interpretation conclusions
+** TODO Z' comment from Alex
 * Wpol
 ** TODO Acceptance correction in wpol section
 ** TODO QCD penalty term
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
-** TODO Reference SM section for chirality
-   SCHEDULED: <2012-03-20 Tue>
-** General Alex
-*** TODO Hyphenate W-boson when used as an adjective e.g. W-boson mass
-*** TODO Statistics, systematics, cutflow jargon
-*** TODO Bold the Z+jets etc in titles
 ** Alex Frameworks
 *** TODO Ends abruptly
 *** TODO For instance the mass splittings...
 *** TODO CMSSM m0-m12 mass relation
 *** TODO more spiel at the end & mention characterising a discovery
-
 ** Alex Wpol
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-03-22 Thu 10:30>
@@ -54,23 +46,19 @@
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
 ** SM
-*** TODO 1.2p1: unification -> rephrase
-*** TODO Maybe more on QCD or a summary at the end
+*** TODO References in last para of Yang-Mills
+*** TODO reference dirac equation
+*** TODO the electroweak theory - reference V-A
+*** TODO the electroweak theory - cite Weinberg angle
+*** TODO EWSB - reference lowest energy states are spacetime independent
+*** TODO Higgs Mechanism - reference unitarity gauge
+*** TODO QCD: reference CKM matrix
+*** TODO QCD: reference Gell-Man paper for color
 ** SUSY
 *** TODO Table captions
 *** TODO Clarify last bit of hadron colliders
 *** TODO Smooth ending to SUSY chapter
 *** TODO More refs
-
-* Interpretation
-** DONE Redo SMS limits with increased PDF uncertainty (25%?) since there are none in currently!!
-   CLOSED: [2012-03-21 Wed 17:30] SCHEDULED: <2012-03-21 Wed 15:00>
-   - State "DONE"       from "TODO"       [2012-03-21 Wed 17:30]
-   Also ensure this is properly described throughout text
-   LS/LP comparison plot should make it clear this is a different result
-** TODO Why 10% PDF uncertainty?
-** TODO SMS ensure this section makes sense and is correct
-* Alex
 
 
 * Old
@@ -1034,3 +1022,41 @@ Mostly done!
 ** DONE similar
    CLOSED: [2012-03-30 Fri 16:44]
    - State "DONE"       from "TODO"       [2012-03-30 Fri 16:44]
+** CANCELLED Preface
+   CLOSED: [2012-03-31 Sat 08:58]
+   - State "CANCELLED"  from "TODO"       [2012-03-31 Sat 08:58]
+** DONE PROSPINO, Madgraph, Pythia etc. cite and give version numbers
+   CLOSED: [2012-03-31 Sat 08:59]
+   - State "DONE"       from "TODO"       [2012-03-31 Sat 08:59]
+** Object Reconstruction
+*** TODO check conversion rejection is sz with alex
+*** TODO check v boson production at hadron colliders is sz with alex
+*** TODO check wpol conclusion sz with alex
+*** TODO check wpol syst sz with alex
+*** TODO check MET resolution systematic bit with alex
+*** TODO check W/ttbar systematics
+*** TODO check wz about hadron decays for sigma(D0)
+*** TODO interpretation conclusions
+** CANCELLED SMS ensure this section makes sense and is correct
+   CLOSED: [2012-03-31 Sat 09:00]
+   - State "CANCELLED"  from "TODO"       [2012-03-31 Sat 09:00]
+** DONE Redo SMS limits with increased PDF uncertainty (25%?) since there are none in currently!!
+   CLOSED: [2012-03-21 Wed 17:30] SCHEDULED: <2012-03-21 Wed 15:00>
+   - State "DONE"       from "TODO"       [2012-03-21 Wed 17:30]
+   Also ensure this is properly described throughout text
+   LS/LP comparison plot should make it clear this is a different result
+** CANCELLED SM Higgs mass
+   CLOSED: [2012-03-31 Sat 09:01]
+   - State "CANCELLED"  from "TODO"       [2012-03-31 Sat 09:01]
+** CANCELLED Hyphenate W-boson when used as an adjective e.g. W-boson mass
+   CLOSED: [2012-03-31 Sat 09:03]
+   - State "CANCELLED"  from "TODO"       [2012-03-31 Sat 09:03]
+** CANCELLED Reference SM section for chirality
+   CLOSED: [2012-03-31 Sat 09:03] SCHEDULED: <2012-03-20 Tue>
+   - State "CANCELLED"  from "TODO"       [2012-03-31 Sat 09:03]
+** DONE Maybe more on QCD or a summary at the end
+   CLOSED: [2012-03-31 Sat 22:05]
+   - State "DONE"       from "TODO"       [2012-03-31 Sat 22:05]
+** DONE 1.2p1: unification -> rephrase
+   CLOSED: [2012-03-31 Sat 22:07]
+   - State "DONE"       from "TODO"       [2012-03-31 Sat 22:07]
