@@ -2,11 +2,13 @@
 * Tasks
 ** TODO Clarify QCD language throughout
 ** TODO helicity fraction -> polarisation fractions
-** TODO proofread [2/8]
+** TODO check "and" in equations
+** TODO proofread [4/8]
 + [X] SM
 + [X] SUSY
-+ [ ] Framework
-+ [ ] Experiment
++ [X] Framework
++ [X] Experiment
++ [ ] Objects
 + [ ] Wpol
 + [ ] Search
 + [ ] Interpretation
@@ -30,12 +32,13 @@
 ** TODO Add year to title page and department
 ** TODO SUSYv2/colophon - make less weird
 ** TODO Background -> background processes
-** TODO em dash
 ** TODO wpol contours - excluded region
 * SUSY
 ** TODO Previous limits
 ** TODO GMSB/AMSB: discuss what they are and ref
 ** TODO Is GMSB R-parity violating?
+* Frameworks
+** TODO Polarisation effects in the transverse plane: soft gluon enhancement???
 * Expt
 ** TODO Z' comment from Alex
 * Wpol
@@ -1072,3 +1075,6 @@ Mostly done!
 ** CANCELLED mention SUSY higgs searches
    CLOSED: [2012-04-01 Sun 08:59]
    - State "CANCELLED"  from "TODO"       [2012-04-01 Sun 08:59]
+** DONE em dash
+   CLOSED: [2012-04-01 Sun 18:22]
+   - State "DONE"       from "TODO"       [2012-04-01 Sun 18:22]
