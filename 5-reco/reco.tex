@@ -39,7 +39,7 @@ single segment in the muon chambers.
 
 \subsubsection{Standalone Muons}
 Standalone muons are based solely on measurements in the muon chambers. The hits
-in each chamber are fit individually to obtain seeds - a position and direction
+in each chamber are fit individually to obtain seeds -- a position and direction
 vector along with an estimate of the transverse momentum. These form the basis
 of a track fit in the muon chambers based on the Kalman-filter technique. The
 fit is constrained to the vertex in order to reject cosmic ray muons. Since much
@@ -62,7 +62,7 @@ fit is again performed, this time using hits from both the silicon tracker and
 the muon chambers. This fit accounts for average expected energy losses,
 magnetic field and multiple scattering effects. The tracks reconstructed by this
 procedure are known as global muons. Once again, certain modifications are
-required for reconstructing cosmic ray muons - for instance in the case that
+required for reconstructing cosmic ray muons -- for instance in the case that
 cosmic muons traverse the entire detector, leaving two standalone muons on
 either side of \ac{CMS}.
 
@@ -97,7 +97,7 @@ pre-defined selections are available.
 Electron reconstruction at \ac{CMS} makes use of measurements from both the
 silicon tracker and the \ac{ECAL}. In the case of \ac{CMS}, the large amount of
 material in the tracker causes electrons to radiate a large fraction of their
-energy before reaching the \ac{ECAL} - 50\% of electrons radiate more than 50\%
+energy before reaching the \ac{ECAL} -- 50\% of electrons radiate more than 50\%
 of their energy in this way. For an accurate measurement of the electron energy,
 this energy, radiated in the form of bremsstrahlung photons, must be
 reconstructed correctly.
@@ -261,13 +261,13 @@ Certain particles, such as neutrinos, are not reconstructed by the \ac{CMS}
 detector. However, their presence may be inferred by considering the total
 momentum of particles reconstructed by the detector and comparing this with the
 momentum of the initial state. Any imbalance in these quantities can be
-attributed to the presence of some ``invisible'' particles - a \emph{missing
+attributed to the presence of some ``invisible'' particles -- a \emph{missing
   energy} signature.
 
 At a hadron collider, the situation is complicated by the fact that the boost of
 the initial partons parallel to the beamline is not known. Hence missing energy
 measurement along this axis is not possible. For this reason, transverse
-quantities are used instead - most commonly the \emph{missing transverse
+quantities are used instead -- most commonly the \emph{missing transverse
   energy}, \METv. This can be defined generically as
 \begin{equation*}
 \METv = -\sum_{o in \textrm{objects}} \vec{p}_T^o,
@@ -302,8 +302,8 @@ of the \PW boson transverse momentum, \PtWv.
 \section{Particle Flow at \ac{CMS}}
 \label{sec:reco_pf}
 The \ac{PF} algorithm~\cite{cms_pf_pas, cms_pf_pas2} attempts to provide a
-global reconstruction of the event - accurate determination of the type, energy
-and direction of all stable particles - by combining measurements from all
+global reconstruction of the event -- accurate determination of the type, energy
+and direction of all stable particles -- by combining measurements from all
 subdetectors in \ac{CMS}. This strategy is well suited for use with the \ac{CMS}
 detector. The silicon tracker is able to reconstruct charged particle tracks
 with high efficiency and purity down to transverse momenta as low as
@@ -314,7 +314,7 @@ coarser. However, the combined energy resolution of both calorimeters is $\sim
 10\%$ at \unit{100}{\GeV}. This allows identification of the energy deposits
 associated with neutral hadrons as an excess on top of that accounted for by
 matching the deposits with charged tracks. The \ac{PF} algorithm is able to
-reconstruct the components of jets and hadronic tau decays - primarily charged
+reconstruct the components of jets and hadronic tau decays -- primarily charged
 hadrons, neutral hadrons and photons. This provides an improved measurement of
 the jet energy and thus also of \METv.
 
@@ -339,10 +339,10 @@ algorithm. These will now be explained.
   at the surface of the \ac{HCAL}. These two surfaces appear as circular arcs
   in~\subref{fig:reco_pf_diag1}. The \PKlong, \Ppiminus, \Ppiplus, \Ppizero and
   the two photons from its decay are shown. The \PKlong, \Ppiminus and two photons
-  result in clear, well-speparated \ac{ECAL} cluters - round points labelled E1
+  result in clear, well-speparated \ac{ECAL} cluters -- round points labelled E1
   to E4~\ref{fig:reco_pf_diag2}. The \Ppiplus and \Ppiminus are reconstructed as
-  charged tracks - green lines labelled T1 and T2 - which point to the two
-  \ac{HCAL} clusters - round points labelled H1 and H2~\cite{cms_pf_pas}.}
+  charged tracks -- green lines labelled T1 and T2 -- which point to the two
+  \ac{HCAL} clusters -- round points labelled H1 and H2~\cite{cms_pf_pas}.}
 \label{fig:reco_pf_diag}
 \end{figure}
 
@@ -404,7 +404,7 @@ $(\eta, \phi)$ separation of the two clusters.
 Muons are included when a global fit between a track in the tracker and a muon
 track in the muon chambers yields an acceptable \chisq. If several global muons
 are found for a single muon track, only that possessing the smallest \chisq is
-retained - with the link distance determined by the \chisq.
+retained -- with the link distance determined by the \chisq.
 
 \subsection{Particle Reconstruction}
 The first step is to reconstruct muons. Each global muon gives rise to a
@@ -413,7 +413,7 @@ compatible with the track momentum to within 3 standard deviations. The
 corresponding track is then removed from the block.
 
 The next step is electron reconstruction. Electron tracks in the block are first
-selected by a pre-identification step - electrons often leave short tracks and
+selected by a pre-identification step -- electrons often leave short tracks and
 lose energy via bremsstrahlung. Pre-identified electrons are then refit with a
 Gaussian Sum Filter (see \sec~\ref{sec:reco_electrons}) and projected into
 the \ac{ECAL}.  Candidates passing tracking and calorimetric criteria are

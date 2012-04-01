@@ -33,9 +33,9 @@ cache. The framework then handles access to this cache, as well as taking care
 of cache invalidation between events in the dataset.
 
 As well as the performance advantages of this approach, it has the benefit of
-enforcing a kind of referential transparency - repeated access to a given
+enforcing a kind of referential transparency -- repeated access to a given
 quantity must always yield the same result (at the single event level). Whilst
-this makes certain tasks more difficult - e.g. iterative cleaning of events - it
+this makes certain tasks more difficult -- e.g. iterative cleaning of events -- it
 ensures that cuts applied to the quantities must commute since they are not
 allowed to mutate any of the quantities on which they may select. This emulates
 some of the benefits available in purely functional programming languages such

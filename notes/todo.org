@@ -2,7 +2,16 @@
 * Tasks
 ** TODO Clarify QCD language throughout
 ** TODO helicity fraction -> polarisation fractions
-** TODO proofread
+** TODO proofread [2/8]
++ [X] SM
++ [X] SUSY
++ [ ] Framework
++ [ ] Experiment
++ [ ] Wpol
++ [ ] Search
++ [ ] Interpretation
++ [ ] Appendices
+
 ** TODO check all references are in fact referenced
 ** TODO go through reference formatting
 ** TODO instances of New Physics/BSM physics should be made consistent
@@ -25,8 +34,8 @@
 ** TODO wpol contours - excluded region
 * SUSY
 ** TODO Previous limits
-** TODO mention SUSY higgs searches
 ** TODO GMSB/AMSB: discuss what they are and ref
+** TODO Is GMSB R-parity violating?
 * Expt
 ** TODO Z' comment from Alex
 * Wpol
@@ -1060,3 +1069,6 @@ Mostly done!
 ** DONE 1.2p1: unification -> rephrase
    CLOSED: [2012-03-31 Sat 22:07]
    - State "DONE"       from "TODO"       [2012-03-31 Sat 22:07]
+** CANCELLED mention SUSY higgs searches
+   CLOSED: [2012-04-01 Sun 08:59]
+   - State "CANCELLED"  from "TODO"       [2012-04-01 Sun 08:59]
