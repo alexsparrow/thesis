@@ -2,7 +2,6 @@
 * Tasks
 ** TODO Clarify QCD language throughout
 ** TODO helicity fraction -> polarisation fractions
-** TODO check "and" in equations
 ** TODO proofread [5/9]
 + [X] SM
 + [X] SUSY
@@ -16,16 +15,13 @@
 
 ** TODO check all references are in fact referenced
 ** TODO go through reference formatting
-** TODO instances of New Physics/BSM physics should be made consistent
 ** TODO Section/Chapter titles
 ** TODO Figure placement
 ** TODO Figure captions
-** TODO Tables - resize to fit page
 ** TODO Alex's corrections to intro/abstract/conclusion
 ** TODO More refs
 ** TODO statistics jargon
 ** TODO boldmath in titles
-** TODO Add summaries at end of susy and interp chapters
 ** TODO Interpretation: Why 10% PDF uncertainty?
 ** TODO Add year to title page and department
 ** TODO SUSYv2/colophon - make less weird
@@ -34,20 +30,13 @@
 * SUSY
 ** TODO Previous limits
 ** TODO GMSB/AMSB: discuss what they are and ref
-** TODO Is GMSB R-parity violating?
-* Frameworks
-** TODO Polarisation effects in the transverse plane: soft gluon enhancement???
 * Expt
 ** TODO Z' comment from Alex
 * Wpol
 ** TODO Acceptance correction in wpol section
-** TODO QCD penalty term
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
 ** Alex Frameworks
-*** TODO Ends abruptly
-*** TODO For instance the mass splittings...
-*** TODO CMSSM m0-m12 mass relation
-*** TODO more spiel at the end & mention characterising a discovery
+*** TODO Ends abruptly - more spiel at the end & mention characterising a discovery
 ** Alex Wpol
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-03-22 Thu 10:30>
@@ -65,7 +54,6 @@
 *** TODO QCD: reference CKM matrix
 *** TODO QCD: reference Gell-Man paper for color
 ** SUSY
-*** TODO Table captions
 *** TODO More refs
 
 
@@ -1089,3 +1077,34 @@ Mostly done!
 ** DONE Smooth ending to SUSY chapter
    CLOSED: [2012-04-02 Mon 17:28]
    - State "DONE"       from "TODO"       [2012-04-02 Mon 17:28]
+** DONE CMSSM m0-m12 mass relation
+   CLOSED: [2012-04-02 Mon 20:20]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:20]
+** DONE Table captions
+   CLOSED: [2012-04-02 Mon 20:22]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:22]
+** DONE For instance the mass splittings...
+   CLOSED: [2012-04-02 Mon 20:24]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:24]
+** DONE Add summaries at end of susy and interp chapters
+   CLOSED: [2012-04-02 Mon 20:24]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:24]
+** DONE Tables - resize to fit page
+   CLOSED: [2012-04-02 Mon 20:42]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:42]
+** DONE check "and" in equations
+   CLOSED: [2012-04-02 Mon 20:43]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:43]
+** DONE Is GMSB R-parity violating?
+   CLOSED: [2012-04-02 Mon 20:46]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:46]
+** CANCELLED QCD penalty term
+   CLOSED: [2012-04-02 Mon 20:50]
+   - State "CANCELLED"  from "TODO"       [2012-04-02 Mon 20:50]
+** CANCELLED instances of New Physics/BSM physics should be made consistent
+   CLOSED: [2012-04-02 Mon 20:50]
+   - State "CANCELLED"  from "TODO"       [2012-04-02 Mon 20:50
+]
+** DONE Polarisation effects in the transverse plane: soft gluon enhancement???
+   CLOSED: [2012-04-02 Mon 20:54]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:54]
