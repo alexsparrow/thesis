@@ -30,7 +30,6 @@
 ** TODO Add year to title page and department
 ** TODO SUSYv2/colophon - make less weird
 ** TODO Background -> background processes
-** TODO wpol contours - excluded region
 ** TODO more performance plots in reco chapter?
 * SUSY
 ** TODO Previous limits
@@ -67,7 +66,6 @@
 *** TODO QCD: reference Gell-Man paper for color
 ** SUSY
 *** TODO Table captions
-*** TODO Smooth ending to SUSY chapter
 *** TODO More refs
 
 
@@ -1085,3 +1083,9 @@ Mostly done!
 ** DONE Front quote
    CLOSED: [2012-04-02 Mon 17:16]
    - State "DONE"       from "TODO"       [2012-04-02 Mon 17:16]
+** DONE wpol contours - excluded region
+   CLOSED: [2012-04-02 Mon 17:28]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 17:28]
+** DONE Smooth ending to SUSY chapter
+   CLOSED: [2012-04-02 Mon 17:28]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 17:28]
