@@ -28,7 +28,7 @@
 ** TODO Background -> background processes
 ** TODO more performance plots in reco chapter?
 * SUSY
-** TODO Previous limits
+
 ** TODO GMSB/AMSB: discuss what they are and ref
 * Expt
 ** TODO Z' comment from Alex
@@ -1108,3 +1108,6 @@ Mostly done!
 ** DONE Polarisation effects in the transverse plane: soft gluon enhancement???
    CLOSED: [2012-04-02 Mon 20:54]
    - State "DONE"       from "TODO"       [2012-04-02 Mon 20:54]
+** DONE Previous limits
+   CLOSED: [2012-04-02 Mon 20:56]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 20:56]
