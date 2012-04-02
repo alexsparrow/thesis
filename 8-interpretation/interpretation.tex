@@ -136,13 +136,13 @@ where $x$ is the test statistic and $\alpha$ is some small constant -- normally
 $0.05$. If the measured value of $x$ is found to be in the critical region, the
 hypothesis $H$ can be said to be rejected with 95\% confidence.
 
-One way to define such an interval is to run toy Monte Carlo experiments to
+One way to define such an interval is to run toy \ac{MC} experiments to
 generate the distributions of the test statistic corresponding to the null and
 alternate hypotheses. It is then straightforward to define the critical region
 as that point at which the p-value reaches a suitably low threshold, say
 $0.05$. This is illustrated in \fig~\ref{fig:inter_cls_explain1}.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:inter_cls_explain1}\includegraphics[width=0.49\textwidth]{fig/cls1}}
 \subfloat[]{\label{fig:inter_cls_explain2}\includegraphics[width=0.49\textwidth]{fig/cls2}}
@@ -339,7 +339,7 @@ The likelihood function detailed in \sec~\ref{sec:inter_1lepton} takes as
 input the signal efficiencies for each bin of \STlep. In the case of the
 \ac{CMSSM}, these must be evaluated for each point $(\Mzero, \Mhalf)$. These are
 evaluated using the same analysis procedure as used for the data and \ac{SM}
-monte carlo samples. The \ac{CMSSM} sample is produced using the Pythia event
+\ac{MC} samples. The \ac{CMSSM} sample is produced using the Pythia event
 generator, with the two mass parameters varied independently in steps of
 \unit{20}{\GeV} to produce a grid. For each grid point, 10000 events were
 generated. Due to the large number of events, the detector response was
@@ -498,8 +498,7 @@ these cases, one might guess that the harder \PW is more relevant has a greater
 effect on the efficiency since there is less hadronic energy available from the
 cascade.
 
-% TODO: more spiel here
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:inter_t3w_0p75_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst}}
 \subfloat[]{\label{fig:inter_t3w_0p75_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst_1d}}
@@ -515,7 +514,7 @@ cascade.
 \label{fig:inter_t3w_0p75}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:inter_t3w_0p50_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit_sigsyst}}
 \subfloat[]{\label{fig:inter_t3w_0p50_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit_sigsyst_1d}}

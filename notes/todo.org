@@ -3,12 +3,12 @@
 ** TODO Clarify QCD language throughout
 ** TODO helicity fraction -> polarisation fractions
 ** TODO check "and" in equations
-** TODO proofread [4/8]
+** TODO proofread [5/9]
 + [X] SM
 + [X] SUSY
 + [X] Framework
 + [X] Experiment
-+ [ ] Objects
++ [X] Objects
 + [ ] Wpol
 + [ ] Search
 + [ ] Interpretation
@@ -17,8 +17,6 @@
 ** TODO check all references are in fact referenced
 ** TODO go through reference formatting
 ** TODO instances of New Physics/BSM physics should be made consistent
-** TODO Monte carlo, MC
-** TODO Front quote
 ** TODO Section/Chapter titles
 ** TODO Figure placement
 ** TODO Figure captions
@@ -1081,3 +1079,9 @@ Mostly done!
 ** DONE Clarify last bit of hadron colliders
    CLOSED: [2012-04-02 Mon 16:49]
    - State "DONE"       from "TODO"       [2012-04-02 Mon 16:49]
+** DONE Monte carlo, MC
+   CLOSED: [2012-04-02 Mon 17:15]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 17:15]
+** DONE Front quote
+   CLOSED: [2012-04-02 Mon 17:16]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 17:16]

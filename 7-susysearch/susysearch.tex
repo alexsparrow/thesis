@@ -1,4 +1,4 @@
-\chapter{Searching for Supersymmetry in the Single Lepton Channel at CMS}
+\chapter{Searching for Supersymmetry in the Single Lepton Final State}
 \label{sec:susysearch}
 \section{Introduction}
 The \PW polarisation measurement, as well as being an interesting analysis in
@@ -64,7 +64,7 @@ correspond to the \ac{CMSSM} points $(\Mzero, \Mhalf) = (60, 250)$ and $(85,
 that the heuristic discussion of the \LP shape given in
 \sec~\ref{sec:susy_sm} is confirmed by the simulation -- with \ac{SM} events
 at $\LP > 0$ and \ac{SUSY} events clustering around $\LP \sim 0$.
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[\Pe $250 < \STlep < 350$]{\label{fig:susy_lp_el_st250}\includegraphics[width=0.3\textwidth]{fig/LP250_MCandSignal_El.pdf}}\quad
 \subfloat[\Pe $350 < \STlep < 450$]{\label{fig:susy_lp_el_st350}\includegraphics[width=0.3\textwidth]{fig/LP350_MCandSignal_El.pdf}}\quad
@@ -252,7 +252,7 @@ than the offline selection.
 
 \input{tables/susy_triggers}
 
-All signal and background Monte Carlo samples are from the Summer11 \ac{CMS}
+All signal and background \ac{MC} samples are from the Summer11 \ac{CMS}
 \unit{7}{\TeV} production using \cmssw version 4.2. All processes are simulated
 using the \madgraph matrix element generator, with the exception of the \ac{QCD}
 and \ac{SUSY} signal samples which use \pythia version 6. All datasets, with the
@@ -281,8 +281,8 @@ each \ac{SM} subprocess are shown, used to calculate the factor \RCS, the yields
 in data and the resulting background prediction. Comparing the background
 prediction, it is seen to agree within errors with the observed number of events
 in the signal region. The uncertainties stem from the limited data statistics of
-the control region and the limited Monte Carlo statistics used in the
-calculation of \RCS.
+the control region and the limited \ac{MC} statistics used in the calculation of
+\RCS.
 
 \input{tables/susy_control_yields}
 
@@ -292,7 +292,7 @@ for the \LP variable in bins of \STlep in
 \fig~\ref{fig:susy_mucontrol_lp}. These distributions are those used to derive
 the numbers shown in Table~\ref{tbl:susy_control_yields}. The data are seen to
 be adequately described by the simulation.
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[\STlep]{\label{fig:susy_mucontrol_st}\includegraphics[width=0.3\textwidth]{fig/MuControl_ST150toInf}}\quad
 \subfloat[\MT]{\label{fig:susy_mucontrol_mt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MT150toInf}}\quad
@@ -301,7 +301,7 @@ be adequately described by the simulation.
 \label{fig:susy_mucontrol_kin}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[$250 < \STlep < 350$]{\label{fig:susy_mucontrol_lp250}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP250}}\quad
 \subfloat[$250 < \STlep < 450$]{\label{fig:susy_mucontrol_lp350}\includegraphics[width=0.3\textwidth]{fig/MuControl_LP350}}\quad
@@ -384,7 +384,7 @@ additional uncertainties introduced by this procedure will be covered in
 \sec~\ref{sec:susy_systematics}.
 
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/SelectedVsAntiSelected}
 \caption{A comparison of the \LP shape between simulated \ac{QCD} events in the
@@ -393,7 +393,7 @@ additional uncertainties introduced by this procedure will be covered in
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[Fit results $150 < \STlep < 250$]{\label{fig:susy_elqcd_fitresult150}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_150}}\quad
 \subfloat[Fit results $250 < \STlep < 350$]{\label{fig:susy_elqcd_fitresult250}\includegraphics[width=0.4\textwidth]{fig/FitResult_El_250}}
@@ -460,7 +460,7 @@ This procedure was changed with respect to the \PW polarisation measurement in
 order to harmonise with other analyses. Each jet in the event, as well as the
 remaining hadronic recoil are scaled upwards or downwards by 5\%. The larger of
 the two shifts on \RCS is then taken as the uncertainty. If the the uncertainty
-is found to be smaller than the Monte Carlo statistical error
+is found to be smaller than the \ac{MC} statistical error
 (\sec~\ref{sec:susy_syst_mcstats}), the uncertainty is taken to be the larger
 of the two.
 
@@ -482,7 +482,7 @@ shapes, changes to their relative normalisations will result in changes to
 up and down by 30\% and 50\% respectively. The former is again taken from a
 cross-section measurmement at \ac{CMS}~\cite{cms_ttbar_paper2} (improved with
 respect to that cited in the \PW polarisation measurement). The latter is
-evaluated by studying the agreement between data and Monte Carlo in \Zjets
+evaluated by studying the agreement between data and \ac{MC} in \Zjets
 events with $\geq 4$~jets. The difference is found to be at most 50\%.
 
 The shift in \RCS with respect to the unscaled case is then calculated. The
@@ -516,7 +516,7 @@ results are shown for the highest \STlep bin in
 \fig~\ref{fig:susy_wpol_syst}. The largest of the two shifts is taken to be the
 systematic uncertainty.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:susy_wpol_syst_plus_150}\includegraphics[width=0.49\textwidth]{fig/e_plus_fLmfR_150.pdf}}
 \subfloat[]{\label{fig:susy_wpol_syst_minus_150}\includegraphics[width=0.49\textwidth]{fig/e_minus_fLmfR_150.pdf}}\\
@@ -548,7 +548,7 @@ evaluated for the \PW polarisation analysis (see
 \sec~\ref{sec:wpol_syst_pdf}). It was found to be negligible. For this
 analysis, an alternative test was performed.
 
-The Monte Carlo was reweighted to the central value of both
+The \ac{MC} was reweighted to the central value of both
 \cteqsixtysix~\cite{cteq66} and \mstwnlo~\cite{mstw1, mstw2, mstw3} \ac{PDF}
 sets and the resulting change in \RCS was found to be 1\% for $\STlep <
 \unit{450}{\GeV}$ and 5\% for $\STlep > \unit{450}{\GeV}$. This procedure again
@@ -556,7 +556,7 @@ found the systematic to be negligible.
 
 \subsection{Trigger Efficiency}
 The exact selection of triggers listed in Table~\ref{tbl:susy_triggers} was
-unavailable in the Monte Carlo samples. Small differences in the efficiency in
+unavailable in the \ac{MC} samples. Small differences in the efficiency in
 the plateau of the trigger turn-on curve were observed in both channels as well
 as a dependence on the pseudorapidity of the lepton. The effect of these
 differences was evaluated by applying the \texttt{HLT\_Mu15} trigger in
@@ -583,7 +583,7 @@ also shown for comparison.
 \section{Results}
 Once the analysis procedure had been finalised, the search region was
 ``unblinded''. The \LP distributions in data, along with the expected shapes in
-Monte Carlo are shown in \fig~\ref{fig:susy_datamc} for the three \STlep bins
+\ac{MC} are shown in \fig~\ref{fig:susy_datamc} for the three \STlep bins
 considered for the search. The predicted and observed background yields are then
 shown in Table~\ref{tbl:susy_datamc_muons} for muons and
 \ref{tbl:susy_datamc_electrons} for electrons. Comparison of the predicted and
@@ -592,7 +592,7 @@ clear, that no significant excess is seen. In the next chapter, the results are
 used to set limits on allowed parameter space for the \ac{CMSSM} and more
 general simplified models.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[\Pmu $250 < \STlep < 350$]{\label{fig:susy_mu_lp250}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP250}}\quad
 \subfloat[\Pmu $350 < \STlep < 450$]{\label{fig:susy_mu_lp350}\includegraphics[width=0.3\textwidth]{fig/MuHad_LP350}}\quad
@@ -607,7 +607,7 @@ general simplified models.
 \input{tables/datamc_muons}
 \input{tables/datamc_electrons}
 
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:susy_pred_mu}\includegraphics[width=0.4\textwidth]{fig/prediction_mu}}\quad
 \subfloat[]{\label{fig:susy_pred_el}\includegraphics[width=0.4\textwidth]{fig/prediction_el}}\quad

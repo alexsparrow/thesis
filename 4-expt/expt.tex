@@ -57,7 +57,7 @@ to the design specified \unit{7}{\TeV} per beam. The 2010 and 2011 data-taking
 periods were at \unit{3.5}{\TeV} per beam, with an increase to \unit{4}{\TeV}
 planned for 2012.
 
-\begin{figure}
+\begin{figure}[h!]
 \includegraphics[width=0.9\textwidth]{fig/lhc-pho-1993-008}
 \caption{The \ac{LHC} accelerator complex.}
 \label{fig:expt_lhc}
@@ -78,7 +78,7 @@ document~\cite{cms_technical_proposal}):
 \item an affordable detector.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/cms_complete_labelled}
 \caption{The CMS Detector}
@@ -393,7 +393,7 @@ decision using limited information from the detector, but also to ensure that
 potentially interesting events are retained and passed onto the \ac{HLT} for
 more thorough analysis.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth]{fig/trigger}
 \caption{The \ac{CMS} \acl{L1T}}
@@ -451,9 +451,9 @@ are submitted to the grid, and routed automatically to a suitable site.
 
 Events recorded by the \ac{CMS} detector pass through a chain of reconstruction
 stages. At each stage, higher-level physics objects are built out of simpler
-ones, with a consequent reduction in the data size. Monte Carlo events are
+ones, with a consequent reduction in the data size. \ac{MC} events are
 processed using either a detailed \geantfour simulation~\cite{geant_paper}, or a
 faster, parameterised model of the response known as \fastsim. This simulates
 the response of the \ac{CMS} subdetectors to the generated particles. After the
-detector response has been simulation, Monte Carlo is processed in exactly the
+detector response has been simulation, \ac{MC} is processed in exactly the
 same manner as data.

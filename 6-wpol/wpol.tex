@@ -1,4 +1,4 @@
-\chapter{Measuring the Polarisation of the \texorpdfstring{\PW}{W} Boson}
+\chapter{Measurement of the Polarisation of the \texorpdfstring{\PW}{W} Boson}
 \label{sec:wpol}
 \section{Introduction}
 The study of \Wjets production at a hadron collider presents an important
@@ -38,14 +38,14 @@ $\cos\thetastar = -1$. This reflects the fact that the left-handed particle (the
 neutrino in this case) is taking most of the energy. Similarly for \PWm, the
 peak is at $\cos\thetastar = 1$, where this time the electron is more energetic.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.98\textwidth]{fig/MC_CosThetaStar1Plus}
 \caption{Distribution of $\cos\thetastar$ for \PWp bosons in three bins of \PtW.}
 \label{fig:wpol_costheta}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[$\PtW > \unit{200}{\GeV}$]{
   \label{fig:wpol_costheta_corr200}\includegraphics[width=0.47\textwidth]{fig/LP_corr200}}\quad
@@ -157,7 +157,7 @@ detector and acceptance related effects, changing its shape.
 
 \subsubsection{Re-weighting $\cos\thetastar$}
 To account for all such experimental issues, a template re-weighting method is
-employed. Effectively, Monte Carlo simulation is used to derive three
+employed. Effectively, \ac{MC} simulation is used to derive three
 re-weighting factors, each a function of $\cos\thetastar$ and binned according
 to boson charge, transverse momentum, \PtW, and rapidity, \YW. These can be
 written as
@@ -184,14 +184,14 @@ accounting for the \PtW, \YW and charge of the \PW boson. The binning is
 important, as the helicity fractions are expected to vary significantly with
 these parameters.
 
-This re-weighting procedure avoids the need to generate separate Monte Carlo
-event samples for each polarisation state. Using the re-weighted sample, any
+This re-weighting procedure avoids the need to generate separate \ac{MC} event
+samples for each polarisation state. Using the re-weighted sample, any
 distribution may be produced corresponding to a pure sample of polarised \PW
 bosons. In particular, this allows the derivation of \LP shape templates which
 may then be fit to the corresponding data distribution in order to extract the
 helicity fractions. This ensures that all experimental and acceptance effects
 can be accounted for -- providing of course that they are adequately modelled by
-the Monte Carlo and detector simulation.
+the \ac{MC} and detector simulation.
 
 In reality, a small modification to \eqn~\ref{eqn:wpol_reweighting_factor} is
 required to account for the finite statistical precision of the generated
@@ -237,7 +237,7 @@ generator-level cut on the same quantity. The \PW phase space is shown in
 \fig~\ref{fig:wpol_genreco} after a reconstruction level cut, $\PtW >
 \unit{50}{\GeV}$.
 
-\begin{figure}
+\begin{figure}[h!]
   \centering \subfloat[\YW vs \PtW]{
   \label{fig:wpol_genreco_wpt_eta}\includegraphics[width=0.47\textwidth]{fig/WPTvsY_mcreco50toinf}}\quad
 \subfloat[\PtW]{
@@ -472,7 +472,7 @@ lepton in the event. This leads to the definition,
 This provides a higher resolution measurement of \PtW, as can be seen in
 \fig~\ref{fig:wpol_mht_res}. It is thus the variable adopted in this analysis.
 
-\begin{figure}
+\begin{figure}[h!]
   \centering
   \subfloat[]{\label{fig:wpol_mht_res1}\includegraphics[width=0.4\textwidth]{fig/mht_res1.png}}\quad
   \subfloat[]{\label{fig:wpol_mht_res2}\includegraphics[width=0.4\textwidth]{fig/mht_res2.png}}
@@ -506,7 +506,7 @@ In terms of rejecting backgrounds, tightening object definitions can only
 achieve so much. Additional rejection power can be gained via additional
 kinematic cuts on the event topology. As has already been stated, the \ac{QCD}
 multi-jet background is the most problematic due to the fact that it is
-relatively poorly modelled by Monte Carlo event generators. The simplest way to
+relatively poorly modelled by \ac{MC} event generators. The simplest way to
 reject such events is via a missing energy type cut. \ac{QCD} multi-jet events do
 not typically contain a source of genuine missing energy. Experimentally
 observed \MET from these events is typically due to jet mismeasurements,
@@ -649,9 +649,9 @@ variables used in the filtering procedure may no longer be studied in their full
 range. This is an impediment to certain background estimation studies which can
 choose to invert certain lepton identification cuts.
 
-Both data and Monte Carlo samples have been processed using \cmssw version 3.8.
+Both data and \ac{MC} samples have been processed using \cmssw version 3.8.
 
-\subsection{Monte Carlo Signal and Background Expectations}
+\subsection{Signal and Background Expectations in Monte Carlo}
 \label{sec:wpol_yields}
 The expected event yields across the relevant simulated samples are shown in
 Tables~\ref{tbl:wpol_electron_yields} and \ref{tbl:wpol_muon_yields} for
@@ -673,7 +673,7 @@ procedure is performed. This takes \LP shape templates from the three \PW
 helicity states, a number of data-driven or Monte-Carlo estimated background
 templates and extracts the most probably values of \fL, \fR and \f0 from the
 data distribution. In order to test the procedure, this method is also applied
-to Monte Carlo ``pseudodata'' to ensure that fitted helicity fractions match
+to \ac{MC} ``pseudodata'' to ensure that fitted helicity fractions match
 those derived from the analytical fit (see \sec~\ref{sec:wpol_closure}) to within the quoted
 errors. The fit itself is implemented in the \roofit software
 framework~\cite{roofit_paper, roofit_web}, which assists in constructing an
@@ -833,7 +833,7 @@ background events using two different electron ID working points. The 70\%
 efficiency working point is seen to reject considerably more of the \ac{QCD}
 background. This motivated the use of the tighter electron ID.
 
-\begin{figure}
+\begin{figure}[h!]
 \includegraphics[width=0.8\textwidth]{fig/ewpol_significance}
 \caption[Plots illustrating the signal significance in the electron channel with
 respect to varying cuts on \MET and \MT.]{Plots illustrating the signal
@@ -846,7 +846,7 @@ respect to varying cuts on \MET and \MT.]{Plots illustrating the signal
 \label{fig:wpol_ele_significance}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \includegraphics[width=0.5\textwidth]{fig/qcd_nom}
 \caption{Two dimensional plot showing the dependence of \fQCD on a combined \MET
   and \MT cut in the electron channel as observed in simulation. \fQCD
@@ -855,7 +855,7 @@ respect to varying cuts on \MET and \MT.]{Plots illustrating the signal
 \label{fig:wpol_met_mt_fqcd}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:wpol_met_vs_mt_templates_met}\includegraphics[width=0.4\textwidth]{fig/e_lp_fit_met30}}\quad
 \subfloat[]{\label{fig:wpol_met_vs_mt_templates_mt}\includegraphics[width=0.4\textwidth]{fig/e_lp_fit_mt30}}
@@ -867,7 +867,7 @@ respect to varying cuts on \MET and \MT.]{Plots illustrating the signal
 \label{fig:wpol_met_vs_mt_templates}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:wpol_wp80}\includegraphics[width=0.4\textwidth]{fig/ICVarPlusMT50_WP80}}\quad
 \subfloat[]{\label{fig:wpol_wp70}\includegraphics[width=0.4\textwidth]{fig/ICVarPlusMT50_WP70}}
@@ -902,7 +902,7 @@ region (which may be the result of several inverted variables) contain adequate
 statistics for construction of a shape template.
 
 As the analysis was developed, a variety of anti-selection regions were tested
-using Monte Carlo samples. One practical problem is that adequate statistics for
+using \ac{MC} samples. One practical problem is that adequate statistics for
 these tests could only be obtained by using the enriched \ac{QCD} sample. Since
 this sample has an implicit cut on the electron isolation, it was not possible
 to study the inversion of this variable. Many combinations of the electron
@@ -917,7 +917,7 @@ cut. The \LP shape for \ac{QCD} background is not believed to have a charge
 dependence and thus the shapes for positive and negative charge are combined
 into a single template to mimimize statistical uncertainty.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:wpol_antiselected1}\includegraphics[width=0.4\textwidth]{fig/antiselected1}}\quad
 \subfloat[]{\label{fig:wpol_antiselected2}\includegraphics[width=0.4\textwidth]{fig/antiselected2}}
@@ -930,7 +930,7 @@ into a single template to mimimize statistical uncertainty.
 \section{Systematic Uncertainties}
 \label{sec:wpol_systematics}
 The template reweighting method necessary for the extraction of the helicity
-fractions introduces an inescapable dependence on Monte Carlo simulation. One of
+fractions introduces an inescapable dependence on \ac{MC} simulation. One of
 the challenges for this analysis is to ensure that any potential mismodelling
 within the simulation which might affect the construction of the \LP templates
 is properly accounted for and included in the systematic uncertainty on the
@@ -999,7 +999,7 @@ statistical and systematic errors was calculated for a selection of possible fit
 ranges. It was determined that a fit range of $[0,1.3]$ was an appropriate
 choice for both channels and both charges.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[$\LP(\APmuon)$]{\label{fig:wpol_mujecunc_p}\includegraphics[width=0.4\textwidth]{fig/pLP_jecuncratios}}\quad
 \subfloat[$\LP(\Pmuon)$]{\label{fig:wpol_mujecunc_m}\includegraphics[width=0.4\textwidth]{fig/mLP_jecuncratios}}
@@ -1042,7 +1042,7 @@ uncertainty is then taken to be largest of the two errors.
 \subsubsection{\MET Resolution}
 In addition to the modelling of the \ac{JES}, another possible source of
 mismeasurement stems from the resolution effects included in the simulation of
-the detector. The resolution predicted by the Monte Carlo is known to
+the detector. The resolution predicted by the \ac{MC} is known to
 considerably underestimate that observed in the
 data~\cite{cms_met_paper,cms_met_pas}. To account for this, additional
 ``smearing'' was applied to the missing transverse energy in simulation. The
@@ -1105,7 +1105,7 @@ scale terms, $s_i$ and 6 resolution terms, $\sigma_i$. These are shown in
 \fig~\ref{fig:wpol_ecal_transp_corr}.  The scale terms should be applied to
 data, whilst the resolution should be applied in simulation.
 
-\begin{figure}
+\begin{figure}[h!]
   \centering
   \subfloat[Scale corrections, $s_i$]{\label{fig:wpol_ecal_transp_scale}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_scale}}\quad
   \subfloat[Resolution corrections, $\sigma_i$]{\label{fig:wpol_ecal_transp_sigma}\includegraphics[width=0.45\textwidth]{fig/ecal_transp_sigma}}\quad
@@ -1123,7 +1123,7 @@ is taken as a systematic uncertainty. This is equivalent to correcting the data
 by either 50\% of 150\% of the correction factors.
 
 The effect of the resolution corrections on the fit results was also judged by
-applying them in Monte Carlo. The resulting change was found to be negligible,
+applying them in \ac{MC}. The resulting change was found to be negligible,
 and thus these factors were not applied in data.
 
 Since the method described above performs a global correction, the mean of the
@@ -1142,29 +1142,28 @@ the \ac{QCD} multijet background component in the electron channel has been
 derived from a data-driven method. As has been shown, the simulation shows a
 very similar \LP shape between the selected and anti-selected samples. However,
 the small differences that can be seen coupled with the very limited statistics
-available in Monte Carlo, necessitate the inclusion of an additional systematic
+available in \ac{MC}, necessitate the inclusion of an additional systematic
 uncertainty.
 
 The first systematic represents the degree, as can be judged from the enriched
-\ac{QCD} Monte Carlo sample, that the anti-selected template mismodels the \LP
-shape of the \ac{QCD} events in the selected region. In other words, the bias
+\ac{QCD} \ac{MC} sample, that the anti-selected template mismodels the \LP shape
+of the \ac{QCD} events in the selected region. In other words, the bias
 introduced by any correlation between \LP and the track-supercluster matching
 variables, as far as can be judged in simulation. This is evaluated by
-performing 500 toy experiments. For each toy experiment, the Monte Carlo
-pseudodata is first fitted using the \ac{QCD} template taken directly from the
-selected region. This represents the case, where the \ac{QCD} has been modelled
-perfectly by the template. Then the pseudodata is refit using the anti-selected
-template and including contamination from the other simulated samples. The
-ensemble distributions of the fit parameters are then compared between the
-``true'' case using the actual \ac{QCD} Monte Carlo shape and the
-``data-driven'' case using the anti-selected template. The difference in the
-means of the ensemble distributions for the parameters \f0 and \fLmfR is then
-taken as a systematic uncertainty. This is performed separately for both
-charges.
+performing 500 toy experiments. For each toy experiment, the \ac{MC} pseudodata
+is first fitted using the \ac{QCD} template taken directly from the selected
+region. This represents the case, where the \ac{QCD} has been modelled perfectly
+by the template. Then the pseudodata is refit using the anti-selected template
+and including contamination from the other simulated samples. The ensemble
+distributions of the fit parameters are then compared between the ``true'' case
+using the actual \ac{QCD} \ac{MC} shape and the ``data-driven'' case using the
+anti-selected template. The difference in the means of the ensemble
+distributions for the parameters \f0 and \fLmfR is then taken as a systematic
+uncertainty. This is performed separately for both charges.
 
 The second systematic represents the uncertainty introduced by the very limited
 statistics available in the simulated \ac{QCD}/\gammajets samples. The bins of
-the Monte Carlo anti-selected template were each fluctuated about their mean
+the \ac{MC} anti-selected template were each fluctuated about their mean
 values and within their statistical uncertainties. This procedure is performed
 for the whole template 500 times, to give 500 ``re-diced'' templates. Each
 re-diced template is then fitted along with the standard signal and electroweak
@@ -1208,11 +1207,11 @@ the values of the other \Ai.
 
 \subsubsection{\aclp{PDF}}
 \label{sec:wpol_syst_pdf}
-This analysis used a \Wjets Monte Carlo sample, generated using the \cteqsixlone
+This analysis used a \Wjets \ac{MC} sample, generated using the \cteqsixlone
 \ac{PDF} set~\cite{cteq6l1}. This is a set of 41 \ac{PDF} distributions. All
 results in this analysis are calculated using the best fit value of this set. To
 determine the uncertainty associated with this assumption, each alternative
-\ac{PDF} from the set is selected and modelled in the Monte Carlo via a
+\ac{PDF} from the set is selected and modelled in the \ac{MC} via a
 reweighting procedure. From this, 40 separate \LP distributions are derived
 representing pseudodata assuming an alternative \ac{PDF} from the set. Each
 distribution is then fit using the standard set of templates. The effect on the
@@ -1270,7 +1269,7 @@ to be reasonable. Moreover, the data-driven template appears to model the
 \ac{QCD} multijet background well -- and significantly better than the simulated
 samples.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[$\Ptl\left(\Pelectron\right)$]{\label{fig:wpol_datamc_ele_leppt_plus}\includegraphics[width=0.29\textwidth]{fig/ele_LeptonPtPlus}}
 \subfloat[$\LP\left(\Pelectron\right)$]{\label{fig:wpol_datamc_ele_lp_plus}\includegraphics[width=0.29\textwidth]{fig/ele_ICVarPlus}}
@@ -1292,7 +1291,7 @@ samples.
 \label{fig:wpol_datamc_ele}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[h!]
 \centering
 \subfloat[$\Ptl\left(\Pmuon\right)$]{\label{fig:wpol_datamc_mu_leppt_plus}\includegraphics[width=0.29\textwidth]{fig/datamc_ptmuonplus}}
 \subfloat[$\LP\left(\Pmuon\right)$]{\label{fig:wpol_datamc_mu_lp_plus}\includegraphics[width=0.29\textwidth]{fig/datamc_lpvarplus}}
@@ -1351,7 +1350,7 @@ consistent with \fig~\ref{fig:wpol_fit_ele_minus}, where the left-handed and
 the correlation between the helicity parameters and \fQCD is reduced by the
 addition of the muon channel.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:wpol_fit_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\quad
 \subfloat[]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_MinusICVar}}\\
@@ -1367,7 +1366,7 @@ addition of the muon channel.
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:wpol_contour_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_contour_plus}}\quad
 \subfloat[]{\label{fig:wpol_contour_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_contour_minus}}
@@ -1379,7 +1378,7 @@ addition of the muon channel.
 \label{fig:wpol_contour_ele}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:wpol_contour_mu_plus}\includegraphics[width=0.45\textwidth]{fig/muon_contour_plus}}\quad
 \subfloat[]{\label{fig:wpol_contour_mu_minus}\includegraphics[width=0.45\textwidth]{fig/muon_contour_minus}}
@@ -1392,7 +1391,7 @@ addition of the muon channel.
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:wpol_contour_comb_plus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_plus}}\quad
 \subfloat[]{\label{fig:wpol_contour_comb_minus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_minus}}
@@ -1432,7 +1431,7 @@ polarisation effect, the longitudinal polarisation fraction, $\f0 \approx
 
 After publication of this result~\cite{cms_wpol_paper}, a set of theoretical
 predictions at \ac{NLO} were published~\cite{berger_left_handed_w}. The Blackhat
-Monte Carlo generator was used to compare like-for-like with the results of this
+\ac{MC} generator was used to compare like-for-like with the results of this
 analysis. The comparison is shown in Table~\ref{tbl:wpol_theory_comparison}. All
 measurements are seen to agree well with theoretical predictions.
 
