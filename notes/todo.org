@@ -33,6 +33,7 @@
 ** TODO SUSYv2/colophon - make less weird
 ** TODO Background -> background processes
 ** TODO wpol contours - excluded region
+** TODO more performance plots in reco chapter?
 * SUSY
 ** TODO Previous limits
 ** TODO GMSB/AMSB: discuss what they are and ref
@@ -68,7 +69,6 @@
 *** TODO QCD: reference Gell-Man paper for color
 ** SUSY
 *** TODO Table captions
-*** TODO Clarify last bit of hadron colliders
 *** TODO Smooth ending to SUSY chapter
 *** TODO More refs
 
@@ -1078,3 +1078,6 @@ Mostly done!
 ** DONE em dash
    CLOSED: [2012-04-01 Sun 18:22]
    - State "DONE"       from "TODO"       [2012-04-01 Sun 18:22]
+** DONE Clarify last bit of hadron colliders
+   CLOSED: [2012-04-02 Mon 16:49]
+   - State "DONE"       from "TODO"       [2012-04-02 Mon 16:49]
