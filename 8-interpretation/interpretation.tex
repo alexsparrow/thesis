@@ -3,23 +3,18 @@
 \section{Introduction}
 It is very often the case that a search for \ac{NP} will yield results
 consistent with the currently accepted theory (which, in most particle physics
-contexts would be the \ac{SM}). In the absence of a discovery\footnote{Certain
-  models may also have a role to play in the characterisation of a discovery.},
-it is often desirable to provide additional information in the form of a
-statistical interpretation of the results. Such an interpretation typically
-serves the following goals.
+contexts would be the \ac{SM}). In the absence of a discovery, it is often
+desirable to provide additional information in the form of a statistical
+interpretation of the results. Such an interpretation typically serves the
+following goals.
 \begin{itemize}
-\item Indicate the strength of the analysis in searching for the proposed model
-  or set of models. This can then be used as an objective measure by which to
-  rank different analyses or to benchmark the progress of a single analysis as
-  data is collected.
-\item Falsify, to some confidence level, a particular theory or some region of
-  parameter space within that theory. In the case of a reasonably generic model,
-  parameterised in such a way that it may represent other theories (or
-  approximate their experimental signature), theorists may be able to
-  test the predictions of a variety of models directly against the results of
-  the interpretation. This will be discussed further in \sec~\ref{sec:sms}.
-\item Guide the optimisation of analysis cuts and object selection.
+\item To inndicate the sensitivity of the analysis to the proposed model or set
+  of models. This can then be used as an objective measure by which to compare
+  different analyses or to benchmark the progress of a single analysis as data
+  is collected.
+\item To falsify,, to some confidence level, a particular theory or some region
+  of parameter space within that theory.
+\item To guide the choice of analysis cuts and object selection requirements.
 \end{itemize}
 
 Providing an interpretation invariably necessitates some choice of theory or
@@ -40,18 +35,19 @@ more than is desirable. It was seen that by selecting models from a spectrum of
 simplified models, searches can provide more generic and useful interpretations
 of their results.
 
-The following chapter will describe the statistical methods used to interpret
-the results of the analysis. These will then be applied to the \ac{CMSSM} and to
-the two simplified models described previously: \TthreeW and \Ttwott.
+This chapter will describe the statistical methods used to interpret the results
+of the single lepton search. These will then be applied to the \ac{CMSSM} and to
+the two simplified models described in \chap~\ref{sec:framework}: \TthreeW and
+\Ttwott.
 
 \section{Statistical Methods}
 \subsection{The Likelihood Function}
-Consider some statistical model believed to describe a set of experimental data
-and dependent on a set of parameters, $\theta$. The likelihood for given values
-of $\theta$ and given a set of experimental observations $X$, is the probability
-of observing $X$ given $\theta$~\cite{statistical_methods}. Considered as a
-function of the parameter $\theta$ given experimental measurements, $X$, the
-likelihood may be written
+Consider some statistical model, believed to describe a set of experimental data
+and depending on a set of parameters, $\theta$. The \emph{likelihood} of given
+values of $\theta$ in light of experimental observations, $X$, is the
+probability of observing $X$ given
+$\theta$~\cite{statistical_methods}. Considered as a function of the parameter
+$\theta$ given experimental measurements, $X$, the likelihood may be written
 \begin{equation}
 \label{eqn:inter_likelihood}
 \likelihood\left(\theta|X\right) = P\left(X|\theta\right),
@@ -74,7 +70,7 @@ hypotheses.
 
 An important use of the likelihood function is in estimation of the parameters
 $\theta$ given some set of observations. The value of $\theta$ which maximises
-$\likelihood$ is known as the \acl{MLE} of $\theta$, denoted
+$\likelihood$ is known as the \acf{MLE} of $\theta$, denoted
 $\hat{\theta}$. Often it will be convenient to work with the logarithm of the
 likelihood function, $\ln\likelihood$. Since the logarithm is a monotonically
 increasing funtion, its maxima coincide with the maxima of $\likelihood$.
@@ -85,56 +81,57 @@ increasing funtion, its maxima coincide with the maxima of $\likelihood$.
 The likelihood function for a complex experiment may depend on a large number of
 free parameters. A number of these may be introduced to describe experimental
 effects such as backgrounds or uncertainties which are not directly relevant to
-the underlying measurement. These are known as \emph{nuisance parameters}. The
-parameters to be measured by the experiment are known as \emph{parameters of
-  interest}.
+the underlying measurement. These are known as \emph{nuisance parameters}. In
+contrast, the parameters to be measured by the experiment are known as
+\emph{parameters of interest}.
 
-The full likelihood function may be reduced to a ``profile likelihood'', by
-rewriting the nuisance parameters in terms of the parameters of interest. For
-instance, the profile likelihood ratio,
+The full likelihood function may be reduced to a \emph{profile likelihood}, by
+rewriting the nuisance parameters in terms of the parameters of interest. The
+profile likelihood ratio is defined as
 \begin{equation*}
   \lambda = \frac{\likelihood\left(\mu, \hat{\hat{\nu}}\left(\mu\right)\right)}{\likelihood\left(\hat{\mu}, \hat{\nu}\right)},
 \end{equation*}
 where $\mu$ are the parameters of interest and $\nu$ the nuisance
 paramters. $\hat{\mu}$ and $\hat{\nu}$ are the \acp{MLE} of $\mu$ and $\nu$
 respectively. $\hat{\hat{\nu}}$ is the \emph{conditional} \ac{MLE} of $\nu$ -
-the maximum likelihood estimator of $\nu$ for a given value of $\mu$.
+the \ac{MLE} of $\nu$ for a given value of $\mu$.
 
 It is frequently the case that, in addition to calculating a maximum-likelihood
-estimate for a given parameter, it is also desirable to estimate an interval in
+estimate for a given parameter, it is also desirable to estimate a range in
 which the ``true'' value of the parameter can be said to lie with a given degree
-of certainty. This is known as \emph{interval estimation}.
+of certainty. This procedure is known as \emph{interval estimation}, and the
+resulting interval, a \emph{confidence interval}.
 
-Wilk's theorem states that $-2\ln\likelihoodratio$ is distributed as a $\chi^2$
-distribution. The number of degrees of freedom of this distribution is
-determined by the difference in the number of free parameters in the numerator
-and denominator of the likelihood ratio ($\theta_1$ and $\theta_2$ in
-\eqn~\ref{eqn:inter_likelihood_ratio}). In the case of the profile likelihood
-ratio, this is equal to the number of parameters of interest, $\mu$. Wilk's
-theorem can therefore be used to provide an interval estimate for the parameters
-of interest $\mu$. This method will be referred to in the sequel as the \ac{PL}
-method.
+Wilks' theorem states that $-2\ln\likelihoodratio$ is distributed as a $\chi^2$
+distribution~\cite{statistical_methods,param_estimation}. The number of degrees
+of freedom of this distribution is determined by the difference in the number of
+free parameters in the numerator and denominator of the likelihood ratio
+($\theta_1$ and $\theta_2$ in \eqn~\ref{eqn:inter_likelihood_ratio}). In the
+case of the profile likelihood ratio, this is equal to the number of parameters
+of interest, $\mu$. Wilks' theorem can therefore be used to provide an interval
+estimate for the parameters of interest $\mu$. This method will be referred to
+as the \ac{PL} method.
 
 \subsection{Hypothesis Testing}
 \label{sec:inter_cls}
 It has been seen that the likelihood ratio may be used to compare two hypotheses
 $H_0$ and $H_1$. Typically $H_0$ will be referred to as the ``null hypothesis''
-and $H_1$, the ``alternate hypothesis''. For a given hypothesis $H$ and having
-made a certain observation $X$, the \emph{p-value} gives the probability of
-making a measurement as consistent or less with the hypothesis $H$ than the data
-actually observed, $X$.
+and $H_1$, the ``alternate hypothesis''. For a given hypothesis $H$ and
+observation, $X$, the \emph{p-value} gives the probability of making a
+measurement as consistent or less with the hypothesis $H$, than $X$.
 
 There are a variety of techniques for choosing between competing
 hypotheses. Typically, a certain test statistic is used -- for instance the
 number of signal events observed or the likelihood ratio. For a given
-hypothesis, a critical region $W$ can be defined where the probility of measuring
-such a value given the hypothesis is below some threashold,
+hypothesis, a critical region $W$, can be defined where the probability of
+making such an observation, assuming the hypothesis, is below some threshold,
+$\alpha$,
 \begin{equation*}
 P\left(x \in W|H\right) \leq \alpha,
 \end{equation*}
-where $x$ is the test statistic and $\alpha$ is some small constant -- normally
-$0.05$. If the measured value of $x$ is found to be in the critical region, the
-hypothesis $H$ can be said to be rejected with 95\% confidence.
+where $x$ is the test statistic. $\alpha$ is often chosen as 0.05. Then, if the
+measured value of $x$ is found to be in the critical region, the hypothesis $H$
+can be said to be rejected with 95\% confidence.
 
 One way to define such an interval is to run toy \ac{MC} experiments to
 generate the distributions of the test statistic corresponding to the null and
@@ -158,23 +155,23 @@ hypothesis is small and so would result in an exclusion. This is undesirable
 since the test statistic is clearly not sensitive enough to distinguish between
 the two hypotheses.
 
-To address this problem, the \CLs hypothesis test may be used instead~\cite{cls},
+To address this problem, the \CLs hypothesis test may be used instead~\cite{cls, confidence_level},
 \begin{equation*}
-\CLs = \frac{CL_{s+b}}{CL_{b}},
+\CLs = \frac{CLspb}{CLb},
 \end{equation*}
 where, for the example shown in \fig~\ref{fig:inter_cls_explain2},
 \begin{eqnarray*}
-CL_{s+b} = P\left(x > x_0 | H_1\right)\\
-CL_b = 1 - P\left(x < x_0 | H_0\right),
+CLspb = P\left(x > x_0 | H_1\right)\\
+CLb = 1 - P\left(x < x_0 | H_0\right),
 \end{eqnarray*}
-where the null hypothesis now represents a background-only ($b$) scenario, and
-the alternate, signal-plus-background ($s+b$). Using the \CLs to test the
-alternate hypothesis, instead of a p-value, penalises cases where the test
-statistic provides little sensitivity -- since $CL_b$ will be large. For a 95\%
-exclusion, $\CLs < 0.05$ is required, as before. The \CLs method may also be
-used to derive an upper limit on some parameter by scanning through different
-values of the parameter of interest in order to obtain a 95\% upper limit. This
-is known as ``hypothesis test inversion''.
+and the null hypothesis now represents a background-only scenario, b, and the
+alternate, signal-plus-background, s+b. Using the \CLs to test the alternate
+hypothesis, instead of a p-value, penalises cases where the test statistic
+provides little sensitivity -- since \CLb will be large. For a 95\% exclusion,
+$\CLs < 0.05$ is required as before. The \CLs method may also be used to derive
+an upper limit on some parameter by scanning through a range of values of the
+parameter of interest in order to obtain a 95\% upper limit. This is known as
+``hypothesis test inversion''.
 
 Several additional details are relevant to the discussion here. For the toy
 experiments used to generate the test statistic distributions, the nuisance
@@ -186,13 +183,13 @@ likelihood ratio, $\qmu=-2\ln\lambda$~\cite{cl_computation,
 
 \section{The Single Lepton Supersymmetry Search}
 The full development of the likelihood function used to model the single lepton
-supersymmetry search is covered in detail in
-Appendix~\ref{sec:inter_1lepton}. In this section, only a few pertinent points
-will be discussed. Firstly, the evaluation of model-dependent systematic effects
-associated with the signal yield. Secondly, some discussion of validation work
-performed to demonstrate that the statistical procedure and software
-infrastructure are functioning as expected. The statistical procedure has been
-implemented using the \roostats software framework~\cite{roostats, roostats_web}.
+supersymmetry search is covered in Appendix~\ref{sec:inter_1lepton}. In this
+section, only a few pertinent points will be discussed. Firstly, the evaluation
+of model-dependent systematic effects associated with the signal yield. And
+secondly, some discussion of validation work performed to demonstrate that the
+statistical procedure and software infrastructure are functioning as
+expected. The statistical procedure has been implemented using the \roostats
+software framework~\cite{roostats, roostats_web}.
 
 \subsection{Systematic Uncertainties on Signal Efficiency}
 As can be seen in Table~\ref{tbl:inter_systematic_parameters}, a number of
@@ -201,17 +198,17 @@ expected signal yield.
 
 Both the luminosity estimate and the trigger efficiency are subject to
 uncertainties which would effect the expected signal yield. Uncertainties of 4\%
-and 1\% are assigned.
+and 1\% are assigned respectively.
 
 The signal efficiency will also be affected by the choice of \acp{PDF} in the
 simulated samples and the calculation of the \ac{NLO} cross-sections. Whilst in
-principal these would be expected to vary across the parameter space of a given
+principal, these would be expected to vary across the parameter space of a given
 theoretical model, a conservative 10\% systematic was assigned instead.
 
-For the \ac{JES} and \MET resolution uncertainty, these are calculated
-as for the background case (see \secs~\ref{sec:susy_jes_uncertainty} and
-\ref{sec:susy_metres_uncertainty}). These are calculated individually for
-different signal hypotheses. As summary of all uncertainties assigned for the
+For the \ac{JES} and \MET resolution uncertainties, these are calculated as for
+the background case (see \secs~\ref{sec:susy_jes_uncertainty} and
+\ref{sec:susy_metres_uncertainty}). They are calculated individually for
+different signal hypotheses. A summary of all uncertainties assigned for the
 signal efficiencies, along with their exact or approximate size, is shown in
 Table~\ref{tbl:inter_signal_systematics}.
 
@@ -250,40 +247,43 @@ included]{Distribution of the profile likelihood ratio test statistic for null
 
 \subsection{Validation}
 \label{sec:inter_validation}
-To validate the correct working of the model, a number of cross-checks were
-performed. Firstly, the Profile Likelihood and \CLs methods were compared and
-found to agree. In general, the \CLs method is expected to be more conservative
-in convering the full range of the nuisance parameters in the model.
+To validate the model, a number of cross-checks were performed. Firstly, the
+\ac{PL} and \CLs methods were compared and found to agree. In general, the \CLs
+method is expected to be more conservative by convering the full range of the
+nuisance parameters in the model.
 
-To see how the Profile Likelihood and \CLs results change with modifications to
-the likelihood function, a representative point in the \ac{CMSSM} plane
+To see how the \ac{PL} and \CLs results change with modifications to the
+likelihood function, a representative point in the \ac{CMSSM} plane
 ($\tan\beta=10$, $A_0=0$, $\mu>0$) has been chosen. This is $(m_0,
-m_{\frac{1}{2}}) = (80, 400)$, close to the edge of the region excluded by data
-(additional detail can be found in Appendix~\ref{sec:app_inter_validation}).
+m_{\frac{1}{2}}) = (80, 400)$ - close to the edge of the region excluded by the
+data (additional detail can be found in
+Appendix~\ref{sec:app_inter_validation}).
 
-The Profile Likelihood function for this point can be seen in
-\fig~\ref{fig:inter_pl}. It can be seen that adding the various systematic
-effects to the model, and also removing the electron channel appear to worsen
-the exclusion. This shows, qualitatively at least, that the model is behaving as
-expected. For this particular model point, the signal contamination appears to
-have the largest effect, followed by the background uncertainties and then the
-signal uncertainties. Note that certain uncertainties are included in all cases:
-the effect of limited statistics in the control region, and the luminosity
-uncertainty. Since the former is actually the dominant uncertainty on the
-background prediction, this perhaps explains why it appears to have a relatively
-small effect.
+The form of the \ac{PL} function for the same point can be seen in
+\fig~\ref{fig:inter_pl}. The signal strength, $\mu$, is the ratio of the
+excluded cross-section to that predicted by the \ac{CMSSM}. As expected, the
+inclusion of systematic effects pushes the exclusion to larger values of
+$\mu$. A similar, but more pronounced, effect can be seen when removing the
+electron channel. This shows, qualitatively at least, that the model is behaving
+as expected. For this particular model point, the signal contamination appears
+to have the largest effect, followed by the background uncertainties and then
+the signal uncertainties. Note that certain uncertainties are included in all
+cases: the effect of limited statistics in the control region, and the
+luminosity uncertainty. The former is actually the dominant uncertainty on the
+background prediction. This perhaps explains why the addition of the other
+systematic uncertainties appears to have relatively little effect.
 
 The distributions of the test statistic used to calculate \CLs are shown in
-\fig~\ref{fig:inter_cls}. Again the effect of introducing additional
-systematic parameters and removing the electron channel causes \CLs to
-increase. This particular point goes from being strongly excluded at $> 95\%$
-confidence level with both lepton channels, to not being excluded when the
+\fig~\ref{fig:inter_cls}. The results are seen to be qualitatively similar to
+the \ac{PL} case. This particular point goes from being strongly excluded at $>
+95\%$ confidence level with both lepton channels, to not being excluded when the
 electrons are removed.
 
 \section{Results}
-The likelihood model is used to provide interpretation within the context of two
-\ac{NP} models: \ac{CMSSM} and the \Ttwott simplified model described in
-\sec~\ref{sec:sms}.
+The statistical machinery described so far has been used to give interpretations
+in the context of several \ac{NP} models. First of all, the \ac{CMSSM}, and
+subsequently two simplified models: \Ttwott and \TthreeW. These are fully
+described in \sec~\ref{sec:framework_susy}.
 
 \begin{figure}[h!]
 \centering
@@ -321,12 +321,12 @@ The likelihood model is used to provide interpretation within the context of two
 \end{figure}
 
 \subsection{\ac{CMSSM}}
-The \ac{CMSSM} was previously described in \sec~\ref{sec:cmssm}. As explained
-previously, the \ac{CMSSM} makes a number of somewhat arbitrary choices which
-restrict the \ac{SUSY} toplogies signatures it is able to encompass. Whilst
-these make it relatively undesirable as a framework for theoretical
-interpretation, it is nonetheless useful as a common yardstick by which to
-compare experiments and searches.
+The \ac{CMSSM} was previously described in \sec~\ref{sec:cmssm}. As explained,
+the \ac{CMSSM} makes a number of somewhat arbitrary choices which restrict the
+\ac{SUSY} toplogies signatures it is able to encompass. Whilst these make it
+relatively undesirable as a framework for theoretical interpretation, it is
+nonetheless useful as a common yardstick by which to compare experiments and
+searches.
 
 The \ac{CMSSM} results are presented as a 95\% exclusion in a two-dimensional
 plane of the parameter space where the two mass parameters, \Mzero and \Mhalf,
@@ -334,10 +334,10 @@ are allowed to vary. Other parameters are fixed as follows: $\Azero = 0$,
 $\tanbeta = 10$ and $\mu > 0$.
 
 \subsubsection{Technical Details}
-The likelihood function detailed in \sec~\ref{sec:inter_1lepton} takes as
-input the signal efficiencies for each bin of \STlep. In the case of the
-\ac{CMSSM}, these must be evaluated for each point $(\Mzero, \Mhalf)$. These are
-evaluated using the same analysis procedure as used for the data and \ac{SM}
+The likelihood function detailed in \sec~\ref{sec:inter_1lepton} takes as input
+the signal efficiencies for each bin of \STlep. In the case of the \ac{CMSSM},
+these must be evaluated for each point in the $(\Mzero, \Mhalf)$-plane. These
+are evaluated using the same analysis procedure as used for the data and \ac{SM}
 \ac{MC} samples. The \ac{CMSSM} sample is produced using the Pythia event
 generator, with the two mass parameters varied independently in steps of
 \unit{20}{\GeV} to produce a grid. For each grid point, 10000 events were
@@ -359,14 +359,14 @@ The efficiency per \STlep bin of the analysis selection as a function of the
 the \ac{CMSSM} sample are due to incomplete data samples at the time of
 publication.
 
-The efficiencies give a good indication of the efficiency of the analysis in
+The efficiencies give a good indication of the sensitivity of the analysis to
 different regions of the parameter space. Firstly, it can be seen that
 regardless of the \STlep bin, significant efficiency is achieved only for values
 of $\Mzero < \unit{1000}{\GeV}$. The correlation of \STlep and \Mhalf should
-also be noted, with the higher bins generally sensitive to larger values of
+also be noted - with the higher bins generally sensitive to larger values of
 \Mhalf. Since \STlep is sensitive to the mass of the \ac{LSP} which increases
 linearly with \Mhalf and is insensitive to to \Mzero (see~\cite{sparticles}
-p290), this would seem to make sense.
+p290), this would appear to be consistent.
 
 \subsubsection{Exclusion}
 For consistency with other \ac{SUSY} searches at the \ac{LHC}, a limit has been
@@ -375,7 +375,7 @@ possible, to set an upper limit on the signal strength parameter, $\mu$, this
 becomes highly computationally intensive. Instead, a simple exclusion was
 produced assuming \ac{NLO} cross-sections. This is shown in
 \fig~\ref{fig:inter_msugra_exclusion}. All terms discussed in
-\sec~\ref{sec:inter_1lepton} have been included. The expected limit and $\pm
+Appendix~\ref{sec:inter_1lepton} have been included. The expected limit and $\pm
 1\sigma$ bands were evaluated by setting the observations for each bin to be
 exactly that predicted from data.
 
@@ -394,23 +394,22 @@ gluino, \ac{LSP} and other intermediate particles, a grid of simplified model
 points is created. These are then processed further as for the \ac{CMSSM}.
 
 For the simplified models shown here, the mother and daugther particles masses
-(\Mgluino or \Mstop and \Mlsp) have been varied in steps of \unit{20}{\GeV}. The
-requirement that the mother particle be at least as massive as the daughter
-excludes half of the parameter space representing unphysical scenarios.
+(\Mgluino or \Mstop and \Mlsp) have been varied in steps of
+\unit{20}{\GeV}. Since the mother particle be at least as massive as the
+daughter half of the parameter space is unphysical and hence excluded.
 
 To provide the most detailed interpretation of the simplified models, it is
 desirable to calculate an upper limit on the cross-section for each grid
 point. This can be contrasted to the case of the \ac{CMSSM}, where the
 cross-section at each point is known and a simple exclusion contour is
 sufficient. Due to the comptuational difficulty of calculating a confidence
-interval using the \CLs method, the profile likelihood method has been used
-instead. In addition, further simplification of the likelihood is achieved by
-including a single nuisance parameter for the signal efficiency
-uncertainty. This is then assigned a conservative 25\% uncertainty, constant
-across the \ac{SMS} parameter space. This value was chosen by taking
-representative values of the \MET scale and resolution uncertainties given in
-Table~\ref{tbl:inter_signal_systematics} and adding in quadrature with the 10\%
-\ac{PDF} uncertainty:
+interval using the \CLs method, the \ac{PL} method has been used instead. In
+addition, further simplification of the likelihood is achieved by including a
+single nuisance parameter for the signal efficiency uncertainty. This is then
+assigned a conservative 25\% uncertainty, constant across the model parameter
+space. This value was chosen by taking representative values of the \MET scale
+and resolution uncertainties given in Table~\ref{tbl:inter_signal_systematics},
+for the \ac{CMSSM}, and adding in quadrature with the 10\% \ac{PDF} uncertainty:
 \begin{equation*}
 \underbrace{\left(10\%\right)^2}_{\textrm{\ac{PDF}}} +
 \underbrace{\left(15\%\right)^2}_{\textrm{\ac{JES}}} +
@@ -460,11 +459,11 @@ is reduced.
 \label{fig:inter_t3w_eff}
 \end{figure}
 
-The observed limits for the each value of $x$ (0.25, 0.5 and 0.75) are shown in
+The observed limits for each value of $x$ (0.25, 0.5 and 0.75) are shown in
 \figs~\ref{fig:inter_t3w_0p75}, \ref{fig:inter_t3w_0p50} and
-\ref{fig:inter_t3w_0p25} respectively. The exclusion contours are related to a
-reference cross-section for squark production calculated assuming
-\ac{QCD}-strength couplings using \prospino.
+\ref{fig:inter_t3w_0p25} respectively. The exclusion contours are compared to a
+reference cross-section for squark production calculated using \prospino
+assuming \ac{QCD}-strength couplings.
 
 For points where $\Mgluino \approx \Mlsp$, there is relatively little energy
 available in the cascade. This generally reduces the \HT present in the event,
@@ -475,20 +474,20 @@ excluded from the limit. This excluded range was chosen to remove regions where
 the upper limit appeared to fluctuate at random. For $x=0.50$ and $x=0.75$, the
 region $\Mgluino - \Mlsp < \unit{100}{\GeV}$ was excluded. For $x=0.25$,
 \Mchargino is close to \Mlsp and presumably the efficiency is more sensitive to
-\ac{ISR} effect. In this case the region $\Mgluino - \Mlsp < \unit{140}{\GeV}$
-was excluded.
+the modellling of \ac{ISR}. In this case the region, $\Mgluino - \Mlsp <
+\unit{140}{\GeV}$ was ignored.
 
 Comparing the exclusion contours, there does not appear to be a strong
-dependence on \Mchargino. The reach of the search can be seen to improve
-slightly for lower values of $x$ when the mass splitting between the mother and
+dependence on \Mchargino. But the reach of the search can be seen to improve
+slightly for lower values of $x$, when the mass splitting between the mother and
 the \ac{LSP} is reasonably large. From \eqn~\ref{eqn:tthreew_x}, these models
 have an intermediate particle with a mass closer to the \ac{LSP} than to the
 mother. In such events, the \PW would be expected to be relatively soft and the
 jets from the cascade hard. With respect to the analysis selection, the
 efficiency of the \HT cut would be expected to increase. On the other hand, for
-a softer \PW, the \STlep efficiency may decrease due to the smaller charged
-lepton momentum. Overall, the second effect is likely to be small since \STlep
-is likely to be dominated by the missing energy from the \acp{LSP}.
+a softer \PW, the \STlep efficiency may decrease due to the lower charged lepton
+momentum. Overall, the second effect is likely to be small since \STlep is
+likely to be dominated by the missing energy from the \acp{LSP}.
 
 In the cases where the mass splitting between mother and \ac{LSP} is smaller,
 models with \Mchargino close to \Mgluino appears to give better exclusion. In
@@ -581,9 +580,9 @@ the effect of this cut on the efficiency.
 \end{figure}
 
 The observed limit is shown in a similar fashion to the \TthreeW case in
-\fig~\ref{fig:inter_t2tt}. It can be seen that very little exclusion is achieved
-with respect to the stop cross-section predicted from \ac{QCD}. It is possible
-that a dedicated search using B-tagged jets would provide significantly improved
+\fig~\ref{fig:inter_t2tt}. It can be seen that no exclusion is possible with
+respect to the stop cross-section predicted by \ac{QCD}. It is possible that a
+dedicated search using B-tagged jets would provide significantly improved
 sensitivity.
 
 \begin{figure}[h!]

@@ -1,42 +1,42 @@
 \chapter{Statistics}
 \section{Modelling the Single Lepton Analysis}
 \label{sec:inter_1lepton}
-As described in the previous section, the core component of many statistical
-interpretations is the construction of an appopriate likelihood function. The
-likelihood must model all statistical and systematic effects and is thus highly
-dependent on the experiment. The situation is considerably complicated when
-shape information is included, for which relevant bin-to-bin correlations must
-be included.
+As suggested in \chap~\ref{sec:interpretation} , the core component of many
+statistical interpretations is the construction of an appopriate likelihood
+function. The likelihood must model all statistical and systematic effects and
+is thus highly dependent on the experiment. The situation is considerably
+complicated when shape information is included, for which relevant bin-to-bin
+correlations must be included.
 
 \subsection{Notation}
 It will be helpful to define some notation. In the following, a subscript index
-is assumed to run over the binned variable in the analysis (i.e. \STlep). All
-nuisance parameters are written as $\nu^{(i)}$ where the superscript index is
-taken to run over some set of systematic uncertainties
-(e.g. $\nu^{\textrm{jes}}$ might represent the \acl{JES} uncertainty). Certain
+is assumed to run over the binned variable in the analysis (i.e. \STlep
+bins). All nuisance parameters are written as $\nu^{(i)}$ where the superscript
+index is taken to run over some set of systematic uncertainties
+(e.g. $\nu^{\textrm{jes}}$ might represent the \ac{JES} uncertainty). Certain
 variables $x$ are known to have a functional dependence on a given nuisance
 parameter and are written $x(\nu)$. The nominal value of this variable, being
 that which is measured in \ac{MC} or in real data is denoted $\bar{x}$.
 
 \subsection{The Likelihood Function}
 In constructing the likelihood, we start by writing down the number of events
-expected for each bin (assigned the index $i=0,1,2...$):
+expected for each bin:
 \begin{equation*}
 \NExpi = \NSigi(\mu, \nu^{(j)}) +
 \NBkgi(\nu^{(k)}),
 \end{equation*}
 where \NSigi is the expected signal yield for a chosen signal model and \NBkgi
 is the data-driven background prediction. As can be seen, the signal yield is a
-function of the \ac{poi} -- the signal strength -- and some number of nuisance
-parameters where the index $j$ will run over a set of systematic uncertainties
-relevant to the signal yield. Ignoring signal contamination effects (which will
-be discussed later), the bacground yield depends only on the nuisance parameters
-$\nu^{(k)}$ where $k$ is taken to run over the set of systematic uncertainties
-relevant to the background prediction.
+function of the \ac{poi}, $\mu$ and a number of nuisance parameters. The index
+$j$ will run over a set of systematic uncertainties relevant to the signal
+yield. Ignoring signal contamination effects (which will be discussed later),
+the bacground yield depends only on the nuisance parameters, $\nu^{(k)}$, where
+$k$ is taken to run over the set of systematic uncertainties relevant to the
+background prediction.
 
 Without giving an explicit functional form for the signal yield and background
 prediction, the form of the likelihood function may be constructed. The
-likelihood must include:
+likelihood must include the following terms.
 \begin{enumerate}
 \item Statistical terms representing the likelihood of observing the given
   number of events given a certain expectation for the signal and background
@@ -67,17 +67,17 @@ The signal yield per bin is constructed as follows:
 \begin{equation*}
 \NSigi = \mu \times \epsilon_i(\nu^{(\alpha)}) \times \sigma \times L \times \nu^{\textrm{lumi}},
 \end{equation*}
-with:
+where:
 \begin{itemize}
-\item $\epsilon_i(\nu^{(\alpha)})$ is the efficiency of the $i$th bin assumed to be
+\item $\epsilon_i(\nu^{(\alpha)})$ is the efficiency of the $i$th bin, assumed to be
   dependent on a set of nuisance parameters $\nu^{(\alpha)}$;
-\item $\sigma$ the cross-section of the signal model being considered;
-\item $L$ the integrated luminosity and
-\item $\nu^{\textrm{lumi}}$ the nuisance parameter associated with uncertainty in the
-estimate of the integrated luminosity.
+\item $\sigma$ is the cross-section of the signal model being considered;
+\item $L$ is the integrated luminosity and
+\item $\nu^{\textrm{lumi}}$ is a nuisance parameter associated with uncertainty
+  in the estimate of the integrated luminosity.
 \end{itemize}
-The \ac{poi}, $\mu$ then represents the ratio of the upper limit on the
-cross-section to the chosen model cross-section, $\sigma$. Note that for the
+The \ac{poi}, $\mu$ then represents the ratio of the cross-section being
+considered to the cross-section of the chosen model, $\sigma$. Note that for the
 simplified model limits, the parameter $\sigma$ was set to 1 and therefore the
 \ac{poi} itself represents a cross-section.
 
@@ -88,20 +88,21 @@ The background prediction per bin is then written as
 \end{equation*}
 where:
 \begin{itemize}
-\item \RCSi is the translation ratio as defined in \eqn~\ref{eqn:susysearch_RCS};
+\item \RCSi is the translation ratio as defined in \eqn~\ref{eqn:susysearch_RCS}
+  (excluding contributions from \ac{QCD} processes);
 \item the nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{\gamma}$ represent
   statistical uncertainties uncorrelated between the bins;
 \item the nuisance parameters $\nu_i^{(\beta)}$ represent systematic
   uncertainties assumed to be 100\% correlated across the bins and
-\item \NControli the observed number of events in the control region
-(\LPcontrol)
+\item \NControli the number of \ac{EWK} events observed in the control region
+  (\LPcontrol)
 \end{itemize}
 
 \subsection{Parameterising Systematic Uncertainties}
 In reality, it is almost always impossible to obtain a full functional form for
 a variable $x$ (e.g. \RCSi, \NControli) in terms of a set of nuisance parameters
 $\nu^{(\alpha)}$. Writing the Taylor expansion of $x(\nu^{(\alpha)})$ for two terms to
-second order,
+second order, one obtains:
 \begin{align*}
  x(\nu^{(A)}, \nu^{(B)})\bigg|_{\substack{\nu^{(A)} = a\\ \nu^{(B)} = b}} \approx
 x(a,b) +
@@ -138,10 +139,10 @@ x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
 \nu^{(A)}\frac{\Delta x}{\Delta\nu^{(A)}} +
 \nu^{(B)}\frac{\Delta x}{\Delta\nu^{(B)}}.
 \end{equation}
-Since the value of $x$ is often associated with a physical quantity such as an
-efficiency or an event yield, it is desirable to constrain it to positive
-values. This can be achieved providing the range of each nuisance parameter is
-set such that,
+Since the value of $x$ is often associated with a physical quantity, such as an
+efficiency or an event yield, it is desirable to constrain it to take on only
+positive values. This can be achieved providing the range of each nuisance
+parameter is set such that,
 \begin{equation*}
 \nu^{(\alpha)}\times\frac{\Delta x}{\Delta \nu^{(\alpha)}} < \bar{x}.
 \end{equation*}
@@ -171,7 +172,7 @@ Ignoring terms greater than $O(\nu^2)$,
   \nu^{(\alpha)}} \\
 &\approx& \bar{x}^{N-1} x(\nu^{(A)}, \nu^{(B)}, \ldots),
 \end{eqnarray*}
-and therefore
+and therefore we find
 \begin{equation}
 \label{eqn:stats:systderiv}
 x(\nu^{(A)}, \nu^{(B)}, \ldots) \approx \frac{1}{\bar{x}^{N-1}} \prod_{j = A, B,
@@ -201,15 +202,15 @@ types.
   bins. This includes uncertainties arising from the limited statistical
   precision of the \ac{MC} sample and limited data in the control region.
 \item Systematic uncertainties arising from detector artefacts or theoretical
-  uncertainties such as \ac{JES}, standard model cross-section
-  calculations and the luminosity measurement~\cite{cms_lumi_measurement}.
+  uncertainties such as the \ac{JES}, standard model cross-section calculations
+  and the luminosity measurement~\cite{cms_lumi_measurement}.
 \end{enumerate}
 For uncertainties of the first kind, independent nuisance paramters must be
 included for each analysis bin. For uncertainties of the second kind, a single
 nuisance parameter will be included for all bins -- giving the desired
 correlation. A full list of the nuisance parameters used is shown in
 Table~\ref{tbl:inter_systematic_parameters}. For the work presented here,
-Gaussian prior distributions have been used for all nuisance parameters.
+Gaussian prior distributions have been assigned for all nuisance parameters.
 
 \input{tables/systematic_parameters}
 
@@ -219,11 +220,11 @@ the next section.
 
 \subsection{Signal Contamination}
 It can be seen in \fig~\ref{fig:susy_lp} that the region \LPcontrol may have a
-substantial component of \ac{SUSY} events depending on the particular model
+substantial component of \ac{SUSY} events. This depends on the particular model
 under consideration. Signal contamination increases \NControl leading to an
 overprediction of \NBkg. To account for this, the \NBkgi term is modifed to
-reflect the assumption that some fraction of the yield \NControli will be due to
-\ac{SUSY} contamination. Rewriting,
+reflect the assumption that some fraction of the yield, \NControli, will be due
+to \ac{SUSY} contamination. Rewriting,
 
 \begin{equation}
 \label{eqn:bgprediction}
@@ -233,8 +234,8 @@ reflect the assumption that some fraction of the yield \NControli will be due to
     +
     \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right),
 \end{equation}
-where $f^{\textrm{SM}}_i$ represents the fraction of \NControli expected to be
-\ac{SM} events given the current signal hypothesis i.e.
+where $f^{\textrm{SM}}_i$ represents the fraction of \NControli expected due to
+\ac{SM} processes given the current signal hypothesis i.e.
 \begin{equation*}
 f^{\textrm{SM}}_i(\mu) = \frac{\NSMi}{\NSMi + \NSUSYi(\mu)}.
 \end{equation*}
@@ -254,7 +255,7 @@ and $f^{\textrm{SM}}_i \equiv \nu^{\textrm{SM}}_i$. Calculating the expected val
                    &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}.
 \end{eqnarray}
 Technical problems associated with adding a functional dependence on the
-\ac{poi} $\mu$ to the mean of the prior distribution necessitated a slightly
+\ac{poi}, $\mu$, to the mean of the prior distribution necessitate a slightly
 altered formulation. As will be shown, this formulation is approximately
 equivalent given certain assumptions about the range of $\mu$ and the degree of
 signal contamination. The prior distribution included in \likelihood is
@@ -274,17 +275,18 @@ for a suitable range of $\mu$ and for small values of $\NSUSYi/\NControli$, the
 expectation value of $f^{\textrm{SM}}_i$ will be equivalent to
 \eqn~\ref{eqn:fSMideal}:
 \begin{eqnarray*}
-<f^{\textrm{SM}}_i> &=& 1 - \mu \times \left(1-<\nu^{\textrm{SM}}>\right) \\
-                  &=& 1 - \mu  + \mu\frac{\NSMi}{\NSMi + \NSUSYi} \\
-                  &=& \frac{(1-\mu)\left(\NSMi + \NSUSYi\right) + \mu\NSMi}{\NSMi + \NSUSYi} \\
-                  &=& \frac{\NSMi + (1 - \mu)\NSUSYi}{\NSMi + \NSUSYi} \\
-                  &=& \frac{\NSMi \left( 1 + (1-\mu)\frac{\NSUSYi}{\NSMi}\right)}{\NSMi + \NSUSYi} \\
-                  &=& \frac{\NSMi}{\left(\NSMi +\NSUSYi\right)\left( 1 + (1 - \mu)\frac{\NSUSYi}{\NSMi}\right)^{-1}} \\
-                  &\approx& \frac{\NSMi}{\left(\NSMi +\NSUSYi\right)\left( 1 - (1-\mu)\frac{\NSUSYi}{\NSMi}\right)} \\
-                  &=& \frac{\NSMi}{\NSMi + \mu\NSUSYi - (1-\mu)\frac{\NSUSYi^2}{\NSMi}}\\
-                  &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi} - (1-\mu)\left(\frac{\NSUSYi}{\NSMi}\right)^2} \\
-                  &\approx& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}.
+  <f^{\textrm{SM}}_i> &=& 1 - \mu \times \left(1-<\nu^{\textrm{SM}}>\right) \\
+  &=& 1 - \mu  + \mu\frac{\NSMi}{\NSMi + \NSUSYi} \\
+  &=& \frac{(1-\mu)\left(\NSMi + \NSUSYi\right) + \mu\NSMi}{\NSMi + \NSUSYi} \\
+  &=& \frac{\NSMi + (1 - \mu)\NSUSYi}{\NSMi + \NSUSYi} \\
+  &=& \frac{\NSMi \left( 1 + (1-\mu)\frac{\NSUSYi}{\NSMi}\right)}{\NSMi + \NSUSYi} \\
+  &=& \frac{\NSMi}{\left(\NSMi +\NSUSYi\right)\left( 1 + (1 - \mu)\frac{\NSUSYi}{\NSMi}\right)^{-1}} \\
+  &\approx& \frac{\NSMi}{\left(\NSMi +\NSUSYi\right)\left( 1 - (1-\mu)\frac{\NSUSYi}{\NSMi}\right)} \\
+  &=& \frac{\NSMi}{\NSMi + \mu\NSUSYi - (1-\mu)\frac{\NSUSYi^2}{\NSMi}}\\
+  &=& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi} - (1-\mu)\left(\frac{\NSUSYi}{\NSMi}\right)^2} \\
+  &\approx& \frac{1}{1 + \mu\frac{\NSUSYi}{\NSMi}}
 \end{eqnarray*}
+as required.
 
 \subsection{Uncertainties on \texorpdfstring{\NControli}{NControli}}
 The dominant systematic uncertainty relating to the \LPcontrol region yield
@@ -293,28 +295,26 @@ high \STlep. Accordingly, a nuisance parameter is added to the likelihood and
 assigned a Gaussian prior with a width derived assuming a Poisson error on the
 \NControli yield.
 
-An additional complication arises in the case of the electron channel where the
-\LPcontrol region has a non-negligible component of \ac{QCD} multijet
-events. These are unreliably modelled by event generators and thus not included
-in the calculation of \RCSi. This additional contribution to \NControli would
-again lead to an overprediction of the background. To correct this, an
-additional factor is included in Equation~\ref{eqn:bgprediction},
-$f^{\textrm{ewk}}_i$ derived from the results of the \ac{QCD} fit detailed in
-\sec~\ref{sec:susy_electron_bgpredict}. The error derived from the fit
-procedure is modelled as a Gaussian prior on an additional nuisance parameter
+An additional complication arises in the case of the electron channel, where the
+\LPcontrol region has a non-negligible component of \ac{QCD} events. These are
+unreliably modelled by event generators and thus not included in the calculation
+of \RCSi. This additional contribution to \NControli would again lead to an
+overprediction of the background. To correct this, an additional factor is
+included in Equation~\ref{eqn:bgprediction}, $f^{\textrm{ewk}}_i$, derived from
+the results of the \ac{QCD} fit detailed in
+\sec~\ref{sec:susy_electron_bgpredict}. The error derived from the fit procedure
+is modelled as a Gaussian prior on an additional nuisance parameter,
 $\nu^{\textrm{QCD}}_i$. It has been assumed, and confirmed by the results of the
-fit in data that the region \LPsignal is \ac{QCD} free.
+fit in data, that the region \LPsignal is ``\ac{QCD} free''.
 
-The uncertainty included via the prior distribution of $\nu^{\textrm{QCD}}$ was
-the quadrature sum of the statistical error from the fitting procedure and an
+The uncertainty included via the prior distribution of $\nu^{\textrm{QCD}}$ is
+the quadrature sum of the statistical uncertainty from the fitting procedure and an
 uncertainty accounting for the limited generator statistics used to construct
 the fit templates. Additional errors coming from the \ac{JES} uncertainty and
-missing energy resolution were found to be small. Proper inclusion of these into
+missing energy resolution are found to be small. Proper inclusion of these into
 the likelihood would need to ensure correlation with the nuisance parameters
 representing these uncertainties. The relevant terms were set up but not
-included in the final calculations. The contribution is seen to be small and
-unnecessary complication of the likelihood function tends to increase the
-processing time, especially when running a large number of toy experiments.
+included in the final calculations.
 
 \section{Validation Plots}
 \label{sec:app_inter_validation}
