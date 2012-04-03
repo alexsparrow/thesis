@@ -1,19 +1,5 @@
 /vols/cms01/as1604/SUSY-svn/WPol2/scripts/ElPlots
 * Tasks
-** TODO Clarify QCD language throughout
-** TODO helicity fraction -> polarisation fractions
-** TODO proofread [5/9]
-   SCHEDULED: <2012-04-03 Tue>
-+ [X] SM
-+ [X] SUSY
-+ [X] Framework
-+ [X] Experiment
-+ [X] Objects
-+ [ ] Wpol
-+ [ ] Search
-+ [ ] Interpretation
-+ [ ] Appendices
-
 ** TODO check all references are in fact referenced
    SCHEDULED: <2012-04-04 Wed>
 ** TODO go through reference formatting
@@ -38,24 +24,13 @@
 ** TODO boldmath in titles
 ** TODO Interpretation: Why 10% PDF uncertainty?
 ** TODO Add year to title page and department
-** TODO SUSYv2/colophon - make less weird
-** TODO Background -> background processes
-** TODO electroweak -> EWK
 * SUSY
 ** TODO GMSB/AMSB: discuss what they are and ref
    SCHEDULED: <2012-04-03 Tue>
 * Expt
 ** TODO Z' comment from Alex
-* Wpol
-** TODO Would be nice to have some diagrams illustrating the QCD kinematics
 * Objects
-** TODO HT define
-   SCHEDULED: <2012-04-03 Tue>
 ** TODO Performance of electrons and muons
-** TODO more performance plots in reco chapter?
-** Alex Frameworks
-*** TODO Ends abruptly - more spiel at the end & mention characterising a discovery
-    SCHEDULED: <2012-04-03 Tue>
 ** Alex Wpol
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-03-22 Thu 10:30>
@@ -1122,3 +1097,36 @@ Mostly done!
 ** CANCELLED Acceptance correction in wpol section
    CLOSED: [2012-04-03 Tue 13:15] SCHEDULED: <2012-04-03 Tue>
    - State "CANCELLED"  from "TODO"       [2012-04-03 Tue 13:15]
+** CANCELLED helicity fraction -> polarisation fractions
+   CLOSED: [2012-04-03 Tue 17:51]
+   - State "CANCELLED"  from "TODO"       [2012-04-03 Tue 17:51]
+** DONE HT define
+   CLOSED: [2012-04-03 Tue 19:57] SCHEDULED: <2012-04-03 Tue>
+   - State "DONE"       from "TODO"       [2012-04-03 Tue 19:57]
+** DONE proofread [9/9]
+   CLOSED: [2012-04-03 Tue 19:56] SCHEDULED: <2012-04-03 Tue>
+   - State "DONE"       from "TODO"       [2012-04-03 Tue 19:56]
++ [X] SM
++ [X] SUSY
++ [X] Framework
++ [X] Experiment
++ [X] Objects
++ [X] Wpol
++ [X] Search
++ [X] Interpretation
++ [X] Appendices
+** DONE Clarify QCD language throughout
+   CLOSED: [2012-04-03 Tue 19:56]
+   - State "DONE"       from "TODO"       [2012-04-03 Tue 19:56]
+** DONE SUSYv2/colophon - make less weird
+   CLOSED: [2012-04-03 Tue 19:56]
+   - State "DONE"       from "TODO"       [2012-04-03 Tue 19:56]
+** CANCELLED Background -> background processes
+   CLOSED: [2012-04-03 Tue 19:56]
+   - State "CANCELLED"  from "TODO"       [2012-04-03 Tue 19:56]
+** DONE electroweak -> EWK
+   CLOSED: [2012-04-03 Tue 19:56]
+   - State "DONE"       from "TODO"       [2012-04-03 Tue 19:56]
+** CANCELLED Would be nice to have some diagrams illustrating the QCD kinematics
+   CLOSED: [2012-04-03 Tue 19:57]
+   - State "CANCELLED"  from "TODO"       [2012-04-03 Tue 19:57]
