@@ -41,6 +41,7 @@
 ** TODO SUSYv2/colophon - make less weird
 ** TODO Background -> background processes
 ** TODO more performance plots in reco chapter?
+** TODO electroweak -> EWK
 * SUSY
 ** TODO GMSB/AMSB: discuss what they are and ref
    SCHEDULED: <2012-04-03 Tue>
