@@ -170,7 +170,7 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 where the index $i$ is taken to represent the 3 helicity states of the \PW
 boson. The \ffi are constants derived from an analytical fit to the
 $\cos\thetastar$ distribution in bins of \PtW, \YW and charge. They are
-effectively the helicity fractions ``baked in'' to the Monte-Carlo. The
+effectively the helicity fractions ``baked in'' to the \ac{MC}. The
 functional form of $\sigma$ is taken from \eqn~\ref{eqn:wpol_helicity_fractions}
 as follows,
 \begin{eqnarray*}
@@ -290,7 +290,7 @@ at high \PtW. The \ffi coefficients determine the polar angle distribution
 be reconstructed directly due to an ambiguity in the reconstruction of the \PW
 boson rest frame. Instead the \LP variable, found to be highly correlated with
 $\cos\thetastar$ in the limit of large \PtW is taken instead. Via a re-weighting
-method, \LP distributions are constructed from Monte-Carlo simulation
+method, \LP distributions are constructed from \ac{MC} simulation
 corresponding to 100\% left-handed, right-handed and longitudinally polarised
 \PW bosons. These shapes may then be used in a fit to data in order to extract
 the helicity fractions themselves.
@@ -651,7 +651,7 @@ choose to invert certain lepton identification cuts.
 
 Both data and \ac{MC} samples have been processed using \cmssw version 3.8.
 
-\subsection{Signal and Background Expectations in Monte Carlo}
+\subsection{Signal and Background Expectations in Simulation}
 \label{sec:wpol_yields}
 The expected event yields across the relevant simulated samples are shown in
 Tables~\ref{tbl:wpol_electron_yields} and \ref{tbl:wpol_muon_yields} for
@@ -670,12 +670,12 @@ unenriched sample in the case of the muons and the sum of the
 In order to extract the helicity fractions in
 \eqn~\ref{eqn:wpol_helicity_fractions}, a binned maximum likelihood fitting
 procedure is performed. This takes \LP shape templates from the three \PW
-helicity states, a number of data-driven or Monte-Carlo estimated background
+helicity states, a number of data-driven or \ac{MC} estimated background
 templates and extracts the most probably values of \fL, \fR and \f0 from the
 data distribution. In order to test the procedure, this method is also applied
-to \ac{MC} ``pseudodata'' to ensure that fitted helicity fractions match
-those derived from the analytical fit (see \sec~\ref{sec:wpol_closure}) to within the quoted
-errors. The fit itself is implemented in the \roofit software
+to \ac{MC} ``pseudodata'' to ensure that fitted helicity fractions match those
+derived from the analytical fit (see \sec~\ref{sec:wpol_closure}) to within the
+quoted errors. The fit itself is implemented in the \roofit software
 framework~\cite{roofit_paper, roofit_web}, which assists in constructing an
 appropriate likelihood function and performing the necessary minimisation using
 the \minuit numerical optimisation code~\cite{minuit_paper}.
@@ -1259,14 +1259,13 @@ integrated luminosity of \unit{36}{\invpicobarn} at a centre-of-mass energy,
 $\sqrt{s} = \unit{7}{\TeV}$.
 
 A number of kinematic distributions are compared between data and simulation in
-\figs~\ref{fig:wpol_datamc_ele}~and~\ref{fig:wpol_datamc_mu}. For both
-channels, the electoweak backgrounds are taken from the corresponding Monte
-Carlo samples. The \ac{QCD} component is negliglbe in the muon channel. For the
-electron channel, it is taken from the anti-selected data sample (see
-\sec~\ref{sec:wpol_data_driven_bg}). The agreement in both channels is seen
-to be reasonable. Moreover, the data-driven template appears to model the
-\ac{QCD} multijet background well -- and significantly better than the simulated
-samples.
+\figs~\ref{fig:wpol_datamc_ele}~and~\ref{fig:wpol_datamc_mu}. For both channels,
+the electoweak backgrounds are taken from the corresponding \ac{MC} samples. The
+\ac{QCD} component is negliglbe in the muon channel. For the electron channel,
+it is taken from the anti-selected data sample (see
+\sec~\ref{sec:wpol_data_driven_bg}). The agreement in both channels is seen to
+be reasonable. Moreover, the data-driven template appears to model the \ac{QCD}
+multijet background well -- and significantly better than the simulated samples.
 
 \begin{figure}[h!]
 \centering
