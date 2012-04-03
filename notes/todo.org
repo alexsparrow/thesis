@@ -3,6 +3,7 @@
 ** TODO Clarify QCD language throughout
 ** TODO helicity fraction -> polarisation fractions
 ** TODO proofread [5/9]
+   SCHEDULED: <2012-04-03 Tue>
 + [X] SM
 + [X] SUSY
 + [X] Framework
@@ -14,12 +15,25 @@
 + [ ] Appendices
 
 ** TODO check all references are in fact referenced
+   SCHEDULED: <2012-04-04 Wed>
 ** TODO go through reference formatting
+   SCHEDULED: <2012-04-04 Wed>
 ** TODO Section/Chapter titles
 ** TODO Figure placement
 ** TODO Figure captions
 ** TODO Alex's corrections to intro/abstract/conclusion
 ** TODO More refs
+*** SM
+**** TODO References in last para of Yang-Mills
+**** TODO reference dirac equation
+**** TODO the electroweak theory - reference V-A
+**** TODO the electroweak theory - cite Weinberg angle
+**** TODO EWSB - reference lowest energy states are spacetime independent
+**** TODO Higgs Mechanism - reference unitarity gauge
+**** TODO QCD: reference CKM matrix
+**** TODO QCD: reference Gell-Man paper for color
+*** SUSY
+**** TODO More refs
 ** TODO statistics jargon
 ** TODO boldmath in titles
 ** TODO Interpretation: Why 10% PDF uncertainty?
@@ -28,15 +42,19 @@
 ** TODO Background -> background processes
 ** TODO more performance plots in reco chapter?
 * SUSY
-
 ** TODO GMSB/AMSB: discuss what they are and ref
+   SCHEDULED: <2012-04-03 Tue>
 * Expt
 ** TODO Z' comment from Alex
 * Wpol
 ** TODO Acceptance correction in wpol section
+   SCHEDULED: <2012-04-03 Tue>
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
+** TODO HT define
+   SCHEDULED: <2012-04-03 Tue>
 ** Alex Frameworks
 *** TODO Ends abruptly - more spiel at the end & mention characterising a discovery
+    SCHEDULED: <2012-04-03 Tue>
 ** Alex Wpol
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-03-22 Thu 10:30>
@@ -44,17 +62,6 @@
 ** Alex SUSY search
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
-** SM
-*** TODO References in last para of Yang-Mills
-*** TODO reference dirac equation
-*** TODO the electroweak theory - reference V-A
-*** TODO the electroweak theory - cite Weinberg angle
-*** TODO EWSB - reference lowest energy states are spacetime independent
-*** TODO Higgs Mechanism - reference unitarity gauge
-*** TODO QCD: reference CKM matrix
-*** TODO QCD: reference Gell-Man paper for color
-** SUSY
-*** TODO More refs
 
 
 * Old
