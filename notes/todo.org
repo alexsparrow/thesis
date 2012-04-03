@@ -40,7 +40,6 @@
 ** TODO Add year to title page and department
 ** TODO SUSYv2/colophon - make less weird
 ** TODO Background -> background processes
-** TODO more performance plots in reco chapter?
 ** TODO electroweak -> EWK
 * SUSY
 ** TODO GMSB/AMSB: discuss what they are and ref
@@ -48,11 +47,12 @@
 * Expt
 ** TODO Z' comment from Alex
 * Wpol
-** TODO Acceptance correction in wpol section
-   SCHEDULED: <2012-04-03 Tue>
 ** TODO Would be nice to have some diagrams illustrating the QCD kinematics
+* Objects
 ** TODO HT define
    SCHEDULED: <2012-04-03 Tue>
+** TODO Performance of electrons and muons
+** TODO more performance plots in reco chapter?
 ** Alex Frameworks
 *** TODO Ends abruptly - more spiel at the end & mention characterising a discovery
     SCHEDULED: <2012-04-03 Tue>
@@ -1119,3 +1119,6 @@ Mostly done!
 ** DONE Previous limits
    CLOSED: [2012-04-02 Mon 20:56]
    - State "DONE"       from "TODO"       [2012-04-02 Mon 20:56]
+** CANCELLED Acceptance correction in wpol section
+   CLOSED: [2012-04-03 Tue 13:15] SCHEDULED: <2012-04-03 Tue>
+   - State "CANCELLED"  from "TODO"       [2012-04-03 Tue 13:15]

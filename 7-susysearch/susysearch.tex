@@ -267,7 +267,7 @@ generator-level $\HT > \unit{300}{\GeV}$ cut was used. The larger event sample
 reduces the statistical error on \RCS.
 
 \section{Control Region}
-In order to test that the simulation of electroweak background processes can be
+In order to test that the simulation of \ac{EWK} background processes can be
 relied upon for the calculation of the translation factor \RCS, the procedure is
 first performed in the control sample. With the jet multiplicity cut inverted,
 any supersymmetry signal should be highly diluted in this sample. It is expected
@@ -311,29 +311,28 @@ be adequately described by the simulation.
 \end{figure}
 
 \section{Background Prediction}
-As for the \PW polarisation analysis, the background from \ac{QCD} multijet
+As for the \PW polarisation analysis, the background from \ac{QCD} multi-jet
 events again presents a difficulty. In the muon channel, the \ac{QCD}
 contribution is once again small to negligible as evidenced in
-Table~\ref{tbl:susy_mcexp_control}. For this, it is sufficient to calculate
-only an upper bound. For the electron channel, as before, the contribution is
-much larger. Fortunately, the methods outlined in
-\sec~\ref{sec:wpol_data_driven_bg} prove to be effective again, with some
-adaptation.
+Table~\ref{tbl:susy_mcexp_control}. For this, it is sufficient to calculate only
+an upper bound. For the electron channel, as before, the contribution is much
+larger. Fortunately, the methods outlined in \sec~\ref{sec:wpol_data_driven_bg}
+prove to be effective again, with some adaptation.
 
 \subsection{Muons}
 A conservative upper limit on the \ac{QCD} background in the muon channel is
 obtained from a data-driven control sample by loosening the isolation
 requirement to $0.2 < \CombIso < 0.5$. In order to further enrich \ac{QCD}
-events whilst suppressing electroweak backgrounds in this sample, an $\MET <
-\unit{20}{\GeV}$ cut is also applied. Even with these cuts, significant
-electroweak contamination remains. The significance of the vertex impact
-paramter is used as an additional handle by requiring $\sigma(\D0) > 3$. By
-selecting muons displaced from the primary vertex, backgrounds from hadron
-decays are enhanced~\cite{ttbar_paper_cms}. The ratio $N(\CombIso < 0.1/N(0.2 <
-\CombIso < 0.5)$ in this sample is then used to derive an upper limit on the
-\ac{QCD} contribution. This limit is conservative given that electroweak
-background are present in the ratio. The \ac{QCD} background is found to be
-negligible in all \STlep bins and is ignored in the subsequent analysis.
+events whilst suppressing \ac{EWK} backgrounds in this sample, a $\MET <
+\unit{20}{\GeV}$ cut is also applied. Even with these cuts, significant \ac{EWK}
+contamination remains. The significance of the vertex impact paramter is used as
+an additional handle by requiring $\sigma(\D0) > 3$. By selecting muons
+displaced from the primary vertex, backgrounds from hadron decays are
+enhanced~\cite{ttbar_paper_cms}. The ratio $N(\CombIso < 0.1/N(0.2 < \CombIso <
+0.5)$ in this sample is then used to derive an upper limit on the \ac{QCD}
+contribution. This limit is conservative given that \ac{EWK} backgrounds are
+present in the ratio. The \ac{QCD} background is found to be negligible in all
+\STlep bins and is ignored in the subsequent analysis.
 
 \subsection{Electrons}
 \label{sec:susy_electron_bgpredict}
@@ -357,13 +356,13 @@ the \PW polarisation analysis (see
 modified electron selection and kinematic cuts.
 
 As in the \PW polarisation analysis, a binned maximum likelihood fit is
-performed using electroweak background templates for the electroweak backgrounds
+performed using \ac{EWK} background templates for the \ac{EWK} backgrounds
 derived from simulation. To avoid the potential effects of signal contamination,
 the fit region is restricted to \LPcontrol and then the fit result is used to
 extrapolate into \LPsignal. The results of these fits are shown in
 \figs~\ref{fig:susy_elqcd_fitresult150}
 and~\ref{fig:susy_elqcd_fitresult250}. The predictions of the \ac{QCD} and
-electroweak background contamination can be seen in
+\ac{EWK} background contamination can be seen in
 Table~\ref{tbl:susy_datamc_electrons}. The \ac{QCD} contamination in the signal
 region is seen to be negligible.
 
@@ -376,12 +375,11 @@ results to correct the \NControl to subtract the \ac{QCD} contribution. Since
 the \ac{QCD} contamination in the signal region is negligible, this should not
 make a significant difference to the limit.
 
-To account for the \ac{QCD} contamination in the control
-region, the background prediction in the electron channel is derived from the
-fitted number of electroweak events. Similarly, the \RCS calculation in
-simulation is performed using only the electroweak background components. The
-additional uncertainties introduced by this procedure will be covered in
-\sec~\ref{sec:susy_systematics}.
+To account for the \ac{QCD} contamination in the control region, the background
+prediction in the electron channel is derived from the fitted number of \ac{EWK}
+events. Similarly, the \RCS calculation in simulation is performed using only
+the \ac{EWK} background components. The additional uncertainties introduced by
+this procedure will be covered in \sec~\ref{sec:susy_systematics}.
 
 
 \begin{figure}[h!]
@@ -419,7 +417,7 @@ The background prediction may be written as follows,
 \NBkgi = \RCSi \times \NControli,
 \end{equation*}
 where \NBkgi is the predicted background for \LPsignal in \STlep bin $i$, \RCSi
-the corresponding translation factor and \NControli the expected electroweak
+the corresponding translation factor and \NControli the expected \ac{EWK}
 yield in the region \LPcontrol (i.e. for the muons, simply the event yield
 assuming zero contamination from \ac{QCD} or for electrons, the result of the
 fit described in \sec~\ref{sec:susy_electron_bgpredict}).
@@ -433,7 +431,7 @@ described.
 The effect of finite statistics in the control region is naturally more
 pronounced in the larger \STlep bins. For the muon channel, this is simply
 calculated as the Poisson uncertainty on the number of events in the control
-region. For electrons, this iss taken as the uncertainty on the electroweak
+region. For electrons, this iss taken as the uncertainty on the \ac{EWK}
 component of the background as determined by the fit.
 
 \subsection{Limited \acl{MC} Event Sample}
@@ -443,7 +441,7 @@ the calculation of \RCS for both channels. This is calculated by simple
 propagation of errors.
 
 For the electron channel, things are once again complicated by the \ac{QCD}
-fitting procedure. The electroweak templates used in the fit also suffer from
+fitting procedure. The \ac{EWK} templates used in the fit also suffer from
 limited statistics, thus leading to an additional source of uncertainty on
 \NControl. This is accounted for in a similar manner to the statistical
 uncertainty of the \ac{QCD} template in the \PW polarisation analysis (see
