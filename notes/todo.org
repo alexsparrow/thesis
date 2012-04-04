@@ -34,6 +34,7 @@
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
 
+
 * Old
   :VISIBILITY: folded
 ** DONE ALL!
