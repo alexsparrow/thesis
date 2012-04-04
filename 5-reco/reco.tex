@@ -187,9 +187,10 @@ such missing hits, or a single missing hit -- depending on the desired
 efficiency.
 
 Further rejection against electron conversions is provided by the variables
-\Distnm and \DeltaCotThetanm. These are calculated as follows. Firstly,
-potential conversion partners are found by pre-selecting all \ac{CTF} tracks in
-a cone $\DeltaR < 0.3$ of the \ac{GSF} track and having opposite charge.
+\Distnm and \DeltaCotThetanm. These are calculated as follows (see
+\fig~\ref{fig:conversion_diag}). Firstly, potential conversion partners are
+found by pre-selecting all \ac{CTF} tracks in a cone $\DeltaR < 0.3$ of the
+\ac{GSF} track and having opposite charge.
 \begin{itemize}
 \item \DeltaCotThetanm is defined as
 \begin{equation*}
@@ -204,6 +205,18 @@ associated with the electron. Conversion electrons will tend to have smaller
 values of \DeltaCotTheta and \Dist. If a suitable partner track is found, the
 electron is rejected if both \Dist and \DeltaCotTheta are below given
 thresholds.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.45\textwidth]{fig/conversion_diag}
+  \caption[Diagram illustrating electron conversion rejection
+  variables}]{Diagram illustrating the electron conversion rejection variables,
+  \Dist and \DeltaCotTheta. \Distnm is the distance between points B1 and B2 in
+  the $x-y$-plane. Here, the two tracks from the photon conversion are
+  parallel. \Dist is negative when the two tracks overlap and positive
+  otherwise.}
+  \label{fig:conversion_diag}
+\end{figure}
 
 The pseudorapidity acceptance for electrons is $|\eta| < 2.5$. However, the
 barrel-endcap transition region, $1.4442 < |\eta| < 1.566$ is explicitly excluded.

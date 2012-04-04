@@ -346,17 +346,18 @@ the signal efficiencies for each bin of \STlep. In the case of the \ac{CMSSM},
 these must be evaluated for each point in the $(\Mzero, \Mhalf)$-plane. These
 are evaluated using the same analysis procedure as used for the data and \ac{SM}
 \ac{MC} samples. The \ac{CMSSM} sample is produced using the Pythia event
-generator, with the two mass parameters varied independently in steps of
+generator, with the two mass parameters are varied independently in steps of
 \unit{20}{\GeV} to produce a grid. For each grid point, 10000 events were
-generated. Due to the large number of events, the detector response was
-simulated using the \fastsim simulation package (see
-\sec~\ref{sec:cms_computing}). This has been extensively validated and tuned
-against the full detector simulation and shown to give adequate results for many
-analyses.
+generated. Due to the large number of events, the detector response is simulated
+using the \fastsim simulation package (see \sec~\ref{sec:cms_computing}). This
+has been extensively validated and tuned against the full detector simulation
+and shown to give adequate results for many analyses.
 
 Having evaluated the efficiencies per \STlep bin for each \ac{CMSSM} grid point,
-the \ac{NLO} cross-sections were calculated using the \prospino
-package~\cite{prospino}. These were then input to the limit code, along with the
+the \ac{NLO} cross-sections are calculated using the \prospino
+package~\cite{prospino}. The cross-sections are calculated individually for each
+\ac{SUSY} subprocess and then combined according to the composition of the
+analysis selection. These are then input to the limit code, along with the
 required uncertainties and model-independent parameters.
 
 \subsubsection{Efficiencies}
@@ -394,16 +395,16 @@ squark masses below $\approx \unit{900}{\GeV}$ and gluino masses below $\approx
 
 \subsection{Simplified Models}
 \subsubsection{Technical Details}
-The simplified models described in \sec~\ref{sec:sms} were simulated using
-the Pythia generator by reusing supersymmetry subprocesses. The mass parameters
-in each model were varied in steps. By varying the masses of the squark or
-gluino, \ac{LSP} and other intermediate particles, a grid of simplified model
-points is created. These are then processed further as for the \ac{CMSSM}.
+The simplified models described in \sec~\ref{sec:sms} are simulated using the
+Pythia generator by reusing \ac{SUSY} subprocesses. The mass parameters in each
+model are varied in steps. By varying the masses of the squark or gluino,
+\ac{LSP} and other intermediate particles, a grid of simplified model points is
+created. These are then processed further as for the \ac{CMSSM}.
 
 For the simplified models shown here, the mother and daugther particles masses
-(\Mgluino or \Mstop and \Mlsp) have been varied in steps of
-\unit{20}{\GeV}. Since the mother particle be at least as massive as the
-daughter half of the parameter space is unphysical and hence excluded.
+(\Mgluino or \Mstop and \Mlsp) are varied in steps of \unit{20}{\GeV}. Since the
+mother particle must be at least as massive as the daughter, half of the
+parameter space is unphysical and hence excluded.
 
 To provide the most detailed interpretation of the simplified models, it is
 desirable to calculate an upper limit on the cross-section for each grid
@@ -475,14 +476,14 @@ assuming \ac{QCD}-strength couplings.
 For points where $\Mgluino \approx \Mlsp$, there is relatively little energy
 available in the cascade. This generally reduces the \HT present in the event,
 and consequently the efficiency. Events entering the sample in this region tend
-to be dominated by \ac{ISR} which is known to be relatively poorly modelled in
-simulation. For this reason, the region immediately below the diagonal has been
-excluded from the limit. This excluded range was chosen to remove regions where
-the upper limit appeared to fluctuate at random. For $x=0.50$ and $x=0.75$, the
-region $\Mgluino - \Mlsp < \unit{100}{\GeV}$ was excluded. For $x=0.25$,
-\Mchargino is close to \Mlsp and presumably the efficiency is more sensitive to
-the modellling of \ac{ISR}. In this case the region, $\Mgluino - \Mlsp <
-\unit{140}{\GeV}$ was ignored.
+to be dominated by \ac{ISR}. The modelling of \ac{ISR} in simulation has a
+significant associated uncertainty. For this reason, the region immediately
+below the diagonal has been excluded from the limit. This excluded range was
+chosen to remove regions where the upper limit appeared to fluctuate at
+random. For $x=0.50$ and $x=0.75$, the region $\Mgluino - \Mlsp <
+\unit{100}{\GeV}$ was excluded. For $x=0.25$, \Mchargino is close to \Mlsp and
+presumably the efficiency is more sensitive to the modellling of \ac{ISR}. In
+this case the region, $\Mgluino - \Mlsp < \unit{140}{\GeV}$ was ignored.
 
 Comparing the exclusion contours, there does not appear to be a strong
 dependence on \Mchargino. But the reach of the search can be seen to improve

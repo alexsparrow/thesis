@@ -419,7 +419,7 @@ Control subsystem in order to initiate a read-out of the detector.
 The calorimeter trigger subsystem begins with the \ac{TPG}. This sums energy
 deposits from the \ac{ECAL} and \ac{HCAL} into ``trigger towers''. These are
 received by the \ac{RCT}, where electron/photon candidates are found and the
-trigger tower energies summed in to larger ``\ac{RTC} regions''. These consist
+trigger tower energies summed in to larger ``\ac{RCT} regions''. These consist
 of $4\times 4$ trigger towers (except in the \ac{HF} where only a single trigger
 tower is included). The \ac{RCT} also records a ``tau-veto'' bit, used to
 distinguish jets from hadronic tau decays.
@@ -430,7 +430,7 @@ The output of the \ac{RCT} is then processed by the
 list of electron/photon candidates and passes the four highest ranked objects to
 the \ac{GT}. It also performs a simple jet-finding algorithm on the \ac{RCT}
 regions, classifying them as \emph{forward}, \emph{central} and \emph{tau}
-jets. The last category includes jets for which none of the constituent \ac{RTC}
+jets. The last category includes jets for which none of the constituent \ac{RCT}
 regions has its tau-veto bit set. The four highest ranked of each category are
 then forwarded to the \ac{GT}.
 
@@ -439,11 +439,9 @@ total transverse energy, missing transverse energy, jet counts and \HT (the
 scalar sum of the jet energies). These too are forwarded to the \ac{GT}.
 
 The muon trigger receives input from all three muon subdetectors: \acp{RPC},
-\acp{CSC} and \acp{DT}. These are integrated in the \ac{GMT} which also receives
-isolation and minimum ionising particle information from the \ac{GCT} for each
-calorimeter region. The muons received from each subdetector are matched and
-sorted by transverse momentum and quality. The four highest rank candidates are
-forwarded to the \ac{GT}.
+\acp{CSC} and \acp{DT}. These are integrated in the \ac{GMT}. The muons received
+from each subdetector are matched and sorted by transverse momentum and
+quality. The four highest rank candidates are forwarded to the \ac{GT}.
 
 \subsection{Computing at \ac{CMS}}
 \label{sec:cms_computing}
