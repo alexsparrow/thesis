@@ -26,8 +26,17 @@
    SCHEDULED: <2012-04-05 Thu>
 ** TODO Interpretation: Why 10% PDF uncertainty?
 ** TODO Add year to title page and department
+* Alex
+** TODO Conversion rejection diagram
+** TODO RTC
+** TODO GMT does not receive
+** TODO 68% error ellipse
+** TODO 6.8.1: loosened combined isolation cut should be a control region was defined
+** TODO NLO cross-sections process by process
+** TODO ISR modelling has a significant uncertainty
+** TODO Say excluded points in SMS
+** TODO "Mother must be" typo
 * Objects
-** TODO Performance of electrons and muons
 ** Alex Wpol
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
     SCHEDULED: <2012-04-04 Wed 10:30>

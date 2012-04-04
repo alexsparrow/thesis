@@ -349,16 +349,18 @@ reconstruction. These will be discussed in the next section.
 \subfloat[]{\label{fig:reco_pf_diag1}\includegraphics[width=0.7\textwidth]{fig/pf_diag1}}\\
 \subfloat[]{\label{fig:reco_pf_diag2}\includegraphics[width=0.45\textwidth]{fig/pf_diag2}}\quad
 \subfloat[]{\label{fig:reco_pf_diag3}\includegraphics[width=0.45\textwidth]{fig/pf_diag3}}
-\caption[]{An event display showing a hadronic jet in~\subref{fig:reco_pf_diag1}
-  the $(x,y)$-plane, \subref{fig:reco_pf_diag2} an $(\eta,\phi)$ view at the
-  surface of the \ac{ECAL} and~\subref{fig:reco_pf_diag3} the same orientation
-  at the surface of the \ac{HCAL}. These two surfaces appear as circular arcs
+\caption[\ac{PF} event display showing a hadronic jet]{An event display showing
+  a hadronic jet in~\subref{fig:reco_pf_diag1} the $(x,y)$-plane,
+  \subref{fig:reco_pf_diag2} an $(\eta,\phi)$ view at the surface of the
+  \ac{ECAL} and~\subref{fig:reco_pf_diag3} the same orientation at the surface
+  of the \ac{HCAL}. These two surfaces appear as circular arcs
   in~\subref{fig:reco_pf_diag1}. The \PKlong, \Ppiminus, \Ppiplus, \Ppizero and
-  the two photons from its decay are shown. The \PKlong, \Ppiminus and two photons
-  result in clear, well-speparated \ac{ECAL} cluters -- round points labelled E1
-  to E4~\ref{fig:reco_pf_diag2}. The \Ppiplus and \Ppiminus are reconstructed as
-  charged tracks -- green lines labelled T1 and T2 -- which point to the two
-  \ac{HCAL} clusters -- round points labelled H1 and H2~\cite{cms_pf_pas}.}
+  the two photons from its decay are shown. The \PKlong, \Ppiminus and two
+  photons result in clear, well-speparated \ac{ECAL} cluters -- round points
+  labelled E1 to E4~\ref{fig:reco_pf_diag2}. The \Ppiplus and \Ppiminus are
+  reconstructed as charged tracks -- green lines labelled T1 and T2 -- which
+  point to the two \ac{HCAL} clusters -- round points labelled H1 and
+  H2~\cite{cms_pf_pas}.}
 \label{fig:reco_pf_diag}
 \end{figure}
 
@@ -495,13 +497,13 @@ jet energy resolution of \ac{PF} and \ac{Calo} jets as a function of jet
 \fig~\ref{fig:reco_pf_jet_angularres}. The improvement given by the \ac{PF}
 algorithm can be clearly seen, particularly at low jet momentum. A similar
 comparison of the \MET resolution can be seen in
-Figure~\ref{fig:reco_pf_met_res}. Again, the \ac{PF} algorithm is seen to offer
+\fig~\ref{fig:reco_pf_met_res}. Again, the \ac{PF} algorithm is seen to offer
 significantly improved resolution.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:reco_pf_jet_energyres_barrel}\includegraphics[width=0.45\textwidth]{fig/pf_jet_energyres_barrel}}\quad
-\subfloat[]{\label{fig:reco_pf_jet_energyres_endcap}\includegraphics[width=0.45\textwidth]{fig/pf_jet_energyres_endcap}}\quad
+\subfloat[Barrel]{\label{fig:reco_pf_jet_energyres_barrel}\includegraphics[width=0.45\textwidth]{fig/pf_jet_energyres_barrel}}\quad
+\subfloat[Endcap]{\label{fig:reco_pf_jet_energyres_endcap}\includegraphics[width=0.45\textwidth]{fig/pf_jet_energyres_endcap}}\quad
 \caption[Jet energy resolution as a function of \Pt]{Jet energy resolution as a
   function of \Pt for the \subref{fig:reco_pf_jet_energyres_barrel} barrel and
   \subref{fig:reco_pf_jet_energyres_endcap} endcap. Calo-jet values are
@@ -512,8 +514,8 @@ significantly improved resolution.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:reco_pf_jet_etares}\includegraphics[width=0.45\textwidth]{fig/pf_jet_etares}}\quad
-\subfloat[]{\label{fig:reco_pf_jet_phires}\includegraphics[width=0.45\textwidth]{fig/pf_jet_phires}}\quad
+\subfloat[$\eta$]{\label{fig:reco_pf_jet_etares}\includegraphics[width=0.45\textwidth]{fig/pf_jet_etares}}\quad
+\subfloat[$\phi$]{\label{fig:reco_pf_jet_phires}\includegraphics[width=0.45\textwidth]{fig/pf_jet_phires}}\quad
 \caption[Jet angular resolution (\ac{RMS}) as a function of \Pt]{Jet angular
   resolution (\ac{RMS}) as a function of \Pt for \subref{fig:reco_pf_jet_etares}
   $\eta$ and \subref{fig:reco_pf_jet_phires} $\phi$. Calo-jets are shown as open
@@ -524,13 +526,13 @@ significantly improved resolution.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:reco_pf_met_metres}\includegraphics[width=0.45\textwidth]{fig/pf_met_metres}}\quad
-\subfloat[]{\label{fig:reco_pf_met_phires}\includegraphics[width=0.45\textwidth]{fig/pf_met_phires}}\quad
-\caption[\MET Resolution]{\subref{fig:reco_pf_met_metres}$\sigma(\MET)/\MET^{\textrm{true}}$ and
-  \subref{fig:reco_pf_met_phires} $\sigma(\phi)$ as a function of true \MET in
-  \ttbar events as determined by a Gaussian fit to each $\MET^{\textrm{true}}$
-  bin. Squares represent Calo-\MET, and upwards triangles \ac{PF} \MET. The
-  solid curves ares fits through these points. The dashed lines indicate the
-  \ac{RMS} width of each bin.}
+\subfloat[$\sigma(\MET)/\MET^{\textrm{true}}$]{\label{fig:reco_pf_met_metres}\includegraphics[width=0.45\textwidth]{fig/pf_met_metres}}\quad
+\subfloat[$\sigma(\phi)$]{\label{fig:reco_pf_met_phires}\includegraphics[width=0.45\textwidth]{fig/pf_met_phires}}\quad
+\caption[\ac{PF} \MET energy and angular resolution in \ttbar events]{\subref{fig:reco_pf_met_metres} $\sigma(\MET)/\MET^{\textrm{true}}$
+  and \subref{fig:reco_pf_met_phires} $\sigma(\phi)$ as a function of true \MET
+  in \ttbar events as determined by a Gaussian fit to each
+  $\MET^{\textrm{true}}$ bin. Squares represent Calo-\MET, and upwards triangles
+  \ac{PF} \MET. The solid curves ares fits through these points. The dashed
+  lines indicate the \ac{RMS} width of each bin.}
  \label{fig:reco_pf_met_res}
 \end{figure}

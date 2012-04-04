@@ -143,7 +143,12 @@ $0.05$. This is illustrated in \fig~\ref{fig:inter_cls_explain1}.
 \centering
 \subfloat[]{\label{fig:inter_cls_explain1}\includegraphics[width=0.49\textwidth]{fig/cls1}}
 \subfloat[]{\label{fig:inter_cls_explain2}\includegraphics[width=0.49\textwidth]{fig/cls2}}
-\caption[]{}
+\caption[Illustration showing the use of the \CLs method]{Illustration showing
+  the use of the \CLs method. \subref{fig:inter_cls_explain1} shows the
+  evaluation of a p-value in the presence of two hypotheses, well-separated in
+  the test statistic. \subref{fig:inter_cls_explain2} shows the case where the
+  null and alternate hypothesis are not well separated. In this case, the
+  calculation of \CLs is shown.}
 \label{fig:inter_cls_explain}
 \end{figure}
 
@@ -216,11 +221,13 @@ Table~\ref{tbl:inter_signal_systematics}.
 
 \begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_400}}\quad
-\subfloat[]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_400}}
-\caption{Comparison of the shape of the profile likelihood function with
-  different systematic effects included at the \ac{CMSSM} point $(\Mzero, \Mhalf)
-  = (80, 400)$}
+\subfloat[Systematic effects]{\label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_400}}\quad
+\subfloat[Muon channel only]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_400}}
+\caption[The profile likelihood as a function of $\mu$]{The profile likelihood
+  as a function of $\mu$ \subref{fig:inter_pl_80_400_syst} with different
+  systematic effects included in the likelihood and
+  \subref{fig:inter_pl_80_400_muon} with the electron channel removed. The results
+  are shown for the \ac{CMSSM} point $(\Mzero, \Mhalf) = (80, 400)$. }
 \label{fig:inter_pl}
 \end{figure}
 
@@ -236,10 +243,9 @@ Table~\ref{tbl:inter_signal_systematics}.
   \label{fig:inter_cls_80_400_syst4}\includegraphics[width=0.32\textwidth]{fig/exp_muon_electron_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
 \subfloat[Muon Channel Only]{
   \label{fig:inter_cls_80_400_muon}\includegraphics[width=0.32\textwidth]{fig/exp_muon_80_400_bgsysts_yes_sigsysts_yes_sigcon_yes}}
-\caption[Distribution of the profile likelihood ratio test statistic for null
-and alternate hypotheses with different systematic effects
-included]{Distribution of the profile likelihood ratio test statistic for null
-  and alternate hypotheses with different systematic effects included. These
+\caption[Distributions of the test statistic, $q_{\mu}$]{Distribution of the
+  test statistic, $q_{\mu}$, for null and alternate hypotheses with different
+  systematic effects included and with the electron channel removed. These
   distributions have been made for the \ac{CMSSM} point $(\Mzero, \Mhalf) = (80,
   400)$. The values of \CLb, \CLspb and \CLs are also shown.}
 \label{fig:inter_cls}
@@ -313,10 +319,11 @@ described in \sec~\ref{sec:framework_susy}.
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{fig/RA4_ExclusionLimit_tanb10}
-\caption[95\% confidence level exclusion plot for the \ac{CMSSM}]{95\% confidence level exclusion plot for the
-  \ac{CMSSM}. Shown are the observed (red), expected (blue dotted) and $\pm
-  1\sigma$ exclusion bands (light blue shaded) as calculated using the \CLs
-  method. Lines of constant squark and gluino mass are also shown.}
+\caption[95\% confidence level exclusion plot for the \ac{CMSSM}]{95\%
+  confidence level exclusion plot for the \ac{CMSSM}. The observed (red),
+  expected (blue dotted) and $\pm 1\sigma$ exclusion bands (light blue shaded)
+  are shown. These are calculated using the \CLs method. Lines of constant
+  squark and gluino mass are also shown.}
 \label{fig:inter_msugra_exclusion}
 \end{figure}
 
@@ -452,10 +459,10 @@ is reduced.
 \subfloat[\Pe, $x=0.5$]{\label{fig:inter_t3w_0p50_el_efftot}\includegraphics[width=0.43\textwidth]{fig/t3w_0p50_electrons_eff_total}}\\
 \subfloat[\Pmu, $x=0.75$]{\label{fig:inter_t3w_0p25_mu_efftot}\includegraphics[width=0.43\textwidth]{fig/t3w_0p25_muons_eff_total}}\quad
 \subfloat[\Pe, $x=0.75$]{\label{fig:inter_t3w_0p25_el_efftot}\includegraphics[width=0.43\textwidth]{fig/t3w_0p25_electrons_eff_total}}
-\caption[Plots of total signal efficiency for muon and electron channels in
-\TthreeW simplified mode]{Plots of total signal efficiency for muon and electron
-  channels in \TthreeW simplified model. Each plot shows efficiency as a function
-  of $(\Mgluino, \Mlsp)$ for a given value of \Mchargino.}
+\caption[Signal efficiency in the \TthreeW simplified model]{Plots of total
+  signal efficiency for muon and electron channels in the \TthreeW simplified
+  model. Each plot shows efficiency as a function of $(\Mgluino, \Mlsp)$ for a
+  given value of \Mchargino.}
 \label{fig:inter_t3w_eff}
 \end{figure}
 
@@ -499,15 +506,15 @@ cascade.
 \centering
 \subfloat[]{\label{fig:inter_t3w_0p75_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst}}
 \subfloat[]{\label{fig:inter_t3w_0p75_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p75_limit_sigsyst_1d}}
-\caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
-  $x=0.25$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
+\caption[Limit in the \TthreeW simplified model with \Mchargino set assuming
+$x=0.25$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   $x=0.25$. The 95\% confidence level upper limit on the cross-section as a
   function of $(\Mgluino, \Mlsp$) is shown in
   \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
   exclusion in terms 1, 10 or 100 times the gluino cross-section predicted by
-  \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper
-  limit as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is
-  the \ac{QCD} cross-section for gluino production.}
+  \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
+  as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
+  \ac{QCD} cross-section for gluino production.}
 \label{fig:inter_t3w_0p75}
 \end{figure}
 
@@ -515,15 +522,15 @@ cascade.
 \centering
 \subfloat[]{\label{fig:inter_t3w_0p50_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit_sigsyst}}
 \subfloat[]{\label{fig:inter_t3w_0p50_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p50_limit_sigsyst_1d}}
-\caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
-$x=0.5$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
+\caption[Limit in the \TthreeW simplified model with \Mchargino set assuming
+$x=0.5$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   $x=0.5$. The 95\% confidence level upper limit on the cross-section as a
   function of $(\Mgluino, \Mlsp$) is shown in
   \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
   exclusion in terms 1, 10 or 100 times the gluino cross-section predicted by
-  \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper
-  limit as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is
-  the \ac{QCD} cross-section for gluino production.}
+  \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
+  as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
+  \ac{QCD} cross-section for gluino production.}
 \label{fig:inter_t3w_0p50}
 \end{figure}
 
@@ -531,15 +538,15 @@ $x=0.5$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
 \centering
 \subfloat[]{\label{fig:inter_t3w_0p25_limit}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_sigsyst}}
 \subfloat[]{\label{fig:inter_t3w_0p25_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t3w_0p25_limit_sigsyst_1d}}
-\caption[Limits for the \TthreeW simplified model with \Mchargino set assuming
-$x=0.75$]{Limits for the \TthreeW simplified model with \Mchargino set assuming
+\caption[Limit in the \TthreeW simplified model with \Mchargino set assuming
+$x=0.75$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   $x=0.75$. The 95\% confidence level upper limit on the cross-section as a
   function of $(\Mgluino, \Mlsp$) is shown in
   \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
   exclusion in terms 1, 10 or 100 times the gluino cross-section predicted by
-  \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper
-  limit as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is
-  the \ac{QCD} cross-section for gluino production.}
+  \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
+  as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
+  \ac{QCD} cross-section for gluino production.}
 \label{fig:inter_t3w_0p25}
 \end{figure}
 
@@ -589,11 +596,12 @@ sensitivity.
 \centering
 \subfloat[]{\label{fig:inter_t2tt_limit}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_sigsyst}}
 \subfloat[]{\label{fig:inter_t2tt_limit_1d}\includegraphics[width=0.49\textwidth]{fig/t2tt_limit_sigsyst_1d}}
-\caption[]{95\% upper limit on the cross-section for the \Ttwott simplified
-  model. The two-dimensional plot \subref{fig:inter_t2tt_limit} shows the upper
-  limit as a function of $(\Mstop, \Mlsp)$. The contours overlayed show this
-  exclusion in terms of 1, 10 and 1000 times the stop production cross-section
-  predicted by \ac{QCD}. The upper limit is shown as a function of \Mstop in
+\caption[Limit in the \Ttwott simplified model]{Limit in the \Twott simplified
+  model. The 95\% confidence level upper limit on the cross-section as a
+  function of $(\Mstop, \Mlsp$) is shown in
+  \subref{fig:inter_t3w_0p25_limit}. The overlayed contours show this exclusion
+  in terms of 1, 10 and 1000 times the stop production cross-section predicted
+  by \ac{QCD}. The upper limit is shown as a function of \Mstop in
   \subref{fig:inter_t2tt_limit_1d} for $\Mlsp = \unit{50}{\GeV}$. }
 \label{fig:inter_t2tt}
 \end{figure}
