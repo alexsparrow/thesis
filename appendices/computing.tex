@@ -17,11 +17,11 @@ required to satisfy analysis code requests for higher-level observables. The
 dependency chain between calculated quantities may be viewed as a tree. The
 leaves of this tree correspond to quantities stored directly in the \ac{ROOT}
 file (or an alternative serialisation format). To minimise computation, each
-node in this tree performs calculation (or I/O in the case of the leaf nodes)
+node in this tree performs calculation (or \ac{IO} in the case of the leaf nodes)
 only once. The results are then cached. Subsequent use of this quantity then
 returns the cached result directly. Furthermore, access to quantities dependent
 on others which have already been calculated will require the minimum necessary
-calculation, reutilising cached values and minimising further \ac{I/O} or CPU
+calculation, reutilising cached values and minimising further \ac{IO} or CPU
 usage.
 
 As well as the performance advantages of this approach, it has the benefit of
