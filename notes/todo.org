@@ -24,18 +24,9 @@
 **** TODO More refs
 ** TODO boldmath in titles
    SCHEDULED: <2012-04-05 Thu>
-** TODO Interpretation: Why 10% PDF uncertainty?
 ** TODO Add year to title page and department
 * Alex
-** TODO Conversion rejection diagram
-** TODO RTC
-** TODO GMT does not receive
-** TODO 68% error ellipse
-** TODO 6.8.1: loosened combined isolation cut should be a control region was defined
-** TODO NLO cross-sections process by process
-** TODO ISR modelling has a significant uncertainty
 ** TODO Say excluded points in SMS
-** TODO "Mother must be" typo
 * Objects
 ** Alex Wpol
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
@@ -1160,3 +1151,30 @@ Mostly done!
 ** DONE clarify uncertainty naming
    CLOSED: [2012-04-04 Wed 08:58]
    - State "DONE"       from "TODO"       [2012-04-04 Wed 08:58]
+** DONE GMT does not receive
+   CLOSED: [2012-04-04 Wed 13:40]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 13:40]
+** DONE RTC
+   CLOSED: [2012-04-04 Wed 13:40]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 13:40]
+** DONE Conversion rejection diagram
+   CLOSED: [2012-04-04 Wed 13:39]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 13:39]
+** DONE ISR modelling has a significant uncertainty
+   CLOSED: [2012-04-04 Wed 13:43]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 13:43]
+** DONE 68% error ellipse
+   CLOSED: [2012-04-04 Wed 13:45]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 13:45]
+** DONE 6.8.1: loosened combined isolation cut should be a control region was defined
+   CLOSED: [2012-04-04 Wed 13:50]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 13:50]
+** DONE NLO cross-sections process by process
+   CLOSED: [2012-04-04 Wed 13:59]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 13:59]
+** DONE "Mother must be" typo
+   CLOSED: [2012-04-04 Wed 13:59]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 13:59]
+** CANCELLED Interpretation: Why 10% PDF uncertainty?
+   CLOSED: [2012-04-04 Wed 14:08]
+   - State "CANCELLED"  from "TODO"       [2012-04-04 Wed 14:08]
