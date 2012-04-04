@@ -19,7 +19,6 @@
 **** TODO the electroweak theory - reference V-A
 **** TODO the electroweak theory - cite Weinberg angle
 **** TODO EWSB - reference lowest energy states are spacetime independent
-**** TODO QCD: reference CKM matrix
 **** TODO QCD: reference Gell-Man paper for color
 *** SUSY
 **** TODO More refs
@@ -37,8 +36,6 @@
 ** Alex SUSY search
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
-*** TODO clarify uncertainty naming
-
 
 * Old
   :VISIBILITY: folded
@@ -1148,3 +1145,9 @@ Mostly done!
 ** DONE missing-energy -> missing energy
    SCHEDULED: <2012-04-05 Thu> CLOSED: [2012-04-04 Wed 03:10]
    - State "DONE"       from "TODO"       [2012-04-04 Wed 03:10]
+** DONE QCD: reference CKM matrix
+   CLOSED: [2012-04-04 Wed 08:42]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 08:42]
+** DONE clarify uncertainty naming
+   CLOSED: [2012-04-04 Wed 08:58]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 08:58]
