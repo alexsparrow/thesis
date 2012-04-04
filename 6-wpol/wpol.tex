@@ -749,7 +749,7 @@ lower efficiencies in the electron channel, this is not quite a doubling of the
 sample size but should still significantly reduce the statistical error.
 
 \section{Electron Channel}
-\subsection{\ac{QCD} Background}
+\subsection{\ac{QCD} and \gammajets Backgrounds}
 The principal difficulty faced by the electron channel over-and-above the muon
 channel arises from the \ac{QCD} and \gammajets backgrounds. As has been seen,
 these remain even after tight kinematic and lepton identification cuts. Since
@@ -772,10 +772,10 @@ possible. This has resulted in the tightened kinematic and identification cuts
 which have already been detailed. The second focussed on accurately modelling
 the remaining background component using a data-driven procedure. This will be
 described in \sec~\ref{sec:wpol_data_driven_bg}. It should be noted that these
-two strategies do not always complement each other. It was possible to achieve
-larger supression of the \ac{QCD} background whilst worsening the fit
-result. This occurs because the data-driven template becomes ``flatter'' and the
-fit is less able to distinguish it from the helicity templates in the fit.
+two strategies do not always complement each other. It is possible to achieve
+larger background suppression whilst worsening the fit result. This occurs
+because the data-driven template becomes ``flatter'' and the fit is less able to
+distinguish it from the helicity templates.
 
 \subsection{Kinematics}
 Before continuing, it is useful to discuss the form of the \ac{QCD} and
@@ -790,7 +790,6 @@ fake electron will tend to be poorly reconstructed, and thus collinear with the
 source of fake \MET, again leading to $\LP \sim 1$. A similar argument can be
 made in the case of \gammajets events where now the photon is the source of both
 fake \MET and the fake lepton.
-
 
 \subsection{Optimisation of Selection Requirements}
 \label{sec:wpol_electron_opt}
@@ -884,8 +883,8 @@ respect to varying cuts on \MET and \MT.]{Plots illustrating the signal
 \label{sec:wpol_data_driven_bg}
 To obtain a reliable shape template for \ac{QCD} and \gammajets events, a
 data-driven procedure is used. For this purpose, a control sample is needed,
-enriched with \ac{QCD} events which are known to resemble those entering the
-analysis selection. Such a control sample is often constructed by
+enriched with \ac{QCD} and \gammajets events which are known to resemble those
+entering the analysis selection. Such a control sample is often constructed by
 ``anti-selection''. Consider the variables used for the analysis selection as a
 multi-dimensional space, in which the cut values enclose some region containing
 the selected sample -- the ``selected'' region. The ``anti-selected'' sample is
@@ -896,7 +895,7 @@ and anti-selected samples, it can be expected that they will share similar
 kinematic properties.
 
 A suitable variable must satisfy two criteria. Firstly, it must provide
-separation power between the \ac{QCD} and \gammajets backgrounds and the other
+separation power between the \ac{QCD}/\gammajets backgrounds and the other
 \ac{EWK} signal and background processes. Secondly, the \LP shape must be
 similar between the selected and anti-selected regions. Put another way, the
 inverted variable must be uncorrelated with \LP. An additional requirement is
@@ -924,7 +923,7 @@ comined in order to mimimise the statistical uncertainty of the template.
 \subfloat[]{\label{fig:wpol_antiselected1}\includegraphics[width=0.4\textwidth]{fig/antiselected1}}\quad
 \subfloat[]{\label{fig:wpol_antiselected2}\includegraphics[width=0.4\textwidth]{fig/antiselected2}}
 \caption[]{The \LP variable shown for selected (black) and anti-selected (red)
-  simulated \ac{QCD} events after \subref{fig:wpol_antiselected1} $\PtW >
+  simulated \ac{QCD}/\gammajets events after \subref{fig:wpol_antiselected1} $\PtW >
   \unit{50}{\GeV}$ and \subref{fig:wpol_antiselected2} $\MT > \unit{50}{\GeV}$}
 \label{fig:wpol_ele_sel_antisel}
 \end{figure}
