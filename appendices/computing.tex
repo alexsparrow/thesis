@@ -1,17 +1,17 @@
 \chapter{Computing}
-\section{\acl{SUSYv2}}
-\ac{SUSYv2} is a standalone, \ac{ROOT}-based analysis framework. Analysis
+\section{\susyv2}
+\susyv2 is a standalone, \ac{ROOT}-based analysis framework. Analysis
 scripts are written in the Python programming language. These make use of
 low-level, high-performance classes written in C++. This provides a good
 compromise between speed and flexibility.
 
-The \ac{SUSYv2} package has been used for a number of analyses at
+The \susyv2 package has been used for a number of analyses at
 \ac{CMS}. These have primarily been \ac{SUSY}-based analyses. It has also been
 used for the \PW polarisation measurement as well as several other projects. The
 vast majority of the initial code was written by Dr. John Jones with subsequent
 contributions from a number of others.
 
-The \ac{SUSYv2} code aims to minimise the number of reads performed on a
+The \susyv2 code aims to minimise the number of reads performed on a
 \ac{ROOT} tree by reading branches on demand and performing lazy calculations as
 required to satisfy analysis code requests for higher-level observables. The
 dependency chain between calculated quantities may be viewed as a tree. The
