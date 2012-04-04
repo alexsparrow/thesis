@@ -5,34 +5,35 @@
 ** TODO go through reference formatting
    SCHEDULED: <2012-04-04 Wed>
 ** TODO Section/Chapter titles
+   SCHEDULED: <2012-04-05 Thu>
 ** TODO Figure placement
+   SCHEDULED: <2012-04-05 Thu>
 ** TODO Figure captions
+   SCHEDULED: <2012-04-05 Thu>
 ** TODO Alex's corrections to intro/abstract/conclusion
+   SCHEDULED: <2012-04-05 Thu>
 ** TODO More refs
+   SCHEDULED: <2012-04-05 Thu>
 *** SM
 **** TODO References in last para of Yang-Mills
-**** TODO reference dirac equation
 **** TODO the electroweak theory - reference V-A
 **** TODO the electroweak theory - cite Weinberg angle
 **** TODO EWSB - reference lowest energy states are spacetime independent
-**** TODO Higgs Mechanism - reference unitarity gauge
 **** TODO QCD: reference CKM matrix
 **** TODO QCD: reference Gell-Man paper for color
 *** SUSY
 **** TODO More refs
-** TODO statistics jargon
 ** TODO boldmath in titles
+   SCHEDULED: <2012-04-05 Thu>
 ** TODO Interpretation: Why 10% PDF uncertainty?
 ** TODO Add year to title page and department
-* SUSY
-** TODO GMSB/AMSB: discuss what they are and ref
-   SCHEDULED: <2012-04-03 Tue>
 * Objects
 ** TODO Performance of electrons and muons
 ** Alex Wpol
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
-    SCHEDULED: <2012-03-22 Thu 10:30>
+    SCHEDULED: <2012-04-04 Wed 10:30>
 *** TODO Figure 6.5: Tidy up
+    SCHEDULED: <2012-04-04 Wed 10:00>
 ** Alex SUSY search
 *** TODO Table 7.6 and 7.7 should be clarified
     SCHEDULED: <2012-03-23 Fri>
@@ -1131,3 +1132,18 @@ Mostly done!
 ** DONE Z' comment from Alex
    CLOSED: [2012-04-03 Tue 20:17]
    - State "DONE"       from "TODO"       [2012-04-03 Tue 20:17]
+** DONE Higgs Mechanism - reference unitarity gauge
+   CLOSED: [2012-04-04 Wed 02:29]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 02:29]
+** DONE reference dirac equation
+   CLOSED: [2012-04-04 Wed 02:38]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 02:38]
+** DONE GMSB/AMSB: discuss what they are and ref
+   SCHEDULED: <2012-04-04 Wed 10:00> CLOSED: [2012-04-04 Wed 02:51]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 02:51]
+** DONE statistics/systematics jargon
+   SCHEDULED: <2012-04-05 Thu> CLOSED: [2012-04-04 Wed 03:09]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 03:09]
+** DONE missing-energy -> missing energy
+   SCHEDULED: <2012-04-05 Thu> CLOSED: [2012-04-04 Wed 03:10]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 03:10]
