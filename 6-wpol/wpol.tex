@@ -1130,13 +1130,13 @@ also performed using a preliminary version of the continuous corrections. The
 results were found to be fully consistent with those obtained using the global
 corrections.
 
-\subsubsection{Electron \ac{QCD} Background Estimation}
+\subsubsection{Electron \ac{QCD}/\gammajets Background Estimation}
 \label{sec:wpol_syst_ele_bgest}
 As discussed in \sec~\ref{sec:wpol_data_driven_bg}, the template used to fit the
 \ac{QCD} and \gammajets backgrounds in the electron channel has been derived
 using a data-driven method. As was seen, the simulation shows a very similar \LP
 shape between the selected and anti-selected samples. However, the small
-differences that can be seen coupled with the finite statistical precision of
+differences that can be seen coupled with the limited statistical precision of
 the template, necessitate the inclusion of additional systematic
 uncertainties. These are evaluated using the \ac{QCD} and \gammajets \ac{MC}
 samples.
@@ -1145,30 +1145,29 @@ The first uncertainty represents the degree, as far as can be judged from the
 enriched \ac{QCD} and \gammajets samples, that the anti-selected template
 mis-models the \LP shape in the selected region. In other words, this is the
 bias introduced by any correlation between \LP and the track-supercluster
-matching variables which were used to define the anti-selected region. To
-evaluate this uncertainty, 500 toy \ac{MC} experiments are performed. For each
-experiment, \ac{MC} pseudodata is generated from the \LP shape in the selected
-region. This involves randomly fluctuating, or ``re-dicing'' the bins of the
-template according to their statistical uncertainties.
+matching variables, which were used to define the anti-selected region. To
+evaluate this uncertainty, 500 toy \ac{MC} experiments are performed. In each
+experiment, a ``re-diced'' \LP distribution is constructed from \ac{MC}
+pseudodata (in the selected sample). This involves randomly fluctuating, or
+``re-dicing'', the bins of the \LP template according to their statistical
+uncertainties.
 
-Each toy experiment is fit using both the actual \ac{QCD}/\gammajets shape as
-well as the anti-selected template (with contamination from other processes
-included). The ensemble distributions of the fit parameters are then compared
-between the ``true'' case, using the actual \ac{MC} background shapes, and the
-``data-driven'' case using the anti-selected template. The difference in the
-means of the ensemble distributions of the parameters \f0 and \fLmfR is then
-taken as a systematic uncertainty. This is performed separately for both
-charges.
+The \LP distribution from each toy experiment is then fit using both the actual
+\ac{QCD}/\gammajets shape as well as the anti-selected template (with
+contamination from other processes included). The ensemble distributions of the
+fit parameters are then compared between the ``true'' case, using the actual
+\ac{MC} background shapes, and the ``data-driven'' case, using the anti-selected
+template. The difference in the means of the ensemble distributions of the
+parameters \f0 and \fLmfR is then taken as a systematic uncertainty.
 
 A further uncertainty is included to account for the limited statistical
-precision of the anti-selected template. The anti-selected template is taken
-from simulation. Again 500 toy \ac{MC} experiments are performed. In each case,
-the anti-selected template, derived from \ac{MC}, is re-diced. The template
-uncertainties correspond to the integrated luminosity of the measurement. Each
-re-diced template is then fit, along with the standard signal and \ac{EWK}
-background templates, to the \ac{MC} pseudodata. The ensemble distributions of
-\f0 and \fLmfR are then constructed and the \ac{RMS} widths taken as the
-systematic uncertainty.
+precision of the anti-selected template. Again, 500 toy \ac{MC} experiments are
+performed. In each case, the anti-selected template, derived from \ac{MC}, is
+re-diced. The template uncertainties correspond to the integrated luminosity of
+the measurement. Each re-diced template is fit, along with the standard signal
+and \ac{EWK} background templates, to \ac{MC} pseudodata. The ensemble
+distributions of \f0 and \fLmfR are then constructed. The \ac{RMS} widths of
+these distributions are assigned as systematic uncertainties.
 
 \subsubsection{Vertex Multiplicity}
 The vertex multiplicity changed rapidly during data taking. Due to the long
