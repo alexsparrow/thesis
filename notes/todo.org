@@ -24,9 +24,6 @@
 **** TODO More refs
 ** TODO boldmath in titles
    SCHEDULED: <2012-04-05 Thu>
-** TODO Add year to title page and department
-* Alex
-** TODO Say excluded points in SMS
 * Objects
 ** Alex Wpol
 *** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
@@ -1178,3 +1175,12 @@ Mostly done!
 ** CANCELLED Interpretation: Why 10% PDF uncertainty?
    CLOSED: [2012-04-04 Wed 14:08]
    - State "CANCELLED"  from "TODO"       [2012-04-04 Wed 14:08]
+** DONE Add year to title page and department
+   CLOSED: [2012-04-04 Wed 14:19]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 14:19]
+** DONE Say excluded points in SMS
+   CLOSED: [2012-04-04 Wed 14:40]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 14:40]
+** DONE ttbar
+   CLOSED: [2012-04-04 Wed 14:40]
+   - State "DONE"       from "TODO"       [2012-04-04 Wed 14:40]
