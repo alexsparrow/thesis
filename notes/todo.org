@@ -10,26 +10,15 @@
    SCHEDULED: <2012-04-05 Thu>
 ** TODO Figure captions
    SCHEDULED: <2012-04-05 Thu>
-** TODO Alex's corrections to intro/abstract/conclusion
-   SCHEDULED: <2012-04-05 Thu>
 ** TODO Acronyms
 ** TODO More refs
    SCHEDULED: <2012-04-05 Thu>
 *** SM
 **** TODO References in last para of Yang-Mills
 **** TODO the electroweak theory - reference V-A
-**** TODO the electroweak theory - cite Weinberg angle
-**** TODO EWSB - reference lowest energy states are spacetime independent
 **** TODO QCD: reference Gell-Man paper for color
 *** SUSY
 **** TODO More refs
-* Objects
-** Alex Wpol
-*** TODO Figure 6.5: Tidy up
-    SCHEDULED: <2012-04-04 Wed 10:00>
-** Alex SUSY search
-*** TODO Table 7.6 and 7.7 should be clarified
-    SCHEDULED: <2012-03-23 Fri>
 
 
 * Old
@@ -1185,3 +1174,18 @@ Mostly done!
 ** CANCELLED 6.6.2: Explain why the fake electrons gamma is badly measured
    SCHEDULED: <2012-04-04 Wed 10:30> CLOSED: [2012-04-05 Thu 09:00]
    - State "CANCELLED"  from "TODO"       [2012-04-05 Thu 09:00]
+** DONE Alex's corrections to intro/abstract/conclusion
+   SCHEDULED: <2012-04-05 Thu> CLOSED: [2012-04-05 Thu 09:03]
+   - State "DONE"       from "TODO"       [2012-04-05 Thu 09:03]
+** DONE EWSB - reference lowest energy states are spacetime independent
+   CLOSED: [2012-04-05 Thu 09:09]
+   - State "DONE"       from "TODO"       [2012-04-05 Thu 09:09]
+** DONE the electroweak theory - cite Weinberg angle
+   CLOSED: [2012-04-05 Thu 09:09]
+   - State "DONE"       from "TODO"       [2012-04-05 Thu 09:09]
+** DONE Figure 6.5: Tidy up
+   SCHEDULED: <2012-04-04 Wed 10:00> CLOSED: [2012-04-05 Thu 10:20]
+   - State "DONE"       from "TODO"       [2012-04-05 Thu 10:20]
+** DONE Table 7.6 and 7.7 should be clarified
+   SCHEDULED: <2012-03-23 Fri> CLOSED: [2012-04-05 Thu 10:20]
+   - State "DONE"       from "TODO"       [2012-04-05 Thu 10:20]
