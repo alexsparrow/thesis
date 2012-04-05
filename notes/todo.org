@@ -1,7 +1,4 @@
-/vols/cms01/as1604/SUSY-svn/WPol2/scripts/ElPlots
 * Tasks
-** TODO check all references are in fact referenced
-   SCHEDULED: <2012-04-04 Wed>
 ** TODO go through reference formatting
    SCHEDULED: <2012-04-04 Wed>
 ** TODO Section/Chapter titles & boldmath
@@ -10,7 +7,6 @@
    SCHEDULED: <2012-04-05 Thu>
 ** TODO Figure captions
    SCHEDULED: <2012-04-05 Thu>
-** TODO Acronyms
 ** TODO More refs
    SCHEDULED: <2012-04-05 Thu>
 *** SM
@@ -1189,3 +1185,9 @@ Mostly done!
 ** DONE Table 7.6 and 7.7 should be clarified
    SCHEDULED: <2012-03-23 Fri> CLOSED: [2012-04-05 Thu 10:20]
    - State "DONE"       from "TODO"       [2012-04-05 Thu 10:20]
+** DONE check all references are in fact referenced
+   CLOSED: [2012-04-05 Thu 12:15] SCHEDULED: <2012-04-04 Wed>
+   - State "DONE"       from "TODO"       [2012-04-05 Thu 12:15]
+** DONE Acronyms
+   CLOSED: [2012-04-05 Thu 12:15]
+   - State "DONE"       from "TODO"       [2012-04-05 Thu 12:15]
