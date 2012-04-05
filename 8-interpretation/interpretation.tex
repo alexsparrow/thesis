@@ -8,7 +8,7 @@ desirable to provide additional information in the form of a statistical
 interpretation of the results. Such an interpretation typically serves the
 following goals.
 \begin{itemize}
-\item To inndicate the sensitivity of the analysis to the proposed model or set
+\item To indicate the sensitivity of the analysis to the proposed model or set
   of models. This can then be used as an objective measure by which to compare
   different analyses or to benchmark the progress of a single analysis as data
   is collected.
@@ -73,10 +73,10 @@ $\theta$ given some set of observations. The value of $\theta$ which maximises
 $\likelihood$ is known as the \acf{MLE} of $\theta$, denoted
 $\hat{\theta}$. Often it will be convenient to work with the logarithm of the
 likelihood function, $\ln\likelihood$. Since the logarithm is a monotonically
-increasing funtion, its maxima coincide with the maxima of $\likelihood$.
+increasing function, its maxima coincide with those of $\likelihood$.
 
 
-\subsection{Profile Likelihood and Wilk's Theorem}
+\subsection{Profile Likelihood and Wilks' Theorem}
 \label{sec:inter_profile_likelihood}
 The likelihood function for a complex experiment may depend on a large number of
 free parameters. A number of these may be introduced to describe experimental
@@ -92,7 +92,7 @@ profile likelihood ratio is defined as
   \lambda = \frac{\likelihood\left(\mu, \hat{\hat{\nu}}\left(\mu\right)\right)}{\likelihood\left(\hat{\mu}, \hat{\nu}\right)},
 \end{equation*}
 where $\mu$ are the parameters of interest and $\nu$ the nuisance
-paramters. $\hat{\mu}$ and $\hat{\nu}$ are the \acp{MLE} of $\mu$ and $\nu$
+parameters. $\hat{\mu}$ and $\hat{\nu}$ are the \acp{MLE} of $\mu$ and $\nu$
 respectively. $\hat{\hat{\nu}}$ is the \emph{conditional} \ac{MLE} of $\nu$ -
 the \ac{MLE} of $\nu$ for a given value of $\mu$.
 
@@ -186,12 +186,12 @@ covered. The test statistic that has been used is the one-sided profile
 likelihood ratio, $\qmu=-2\ln\lambda$~\cite{cl_computation,
   modified_frequentist, atlas_cms_higgs}.
 
-\section{The Single Lepton Supersymmetry Search}
+\section{The Single Lepton \ac{SUSY} Search}
 The full development of the likelihood function used to model the single lepton
-supersymmetry search is covered in Appendix~\ref{sec:inter_1lepton}. In this
+\ac{SUSY} search is covered in Appendix~\ref{sec:inter_1lepton}. In this
 section, only a few pertinent points will be discussed. Firstly, the evaluation
 of model-dependent systematic effects associated with the signal yield. And
-secondly, some discussion of validation work performed to demonstrate that the
+secondly, details of validation work performed to demonstrate that the
 statistical procedure and software infrastructure are functioning as
 expected. The statistical procedure has been implemented using the \roostats
 software framework~\cite{roostats, roostats_web}.
@@ -208,7 +208,7 @@ and 1\% are assigned respectively.
 The signal efficiency will also be affected by the choice of \acp{PDF} in the
 simulated samples and the calculation of the \ac{NLO} cross-sections. Whilst in
 principal, these would be expected to vary across the parameter space of a given
-theoretical model, a conservative 10\% systematic was assigned instead.
+theoretical model, a conservative 10\% systematic is assigned instead.
 
 For the \ac{JES} and \MET resolution uncertainties, these are calculated as for
 the background case (see \secs~\ref{sec:susy_jes_uncertainty} and
@@ -253,9 +253,9 @@ Table~\ref{tbl:inter_signal_systematics}.
 
 \subsection{Validation}
 \label{sec:inter_validation}
-To validate the model, a number of cross-checks were performed. Firstly, the
-\ac{PL} and \CLs methods were compared and found to agree. In general, the \CLs
-method is expected to be more conservative by convering the full range of the
+To validate the model, a number of cross-checks are performed. Firstly, the
+\ac{PL} and \CLs methods are compared and found to agree. In general, the \CLs
+method is expected to be more conservative by covering the full range of the
 nuisance parameters in the model.
 
 To see how the \ac{PL} and \CLs results change with modifications to the
@@ -327,7 +327,7 @@ described in \sec~\ref{sec:framework_susy}.
 \label{fig:inter_msugra_exclusion}
 \end{figure}
 
-\subsection{\ac{CMSSM}}
+\subsection{The \ac{CMSSM}}
 The \ac{CMSSM} was previously described in \sec~\ref{sec:cmssm}. As explained,
 the \ac{CMSSM} makes a number of somewhat arbitrary choices which restrict the
 \ac{SUSY} toplogies signatures it is able to encompass. Whilst these make it
@@ -347,7 +347,7 @@ these must be evaluated for each point in the $(\Mzero, \Mhalf)$-plane. These
 are evaluated using the same analysis procedure as used for the data and \ac{SM}
 \ac{MC} samples. The \ac{CMSSM} sample is produced using the Pythia event
 generator, with the two mass parameters are varied independently in steps of
-\unit{20}{\GeV} to produce a grid. For each grid point, 10000 events were
+\unit{20}{\GeV} to produce a grid. For each grid point, 10000 events are
 generated. Due to the large number of events, the detector response is simulated
 using the \fastsim simulation package (see \sec~\ref{sec:cms_computing}). This
 has been extensively validated and tuned against the full detector simulation
@@ -380,11 +380,11 @@ p290), this would appear to be consistent.
 For consistency with other \ac{SUSY} searches at the \ac{LHC}, a limit has been
 set using the \CLs method described in \sec~\ref{sec:inter_cls}. Whilst it is
 possible, to set an upper limit on the signal strength parameter, $\mu$, this
-becomes highly computationally intensive. Instead, a simple exclusion was
+becomes highly computationally intensive. Instead, a simple exclusion is
 produced assuming \ac{NLO} cross-sections. This is shown in
 \fig~\ref{fig:inter_msugra_exclusion}. All terms discussed in
 Appendix~\ref{sec:inter_1lepton} have been included. The expected limit and $\pm
-1\sigma$ bands were evaluated by setting the observations for each bin to be
+1\sigma$ bands are evaluated by setting the observations for each bin to be
 exactly that predicted from data.
 
 The exclusion seems to be well predicted by the efficiency maps, with
@@ -415,7 +415,7 @@ interval using the \CLs method, the \ac{PL} method has been used instead. In
 addition, further simplification of the likelihood is achieved by including a
 single nuisance parameter for the signal efficiency uncertainty. This is then
 assigned a conservative 25\% uncertainty, constant across the model parameter
-space. This value was chosen by taking representative values of the \MET scale
+space. This value is chosen by taking representative values of the \MET scale
 and resolution uncertainties given in Table~\ref{tbl:inter_signal_systematics},
 for the \ac{CMSSM}, and adding in quadrature with the 10\% \ac{PDF} uncertainty:
 \begin{equation*}
@@ -482,12 +482,12 @@ available in the cascade. This generally reduces the \HT present in the event,
 and consequently the efficiency. Events entering the sample in this region tend
 to be dominated by \ac{ISR}. The modelling of \ac{ISR} in simulation has a
 significant associated uncertainty. For this reason, the region immediately
-below the diagonal has been excluded from the limit. This excluded range was
+below the diagonal has been excluded from the limit. This excluded range is
 chosen to remove regions where the upper limit appeared to fluctuate at
 random. For $x=0.50$ and $x=0.75$, the region $\Mgluino - \Mlsp <
-\unit{100}{\GeV}$ was excluded. For $x=0.25$, \Mchargino is close to \Mlsp and
+\unit{100}{\GeV}$ is excluded. For $x=0.25$, \Mchargino is close to \Mlsp and
 presumably the efficiency is more sensitive to the modellling of \ac{ISR}. In
-this case the region, $\Mgluino - \Mlsp < \unit{140}{\GeV}$ was ignored.
+this case, the region $\Mgluino - \Mlsp < \unit{140}{\GeV}$ is ignored.
 
 Comparing the exclusion contours, there does not appear to be a strong
 dependence on \Mchargino. But the reach of the search can be seen to improve

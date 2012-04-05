@@ -38,13 +38,14 @@ is more efficient at low momentum ($p < \unit{5}{\GeV}$) since it requires only
 a single segment in the muon chambers.
 
 \subsubsection{Standalone Muons}
-\emph{Standalone muons} are based solely on measurements in the muon chambers. The hits
-in each chamber are fit individually to obtain seeds -- a position and direction
-vector along with an estimate of the transverse momentum. These form the basis
-of a track fit in the muon chambers based on the Kalman-filter technique. The
-fit is constrained to the vertex in order to reject cosmic ray muons. Since much
-of the calibration and validation work for the muon system was performed using
-cosmic rays, a separate algorithm was developed for this purpose~\cite{cms_mu_reco_cosmic}.
+\emph{Standalone muons} are based solely on measurements in the muon
+chambers. The hits in each chamber are fit individually to obtain seeds -- a
+position and direction vector along with an estimate of the transverse
+momentum. These form the basis of a track fit in the muon chambers based on the
+Kalman-filter technique~\cite{kalman_filter}. The fit is constrained to the
+vertex in order to reject cosmic ray muons. Since much of the calibration and
+validation work for the muon system was performed using cosmic rays, a separate
+algorithm was developed for this purpose~\cite{cms_mu_reco_cosmic}.
 
 \subsubsection{Global Muons}
 \emph{Global muons} are an extension of standalone muons to include measurements
