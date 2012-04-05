@@ -43,7 +43,7 @@ the electron is more energetic.
 \centering
 \includegraphics[width=0.98\textwidth]{fig/MC_CosThetaStar1Plus}
 \caption[Distribution of $\cos\thetastar$ for \PWp bosons in three bins of
-\PtW.]{Distribution of $\cos\thetastar$ for \PWp bosons in three bins of \PtW.}
+\PtW.]{Distribution of $\cos\thetastar$ for \PWp bosons in three bins of \PtW. The black lines shows the results of an analytical fit~\cite{wpol_an}.}
 \label{fig:wpol_costheta}
 \end{figure}
 
@@ -56,7 +56,7 @@ the electron is more energetic.
 \caption[Correlation of $\cos\thetastar$ and $2\LP - 1$ for \PW bosons in
 \ac{MC}]{Correlation of $\cos\thetastar$ and $2\LP - 1$ for \PW bosons in
   \ac{MC}. The correlation is shown for two different cuts on the transverse
-  momentum, \PtW.}
+  momentum, \PtW~\cite{wpol_an}.}
 \label{fig:wpol_costheta_corr}
 \end{figure}
 
@@ -165,10 +165,10 @@ effects, changing its shape.
 
 \subsubsection[Re-weighting $\cos\thetastar$]{Re-weighting \boldmath{$\cos\thetastar$}}
 To account for the aforementioned experimental issues, a template re-weighting
-method is employed. Effectively, \ac{MC} simulation is used to derive three
-re-weighting factors, each a function of $\cos\thetastar$ and binned according
-to boson charge, transverse momentum, \PtW, and rapidity, \YW. These can be
-written as
+method is employed~\cite{wpol_an}. Effectively, \ac{MC} simulation is used to
+derive three re-weighting factors, each a function of $\cos\thetastar$ and
+binned according to \PW boson charge, transverse momentum, \PtW, and rapidity,
+\YW. These can be written as
 \begin{equation}
 \label{eqn:wpol_reweighting_factor}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
@@ -195,7 +195,7 @@ these parameters.
 This re-weighting procedure avoids the need to generate separate \ac{MC} event
 samples for each polarisation state. Using the re-weighted sample, any
 distribution may be produced corresponding to a pure sample of polarised \PW
-bosons. In particular, this allows the derivation of \LP shape templates which
+bosons. In particular, this allows the derivation of \LP shape templates, which
 may then be fit to the corresponding data distribution in order to extract the
 helicity fractions. This ensures that all experimental and acceptance effects
 can be accounted for -- providing of course that they are adequately modelled by
@@ -223,13 +223,13 @@ parameters are also known to vary across the phase space of the \PW boson. The
 intent of this analysis is to measure the \emph{average values} of these
 parameters across a region of the \PW phase space. Consequently, the \LP
 helicity templates must be corrected to account for these variations. Put
-another way, the left-handed template for example, should embody the \LP shape
+another way, the left-handed template, for example, should embody the \LP shape
 in regions of the phase space known to contain more left-handed \PW bosons. This
 step is not necessary for the $\cos\thetastar$ templates, since by definition,
-they are invariant across the \PW phase space
+they are invariant across the \PW phase space.
 
 An extra re-weighting factor is defined which effectively gives preference to
-regions containing more bosons of the desired \PW helicity,
+regions containing more \PW bosons of the desired helicity,
 \begin{equation*}
 R_i\left(\PtW, \YW, \pm\right) =
 \frac{{f'}_i \left(\PtW, \YW, \pm\right)}{{f'}_i^{\textrm{all}}},
@@ -238,11 +238,11 @@ where ${f'}_i\left(\PtW, \YW, \pm\right)$ is the fraction of \PW bosons in the
 appropriate \PtW and \YW bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the
 same fraction integrated over all of the phase space bins. The prime added to
 the fraction is significant. It indicates that the phase space of the helicity
-fractions is that obtained after application of a reconstruction-level cut on
-\PtW. This must be the same cut value as employed in the analysis itself and is,
-due to experimental and resolution effects, significantly different from a
+fractions is that obtained after a reconstruction-level cut on \PtW. This must
+be the same cut value as employed in the analysis itself and is, due to
+experimental and resolution effects, significantly different from a
 generator-level cut on the same quantity. The \PW phase space is shown in
-\fig~\ref{fig:wpol_genreco} after a reconstruction level cut, $\PtW >
+\fig~\ref{fig:wpol_genreco} after a reconstruction-level cut, $\PtW >
 \unit{50}{\GeV}$.
 
 \begin{figure}[h!]
@@ -252,7 +252,7 @@ generator-level cut on the same quantity. The \PW phase space is shown in
   \label{fig:wpol_genreco_ppt}\includegraphics[width=0.47\textwidth]{fig/ptw_mcrecocut}}\quad
 \caption[Generator level \PW phase space distributions]{Generator level \PW
   phase space distributions after a reconstruction-level cut, $\PtW >
-  \unit{50}{\GeV}$.}
+  \unit{50}{\GeV}$~\cite{wpol_an}.}
 \label{fig:wpol_genreco}
 \end{figure}
 
@@ -261,9 +261,9 @@ generator-level cut on the same quantity. The \PW phase space is shown in
 \label{sec:wpol_closure}
 To ensure that the method is working correctly, several closure tests were
 performed. Firstly, the generator-level helicity fractions within the
-phase-space of the reconstruction level \PW acceptance cuts are extracted. The
+phase-space of the reconstruction-level \PW acceptance cuts are extracted. The
 $\cos\thetastar$ distribution is taken from simulated events which have passed
-the reconstruction level \PtW cut. The distribution is fit, once again using
+the reconstruction-level \PtW cut. The distribution is fit, once again using
 \eqn~\ref{eqn:wpol_helicity_fractions}, and values of \f0, \fL and \fR are
 extracted for both boson charges. This defines the baseline expectation for the
 helicity fractions and is shown in Table~\ref{tbl:wpol_closure_tests}.
@@ -279,14 +279,14 @@ of the simulated sample. This test was performed only in the muon channel, since
 the electron channel is not expected to be significantly different at the
 generator level.
 
-Finally, a full reconstruction level closure test was performed in both electron
+Finally, a full reconstruction-level closure test was performed in both electron
 and muon channels and applying all of the analysis cuts listed in
 \sec~\ref{sec:wpol_cutflow}. The results are also shown in
 Table~\ref{tbl:wpol_closure_tests}. The muon channel is seen to recover the
 ``true'' helicity fractions to within the uncertainty of the analytical fit. The
-electron channel, further complicated by \ac{QCD} contributions is seen to close
-within the statistical error of the reconstruction-level fit. This corresponds
-to \unit{100}{\invpicobarn} of simulated data.
+electron channel, further complicated by \ac{QCD} contributions, is seen to
+close within the statistical uncertainty of the reconstruction-level fit. This
+corresponds to \unit{100}{\invpicobarn} of simulated data.
 
 \input{tables/closure_tests}
 
