@@ -1,6 +1,6 @@
 \chapter{Computing}
 \section{\susyv2}
-\susyv2 is a standalone, \ac{ROOT}-based analysis framework. Analysis
+\susyv2 is a standalone, \root-based analysis framework. Analysis
 scripts are written in the Python programming language. These make use of
 low-level, high-performance classes written in C++. This provides a good
 compromise between speed and flexibility.
@@ -12,10 +12,10 @@ vast majority of the initial code was written by Dr. John Jones with subsequent
 contributions from a number of others.
 
 The \susyv2 code aims to minimise the number of reads performed on a
-\ac{ROOT} tree by reading branches on demand and performing lazy calculations as
+\root tree by reading branches on demand and performing lazy calculations as
 required to satisfy analysis code requests for higher-level observables. The
 dependency chain between calculated quantities may be viewed as a tree. The
-leaves of this tree correspond to quantities stored directly in the \ac{ROOT}
+leaves of this tree correspond to quantities stored directly in the \root
 file (or an alternative serialisation format). To minimise computation, each
 node in this tree performs calculation (or \ac{IO} in the case of the leaf nodes)
 only once. The results are then cached. Subsequent use of this quantity then
@@ -34,7 +34,7 @@ benefits available in purely functional programming languages such as Haskell.
 
 My contributions were in the maintenance and development of this code-base, the
 implementation of a flexible Python-based configuration system, support for the
-\ac{ROOT} \textsc{TChain} class, infrastructure for managing and monitoring
+\root \textsc{TChain} class, infrastructure for managing and monitoring
 batch submissions, and the implementation of a fast ``cross-cleaner''. The
 cross-cleaner must resolve ambiguties between physics objects. The detected
 ambiguities may form cyclic graphs, which must be handled carefully.

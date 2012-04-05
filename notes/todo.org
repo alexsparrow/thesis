@@ -16,7 +16,18 @@
 *** SUSY
 **** TODO More refs
 
+@Comment @misc{egamma_wp,
+@Comment url = {https://twiki.cern.ch/twiki/bin/viewauth/CMS/EgammaWorkingPointsv3},
+@Comment author = {Alessio Ghezzi},
+@Comment title = {\Pe/\Pphoton \ac{HLT} twiki page}
+@Comment }
 
+@Comment @unpublished{susy_trigger_talk,
+@Comment author={Massimiliano Chiorboli},
+@Comment url={http://www.ipnl.in2p3.fr/spip.php?article1193&lang=fr},
+@Comment note={S\'eminaire Massimiliano Chiorboli, IPNL, Lyon},
+@Comment year={2011}
+@Comment }
 * Old
   :VISIBILITY: folded
 ** DONE ALL!
@@ -1191,3 +1202,5 @@ Mostly done!
 ** DONE Acronyms
    CLOSED: [2012-04-05 Thu 12:15]
    - State "DONE"       from "TODO"       [2012-04-05 Thu 12:15]
+
+
