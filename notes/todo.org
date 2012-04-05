@@ -4,7 +4,7 @@
    SCHEDULED: <2012-04-04 Wed>
 ** TODO go through reference formatting
    SCHEDULED: <2012-04-04 Wed>
-** TODO Section/Chapter titles
+** TODO Section/Chapter titles & boldmath
    SCHEDULED: <2012-04-05 Thu>
 ** TODO Figure placement
    SCHEDULED: <2012-04-05 Thu>
@@ -12,6 +12,7 @@
    SCHEDULED: <2012-04-05 Thu>
 ** TODO Alex's corrections to intro/abstract/conclusion
    SCHEDULED: <2012-04-05 Thu>
+** TODO Acronyms
 ** TODO More refs
    SCHEDULED: <2012-04-05 Thu>
 *** SM
@@ -22,12 +23,8 @@
 **** TODO QCD: reference Gell-Man paper for color
 *** SUSY
 **** TODO More refs
-** TODO boldmath in titles
-   SCHEDULED: <2012-04-05 Thu>
 * Objects
 ** Alex Wpol
-*** TODO 6.6.2: Explain why the fake electrons gamma is badly measured
-    SCHEDULED: <2012-04-04 Wed 10:30>
 *** TODO Figure 6.5: Tidy up
     SCHEDULED: <2012-04-04 Wed 10:00>
 ** Alex SUSY search
@@ -1185,3 +1182,6 @@ Mostly done!
 ** DONE ttbar
    CLOSED: [2012-04-04 Wed 14:40]
    - State "DONE"       from "TODO"       [2012-04-04 Wed 14:40]
+** CANCELLED 6.6.2: Explain why the fake electrons gamma is badly measured
+   SCHEDULED: <2012-04-04 Wed 10:30> CLOSED: [2012-04-05 Thu 09:00]
+   - State "CANCELLED"  from "TODO"       [2012-04-05 Thu 09:00]
