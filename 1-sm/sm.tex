@@ -2,15 +2,17 @@
 \label{sec:sm}
 \section{Introduction}
 The \acl{SM} of particle physics is the best available theory describing the
-interactions of all known fundamental particles. It is perhaps the most
-extensively tested of any fundamental theory of nature, having withstood the
-scrutiny of several decades of data-taking at a multitude of high-energy physics
-experiments. However, despite this success, there appear to be a number of major
-theoretical deficiencies in desperate need of attention. In this chapter, the
-foundations of the theory will be laid out in a concise manner. As well as being
-of direct relevance to the measurement described in \chap~\ref{sec:wpol}, this
-will inform discussion of the aforementioned theoretical issues, and potential
-solutions, in \chap~\ref{sec:susy}.
+interactions of all known fundamental
+particles~\cite{aitchison,griffiths,peskin_schroeder,sm_intro,glashow,weinberg,salam,englert,higgs}. It
+is perhaps the most extensively tested of any fundamental theory of nature,
+having withstood the scrutiny of several decades of data-taking at a multitude
+of high-energy physics experiments. However, despite this success, there appear
+to be a number of major theoretical deficiencies in desperate need of
+attention. In this chapter, the foundations of the theory will be laid out in a
+concise manner. As well as being of direct relevance to the measurement
+described in \chap~\ref{sec:wpol}, this will inform discussion of the
+aforementioned theoretical issues, and potential solutions, in
+\chap~\ref{sec:susy}.
 
 It is important to note that, although the \ac{SM} will be presented here as a
 complete theory, seemingly designed to match the currently observed set of
@@ -127,7 +129,7 @@ where \lagrangian is the \emph{Lagrangian}, and \lagrangiand the
 The Lagrangian is a function of some generalised coordinates \phii describing
 the dynamics of the system and their derivatives $\dmu \phii$. From this, the
 Euler-Lagrange relation can be used to derive an equation of motion for the
-system,
+system~\cite{peskin_schroeder},
 \begin{equation*}
 \frac{\partial \lagrangiand}{\partial \phii} - \partial_{\mu} \left (
   \frac{\partial \lagrangiand}{\partial\left(\partial_{\mu} \phii\right)}\right) = 0.
@@ -240,8 +242,8 @@ equations into the Lagrangian, one arrives at \acf{SQED},
 \end{equation}
 
 The procedure which has just been outlined is an example of the \emph{gauge
-  principle}. This might seem an interesting, but trivial result, but it turns
-out that all particles and interactions of the \ac{SM} (see
+  principle}~\cite{sm_intro}. This might seem an interesting, but trivial
+result, but it turns out that all particles and interactions of the \ac{SM} (see
 \sec~\ref{sec:theory:particles}) can be predicted by essentially repeating this
 procedure with larger symmetry groups.
 
@@ -317,9 +319,9 @@ oppositely aligned. Note that a left-handed anti-spinor corresponds to a right
 handed physical particle~\cite{peskin_schroeder}.
 
 A related, but distinct concept, is \emph{helicity}. Helicity is the projection
-of a particle's spin onto its momentum,
+of a particle's spin, $\vec{S}$ onto its momentum, $\vec{p}$~\cite{peskin_schroeder},
 \begin{equation*}
-h = \frac{S.p}{\left|p\right|}.
+h = \frac{\vec{S}.\vec{p}}{\left|\vec{p}\right|}.
 \end{equation*}
 In cases where the particle's spin is aligned with its momentum, it is said to
 have right-handed helicity. In cases where it is anti-aligned, it has
@@ -353,7 +355,7 @@ essential to overcoming the issues with $\SUtwo\times\Uone$ which have already
 been described.
 
 The fermions themselves are placed into ``isospin'' doublets, coupling a charged
-lepton with a neutrino,
+lepton with a neutrino~\cite{sm_intro},
 \begin{equation*}
 \PsiL = \left(\begin{array}{c} \Pgn_{\textrm{L}} \\
     \Plepton_{\textrm{L}} \end{array}\right),
@@ -396,7 +398,7 @@ where $T^a = \frac{1}{2}\sigma^a$ when acting on a left-handed spinor and
 zero otherwise. Similarly, the hypercharge $Y$ is $-1$ for left-handed spinors
 and $-2$ for right-handed. The $g$ and $g'$ are coupling constants.
 
-The physical \PWp and \PWm bosons are superpositions,
+The physical \PWp and \PWm bosons are superpositions~\cite{sm_intro},
 \begin{equation*}
 \PWpm_{\mu} = \frac{1}{\sqrt{2}}\left(\PW^1_{\mu} + \PW^2_{\mu}\right),
 \end{equation*}
@@ -561,7 +563,7 @@ particle physics experiments -- including the \ac{LHC}.
 It was noted in \sec~\ref{sec:remaining_issues} that it is not possible to write
 down a straight forward mass term for the fermions in the electroweak theory. It
 turns out that this problem is also solved by the Higgs mechanism by the
-addition of a ``Yukawa coupling'' to the Lagrangian,
+addition of a ``Yukawa coupling'' to the Lagrangian~\cite{peskin_schroeder},
 \begin{equation*}
 \lagrangiand = g \left(\APsiL \phi \PsiR + \APsiR\phi^{\dagger}\PsiL\right),
 \end{equation*}
@@ -577,7 +579,7 @@ It is thought that all \ac{SM} fermions acquire mass in this way.
 \label{sec:sm_qcd}
 The preceding discussion has covered only the electroweak sector of the \ac{SM}
 - leptons, electroweak gauge bosons and the Higgs particle. The strong force is
-incorporated within the framework of \ac{QCD}.  Whilst this at first appears to
+incorporated within the framework of \ac{QCD}~\cite{pink_book}.  Whilst this at first appears to
 be quite straightforward, certain properties of the strong force often make
 calculations considerably more difficult. Here, a brief summary of the theory
 will be given with further details available in~\cite{pink_book}.
