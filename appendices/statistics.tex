@@ -2,7 +2,7 @@
 \section{Modelling the Single Lepton Analysis}
 \label{sec:inter_1lepton}
 As suggested in \chap~\ref{sec:interpretation} , the core component of many
-statistical interpretations is the construction of an appopriate likelihood
+statistical interpretations is the construction of an appropriate likelihood
 function. The likelihood must model all statistical and systematic effects and
 is thus highly dependent on the experiment. The situation is considerably
 complicated when shape information is included, for which relevant bin-to-bin
@@ -30,7 +30,7 @@ is the data-driven background prediction. As can be seen, the signal yield is a
 function of the \ac{poi}, $\mu$ and a number of nuisance parameters. The index
 $j$ will run over a set of systematic uncertainties relevant to the signal
 yield. Ignoring signal contamination effects (which will be discussed later),
-the bacground yield depends only on the nuisance parameters, $\nu^{(k)}$, where
+the background yield depends only on the nuisance parameters, $\nu^{(k)}$, where
 $k$ is taken to run over the set of systematic uncertainties relevant to the
 background prediction.
 
@@ -43,10 +43,11 @@ likelihood must include the following terms.
   yields.
 \item Terms providing prior constraints on the various nuisance
   parameters. Certain uncertainties are statistical in nature and thus,
-  independent nuisance parameters are assigned per bin along with a corresponding
-  prior pdf. In other cases, the underlying systematic variation is considered
-  to have a 100\% correlated effect across the bins. In these cases, a single
-  nuisance parameter and prior pdf is assigned.
+  independent nuisance parameters are assigned per bin along with a
+  corresponding prior pdf (probability distribution function). In other cases,
+  the underlying systematic variation is considered to have a 100\% correlated
+  effect across the bins. In these cases, a single nuisance parameter and prior
+  pdf is assigned.
 \end{enumerate}
 
 The form of the likelihood is as follows,
@@ -131,7 +132,7 @@ x(\nu^{(A)}, \nu^{(B)}) \approx \bar{x} +
 \end{equation}
 Since the derivatives in \eqn~\ref{eqn:stats:taylor} will in practice be
 derived from some finite variation of the underlying quantity associated with
-each nuisance parameter, the infinitessimal derivatives must be replaced by
+each nuisance parameter, the infinitesimal derivatives must be replaced by
 finite changes. It is also sensible to set $a=b=0$,
 \begin{equation}
 \label{eqn:stats:taylor2}
@@ -205,7 +206,7 @@ types.
   uncertainties such as the \ac{JES}, standard model cross-section calculations
   and the luminosity measurement~\cite{cms_lumi_measurement}.
 \end{enumerate}
-For uncertainties of the first kind, independent nuisance paramters must be
+For uncertainties of the first kind, independent nuisance parameters must be
 included for each analysis bin. For uncertainties of the second kind, a single
 nuisance parameter will be included for all bins -- giving the desired
 correlation. A full list of the nuisance parameters used is shown in
@@ -222,7 +223,7 @@ the next section.
 It can be seen in \fig~\ref{fig:susy_lp} that the region \LPcontrol may have a
 substantial component of \ac{SUSY} events. This depends on the particular model
 under consideration. Signal contamination increases \NControl leading to an
-overprediction of \NBkg. To account for this, the \NBkgi term is modifed to
+over-prediction of \NBkg. To account for this, the \NBkgi term is modified to
 reflect the assumption that some fraction of the yield, \NControli, will be due
 to \ac{SUSY} contamination. Rewriting,
 
@@ -299,7 +300,7 @@ An additional complication arises in the case of the electron channel, where the
 \LPcontrol region has a non-negligible component of \ac{QCD} events. These are
 unreliably modelled by event generators and thus not included in the calculation
 of \RCSi. This additional contribution to \NControli would again lead to an
-overprediction of the background. To correct this, an additional factor is
+over-prediction of the background. To correct this, an additional factor is
 included in Equation~\ref{eqn:bgprediction}, $f^{\textrm{ewk}}_i$, derived from
 the results of the \ac{QCD} fit detailed in
 \sec~\ref{sec:susy_electron_bgpredict}. The error derived from the fit procedure

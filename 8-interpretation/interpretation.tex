@@ -23,7 +23,7 @@ will of course depend strongly on the inclusiveness of the experiment. Indeed,
 in many cases a single theory will have motivated the analysis in the first
 place and the choice of model will be clear. In other cases, the analysis has
 been designed to be as inclusive as possible and therefore sensitive to an array
-of theories. Typically this is achieved by focussing on a particular detector
+of theories. Typically this is achieved by focusing on a particular detector
 signature (for instance missing transverse energy), where a deviation from the
 \ac{SM} is a common feature of many \ac{NP} scenarios.
 
@@ -331,7 +331,7 @@ described in \sec~\ref{sec:framework_susy}.
 \subsection{The \ac{CMSSM}}
 The \ac{CMSSM} was previously described in \sec~\ref{sec:cmssm}. As explained,
 the \ac{CMSSM} makes a number of somewhat arbitrary choices which restrict the
-\ac{SUSY} toplogies signatures it is able to encompass. Whilst these make it
+\ac{SUSY} topologies signatures it is able to encompass. Whilst these make it
 relatively undesirable as a framework for theoretical interpretation, it is
 nonetheless useful as a common yardstick by which to compare experiments and
 searches.
@@ -346,7 +346,7 @@ The likelihood function detailed in \sec~\ref{sec:inter_1lepton} takes as input
 the signal efficiencies for each bin of \STlep. In the case of the \ac{CMSSM},
 these must be evaluated for each point in the $(\Mzero, \Mhalf)$-plane. These
 are evaluated using the same analysis procedure as used for the data and \ac{SM}
-\ac{MC} samples. The \ac{CMSSM} sample is produced using the Pythia event
+\ac{MC} samples. The \ac{CMSSM} sample is produced using the \pythia event
 generator, with the two mass parameters are varied independently in steps of
 \unit{20}{\GeV} to produce a grid. For each grid point, 10000 events are
 generated. Due to the large number of events, the detector response is simulated
@@ -397,12 +397,12 @@ squark masses below $\approx \unit{900}{\GeV}$ and gluino masses below $\approx
 \subsection{Simplified Models}
 \subsubsection{Technical Details}
 The simplified models described in \sec~\ref{sec:sms} are simulated using the
-Pythia generator by reusing \ac{SUSY} subprocesses. The mass parameters in each
+\pythia generator by reusing \ac{SUSY} subprocesses. The mass parameters in each
 model are varied in steps. By varying the masses of the squark or gluino,
 \ac{LSP} and other intermediate particles, a grid of simplified model points is
 created. These are then processed further as for the \ac{CMSSM}.
 
-For the simplified models shown here, the mother and daugther particles masses
+For the simplified models shown here, the mother and daughter particles masses
 (\Mgluino or \Mstop and \Mlsp) are varied in steps of \unit{20}{\GeV}. Since the
 mother particle must be at least as massive as the daughter, half of the
 parameter space is unphysical and hence excluded.
@@ -411,7 +411,7 @@ To provide the most detailed interpretation of the simplified models, it is
 desirable to calculate an upper limit on the cross-section for each grid
 point. This can be contrasted to the case of the \ac{CMSSM}, where the
 cross-section at each point is known and a simple exclusion contour is
-sufficient. Due to the comptuational difficulty of calculating a confidence
+sufficient. Due to the computational difficulty of calculating a confidence
 interval using the \CLs method, the \ac{PL} method has been used instead. In
 addition, further simplification of the likelihood is achieved by including a
 single nuisance parameter for the signal efficiency uncertainty. This is then
@@ -448,7 +448,7 @@ the mother respectively.
 
 \fig~\ref{fig:inter_t3w_eff} shows total efficiency as a function of
 $(\Mgluino, \Mlsp)$ for each plane in $x$, separated by lepton channel. The
-efficiency is seen to decrease as the mother and daugther move closer in
+efficiency is seen to decrease as the mother and daughter move closer in
 mass. When the mass splitting is small, less energy is available for hadronic
 and leptonic activity in the event, and thus the efficiency of the analysis cuts
 is reduced.
@@ -487,7 +487,7 @@ below the diagonal has been excluded from the limit. This excluded range is
 chosen to remove regions where the upper limit appeared to fluctuate at
 random. For $x=0.50$ and $x=0.75$, the region $\Mgluino - \Mlsp <
 \unit{100}{\GeV}$ is excluded. For $x=0.25$, \Mchargino is close to \Mlsp and
-presumably the efficiency is more sensitive to the modellling of \ac{ISR}. In
+presumably the efficiency is more sensitive to the modelling of \ac{ISR}. In
 this case, the region $\Mgluino - \Mlsp < \unit{140}{\GeV}$ is ignored.
 
 Comparing the exclusion contours, there does not appear to be a strong
@@ -520,7 +520,7 @@ $x=0.25$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   exclusion in terms 1, 3 and 10 times the gluino cross-section predicted by
   \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
   as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
-  \ac{QCD} cross-section for gluino production.}
+  \ac{QCD} cross-section for gluino production as a function of \Mgluino.}
 \label{fig:inter_t3w_0p75}
 \end{figure}
 
@@ -536,7 +536,7 @@ $x=0.5$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   exclusion in terms 1, 3 and 10 times the gluino cross-section predicted by
   \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
   as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
-  \ac{QCD} cross-section for gluino production.}
+  \ac{QCD} cross-section for gluino production as a function of \Mgluino.}
 \label{fig:inter_t3w_0p50}
 \end{figure}
 
@@ -552,7 +552,7 @@ $x=0.75$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   exclusion in terms 1, 3 and 10 times the gluino cross-section predicted by
   \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
   as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
-  \ac{QCD} cross-section for gluino production.}
+  \ac{QCD} cross-section for gluino production as a function of \Mgluino.}
 \label{fig:inter_t3w_0p25}
 \end{figure}
 
@@ -608,7 +608,8 @@ sensitivity.
   \subref{fig:inter_t3w_0p25_limit}. The overlayed contours show this exclusion
   in terms of 1, 10 and 1000 times the stop production cross-section predicted
   by \ac{QCD}. The upper limit is shown as a function of \Mstop in
-  \subref{fig:inter_t2tt_limit_1d} for $\Mlsp = \unit{50}{\GeV}$. }
+  \subref{fig:inter_t2tt_limit_1d} for $\Mlsp = \unit{50}{\GeV}$. Overlayed is
+  the \ac{QCD} cross-section for stop production as a function of \Mstop.}
 \label{fig:inter_t2tt}
 \end{figure}
 

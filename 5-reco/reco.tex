@@ -23,7 +23,7 @@ reader is directed to relevant literature~\cite{cms_pf_tau_id,tau_reco_cms}.
 \label{sec:reco_muons}
 The full details of muon reconstruction at CMS are presented
 in~\cite{cms_mu_reco,cms_mu_pas,mu_align_pas}. A brief overview will be presented here,
-focussing on the aspects pertinent to the following analysis chapters. Muons are
+focusing on the aspects pertinent to the following analysis chapters. Muons are
 reconstructed in both the muon chambers and the silicon tracker. To exploit this
 redundancy in the measurement, several reconstruction algorithms have been
 developed.
@@ -62,7 +62,7 @@ matching candidate selected. For each pairing found in this way, a Kalman-filter
 fit is again performed, this time using hits from both the silicon tracker and
 the muon chambers. This fit accounts for average expected energy losses,
 magnetic field and multiple scattering effects. The tracks reconstructed by this
-procedure becom global muons. Once again, certain modifications are required for
+procedure become global muons. Once again, certain modifications are required for
 reconstructing cosmic ray muons -- for instance in the case that cosmic muons
 traverse the entire detector, leaving two standalone muons on either side of
 \ac{CMS}.
@@ -76,7 +76,7 @@ retained.
 
 An analysis is then able to tune its identification cuts to meet certain
 efficiency or purity requirements for a particular kinematic range. A number of
-pre-defined selections are available.
+predefined selections are available.
 \begin{itemize}
 \item ``Soft muons'' are required to be reconstructed as tracker muons with a muon
   segment in the outermost station matching the position and direction expected
@@ -112,15 +112,15 @@ extrapolating \ac{GSF} tracks in the tracker from their outermost measurement to
 the \ac{ECAL}. If a matching cluster is found, a tracker-driven seed is
 created~\cite{cms_pf_pas3}.
 
-\ac{ECAL}-driven seeds begin with the reconstruction of \ac{ECAL} superclusters
-with transverse energy, $\Et > \unit{4}{\GeV}$. A supercluster is a group of one
-or more \ac{ECAL} clusters. It is formed to account for the narrow $\eta$ width
-and spread in $\phi$ caused by the bending effect of the \ac{CMS} magnet on
-electrons radiating in the tracker~\cite{cms_ele_reco_pas}. These superclusters
-are then matched to track seeds having two or three hits in the inner layers of
-the tracker. Electron tracks are built from these track seeds. Trajectories are
-calculated accounting for energy loss in the tracker. These are then fit with a
-\ac{GSF}~\cite{gsf}.
+\ac{ECAL}-driven seeds begin with the reconstruction of \ac{ECAL}
+``superclusters'' with transverse energy, $\Et > \unit{4}{\GeV}$. A supercluster
+is a group of one or more \ac{ECAL} clusters. It is formed to account for the
+narrow $\eta$ width and spread in $\phi$ caused by the bending effect of the
+\ac{CMS} magnet on electrons radiating in the
+tracker~\cite{cms_ele_reco_pas}. These superclusters are then matched to track
+seeds having two or three hits in the inner layers of the tracker. Electron
+tracks are built from these track seeds. Trajectories are calculated accounting
+for energy loss in the tracker. These are then fit with a \ac{GSF}~\cite{gsf}.
 
 Candidates found only by the tracker-driven method must pass a pre-selection
 based on a multivariate analysis~\cite{cms_pf_pas3}. Candidates found by the
@@ -369,7 +369,7 @@ reconstruction. These will be discussed in the next section.
   of the \ac{HCAL}. These two surfaces appear as circular arcs
   in~\subref{fig:reco_pf_diag1}. The \PKlong, \Ppiminus, \Ppiplus, \Ppizero and
   the two photons from its decay are shown. The \PKlong, \Ppiminus and two
-  photons result in clear, well-speparated \ac{ECAL} cluters -- round points
+  photons result in clear, well-separated \ac{ECAL} clusters -- round points
   labelled E1 to E4~\ref{fig:reco_pf_diag2}. The \Ppiplus and \Ppiminus are
   reconstructed as charged tracks -- green lines labelled T1 and T2 -- which
   point to the two \ac{HCAL} clusters -- round points labelled H1 and
