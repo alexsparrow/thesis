@@ -1,8 +1,4 @@
 * Tasks
-** TODO go through reference formatting
-   SCHEDULED: <2012-04-04 Wed>
-** TODO Section/Chapter titles & boldmath
-   SCHEDULED: <2012-04-05 Thu>
 ** TODO Figure placement
    SCHEDULED: <2012-04-05 Thu>
 ** TODO Figure captions
@@ -1202,5 +1198,11 @@ Mostly done!
 ** DONE Acronyms
    CLOSED: [2012-04-05 Thu 12:15]
    - State "DONE"       from "TODO"       [2012-04-05 Thu 12:15]
+** DONE go through reference formatting
+   SCHEDULED: <2012-04-04 Wed> CLOSED: [2012-04-06 Fri 10:06]
+   - State "DONE"       from "TODO"       [2012-04-06 Fri 10:06]
+** DONE Section/Chapter titles & boldmath
+   SCHEDULED: <2012-04-05 Thu> CLOSED: [2012-04-06 Fri 10:06]
+   - State "DONE"       from "TODO"       [2012-04-06 Fri 10:06]
 
 
