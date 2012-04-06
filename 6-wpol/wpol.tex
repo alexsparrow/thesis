@@ -172,15 +172,15 @@ binned according to \PW boson charge, transverse momentum, \PtW, and rapidity,
 \begin{equation}
 \label{eqn:wpol_reweighting_factor}
 Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
-\frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{i=-1}^{i=+1}
-  \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)},
+\frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{j=-1}^{j=+1}
+  \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)},
 \end{equation}
-where the index $i$ is taken to represent the 3 helicity states of the \PW
-boson. The \ffi are constants derived from an analytical fit to the
+where the indices, $i, j$ are taken to represent the 3 helicity states of the
+\PW boson. The \ffi are constants derived from an analytical fit to the
 $\cos\thetastar$ distribution in bins of \PtW, \YW and charge. They are
-effectively the helicity fractions ``baked in'' to the \ac{MC}. The
-functional form of $\sigma$ is taken from \eqn~\ref{eqn:wpol_helicity_fractions}
-as follows,
+effectively the helicity fractions ``baked in'' to the \ac{MC}. The functional
+form of $\sigma$ is taken from \eqn~\ref{eqn:wpol_helicity_fractions} as
+follows,
 \begin{eqnarray*}
 \sigma^{\pm}_{-1} &=& \frac{1}{4}\left(1\mp\cos\thetastar\right)^2,\\
 \sigma^{\pm}_{0}  &=& \frac{1}{2}\left(1-\cos^2\thetastar\right)\quad\textrm{and}\\
@@ -210,9 +210,9 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\displaystyle\int_{b}^{b+0.01} \sigma^\pm_i\left(\cos\thetastar\right)}{
 \displaystyle\int_{-1}^{1}\sigma^\pm_i \left(\cos\thetastar\right)}
 \div
-\frac{\displaystyle\int_{b}^{b+0.01} \sum_{i=-1}^{i=+1}
-\ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}{
-\displaystyle\int_{-1}^{1} \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)
+\frac{\displaystyle\int_{b}^{b+0.01} \sum_{j=-1}^{j=+1}
+\ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)}{
+\displaystyle\int_{-1}^{1} \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)
 }
 \end{equation*}
 
@@ -224,7 +224,7 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 % \displaystyle\int_{-1}^{1}\ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\right.
 % },
 % \end{equation*}
-where $b$ indicates a bin within the $\cos\thetastar$ distribution and the
+where $b$ is a bin within the $\cos\thetastar$ distribution and the
 integration elements, $\mathrm{d}(\cos\thetastar)$, have been suppressed.
 
 \subsubsection[\PtW and \YW Dependence]{\boldmath{\PtW} and \boldmath{\YW} Dependence}
