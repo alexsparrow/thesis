@@ -176,7 +176,7 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
   \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)},
 \end{equation}
 where the indices, $i, j$ are taken to represent the 3 helicity states of the
-\PW boson. The \ffi are constants derived from an analytical fit to the
+\PW boson. The \ffj are constants derived from an analytical fit to the
 $\cos\thetastar$ distribution in bins of \PtW, \YW and charge. They are
 effectively the helicity fractions ``baked in'' to the \ac{MC}. The functional
 form of $\sigma$ is taken from \eqn~\ref{eqn:wpol_helicity_fractions} as
@@ -212,7 +212,7 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \div
 \frac{\displaystyle\int_{b}^{b+0.01} \sum_{j=-1}^{j=+1}
 \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)}{
-\displaystyle\int_{-1}^{1} \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)
+\displaystyle\int_{-1}^{1} \sum_{j=-1}^{j=+1} \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)
 }
 \end{equation*}
 
