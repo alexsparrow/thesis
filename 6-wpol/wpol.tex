@@ -175,12 +175,13 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{j=-1}^{j=+1}
   \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)},
 \end{equation}
-where the indices, $i, j$ are taken to represent the 3 helicity states of the
-\PW boson. The \ffj are constants derived from an analytical fit to the
-$\cos\thetastar$ distribution in bins of \PtW, \YW and charge. They are
-effectively the helicity fractions ``baked in'' to the \ac{MC}. The functional
-form of $\sigma$ is taken from \eqn~\ref{eqn:wpol_helicity_fractions} as
-follows,
+where the index, $i$ is one of the three helicity states of the \PW boson. The
+\ffj are constants derived from an analytical fit to the $\cos\thetastar$
+distribution in bins of \PtW, \YW and charge. They are effectively the helicity
+fractions ``baked in'' to the \ac{MC}. The factor, $Q_i$, will then re-weight
+the $\cos\thetastar$ distribution in \ac{MC} so that it corresponds to the pure
+helicity state, $i$. The functional form of the $\sigma_i$ is taken from
+\eqn~\ref{eqn:wpol_helicity_fractions} as follows,
 \begin{eqnarray*}
 \sigma^{\pm}_{-1} &=& \frac{1}{4}\left(1\mp\cos\thetastar\right)^2,\\
 \sigma^{\pm}_{0}  &=& \frac{1}{2}\left(1-\cos^2\thetastar\right)\quad\textrm{and}\\
