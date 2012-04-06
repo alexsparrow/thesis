@@ -205,16 +205,16 @@ In reality, a small modification to \eqn~\ref{eqn:wpol_reweighting_factor} is
 required to account for the finite statistical precision of the generated
 sample. The functions $\sigma^{\pm}_{i}$ become instead integrals over a small
 slice ($\Delta\cos\thetastar = 0.01$) of a binned $\cos\thetastar$ distribution:
-\begin{align*}
-Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) &=&
-\frac{\displaystyle\int_{b}^{b+\Delta\cos\thetastar} \sigma^\pm_i\left(\cos\thetastar\right)}{
-\displaystyle\int_{-1}^{1}\sigma^\pm_i \left(\cos\thetastar\right)}\\
-&\div&
-\frac{\displaystyle\int_{b}^{b+\Delta\cos\thetastar} \sum_{i=-1}^{i=+1}
+\begin{equation*}
+Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
+\frac{\displaystyle\int_{b}^{b+0.01} \sigma^\pm_i\left(\cos\thetastar\right)}{
+\displaystyle\int_{-1}^{1}\sigma^\pm_i \left(\cos\thetastar\right)}
+\div
+\frac{\displaystyle\int_{b}^{b+0.01} \sum_{i=-1}^{i=+1}
 \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)}{
 \displaystyle\int_{-1}^{1} \ffi^\pm\left(\PtW, \YW\right)\sigma^\pm_i\left(\cos\thetastar\right)
 }
-\end{align*}
+\end{equation*}
 
 % \begin{equation*}
 % Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
