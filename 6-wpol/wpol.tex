@@ -154,14 +154,14 @@ of the \LP distribution and a much larger correlation with \phistar.
 
 \subsection{Template Re-weighting Method}
 \label{sec:wpol_reweighting}
-As has so far been described, the $\cos\thetastar$ distribution is of central
-importance to the study of the \PW polarisation. The \LP variable can be used to
-probe this distribution and may be calculated in a straightforward manner from
+As has been seen, the $\cos\thetastar$ distribution is of central importance to
+the study of the \PW polarisation. The \LP variable can be used to probe this
+distribution and may be calculated in a straightforward manner from
 detector-level quantities. However, it has already been seen that the
-$\cos\thetastar$ distribution cannot be inferred from the \LP distribution, thus
-preventing a direct measurement of the helicity fractions. In addition, the \LP
-distribution will be subject to a number of detector and acceptance related
-effects, changing its shape.
+$\cos\thetastar$ distribution cannot be inferred directly from the \LP
+distribution, thus preventing a direct measurement of the helicity fractions. In
+addition, the \LP distribution will be subject to a number of detector and
+acceptance related effects, changing its shape.
 
 \subsubsection[Re-weighting $\cos\thetastar$]{Re-weighting \boldmath{$\cos\thetastar$}}
 To account for the aforementioned experimental issues, a template ``re-weighting''
@@ -177,10 +177,10 @@ Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
 \end{equation}
 where the index, $i$ is one of the three helicity states of the \PW boson. The
 \ffj are constants derived from an analytical fit to the $\cos\thetastar$
-distribution in bins of \PtW, \YW and charge. They are effectively the helicity
+distribution in bins of \PtW, \YW and charge. These are effectively the helicity
 fractions ``baked in'' to the \ac{MC}. The factor, $Q_i$, will then re-weight
-the $\cos\thetastar$ distribution in \ac{MC} so that it corresponds to the pure
-helicity state, $i$. The functional form of the $\sigma_i$ is taken from
+the $\cos\thetastar$ distribution in \ac{MC} such that it corresponds to the
+pure helicity state, $i$. The functional form of the $\sigma_i$ is taken from
 \eqn~\ref{eqn:wpol_helicity_fractions} as follows,
 \begin{eqnarray*}
 \sigma^{\pm}_{-1} &=& \frac{1}{4}\left(1\mp\cos\thetastar\right)^2,\\
@@ -199,7 +199,7 @@ distribution may be produced corresponding to a pure sample of polarised \PW
 bosons. In particular, this allows the derivation of \LP shape templates, which
 may then be fit to the corresponding data distribution in order to extract the
 helicity fractions. This ensures that all experimental and acceptance effects
-can be accounted for -- providing of course that they are adequately modelled by
+are accounted for -- providing of course that they are adequately modelled by
 the detector simulation.
 
 In reality, a small modification to \eqn~\ref{eqn:wpol_reweighting_factor} is
@@ -251,11 +251,19 @@ appropriate \PtW and \YW bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the
 same fraction integrated over all of the phase space bins. The prime added to
 the fraction is significant. It indicates that the phase space of the helicity
 fractions is that obtained after a reconstruction-level cut on \PtW. This must
-be the same cut value as employed in the analysis itself and is, due to
-experimental and resolution effects, significantly different from a
-generator-level cut on the same quantity. The \PW phase space is shown in
-\fig~\ref{fig:wpol_genreco} after a reconstruction-level cut, $\PtW >
-\unit{50}{\GeV}$.
+be the same cut value as used in the analysis itself and is, due to experimental
+and resolution effects, significantly different from a generator-level cut on
+the same quantity. The \PW phase space is shown in \fig~\ref{fig:wpol_genreco}
+after a reconstruction-level cut, $\PtW > \unit{50}{\GeV}$.
+
+To summarise, the re-weighting procedure depends on two factors: $Q_i$ and
+$R_i$. The first ``alters'' the shape of the $\cos\thetastar$ distribution to
+represent a certain polarisation state, $i$. The second accounts for the
+variation in the helicity fractions across the phase space of the \PW
+boson. Both factors are then used to re-weight \PW \ac{MC} events in order to
+model each of the polarisation states. This will be used to derive shape
+templates for the \LP variable. The next section will describe closure tests
+performed to validate this procedure.
 
 \begin{figure}[h!]
   \centering \subfloat[\YW vs \PtW]{
