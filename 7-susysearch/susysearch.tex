@@ -384,8 +384,9 @@ The results of the fit can be used to directly predict the background
 contamination in the signal region. However, in order to compare systematic
 uncertainties with the muon channel, a ``corrected \RCS'' is calculated from the
 results of the fit. The systematic uncertainties are then calculated in terms of
-this variable. For the limit procedure, it is technically simpler to use the fit
-results to correct the control region yield in order to subtract the \ac{QCD}
+this variable. For the limit procedure described in
+\chap~\ref{sec:interpretation}, it is technically simpler to use the fit results
+to correct the control region yield in order to subtract the \ac{QCD}
 contribution. Since the \ac{QCD} contamination in the signal region is
 negligible, this should not make a significant difference to the limit.
 
@@ -457,16 +458,16 @@ propagation of errors.
 
 For the electron channel, things are once again complicated by the \ac{QCD}
 fitting procedure. The \ac{EWK} templates used in the fit are taken from finite
-\ac{MC} samples. This results in an additional source of uncertainty on
-\NControl. This is accounted for in a similar manner to the statistical
-uncertainty of the \ac{QCD} template in the \PW polarisation analysis (see
-\sec~\ref{sec:wpol_syst_ele_bgest}). The templates are randomly fluctuated 200
-times according to the statistical uncertainty per bin. Each re-diced template
-is then used to repeat the fit procedure. The variance of this ensemble of fits
-is then taken to be the statistical uncertainty. For the systematic
-uncertainty quoted in Table~\ref{tbl:susy_syst_electrons}, this is propagated into
-\RCS. For the limit, as will be seen, it is taken as an uncertainty on
-\NControl.
+\ac{MC} samples. This results in an additional source of uncertainty on the
+background prediction. This is accounted for in a similar manner to the
+statistical uncertainty of the \ac{QCD} template in the \PW polarisation
+analysis (see \sec~\ref{sec:wpol_syst_ele_bgest}). The templates are randomly
+fluctuated 200 times according to the statistical uncertainty per bin. Each
+re-diced template is then used to repeat the fit procedure. The variance of this
+ensemble of fits is then taken to be the statistical uncertainty. For the
+systematic uncertainty quoted in Table~\ref{tbl:susy_syst_electrons}, this is
+propagated into \RCS. For the limit, as will be seen, it is taken as an
+uncertainty on \NControl.
 
 \subsection{\acl{JES}}
 \label{sec:susy_jes_uncertainty}
