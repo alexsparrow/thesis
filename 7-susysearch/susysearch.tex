@@ -22,15 +22,15 @@ and \Ptlv, as well as greater correlation of their directions. These two
 consideration can be applied to both \Wjets and \ttbar events -- the two
 dominant backgrounds to a single lepton \ac{SUSY} search.
 
-In order to make use of the \PW polarisation effects described, this analysis
-employs the \LP variable, as described in \sec~\ref{sec:wpol_lp}. For events
-containing a charged lepton in association with \MET from the decay of a \PW
-with large transverse momentum, the alignment of the charged lepton and neutrino
-gives an \LP distribution confined to the range $[0,1]$. In contrast, for
-\ac{SUSY} events, the \MET component is larger than the lepton momentum and thus
-\PtWv is likely to point in the direction of \METv. Since the direction of the
-charged lepton momentum and \METv will be mostly uncorrelated, \LP will tend to
-small values. Rewriting \eqn~\ref{eqn:lp_def},
+In order to make use of the \PW polarisation effects, this analysis employs the
+\LP variable, as described in \sec~\ref{sec:wpol_lp}. For events containing a
+charged lepton in association with \MET from the decay of a \PW with large
+transverse momentum, the alignment of the charged lepton and neutrino gives an
+\LP distribution confined to the range $[0,1]$. In contrast, for \ac{SUSY}
+events, the \MET component is larger than the lepton momentum and thus \PtWv is
+likely to point in the direction of \METv. Since the direction of the charged
+lepton momentum and \METv will be mostly uncorrelated, \LP will tend to small
+values. Rewriting \eqn~\ref{eqn:lp_def},
 \begin{equation*}
 \LP = \frac{\Ptl}{\PtW}\cos\left(\PtWv, \Ptlv\right),
 \end{equation*}
@@ -83,8 +83,8 @@ at $\LP > 0$ and \ac{SUSY} events clustering around $\LP \sim 0$.
 \label{fig:susy_lp}
 \end{figure}
 
-In order to make use of the discrimination power afforded by the \LP shape, a
-signal and control region are defined. The signal region is defined such that an
+In order to make use of the discrimination power afforded by the \LP shape,
+signal and control regions are defined. The signal region is defined such that an
 enriched sample of \ac{SUSY} events is obtained, without being highly
 model-dependent. It should be stressed that the intent is not to eliminate the
 background altogether in this region. The control region, likewise, must select
@@ -102,16 +102,17 @@ translation factor, \RCS is calculated in simulation. This is defined as
 where $N^{\textrm{MC}}(\LPsignal)$ and $N^{\textrm{MC}}(\LPcontrol)$ represent
 the population, as calculated in simulation, of \ac{SM} events in the signal and
 control regions respectively. Once calculated, \RCS may be used, along with a
-measurement of the control region in data to predict the \ac{SM} background
+measurement from the control region in data, to predict the \ac{SM} background
 contribution present in the signal region,
 \begin{equation*}
 N^{\textrm{data}}(\LPsignal) = \RCS N^{\textrm{data}}(\LPcontrol).
 \end{equation*}
-Whilst in principle it is possible to perform a more, or even completely,
-data-driven prediction by performing a template fit to the \LP shape in the
-control region and extrapolating into the signal region, this strategy was
-explored for some time but found to be infeasible due to the small number of
-events passing the selection.
+
+In principle it is possible to perform a more, or even completely, data-driven
+prediction by performing a template fit to the \LP shape in the control region
+and extrapolating into the signal region. This strategy was explored for some
+time but found to be infeasible due to the small number of events passing the
+selection.
 
 One benefit of using the translation factor, \RCS, is that many systematic
 uncertainties should cancel, to some extent, in the ratio. This includes, in
@@ -121,10 +122,10 @@ uncertainties do not cancel completely, they will be full evaluated in
 \sec~\ref{sec:susy_systematics} and are included in the statistical treatment
 described in \chap~\ref{sec:interpretation}.
 
-One last point concerning \RCS is that, so that the prediction is not dominated
-by uncertainties stemming from the limited statistical precision of the control
-region, a value of $\RCS < 1$ is preferable. As we will see, relatively small
-values of \RCS are obtained using the definitions given above.
+One last point concerning \RCS is that values of $\RCS < 1$ is preferable. This
+ensures that the prediction is not dominated by uncertainties stemming from the
+limited statistical precision of the control region. As we will see, relatively
+small values of \RCS are obtained using the definitions given above.
 
 \section{Object Definitions}
 The basic object selection requirements are defined to be consistent between
@@ -132,7 +133,7 @@ several complementary leptonic \ac{SUSY} searches at \ac{CMS}. They are
 described and motivated further in~\cite{susy_selection_an}.
 
 \subsection{Jets and Missing Energy}
-Jets and missing energy quantities are taken from the particle flow algorithm,
+Jets and missing energy quantities are taken from the \ac{PF} algorithm,
 as described in \sec~\ref{sec:reco_pf}. In addition, jets are required to
 pass the ``LOOSE'' selection criteria, namely:
 \begin{itemize}
@@ -254,8 +255,8 @@ referring to the ``tightness'' of the cut applied to the concerned quantity. The
 \texttt{VL} selection requirements are broadly comparable to the
 \texttt{CaloEleId} and \texttt{TightEleId} triggers used for the \PW
 polarisation analysis. The \texttt{T} requirements are looser than the 80\%
-efficiency working point. The trigger requirements are all chosen to be looser
-than the offline selection.
+efficiency working point. All trigger requirements are chosen to be looser than
+the offline selection.
 
 \input{tables/susy_triggers}
 
@@ -267,7 +268,7 @@ exception of the \ac{SUSY} signal scan used to derive the limit, make use of the
 full detector simulation. The \ac{SUSY} signal scan uses the \fastsim simplified
 simulation package to reduce processing time. All samples contain data-like
 pile-up conditions, with a re-weighting procedure used throughout to reflect the
-vertex multiplicity distribution in the data.
+vertex multiplicity distribution in data.
 
 In addition to the standard \Wjets sample, an enriched sample with a
 generator-level $\HT > \unit{300}{\GeV}$ cut is used. The larger event sample
@@ -284,11 +285,11 @@ and simulation is also important in establishing the method.
 
 A summary of the yields in the \LPcontrol and \LPsignal regions in the $<3$~jet
 control sample is given in Table~\ref{tbl:susy_control_yields}. The yields for
-each \ac{SM} subprocess are shown, used to calculate the factor \RCS, the yields
-in data and the resulting background prediction. The background prediction is
-seen to agree, within errors, with the observed number of events in the signal
-region. The uncertainties stem from the limited population of the control region
-and the limited \ac{MC} sample used in the calculation of \RCS.
+each \ac{SM} subprocess are shown, used to calculate the factor \RCS, as well as
+the yields in data and the resulting background prediction. The background
+prediction is seen to agree, within errors, with the observed number of events
+in the signal region. The uncertainties stem from the limited population of the
+control region and the limited \ac{MC} sample used in the calculation of \RCS.
 
 \input{tables/susy_control_yields}
 
@@ -304,8 +305,7 @@ be adequately described by the simulation.
 \subfloat[\STlep]{\label{fig:susy_mucontrol_st}\includegraphics[width=0.3\textwidth]{fig/MuControl_ST150toInf}}\quad
 \subfloat[\MT]{\label{fig:susy_mucontrol_mt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MT150toInf}}\quad
 \subfloat[\Ptmu]{\label{fig:susy_mucontrol_pt}\includegraphics[width=0.3\textwidth]{fig/MuControl_MuPt150toInf}}
-\caption[Distributions of kinematic variables as measured in the muon control
-sample]{Distributions of kinematic variables as measured in the muon control
+\caption[Kinematic variables as measured in the muon control sample]{Distributions of kinematic variables as measured in the muon control
   sample. These are \subref{fig:susy_mucontrol_st} \STlep,
   \subref{fig:susy_mucontrol_mt} \MT and \subref{fig:susy_mucontrol_pt}
   \Ptmu. \ac{MC} distributions for \ac{SM} background processes are shown for
@@ -339,12 +339,12 @@ modification.
 A conservative upper limit on the \ac{QCD} background in the muon channel is
 obtained from a data-driven control sample defined by an isolation requirement,
 $0.2 < \CombIso < 0.5$. In order to further enrich \ac{QCD} events, whilst
-suppressing \ac{EWK} backgrounds in this sample, a $\MET < \unit{20}{\GeV}$ cut
-is also applied. Even with these cuts, significant \ac{EWK} contamination
-remains. The significance of the vertex impact parameter is used as an additional
-handle, by requiring $\sigma(\D0) > 3$. By selecting muons displaced from the
-primary vertex, backgrounds from hadron decays are
-enhanced~\cite{ttbar_paper_cms}. The ratio $N(\CombIso < 0.1/N(0.2 < \CombIso <
+suppressing \ac{EWK} backgrounds in this sample, a cut, $\MET <
+\unit{20}{\GeV}$, is also applied. Even with these cuts, significant \ac{EWK}
+contamination remains. The significance of the vertex impact parameter is used
+as an additional handle, by requiring $\sigma(\D0) > 3$. By selecting muons
+displaced from the primary vertex, backgrounds from hadron decays are
+enhanced~\cite{ttbar_paper_cms}. The ratio $N(\CombIso < 0.1)/N(0.2 < \CombIso <
 0.5)$ in this sample is then used to derive an upper limit on the \ac{QCD}
 contribution. This limit is conservative given that \ac{EWK} backgrounds are
 present in the ratio. The \ac{QCD} background is found to be negligible in all
@@ -375,26 +375,24 @@ performed, using templates for the \ac{EWK} backgrounds derived from
 simulation. To avoid the potential effects of \ac{SUSY} signal contamination,
 the fit region is restricted to \LPcontrol and then the fit-result is then
 extrapolated into \LPsignal. The results of these fits are shown in
-\figs~\ref{fig:susy_elqcd_fitresult150}
-and~\ref{fig:susy_elqcd_fitresult250}. The predictions of the \ac{QCD} and
+\fig~\ref{fig:susy_elqcd}. The predictions of the \ac{QCD} and
 \ac{EWK} background contamination can be seen in
 Table~\ref{tbl:susy_datamc_electrons}. The \ac{QCD} contamination in the signal
 region is found to be negligible.
 
 The results of the fit can be used to directly predict the background
 contamination in the signal region. However, in order to compare systematic
-uncertainties with the muon channel, a corrected \RCS is calculated from the fit
-results. The systematic uncertainties are then calculated in terms of this
-variable. For the limit procedure, it is technically simpler to use the fit
+uncertainties with the muon channel, a ``corrected \RCS'' is calculated from the
+results of the fit. The systematic uncertainties are then calculated in terms of
+this variable. For the limit procedure, it is technically simpler to use the fit
 results to correct the control region yield in order to subtract the \ac{QCD}
 contribution. Since the \ac{QCD} contamination in the signal region is
 negligible, this should not make a significant difference to the limit.
 
 To account for the \ac{QCD} contamination in the control region, the background
 prediction in the electron channel is derived from the fitted number of \ac{EWK}
-events. Similarly, the \RCS calculation in simulation is performed using only
-the \ac{EWK} background components. The additional uncertainties introduced by
-this procedure will be covered in \sec~\ref{sec:susy_systematics}.
+events. The additional uncertainties introduced by this procedure will be
+covered in \sec~\ref{sec:susy_systematics}.
 
 
 \begin{figure}[h!]
@@ -436,18 +434,16 @@ The background prediction may be written as follows,
 \end{equation*}
 where \NBkgi is the predicted background for \LPsignal in \STlep bin $i$, \RCSi
 the corresponding translation factor and \NControli the expected \ac{EWK} yield
-in the region \LPcontrol (i.e. for the muons, simply the event yield assuming
-zero contamination from \ac{QCD} or for electrons, the result of the fit
-described in \sec~\ref{sec:susy_electron_bgpredict}).
+in the region \LPcontrol.
 
-The uncertainty assigned to the background prediction, \NBkg, must come from two
+The uncertainty assigned to the background prediction, \NBkg, comes from two
 sources: uncertainty on the translation factor, \RCS, and uncertainty on the
 (electroweak) yield in the control region, \NControl. These uncertainties will
 now be described.
 
 \subsection{Control Region \texorpdfstring{\LPcontrol}{\LPcontrolBM}}
 A statistical uncertainty must be included to account for the finite event yield
-in the control region. The effect is naturally more pronounced in the larger
+in the control region. The effect is naturally more pronounced in the higher
 \STlep bins. For the muon channel, this is simply calculated as the Poisson
 uncertainty on the number of events in the control region. For electrons, this
 is taken as the uncertainty on the \ac{EWK} component of the background as
@@ -468,7 +464,7 @@ uncertainty of the \ac{QCD} template in the \PW polarisation analysis (see
 times according to the statistical uncertainty per bin. Each re-diced template
 is then used to repeat the fit procedure. The variance of this ensemble of fits
 is then taken to be the statistical uncertainty. For the systematic
-uncertainties quoted in Table~\ref{tbl:susy_syst_muons}, this is propagated into
+uncertainty quoted in Table~\ref{tbl:susy_syst_electrons}, this is propagated into
 \RCS. For the limit, as will be seen, it is taken as an uncertainty on
 \NControl.
 
@@ -504,12 +500,11 @@ with $\geq 4$~jets. The difference is found to be at most 50\%.
 
 The shift in \RCS with respect to the unscaled case is then calculated. The
 shifts are performed simultaneously to give the most extreme change in \RCS,
-i.e. one cross-section is shifted up, the other down. The largest such shift is
+i.e. one background is shifted up, the other down. The largest such shift is
 taken as the uncertainty. As for the jet energy scale, a shift smaller than the
-statistical uncertainty of the simulated sample is taken to be the same as the
-statistical uncertainty. Additionally, the uncertainty is calculated
-simultaneously for both lepton channels, in order to minimise the statistical
-uncertainty.
+statistical uncertainty of the simulated sample is taken to be the statistical
+uncertainty. Additionally, the uncertainty is calculated simultaneously for both
+lepton channels, in order to maximis the statistical precision.
 
 \subsection{Muon Momentum Scale}
 Studies of the \PZ mass indicate a bias of 1\%~\cite{cms_mu_pas}. To estimate
@@ -640,10 +635,9 @@ simplified models.
 \subfloat[]{\label{fig:susy_pred_mu}\includegraphics[width=0.4\textwidth]{fig/prediction_mu}}\quad
 \subfloat[]{\label{fig:susy_pred_el}\includegraphics[width=0.4\textwidth]{fig/prediction_el}}\quad
 \caption[Comparison of predicted and observed event yields in bins of
-\STlep]{Comparison of the number of events observed in the data and the
-  expectations from the background estimation methods presented above in bins of
-  \STlep. Results are shown for \subref{fig:susy_pred_mu} the muon channel and
-  \subref{fig:susy_pred_el} the electron channel.  The red error-bars indicate
-  the statistical uncertainty of the data.}
+\STlep]{Comparison of the number of events observed in data and the background
+  prediction in bins of \STlep. Results are shown for \subref{fig:susy_pred_mu}
+  the muon channel and \subref{fig:susy_pred_el} the electron channel. The red
+  error-bars indicate the statistical uncertainty of the data.}
 \label{fig:susy_pred}
 \end{figure}

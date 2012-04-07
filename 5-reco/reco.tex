@@ -1,7 +1,7 @@
 \chapter{Physics Objects}
 \label{sec:reco}
 \section{Introduction}
-In the previous chapter, details of the \ac{CMS} detector were presented. We
+In the previous chapter details of the \ac{CMS} detector were presented. We
 shall now begin to discuss the algorithms used to reconstruct analysis level
 objects and quantities which will be of fundamental importance in later
 chapters. The objects of primary interest for these purposes are leptons, jets
@@ -229,7 +229,7 @@ barrel-endcap transition region, $1.4442 < |\eta| < 1.566$ is explicitly exclude
 Four types of jets are reconstructed at \ac{CMS}: \acf{Calo} jets, \ac{PF} jets,
 \ac{JPT} jets and track jets~\cite{jet_perf_pas}. \ac{Calo} jets are
 reconstructed from energy deposits in the \ac{ECAL} and \ac{HCAL}, combined into
-calorimeter towers. Calorimeter towers consist of one or more \ac{HCAL} cells
+\emph{calorimeter towers}. Calorimeter towers consist of one or more \ac{HCAL} cells
 with geometrically matched \ac{ECAL} crystals. Electronics noise is suppressed
 by applying a threshold to the calorimeter cells, with pile-up effects reduced
 by a requirement placed on the tower energy.
@@ -268,7 +268,7 @@ dijets, \gammajets and \Zjets events. \fig~\ref{fig:reco_jet_energy_corr} shows
 these correction factors as a function of $\eta$, for two values of the jet
 \Pt. With these corrections applied, the residual uncertainty on the \ac{JES}
 has been evaluated as a function of jet $\eta$ and \Pt. This will turn out to be
-a dominant source of systematic uncertainty for the analyses presented in
+a significant source of systematic uncertainty for the analyses presented in
 \chaps~\ref{sec:wpol}~and~\ref{sec:susysearch}.
 
 \begin{figure}[h!]
@@ -277,7 +277,8 @@ a dominant source of systematic uncertainty for the analyses presented in
   \subfloat[\unit{200}{\GeV}]{\label{fig:jet_energy_corr_200}\includegraphics[width=0.45\textwidth]{fig/jet_energy_corr_pt200.pdf}}\quad
   \caption[Total jet energy correction factor as a function of $\eta$]{Total jet
     energy correction factor as a function of $\eta$ for jets with transverse
-    momenta of \unit{50}{\GeV} and \unit{200}{\GeV}. Corrections are shown for
+    momenta of \subref{fig:jet_energy_corr_50} \unit{50}{\GeV} and
+    \subref{fig:jet_energy_corr_200} \unit{200}{\GeV}. Corrections are shown for
     \ac{Calo}, \ac{JPT} and \ac{PF} jets separately. The bands indicate the
     corresponding uncertainties~\cite{jet_energy_pas}.}
   \label{fig:reco_jet_energy_corr}
@@ -306,10 +307,10 @@ suitable set of objects then leads to a number of alternative definitions of
 denoted \MET. Similar notation will be used for other transverse vector
 quantities.
 
-At \ac{CMS}, the simplest measurement of \METv is ``\ac{Calo} \METv'' which sums
-over the calorimeter tower energies (\ac{ECAL} and \ac{HCAL}).  An energy
+At \ac{CMS}, the simplest measurement of \METv is \emph{\ac{Calo} \METv} which
+sums over the calorimeter tower energies (\ac{ECAL} and \ac{HCAL}).  An energy
 threshold is applied to the towers in order to reject electronics
-noise. Alternatively, \ac{PF} \METv sums over the candidate particles output by
+noise. Alternatively, \emph{\ac{PF} \METv} sums over the candidate particles output by
 the \ac{PF} algorithm. This will be discussed further in
 \sec~\ref{sec:reco_pf}. As will be seen, this provides the most sensitive \METv
 measurement at \ac{CMS} and thus is used throughout the following analysis
@@ -355,7 +356,7 @@ granularity of the \ac{CMS} detector ensures that blocks typically contain 1, 2
 or 3 elements.  The links between each block are parameterised by a ``distance''
 which encodes the quality of the link. Advanced tracking and calorimeter
 clustering algorithms have been developed to meet the needs of \ac{PF}
-reconstruction. These will be discussed in the next section.
+reconstruction. These will be discussed in the following sections.
 
 \begin{figure}[h!]
 \centering
@@ -370,7 +371,7 @@ reconstruction. These will be discussed in the next section.
   in~\subref{fig:reco_pf_diag1}. The \PKlong, \Ppiminus, \Ppiplus, \Ppizero and
   the two photons from its decay are shown. The \PKlong, \Ppiminus and two
   photons result in clear, well-separated \ac{ECAL} clusters -- round points
-  labelled E1 to E4~\ref{fig:reco_pf_diag2}. The \Ppiplus and \Ppiminus are
+  labelled E1 to E4~\subref{fig:reco_pf_diag2}. The \Ppiplus and \Ppiminus are
   reconstructed as charged tracks -- green lines labelled T1 and T2 -- which
   point to the two \ac{HCAL} clusters -- round points labelled H1 and
   H2~\cite{cms_pf_pas}.}
@@ -387,8 +388,8 @@ avoid excess energy counting.
 To meet these requirements, tracks are reconstructed using an iterative
 algorithm. This begins by reconstructing tracks with very tight selection
 requirements. Hits which can be unambiguously assigned in this step are then
-removed from consideration. The algorithm is iterated, and reconstruction tracks
-of the remaining hits is attempted, this time with loosened selection
+removed from consideration. The algorithm is iterated, and reconstruction of
+tracks from the remaining hits is attempted, this time with loosened selection
 criteria. This procedure is repeated with progressively looser selection
 criteria. This ensures high efficiency, whilst the removal of hits at each stage
 reduces the fake rate induced by combinatorics.  After three iterations, tracks
@@ -460,13 +461,13 @@ measurement from the calorimeter.
 
 Reconstruction of photons and neutral hadrons involves comparison of the track
 momentum to the calorimetric energy. The cluster energies in the \ac{ECAL} are
-calibrated for photons and the \ac{HCAL}, for \unit{50}{\GeV} pions. For the
+calibrated for photons and in the \ac{HCAL}, for \unit{50}{\GeV} pions. For the
 comparison to be valid, these must be re-calibrated to account for
 non-linearities in the \ac{HCAL}, as well as the differing response of the
 \ac{ECAL} to hadrons.
 
 In the case that several tracks are linked to a single \ac{HCAL} cluster, the
-total momenta of the tracks is compared to the calibrated calorimetric energy.
+total momentum of the tracks is compared to the calibrated calorimetric energy.
 Tracks linked to multiple clusters are resolved by preserving the closest link
 or in certain cases, links. The track momentum is then compared to the total
 calibrated calorimetric energy.
