@@ -105,7 +105,7 @@ nominal beam collision point inside \ac{CMS}. The $x$ axis is then defined to
 point horizontally inwards towards the centre of the \ac{LHC} ring and the
 $y$-axis, vertically upwards. The $z$-axis is aligned along the beam-line,
 pointing towards the nearby Jura mountains. Often a cylindrical coordinate
-system will be used with where the azimuthal angle, $\phi$, and radial
+system will be used where the azimuthal angle, $\phi$, and radial
 coordinate, $r$, span the $x-y$ plane. The azimuthal angle is measured with
 respect to the $x$-axis. The pseudorapidity, $\eta = - \ln \tan
 \frac{\theta}{2}$ where $\theta$ is the polar angle measured with respect to the
@@ -349,7 +349,7 @@ backgrounds and high rates of the \ac{LHC} environment.
 \label{sec:trigger}
 The high luminosity of the \ac{LHC} beam leads to a high particle flux in the
 detector. The separation of particles in the detector becomes increasingly
-difficult. In addition, may analyses benefit from precise position and momentum
+difficult. In addition, many analyses benefit from precise position and momentum
 measurements. Consequently, the \ac{CMS} subdetectors are constructed with an
 extremely fine granularity. Unavoidably, this requires an extremely large number
 of read-out channels - approximately 55 million across the whole detector. To
@@ -388,7 +388,7 @@ The \ac{L1T} must produce a trigger decision with minimal latency. This latency
 is chiefly limited by the size of the pipeline on the \ac{APV25} chip used to
 readout from the silicon strip tracker. The \ac{APV25} samples the voltage from
 the silicon strips at \unit{25}{\nano\second} intervals. These are stored in a
-pipline, 192 samples deep. This constrains the \ac{L1T} to provide a decision
+pipeline, 192 samples deep. This constrains the \ac{L1T} to provide a decision
 within $\approx \unit{3.2}{\micro\second}$.
 
 The \ac{L1T} has limited access to detector subsystems and only a limited time
@@ -456,9 +456,9 @@ are submitted to the grid, and routed automatically to a suitable site.
 
 Events recorded by the \ac{CMS} detector pass through a chain of reconstruction
 stages. At each stage, higher-level physics objects are built out of simpler
-ones, with a consequent reduction in the data size. \ac{MC} events are
-processed using either a detailed \geantfour simulation~\cite{geant_paper}, or a
-faster, parameterised model of the response known as \fastsim. This simulates
-the response of the \ac{CMS} subdetectors to the generated particles. After the
-detector response has been simulation, \ac{MC} is processed in exactly the
-same manner as data.
+ones, with a consequent reduction in the data size. \ac{MC} events are processed
+using either a detailed \geantfour simulation~\cite{geant_paper}, or a faster,
+parameterised model of the response known as \fastsim. This simulates the
+response of the \ac{CMS} subdetectors to the generated particles. After the
+detector response has been simulated, \ac{MC} is processed in exactly the same
+manner as data.
