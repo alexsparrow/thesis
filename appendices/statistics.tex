@@ -6,7 +6,7 @@ statistical interpretations is the construction of an appropriate likelihood
 function. The likelihood must model all statistical and systematic effects and
 is thus highly dependent on the experiment. The situation is considerably
 complicated when shape information is included, for which relevant bin-to-bin
-correlations must be included.
+correlations must be evaluated.
 
 \subsection{Notation}
 It will be helpful to define some notation. In the following, a subscript index
@@ -38,9 +38,8 @@ Without giving an explicit functional form for the signal yield and background
 prediction, the form of the likelihood function may be constructed. The
 likelihood must include the following terms.
 \begin{enumerate}
-\item Statistical terms representing the likelihood of observing the given
-  number of events given a certain expectation for the signal and background
-  yields.
+\item Statistical terms representing the likelihood of observing some number of
+  events given a certain expectation for the signal and background yields.
 \item Terms providing prior constraints on the various nuisance
   parameters. Certain uncertainties are statistical in nature and thus,
   independent nuisance parameters are assigned per bin along with a
@@ -89,7 +88,7 @@ The background prediction per bin is then written as
 \end{equation*}
 where:
 \begin{itemize}
-\item \RCSi is the translation ratio as defined in \eqn~\ref{eqn:susysearch_RCS}
+\item \RCSi is the translation factor as defined in \eqn~\ref{eqn:susysearch_RCS}
   (excluding contributions from \ac{QCD} processes);
 \item the nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{\gamma}$ represent
   statistical uncertainties uncorrelated between the bins;
@@ -120,7 +119,7 @@ Assuming the expansion is performed with respect to the mean of x, $\bar{x}$,
 the values of $a$ and $b$ are seen to be the mean values of the corresponding nuisance
 parameters. For small deviations from the mean,
 \begin{equation*}
- (\nu^{(A)} - a) \sim (\nu^{(B)} - b) \sim \epsilon \sim 0,
+ (\nu^{(A)} - a) \sim (\nu^{(B)} - b) \sim \epsilon \longrightarrow 0,
 \end{equation*}
 and ignoring terms $O(\epsilon^2)$,
 
@@ -291,9 +290,9 @@ as required.
 
 \subsection[Uncertainties on \texorpdfstring{\NControli}{NControli}]{Uncertainties on \boldmath{\NControli}}
 The dominant systematic uncertainty relating to the \LPcontrol region yield
-arises from the limited yield in the sample. This is especially true at
-high \STlep. Accordingly, a nuisance parameter is added to the likelihood and
-assigned a Gaussian prior with a width derived assuming a Poisson error on the
+arises from the limited number of events in the sample. This is especially true
+at high \STlep. Accordingly, a nuisance parameter is added to the likelihood and
+assigned a Gaussian prior with a width derived assuming a Poisson uncertainty on the
 \NControli yield.
 
 An additional complication arises in the case of the electron channel, where the
@@ -303,8 +302,8 @@ of \RCSi. This additional contribution to \NControli would again lead to an
 over-prediction of the background. To correct this, an additional factor is
 included in Equation~\ref{eqn:bgprediction}, $f^{\textrm{ewk}}_i$, derived from
 the results of the \ac{QCD} fit detailed in
-\sec~\ref{sec:susy_electron_bgpredict}. The error derived from the fit procedure
-is modelled as a Gaussian prior on an additional nuisance parameter,
+\sec~\ref{sec:susy_electron_bgpredict}. The uncertainty derived from the fit
+procedure is modelled as a Gaussian prior on an additional nuisance parameter,
 $\nu^{\textrm{QCD}}_i$. It has been assumed, and confirmed by the results of the
 fit in data, that the region \LPsignal is ``\ac{QCD} free''.
 

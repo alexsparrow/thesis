@@ -2,7 +2,7 @@
 \label{sec:interpretation}
 \section{Introduction}
 It is very often the case that a search for \ac{NP} will yield results
-consistent with the currently accepted theory (which, in most particle physics
+consistent with the currently accepted theory (which in most particle physics
 contexts would be the \ac{SM}). In the absence of a discovery, it is often
 desirable to provide additional information in the form of a statistical
 interpretation of the results. Such an interpretation typically serves the
@@ -46,8 +46,9 @@ Consider some statistical model, believed to describe a set of experimental data
 and depending on a set of parameters, $\theta$. The \emph{likelihood} of given
 values of $\theta$ in light of experimental observations, $X$, is the
 probability of observing $X$ given
-$\theta$~\cite{statistical_methods,louis_lyons}. Considered as a function of the parameter
-$\theta$ given experimental measurements, $X$, the likelihood may be written
+$\theta$~\cite{statistical_methods,louis_lyons}. Considered as a function of the
+parameter $\theta$, given experimental measurements, $X$, the likelihood may be
+written
 \begin{equation}
 \label{eqn:inter_likelihood}
 \likelihood\left(\theta|X\right) = P\left(X|\theta\right),
@@ -68,12 +69,12 @@ the likelihood function, such constant factors can be safely ignored.  This is
 known as a \emph{likelihood ratio test} and may be used to compare two
 hypotheses.
 
-An important use of the likelihood function is in estimation of the parameters
-$\theta$ given some set of observations. The value of $\theta$ which maximises
-$\likelihood$ is known as the \acf{MLE} of $\theta$, denoted
-$\hat{\theta}$. Often it will be convenient to work with the logarithm of the
-likelihood function, $\ln\likelihood$. Since the logarithm is a monotonically
-increasing function, its maxima coincide with those of $\likelihood$.
+An important use of the likelihood function is in estimation of $\theta$ given
+some set of observations. The value of $\theta$ which maximises $\likelihood$ is
+known as the \acf{MLE} of $\theta$, denoted $\hat{\theta}$. Often it will be
+convenient to work with the logarithm of the likelihood function,
+$\ln\likelihood$. Since the logarithm is a monotonically increasing function,
+its maxima coincide with those of $\likelihood$.
 
 
 \subsection{Profile Likelihood and Wilks' Theorem}
@@ -109,8 +110,7 @@ free parameters in the numerator and denominator of the likelihood ratio
 ($\theta_1$ and $\theta_2$ in \eqn~\ref{eqn:inter_likelihood_ratio}). In the
 case of the profile likelihood ratio, this is equal to the number of parameters
 of interest, $\mu$. Wilks' theorem can therefore be used to provide an interval
-estimate for the parameters of interest $\mu$. This method will be referred to
-as the \ac{PL} method.
+estimate for $\mu$. This will be referred to as the \ac{PL} method.
 
 \subsection{Hypothesis Testing}
 \label{sec:inter_cls}
@@ -163,21 +163,20 @@ the two hypotheses.
 
 To address this problem, the \CLs hypothesis test may be used instead~\cite{cls,confidence_level},
 \begin{equation*}
-\CLs = \frac{CLspb}{CLb},
+\CLs = \frac{\CLspb}{\CLb},
 \end{equation*}
 where, for the example shown in \fig~\ref{fig:inter_cls_explain2},
 \begin{eqnarray*}
-CLspb = P\left(x > x_0 | H_1\right)\\
-CLb = 1 - P\left(x < x_0 | H_0\right),
+\CLspb = P\left(x > x_0 | H_1\right)\\
+\CLb = 1 - P\left(x < x_0 | H_0\right),
 \end{eqnarray*}
 and the null hypothesis now represents a background-only scenario, b, and the
-alternate, signal-plus-background, s+b. Using the \CLs to test the alternate
+alternate, signal-plus-background, s+b. Using \CLs to test the alternate
 hypothesis, instead of a p-value, penalises cases where the test statistic
 provides little sensitivity -- since \CLb will be large. For a 95\% exclusion,
 $\CLs < 0.05$ is required as before. The \CLs method may also be used to derive
 an upper limit on some parameter by scanning through a range of values of the
-parameter of interest in order to obtain a 95\% upper limit. This is known as
-``hypothesis test inversion''.
+parameter of interest. This is known as ``hypothesis test inversion''.
 
 Several additional details are relevant to the discussion here. For the toy
 experiments used to generate the test statistic distributions, the nuisance
@@ -203,7 +202,7 @@ nuisance parameters are assigned for systematic uncertainties affecting the
 expected signal yield.
 
 Both the luminosity estimate and the trigger efficiency are subject to
-uncertainties which would effect the expected signal yield. Uncertainties of 4\%
+uncertainties which would affect the expected signal yield. Uncertainties of 4\%
 and 1\% are assigned respectively.
 
 The signal efficiency will also be affected by the choice of \acp{PDF} in the
@@ -266,7 +265,7 @@ m_{\frac{1}{2}}) = (80, 400)$ - close to the edge of the region excluded by the
 data (additional detail can be found in
 Appendix~\ref{sec:app_inter_validation}).
 
-The form of the \ac{PL} function for the same point can be seen in
+The form of the \ac{PL} function for this point can be seen in
 \fig~\ref{fig:inter_pl}. The signal strength, $\mu$, is the ratio of the
 excluded cross-section to that predicted by the \ac{CMSSM}. As expected, the
 inclusion of systematic effects pushes the exclusion to larger values of
@@ -284,7 +283,7 @@ The distributions of the test statistic used to calculate \CLs are shown in
 \fig~\ref{fig:inter_cls}. The results are seen to be qualitatively similar to
 the \ac{PL} case. This particular point goes from being strongly excluded at $>
 95\%$ confidence level with both lepton channels, to not being excluded when the
-electrons are removed.
+electron channel is removed.
 
 \section{Results}
 The statistical machinery described so far has been used to give interpretations
@@ -331,10 +330,9 @@ described in \sec~\ref{sec:framework_susy}.
 \subsection{The \ac{CMSSM}}
 The \ac{CMSSM} was previously described in \sec~\ref{sec:cmssm}. As explained,
 the \ac{CMSSM} makes a number of somewhat arbitrary choices which restrict the
-\ac{SUSY} topologies signatures it is able to encompass. Whilst these make it
-relatively undesirable as a framework for theoretical interpretation, it is
-nonetheless useful as a common yardstick by which to compare experiments and
-searches.
+\ac{SUSY} topologies it is able to encompass. Whilst these make it relatively
+undesirable as a framework for theoretical interpretation, it is nonetheless
+useful as a common yardstick by which to compare experiments and searches.
 
 The \ac{CMSSM} results are presented as a 95\% exclusion in a two-dimensional
 plane of the parameter space where the two mass parameters, \Mzero and \Mhalf,
@@ -347,7 +345,7 @@ the signal efficiencies for each bin of \STlep. In the case of the \ac{CMSSM},
 these must be evaluated for each point in the $(\Mzero, \Mhalf)$-plane. These
 are evaluated using the same analysis procedure as used for the data and \ac{SM}
 \ac{MC} samples. The \ac{CMSSM} sample is produced using the \pythia event
-generator, with the two mass parameters are varied independently in steps of
+generator, with the two mass parameters varied independently in steps of
 \unit{20}{\GeV} to produce a grid. For each grid point, 10000 events are
 generated. Due to the large number of events, the detector response is simulated
 using the \fastsim simulation package (see \sec~\ref{sec:cms_computing}). This
@@ -380,7 +378,7 @@ p290), this would appear to be consistent.
 \subsubsection{Exclusion}
 For consistency with other \ac{SUSY} searches at the \ac{LHC}, a limit has been
 set using the \CLs method described in \sec~\ref{sec:inter_cls}. Whilst it is
-possible, to set an upper limit on the signal strength parameter, $\mu$, this
+possible to set an upper limit on the signal strength parameter, $\mu$, this
 becomes highly computationally intensive. Instead, a simple exclusion is
 produced assuming \ac{NLO} cross-sections. This is shown in
 \fig~\ref{fig:inter_msugra_exclusion}. All terms discussed in
@@ -484,7 +482,7 @@ and consequently the efficiency. Events entering the sample in this region tend
 to be dominated by \ac{ISR}. The modelling of \ac{ISR} in simulation has a
 significant associated uncertainty. For this reason, the region immediately
 below the diagonal has been excluded from the limit. This excluded range is
-chosen to remove regions where the upper limit appeared to fluctuate at
+chosen to remove regions where the upper limit appears to fluctuate at
 random. For $x=0.50$ and $x=0.75$, the region $\Mgluino - \Mlsp <
 \unit{100}{\GeV}$ is excluded. For $x=0.25$, \Mchargino is close to \Mlsp and
 presumably the efficiency is more sensitive to the modelling of \ac{ISR}. In
@@ -519,7 +517,7 @@ $x=0.25$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
   exclusion in terms 1, 3 and 10 times the gluino cross-section predicted by
   \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
-  as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
+  as a function of \Mgluino with $\Mlsp = \unit{200}{\GeV}$. Overlayed is the
   \ac{QCD} cross-section for gluino production as a function of \Mgluino.}
 \label{fig:inter_t3w_0p75}
 \end{figure}
@@ -535,7 +533,7 @@ $x=0.5$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
   exclusion in terms 1, 3 and 10 times the gluino cross-section predicted by
   \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
-  as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
+  as a function of \Mgluino with $\Mlsp = \unit{200}{\GeV}$. Overlayed is the
   \ac{QCD} cross-section for gluino production as a function of \Mgluino.}
 \label{fig:inter_t3w_0p50}
 \end{figure}
@@ -551,7 +549,7 @@ $x=0.75$]{Limit in the \TthreeW simplified model with \Mchargino set assuming
   \subref{fig:inter_t3w_0p25_limit}. Overlayed are contours showing this
   exclusion in terms 1, 3 and 10 times the gluino cross-section predicted by
   \ac{QCD}. \fig~\subref{fig:inter_t3w_0p25_limit_1d} shows the same upper limit
-  as a function of \Mgluino with $\Mlsp = \unit{50}{\GeV}$. Overlayed is the
+  as a function of \Mgluino with $\Mlsp = \unit{200}{\GeV}$. Overlayed is the
   \ac{QCD} cross-section for gluino production as a function of \Mgluino.}
 \label{fig:inter_t3w_0p25}
 \end{figure}
@@ -624,7 +622,7 @@ significant portion of the parameter space.
 Additionally, two simplified models have been investigated: \TthreeW and
 \Ttwott. The \ac{PL} method has been used to set an upper limit as a function of
 the model parameter space in each case. This has also been compared to a
-cross-section calculation, assuming \ac{QCD}-strength coupling. In the \TthreeW
+cross-section calculation assuming \ac{QCD}-strength coupling. In the \TthreeW
 case, significant regions of the parameter space have been excluded. The \Ttwott
 model is of theoretical interest from the perspective of \ac{SUSY} models
 containing a light stop squark. In this case, the sensitivity of this particular
