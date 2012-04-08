@@ -11,18 +11,18 @@ used for the \PW polarisation measurement as well as several other projects. The
 vast majority of the initial code was written by Dr. John Jones with subsequent
 contributions from a number of others.
 
-The \susyv2 code aims to minimise the number of reads performed on a
-\root tree by reading branches on demand and performing lazy calculations as
-required to satisfy analysis code requests for higher-level observables. The
-dependency chain between calculated quantities may be viewed as a tree. The
-leaves of this tree correspond to quantities stored directly in the \root
-file (or an alternative serialisation format). To minimise computation, each
-node in this tree performs calculation (or \ac{IO} in the case of the leaf nodes)
-only once. The results are then cached. Subsequent use of this quantity then
-returns the cached result directly. Furthermore, access to quantities dependent
-on others which have already been calculated will require the minimum necessary
-calculation, reutilising cached values and minimising further \ac{IO} or CPU
-usage.
+The \susyv2 code aims to minimise the number of reads performed on a \root tree
+by reading branches on demand and performing lazy calculations as required to
+satisfy analysis code requests for higher-level observables. The dependency
+chain between calculated quantities may be viewed as a tree. The leaves of this
+tree correspond to quantities stored directly in the \root file (or an
+alternative serialisation format). To minimise computation, each node in this
+tree performs its calculation (or \ac{IO} in the case of the leaf nodes) only
+once per event. The results are then cached. Subsequent use of this quantity
+then returns the cached result directly. Furthermore, access to quantities
+dependent on others which have already been calculated will require the minimum
+necessary calculation, reutilising cached values and minimising further \ac{IO}
+or CPU usage.
 
 As well as the performance advantages of this approach, it has the benefit of
 enforcing a kind of ``referential transparency'' -- repeated access to a given
