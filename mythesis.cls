@@ -36,7 +36,7 @@
 %% Import package
 \RequirePackage{import}
 \RequirePackage{lineno}
-\RequirePackage{acronym}
+\RequirePackage[withpage]{acronym}
 \RequirePackage{ctable}
 
 % TODO notes in the margin
