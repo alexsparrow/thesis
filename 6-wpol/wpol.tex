@@ -1275,7 +1275,7 @@ uncertainty is seen to be similar in both lepton channels.
 \input{tables/syst_electrons} \input{tables/syst_combined}
 \input{tables/syst_theory}
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \subfloat[$\Ptl\left(\Pelectron\right)$]{\label{fig:wpol_datamc_ele_leppt_plus}\includegraphics[width=0.32\textwidth]{fig/ele_LeptonPtPlus}}
 \subfloat[$\LP\left(\Pelectron\right)$]{\label{fig:wpol_datamc_ele_lp_plus}\includegraphics[width=0.32\textwidth]{fig/ele_ICVarPlus}}
@@ -1299,7 +1299,7 @@ channel]{Comparison of kinematic distributions in data and \acs{MC} for the
 \label{fig:wpol_datamc_ele}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \subfloat[$\Ptl\left(\Pmuon\right)$]{\label{fig:wpol_datamc_mu_leppt_plus}\includegraphics[width=0.32\textwidth]{fig/datamc_ptmuonplus}}
 \subfloat[$\LP\left(\Pmuon\right)$]{\label{fig:wpol_datamc_mu_lp_plus}\includegraphics[width=0.32\textwidth]{fig/datamc_lpvarplus}}
@@ -1336,9 +1336,9 @@ be reasonable. Moreover, the data-driven template appears to model the
 simulated samples.
 
 \subsection{Fit Results}
-The individual fits of the \Pgmp, \Pgmm, \Pep and \Pem channels to the 2010
+The individual fits of the \Pep, \Pem, \Pgmp and \Pgmm channels to the 2010
 dataset are shown in
-\figs~\ref{fig:wpol_fit_results_mu}~and~\ref{fig:wpol_fit_results_ele}. The
+\figs~\ref{fig:wpol_fit_results_el}~and~\ref{fig:wpol_fit_results_mu}. The
 signal and background templates are shown individually, along with the fitted
 values of \fLmfR and \f0. The 68\% error contours in the $(\fLmfR, \f0)$ plane
 are shown in \figs~\ref{fig:wpol_contour_ele} and \ref{fig:wpol_contour_mu} for
@@ -1375,7 +1375,7 @@ consistent with \fig~\ref{fig:wpol_fit_ele_minus}, where the left-handed and
 the correlation between the helicity parameters and \fQCD is reduced by the
 addition of the muon channel.
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \subfloat[\Pgmp]{\label{fig:wpol_fit_mu_plus}\includegraphics[width=0.4\textwidth]{fig/muon_MC_WHelicityFramePlots_PlusICVar}}\quad
 \subfloat[\Pgmm]{\label{fig:wpol_fit_mu_minus}\includegraphics[width=0.4\textwidth]{fig/muon_MC_WHelicityFramePlots_MinusICVar}}
@@ -1387,10 +1387,10 @@ addition of the muon channel.
 \label{fig:wpol_fit_results_mu}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
-\subfloat[\Pep]{\label{fig:wpol_fit_ele_plus}\includegraphics[width=0.4\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\quad
-\subfloat[\Pem]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.4\textwidth]{fig/electron_MC_WHelicityFramePlots_MinusICVar}}\\
+\subfloat[\Pep]{\label{fig:wpol_fit_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\quad
+\subfloat[\Pem]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_MC_WHelicityFramePlots_MinusICVar}}\\
 \caption[Results of the binned maximum likelihood fit - electrons]{Results of
   the binned maximum likelihood fit in the electron channel. The left-handed
   helicity template is shown in red, the right-handed in green and the
@@ -1402,10 +1402,10 @@ addition of the muon channel.
 
 
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
-\subfloat[\Pep]{\label{fig:wpol_contour_ele_plus}\includegraphics[width=0.4\textwidth]{fig/electron_contour_plus}}\quad
-\subfloat[\Pepm]{\label{fig:wpol_contour_ele_minus}\includegraphics[width=0.4\textwidth]{fig/electron_contour_minus}}
+\subfloat[\Pep]{\label{fig:wpol_contour_ele_plus}\includegraphics[width=0.45\textwidth]{fig/electron_contour_plus}}\quad
+\subfloat[\Pem]{\label{fig:wpol_contour_ele_minus}\includegraphics[width=0.45\textwidth]{fig/electron_contour_minus}}
 \caption[Error ellipses in the $(\fLmfR, \f0)$ plane for the electron
 channel]{Error ellipses in the $(\fLmfR, \f0)$ plane for \unit{36}{\invpb} of
   data in the electron channel. The black point indicates the best fit
@@ -1416,10 +1416,10 @@ channel]{Error ellipses in the $(\fLmfR, \f0)$ plane for \unit{36}{\invpb} of
 \label{fig:wpol_contour_ele}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
-\subfloat[\Pgmp]{\label{fig:wpol_contour_mu_plus}\includegraphics[width=0.4\textwidth]{fig/muon_contour_plus}}\quad
-\subfloat[\Pgmm]{\label{fig:wpol_contour_mu_minus}\includegraphics[width=0.4\textwidth]{fig/muon_contour_minus}}
+\subfloat[\Pgmp]{\label{fig:wpol_contour_mu_plus}\includegraphics[width=0.45\textwidth]{fig/muon_contour_plus}}\quad
+\subfloat[\Pgmm]{\label{fig:wpol_contour_mu_minus}\includegraphics[width=0.45\textwidth]{fig/muon_contour_minus}}
 \caption[Error ellipses in the $(\fLmfR, \f0)$ plane for the muon channel]{Error ellipses in the $(\fLmfR, \f0)$ plane for
   \unit{36}{\invpb} of data in the muon channel. The black point indicates the
   best fit value. The 68\% confidence level contour is shown as a green shaded
@@ -1430,10 +1430,10 @@ channel]{Error ellipses in the $(\fLmfR, \f0)$ plane for \unit{36}{\invpb} of
 \end{figure}
 
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
-\subfloat[]{\label{fig:wpol_contour_comb_plus}\includegraphics[width=0.4\textwidth]{fig/combined_contour_plus}}\quad
-\subfloat[]{\label{fig:wpol_contour_comb_minus}\includegraphics[width=0.4\textwidth]{fig/combined_contour_minus}}
+\subfloat[\Pep/\Pgmp]{\label{fig:wpol_contour_comb_plus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_plus}}\quad
+\subfloat[\Pem/\Pgmm]{\label{fig:wpol_contour_comb_minus}\includegraphics[width=0.45\textwidth]{fig/combined_contour_minus}}
 \caption[Error ellipses in the $(\fLmfR, \f0)$ plane for the combined fit]{Error ellipses in the $(\fLmfR, \f0)$ plane for
   \unit{36}{\invpb} of data combined across electron and muon channels. The
   black point indicates the best fit value. The 68\% confidence level contour is
