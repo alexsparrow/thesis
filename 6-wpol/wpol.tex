@@ -1336,15 +1336,16 @@ be reasonable. Moreover, the data-driven template appears to model the
 simulated samples.
 
 \subsection{Fit Results}
-The individual fits of the \Pep, \Pem, \Pgmp and \Pgmm channels to the 2010
-dataset are shown in \fig~\ref{fig:wpol_fit_results}. The signal and background
-templates are shown individually, along with the fitted values of \fLmfR and
-\f0. The 68\% error contours in the $(\fLmfR, \f0)$ plane are shown in
-\figs~\ref{fig:wpol_contour_ele} and \ref{fig:wpol_contour_mu} for electrons and
-muons respectively. The shading indicates the unphysical region of the parameter
-space as described in \sec~\ref{sec:wpol_fit_fmfr}. The left-handed polarisation
-is seen to dominate in both case. The effect predicted in
-\sec~\ref{sec:polarisation} is observed with a large significance.
+The individual fits of the \Pgmp, \Pgmm, \Pep and \Pem channels to the 2010
+dataset are shown in
+\figs~\ref{fig:wpol_fit_results_mu}~and~\ref{fig:wpol_fit_results_ele}. The
+signal and background templates are shown individually, along with the fitted
+values of \fLmfR and \f0. The 68\% error contours in the $(\fLmfR, \f0)$ plane
+are shown in \figs~\ref{fig:wpol_contour_ele} and \ref{fig:wpol_contour_mu} for
+electrons and muons respectively. The shading indicates the unphysical region of
+the parameter space as described in \sec~\ref{sec:wpol_fit_fmfr}. The
+left-handed polarisation is seen to dominate in both case. The effect predicted
+in \sec~\ref{sec:polarisation} is observed with a large significance.
 
 The error contours for the two combined fits -- one per lepton charge -- are
 shown in \fig~\ref{fig:wpol_contour_comb}. The results of each fit are presented
@@ -1376,18 +1377,29 @@ addition of the muon channel.
 
 \begin{figure}[h!]
 \centering
-\subfloat[\Pep]{\label{fig:wpol_fit_ele_plus}\includegraphics[width=0.42\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\quad
-\subfloat[\Pem]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.42\textwidth]{fig/electron_MC_WHelicityFramePlots_MinusICVar}}\\
 \subfloat[\Pgmp]{\label{fig:wpol_fit_mu_plus}\includegraphics[width=0.42\textwidth]{fig/muon_MC_WHelicityFramePlots_PlusICVar}}\quad
 \subfloat[\Pgmm]{\label{fig:wpol_fit_mu_minus}\includegraphics[width=0.42\textwidth]{fig/muon_MC_WHelicityFramePlots_MinusICVar}}
-\caption[Results of the binned maximum likelihood fit]{Results of the binned maximum likelihood
-  fit to \unit{36}{\invpb} of data at $\sqrt{s} = \unit{7}{\TeV}$. The
-  left-handed helicity template is shown in red, the right-handed in green and
-  the longitudinal in blue, with normalisations as found by the fit. The yellow
-  and red shaded regions are the \ac{EWK} and \ac{QCD} background shapes
-  respectively, where the latter is obtained from data.}
-\label{fig:wpol_fit_results}
+\caption[Results of the binned maximum likelihood fit - muons]{Results of the binned
+  maximum likelihood fit in the muon channel. The left-handed helicity template
+  is shown in red, the right-handed in green and the longitudinal in blue, with
+  normalisations as found by the fit. The yellow and red shaded regions are the
+  \ac{EWK} and \ac{QCD} background shapes respectively, where the latter is
+  obtained from data.}
+\label{fig:wpol_fit_results_mu}
 \end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfloat[\Pep]{\label{fig:wpol_fit_ele_plus}\includegraphics[width=0.42\textwidth]{fig/electron_MC_WHelicityFramePlots_PlusICVar}}\quad
+\subfloat[\Pem]{\label{fig:wpol_fit_ele_minus}\includegraphics[width=0.42\textwidth]{fig/electron_MC_WHelicityFramePlots_MinusICVar}}\\
+\caption{Results of the binned maximum likelihood fit in the electron
+  channel. The left-handed helicity template is shown in red, the right-handed
+  in green and the longitudinal in blue, with normalisations as found by the
+  fit. The yellow and red shaded regions are the \ac{EWK} and \ac{QCD}
+  background shapes respectively, where the latter is obtained from data.}
+\label{fig:wpol_fit_results_ele}
+\end{figure}
+
 
 
 \begin{figure}[h!]
