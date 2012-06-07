@@ -30,7 +30,7 @@
 \RequirePackage{subfig}
 
 %% TikZ is a marvellous drawing package
-\RequirePackage{tikz}
+%\RequirePackage{tikz}
 
 %% My additions
 %% Import package
