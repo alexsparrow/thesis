@@ -1034,7 +1034,7 @@ uncertainty]{Relative change of the muon \LP distribution due to a change in the
 The \ac{JES} uncertainty follows the standard prescription for \ac{CMS}
 analyses. Firstly, the unclustered component of the missing energy is calculated as,
 \begin{equation*}
-\vec{E}^{\textrm{unclustered}}_T = -\METv + \Ptlv + \sum_i \vec{p}_T^{\textrm{jet},i},
+\vec{E}^{\textrm{unclustered}}_T = \METv + \Ptlv + \sum_i \vec{p}_T^{\textrm{jet},i},
 \end{equation*}
 where the index, $i$, runs over all jets with $\Pt > \unit{10}{\GeV}$ in the
 event as reconstructed by the particle flow algorithm. The unclustered energy is
@@ -1042,7 +1042,7 @@ then scaled either up or down within its uncertainty -- taken to be
 5\%~\cite{jet_energy_pas}. \METv is then recalculated from this shifted
 unclustered energy,
 \begin{equation*}
-\METv \longrightarrow -\vec{E}^{\textrm{unclustered}}_T - \Ptlv - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i},
+\METv \longrightarrow \vec{E}^{\textrm{unclustered}}_T - \Ptlv - \sum_i (1 \pm  u(p_T, \eta)) \times \vec{p}_T^{\textrm{jet},i},
 \end{equation*}
 where $u(p_T, \eta)$ is a map specifying the relative uncertainty on the
 \ac{JES} as a function of jet transverse momentum and pseudorapidity. The scale
