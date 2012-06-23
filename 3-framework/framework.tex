@@ -321,25 +321,26 @@ where $\ket{J, M}$ represents an angular momentum
 state with a total angular momentum, $J$, and projection, $M$. Rotating these
 states through the angle \thetastar, one obtains
 \begin{equation}
-\ket{\Pl\Pgn^{J,M}}' = \sum_{M'=-J}^{M'=+J} d_{M, M'}^J \ket{J, M'}.
+\ket{\Pl\Pgn^{J,M}}' = \sum_{M'=-J}^{M'=+J} d_{M, M'}^J \ket{J, M'},
 \end{equation}
-The angular momentum of a \PW boson in a helicity eigenstate is then
+where $d_{M, M'}^J$ are elements of the Wigner d-matrix~\cite{pdg}. The angular
+momentum of a \PW boson in a helicity eigenstate is then
 $\ket{\PW^{J,M''}}$. The matrix element for the angular momentum coupling can be
 written
 \begin{eqnarray*}
-\braket{\PW^{J,M''}}{\Pl\Pgn^{J,M}}' &\sim& \sum_{M'=-J}^{M'=+J} d_{M M'}^{J}
+\braket{\PW^{J,M''}}{\Pl\Pgn^{J,M}}' &\sim& \sum_{M'=-J}^{M'=+J} d_{M, M'}^{J}
 \braket{J,M''}{J,M'} \\
-&\sim& d^{J}_{M M''} \braket{J,M''}{J,M''} \sim d_{M M''}^{J}.
+&\sim& d^{J}_{M, M''} \braket{J,M''}{J,M''} \sim d_{M, M''}^{J}.
 \end{eqnarray*}
 The cross-section is calculated by squaring the matrix elements and summing over
 the helicity states ($M''$) of the incoming $\PW$ boson. Each state is weighted
 by the helicity fraction $f_{M''}$,
 \begin{equation*}
-  \sigma(\PW\longrightarrow\Pl\Pgnl) \sim f_0 \left|d_{M 0}^1\right|^2 + f_{-1} \left|d_{M
-      -1}^1\right|^2 + f_{1} \left|d_{M +1}^1\right|^2,
+  \sigma(\PW\longrightarrow\Pl\Pgnl) \sim f_0 \left|d_{M, 0}^1\right|^2 + f_{-1} \left|d_{M,
+      -1}^1\right|^2 + f_{1} \left|d_{M, +1}^1\right|^2,
 \end{equation*}
 where $f_0 + f_1 + f_{-1} = 1$. Finally, using the fact that for \PWpm,
-$M=\pm1$, and replacing for the elements of the D-matrices in terms of
+$M=\pm1$, and replacing for the elements of the Wigner d-matrix in terms of
 $\cos\thetastar$ gives,
 \begin{equation}
 \label{eqn:wpol_helicity_fractions}
