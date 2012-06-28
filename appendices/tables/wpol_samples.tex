@@ -1,0 +1,36 @@
+\ctable[
+caption=\ac{MC} samples used in the \PW polarisation analysis,
+mincapwidth=0.5\textwidth,
+label=tbl:app_wpol_samples,
+pos=h,
+doinside=\footnotesize
+]{lccccc}{
+\tnote[a]{These samples are binned in overlapping ranges of \pthat. A reweighting procedure is used to account for the overlaps in the samples.}
+}{\FL
+Sample                    & Process                                  & Generator & $N_{\textrm{events}}$ & $\sigma \times \textrm{BR}$ & $\mathcal{L}$ \ML
+\Wjets                    & $\PW\rightarrow\Pl\Pnu + \textrm{jets}$  & \madgraph & 15168266              & 31314                       & \unit{484}{\invpb}\NN
+\Zjets                    & $\PZ\rightarrow\Plp\Plm + \textrm{jets}$ & \madgraph & 1084921               & 3048                        & \unit{356}{\invpb}\NN
+\ttbar                    & $\ttbar + \textrm{jets}$                 & \madgraph & 1164640               & 157                         & \unit{7.42}{\invfb}\NN
+\ac{QCD} \EMEnriched      & $20 < \pthat < 30$                       & \pythia & 30898517              & 1719150                     & \unit{18.0}{\invpb}\NN
+                           & $30 < \pthat < 80$                       & \pythia & 62707742              & 3498700                     & \unit{17.9}{\invpb}\NN
+                           & $80 < \pthat < 170$                      & \pythia & 5494911               & 134088                      & \unit{41.0}{\invpb}\NN
+\ac{QCD} \BCtoE           & $20 < \pthat < 30$                       & \pythia & 2461023               & 108330                      & \unit{22.7}{\invpb}\NN
+                           & $30 < \pthat < 80$                       & \pythia & 2075597               & 138762                      & \unit{15.0}{\invpb}\NN
+                           & $80 < \pthat < 170$                      & \pythia & 1208674               & 9422                        & \unit{128}{\invpb}\NN
+\gammajets\tmark[a]       & $\pthat > 15$                            & \pythia & 1223390               & 192200                      & \unit{6.37}{\invpb}\NN
+                           & $\pthat > 30$                            & \pythia & 1026794               & 20070                       & \unit{51.2}{\invpb}\NN
+                            & $\pthat > 80$                            & \pythia & 1187711               & 556.5                       & \unit{2.13}{\invfb}\NN
+                            & $\pthat > 170$                           & \pythia & 939400                & 24.37                       & \unit{38.5}{\invfb}\LL
+                           & $\pthat > 300$                           & \pythia & 1024266               & 1.636                       & \unit{626}{\invfb}\NN
+                           & $\pthat > 470$                           & \pythia & 1091179               & 0.136                       & \unit{8.02}{\invab}\NN
+                           & $\pthat > 800$                           & \pythia & 1065640               & 0.003477                    & \unit{306}{\invab}\NN
+                          & $\pthat > 1400$                          & \pythia & 1291025               & $1.286 \times 10^{-5}$      & \unit{100}{\zepto\reciprocal\barn}\LL
+\ac{QCD} \pythia\tmark[a] & $\pthat > 15$                            & \pythia & 6095857               & $8.762\times 10^8$          & \unit{6.96}{\invnb}\NN
+                          & $\pthat > 30$                            & \pythia & 5069664               & $6.041\times10^7$           & \unit{83.9}{\invnb}\NN
+                          & $\pthat > 80$                            & \pythia & 2065792               & $9.238\times10^5$           & \unit{2.24}{\invpb}\NN
+                          & $\pthat > 170$                           & \pythia & 3171950               & $2.547\times10^4$           & \unit{125}{\invpb}\NN
+                          & $\pthat > 300$                           & \pythia & 2976108               & $1.256\times10^3$           & \unit{2.37}{\invfb}\NN
+                          & $\pthat > 470$                           & \pythia & 2159497               & 87.98                       & \unit{24.5}{\invfb}\NN
+                          & $\pthat > 800$                           & \pythia & 2181700               & 2.186                       & \unit{998}{\invfb}\NN
+                         & $\pthat > 1400$                          & \pythia & 1185024               & 0.01122                     & \unit{105}{\invab}\LL
+}
