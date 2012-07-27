@@ -979,32 +979,40 @@ particle flow algorithm, as discussed in \sec~\ref{sec:reco_pf}.
 
 \subsubsection{\acl{JES}}
 \label{sec:wpol_syst_jec}
-The \ac{JES} is discussed in \sec~\ref{sec:reco_jets}. The uncertainty on its
-calibration has been thoroughly studied and is parameterised as a function of
-jet \Pt and $\eta$. In the case of a global miscalibration, jet energy
-measurements in data would be pushed ``upwards'' or ``downwards'' with respect
-to the values predicted by simulation. If one imagines a perfectly balanced
-di-jet system in the centre of the detector, the resulting effect on the \METv
-will of course be cancelled. However, this will rarely be the case. In
-particular, in the case of \Wjets production, the hadronic system will be
-recoiling against the \PW boson. For relatively high transverse momentum \PW
-bosons, the \METv is very likely to point away from the recoiling jets. This
-suggests that the effect of an upward or downard shift in the \ac{JES} is likely
-to have an opposite effect on the \METv scale and will be highly correlated
-between events. To first order, a shift in the \ac{JES} will lead to an
-``opposite'' shift in the \MET distribution. Note that, angular effects are not
-being considered in this discussion, but are fully modelled in the calculation
-of this uncertainty.
+The \ac{JES} is discussed in \sec~\ref{sec:reco_jets}. The uncertainty
+on its calibration has been thoroughly studied and is parameterised as
+a function of jet \Pt and $\eta$. In the case of a global
+miscalibration, jet energy measurements in data would be pushed
+``upwards'' or ``downwards'' with respect to the values predicted by
+simulation. If one imagines a perfectly balanced di-jet system in the
+centre of the detector, the resulting effect on the \METv will of
+course be cancelled. However, this will rarely be the case. In
+particular, in the case of \Wjets production, the hadronic system will
+be recoiling against the \PW boson. In this case, a shift in the
+\ac{JES} is likely to have a significant effect on the \LP variable as
+well as \PtW and \MT. The resulting systematic uncertainty has been
+fully evaluated in simulation.
 
-The dominant effect of the \ac{JES} on the fitted helicity fractions is due to
-the change in the \LP shape. The effect will also have an impact on \PtW and \MT
-and this too is modelled in simulation. The shift in the \MET due to the
-\ac{JES} will correspond directly to a shift in the calculated \LP. For an
-upwards shift in the \ac{JES}, the \MET will tend to shift downwards and thus to
-larger values of \LP. Conversely, for a downward shift in the \ac{JES}, the \MET
-scale will increase, and therefore \LP will shift to smaller values. This very
-approximate argument is born out in the full modelling in
-simulation. \fig~\ref{fig:wpol_mujecunc} shows the fractional change of the muon
+%% For relatively high transverse momentum \PW
+%% bosons, the \METv is very likely to point away from the recoiling jets. This
+%% suggests that the effect of an upward or downard shift in the \ac{JES} is likely
+%% to have an opposite effect on the \METv scale and will be highly correlated
+%% between events. To first order, a shift in the \ac{JES} will lead to an
+%% ``opposite'' shift in the \MET distribution. Note that, angular effects are not
+%% being considered in this discussion, but are fully modelled in the calculation
+%% of this uncertainty.
+
+%% The dominant effect of the \ac{JES} on the fitted helicity fractions is due to
+%% the change in the \LP shape. The effect will also have an impact on \PtW and \MT
+%% and this too is modelled in simulation. The shift in the \MET due to the
+%% \ac{JES} will correspond directly to a shift in the calculated \LP. For an
+%% upwards shift in the \ac{JES}, the \MET will tend to shift downwards and thus to
+%% larger values of \LP. Conversely, for a downward shift in the \ac{JES}, the \MET
+%% scale will increase, and therefore \LP will shift to smaller values. This very
+%% approximate argument is born out in the full modelling in
+%% simulation.
+
+\fig~\ref{fig:wpol_mujecunc} shows the fractional change of the muon
 \LP distribution for upward and downward shifts in the \ac{JES}. Clearly, the
 effect is quite large and most severe towards the edges of the \LP distribution
 (i.e. $\LP < 0$ and $\LP > 1$). There are two reasons for this. Firstly, that in
