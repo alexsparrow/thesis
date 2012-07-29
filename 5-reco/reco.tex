@@ -92,6 +92,21 @@ predefined selections are available.
   decays-in-flight at the cost of a small loss in efficiency for prompt muons.
 \end{itemize}
 
+\fig~\ref{fig:reco_muon_perf} shows the muon transverse momentum resolution
+as a function of muon \Pt. 
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{fig/muon_perf}
+  \caption[Muon transverse momentum resolution]{Muon transverse
+    momentum resolution as a function of transverse momentum shown for
+    the muon system only, the inner tracking only and both. The left
+    figure is for $|\eta|<0.8$ and the right figure for
+    $1.2<|\eta|<2.4$~\cite{cms_jinst}.}
+  \label{fig:reco_muon_perf}
+\end{figure}
+
+
 
 \subsection{Electrons}
 \label{sec:reco_electrons}
@@ -225,27 +240,33 @@ barrel-endcap transition region, $1.4442 < |\eta| < 1.566$ is explicitly exclude
 
 \input{tables/electron_id}
 
-\begin{figure}[htbp!]
-\centering
-\subfloat[Barrel]{\label{fig:reco_ele_id_a}\includegraphics[width=0.45\textwidth]{fig/ele_id_a}}\quad
-\subfloat[Endcap]{\label{fig:reco_ele_id_b}\includegraphics[width=0.45\textwidth]{fig/ele_id_b}}\\
-\subfloat[Barrel]{\label{fig:reco_ele_id_a}\includegraphics[width=0.45\textwidth]{fig/ele_id_c}}\quad
-\subfloat[Endcap]{\label{fig:reco_ele_id_b}\includegraphics[width=0.45\textwidth]{fig/ele_id_d}}\\
-\subfloat[Barrel]{\label{fig:reco_ele_id_a}\includegraphics[width=0.45\textwidth]{fig/ele_id_e}}\quad
-\subfloat[Endcap]{\label{fig:reco_ele_id_b}\includegraphics[width=0.45\textwidth]{fig/ele_id_f}}\\
-\subfloat[Barrel]{\label{fig:reco_ele_id_a}\includegraphics[width=0.45\textwidth]{fig/ele_id_g}}\quad
-\subfloat[Endcap]{\label{fig:reco_ele_id_b}\includegraphics[width=0.45\textwidth]{fig/ele_id_h}}\\
-\caption{}
-\label{fig:reco_ele_id}
+\fig~\ref{fig:reco_ele_perf} shows the \ac{ECAL} energy resolution as
+a function of electron energy from the results of a beam test. The
+electron fake rate is shown as a function of \Et and $\eta$ for the
+95\% and 80\% efficiency working points in
+\fig~\ref{fig:reco_ele_fake_rate}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{fig/ele_perf}
+  \caption[\ac{ECAL} energy resolution]{\ac{ECAL} energy
+    resolution as a function of electron energy from the results of a
+    test beam measurement. The energy has been measured in an array of
+    $3\times 3$ crystals with an electron impacting the central
+    crystal. The values of the stochastic ($S$), noise ($N$) and
+    constant ($C$) terms are also shown~\cite{cms_jinst}.}
+  \label{fig:reco_ele_perf}
 \end{figure}
 
-\begin{figure}[htbp!]
+\begin{figure}
 \centering
 \subfloat[Barrel]{\label{fig:reco_ele_fake_rate_a}\includegraphics[width=0.45\textwidth]{fig/ele_fake_rate_a}}\quad
-\subfloat[Endcap]{\label{fig:reco_ele_fake_rate_b}\includegraphics[width=0.45\textwidth]{fig/ele_fake_rate_b}}\\
-\subfloat[Barrel]{\label{fig:reco_ele_fake_rate_a}\includegraphics[width=0.45\textwidth]{fig/ele_fake_rate_c}}\quad
-\subfloat[Endcap]{\label{fig:reco_ele_fake_rate_b}\includegraphics[width=0.45\textwidth]{fig/ele_fake_rate_d}}
-\caption{}
+\subfloat[Endcap]{\label{fig:reco_ele_fake_rate_b}\includegraphics[width=0.45\textwidth]{fig/ele_fake_rate_b}}
+\caption[Electron fake rate for 95\% and 80\% efficiency working points]{Electron fake rate per reconstructed electron as a function
+  of \subref{fig:reco_ele_fake_rate_a} \Et and
+  \subref{fig:reco_ele_fake_rate_b} $\eta$ for the 95\% and 80\%
+  efficiency working points. Results are shown for data and
+  \ac{MC}~\cite{cms_ele_reco_pas}.}
 \label{fig:reco_ele_fake_rate}
 \end{figure}
 
