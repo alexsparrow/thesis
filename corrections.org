@@ -525,6 +525,7 @@ fcd03900c8cffcf7ae2ffeab96968e6e54c838e4
 ** TODO Add lepton quality plots to chapter 6
 97ede87c7d62e631295807ccc2777996d89ea122
 3b207cb161a266d2458d0d5dd085074f80f2f4e8
+6c23e0676ae11ca08482bcb8e8647a701f6fcf9e
 ** DONE Add practical definition of PtW to section 6.2.2
    CLOSED: [2012-06-26 Tue 15:50]
    - State "DONE"       from "TODO"       [2012-06-26 Tue 15:50]
@@ -540,7 +541,8 @@ c25405e3bf0120f764360d93dbad335a3fc9d1e1
 64cead5d64391330e43504d9c3927119e9901154
 f13d02f064ba5a415a19c62ad7c2021af03b6721
 b61e38a06fd44dc83ee3117ecd8b426c1560700a
-** TODO Review and revise explanation of figure 6.10
+** DONE Review and revise explanation of figure 6.10
+32ad0f7ef9bcea1dbdc40e6b13e2da18eea8f5f8
 ** DONE Comment on lack of agreement data/mc fig 7.3 (middle plot)
    CLOSED: [2012-07-03 Tue 15:59]
    - State "DONE"       from "TODO"       [2012-07-03 Tue 15:59]
@@ -558,4 +560,5 @@ f13d02f064ba5a415a19c62ad7c2021af03b6721
    CLOSED: [2012-07-03 Tue 15:09]
    - State "DONE"       from "TODO"       [2012-07-03 Tue 15:09]
 Comment on impact of uncertainties coming from jets in tables 7.6/7.7
-** TODO Comment on structure of good efficiency areas in Figure 8.5
+** DONE Comment on structure of good efficiency areas in Figure 8.5
+8ad00307d34825932e8b54987da15949edf4ba71
