@@ -55,8 +55,10 @@ c4fa53605db752485b90b3c9e5bbfde02b62f594
 *** DONE p.41 new physics -> NP					    :general:
 d1304045e11d1f72a07390719e57b5f8a5d47890
 *** TODO p.41: Mplanck - weird spacing
-*** TODO p.42 weak force (and gravity)
-*** TODO p.43 commas
+*** DONE p.42 weak force (and gravity)
+b9af7dc5dcc4208a3a9fe208965e4afb3041ada1
+*** DONE p.43 commas
+b9af7dc5dcc4208a3a9fe208965e4afb3041ada1
 *** TODO supersymmetry -> SUSY					    :general:
 *** DONE p.44: S-matrix
 6d72b37802fa98d3f1e523f145e6e22e42566ef1
@@ -91,22 +93,29 @@ ee1ea1ff6096067010756edba21788629ffd743e
 *** TODO p.54: Z+jets - spacing
 *** DONE NLO. full stop						       :viva:
 869840930f696a5624123781d958e06688c5420f
-*** TODO cite strologas 3.1.2
-*** TODO define theta
-*** TODO PDF acronym						    :general:
+*** DONE cite strologas 3.1.2
+cbdc3ab3a4a15b239e46a238c014b13a4f69c397
+*** DONE define theta
+cbdc3ab3a4a15b239e46a238c014b13a4f69c397
+*** DONE PDF acronym						    :general:
+cbdc3ab3a4a15b239e46a238c014b13a4f69c397
 *** DONE p.55 delete "very"					       :viva:
 7cf36f39ccde27add57b86a55b2c6b6498e379da
 *** DONE overwhelmingly -> predominantly			       :viva:
 7cf36f39ccde27add57b86a55b2c6b6498e379da
-*** TODO charged weak
-*** TODO 3.1.3 commas
+*** DONE charged weak
+*** DONE 3.1.3 commas
+7ca0cd7aeebc6e7e1d1f4ebeff52cf5b6b65100e
 *** TODO Explain soft-gluon enhancement				       :viva:
 *** TODO Cite Kom and Stirling
 *** DONE Wd axis - explain					       :viva:
     CLOSED: [2012-06-23 Sat 17:14]
     - State "DONE"       from "TODO"       [2012-06-23 Sat 17:14]
 3be789e85baf88a68473ee18481e61d3d82e7652
-*** TODO p.56 Remove equations for tree-level amplitudes	       :viva:
+*** DONE p.56 Remove equations for tree-level amplitudes	       :viva:
+f14e261a6de38e611dcbab432aac5fa6e624e2aa
+*** DONE p.56 cite Bern et al
+f14e261a6de38e611dcbab432aac5fa6e624e2aa
 *** DONE p.57 dot products
 43f7e333b8ad51528562fe5ffbb21f62301cb66d
 *** DONE W momentum -> polarisation
