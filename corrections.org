@@ -7,7 +7,8 @@
 efc2d994c75aab29bab90842e067d888a53431ce
 *** DONE p.22: cite Michelson-Morley
 *** TODO p.23: mention Natural Units
-*** TODO dark matter capitalisation
+*** DONE dark matter capitalisation
+89cf97a226ed0374c849c12a4a8a720efbca08d0
 ** Standard Model
 *** TODO p.25 high-energy physics experiments
 *** TODO commas
@@ -59,7 +60,8 @@ d1304045e11d1f72a07390719e57b5f8a5d47890
 b9af7dc5dcc4208a3a9fe208965e4afb3041ada1
 *** DONE p.43 commas
 b9af7dc5dcc4208a3a9fe208965e4afb3041ada1
-*** TODO supersymmetry -> SUSY					    :general:
+*** DONE supersymmetry -> SUSY					    :general:
+98efbaf89bfe9052495293529121439c10ba9916
 *** DONE p.44: S-matrix
 6d72b37802fa98d3f1e523f145e6e22e42566ef1
 *** DONE tabc,
@@ -80,7 +82,8 @@ a12f3fd8ab2fd5e066da296a84a09810f3860d86
 7b2fc168419e27d0eaa7168a92de5a6759fc57ca
 *** DONE Binos -> Bino						       :viva:
 76053b7019f29eacbc294e6d36d4655df3519817
-*** TODO Dark Matter						    :general:
+*** DONE Dark Matter						    :general:
+89cf97a226ed0374c849c12a4a8a720efbca08d0
 *** DONE p.51 e-e+
 0f64346db1bb89596191c63027aaa10dee4cb937
 *** DONE Take as an example
@@ -107,7 +110,8 @@ cbdc3ab3a4a15b239e46a238c014b13a4f69c397
 *** DONE 3.1.3 commas
 7ca0cd7aeebc6e7e1d1f4ebeff52cf5b6b65100e
 *** TODO Explain soft-gluon enhancement				       :viva:
-*** TODO Cite Kom and Stirling
+*** DONE Cite Kom and Stirling
+167025c68a349f1acbb2c477ee5459f1170b2702
 *** DONE Wd axis - explain					       :viva:
     CLOSED: [2012-06-23 Sat 17:14]
     - State "DONE"       from "TODO"       [2012-06-23 Sat 17:14]
@@ -319,7 +323,8 @@ c30ec4b0be29553afa07ccf31a89eba5cdee40b3
    CLOSED: [2012-06-22 Fri 16:49]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:49]
 72838980223d9c70abcfa6b20574695ef8e93e7c
-** TODO p.121 kinematics
+** DONE p.121 kinematics
+fbfbf180745f24b2cbe7c73fd59e4e17ad0e907b
 ** CANCELLED (for e+ events)
    CLOSED: [2012-06-25 Mon 13:22]
    - State "CANCELLED"  from "TODO"       [2012-06-25 Mon 13:22]
@@ -478,7 +483,8 @@ ea1dda4ddfd1082c1d128b1333a8e5f5579babd4
    CLOSED: [2012-06-22 Fri 16:38]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:38]
 d63eb86253c28c2d8f559dfd5eca6ef9a4d74402
-** TODO p.178 RGE code						       :viva:
+** DONE p.178 RGE code						       :viva:
+9ae815820516f108770c6524adebc161d530eaae
 ** TODO p.178 weird sentence wrong?
 ** DONE p.179 25GeV
    CLOSED: [2012-06-25 Mon 13:10]
