@@ -18,9 +18,10 @@ efc2d994c75aab29bab90842e067d888a53431ce
 c4fa53605db752485b90b3c9e5bbfde02b62f594
 *** DONE p.27 ? (first line)
 9982c99361c99490ff260aace4c4db651b5eff3b
-*** TODO p.27: some arbitrary function (of spacetime)
+*** DONE p.27: some arbitrary function (of spacetime)
 *** DONE p.27: mu contravariant (bottom of page)
-77b83ba7aba6e104cd2008383453bf64415d3a19
+    77b83ba7aba6e104cd2008383453bf64415d3a19
+b9a254ecd4ce58e19477aa8aaa9b14ef48125143
 *** TODO p.28: commas
 *** DONE p.28: inn
 77b83ba7aba6e104cd2008383453bf64415d3a19
@@ -50,7 +51,7 @@ c4fa53605db752485b90b3c9e5bbfde02b62f594
 *** TODO p.38: Explain terms more				       :viva:
 *** DONE straight forward
 9357ca148595e8abec3057bd352ad835137a65d3
-*** TODO p.39 1.5.2: cite
+*** DONE p.39 1.5.2: cite
 *** TODO Equation alignment					    :general:
 ** SUSY
 *** DONE p.41 new physics -> NP					    :general:
@@ -96,7 +97,7 @@ ee1ea1ff6096067010756edba21788629ffd743e
 *** TODO p.54: Z+jets - spacing
 *** DONE NLO. full stop						       :viva:
 869840930f696a5624123781d958e06688c5420f
-*** DONE cite strologas 3.1.2
+*** TODO cite strologas 3.1.2
 cbdc3ab3a4a15b239e46a238c014b13a4f69c397
 *** DONE define theta
 cbdc3ab3a4a15b239e46a238c014b13a4f69c397
@@ -136,11 +137,14 @@ e0051c34ed7ad7f1ec3ce6885e3eb2b00fc9f242
 8ab2ac437bc4cb8b66d6cfb848b93106f4229908
 *** DONE p.60 Fix Mandelstam variables
 226c97969ee7c5112d414c39c5a76ecc028f4d5f
-*** TODO Fix Q
+*** DONE Fix Q
+e19ca887b7e06bab0b50bd238b073e1b7ec730a7
 *** TODO Fix y -> YW
 ef4998848fe84086cf7007cc24fa60456717ebb1
-*** TODO define dOmega*
-*** TODO Fix theta* phi*
+*** DONE define dOmega*
+e19ca887b7e06bab0b50bd238b073e1b7ec730a7
+*** DONE Fix theta* phi*
+e19ca887b7e06bab0b50bd238b073e1b7ec730a7
 *** TODO define sigma-1 or take from another reference
 *** TODO Consider making Ai consistent with Dixon et al
 *** DONE p.61 fix weird sentence
@@ -167,7 +171,7 @@ cc1f96421484a82e2a335805f7c2100c82d21650
     CLOSED: [2012-06-22 Fri 13:56]
     - State "DONE"       from "TODO"       [2012-06-22 Fri 13:56]
 2615379f96cd6a742258f23e39a6fa013d2515cb
-*** TODO p.64 Clarify mass ratio (near TeV Scale?)
+*** DONE p.64 Clarify mass ratio (near TeV Scale?)
 *** DONE fidelity,
     CLOSED: [2012-06-22 Fri 13:57]
     - State "DONE"       from "TODO"       [2012-06-22 Fri 13:57]
@@ -180,11 +184,13 @@ cc1f96421484a82e2a335805f7c2100c82d21650
     CLOSED: [2012-06-22 Fri 13:59]
     - State "DONE"       from "TODO"       [2012-06-22 Fri 13:59]
 3a36123484f95d1d44ae716dc2514ecefeff49d6
-** TODO p.70: Repetition of study
+8590f29c0edfdb495784ee15fcc07a612630c716
+** DONE p.70: Repetition of study
 ** DONE quark-gluon
 93f1787542aa1b05bc9212e2a7312746aea192c6
+629c907e79f3ffb544c2c5d837ae284214ca6604
 ** TODO Consider clarifying 4.2.1 (proton energies)
-** TODO p.71 4T nominal vs 3.8T
+** DONE p.71 4T nominal vs 3.8T
 ** DONE p.74: rphi -> r-phi
    CLOSED: [2012-06-26 Tue 15:41]
    - State "DONE"       from "TODO"       [2012-06-26 Tue 15:41]
@@ -217,6 +223,7 @@ b2c282cd5410088502f12fe0b1ecee02c11f53af
    CLOSED: [2012-06-22 Fri 13:28]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 13:28]
 39f55b3e12ceb40a4dc9e6cd1a29b98af9bab192
+4a0517830fe87ded1ee0a75d3ea446f3ab3be962
 ** TODO p.79 In addition
 ** DONE p.80 APV						       :viva:
    CLOSED: [2012-06-21 Thu 17:51]
@@ -262,7 +269,7 @@ da8644e95b10cc95431a59dc91591ca77830ed9d
    CLOSED: [2012-06-26 Tue 15:33]
    - State "DONE"       from "TODO"       [2012-06-26 Tue 15:33]
 b201faa6d72c428480db95629639281adc3ced8a
-** TODO p.99 Monte Carlo acronym				       :viva:
+** DONE p.99 Monte Carlo acronym				       :viva:
 870200872afd3c6426cc1db580d77e637e303ce6
 ** DONE p.100 Refer back for costheta*
    CLOSED: [2012-06-25 Mon 14:26]
@@ -325,7 +332,7 @@ c30ec4b0be29553afa07ccf31a89eba5cdee40b3
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:49]
 72838980223d9c70abcfa6b20574695ef8e93e7c
 ** DONE p.121 kinematics
-
+fbfbf180745f24b2cbe7c73fd59e4e17ad0e907b
 ** CANCELLED (for e+ events)
    CLOSED: [2012-06-25 Mon 13:22]
    - State "CANCELLED"  from "TODO"       [2012-06-25 Mon 13:22]
@@ -448,7 +455,7 @@ f83e4df9d267240745d6144e66d4724a64c45c6b
    CLOSED: [2012-06-25 Mon 13:09]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 13:09]
 61eecb19b4ed5ce8549f009000fb35901451c2d7
-** TODO any SUSY signal should be highly diluted		       :viva:
+** DONE any SUSY signal should be highly diluted		       :viva:
 ** DONE p.153 LM6!
    CLOSED: [2012-06-22 Fri 17:57]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 17:57]
@@ -461,16 +468,20 @@ f83e4df9d267240745d6144e66d4724a64c45c6b
    CLOSED: [2012-06-25 Mon 13:41]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 13:41]
 75bc3386b5f6549cfc3ddddf9b63997e122064b4
-** TODO p.158 things are once again				       :viva:
+** DONE p.158 things are once again				       :viva:
+b8454dbf4161f5713d8b9503fac2d5d69f07dd36
 ** DONE p.159 errors
    CLOSED: [2012-06-23 Sat 17:52]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 17:52]
 9b64661e058ef0be549a251ac8a102e67bb9df98
-** TODO p.161 Table 7.7
-** TODO 162/163 njets and lepton pt scale			       :viva:
+** DONE p.161 Table 7.7
+5a9259647bf16a0dbefc27c22d7942e06c38b9d5
+** DONE 162/163 njets and lepton pt scale			       :viva:
 ** TODO p.164 \pm spacing
-** TODO commas
-** TODO p.165 also shown
+** DONE commas
+8b32a7ca172dfdf281ae5d203eeaab3ec1af61cd
+** DONE p.165 also shown
+cd7df4e782ff6d9656f60fa3f1dd0c031b571a8d
 ** DONE p.170 emph{test statistic}
    CLOSED: [2012-06-23 Sat 14:07]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 14:07]
@@ -479,18 +490,20 @@ ea1dda4ddfd1082c1d128b1333a8e5f5579babd4
    CLOSED: [2012-06-22 Fri 18:02]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 18:02]
 2e77a1a15cf79287cebe65cbfb7fdbc1105ec76c
-** TODO p.173 explain numbers on PL plots (maybe fix the y-axis too?)
+** DONE p.173 explain numbers on PL plots (maybe fix the y-axis too?)
+cf6361ec35f68293c9e5fe36f1270ee20e028d5a
 ** DONE PROPSINO						    :general:
    CLOSED: [2012-06-22 Fri 16:38]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:38]
 d63eb86253c28c2d8f559dfd5eca6ef9a4d74402
 ** DONE p.178 RGE code						       :viva:
 9ae815820516f108770c6524adebc161d530eaae
-** TODO p.178 weird sentence wrong?
+** DONE p.178 weird sentence wrong?
 ** DONE p.179 25GeV
    CLOSED: [2012-06-25 Mon 13:10]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 13:10]
 5d68cbc66b811a0c8229a1f09da9ef1274dd4780
+3cd00517b58a9feca795184e9e1cf763bc1ecd7a
 ** TODO particles
 ** DONE p.182 delete is more relevant
    CLOSED: [2012-06-23 Sat 14:18]
@@ -501,7 +514,8 @@ cb8f6617de2ae12a4f44de05cf3565cc627770b5
    CLOSED: [2012-06-21 Thu 17:47]
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:47]
 cfc3836ac913bc7854735841eae120c0f9a70a06
-** TODO p.190 wrong
+** DONE p.190 wrong
+495ac6a8450ac4f2c75123b3839911ce35d136f6
 ** DONE p.191 spacing
    CLOSED: [2012-06-21 Thu 17:46]
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:46]
@@ -579,3 +593,5 @@ f13d02f064ba5a415a19c62ad7c2021af03b6721
 Comment on impact of uncertainties coming from jets in tables 7.6/7.7
 ** DONE Comment on structure of good efficiency areas in Figure 8.5
 8ad00307d34825932e8b54987da15949edf4ba71
+
+** TODO Fix spacing of appendix tables
