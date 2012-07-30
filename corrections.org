@@ -263,6 +263,7 @@ da8644e95b10cc95431a59dc91591ca77830ed9d
    - State "DONE"       from "TODO"       [2012-06-26 Tue 15:33]
 b201faa6d72c428480db95629639281adc3ced8a
 ** TODO p.99 Monte Carlo acronym				       :viva:
+870200872afd3c6426cc1db580d77e637e303ce6
 ** DONE p.100 Refer back for costheta*
    CLOSED: [2012-06-25 Mon 14:26]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 14:26]
@@ -324,7 +325,7 @@ c30ec4b0be29553afa07ccf31a89eba5cdee40b3
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:49]
 72838980223d9c70abcfa6b20574695ef8e93e7c
 ** DONE p.121 kinematics
-fbfbf180745f24b2cbe7c73fd59e4e17ad0e907b
+
 ** CANCELLED (for e+ events)
    CLOSED: [2012-06-25 Mon 13:22]
    - State "CANCELLED"  from "TODO"       [2012-06-25 Mon 13:22]
