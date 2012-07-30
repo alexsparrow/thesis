@@ -277,12 +277,15 @@ f_a^{h_1}\left(x_1, \mu_F^2\right)f_b^{h_2}\left(x_2, \mu_F^2\right)
 \times \frac{s d\tilde{\sigma}_{ab}}{dt du d\Omega^*} \left(x_1 P_1, x_2 P_2,
 \alpha_s (\mu_R^2)\right),
 \end{equation*}
-where $h_1$ and $h_2$ are the interacting hadrons and the sum runs over $a,b =
-\Pquark, \APquark, \Pgluon$. The \acp{PDF}, $f_a^{h}\left(x, \mu^2\right)$, give
-the probability of finding a parton $a$ with momentum fraction $x$ in hadron $h$
-when probed at a scale $\mu^2$. The $d\tilde{\sigma}_{ab}$ are the parton-level
-cross-sections for the chosen process(es). The hadron-level Mandelstam variables
-are written in uppercase,
+where $d\Omega^* = \sin\thetastar d\thetastar d\phistar$ and
+$\thetastar$ and $\phistar$ are the polar and azimuthal decay angles
+of the leptons in the helicity frame.  $h_1$ and $h_2$ are the
+interacting hadrons and the sum runs over $a,b = \Pquark, \APquark,
+\Pgluon$. The \acp{PDF}, $f_a^{h}\left(x, \mu^2\right)$, give the
+probability of finding a parton $a$ with momentum fraction $x$ in
+hadron $h$ when probed at a scale $\mu^2$. The $d\tilde{\sigma}_{ab}$
+are the parton-level cross-sections for the chosen process(es). The
+hadron-level Mandelstam variables are written in uppercase,
 \begin{equation*}
 S = (P_1 + P_2)^2 \qquad T = (P_1 - Q)^2 \qquad U = (P_2 - Q)^2,
 \end{equation*}
@@ -296,28 +299,29 @@ where
 \begin{equation*}
 p_1 = x_1 P_1 \qquad p_2 = x_2 P_2.
 \end{equation*}
-The momenta of the incoming hadrons are labelled $P_1$ and $P_2$ and the
-interacting partons, $p_1$ and $p_2$. This expression can be rewritten in terms
-of a standard set of angular coefficient $A_i$, to give~\cite{mirkes_w_1992}
+The momenta of the incoming hadrons are labelled $P_1$ and $P_2$, the
+interacting partons, $p_1$ and $p_2$ and the \PW boson, $Q$. This
+expression can be rewritten in terms of a standard set of angular
+coefficient $A_i$, to give~\cite{mirkes_w_1992}
 \begin{align}
 \label{eqn:wpol_diff_xs}
-\frac{d\sigma}{d(\PtW)^2 d\YW d\cos\theta d\phi} = \frac{3}{16\pi}
-\frac{d\sigma^{-1}}{d(\PtW)^2 d\YW} &\left [ \left(1+\cos^2\theta\right) \right. \nonumber\\
- &+ \frac{1}{2} A_0 \left ( 1 - 3\cos^2\theta \right ) + A_1 \sin 2\theta\cos\phi \nonumber\\
- &+ \frac{1}{2}A_2\sin^2\theta\cos 2\phi + A_3\sin\theta\cos\phi \nonumber\\
- &+ A_4\cos\theta + A_5\sin^2\theta\sin 2\phi \nonumber\\
- &+ A_6\sin 2\theta\sin \phi + A_7\sin\theta\sin\phi
+\frac{d\sigma}{d(\PtW)^2 d\YW d\cos\thetastar d\phistar} = \frac{3}{16\pi}
+\frac{d\sigma^{-1}}{d(\PtW)^2 d\YW} &\left [ \left(1+\cos^2\thetastar\right) \right. \nonumber\\
+ &+ \frac{1}{2} A_0 \left ( 1 - 3\cos^2\thetastar \right ) + A_1 \sin 2\thetastar\cos\phistar \nonumber\\
+ &+ \frac{1}{2}A_2\sin^2\thetastar\cos 2\phistar + A_3\sin\thetastar\cos\phistar \nonumber\\
+ &+ A_4\cos\thetastar + A_5\sin^2\thetastar\sin 2\phistar \nonumber\\
+ &+ A_6\sin 2\thetastar\sin \phistar + A_7\sin\thetastar\sin\phistar
 \end{align}
 
 % TODO: Figure out the difference between  theta and theta*
 The $A_i$ are ratios of the separate helicity cross-sections of the boson to its
 total unpolarised cross-section. They are dependent on the \PW boson charge,
 transverse momentum, \PtW, and rapidity, \YW. \eqn~\ref{eqn:wpol_diff_xs} can be
-integrated over $\phi$ and \PtW to give
+integrated over $\phistar$ and \PtW to give
 \begin{equation}
 \label{eqn:wpol_xs_Ai}
-\frac{d\sigma}{d\cos\theta} \propto \left(1+\cos^2\theta\right) +
-\frac{1}{2}A_0\left(1-3\cos^2\theta\right) + A_4\cos\theta.
+\frac{d\sigma}{d\cos\thetastar} \propto \left(1+\cos^2\thetastar\right) +
+\frac{1}{2}A_0\left(1-3\cos^2\thetastar\right) + A_4\cos\thetastar.
 \end{equation}
 
 Again, because of the \VminusA coupling, the \PWp (\PWm) may couple only to
