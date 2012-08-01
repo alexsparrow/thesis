@@ -8,34 +8,53 @@ preamble(r"\usepackage{hepnicenames}")
 
 processOptions()
 
-def mk2to2(fname, channel, helicities, a, b, c, d, i):
+def path_choose(a, b, sense):
+    if sense: return (a,b)
+    else: return (b, a)
+
+def build2to2(fname, channel, helicities, a, b, c, d, i, label=True, a_label_displace = 0.3, b_label_displace = 0.3, sense_b = True, sense_i=True, sense_d=True):
     fd = FeynDiagram()
     momenta = (+1, +1, +1)
     if channel == "s":
         coords = {"a": (-4, 2), "b": (-4, -2), "c": (4,2), "d": (4,-2), "v1": (-2, 0), "v2":(2,0)}
     else:
         coords = {"a": (-2, 3), "b": (-2, -3), "c": (2,3), "d": (2,-3), "v1": (0, 2), "v2":(0,-2)}
-    in1 = DecoratedPoint(*coords["a"]).addLabel(a[1])
-    in2 = DecoratedPoint(*coords["b"]).addLabel(b[1])
+    in1 = DecoratedPoint(*coords["a"]).addLabel(a[1], displace=a_label_displace)
+    in2 = DecoratedPoint(*coords["b"]).addLabel(b[1], displace=b_label_displace)
     out1 = DecoratedPoint(*coords["c"]).addLabel(c[1])
     out2 = DecoratedPoint(*coords["d"]).addLabel(d[1])
     v1 = Vertex(*coords["v1"])
     v2 = Vertex(*coords["v2"])
     pa = a[0](in1, v1)
-    pb = b[0](in2, v1 if channel == "s" else v2)
+    pb = b[0](*path_choose(in2, v1 if channel == "s" else v2, sense_b))
     pc = c[0](v2 if channel=="s" else v1, out1)
-    pd = d[0](v2, out2)
-    internal = i[0](v1, v2)
+    pd = d[0](*path_choose(v2, out2, sense_d))
+    internal = i[0](*path_choose(v1, v2, sense_i))
 
     # helicity labels
-    pc.addParallelArrow(sense = helicities[0], displace = 0.6)
-    pc.labels[-1].setCustomStyles([color.rgb.red])
-    pd.addParallelArrow(sense = helicities[1], displace = 0.6)
-    pd.labels[-1].setCustomStyles([color.rgb.red])
+    if label: 
+        pc.addParallelArrow(sense = helicities[0], displace = 0.6)
+        pc.labels[-1].setCustomStyles([color.rgb.red])
+        pd.addParallelArrow(sense = helicities[1], displace = 0.6)
+        pd.labels[-1].setCustomStyles([color.rgb.red])
 
     for l, p in zip([pa, pb, pc, pd, internal], [a,b,c,d,i]):
         if p[0] == Fermion: l.addArrow()
-        l.addParallelArrow()
+        if label and l != internal: l.addParallelArrow()
+    return (fd, {"a": pa, "b": pb, "c": pc, "d": pd, "i":internal})
+
+def mk2to2(*args, **kwargs):
+    fd, x = build2to2(*args, **kwargs)
+    fd.draw(args[0])
+
+def mk2to2_udbar(fname):
+    fd, particles = build2to2("wpol_1jet_udbar.pdf", "t", None, (Fermion, r"\Pup"), (Fermion, r"\APdown"), (Vector, r"\PWp"), (Gluon, r"\Pgluon"), (Fermion, r"\Pdown"), label=False, b_label_displace = -0.3, sense_b=False) 
+    particles["c"].invert()
+    particles["d"].invert()
+    fd.draw(fname)
+
+def mk2to2_gdbar(fname):
+    fd, particles = build2to2("wpol_1jet_gdbar.pdf", "s", None, (Gluon, r"\Pgluon"), (Fermion, r"\APdown"), (Vector, r"\PWp"), (Fermion, r"\APup"), (Fermion, r"\APdown"), label=False, a_label_displace=-0.3, b_label_displace=-0.3, sense_b=False, sense_i=False, sense_d=False)
     fd.draw(fname)
 
 def mkwpol(fname, pin1, pin2, pout1, out_momenta_type, helicities=(1,1,1,1,1,1)):
@@ -106,8 +125,10 @@ def mkwpol(fname, pin1, pin2, pout1, out_momenta_type, helicities=(1,1,1,1,1,1))
 if __name__ == "__main__":
     particles = [(Fermion, r"\Pup"), (Gluon, r"\Pgluon"), (Vector, r"\PWp"), (Fermion, r"\Pdown"), (Fermion, "\Pdown")]
     mk2to2("wpol_1jet_s.pdf", "s", [+1, -1], *particles)
-    mk2to2("wpol_1jet_t.pdf", "t", [+1, -1], *particles)
+    mk2to2("wpol_1jet_t.pdf", "t", [+1, -1], *particles, b_label_displace = 0.2)
 
+    mk2to2_udbar("wpol_1jet_udbar.pdf")
+    mk2to2_gdbar("wpol_1jet_gdbar.pdf")
     mkwpol("wpol_prod_a.pdf", (Fermion, r"\Pup"), (Gluon, r"\Pgluon"), (Fermion, r"\Pdown"), 0,
            helicities = (-1, -1, -1, -1, +1, -1))
     mkwpol("wpol_prod_b.pdf", (Fermion, r"\Pup"), (Fermion, "\APdown"), (Gluon, r"\Pgluon"), 1,
