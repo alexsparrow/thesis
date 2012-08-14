@@ -36,10 +36,12 @@ c4fa53605db752485b90b3c9e5bbfde02b62f594
 *** DONE p.27: mu contravariant (bottom of page)
     77b83ba7aba6e104cd2008383453bf64415d3a19
 b9a254ecd4ce58e19477aa8aaa9b14ef48125143
-*** TODO p.28: commas
-    SCHEDULED: <2012-08-15 Wed>
+*** DONE p.28: commas
+    CLOSED: [2012-08-14 Tue 11:55] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 11:55]
 *** DONE p.28: inn
 77b83ba7aba6e104cd2008383453bf64415d3a19
+c6a49d2fdff55dc9c6ee8c571e1fd175e824eba2
 *** TODO p.29, 30 phi(x)^2
     SCHEDULED: <2012-08-15 Wed>
 *** CANCELLED p.30 Expain QED					       :viva:
@@ -686,4 +688,4 @@ Comment on impact of uncertainties coming from jets in tables 7.6/7.7
 
 ** TODO consistent ; or , in itemized lists
 
-33 left
+32 left
