@@ -14,6 +14,10 @@ doinside=\scriptsize
   ability to include these correlations was added to the statistics package, it
   was not used in the results shown.}
 
+\tnote[d]{The signal contamination nuisance parameters are correlated in the
+sense that they are related to the signal strength. For further details,
+see \sec~\ref{sec:inter_sig_contam}.}
+
 }{\FL
 Uncertainty                        & Correlated & \NSigi     & \RCSi      & \NControli & Nuisance Parameters\ML
 %
@@ -25,7 +29,7 @@ Luminosity                         & \checkmark & \checkmark &            &     
 Muon Momentum Scale\tmark[a]       & \checkmark &            & \checkmark &            & $\nu^{\textrm{lep}}$\NN
 Limited \ac{MC} Statistics         &            &            & \checkmark &            & $\nu^{\textrm{MC}}_i$\NN
 Limited Data Statistics            &            &            &            & \checkmark & $\nu^{\textrm{data}}_i$\NN
-Signal Contamination               &            &            &            & \checkmark & $\nu^{\textrm{sig cont}}_i$\NN
+Signal Contamination               & \tmark[d]  &            &            & \checkmark & $\nu^{\textrm{sig cont}}_i$\NN
 \ac{PDF} Uncertainties             & \checkmark & \checkmark &            &            & $\nu^{\textrm{pdf}}_i$\NN
 QCD Background Prediction\tmark[b] &            &            &            & \checkmark & $\nu^{\textrm{qcd}}_i$\LL
 }
