@@ -23,9 +23,9 @@ efc2d994c75aab29bab90842e067d888a53431ce
     - State "DONE"       from "TODO"       [2012-08-14 Tue 11:20]
 d4f9e8eb8fc9aae50c9df905e82b97ea918d88d0
 *** TODO commas
-    SCHEDULED: <2012-08-17 Fri>
+    SCHEDULED: <2012-08-15 Wed>
 *** TODO p.26: brackets around particle letters
-    SCHEDULED: <2012-08-17 Fri>
+    SCHEDULED: <2012-08-15 Wed>
 *** TODO p.26: brackets around E,B,A,V
     SCHEDULED: <2012-08-15 Wed>
 *** DONE E should be vector
@@ -50,7 +50,9 @@ c6a49d2fdff55dc9c6ee8c571e1fd175e824eba2
 *** TODO p.31 Fix yang-mills and explain parameters
     SCHEDULED: <2012-08-15 Wed>
 *** TODO p.31 Rephrase last paragraph				       :viva:
+    SCHEDULED: <2012-08-16 Thu>
 *** TODO p.32 Explain first para				       :viva:
+    SCHEDULED: <2012-08-16 Thu>
 *** DONE p.32: and -> where
 48e31f8eb5293d249b45b044e4268cd9ad2a28b9
 *** DONE p.32: gamma0 superscript
@@ -77,7 +79,7 @@ c6a49d2fdff55dc9c6ee8c571e1fd175e824eba2
 9357ca148595e8abec3057bd352ad835137a65d3
 *** DONE p.39 1.5.2: cite
 *** TODO Equation alignment					    :general:
-    SCHEDULED: <2012-08-17 Fri>
+    SCHEDULED: <2012-08-15 Wed>
 ** SUSY
 *** DONE p.41 new physics -> NP					    :general:
 d1304045e11d1f72a07390719e57b5f8a5d47890
@@ -187,8 +189,9 @@ e19ca887b7e06bab0b50bd238b073e1b7ec730a7
 *** DONE Fix theta* phi*
 e19ca887b7e06bab0b50bd238b073e1b7ec730a7
 *** TODO define sigma-1 or take from another reference
-    SCHEDULED: <2012-08-17 Fri>
+    SCHEDULED: <2012-08-15 Wed>
 *** TODO Consider making Ai consistent with Dixon et al
+    SCHEDULED: <2012-08-15 Wed>
 *** DONE p.61 fix weird sentence
     CLOSED: [2012-06-22 Fri 16:31]
     - State "DONE"       from "TODO"       [2012-06-22 Fri 16:31]
@@ -371,7 +374,7 @@ e7ef1cea5824e6a73b83e0da107a7db4863fcd33
 ** DONE delete will now be presented
    CLOSED: [2012-06-23 Sat 17:59]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 17:59]
-a7778c72fdb3c9df31da75a21f5d670795dcd937
+   a7778c72fdb3c9df31da75a21f5d670795dcd937
 ** TODO p.115 table spacing
    SCHEDULED: <2012-08-17 Fri>
 ** DONE comma and uncapitalise
@@ -446,8 +449,10 @@ d5dd48d05e1b8ef03ad386b1a1777d08e8567caf
 ** CANCELLED p.139/140 superimpose theory value			       :viva:
    CLOSED: [2012-08-14 Tue 01:22]
    - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:22]
-** TODO p.141 regularise (stat.)
-   SCHEDULED: <2012-08-16 Thu>
+** DONE p.141 regularise (stat.)
+25ed23ce28bf0904c82651df821c2d1cfdd27eb0
+   CLOSED: [2012-08-14 Tue 12:50] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 12:50]
 ** DONE p.141 global correlation
    CLOSED: [2012-06-25 Mon 12:48]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 12:48]
@@ -456,10 +461,13 @@ d5dd48d05e1b8ef03ad386b1a1777d08e8567caf
    CLOSED: [2012-06-25 Mon 12:49]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 12:49]
 c6d222c797250fb85aa897699253f4cab2bd9318
-** TODO Table 6.10 (stat.)
-   SCHEDULED: <2012-08-16 Thu>
-** TODO 6.11 exchange f0 and fL-fR
-   SCHEDULED: <2012-08-16 Thu>
+** DONE Table 6.10 (stat.)
+   CLOSED: [2012-08-14 Tue 12:51] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 12:51]
+25ed23ce28bf0904c82651df821c2d1cfdd27eb0
+** DONE 6.11 exchange f0 and fL-fR
+   CLOSED: [2012-08-14 Tue 12:51] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 12:51]
 ** DONE invert last sentence					       :viva:
    CLOSED: [2012-06-26 Tue 15:37]
    - State "DONE"       from "TODO"       [2012-06-26 Tue 15:37]
@@ -517,10 +525,12 @@ f83e4df9d267240745d6144e66d4724a64c45c6b
 82888dc44a664bcb166e47c9cb93d2a656738bbf
 9b497d7c4284f223e397d9f8f50706082c998c20
 4a54df9cb3b0185af6ef7729617f2f0de236bd19
+25ed23ce28bf0904c82651df821c2d1cfdd27eb0
 ** TODO p.150 table alignment
    SCHEDULED: <2012-08-16 Thu>
-** TODO Table 7.2/7.3 \pm spacing
-   SCHEDULED: <2012-08-16 Thu>
+** DONE Table 7.2/7.3 \pm spacing
+   CLOSED: [2012-08-14 Tue 12:51] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 12:51]
 ** DONE p.152: Control Sample
    CLOSED: [2012-06-25 Mon 13:09]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 13:09]
@@ -547,8 +557,10 @@ b8454dbf4161f5713d8b9503fac2d5d69f07dd36
 ** DONE p.161 Table 7.7
 5a9259647bf16a0dbefc27c22d7942e06c38b9d5
 ** DONE 162/163 njets and lepton pt scale			       :viva:
-** TODO p.164 \pm spacing
-   SCHEDULED: <2012-08-16 Thu>
+25ed23ce28bf0904c82651df821c2d1cfdd27eb0
+** DONE p.164 \pm spacing
+   CLOSED: [2012-08-14 Tue 12:51] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 12:51]
 ** DONE commas
 8b32a7ca172dfdf281ae5d203eeaab3ec1af61cd
 ** DONE p.165 also shown
@@ -563,7 +575,8 @@ ea1dda4ddfd1082c1d128b1333a8e5f5579babd4
 2e77a1a15cf79287cebe65cbfb7fdbc1105ec76c
 ** DONE p.173 explain numbers on PL plots (maybe fix the y-axis too?)
 cf6361ec35f68293c9e5fe36f1270ee20e028d5a
-** TODO consider fixing the y-axis on PL plots - fairly sure it should be l i.e. likelihood ratio
+25ed23ce28bf0904c82651df821c2d1cfdd27eb0
+** TODO consider fixing the y-axis on PL plots - fairly sure it should be lambda i.e. likelihood ratio
    SCHEDULED: <2012-08-16 Thu>
 ** DONE PROPSINO						    :general:
    CLOSED: [2012-06-22 Fri 16:38]
@@ -603,13 +616,13 @@ b78be1a33e6aca3ede3ad15d6fd6730a1968b89b
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:42]
    ef4998848fe84086cf7007cc24fa60456717ebb1
 ** TODO p.195 indices
-   SCHEDULED: <2012-08-17 Fri>
+   SCHEDULED: <2012-08-15 Wed>
 ** DONE p.196 clarify signal contam correlated
    CLOSED: [2012-08-14 Tue 11:05] SCHEDULED: <2012-08-17 Fri>
    - State "DONE"       from "TODO"       [2012-08-14 Tue 11:05]
 2813ade1bf951d9ef0875404752842a190871317
 ** TODO p.197 indices
-   SCHEDULED: <2012-08-17 Fri>
+   SCHEDULED: <2012-08-15 Wed>
 ** DONE p.202 cite Haskell
    CLOSED: [2012-06-29 Fri 17:40]
    - State "DONE"       from "TODO"       [2012-06-29 Fri 17:40]
@@ -619,6 +632,10 @@ a1cc7abda3b3c2836048fc788db93926d35a5838
 ** DONE PL description - number of free parameters (is that fully sz?)
    CLOSED: [2012-08-14 Tue 01:20]
    - State "DONE"       from "TODO"       [2012-08-14 Tue 01:20]
+** TODO Blank page on p.148 - probs need to update the texmf directory
+** TODO spell check
+** TODO ?? ! check
+** TODO formatting check
 * Corrections
 ** DONE Add work done during PhD including service work and which parts of analysis were mine
    CLOSED: [2012-06-25 Mon 19:09]
