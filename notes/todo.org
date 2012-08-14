@@ -1,10 +1,13 @@
 * Tasks
-** TODO Figure placement
-   SCHEDULED: <2012-04-05 Thu>
-** TODO Figure captions
-   SCHEDULED: <2012-04-05 Thu>
-** TODO More refs
-   SCHEDULED: <2012-04-05 Thu>
+** DONE Figure placement
+   CLOSED: [2012-08-14 Tue 01:38] SCHEDULED: <2012-04-05 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 01:38]
+** DONE Figure captions
+   CLOSED: [2012-08-14 Tue 01:38] SCHEDULED: <2012-04-05 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 01:38]
+** DONE More refs
+   CLOSED: [2012-08-14 Tue 01:38] SCHEDULED: <2012-04-05 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 01:38]
 *** SM
 **** TODO References in last para of Yang-Mills
 **** TODO the electroweak theory - reference V-A
@@ -1204,5 +1207,3 @@ Mostly done!
 ** DONE Section/Chapter titles & boldmath
    SCHEDULED: <2012-04-05 Thu> CLOSED: [2012-04-06 Fri 10:06]
    - State "DONE"       from "TODO"       [2012-04-06 Fri 10:06]
-
-

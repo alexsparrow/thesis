@@ -1,19 +1,33 @@
 * My weirdzones
 ** Frontmatter
-*** TODO p.3: 1.1/fb -> 1.14/fb
+*** DONE p.3: 1.1/fb -> 1.14/fb
+    CLOSED: [2012-08-14 Tue 10:20]
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 10:20]
+52d98954c5485ed2946cde87b11fd72990b60d8f
+    SCHEDULED: <2012-08-17 Fri>
 *** DONE p.3: capitalise standard model
 9c4d9730811cce1aed4231fe50912bd294edc440
 *** DONE p.7 Guneratne Bryer
 efc2d994c75aab29bab90842e067d888a53431ce
 *** DONE p.22: cite Michelson-Morley
-*** TODO p.23: mention Natural Units
+    SCHEDULED: <2012-08-17 Fri>
+*** DONE p.23: mention Natural Units
+    CLOSED: [2012-08-14 Tue 10:21] SCHEDULED: <2012-08-17 Fri>
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 10:21]
 *** DONE dark matter capitalisation
-89cf97a226ed0374c849c12a4a8a720efbca08d0
+    89cf97a226ed0374c849c12a4a8a720efbca08d0
+7c3b1ede510e5e63c0084081121a38b220c5afa5
 ** Standard Model
-*** TODO p.25 high-energy physics experiments
+*** DONE p.25 high-energy physics experiments
+    CLOSED: [2012-08-14 Tue 11:20] SCHEDULED: <2012-08-17 Fri>
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 11:20]
+d4f9e8eb8fc9aae50c9df905e82b97ea918d88d0
 *** TODO commas
+    SCHEDULED: <2012-08-17 Fri>
 *** TODO p.26: brackets around particle letters
+    SCHEDULED: <2012-08-17 Fri>
 *** TODO p.26: brackets around E,B,A,V
+    SCHEDULED: <2012-08-15 Wed>
 *** DONE E should be vector
 c4fa53605db752485b90b3c9e5bbfde02b62f594
 *** DONE p.27 ? (first line)
@@ -23,11 +37,16 @@ c4fa53605db752485b90b3c9e5bbfde02b62f594
     77b83ba7aba6e104cd2008383453bf64415d3a19
 b9a254ecd4ce58e19477aa8aaa9b14ef48125143
 *** TODO p.28: commas
+    SCHEDULED: <2012-08-15 Wed>
 *** DONE p.28: inn
 77b83ba7aba6e104cd2008383453bf64415d3a19
 *** TODO p.29, 30 phi(x)^2
-*** TODO p.30 Expain QED					       :viva:
+    SCHEDULED: <2012-08-15 Wed>
+*** CANCELLED p.30 Expain QED					       :viva:
+    CLOSED: [2012-08-14 Tue 01:21]
+    - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:21]
 *** TODO p.31 Fix yang-mills and explain parameters
+    SCHEDULED: <2012-08-15 Wed>
 *** TODO p.31 Rephrase last paragraph				       :viva:
 *** TODO p.32 Explain first para				       :viva:
 *** DONE p.32: and -> where
@@ -35,7 +54,10 @@ b9a254ecd4ce58e19477aa8aaa9b14ef48125143
 *** DONE p.32: gamma0 superscript
 48e31f8eb5293d249b45b044e4268cd9ad2a28b9
 *** TODO p.33 confused stuff
-*** TODO p.33 clarify "have already been described"		       :viva:
+    SCHEDULED: <2012-08-15 Wed>
+*** CANCELLED p.33 clarify "have already been described"	       :viva:
+    CLOSED: [2012-08-14 Tue 01:44] SCHEDULED: <2012-08-15 Wed>
+    - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:44]
 *** DONE p.34 -+ on Wmu
 174ac66e542ea93ab8c7e76219780ba0b9460d7b
 *** TODO More consistency on naming of fields			       :viva:
@@ -53,10 +75,13 @@ b9a254ecd4ce58e19477aa8aaa9b14ef48125143
 9357ca148595e8abec3057bd352ad835137a65d3
 *** DONE p.39 1.5.2: cite
 *** TODO Equation alignment					    :general:
+    SCHEDULED: <2012-08-17 Fri>
 ** SUSY
 *** DONE p.41 new physics -> NP					    :general:
 d1304045e11d1f72a07390719e57b5f8a5d47890
-*** TODO p.41: Mplanck - weird spacing
+*** DONE p.41: Mplanck - weird spacing
+    CLOSED: [2012-08-14 Tue 10:40]
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 10:40]
 *** DONE p.42 weak force (and gravity)
 b9af7dc5dcc4208a3a9fe208965e4afb3041ada1
 *** DONE p.43 commas
@@ -69,7 +94,10 @@ b9af7dc5dcc4208a3a9fe208965e4afb3041ada1
 1f5f2736c70a496444827e9b09d555c03f3e4340
 *** DONE Cite HLS theorem
 d1444a760a8a1fe883955fcf72f9a83375107605
-*** TODO Perhaps 2.2-2.4 shouldn't be numbered
+e1171117c61de0ee78f83d638ea75c375c1747e5
+*** DONE Perhaps 2.2-2.4 shouldn't be numbered
+    CLOSED: [2012-08-14 Tue 11:30] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 11:30]
 *** DONE p.45 vector (or gauge) supermultiplet
 a12f3fd8ab2fd5e066da296a84a09810f3860d86
 *** DONE p.45 cite susy primer
@@ -78,7 +106,10 @@ a12f3fd8ab2fd5e066da296a84a09810f3860d86
 3761dcaad04dca0f7c860a975d63a23723e117de
 *** DONE Each of their decays					       :viva:
 5dbab6532506010c2fecec6a97289b455f9baf71
-*** TODO p.49 Right-handed sneutrinos/neutrinos in Table 2.1	       :viva:
+562168e4cb50dd1d67b14edb984782975b55eee0
+*** DONE p.49 Right-handed sneutrinos/neutrinos in Table 2.1	       :viva:
+    CLOSED: [2012-08-14 Tue 11:44] SCHEDULED: <2012-08-18 Sat>
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 11:44]
 *** DONE p.50 gauginos						       :viva:
 7b2fc168419e27d0eaa7168a92de5a6759fc57ca
 *** DONE Binos -> Bino						       :viva:
@@ -89,15 +120,20 @@ a12f3fd8ab2fd5e066da296a84a09810f3860d86
 0f64346db1bb89596191c63027aaa10dee4cb937
 *** DONE Take as an example
 627e5a43703ce5c9a16397920a1940937b6b9f2b
+95962e0438c66d8fc31c40c8aa45af55de397f10
 ** Framework
 *** DONE p.53 rephrase "applied to"
 2824f943083c359f962451334cda4c73e102686a
 *** DONE Section 1 -> Chapter 1					       :viva:
 ee1ea1ff6096067010756edba21788629ffd743e
-*** TODO p.54: Z+jets - spacing
+*** DONE p.54: Z+jets - spacing
+    CLOSED: [2012-08-14 Tue 10:40]
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 10:40]
 *** DONE NLO. full stop						       :viva:
 869840930f696a5624123781d958e06688c5420f
+e1171117c61de0ee78f83d638ea75c375c1747e5
 *** TODO cite strologas 3.1.2
+    SCHEDULED: <2012-08-15 Wed>
 cbdc3ab3a4a15b239e46a238c014b13a4f69c397
 *** DONE define theta
 cbdc3ab3a4a15b239e46a238c014b13a4f69c397
@@ -110,7 +146,9 @@ cbdc3ab3a4a15b239e46a238c014b13a4f69c397
 *** DONE charged weak
 *** DONE 3.1.3 commas
 7ca0cd7aeebc6e7e1d1f4ebeff52cf5b6b65100e
-*** TODO Explain soft-gluon enhancement				       :viva:
+*** CANCELLED Explain soft-gluon enhancement			       :viva:
+    CLOSED: [2012-08-14 Tue 01:22]
+    - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:22]
 *** DONE Cite Kom and Stirling
 167025c68a349f1acbb2c477ee5459f1170b2702
 *** DONE Wd axis - explain					       :viva:
@@ -140,12 +178,14 @@ e0051c34ed7ad7f1ec3ce6885e3eb2b00fc9f242
 *** DONE Fix Q
 e19ca887b7e06bab0b50bd238b073e1b7ec730a7
 *** TODO Fix y -> YW
+    SCHEDULED: <2012-08-15 Wed>
 ef4998848fe84086cf7007cc24fa60456717ebb1
 *** DONE define dOmega*
 e19ca887b7e06bab0b50bd238b073e1b7ec730a7
 *** DONE Fix theta* phi*
 e19ca887b7e06bab0b50bd238b073e1b7ec730a7
 *** TODO define sigma-1 or take from another reference
+    SCHEDULED: <2012-08-17 Fri>
 *** TODO Consider making Ai consistent with Dixon et al
 *** DONE p.61 fix weird sentence
     CLOSED: [2012-06-22 Fri 16:31]
@@ -189,7 +229,9 @@ cc1f96421484a82e2a335805f7c2100c82d21650
 ** DONE quark-gluon
 93f1787542aa1b05bc9212e2a7312746aea192c6
 629c907e79f3ffb544c2c5d837ae284214ca6604
-** TODO Consider clarifying 4.2.1 (proton energies)
+** DONE Consider clarifying 4.2.1 (proton energies)
+   CLOSED: [2012-08-14 Tue 11:52] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 11:52]
 ** DONE p.71 4T nominal vs 3.8T
 ** DONE p.74: rphi -> r-phi
    CLOSED: [2012-06-26 Tue 15:41]
@@ -224,7 +266,9 @@ b2c282cd5410088502f12fe0b1ecee02c11f53af
    - State "DONE"       from "TODO"       [2012-06-22 Fri 13:28]
 39f55b3e12ceb40a4dc9e6cd1a29b98af9bab192
 4a0517830fe87ded1ee0a75d3ea446f3ab3be962
-** TODO p.79 In addition
+** CANCELLED p.79 In addition
+   CLOSED: [2012-08-14 Tue 11:47] SCHEDULED: <2012-08-15 Wed>
+   - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 11:47]
 ** DONE p.80 APV						       :viva:
    CLOSED: [2012-06-21 Thu 17:51]
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:51]
@@ -295,12 +339,15 @@ a0e60cfe513394bf56ff90e0d040bc9e62eac466
    CLOSED: [2012-06-22 Fri 17:30]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 17:30]
 a0e60cfe513394bf56ff90e0d040bc9e62eac466
+019e2719954ae4a5649dc89bbbb296ffd27db9ea
 ** TODO p.104 |YW|
+   SCHEDULED: <2012-08-17 Fri>
 ** DONE functional forms are taken
    CLOSED: [2012-06-22 Fri 16:57]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:57]
 e7ef1cea5824e6a73b83e0da107a7db4863fcd33
 ** TODO p.105 clarify are seen to vary
+   SCHEDULED: <2012-08-17 Fri>
 ** DONE p.106 error -> uncertainty
    CLOSED: [2012-06-22 Fri 16:56]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:56]
@@ -318,11 +365,13 @@ e7ef1cea5824e6a73b83e0da107a7db4863fcd33
    - State "DONE"       from "TODO"       [2012-06-22 Fri 18:11]
 065d78bbadea697e09fcf528c7e18858605b316b
 ** TODO p.113/114 clarify MT bit
+   SCHEDULED: <2012-08-16 Thu>
 ** DONE delete will now be presented
    CLOSED: [2012-06-23 Sat 17:59]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 17:59]
 a7778c72fdb3c9df31da75a21f5d670795dcd937
 ** TODO p.115 table spacing
+   SCHEDULED: <2012-08-17 Fri>
 ** DONE comma and uncapitalise
    CLOSED: [2012-06-22 Fri 18:04]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 18:04]
@@ -392,8 +441,11 @@ d5dd48d05e1b8ef03ad386b1a1777d08e8567caf
    CLOSED: [2012-06-25 Mon 12:45]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 12:45]
 d5dd48d05e1b8ef03ad386b1a1777d08e8567caf
-** TODO p.139/140 superimpose theory value			       :viva:
+** CANCELLED p.139/140 superimpose theory value			       :viva:
+   CLOSED: [2012-08-14 Tue 01:22]
+   - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:22]
 ** TODO p.141 regularise (stat.)
+   SCHEDULED: <2012-08-16 Thu>
 ** DONE p.141 global correlation
    CLOSED: [2012-06-25 Mon 12:48]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 12:48]
@@ -403,7 +455,9 @@ d5dd48d05e1b8ef03ad386b1a1777d08e8567caf
    - State "DONE"       from "TODO"       [2012-06-25 Mon 12:49]
 c6d222c797250fb85aa897699253f4cab2bd9318
 ** TODO Table 6.10 (stat.)
+   SCHEDULED: <2012-08-16 Thu>
 ** TODO 6.11 exchange f0 and fL-fR
+   SCHEDULED: <2012-08-16 Thu>
 ** DONE invert last sentence					       :viva:
    CLOSED: [2012-06-26 Tue 15:37]
    - State "DONE"       from "TODO"       [2012-06-26 Tue 15:37]
@@ -420,7 +474,9 @@ c6d222c797250fb85aa897699253f4cab2bd9318
    CLOSED: [2012-06-23 Sat 17:42]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 17:42]
 ff05a9612576757b7ee02491d225f96ff7a7997d
-** TODO Etmiss and Ptl clarify					       :viva:
+** CANCELLED Etmiss and Ptl clarify				       :viva:
+   CLOSED: [2012-08-14 Tue 01:46]
+   - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:46]
 ** DONE high PtW W decays
    CLOSED: [2012-06-23 Sat 17:47]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 17:47]
@@ -438,9 +494,17 @@ ede7a01de9fb1fbccf31fdabb6ba370c2fc0397d
    CLOSED: [2012-06-23 Sat 14:14]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 14:14]
 46137731929aa1a1cc79a154cbcd7bd931f1ec00
-** TODO p.147 , dz
-** TODO , sigma(pT)
-** TODO d0, dz cuts
+** DONE p.147 , dz
+   CLOSED: [2012-08-14 Tue 11:27] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 11:27]
+9b497d7c4284f223e397d9f8f50706082c998c20
+** DONE , sigma(pT)
+   CLOSED: [2012-08-14 Tue 11:31] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 11:31]
+02e774779bddb295bd2cfaeae079051daf2329d8
+** DONE d0, dz cuts
+   CLOSED: [2012-08-14 Tue 11:33] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 11:33]
 ** DONE p.148 used..use
    CLOSED: [2012-06-23 Sat 14:21]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 14:21]
@@ -449,8 +513,12 @@ f83e4df9d267240745d6144e66d4724a64c45c6b
    CLOSED: [2012-06-23 Sat 14:23]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 14:23]
 82888dc44a664bcb166e47c9cb93d2a656738bbf
+9b497d7c4284f223e397d9f8f50706082c998c20
+4a54df9cb3b0185af6ef7729617f2f0de236bd19
 ** TODO p.150 table alignment
+   SCHEDULED: <2012-08-16 Thu>
 ** TODO Table 7.2/7.3 \pm spacing
+   SCHEDULED: <2012-08-16 Thu>
 ** DONE p.152: Control Sample
    CLOSED: [2012-06-25 Mon 13:09]
    - State "DONE"       from "TODO"       [2012-06-25 Mon 13:09]
@@ -478,6 +546,7 @@ b8454dbf4161f5713d8b9503fac2d5d69f07dd36
 5a9259647bf16a0dbefc27c22d7942e06c38b9d5
 ** DONE 162/163 njets and lepton pt scale			       :viva:
 ** TODO p.164 \pm spacing
+   SCHEDULED: <2012-08-16 Thu>
 ** DONE commas
 8b32a7ca172dfdf281ae5d203eeaab3ec1af61cd
 ** DONE p.165 also shown
@@ -492,6 +561,8 @@ ea1dda4ddfd1082c1d128b1333a8e5f5579babd4
 2e77a1a15cf79287cebe65cbfb7fdbc1105ec76c
 ** DONE p.173 explain numbers on PL plots (maybe fix the y-axis too?)
 cf6361ec35f68293c9e5fe36f1270ee20e028d5a
+** TODO consider fixing the y-axis on PL plots - fairly sure it should be l i.e. likelihood ratio
+   SCHEDULED: <2012-08-16 Thu>
 ** DONE PROPSINO						    :general:
    CLOSED: [2012-06-22 Fri 16:38]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:38]
@@ -505,11 +576,13 @@ d63eb86253c28c2d8f559dfd5eca6ef9a4d74402
 5d68cbc66b811a0c8229a1f09da9ef1274dd4780
 3cd00517b58a9feca795184e9e1cf763bc1ecd7a
 ** TODO particles
+   SCHEDULED: <2012-08-15 Wed>
 ** DONE p.182 delete is more relevant
    CLOSED: [2012-06-23 Sat 14:18]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 14:18]
 cb8f6617de2ae12a4f44de05cf3565cc627770b5
 ** TODO W or X0 ??
+   SCHEDULED: <2012-08-17 Fri>
 ** DONE p.189 lorentz						       :viva:
    CLOSED: [2012-06-21 Thu 17:47]
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:47]
@@ -525,18 +598,25 @@ cfc3836ac913bc7854735841eae120c0f9a70a06
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:43]
 b78be1a33e6aca3ede3ad15d6fd6730a1968b89b
 ** DONE p.195 two -> to
-   CLOSED: [2012-06-21 Thu 17:42]
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:42]
-ef4998848fe84086cf7007cc24fa60456717ebb1
+   ef4998848fe84086cf7007cc24fa60456717ebb1
 ** TODO p.195 indices
-** TODO p.196 clarify signal contam correlated
+   SCHEDULED: <2012-08-17 Fri>
+** DONE p.196 clarify signal contam correlated
+   CLOSED: [2012-08-14 Tue 11:05] SCHEDULED: <2012-08-17 Fri>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 11:05]
+2813ade1bf951d9ef0875404752842a190871317
 ** TODO p.197 indices
+   SCHEDULED: <2012-08-17 Fri>
 ** DONE p.202 cite Haskell
    CLOSED: [2012-06-29 Fri 17:40]
    - State "DONE"       from "TODO"       [2012-06-29 Fri 17:40]
 a1cc7abda3b3c2836048fc788db93926d35a5838
 ** DONE Fix CMS/ATLAS reference
 ** DONE Comments at the end of thesis.tex
+** DONE PL description - number of free parameters (is that fully sz?)
+   CLOSED: [2012-08-14 Tue 01:20]
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 01:20]
 * Corrections
 ** DONE Add work done during PhD including service work and which parts of analysis were mine
    CLOSED: [2012-06-25 Mon 19:09]
@@ -546,12 +626,15 @@ a1cc7abda3b3c2836048fc788db93926d35a5838
    CLOSED: [2012-06-26 Tue 12:23]
    - State "DONE"       from "TODO"       [2012-06-26 Tue 12:23]
 fcd03900c8cffcf7ae2ffeab96968e6e54c838e4
-** TODO Add discussion of QCD @ or around p. 50/51
+** DONE Add discussion of QCD @ or around p. 50/51
+4d1b3748ed43521680219a6e3219323e578f4ad1
 ** DONE Mention charge asymmetry in around 3.1.2
    CLOSED: [2012-07-03 Tue 14:48]
    - State "DONE"       from "TODO"       [2012-07-03 Tue 14:48]
 3b207cb161a266d2458d0d5dd085074f80f2f4e8
-** TODO Consider figure 3.1.2/3.1.3 that would be more intuitive. Additional diagram for other subprocesses.
+** DONE Consider figure 3.1.2/3.1.3 that would be more intuitive. Additional diagram for other subprocesses.
+   CLOSED: [2012-08-14 Tue 01:20]
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 01:20]
 ** DONE Add lepton quality plots to chapter 6
 97ede87c7d62e631295807ccc2777996d89ea122
 3b207cb161a266d2458d0d5dd085074f80f2f4e8
@@ -595,3 +678,12 @@ Comment on impact of uncertainties coming from jets in tables 7.6/7.7
 8ad00307d34825932e8b54987da15949edf4ba71
 
 ** TODO Fix spacing of appendix tables
+   SCHEDULED: <2012-08-17 Fri>
+
+** CANCELLED clarify haskell is purely functional
+   CLOSED: [2012-08-14 Tue 09:53] SCHEDULED: <2012-08-17 Fri>
+   - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 09:53]
+
+** TODO consistent ; or , in itemized lists
+
+33 left
