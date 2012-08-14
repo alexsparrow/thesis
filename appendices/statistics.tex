@@ -11,8 +11,8 @@ correlations must be evaluated.
 \subsection{Notation}
 It will be helpful to define some notation. In the following, a subscript index
 is assumed to run over the binned variable in the analysis (i.e. \STlep
-bins). All nuisance parameters are written as $\nu^{(i)}$ where the superscript
-index is taken to run over some set of systematic uncertainties
+bins). All nuisance parameters are written as $\nu^{(\alpha)}$, where the
+superscript index is taken to run over some set of systematic uncertainties
 (e.g. $\nu^{\textrm{jes}}$ might represent the \ac{JES} uncertainty). Certain
 variables $x$ are known to have a functional dependence on a given nuisance
 parameter and are written $x(\nu)$. The nominal value of this variable, being
@@ -22,17 +22,18 @@ that which is measured in \ac{MC} or in real data is denoted $\bar{x}$.
 In constructing the likelihood, we start by writing down the number of events
 expected for each bin:
 \begin{equation*}
-\NExpi = \NSigi(\mu, \nu^{(j)}) +
-\NBkgi(\nu^{(k)}),
+\NExpi = \NSigi(\mu, \nu^{(\textrm{sig})}) +
+\NBkgi(\nu^{(\textrm{bkg})}),
 \end{equation*}
 where \NSigi is the expected signal yield for a chosen signal model and \NBkgi
 is the data-driven background prediction. As can be seen, the signal yield is a
-function of the \ac{poi}, $\mu$ and a number of nuisance parameters. The index
-$j$ will run over a set of systematic uncertainties relevant to the signal
-yield. Ignoring signal contamination effects (which will be discussed later),
-the background yield depends only on the nuisance parameters, $\nu^{(k)}$, where
-$k$ is taken to run over the set of systematic uncertainties relevant to the
-background prediction.
+function of the \ac{poi}, $\mu$ and a number of nuisance parameters,
+$\nu^{(\textrm{sig})}$. These represent the set of systematic uncertainties
+relevant to the signal yield. Ignoring signal contamination effects (which will
+be discussed later), the background yield depends only on the nuisance
+parameters, $\nu^{(\textrm{bkg})}$. These represent uncertainties affecting the
+background yield. Certain uncertainties will affect both signal and background
+yields and thus will be present in both sets.
 
 Without giving an explicit functional form for the signal yield and background
 prediction, the form of the likelihood function may be constructed. The
@@ -52,25 +53,25 @@ likelihood must include the following terms.
 The form of the likelihood is as follows,
 \begin{equation*}
 \mathcal{L} = \prod_i \Poisson(\NExpi ; \NObsi)
-\prod_{\alpha \in \Theta}  X_\alpha(\nu^{(\alpha)}),
+\prod_\theta  X_\theta(\nu^{(\theta)}),
 \end{equation*}
 where:
 \begin{itemize}
 \item $\mathcal{P}(\mu;x)$ denotes a Poisson distribution with mean $\mu$ and value
 $x$ and
-\item the $X_\alpha(\nu^{(\alpha)})$ represent some prior \ac{pdf} associated with
-  each systematic $\alpha$.
+\item $X_\theta(\nu^{(\theta)})$ represents some prior \ac{pdf} associated with
+  each systematic uncertainty $\theta$.
 \end{itemize}
 
 \subsection{The Signal Yield}
 The signal yield per bin is constructed as follows:
 \begin{equation*}
-\NSigi = \mu \times \epsilon_i(\nu^{(\alpha)}) \times \sigma \times L \times \nu^{\textrm{lumi}},
+\NSigi = \mu \times \epsilon_i(\nu^{(\textrm{sig})}) \times \sigma \times L \times \nu^{\textrm{lumi}},
 \end{equation*}
 where:
 \begin{itemize}
-\item $\epsilon_i(\nu^{(\alpha)})$ is the efficiency of the $i$th bin, assumed to be
-  dependent on a set of nuisance parameters $\nu^{(\alpha)}$;
+\item $\epsilon_i(\nu^{(\textrm{sig})})$ is the efficiency of the $i$th bin, assumed to be
+  dependent on a set of nuisance parameters $\nu^{(\textrm{sig})}$;
 \item $\sigma$ is the cross-section of the signal model being considered;
 \item $L$ is the integrated luminosity and
 \item $\nu^{\textrm{lumi}}$ is a nuisance parameter associated with uncertainty
@@ -90,7 +91,7 @@ where:
 \begin{itemize}
 \item \RCSi is the translation factor as defined in \eqn~\ref{eqn:susysearch_RCS}
   (excluding contributions from \ac{QCD} processes);
-\item the nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{\gamma}$ represent
+\item the nuisance parameters $\nu_i^{(\alpha)}$ and $\nu_i^{(\gamma)}$ represent
   statistical uncertainties uncorrelated between the bins;
 \item the nuisance parameters $\nu^{(\beta)}$ represent systematic
   uncertainties assumed to be 100\% correlated across the bins and
@@ -159,39 +160,39 @@ x(\nu^{(A)}, \nu^{(B)}, \ldots) &\approx& \bar{x} +
 \end{eqnarray*}
 If we attempt to rewrite as a product,
 \begin{eqnarray*}
-\prod_{j=A, B, \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) &=&
-\bar{x}^N + \bar{x}^{N-1} \sum_{j=A, B, \ldots} \nu^{(\alpha)}\frac{\Delta x}{\Delta \nu^{(\alpha)}} \\
-&&+ \bar{x}^{N-2}\sum_{j=A, B, \ldots} \sum_{k=A, B, \ldots} \nu^{(\alpha)}\nu^{(\beta)}\frac{\Delta x}{\Delta
+\prod_{\theta=A, B, \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\theta)}}\right) &=&
+\bar{x}^N + \bar{x}^{N-1} \sum_{\alpha=A, B, \ldots} \nu^{(\alpha)}\frac{\Delta x}{\Delta \nu^{(\alpha)}} \\
+&&+ \bar{x}^{N-2}\sum_{\alpha=A, B, \ldots} \sum_{\beta=A, B, \ldots} \nu^{(\alpha)}\nu^{(\beta)}\frac{\Delta x}{\Delta
   \nu^{(\alpha)}}\frac{\Delta x}{\Delta \nu^{(\beta)}} \\
-&&+ \ldots +O(\nu^N).
+&&+ \ldots + O(\nu^N).
 \end{eqnarray*}
 Ignoring terms greater than $O(\nu^2)$,
 \begin{eqnarray*}
-\prod_{j=A, B, \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) &\approx&
-\bar{x}^N + \bar{x}^{N-1} \sum_{j=A, B, \ldots} \nu^{(\alpha)}\frac{\Delta x}{\Delta
+\prod_{\theta=A, B, \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\theta)}}\right) &\approx&
+\bar{x}^N + \bar{x}^{N-1} \sum_{\alpha=A, B, \ldots} \nu^{(\alpha)}\frac{\Delta x}{\Delta
   \nu^{(\alpha)}} \\
 &\approx& \bar{x}^{N-1} x(\nu^{(A)}, \nu^{(B)}, \ldots),
 \end{eqnarray*}
 and therefore we find
 \begin{equation}
 \label{eqn:stats:systderiv}
-x(\nu^{(A)}, \nu^{(B)}, \ldots) \approx \frac{1}{\bar{x}^{N-1}} \prod_{j = A, B,
+x(\nu^{(A)}, \nu^{(B)}, \ldots) \approx \frac{1}{\bar{x}^{N-1}} \prod_{\alpha = A, B,
   \ldots} \left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right) \approx
-\bar{x} \prod_{j = A, B,
+\bar{x} \prod_{\alpha = A, B,
   \ldots} \frac{1}{\bar{x}}\left(\bar{x} + \frac{\Delta x}{\Delta\nu^{(\alpha)}}\right).
 \end{equation}
 
 Using \eqn~\ref{eqn:stats:systderiv}, the signal yield can be rewritten as follows:
 \begin{equation*}
-\NSigi = \mu \times \bar{\epsilon}_i \times \prod_{j}\left(\frac{\bar{\epsilon}_i
+\NSigi = \mu \times \bar{\epsilon}_i \times \prod_{\alpha}\left(\frac{\bar{\epsilon}_i
     + \nu^{(\alpha)}\frac{\Delta\epsilon_i}{\Delta\nu^{(\alpha)}}}{\bar{\epsilon}_i}\right) \sigma \times L \times \nu^{\textrm{lumi}},
 \end{equation*}
 and the background prediction,
 \begin{equation*}
-\NBkgi = \RbarCS_i \times \prod_{j}\left( \frac{\RbarCS_i
+\NBkgi = \RbarCS_i \times \prod_{\alpha}\left( \frac{\RbarCS_i
     + \nu^{(\alpha)}\frac{\Delta\RCSi}{\Delta\nu^{(\alpha)}}}{\RbarCS_i}\right)
-\times \NbarControl_i \times \prod_{k}\left( \frac{\NbarControl_i
-    + \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right).
+\times \NbarControl_i \times \prod_{\beta}\left( \frac{\NbarControl_i
+    + \nu^{(\beta)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right).
 \end{equation*}
 
 \subsection{Nuisance Parameters}
@@ -229,12 +230,12 @@ to \ac{SUSY} contamination. Rewriting,
 
 \begin{align}
 \label{eqn:bgprediction}
-\NBkgi(\mu, \nu^{(\alpha)}) & = \RbarCS_i \times \prod_{j}\left( \frac{\RbarCS_i
+\NBkgi(\mu, \nu^{(\alpha)}) & = \RbarCS_i \times \prod_{\alpha}\left( \frac{\RbarCS_i
     + \nu^{(\alpha)}\frac{\Delta\RCSi}{\Delta\nu^{(\alpha)}}}{\RbarCS_i}\right)
 \times \NbarControl_i\nonumber \\
-& \times f^{\textrm{SM}}_i(\mu) \times \prod_{k}\left( \frac{\NbarControl_i
+& \times f^{\textrm{SM}}_i(\mu) \times \prod_{\beta}\left( \frac{\NbarControl_i
     +
-    \nu^{(\alpha)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right),
+    \nu^{(\beta)}\frac{\Delta\NControli}{\Delta\nu^{(\beta)}}}{\NbarControl_i}\right),
 \end{align}
 where $f^{\textrm{SM}}_i$ represents the fraction of \NControli expected due to
 \ac{SM} processes given the current signal hypothesis i.e.

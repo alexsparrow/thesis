@@ -42,15 +42,18 @@ b9a254ecd4ce58e19477aa8aaa9b14ef48125143
 *** DONE p.28: inn
 77b83ba7aba6e104cd2008383453bf64415d3a19
 c6a49d2fdff55dc9c6ee8c571e1fd175e824eba2
-*** TODO p.29, 30 phi(x)^2
-    SCHEDULED: <2012-08-15 Wed>
+*** DONE p.29, 30 phi(x)^2
+    CLOSED: [2012-08-14 Tue 20:26] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 20:26]
 *** CANCELLED p.30 Expain QED					       :viva:
     CLOSED: [2012-08-14 Tue 01:21]
     - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:21]
+30eeb0d198c2d6f0fc3e043ef53f19c9520bfa91
 *** TODO p.31 Fix yang-mills and explain parameters
     SCHEDULED: <2012-08-15 Wed>
-*** TODO p.31 Rephrase last paragraph				       :viva:
-    SCHEDULED: <2012-08-16 Thu>
+*** CANCELLED p.31 Rephrase last paragraph			       :viva:
+    CLOSED: [2012-08-14 Tue 20:27] SCHEDULED: <2012-08-16 Thu>
+    - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 20:27]
 *** TODO p.32 Explain first para				       :viva:
     SCHEDULED: <2012-08-16 Thu>
 *** DONE p.32: and -> where
@@ -78,7 +81,10 @@ c6a49d2fdff55dc9c6ee8c571e1fd175e824eba2
 *** DONE straight forward
 9357ca148595e8abec3057bd352ad835137a65d3
 *** DONE p.39 1.5.2: cite
-*** TODO Equation alignment					    :general:
+*** DONE Equation alignment					    :general:
+    CLOSED: [2012-08-14 Tue 20:26]
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 20:26]
+30eeb0d198c2d6f0fc3e043ef53f19c9520bfa91
     SCHEDULED: <2012-08-15 Wed>
 ** SUSY
 *** DONE p.41 new physics -> NP					    :general:
