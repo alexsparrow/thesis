@@ -78,16 +78,16 @@ electromagnetism~\cite{aitchison}. Recall that the electric (\emE) and magnetic
 (\emB) components of the field may be written in terms of a vector potential
 (\emA) and a scalar potential \emV as follows:
 \begin{eqnarray*}
-\emB = \nablav \times \emA\quad\textrm{and} \\
-\emE = -\nablav \emV - \frac{\partial \emA}{\partial t}.
+\emB &=& \nablav \times \emA\quad\textrm{and} \\
+\emE &=& -\nablav \emV - \frac{\partial \emA}{\partial t}.
 \end{eqnarray*}
 It can be seen that these equations do not relate a given (\emB, \emE) to unique
 values of \emA and \emV. In particular, if the following transformations are
 applied simultaneously to \emA and \emV, the values of \emB and \emE will be
 unchanged,
 \begin{eqnarray*}
-\emA \longrightarrow \emA + \nablav \chi\quad\textrm{and}\\
-\emV \longrightarrow  \emV - \frac{\partial \chi}{\partial t},
+\emA &\longrightarrow& \emA + \nablav \chi\quad\textrm{and}\\
+\emV &\longrightarrow&  \emV - \frac{\partial \chi}{\partial t},
 \end{eqnarray*}
 where $\chi$ is some arbitrary function of spacetime. Such
 transformations are known as \emph{gauge transformations} and \emB and
@@ -185,7 +185,7 @@ field. The Lagrangian for this theory may be written as follows,
 \label{eqn:theory_complex_scalar}
 \lagrangiand =
 \frac{1}{2}\left(\partial_{\mu}\phi(x))(\partial^{\mu}\phi(x)\right)^* -
-\frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right),
+\frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left|\phi(x)\right|^4,
 \end{equation}
 where the field $\phi$ is now a complex quantity. This field is seen to possess
 an additional symmetry,
@@ -221,7 +221,7 @@ additional terms in \eqn~\ref{eqn:theory_gauge_dL}. The Lagrangian would then be
 rewritten as follows,
 \begin{equation*}
   \lagrangiand = \left(D_{\mu}\phi\right)\left(D^{\mu}\phi\right)^*
-  - \frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right).
+  - \frac{1}{2}m^2\left|\phi(x)\right|^2 - \frac{\lambda}{4!}\left|\phi(x)\right|^4.
 \end{equation*}
 It can be shown that this requires the $B_{\mu}$ field to transform as follows
 \begin{equation*}
@@ -237,7 +237,7 @@ equations into the Lagrangian, one arrives at \acf{SQED},
 \label{eqn:scalar_qed}
   \lagrangiand = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \left(D_{\mu}\phi\right)\left(D^{\mu}\phi\right)^*
   - \frac{1}{2}m^2\left|\phi(x)\right|^2 -
-  \frac{\lambda}{4!}\left(\left|\phi(x)\right|^2\right).
+  \frac{\lambda}{4!}\left|\phi(x)\right|^4.
 \end{equation}
 
 The procedure which has just been outlined is an example of the \emph{gauge
@@ -254,8 +254,8 @@ symmetry. This will now be extended to ``larger'' symmetry groups.
 Extending the symmetry group to \SUtwo and replacing the single complex field
 $\phi$ by a vector of complex fields, $\Phi$,
 \begin{eqnarray*}
-\Phi \longrightarrow \Phi' = \exp\left(i\theta(x) + iT^a W^a_{\mu}\right)\Phi\\
-D_{\mu} = \partial_{\mu} + igT^a_{\mu},
+\Phi \longrightarrow \Phi' &=& \exp\left(i\theta(x) + iT^a W^a_{\mu}\right)\Phi\quad\textrm{and}\\
+D_{\mu} &=& \partial_{\mu} + igT^a_{\mu},
 \end{eqnarray*}
 where $T^a$ are the generators of the group \SUtwo, $T^a = \frac{1}{2}\sigma^a$
 and the $\sigma^a$ are the well-known Pauli matrices. Notice that this symmetry
@@ -268,8 +268,8 @@ symmetry group \SUtwo. In particular, the generator of this symmetry group do
 not commute -- they are said to be \emph{non-Abelian}. This requires the Lagrangian
 to be modified to maintain local gauge invariance,
 \begin{eqnarray*}
-\lagrangiand = -\frac{1}{4}F^a_{\mu\nu}F^{\mu\nu} \textrm{where}\\
-F^a_{\mu\nu} = \partial_{\mu} A^a_{\nu} - \partial_{\nu} A^a_{\mu} + g f^{abc}
+\lagrangiand &=& -\frac{1}{4}F^a_{\mu\nu}F^{\mu\nu} \quad\textrm{where}\\
+F^a_{\mu\nu} &=& \partial_{\mu} A^a_{\nu} - \partial_{\nu} A^a_{\mu} + g f^{abc}
 A^b_{\mu} A^c_{\nu},
 \end{eqnarray*}
 and $f^{abc}$ are known as \emph{structure constants} of the group \SUtwo. The
@@ -380,9 +380,9 @@ $\SUtwo_{\textrm{L}}\times\Uone$, one obtains
 \end{equation*}
 where
 \begin{eqnarray*}
-W^{a}_{\mu\nu} = \partial_{\mu} W^a_{\nu} - \partial_{\nu}W^a_{\mu} + g f^{abc}
+W^{a}_{\mu\nu} &=& \partial_{\mu} W^a_{\nu} - \partial_{\nu}W^a_{\mu} + g f^{abc}
 W^{b}_{\mu} W^c_{\nu}\quad\textrm{and}\\
-B_{\mu\nu} = \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}.
+B_{\mu\nu} &=& \partial_{\mu} B_{\nu} - \partial_{\nu} B_{\mu}.
 \end{eqnarray*}
 The piece of the Lagrangian for free leptons is then,
 \begin{equation*}
