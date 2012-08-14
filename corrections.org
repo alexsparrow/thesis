@@ -679,13 +679,17 @@ Comment on impact of uncertainties coming from jets in tables 7.6/7.7
 ** DONE Comment on structure of good efficiency areas in Figure 8.5
 8ad00307d34825932e8b54987da15949edf4ba71
 
-** TODO Fix spacing of appendix tables
-   SCHEDULED: <2012-08-17 Fri>
+** DONE Fix spacing of appendix tables
+   CLOSED: [2012-08-14 Tue 12:02] SCHEDULED: <2012-08-17 Fri>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 12:02]
 
 ** CANCELLED clarify haskell is purely functional
    CLOSED: [2012-08-14 Tue 09:53] SCHEDULED: <2012-08-17 Fri>
    - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 09:53]
 
-** TODO consistent ; or , in itemized lists
+** DONE consistent ; or , in itemized lists
+   CLOSED: [2012-08-14 Tue 12:01]
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 12:01]
+ca1a987f4b5756dc6b675bba899840b084cfb177
 
-32 left
+30 left
