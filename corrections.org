@@ -21,13 +21,18 @@ efc2d994c75aab29bab90842e067d888a53431ce
 *** DONE p.25 high-energy physics experiments
     CLOSED: [2012-08-14 Tue 11:20] SCHEDULED: <2012-08-17 Fri>
     - State "DONE"       from "TODO"       [2012-08-14 Tue 11:20]
-d4f9e8eb8fc9aae50c9df905e82b97ea918d88d0
-*** TODO commas
-    SCHEDULED: <2012-08-15 Wed>
-*** TODO p.26: brackets around particle letters
-    SCHEDULED: <2012-08-15 Wed>
-*** TODO p.26: brackets around E,B,A,V
-    SCHEDULED: <2012-08-15 Wed>
+    d4f9e8eb8fc9aae50c9df905e82b97ea918d88d0
+*** DONE commas
+    CLOSED: [2012-08-14 Tue 23:58] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-14 Tue 23:58]
+*** DONE p.26: brackets around particle letters
+d1eaffa4fa46307f9882f9c185182a556d837379
+    CLOSED: [2012-08-15 Wed 16:39] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 16:39]
+*** DONE p.26: brackets around E,B,A,V
+d1eaffa4fa46307f9882f9c185182a556d837379
+    CLOSED: [2012-08-15 Wed 16:39] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 16:39]
 *** DONE E should be vector
 c4fa53605db752485b90b3c9e5bbfde02b62f594
 *** DONE p.27 ? (first line)
@@ -49,35 +54,46 @@ c6a49d2fdff55dc9c6ee8c571e1fd175e824eba2
     CLOSED: [2012-08-14 Tue 01:21]
     - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:21]
 30eeb0d198c2d6f0fc3e043ef53f19c9520bfa91
-*** TODO p.31 Fix yang-mills and explain parameters
-    SCHEDULED: <2012-08-15 Wed>
+*** DONE p.31 Fix yang-mills and explain parameters
+    CLOSED: [2012-08-15 Wed 16:47] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 16:47]
 *** CANCELLED p.31 Rephrase last paragraph			       :viva:
     CLOSED: [2012-08-14 Tue 20:27] SCHEDULED: <2012-08-16 Thu>
     - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 20:27]
-*** TODO p.32 Explain first para				       :viva:
-    SCHEDULED: <2012-08-16 Thu>
+d1eaffa4fa46307f9882f9c185182a556d837379
+*** CANCELLED p.32 Explain first para				       :viva:
+    CLOSED: [2012-08-15 Wed 17:04] SCHEDULED: <2012-08-16 Thu>
+    - State "CANCELLED"  from "TODO"       [2012-08-15 Wed 17:04]
 *** DONE p.32: and -> where
 48e31f8eb5293d249b45b044e4268cd9ad2a28b9
 *** DONE p.32: gamma0 superscript
 48e31f8eb5293d249b45b044e4268cd9ad2a28b9
-*** TODO p.33 confused stuff
-    SCHEDULED: <2012-08-15 Wed>
+*** DONE p.33 confused stuff
+    CLOSED: [2012-08-15 Wed 17:03] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 17:03]
 *** CANCELLED p.33 clarify "have already been described"	       :viva:
     CLOSED: [2012-08-14 Tue 01:44] SCHEDULED: <2012-08-15 Wed>
     - State "CANCELLED"  from "TODO"       [2012-08-14 Tue 01:44]
 *** DONE p.34 -+ on Wmu
 174ac66e542ea93ab8c7e76219780ba0b9460d7b
+9499ef81610be017ee238400093962169850c3e6
 *** TODO More consistency on naming of fields			       :viva:
 *** DONE p.37: * should be superscript
 6bb3b512d22aa44bcb7fec342b11f5729ab2ef86
-*** TODO bottom of page 37, define field
+*** DONE bottom of page 37, define field
+    CLOSED: [2012-08-15 Wed 17:29]
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 17:29]
 *** DONE Fix eqn 1.10
 4f5681bfb9974d31451ad276e2509bd0b13150bb
 *** DONE eqn 1.10: bracket interaction terms
 4f5681bfb9974d31451ad276e2509bd0b13150bb
 *** DONE p.38: Two things					       :viva:
 0a07f5e18a274499243bc14e39f51384490d371b
-*** TODO p.38: Explain terms more				       :viva:
+2a1b1a5ef55699996a1f6591705fbdd54caa273c
+*** DONE p.38: Explain terms more				       :viva:
+    CLOSED: [2012-08-15 Wed 17:29]
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 17:29]
+2a1b1a5ef55699996a1f6591705fbdd54caa273c
 *** DONE straight forward
 9357ca148595e8abec3057bd352ad835137a65d3
 *** DONE p.39 1.5.2: cite
@@ -351,12 +367,14 @@ a0e60cfe513394bf56ff90e0d040bc9e62eac466
    - State "DONE"       from "TODO"       [2012-06-22 Fri 17:30]
 a0e60cfe513394bf56ff90e0d040bc9e62eac466
 019e2719954ae4a5649dc89bbbb296ffd27db9ea
-** TODO p.104 |YW|
-   SCHEDULED: <2012-08-17 Fri>
+** DONE p.104 |YW|
+   CLOSED: [2012-08-15 Wed 16:56] SCHEDULED: <2012-08-17 Fri>
+   - State "DONE"       from "TODO"       [2012-08-15 Wed 16:56]
 ** DONE functional forms are taken
    CLOSED: [2012-06-22 Fri 16:57]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:57]
 e7ef1cea5824e6a73b83e0da107a7db4863fcd33
+8f5c46d5b70732954089af5d0f1f41dcf0b9f7c6
 ** TODO p.105 clarify are seen to vary
    SCHEDULED: <2012-08-17 Fri>
 ** DONE p.106 error -> uncertainty
@@ -601,7 +619,7 @@ d63eb86253c28c2d8f559dfd5eca6ef9a4d74402
 ** DONE p.182 delete is more relevant
    CLOSED: [2012-06-23 Sat 14:18]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 14:18]
-cb8f6617de2ae12a4f44de05cf3565cc627770b5
+   cb8f6617de2ae12a4f44de05cf3565cc627770b5
 ** TODO W or X0 ??
    SCHEDULED: <2012-08-17 Fri>
 ** DONE p.189 lorentz						       :viva:
@@ -621,14 +639,17 @@ b78be1a33e6aca3ede3ad15d6fd6730a1968b89b
 ** DONE p.195 two -> to
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:42]
    ef4998848fe84086cf7007cc24fa60456717ebb1
-** TODO p.195 indices
-   SCHEDULED: <2012-08-15 Wed>
+** DONE p.195 indices
+   CLOSED: [2012-08-14 Tue 23:56] SCHEDULED: <2012-08-15 Wed>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 23:56]
 ** DONE p.196 clarify signal contam correlated
    CLOSED: [2012-08-14 Tue 11:05] SCHEDULED: <2012-08-17 Fri>
    - State "DONE"       from "TODO"       [2012-08-14 Tue 11:05]
 2813ade1bf951d9ef0875404752842a190871317
-** TODO p.197 indices
-   SCHEDULED: <2012-08-15 Wed>
+20ed60db07b33895c499ce346b0055714f1e06fb
+** DONE p.197 indices
+   CLOSED: [2012-08-14 Tue 23:56] SCHEDULED: <2012-08-15 Wed>
+   - State "DONE"       from "TODO"       [2012-08-14 Tue 23:56]
 ** DONE p.202 cite Haskell
    CLOSED: [2012-06-29 Fri 17:40]
    - State "DONE"       from "TODO"       [2012-06-29 Fri 17:40]
@@ -638,10 +659,11 @@ a1cc7abda3b3c2836048fc788db93926d35a5838
 ** DONE PL description - number of free parameters (is that fully sz?)
    CLOSED: [2012-08-14 Tue 01:20]
    - State "DONE"       from "TODO"       [2012-08-14 Tue 01:20]
+20ed60db07b33895c499ce346b0055714f1e06fb
 ** TODO Blank page on p.148 - probs need to update the texmf directory
 ** TODO spell check
 ** TODO ?? ! check
-** TODO formatting check
+** TODO formatting check: references, table of contents
 * Corrections
 ** DONE Add work done during PhD including service work and which parts of analysis were mine
    CLOSED: [2012-06-25 Mon 19:09]
