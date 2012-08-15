@@ -39,11 +39,11 @@ describe the many matter particles discovered by experiment. These are the
 \emph{fermions}, of which there are two varieties -- leptons and quarks. The
 leptons, or ``light particles'', make up three generations. Each generation
 associates a relatively heavy charged lepton with a much lighter neutral
-partner, a \emph{neutrino}. The charged leptons are: the electron, \Pe, the muon,
-\Pgm, and the tau lepton, \Ptau. Each has identical charge, typically written in
-terms of the charge carried by a single electron, \ec. The corresponding neutral
-leptons are then referred to as the electron neutrino, \Pnue, muon neutrino,
-\Pnum, and tau neutrino, \Pnut.
+partner, a \emph{neutrino}. The charged leptons are: the electron (\Pe), the
+muon (\Pgm) and the tau lepton (\Ptau). Each has identical charge, typically
+written in terms of the charge carried by a single electron, \ec. The
+corresponding neutral leptons are then referred to as the electron neutrino,
+\Pnue, muon neutrino, \Pnum, and tau neutrino, \Pnut.
 
 The quarks are also arranged in three generations, with two quarks occupying
 each. The first of each generation is referred to as an ``up-type'' quark and
@@ -74,9 +74,9 @@ be explained in the next section.
 \section{Electroweak Gauge Theory}
 \subsection{Gauge Invariance}
 The theoretical principle of gauge invariance can be seen in Maxwell's theory of
-electromagnetism~\cite{aitchison}. Recall that the electric (\emE) and magnetic
-(\emB) components of the field may be written in terms of a vector potential
-(\emA) and a scalar potential \emV as follows:
+electromagnetism~\cite{aitchison}. Recall that the electric, \emE, and magnetic,
+\emB, components of the field may be written in terms of a vector potential,
+\emA and a scalar potential, \emV, as follows:
 \begin{eqnarray*}
 \emB &=& \nablav \times \emA\quad\textrm{and} \\
 \emE &=& -\nablav \emV - \frac{\partial \emA}{\partial t}.
@@ -252,23 +252,25 @@ model, to predict the existence of gauge bosons by enforcing a local
 symmetry. This will now be extended to ``larger'' symmetry groups.
 
 Extending the symmetry group to \SUtwo and replacing the single complex field
-$\phi$ by a vector of complex fields, $\Phi$,
+$\phi$ by a vector of complex fields, $\Phi$~\cite{sm_intro,peskin_schroeder},
 \begin{eqnarray*}
-\Phi \longrightarrow \Phi' &=& \exp\left(i\theta(x) + iT^a W^a_{\mu}\right)\Phi\quad\textrm{and}\\
-D_{\mu} &=& \partial_{\mu} + igT^a_{\mu},
+\Phi \longrightarrow \Phi' &=& \exp\left(i\alpha^a(x)T^a\right)\Phi\quad\textrm{and}\\
+D_{\mu} &=& \partial_{\mu} + igA^a_{\mu}T^a,
 \end{eqnarray*}
-where $T^a$ are the generators of the group \SUtwo, $T^a = \frac{1}{2}\sigma^a$
-and the $\sigma^a$ are the well-known Pauli matrices. Notice that this symmetry
-group predicts the existence of three gauge bosons -- matching the three weak
-gauge bosons: \PZ, \PWp and \PWm. This is an example of a Yang-Mills
-theory~\cite{yangmills}.
+where $T^a$ are the generators of the group \SUtwo, $T^a = \frac{1}{2}\sigma^a$,
+the index $a = 1, 2, 3$ and the $\sigma^a$ are the well-known Pauli
+matrices. The parameter $\alpha(x)$ is the analogue of $\theta$ in
+\eqn~\ref{eqn:theory_phase_transform} and $g$ is a constant. Notice that this
+symmetry group predicts the existence of three gauge bosons $A^a_{\mu}$ --
+matching the three weak gauge bosons: \PZ, \PWp and \PWm. This is an example of
+a Yang-Mills theory~\cite{yangmills}.
 
 An important aspect of this toy theory is related to the structure of the
-symmetry group \SUtwo. In particular, the generator of this symmetry group do
+symmetry group \SUtwo. In particular, the generators of this symmetry group do
 not commute -- they are said to be \emph{non-Abelian}. This requires the Lagrangian
 to be modified to maintain local gauge invariance,
 \begin{eqnarray*}
-\lagrangiand &=& -\frac{1}{4}F^a_{\mu\nu}F^{\mu\nu} \quad\textrm{where}\\
+\lagrangiand &=& -\frac{1}{4}F^a_{\mu\nu}F^{a\mu\nu} \quad\textrm{where}\\
 F^a_{\mu\nu} &=& \partial_{\mu} A^a_{\nu} - \partial_{\nu} A^a_{\mu} + g f^{abc}
 A^b_{\mu} A^c_{\nu},
 \end{eqnarray*}
