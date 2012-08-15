@@ -77,7 +77,9 @@ d1eaffa4fa46307f9882f9c185182a556d837379
 *** DONE p.34 -+ on Wmu
 174ac66e542ea93ab8c7e76219780ba0b9460d7b
 9499ef81610be017ee238400093962169850c3e6
-*** TODO More consistency on naming of fields			       :viva:
+*** CANCELLED More consistency on naming of fields		       :viva:
+    CLOSED: [2012-08-15 Wed 18:58]
+    - State "CANCELLED"  from "TODO"       [2012-08-15 Wed 18:58]
 *** DONE p.37: * should be superscript
 6bb3b512d22aa44bcb7fec342b11f5729ab2ef86
 *** DONE bottom of page 37, define field
@@ -158,8 +160,9 @@ ee1ea1ff6096067010756edba21788629ffd743e
 *** DONE NLO. full stop						       :viva:
 869840930f696a5624123781d958e06688c5420f
 e1171117c61de0ee78f83d638ea75c375c1747e5
-*** TODO cite strologas 3.1.2
-    SCHEDULED: <2012-08-15 Wed>
+*** DONE cite strologas 3.1.2
+    CLOSED: [2012-08-15 Wed 18:16] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 18:16]
 cbdc3ab3a4a15b239e46a238c014b13a4f69c397
 *** DONE define theta
 cbdc3ab3a4a15b239e46a238c014b13a4f69c397
@@ -203,17 +206,22 @@ e0051c34ed7ad7f1ec3ce6885e3eb2b00fc9f242
 226c97969ee7c5112d414c39c5a76ecc028f4d5f
 *** DONE Fix Q
 e19ca887b7e06bab0b50bd238b073e1b7ec730a7
-*** TODO Fix y -> YW
-    SCHEDULED: <2012-08-15 Wed>
+2e5926ce27be5a46d3bbf1db2a1b021ac05332d0
+*** DONE Fix y -> YW
+    CLOSED: [2012-08-15 Wed 18:15] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 18:15]
 ef4998848fe84086cf7007cc24fa60456717ebb1
 *** DONE define dOmega*
 e19ca887b7e06bab0b50bd238b073e1b7ec730a7
 *** DONE Fix theta* phi*
 e19ca887b7e06bab0b50bd238b073e1b7ec730a7
-*** TODO define sigma-1 or take from another reference
-    SCHEDULED: <2012-08-15 Wed>
-*** TODO Consider making Ai consistent with Dixon et al
-    SCHEDULED: <2012-08-15 Wed>
+*** DONE define sigma-1 or take from another reference
+    CLOSED: [2012-08-15 Wed 18:15] SCHEDULED: <2012-08-15 Wed>
+2e5926ce27be5a46d3bbf1db2a1b021ac05332d0
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 18:15]
+*** DONE Consider making Ai consistent with Dixon et al
+    CLOSED: [2012-08-15 Wed 18:15] SCHEDULED: <2012-08-15 Wed>
+    - State "DONE"       from "TODO"       [2012-08-15 Wed 18:15]
 *** DONE p.61 fix weird sentence
     CLOSED: [2012-06-22 Fri 16:31]
     - State "DONE"       from "TODO"       [2012-06-22 Fri 16:31]
@@ -375,6 +383,7 @@ a0e60cfe513394bf56ff90e0d040bc9e62eac466
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:57]
 e7ef1cea5824e6a73b83e0da107a7db4863fcd33
 8f5c46d5b70732954089af5d0f1f41dcf0b9f7c6
+2e5926ce27be5a46d3bbf1db2a1b021ac05332d0
 ** TODO p.105 clarify are seen to vary
    SCHEDULED: <2012-08-17 Fri>
 ** DONE p.106 error -> uncertainty
@@ -614,8 +623,10 @@ d63eb86253c28c2d8f559dfd5eca6ef9a4d74402
    - State "DONE"       from "TODO"       [2012-06-25 Mon 13:10]
 5d68cbc66b811a0c8229a1f09da9ef1274dd4780
 3cd00517b58a9feca795184e9e1cf763bc1ecd7a
-** TODO particles
-   SCHEDULED: <2012-08-15 Wed>
+** DONE particles
+   CLOSED: [2012-08-15 Wed 19:00] SCHEDULED: <2012-08-15 Wed>
+   - State "DONE"       from "TODO"       [2012-08-15 Wed 19:00]
+09b0d693807eb71139789ad5aa8166c10948b888
 ** DONE p.182 delete is more relevant
    CLOSED: [2012-06-23 Sat 14:18]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 14:18]
