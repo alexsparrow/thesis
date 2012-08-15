@@ -357,23 +357,35 @@ p_1 = x_1 P_1 \qquad p_2 = x_2 P_2.
 \end{equation*}
 The momenta of the incoming hadrons are labelled $P_1$ and $P_2$, the
 interacting partons, $p_1$ and $p_2$ and the \PW boson, $Q$. This
-expression can be rewritten in terms of a standard set of angular
-coefficient $A_i$, to give~\cite{mirkes_w_1992}
+expression can be decomposed in terms of a standard set of angular
+coefficient $A_i$, to give~\cite{berger_left_handed_w,mirkes_w_1992,strologas_thesis}
 \begin{align}
 \label{eqn:wpol_diff_xs}
-\frac{d\sigma}{d(\PtW)^2 d\YW d\cos\thetastar d\phistar} = \frac{3}{16\pi}
-\frac{d\sigma^{-1}}{d(\PtW)^2 d\YW} &\left [ \left(1+\cos^2\thetastar\right) \right. \nonumber\\
+\frac{1}{\sigma} \frac{d\sigma}{d\left(\cos\thetastar\right)d\phistar} = \frac{3}{16\pi}
+&\left [ \left(1+\cos^2\thetastar\right) \right. \nonumber\\
  &+ \frac{1}{2} A_0 \left ( 1 - 3\cos^2\thetastar \right ) + A_1 \sin 2\thetastar\cos\phistar \nonumber\\
  &+ \frac{1}{2}A_2\sin^2\thetastar\cos 2\phistar + A_3\sin\thetastar\cos\phistar \nonumber\\
- &+ A_4\cos\thetastar + A_5\sin^2\thetastar\sin 2\phistar \nonumber\\
- &+ A_6\sin 2\thetastar\sin \phistar + A_7\sin\thetastar\sin\phistar
+ &+ A_4\cos\thetastar + A_5\sin\thetastar\sin\phistar  \nonumber\\
+ &+ \left. A_6\sin 2\thetastar\sin \phistar + A_7\sin^2\thetastar\sin 2\phistar \right ],
 \end{align}
 
+% \begin{align}
+% \label{eqn:wpol_diff_xs}
+% \frac{d\sigma}{d(\PtW)^2 d\YW d\cos\thetastar d\phistar} = \frac{3}{16\pi}
+% \frac{d\sigma^{-1}}{d(\PtW)^2 d\YW} &\left [ \left(1+\cos^2\thetastar\right) \right. \nonumber\\
+%  &+ \frac{1}{2} A_0 \left ( 1 - 3\cos^2\thetastar \right ) + A_1 \sin 2\thetastar\cos\phistar \nonumber\\
+%  &+ \frac{1}{2}A_2\sin^2\thetastar\cos 2\phistar + A_3\sin\thetastar\cos\phistar \nonumber\\
+%  &+ A_4\cos\thetastar + A_5\sin^2\thetastar\sin 2\phistar \nonumber\\
+%  &+ A_6\sin 2\thetastar\sin \phistar + A_7\sin\thetastar\sin\phistar
+% \end{align}
+
 % TODO: Figure out the difference between  theta and theta*
-The $A_i$ are ratios of the separate helicity cross-sections of the boson to its
-total unpolarised cross-section. They are dependent on the \PW boson charge,
-transverse momentum, \PtW, and rapidity, \YW. \eqn~\ref{eqn:wpol_diff_xs} can be
-integrated over $\phistar$ and \PtW to give
+where $\sigma$ may be any differential cross-section that does not depend on the
+individual lepton kinematics~\cite{berger_left_handed_w}. The $A_i$ are ratios
+of the separate helicity cross-sections of the boson to its total unpolarised
+cross-section. They are dependent on the \PW boson charge, transverse momentum,
+\PtW, and rapidity, \YW. \eqn~\ref{eqn:wpol_diff_xs} can be integrated over
+$\phistar$ to give
 \begin{equation}
 \label{eqn:wpol_xs_Ai}
 \frac{d\sigma}{d\cos\thetastar} \propto \left(1+\cos^2\thetastar\right) +
