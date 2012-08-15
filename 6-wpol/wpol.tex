@@ -172,16 +172,16 @@ To account for the aforementioned experimental issues, a template ``re-weighting
 method is employed~\cite{wpol_an}. Effectively, \ac{MC} simulation is used to
 derive three re-weighting factors, each a function of $\cos\thetastar$ and
 binned according to \PW boson charge, transverse momentum, \PtW, and rapidity,
-\YW. These can be written as
+\YWm. These can be written as
 \begin{equation}
 \label{eqn:wpol_reweighting_factor}
-Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
+Q_i\left(\cos\thetastar, \PtW, \YWm, \pm \right) =
 \frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{j=-1}^{j=+1}
-  \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)},
+  \ffj^\pm\left(\PtW, \YWm\right)\sigma^\pm_j\left(\cos\thetastar\right)},
 \end{equation}
 where the index, $i$ is one of the three helicity states of the \PW boson. The
 \ffj are constants derived from an analytical fit to the $\cos\thetastar$
-distribution in bins of \PtW, \YW and charge. These are effectively the helicity
+distribution in bins of \PtW, \YWm and charge. These are effectively the helicity
 fractions ``baked in'' to the \ac{MC}. The factor, $Q_i$, will then re-weight
 the $\cos\thetastar$ distribution in \ac{MC} such that it corresponds to the
 pure helicity state, $i$. The functional forms of the $\sigma_i$ are taken from
@@ -211,13 +211,13 @@ required to account for the finite statistical precision of the generated
 sample. The functions $\sigma^{\pm}_{i}$ are replaced by integrals over a small
 slice ($\Delta\cos\thetastar = 0.01$) of a binned $\cos\thetastar$ distribution:
 \begin{equation*}
-Q_i\left(\cos\thetastar, \PtW, \YW, \pm \right) =
+Q_i\left(\cos\thetastar, \PtW, \YWm, \pm \right) =
 \frac{\displaystyle\int_{b}^{b+0.01} \sigma^\pm_i\left(\cos\thetastar\right)}{
 \displaystyle\int_{-1}^{1}\sigma^\pm_i \left(\cos\thetastar\right)}
 \div
 \frac{\displaystyle\int_{b}^{b+0.01} \sum_{j=-1}^{j=+1}
-\ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)}{
-\displaystyle\int_{-1}^{1} \sum_{j=-1}^{j=+1} \ffj^\pm\left(\PtW, \YW\right)\sigma^\pm_j\left(\cos\thetastar\right)
+\ffj^\pm\left(\PtW, \YWm\right)\sigma^\pm_j\left(\cos\thetastar\right)}{
+\displaystyle\int_{-1}^{1} \sum_{j=-1}^{j=+1} \ffj^\pm\left(\PtW, \YWm\right)\sigma^\pm_j\left(\cos\thetastar\right)
 }
 \end{equation*}
 
@@ -247,11 +247,11 @@ they are invariant across the \PW phase space.
 An extra re-weighting factor is defined which effectively gives preference to
 regions containing more \PW bosons of the desired helicity,
 \begin{equation*}
-R_i\left(\PtW, \YW, \pm\right) =
-\frac{{f'}_i \left(\PtW, \YW, \pm\right)}{{f'}_i^{\textrm{all}}},
+R_i\left(\PtW, \YWm, \pm\right) =
+\frac{{f'}_i \left(\PtW, \YWm, \pm\right)}{{f'}_i^{\textrm{all}}},
 \end{equation*}
-where ${f'}_i\left(\PtW, \YW, \pm\right)$ is the fraction of \PW bosons in the
-appropriate \PtW and \YW bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the
+where ${f'}_i\left(\PtW, \YWm, \pm\right)$ is the fraction of \PW bosons in the
+appropriate \PtW and \YWm bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the
 same fraction integrated over all of the phase space bins. The prime added to
 the fraction is significant. It indicates that the phase space of the helicity
 fractions is that obtained after a reconstruction-level cut on \PtW. This must
@@ -269,7 +269,7 @@ model each helicity state. The next section will describe closure tests
 performed to validate this procedure.
 
 \begin{figure}[h!]
-  \centering \subfloat[\YW vs \PtW]{
+  \centering \subfloat[\YWm vs \PtW]{
   \label{fig:wpol_genreco_wpt_eta}\includegraphics[width=0.47\textwidth]{fig/WPTvsY_mcreco50toinf}}\quad
 \subfloat[\PtW]{
   \label{fig:wpol_genreco_ppt}\includegraphics[width=0.47\textwidth]{fig/ptw_mcrecocut}}\quad
