@@ -384,8 +384,9 @@ a0e60cfe513394bf56ff90e0d040bc9e62eac466
 e7ef1cea5824e6a73b83e0da107a7db4863fcd33
 8f5c46d5b70732954089af5d0f1f41dcf0b9f7c6
 2e5926ce27be5a46d3bbf1db2a1b021ac05332d0
-** TODO p.105 clarify are seen to vary
-   SCHEDULED: <2012-08-17 Fri>
+** CANCELLED p.105 clarify are seen to vary
+   CLOSED: [2012-08-17 Fri 16:23] SCHEDULED: <2012-08-17 Fri>
+   - State "CANCELLED"  from "TODO"       [2012-08-17 Fri 16:23]
 ** DONE p.106 error -> uncertainty
    CLOSED: [2012-06-22 Fri 16:56]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:56]
@@ -402,14 +403,16 @@ e7ef1cea5824e6a73b83e0da107a7db4863fcd33
    CLOSED: [2012-06-22 Fri 18:11]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 18:11]
 065d78bbadea697e09fcf528c7e18858605b316b
-** TODO p.113/114 clarify MT bit
-   SCHEDULED: <2012-08-16 Thu>
+** DONE p.113/114 clarify MT bit
+   CLOSED: [2012-08-17 Fri 16:23] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "CANCELLED"  [2012-08-17 Fri 16:23]
 ** DONE delete will now be presented
    CLOSED: [2012-06-23 Sat 17:59]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 17:59]
    a7778c72fdb3c9df31da75a21f5d670795dcd937
-** TODO p.115 table spacing
-   SCHEDULED: <2012-08-17 Fri>
+** DONE p.115 table spacing
+   CLOSED: [2012-08-15 Wed 23:30] SCHEDULED: <2012-08-17 Fri>
+   - State "DONE"       from "TODO"       [2012-08-15 Wed 23:30]
 ** DONE comma and uncapitalise
    CLOSED: [2012-06-22 Fri 18:04]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 18:04]
@@ -559,8 +562,9 @@ f83e4df9d267240745d6144e66d4724a64c45c6b
 9b497d7c4284f223e397d9f8f50706082c998c20
 4a54df9cb3b0185af6ef7729617f2f0de236bd19
 25ed23ce28bf0904c82651df821c2d1cfdd27eb0
-** TODO p.150 table alignment
-   SCHEDULED: <2012-08-16 Thu>
+** DONE p.150 table alignment
+   CLOSED: [2012-08-15 Wed 22:00] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-15 Wed 22:00]
 ** DONE Table 7.2/7.3 \pm spacing
    CLOSED: [2012-08-14 Tue 12:51] SCHEDULED: <2012-08-16 Thu>
    - State "DONE"       from "TODO"       [2012-08-14 Tue 12:51]
@@ -609,8 +613,12 @@ ea1dda4ddfd1082c1d128b1333a8e5f5579babd4
 ** DONE p.173 explain numbers on PL plots (maybe fix the y-axis too?)
 cf6361ec35f68293c9e5fe36f1270ee20e028d5a
 25ed23ce28bf0904c82651df821c2d1cfdd27eb0
-** TODO consider fixing the y-axis on PL plots - fairly sure it should be lambda i.e. likelihood ratio
-   SCHEDULED: <2012-08-16 Thu>
+b67748bb36283dd2dbee28148652c0bb74bee489
+7ed52161fe5667c56ba993921ef62ac555eace9d
+1159efd937a109d259dd24aeafe1e1ce53bcfe69
+** DONE consider fixing the y-axis on PL plots - fairly sure it should be lambda i.e. likelihood ratio
+   CLOSED: [2012-08-17 Fri 16:22] SCHEDULED: <2012-08-16 Thu>
+   - State "DONE"       from "TODO"       [2012-08-17 Fri 16:22]
 ** DONE PROPSINO						    :general:
    CLOSED: [2012-06-22 Fri 16:38]
    - State "DONE"       from "TODO"       [2012-06-22 Fri 16:38]
@@ -631,8 +639,11 @@ d63eb86253c28c2d8f559dfd5eca6ef9a4d74402
    CLOSED: [2012-06-23 Sat 14:18]
    - State "DONE"       from "TODO"       [2012-06-23 Sat 14:18]
    cb8f6617de2ae12a4f44de05cf3565cc627770b5
-** TODO W or X0 ??
-   SCHEDULED: <2012-08-17 Fri>
+Also sort out the bit that mentions it in the text.
+b724eb418a774a380fc0d944353e5ece5518d9a6
+** CANCELLED W or X0 ??
+   CLOSED: [2012-08-17 Fri 16:23] SCHEDULED: <2012-08-17 Fri>
+   - State "CANCELLED"  from "TODO"       [2012-08-17 Fri 16:23]
 ** DONE p.189 lorentz						       :viva:
    CLOSED: [2012-06-21 Thu 17:47]
    - State "DONE"       from "TODO"       [2012-06-21 Thu 17:47]
@@ -671,10 +682,12 @@ a1cc7abda3b3c2836048fc788db93926d35a5838
    CLOSED: [2012-08-14 Tue 01:20]
    - State "DONE"       from "TODO"       [2012-08-14 Tue 01:20]
 20ed60db07b33895c499ce346b0055714f1e06fb
-** TODO Blank page on p.148 - probs need to update the texmf directory
-** TODO spell check
-** TODO ?? ! check
-** TODO formatting check: references, table of contents
+** CANCELLED Blank page on p.148 - probs need to update the texmf directory. Nah its just all chapters start on odd pages.
+   CLOSED: [2012-08-15 Wed 21:41]
+   - State "CANCELLED"  from "CANCELLED"  [2012-08-17 Fri 16:23]
+   - State "CANCELLED"  from "CANCELLED"  [2012-08-17 Fri 16:23]
+   - State "CANCELLED"  from "CANCELLED"  [2012-08-17 Fri 16:23]
+   - State "CANCELLED"  from "TODO"       [2012-08-15 Wed 21:41]
 * Corrections
 ** DONE Add work done during PhD including service work and which parts of analysis were mine
    CLOSED: [2012-06-25 Mon 19:09]
@@ -749,3 +762,32 @@ Comment on impact of uncertainties coming from jets in tables 7.6/7.7
 ca1a987f4b5756dc6b675bba899840b084cfb177
 
 30 left
+
+* Final Stuff
+** TODO Maybe move natural units bit
+** DONE Frontmatter
+   CLOSED: [2012-08-18 Sat 00:18]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 00:18]
+** DONE Introduction
+   CLOSED: [2012-08-18 Sat 00:18]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 00:18]
+** DONE 1 SM
+   CLOSED: [2012-08-18 Sat 00:18]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 00:18]
+** DONE 2 SUSY
+   CLOSED: [2012-08-18 Sat 00:18]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 00:18]
+** TODO 3 Framework
+** TODO 4 Expt
+** TODO 5 RECO
+** TODO 6 WPol
+** TODO 7 SUSY
+** TODO 8 Interpretation
+** TODO Conclusions
+** TODO Appendices
+** TODO Visual formatting check
+** TODO ??/! check
+** TODO Bibliography check
+** TODO Table of Contents Check
+** TODO Go through page listing sent to Ken
+** TODO Tag
