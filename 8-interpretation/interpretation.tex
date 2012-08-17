@@ -224,13 +224,13 @@ Table~\ref{tbl:inter_signal_systematics}.
 \centering
 \subfloat[Systematic effects]{\label{fig:inter_pl_80_400_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_400}}\quad
 \subfloat[Muon channel only]{\label{fig:inter_pl_80_400_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_400}}
-\caption[The profile likelihood as a function of $\mu$]{The profile
-  likelihood as a function of $\mu$ \subref{fig:inter_pl_80_400_syst}
-  with different systematic effects included in the likelihood and
-  \subref{fig:inter_pl_80_400_muon} with the electron channel
-  removed. The vertical lines and numbers represent the 95\%
-  confidence level upper limits on $\mu$. The results are shown for the
-  \ac{CMSSM} point $(\Mzero, \Mhalf) = (80, 400)$. }
+\caption[The profile likelihood as a function of $\mu$]{The negative log \ac{PL}
+  ratio as a function of $\mu$ \subref{fig:inter_pl_80_400_syst} with different
+  systematic effects included in the likelihood and
+  \subref{fig:inter_pl_80_400_muon} with the electron channel removed. The
+  vertical lines and numbers represent the 95\% confidence level upper limits on
+  $\mu$. The results are shown for the \ac{CMSSM} point $(\Mzero, \Mhalf) = (80,
+  400)$. }
 \label{fig:inter_pl}
 \end{figure}
 
@@ -268,19 +268,20 @@ m_{\frac{1}{2}}) = (80, 400)$ - close to the edge of the region excluded by the
 data (additional detail can be found in
 Appendix~\ref{sec:app_inter_validation}).
 
-The form of the \ac{PL} function for this point can be seen in
-\fig~\ref{fig:inter_pl}. The signal strength, $\mu$, is the ratio of the
-excluded cross-section to that predicted by the \ac{CMSSM}. As expected, the
-inclusion of systematic effects pushes the exclusion to larger values of
-$\mu$. A similar, but more pronounced, effect can be seen when removing the
-electron channel. This shows, qualitatively at least, that the model is behaving
-as expected. For this particular model point, the signal contamination appears
-to have the largest effect, followed by the background uncertainties and then
-the signal uncertainties. Note that certain uncertainties are included in all
-cases: the effect of the statistical uncertainty in the control region, and the
-luminosity uncertainty. The former is actually the dominant uncertainty on the
-background prediction. This perhaps explains why the addition of the other
-systematic uncertainties appears to have relatively little effect.
+\fig~\ref{fig:inter_pl} shows the negative log-\ac{PL} ratio, $-\ln\lambda$, as
+a function of the signal strength parameter, $\mu$. The signal strength is
+defined as the ratio of the considered cross-section to that predicted by the
+\ac{CMSSM}. As expected, the inclusion of systematic effects pushes the
+exclusion to larger values of $\mu$. A similar, but more pronounced, effect can
+be seen when removing the electron channel. This shows, qualitatively at least,
+that the model is behaving as expected. For this particular model point, the
+signal contamination appears to have the largest effect, followed by the
+background uncertainties and then the signal uncertainties. Note that certain
+uncertainties are included in all cases: the effect of the statistical
+uncertainty in the control region, and the luminosity uncertainty. The former is
+actually the dominant uncertainty on the background prediction. This perhaps
+explains why the addition of the other systematic uncertainties appears to have
+relatively little effect.
 
 The distributions of the test statistic used to calculate \CLs are shown in
 \fig~\ref{fig:inter_cls}. The results are seen to be qualitatively similar to
@@ -513,7 +514,7 @@ momentum. Overall, the second effect is likely to be small since \STlep is
 likely to be dominated by the missing energy from the \acp{LSP}.
 
 In the cases where the mass splitting between mother and \ac{LSP} is smaller,
-models with \Mchargino close to \Mgluino appears to give better exclusion. In
+models with \Mchargino close to \Mgluino appear to give better exclusion. In
 these cases, one might guess that the harder \PW has a greater
 effect on the efficiency since there is less hadronic energy available from the
 cascade.

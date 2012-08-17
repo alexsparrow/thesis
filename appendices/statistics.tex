@@ -11,12 +11,14 @@ correlations must be evaluated.
 \subsection{Notation}
 It will be helpful to define some notation. In the following, a subscript index
 is assumed to run over the binned variable in the analysis (i.e. \STlep
-bins). All nuisance parameters are written as $\nu^{(\alpha)}$, where the
-superscript index is taken to run over some set of systematic uncertainties
-(e.g. $\nu^{\textrm{jes}}$ might represent the \ac{JES} uncertainty). Certain
-variables $x$ are known to have a functional dependence on a given nuisance
-parameter and are written $x(\nu)$. The nominal value of this variable, being
-that which is measured in \ac{MC} or in real data is denoted $\bar{x}$.
+bins). The notation $\nu^{(\alpha)}$ denotes one or more nuisance parameters,
+where the superscript is taken to represent either a set of uncertainties or a
+single (unspecified) uncertainty. When referring to a particular uncertainty,
+for instance the \ac{JES} uncertainty, the associated nuisance parameter will be
+written simply $\nu^{\textrm{jes}}$. Certain variables $x$ are known to have a
+functional dependence on a given nuisance parameter and are written
+$x(\nu)$. The nominal value of this variable, being that which is measured in
+\ac{MC} or in real data is denoted $\bar{x}$.
 
 \subsection{The Likelihood Function}
 In constructing the likelihood, we start by writing down the number of events
@@ -334,13 +336,13 @@ the plots shown in \sec~\ref{sec:inter_validation}.
 \centering
 \subfloat[]{\label{fig:inter_pl_80_240_syst}\includegraphics[width=0.47\textwidth]{fig/pl_systematics_80_240}}\quad
 \subfloat[]{\label{fig:inter_pl_80_240_muon}\includegraphics[width=0.47\textwidth]{fig/pl_muon_80_240}}
-\caption[The profile likelihood as a function of $\mu$]{The profile
-  likelihood as a function of $\mu$ \subref{fig:inter_pl_80_400_syst}
-  with different systematic effects included in the likelihood and
-  \subref{fig:inter_pl_80_400_muon} with the electron channel
-  removed. The vertical lines and numbers represent the 95\%
-  confidence level upper limits on $\mu$. The results are shown for
-  the \ac{CMSSM} point $(\Mzero, \Mhalf) = (80, 240)$}
+\caption[The profile likelihood as a function of $\mu$]{The negative log \ac{PL}
+  ratio as a function of $\mu$ \subref{fig:inter_pl_80_400_syst} with different
+  systematic effects included in the likelihood and
+  \subref{fig:inter_pl_80_400_muon} with the electron channel removed. The
+  vertical lines and numbers represent the 95\% confidence level upper limits on
+  $\mu$. The results are shown for the \ac{CMSSM} point $(\Mzero, \Mhalf) = (80,
+  240)$}
 \label{fig:app_pl}
 \end{figure}
 
