@@ -780,17 +780,33 @@ ca1a987f4b5756dc6b675bba899840b084cfb177
 ** DONE 2 SUSY
    CLOSED: [2012-08-18 Sat 00:18]
    - State "DONE"       from "TODO"       [2012-08-18 Sat 00:18]
-** TODO 3 Framework
-** TODO 4 Expt
-** TODO 5 RECO
-** TODO 6 WPol
-** TODO 7 SUSY
-** TODO 8 Interpretation
+** DONE 3 Framework
+   CLOSED: [2012-08-18 Sat 17:46]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 17:46]
+** DONE 4 Expt
+   CLOSED: [2012-08-18 Sat 17:46]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 17:46]
+** DONE 5 RECO
+   CLOSED: [2012-08-18 Sat 18:06]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 18:06]
+** DONE 6 WPol
+   CLOSED: [2012-08-18 Sat 20:19]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 20:19]
+** DONE 7 SUSY
+   CLOSED: [2012-08-18 Sat 20:19]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 20:19]
+** DONE 8 Interpretation
+   CLOSED: [2012-08-18 Sat 20:19]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 20:19]
 ** TODO Conclusions
 ** TODO Appendices
+** TODO Frontmatter
+** TODO Introduction
 ** TODO Visual formatting check
 ** TODO ??/! check
 ** TODO Bibliography check
 ** TODO Table of Contents Check
-** TODO Go through page listing sent to Ken
 ** TODO Tag
+** TODO PDF bookmarks
+** TODO Multiply defined labels fix (l1t)
+** TODO Softsusy renormalisation group equations??
