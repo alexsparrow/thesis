@@ -765,6 +765,7 @@ ca1a987f4b5756dc6b675bba899840b084cfb177
 
 * Final Stuff
 ** TODO Maybe move natural units bit
+** TODO PtW in measuring helicity equation
 ** DONE Frontmatter
    CLOSED: [2012-08-18 Sat 00:18]
    - State "DONE"       from "TODO"       [2012-08-18 Sat 00:18]
