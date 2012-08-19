@@ -102,10 +102,10 @@ where $\Plhpar$ and $\Plhperp$ are, respectively, the components
 of the lepton momentum parallel and perpendicular to the z-axis of the helicity
 frame. Neglecting the mass of the lepton, $|\Plh| = \MW/2$, where $\MW$ is the
 mass of the \PW boson. Therefore
-\begin{eqnarray*}
-|\Plhpar| &=& \frac{\MW}{2}\cos\thetastar \\
-|\Plhperp| &=& \frac{\MW}{2}\sin\thetastar.
-\end{eqnarray*}
+\begin{equation*}
+|\Plhpar| = \frac{\MW}{2}\cos\thetastar \qquad
+|\Plhperp| = \frac{\MW}{2}\sin\thetastar.
+\end{equation*}
 Boosting into the lab frame (i.e. along the $-z$ axis of the helicity frame),
 one obtains
 \begin{eqnarray*}
@@ -121,9 +121,7 @@ $\LP^{3D}$~\cite{jad_thesis}, defined as follows,
 \end{equation*}
 This can be rewritten as follows,
 \begin{eqnarray*}
-\LP^{3D} &=& \frac{|\Pll|}{\mPW} \\
-&=& \frac{1}{\mPW}\sqrt{|\Pllpar|^2 + |\Pllperp|^2}
-\\
+\LP^{3D} &=& \frac{|\Pll|}{\mPW} = \frac{1}{\mPW}\sqrt{|\Pllpar|^2 + |\Pllperp|^2}\\
 &=& \frac{\MW}{2\mPW}\sqrt{\gamma^2(\cos\thetastar +\beta)^2 + \sin^2\thetastar}\\
 &=&
 \frac{\MW}{2\mPW}\sqrt{\gamma^2\cos^2\thetastar + 2\gamma^2\cos\thetastar\beta
@@ -175,16 +173,16 @@ binned according to \PW boson charge, transverse momentum, \PtW, and rapidity,
 \YWm. These can be written as
 \begin{equation}
 \label{eqn:wpol_reweighting_factor}
-Q_i\left(\cos\thetastar, \PtW, \YWm, \pm \right) =
+Q_i^\pm\left(\cos\thetastar, \PtW, \YWm \right) =
 \frac{\sigma^\pm_i\left(\cos\thetastar\right)}{\displaystyle\sum_{j=-1}^{j=+1}
   \ffj^\pm\left(\PtW, \YWm\right)\sigma^\pm_j\left(\cos\thetastar\right)},
 \end{equation}
 where the index, $i$ is one of the three helicity states of the \PW boson. The
-\ffj are constants derived from an analytical fit to the $\cos\thetastar$
+$\ffj^\pm$ are constants derived from an analytical fit to the $\cos\thetastar$
 distribution in bins of \PtW, \YWm and charge. These are effectively the helicity
-fractions ``baked in'' to the \ac{MC}. The factor, $Q_i$, will then re-weight
+fractions ``baked in'' to the \ac{MC}. The factor, $Q_i^\pm$, will then re-weight
 the $\cos\thetastar$ distribution in \ac{MC} such that it corresponds to the
-pure helicity state, $i$. The functional forms of the $\sigma_i$ are taken from
+pure helicity state, $i$. The functional forms of the $\sigma_i^\pm$ are taken from
 \eqn~\ref{eqn:wpol_helicity_fractions} as follows,
 \begin{eqnarray*}
 \sigma^{\pm}_{-1} &=& \frac{1}{4}\left(1\mp\cos\thetastar\right)^2,\\
@@ -211,7 +209,7 @@ required to account for the finite statistical precision of the generated
 sample. The functions $\sigma^{\pm}_{i}$ are replaced by integrals over a small
 slice ($\Delta\cos\thetastar = 0.01$) of a binned $\cos\thetastar$ distribution:
 \begin{equation*}
-Q_i\left(\cos\thetastar, \PtW, \YWm, \pm \right) =
+Q_i^\pm\left(\cos\thetastar, \PtW, \YWm \right) =
 \frac{\displaystyle\int_{b}^{b+0.01} \sigma^\pm_i\left(\cos\thetastar\right)}{
 \displaystyle\int_{-1}^{1}\sigma^\pm_i \left(\cos\thetastar\right)}
 \div
@@ -247,11 +245,11 @@ they are invariant across the \PW phase space.
 An extra re-weighting factor is defined which effectively gives preference to
 regions containing more \PW bosons of the desired helicity,
 \begin{equation*}
-R_i\left(\PtW, \YWm, \pm\right) =
-\frac{{f'}_i \left(\PtW, \YWm, \pm\right)}{{f'}_i^{\textrm{all}}},
+R_i^\pm\left(\PtW, \YWm \right) =
+\frac{{f'}_i^\pm \left(\PtW, \YWm \right)}{{f'}_i^{\pm,\textrm{all}}},
 \end{equation*}
-where ${f'}_i\left(\PtW, \YWm, \pm\right)$ is the fraction of \PW bosons in the
-appropriate \PtW and \YWm bin with helicity $i$. ${f'}_i^{\textrm{all}}$ is the
+where ${f'}_i^\pm\left(\PtW, \YWm \right)$ is the fraction of \PW bosons in the
+appropriate \PtW and \YWm bin with helicity $i$. ${f'}_i^{\pm,\textrm{all}}$ is the
 same fraction integrated over all of the phase space bins. The prime added to
 the fraction is significant. It indicates that the phase space of the helicity
 fractions is that obtained after a reconstruction-level cut on \PtW. This must
@@ -260,8 +258,8 @@ and resolution effects, significantly different from a generator-level cut on
 the same quantity. The \PW phase space is shown in \fig~\ref{fig:wpol_genreco}
 after a reconstruction-level cut, $\PtW > \unit{50}{\GeV}$.
 
-To summarise, the re-weighting procedure depends on two factors: $Q_i$ and
-$R_i$. The first ``alters'' the shape of the $\cos\thetastar$ distribution to
+To summarise, the re-weighting procedure depends on two factors: $Q_i^\pm$ and
+$R_i^\pm$. The first ``alters'' the shape of the $\cos\thetastar$ distribution to
 represent a certain polarisation state, $i$. The second accounts for the
 variation in the helicity fractions across the phase space of the \PW
 boson. Both factors are used to re-weight \Wjets events in \ac{MC} in order to
