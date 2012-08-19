@@ -798,7 +798,9 @@ ca1a987f4b5756dc6b675bba899840b084cfb177
 ** DONE 8 Interpretation
    CLOSED: [2012-08-18 Sat 20:19]
    - State "DONE"       from "TODO"       [2012-08-18 Sat 20:19]
-** TODO Conclusions
+** DONE Conclusions
+   CLOSED: [2012-08-18 Sat 22:09]
+   - State "DONE"       from "TODO"       [2012-08-18 Sat 22:09]
 ** TODO Appendices
 ** TODO Frontmatter
 ** TODO Introduction
@@ -808,5 +810,9 @@ ca1a987f4b5756dc6b675bba899840b084cfb177
 ** TODO Table of Contents Check
 ** TODO Tag
 ** TODO PDF bookmarks
-** TODO Multiply defined labels fix (l1t)
+** DONE Multiplfy defined labels fix (l1t)
+   CLOSED: [2012-08-19 Sun 12:07]
+   - State "DONE"       from "TODO"       [2012-08-19 Sun 12:07]
 ** TODO Softsusy renormalisation group equations??
+
+ thesis.bib                                         |  207 ++++++++++-
