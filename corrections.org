@@ -801,18 +801,32 @@ ca1a987f4b5756dc6b675bba899840b084cfb177
 ** DONE Conclusions
    CLOSED: [2012-08-18 Sat 22:09]
    - State "DONE"       from "TODO"       [2012-08-18 Sat 22:09]
-** TODO Appendices
-** TODO Frontmatter
-** TODO Introduction
+** DONE Appendices
+   CLOSED: [2012-08-19 Sun 18:52]
+   - State "DONE"       from "TODO"       [2012-08-19 Sun 18:52]
+** DONE Frontmatter
+   CLOSED: [2012-08-19 Sun 18:52]
+   - State "DONE"       from "TODO"       [2012-08-19 Sun 18:52]
+** DONE Introduction
+   CLOSED: [2012-08-19 Sun 18:52]
+   - State "DONE"       from "TODO"       [2012-08-19 Sun 18:52]
 ** TODO Visual formatting check
-** TODO ??/! check
-** TODO Bibliography check
-** TODO Table of Contents Check
+** DONE ??/! check
+   CLOSED: [2012-08-19 Sun 22:49]
+   - State "DONE"       from "TODO"       [2012-08-19 Sun 22:49]
+** DONE Bibliography check
+   CLOSED: [2012-08-19 Sun 22:49]
+   - State "DONE"       from "TODO"       [2012-08-19 Sun 22:49]
+** DONE Table of Contents Check
+   CLOSED: [2012-08-19 Sun 22:49]
+   - State "DONE"       from "TODO"       [2012-08-19 Sun 22:49]
 ** TODO Tag
 ** TODO PDF bookmarks
 ** DONE Multiplfy defined labels fix (l1t)
    CLOSED: [2012-08-19 Sun 12:07]
    - State "DONE"       from "TODO"       [2012-08-19 Sun 12:07]
-** TODO Softsusy renormalisation group equations??
+** DONE Softsusy renormalisation group equations??
+   CLOSED: [2012-08-19 Sun 18:52]
+   - State "DONE"       from "TODO"       [2012-08-19 Sun 18:52]
 
- thesis.bib                                         |  207 ++++++++++-
+PhD Physics 2012 Guneratne Bryer A E (no punctuation at all.) I don't think there are any specifics so I wouldn't worry about it. It came out looking pretty good.
